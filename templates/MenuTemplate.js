@@ -3,9 +3,7 @@ import { Component } from 'react'
 import { AppRegistry, Text, View } from 'react-native'
 import { connect } from 'react-redux'
 
-import { next, tutorial } from '../actions'
-
-class TextView extends Component {
+class MenuView extends Component {
   render() {
     return <View>
       <Text>{this.props.text}</Text>
@@ -18,5 +16,5 @@ class TextView extends Component {
 const mapStateToProps = (state) => ({
 })
 
-const mapDispatchToProps = { next, tutorial}
-export const TextTemplate = connect(mapStateToProps, mapDispatchToProps)(TextView)
+const mapDispatchToProps = { start }
+export const MenuTemplate = connect(mapStateToProps, mapDispatchToProps)(MenuView)
