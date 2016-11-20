@@ -1,14 +1,12 @@
 import React from 'react'
 import { connect, Provider } from 'react-redux'
-import { Text, View } from 'react-native'
 
 import createStore from '../store'
+import { getTemplate } from '../templates/Template'
 
 class Container extends React.Component {
   render() {
-    return <View>
-      <Text>Serlo</Text>
-    </View>
+    return getTemplate( {template:"Text", text:"Serlo"} )
   }
 }
 
