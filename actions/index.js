@@ -1,11 +1,11 @@
 // Actions
-export const INCREMENT = 'INCREMENT'
-export const DECREMENT = 'DECREMENT'
+export const NEXT = 'NEXT'
+export const TUTORIAL = 'TUTORIAL'
 
 // Action creators
-export const increment = () => ({
-  type: INCREMENT
+export const next = () => ({
+  type: NEXT
 })
-export const decrement = () => ({
-  type: DECREMENT
+export const tutorial = () => ({
+  type: TUTORIAL
 })
