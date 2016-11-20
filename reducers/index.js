@@ -1,16 +1,9 @@
-import { INCREMENT, DECREMENT } from '../actions'
+import { NEXT, TUTORIAL } from '../actions'
 
 // Selectors
-export const selectCounter = (state) => state
+export const selectView = (state) => state.view
 
 // Reducers
-export default (state = 0, action) => {
-  switch (action.type) {
-    case INCREMENT:
-      return state + 1
-    case DECREMENT:
-      return state - 1
-    default:
+export default (state = {view:{template:"Text", text:"Hallo"}}, action) => {
       return state
-  }
 }
