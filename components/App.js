@@ -14,7 +14,7 @@ import createStore from '../store'
 
 const store = createStore()
 
-const App = ({ counter, decrement, increment }) => (
+export const App = ({ counter, decrement, increment }) => (
   <View style={styles.container}>
     <Text style={styles.welcome}>
       Welcome to React Native!

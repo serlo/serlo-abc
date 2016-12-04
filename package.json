@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "rn": "react-native",
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "storybook": "storybook start -p 7007",
     "test": "jest"
   },
   "jest": {
@@ -21,6 +23,7 @@
     "jest": "^17.0.3",
     "jest-react-native": "^17.1.0",
     "react-test-renderer": "^15.4.1",
-    "remote-redux-devtools": "^0.5.5"
+    "remote-redux-devtools": "^0.5.5",
+    "@kadira/react-native-storybook": "^2.0.0"
   }
 }
