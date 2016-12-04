@@ -12,18 +12,20 @@
     "preset": "jest-react-native"
   },
   "dependencies": {
+    "ramda": "^0.22.1",
     "react": "^15.4.1",
     "react-native": "^0.39.0",
+    "react-native-sound": "^0.8.3",
     "react-redux": "^4.4.6",
     "redux": "^3.6.0"
   },
   "devDependencies": {
+    "@kadira/react-native-storybook": "^2.0.0",
     "babel-jest": "^17.0.2",
     "babel-preset-react-native": "^1.9.0",
     "jest": "^17.0.3",
     "jest-react-native": "^17.1.0",
     "react-test-renderer": "^15.4.1",
-    "remote-redux-devtools": "^0.5.5",
-    "@kadira/react-native-storybook": "^2.0.0"
+    "remote-redux-devtools": "^0.5.5"
   }
 }
