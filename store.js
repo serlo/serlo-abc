@@ -6,6 +6,5 @@ import rootReducer from './reducers'
 export default (initialState) => {
   const store = createStore(rootReducer, initialState, devTools())
 
-  devTools.updateStore(store)
   return store
 }
