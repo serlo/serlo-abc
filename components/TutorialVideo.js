@@ -71,18 +71,12 @@ class TutorialVideo extends Component {
     )
   }
 
-  /**
-   * Toggles the play state of the video
-   */
   playPause = () => {
     this.setState({
       isPaused: !this.state.isPaused
     });
   }
 
-  /**
-   * Resets the video to the beginning
-   */
   replay = () => {
     this.player.seek(0);
     this.setState({
