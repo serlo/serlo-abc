@@ -7,8 +7,8 @@ import playIcon from '../assets/play.png'
 
 class TutorialVideo extends Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props);
     this.state = {
       isPaused: false,
       isFinished: false
@@ -18,12 +18,10 @@ class TutorialVideo extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableWithoutFeedback
-          onPress={this.playPause}>
-          <Video source={{uri: 'http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4'}} //require(videoURI)}}
-            ref={(ref) => {
-              this.player = ref
-            }}
+        <TouchableWithoutFeedback onPress={this.playPause}>
+          <Video
+            source={{uri: 'http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4'}} //require(videoURI)}}
+            ref={(ref) => { this.player = ref; }}
             style={styles.video}
             paused={this.state.isPaused}
             onEnd={this.onEnd}
@@ -40,7 +38,7 @@ class TutorialVideo extends Component {
   onEnd = () => {
     this.setState({
       isFinished: true
-    })
+    });
   }
 
   /**
@@ -51,12 +49,12 @@ class TutorialVideo extends Component {
    */
   getVideoControls() {
     if (!this.state.isPaused && !this.state.isFinished) {
-      return null
+      return null;
     }
 
-    const icon = this.state.isFinished ? replayIcon : playIcon
-    const handler = this.state.isFinished ? this.replay : this.playPause
-    return this.getVideoControlComponent(icon, handler)
+    const icon = this.state.isFinished ? replayIcon : playIcon;
+    const handler = this.state.isFinished ? this.replay : this.playPause;
+    return this.getVideoControlComponent(icon, handler);
   }
 
   /**
@@ -67,16 +65,8 @@ class TutorialVideo extends Component {
    */
   getVideoControlComponent(icon, handler) {
     return (
-      <TouchableOpacity
-        style={styles.button}
-        onPress={handler}>
-        <Image
-          source={icon}
-          style={{
-            width: 50,
-            height: 50
-          }}
-        />
+      <TouchableOpacity style={styles.button} onPress={handler}>
+        <Image source={icon} style={styles.icon} />
       </TouchableOpacity>
     )
   }
@@ -87,18 +77,18 @@ class TutorialVideo extends Component {
   playPause = () => {
     this.setState({
       isPaused: !this.state.isPaused
-    })
+    });
   }
 
   /**
    * Resets the video to the beginning
    */
   replay = () => {
-    this.player.seek(0)
+    this.player.seek(0);
     this.setState({
       isPaused: false,
       isFinished: false
-    })
+    });
   }
 
 }
@@ -124,6 +114,10 @@ var styles = {
     borderRadius: 9999,
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
     zIndex: 9999
+  },
+  icon: {
+    width: 50,
+    height: 50
   }
 };
 
