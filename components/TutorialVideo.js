@@ -54,16 +54,7 @@ class TutorialVideo extends Component {
 
     const icon = this.state.isFinished ? replayIcon : playIcon;
     const handler = this.state.isFinished ? this.replay : this.playPause;
-    return this.getVideoControlComponent(icon, handler);
-  }
 
-  /**
-   * Returns the video control elements based on the parameters
-   * @param {Image} icon The icon to be displayed in the component
-   * @param {Function} handler The function to be called on press
-   * @return {Number} TouchableOpacity component containing the icon
-   */
-  getVideoControlComponent(icon, handler) {
     return (
       <TouchableOpacity style={styles.button} onPress={handler}>
         <Image source={icon} style={styles.icon} />
