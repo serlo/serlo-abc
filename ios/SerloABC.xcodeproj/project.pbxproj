@@ -27,6 +27,7 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8DD249ED89B341F5A831B6F0 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4303A3D6A43B474E9CE127E7 /* libRCTVideo.a */; };
 		9187AFD8B9774080AF65DC46 /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FADE62E524D42FD88312DEB /* libRNSound.a */; };
+		9D5F71971DF4ADCC002F8154 /* videos in Resources */ = {isa = PBXBuildFile; fileRef = 9D5F71961DF4ADCC002F8154 /* videos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +214,7 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		9D5F71961DF4ADCC002F8154 /* videos */ = {isa = PBXFileReference; lastKnownFileType = folder; name = videos; path = ../videos; sourceTree = "<group>"; };
 		C2905775BD3B4B4C91C9A201 /* RNSound.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -406,6 +408,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				9D5F71961DF4ADCC002F8154 /* videos */,
 				027E8B6F1DF4366F00AF2C64 /* sounds */,
 				13B07FAE1A68108700A75B9A /* SerloABC */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -722,6 +725,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5F71971DF4ADCC002F8154 /* videos in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				027E8B701DF4366F00AF2C64 /* sounds in Resources */,
