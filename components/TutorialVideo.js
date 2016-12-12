@@ -20,7 +20,7 @@ class TutorialVideo extends Component {
       <View style={styles.container}>
         <TouchableWithoutFeedback onPress={this.playPause}>
           <Video
-            source={{uri: 'http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4'}} //require(videoURI)}}
+            source={this.props.video}
             ref={(ref) => { this.player = ref; }}
             style={styles.video}
             paused={this.state.isPaused}
