@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "rn": "react-native",
+    "prerun-android": "adb reverse tcp:8081 tcp:8081 && adb reverse tcp:7007 tcp:7007",
+    "run-android": "react-native run-android",
+    "run-ios": "react-native run-ios",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "storybook": "storybook start -p 7007",
     "test": "jest"
