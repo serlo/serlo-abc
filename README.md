@@ -43,8 +43,16 @@ yarn remove PACKAGE_NAME
 
 #### Run Tests
 
+Runs the `*.test.js` files using [Jest](https://facebook.github.io/jest/)
 ```
 yarn test
+```
+
+#### Lint JavaScript
+
+Lints all `*.js` files and fixes some errors
+```
+yarn lint
 ```
 
 #### Launch the App

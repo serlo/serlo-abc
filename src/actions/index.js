@@ -3,19 +3,26 @@ import { selectFirstExercise, selectNextExercise, selectExercise, selectTutorial
 // Actions
 export const NEXT = 'NEXT'
 export const TUTORIAL = 'TUTORIAL'
-export const BACK = "BACK"
-export const START = "START"
-export const MENU = "MENU"
+export const BACK = 'BACK'
+export const START = 'START'
+export const MENU = 'MENU'
 
 // Action creators
+export const menu = () => ({
+  type: MENU,
+  view: { template: 'Menu' }
+})
+
 export const next = (id) => {
-  nextSlide = selectNextExercise(id);
-  if(nextSlide != undefined) {
+  const nextSlide = selectNextExercise(id)
+  if (nextSlide) {
     return {
       type: NEXT,
-      view: selectNextExercise(id)
-    };
-  } else return menu();
+      view: nextSlide
+    }
+  }
+
+  return menu()
 }
 
 export const tutorial = (currentExerciseId) => ({
@@ -26,11 +33,6 @@ export const tutorial = (currentExerciseId) => ({
 
 export const back = () => ({
   type: BACK
-})
-
-export const menu = () => ({
-    type: MENU,
-    view: {template: "Menu"}
 })
 
 export const start = (lesson) => ({

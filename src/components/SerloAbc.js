@@ -5,24 +5,23 @@ import createStore from '../store'
 import { getTemplate } from '../templates/Template'
 import { selectView } from '../reducers'
 
-class Container extends React.Component {
-  render() {
-    console.log( this.props.view )
-    let T = getTemplate( this.props.view.template )
-    return <T {...this.props.view}/>
-  }
+const Container = ({ view }) => {
+  const T = getTemplate(view.template)
+  return <T {...view} />
 }
 
 const mapStateToProps = (state) => ({
   view: selectView(state)
 })
 
-const mapDispatchToProps = { }
-export const ConnectedContainer = connect(mapStateToProps, mapDispatchToProps)(Container)
+const ConnectedContainer = connect(mapStateToProps)(Container)
 
 const store = createStore()
-export default () => (
+
+const App = () => (
   <Provider store={store}>
     <ConnectedContainer />
   </Provider>
 )
+
+export default App
