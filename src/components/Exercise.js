@@ -5,6 +5,8 @@ import Sound from 'react-native-sound'
 
 import speakerImage from '../assets/images/speaker.png'
 
+import { RoundImageWithButton } from '../components/Components'
+
 const mapIndexed = addIndex(map)
 
 const hightlightStyle = {
@@ -35,17 +37,16 @@ const Exercise = ({ image, sound, text, letter }) => {
     })
   }
 
-
   const letters = mapIndexed(
-    (c, key) => (
+    (char, key) => (
       <View
           key={key}
           style={[
             { padding: 5 },
-            (toUpper(c) === toUpper(letter)) ? hightlightStyle : null
+            (toUpper(char) === toUpper(letter)) ? hightlightStyle : null
           ]}
       >
-        <Text style={{ color: '#fff', fontSize: 40, fontWeight: 'bold' }}>{c}</Text>
+        <Text style={{ color: '#fff', fontSize: 40, fontWeight: 'bold' }}>{char}</Text>
       </View>
       ),
     text
@@ -58,45 +59,13 @@ const Exercise = ({ image, sound, text, letter }) => {
       alignItems: 'center',
       justifyContent: 'space-around'
     }}>
-      <View
-        style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.05)',
-          borderRadius: 9999999,
-          flexDirection: 'row',
-          alignItems: 'flex-end'
-        }}
-      >
-        <Image
-          resizeMode="cover"
-          source={image}
-          style={{
-            height: 200,
-            width: 200,
-            margin: 20,
-            borderRadius: 100,
-            borderColor: 'rgba(0, 0, 0, 0.05)'
-          }}
-        />
-        <TouchableOpacity onPress={play} style={{
-          marginLeft: -50
-        }}>
-          <View
-            style={{
-              backgroundColor: '#73DBFF',
-              borderRadius: 99999,
-            }}
-          >
-            <Image
-              source={speakerImage}
-              style={{
-                height: 40,
-                width: 40,
-                margin: 5
-              }}
-            />
-          </View>
-        </TouchableOpacity>
-      </View>
+      <RoundImageWithButton
+        image={image}
+        imageSize={200}
+        icon={speakerImage}
+        buttonSize={40}
+        onPress={play}
+      />
       <View style={{ flexDirection: 'row' }}>
         {letters}
       </View>
