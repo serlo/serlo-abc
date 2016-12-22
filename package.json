@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "lint": "eslint \"+(src|storybook)/**/*.js\" \"*.js\" --fix",
+    "preinstall": "rimraf \"android/app/src/main/res/raw/*\" && cpy \"src/assets/sounds/*\" \"android/app/src/main/res/raw/\"",
     "prerun-android": "adb reverse tcp:8081 tcp:8081 && adb reverse tcp:7007 tcp:7007",
     "run-android": "react-native run-android",
     "run-ios": "react-native run-ios",
@@ -25,11 +27,18 @@
   },
   "devDependencies": {
     "@kadira/react-native-storybook": "^2.0.0",
+    "babel-eslint": "^7.1.1",
     "babel-jest": "^17.0.2",
     "babel-preset-react-native": "^1.9.0",
+    "cpy-cli": "^1.0.1",
+    "eslint": "^3.12.2",
+    "eslint-config-ory-am": "^3.0.0",
+    "eslint-config-ory-am-react": "^3.0.0",
+    "eslint-plugin-react": "^5.2.2",
     "jest": "^17.0.3",
     "jest-react-native": "^17.1.0",
     "react-test-renderer": "^15.4.1",
-    "remote-redux-devtools": "^0.5.5"
+    "remote-redux-devtools": "^0.5.5",
+    "rimraf": "^2.5.4"
   }
 }

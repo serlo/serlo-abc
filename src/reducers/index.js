@@ -1,10 +1,10 @@
 import { START, NEXT, TUTORIAL, MENU, BACK } from '../actions'
 // Selectors
 export const selectView = (state) => state.view
-export const selectLastExercise = (state) => state.lastExercise;
+export const selectLastExercise = (state) => state.lastExercise
 
 const defaultState = {
-  view: {template: "Menu"}
+  view: { template: 'Menu' }
 }
 // Reducers
 export default (state = defaultState, action) => {
