@@ -30,7 +30,7 @@ yarn add PACKAGE_NAME
 ```
 If the package is only used in development (e.g. testing utilities / linter / ...), add `--dev` to specify it as `devDependency`:
 ```
-yarn add PACKAGE_NAME --save
+yarn add PACKAGE_NAME --dev
 ```
 
 #### Remove Dependencies
