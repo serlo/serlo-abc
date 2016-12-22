@@ -1,7 +1,7 @@
 import React from 'react'
-import { action, storiesOf } from '@kadira/react-native-storybook'
+import { storiesOf } from '@kadira/react-native-storybook'
 
-import ananasImage from '../assets/ananas.jpg'
+import ananasImage from '../assets/images/ananas.jpg'
 import Exercise from './Exercise'
 
 storiesOf('components/Exercise', module)

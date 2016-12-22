@@ -1,3 +1,2 @@
-import '../components/App.stories.js'
-import '../components/Exercise.stories.js'
-import '../components/TutorialVideo.stories.js'
+import '../src/components/Exercise.stories.js'
+import '../src/components/TutorialVideo.stories.js'
