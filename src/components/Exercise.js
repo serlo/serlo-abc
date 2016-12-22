@@ -3,7 +3,7 @@ import React from 'react'
 import { Image, View, Text, TouchableOpacity, Platform } from 'react-native'
 import Sound from 'react-native-sound'
 
-import speakerImage from '../assets/speaker.png'
+import speakerImage from '../assets/images/speaker.png'
 
 const mapIndexed = addIndex(map)
 
@@ -17,13 +17,13 @@ const path = Platform.OS === 'ios' ? 'sounds/' : ''
 const Exercise = ({ image, sound, text, letter }) => {
   const short = new Sound(`${path}${sound}_short.mp3`, Sound.MAIN_BUNDLE, (error) => {
     if (error) {
-      console.error('failed to load the sound', error);
+      console.error('failed to load the sound', error)
     }
   })
 
   const long = new Sound(`${path}${sound}_long.mp3`, Sound.MAIN_BUNDLE, (error) => {
     if (error) {
-      console.error('failed to load the sound', error);
+      console.error('failed to load the sound', error)
     }
   })
 
@@ -37,19 +37,17 @@ const Exercise = ({ image, sound, text, letter }) => {
 
 
   const letters = mapIndexed(
-    (c, key) => {
-      return (
-        <View
+    (c, key) => (
+      <View
           key={key}
           style={[
             { padding: 5 },
             (toUpper(c) === toUpper(letter)) ? hightlightStyle : null
           ]}
-        >
-          <Text style={{ color: '#fff', fontSize: 40, fontWeight: 'bold' }}>{c}</Text>
-        </View>
-      )
-    },
+      >
+        <Text style={{ color: '#fff', fontSize: 40, fontWeight: 'bold' }}>{c}</Text>
+      </View>
+      ),
     text
   )
 
