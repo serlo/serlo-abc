@@ -7,8 +7,7 @@ const styles = {
   }
 }
 
-export const RoundImageWithBorder = ({ image, size }) => {
-  return (
+export const RoundImageWithBorder = ({ image, size }) => (
     <Image
       resizeMode="cover"
       source={image}
@@ -16,15 +15,13 @@ export const RoundImageWithBorder = ({ image, size }) => {
         height: size,
         width: size,
         margin: 20,
-        borderRadius: size/2,
+        borderRadius: size / 2,
         borderColor: 'rgba(0, 0, 0, 0.05)'
       }}
     />
   )
-}
 
-export const RoundButton = ({ icon, size, style, onPress }) => {
-  return (
+export const RoundButton = ({ icon, size, style, onPress }) => (
     <TouchableOpacity onPress={onPress} style={style}>
       <View
         style={{
@@ -43,10 +40,8 @@ export const RoundButton = ({ icon, size, style, onPress }) => {
       </View>
     </TouchableOpacity>
   )
-}
 
-export const RoundImageWithButton = ({ image, imageSize, icon, buttonSize, onPress }) => {
-  return (
+export const RoundImageWithButton = ({ image, imageSize, icon, buttonSize, onPress }) => (
     <View
       style={{
         backgroundColor: 'rgba(0, 0, 0, 0.05)',
@@ -67,4 +62,3 @@ export const RoundImageWithButton = ({ image, imageSize, icon, buttonSize, onPre
       />
     </View>
   )
-}
