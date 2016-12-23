@@ -1,6 +1,6 @@
 import { addIndex, map, toUpper } from 'ramda'
 import React from 'react'
-import { Image, View, Text, TouchableOpacity, Platform } from 'react-native'
+import { View, Text, Platform } from 'react-native'
 import Sound from 'react-native-sound'
 
 import speakerImage from '../assets/images/speaker.png'

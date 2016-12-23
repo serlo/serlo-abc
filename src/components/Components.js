@@ -1,6 +1,12 @@
 import React from 'react'
 import { TouchableOpacity, View, Image } from 'react-native'
 
+const styles = {
+  buttonWithInset: {
+    marginLeft: -50
+  }
+}
+
 export const RoundImageWithBorder = ({ image, size }) => {
   return (
     <Image
@@ -61,10 +67,4 @@ export const RoundImageWithButton = ({ image, imageSize, icon, buttonSize, onPre
       />
     </View>
   )
-}
-
-const styles = {
-  buttonWithInset: {
-    marginLeft: -50
-  }
 }
