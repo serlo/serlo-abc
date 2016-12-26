@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { TouchableOpacity, View, Image } from 'react-native'
 
 const styles = {
@@ -21,12 +21,63 @@ export const RoundImageWithBorder = ({ image, size }) => (
   />
 )
 
+export class IconWithBackground extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      backgroundColor: 'transparent'
+    }
+  }
+
+  unfocus = () => {
+    this.setState({
+      backgroundColor: 'transparent'
+    })
+  }
+
+  focus = () => {
+    this.setState({
+      backgroundColor: 'rgba(255,255,255,0.15)'
+    })
+  }
+
+  render() {
+    return (
+      <View
+        style={{
+          backgroundColor: this.state.backgroundColor,
+          borderRadius: 9999,
+          padding: 20
+        }}
+      >
+        <Image
+          source={this.props.icon}
+          style={{
+            height: this.props.size,
+            width: this.props.size,
+            resizeMode: 'contain'
+          }}
+        />
+      </View>
+    )
+  }
+}
+
 export const RoundButton = ({ icon, size, style, onPress }) => (
   <TouchableOpacity onPress={onPress} style={style}>
     <View
       style={{
         backgroundColor: '#73DBFF',
-        borderRadius: 9999
+        borderRadius: 9999,
+        padding: 5,
+        elevation: 10,
+        shadowColor: 'rgba(0, 0, 0, 0.1)',
+        shadowOpacity: 1,
+        shadowRadius: 0,
+        shadowOffset: {
+          height: 4,
+          width: 4
+        }
       }}
     >
       <Image
@@ -34,7 +85,7 @@ export const RoundButton = ({ icon, size, style, onPress }) => (
         style={{
           height: size,
           width: size,
-          margin: 5
+          resizeMode: 'contain'
         }}
       />
     </View>

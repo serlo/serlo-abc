@@ -1,11 +1,12 @@
 import { addIndex, map, toUpper } from 'ramda'
 import React from 'react'
-import { View, Text, Platform } from 'react-native'
+import { View, Text } from 'react-native'
 import Sound from 'react-native-sound'
 
 import speakerImage from '../assets/images/speaker.png'
 
 import { RoundImageWithButton } from '../components/Components'
+import { getSoundWithLength } from '../components/Utils'
 
 const mapIndexed = addIndex(map)
 
@@ -14,20 +15,9 @@ const hightlightStyle = {
   borderRadius: 20
 }
 
-const path = Platform.OS === 'ios' ? 'sounds/' : ''
-
 const Exercise = ({ image, sound, text, letter }) => {
-  const short = new Sound(`${path}${sound}_short.mp3`, Sound.MAIN_BUNDLE, (error) => {
-    if (error) {
-      console.error('failed to load the sound', error)
-    }
-  })
-
-  const long = new Sound(`${path}${sound}_long.mp3`, Sound.MAIN_BUNDLE, (error) => {
-    if (error) {
-      console.error('failed to load the sound', error)
-    }
-  })
+  const short = getSoundWithLength(sound, 'short')
+  const long = getSoundWithLength(sound, 'long')
 
   const play = () => {
     short.play((success) => {
