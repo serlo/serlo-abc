@@ -8,6 +8,6 @@ storiesOf('components/ShowLetter', module)
     <ShowLetter
       letter="A"
       sound="a"
-      isRepeat={true}
+      isRepeat={false}
     />
   ))

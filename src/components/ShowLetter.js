@@ -33,14 +33,33 @@ const ShowLetter = ({ letter, sound, isRepeat }) => {
   const soundFile = getSound(sound)
   const repeatSound = getSound('repeat')
 
-  const play = () => {
-    this.icon.unfocus()
+  play = () => {
+    if (isRepeat) this.icon.unfocus()
     soundFile.play((success) => {
       if (success) {
-        this.icon.focus()
+        if (isRepeat) this.icon.focus()
         repeatSound.play()
       }
     })
+  }
+
+  toggleRepeatButton = () => {
+    if (!isRepeat) {
+      /* Currently returning an empty view with the same height as IconWithBackground
+         to keep the letter in the top half of the screen */
+      // TODO: Find a better way than this
+      return (
+        <View height={80} />
+      )
+    } else {
+      return (
+        <IconWithBackground
+          ref={(view) => { this.icon = view }}
+          icon={repeatIcon}
+          size={40}
+        />
+      )
+    }
   }
 
   return (
@@ -52,16 +71,10 @@ const ShowLetter = ({ letter, sound, isRepeat }) => {
         <RoundButton
           icon={speakerImage}
           size={40}
-          style={{}}
-          onPress={play}
+          onPress={this.play}
         />
       </View>
-      <IconWithBackground
-        ref={(view) => { this.icon = view }}
-        icon={repeatIcon}
-        size={40}
-        backgroundColor='transparent'
-      />
+      { this.toggleRepeatButton() }
     </View>
   )
 }
