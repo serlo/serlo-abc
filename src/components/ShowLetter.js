@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { View, Text } from 'react-native'
 
 import speakerImage from '../assets/images/speaker.png'
@@ -33,7 +33,7 @@ const ShowLetter = ({ letter, sound, isRepeat }) => {
   const soundFile = getSound(sound)
   const repeatSound = getSound('repeat')
 
-  play = () => {
+  const play = () => {
     if (isRepeat) this.icon.unfocus()
     soundFile.play((success) => {
       if (success) {
@@ -43,15 +43,8 @@ const ShowLetter = ({ letter, sound, isRepeat }) => {
     })
   }
 
-  toggleRepeatButton = () => {
-    if (!isRepeat) {
-      /* Currently returning an empty view with the same height as IconWithBackground
-         to keep the letter in the top half of the screen */
-      // TODO: Find a better way than this
-      return (
-        <View height={80} />
-      )
-    } else {
+  const toggleRepeatButton = () => {
+    if (isRepeat) {
       return (
         <IconWithBackground
           ref={(view) => { this.icon = view }}
@@ -60,6 +53,13 @@ const ShowLetter = ({ letter, sound, isRepeat }) => {
         />
       )
     }
+
+    /* Currently returning an empty view with the same height as IconWithBackground
+       to keep the letter in the top half of the screen */
+    // TODO: Find a better way than this
+    return (
+      <View height={80} />
+    )
   }
 
   return (
@@ -71,10 +71,10 @@ const ShowLetter = ({ letter, sound, isRepeat }) => {
         <RoundButton
           icon={speakerImage}
           size={40}
-          onPress={this.play}
+          onPress={play}
         />
       </View>
-      { this.toggleRepeatButton() }
+      { toggleRepeatButton() }
     </View>
   )
 }
