@@ -52,9 +52,9 @@ const ShowLetter = ({ letter, sound, isRepeat }) => {
           size={40}
         />
       )
-    } else {
-      return null
     }
+
+    return null
   }
 
   return (
