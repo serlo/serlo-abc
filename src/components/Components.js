@@ -29,12 +29,14 @@ export class IconWithBackground extends Component {
     }
   }
 
+  // Removes the semi-transparent background behind the icon
   unfocus = () => {
     this.setState({
       backgroundColor: 'transparent'
     })
   }
 
+  // Draws the semi-transparent background behind the icon
   focus = () => {
     this.setState({
       backgroundColor: 'rgba(255,255,255,0.15)'

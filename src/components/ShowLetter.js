@@ -5,7 +5,7 @@ import speakerImage from '../assets/images/speaker.png'
 import repeatIcon from '../assets/images/repeat.png'
 
 import { RoundButton, IconWithBackground } from '../components/Components'
-import { getSound } from '../components/Utils'
+import Utils from '../components/Utils'
 
 const styles = {
   container: {
@@ -30,8 +30,8 @@ const styles = {
 }
 
 const ShowLetter = ({ letter, sound, isRepeat }) => {
-  const soundFile = getSound(sound)
-  const repeatSound = getSound('repeat')
+  const soundFile = Utils.getSound(sound)
+  const repeatSound = Utils.getSound('repeat')
 
   const play = () => {
     if (isRepeat) this.icon.unfocus()
@@ -52,14 +52,9 @@ const ShowLetter = ({ letter, sound, isRepeat }) => {
           size={40}
         />
       )
+    } else {
+      return null
     }
-
-    /* Currently returning an empty view with the same height as IconWithBackground
-       to keep the letter in the top half of the screen */
-    // TODO: Find a better way than this
-    return (
-      <View height={80} />
-    )
   }
 
   return (
@@ -74,7 +69,9 @@ const ShowLetter = ({ letter, sound, isRepeat }) => {
           onPress={play}
         />
       </View>
-      { toggleRepeatButton() }
+      <View height={80}>
+        { toggleRepeatButton() }
+      </View>
     </View>
   )
 }
