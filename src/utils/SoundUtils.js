@@ -11,15 +11,12 @@ const getSoundFile = (filePath) => {
   })
 }
 
-const getSound = (sound) => {
+export const getSound = (sound) => {
   const filePath = `${path}${sound}.mp3`
   return getSoundFile(filePath)
 }
 
-const getSoundWithLength = (sound, length) => {
+export const getSoundWithLength = (sound, length) => {
   const filePath = `${path}${sound}_${length}.mp3`
   return getSoundFile(filePath)
 }
-
-exports.getSound = getSound
-exports.getSoundWithLength = getSoundWithLength

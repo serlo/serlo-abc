@@ -5,7 +5,7 @@ import speakerImage from '../assets/images/speaker.png'
 import repeatIcon from '../assets/images/repeat.png'
 
 import { RoundButton, IconWithBackground } from '../components/Components'
-import Utils from '../components/Utils'
+import * as SoundUtils from '../utils/SoundUtils'
 
 const styles = {
   container: {
@@ -30,8 +30,8 @@ const styles = {
 }
 
 const ShowLetter = ({ letter, sound, isRepeat }) => {
-  const soundFile = Utils.getSound(sound)
-  const repeatSound = Utils.getSound('repeat')
+  const soundFile = SoundUtils.getSound(sound)
+  const repeatSound = SoundUtils.getSound('repeat')
 
   const play = () => {
     if (isRepeat) this.icon.unfocus()

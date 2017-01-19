@@ -5,7 +5,7 @@ import { View, Text } from 'react-native'
 import speakerImage from '../assets/images/speaker.png'
 
 import { RoundImageWithButton } from '../components/Components'
-import Utils from '../components/Utils'
+import * as SoundUtils from '../utils/SoundUtils'
 
 const mapIndexed = addIndex(map)
 
@@ -14,9 +14,9 @@ const hightlightStyle = {
   borderRadius: 20
 }
 
-const Exercise = ({ image, sound, text, letter }) => {
-  const short = Utils.getSoundWithLength(sound, 'short')
-  const long = Utils.getSoundWithLength(sound, 'long')
+const ShowWord = ({ image, sound, text, letter }) => {
+  const short = SoundUtils.getSoundWithLength(sound, 'short')
+  const long = SoundUtils.getSoundWithLength(sound, 'long')
 
   const play = () => {
     short.play((success) => {
@@ -62,4 +62,4 @@ const Exercise = ({ image, sound, text, letter }) => {
   )
 }
 
-export default Exercise
+export default ShowWord
