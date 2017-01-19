@@ -2,11 +2,11 @@ import React from 'react'
 import { storiesOf } from '@kadira/react-native-storybook'
 
 import ananasImage from '../assets/images/ananas.jpg'
-import Exercise from './Exercise'
+import ShowWord from './ShowWord'
 
-storiesOf('components/Exercise', module)
+storiesOf('components/ShowWord', module)
   .add('default', () => (
-    <Exercise
+    <ShowWord
       image={ananasImage}
       sound="ananas"
       text="Ananas"
