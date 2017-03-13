@@ -3,24 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "@kadira/react-native-storybook": "^2.2.4",
+    "concurrently": "^3.4.0",
+    "jest": "^19.0.2",
+    "prettier": "^0.22.0",
     "react-native-scripts": "^0.0.18",
-    "jest-expo": "^0.2.1",
-    "react-test-renderer": "^15.4.2"
+    "react-test-renderer": "^15.4.2",
+    "remote-redux-devtools": "^0.5.7"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "react-native-scripts start",
+    "start": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts start\"",
     "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "android": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts android\"",
+    "ios": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts ios\"",
+    "test": "jest",
+    "format": "prettier --single-quote --write \"{src/**/*,App}.js\""
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "react-native"
   },
   "dependencies": {
     "expo": "^14.0.2",
+    "ramda": "^0.23.0",
     "react": "^15.4.2",
-    "react-native": "^0.42.0"
+    "react-native": "^0.42.0",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0"
   }
 }
