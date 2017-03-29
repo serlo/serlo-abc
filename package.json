@@ -13,12 +13,12 @@
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts start\"",
+    "start": "concurrently --kill-others \"storybook start -p 19001\" \"react-native-scripts start\"",
     "eject": "react-native-scripts eject",
-    "android": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts android\"",
-    "ios": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts ios\"",
+    "android": "concurrently --kill-others \"storybook start -p 19001\" \"react-native-scripts android\"",
+    "ios": "concurrently --kill-others \"storybook start -p 19001\" \"react-native-scripts ios\"",
     "test": "jest",
-    "format": "prettier --single-quote --write \"{src/**/*,App}.js\""
+    "format": "prettier --single-quote --write \"{{src,storybook}/**/*,*}.js\""
   },
   "jest": {
     "preset": "react-native"
