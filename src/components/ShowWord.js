@@ -5,7 +5,7 @@ import { View, Text } from 'react-native';
 
 import speakerImage from '../assets/images/speaker.png';
 
-Audio.setIsEnabled(true);
+Audio.setIsEnabledAsync(true);
 
 import { RoundImageWithButton } from '../components/Components';
 const mapIndexed = addIndex(map);

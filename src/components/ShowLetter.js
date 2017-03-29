@@ -6,7 +6,7 @@ import speakerImage from '../assets/images/speaker.png';
 import repeatIcon from '../assets/images/repeat.png';
 import repeatSource from '../assets/sounds/repeat.mp3';
 
-Audio.setIsEnabled(true);
+Audio.setIsEnabledAsync(true);
 
 import { RoundButton, IconWithBackground } from '../components/Components';
 
