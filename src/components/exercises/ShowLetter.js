@@ -2,13 +2,13 @@ import { Audio } from 'expo';
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import speakerImage from '../assets/images/speaker.png';
-import repeatIcon from '../assets/images/repeat.png';
-import repeatSource from '../assets/sounds/repeat.mp3';
+import speakerImage from '../../assets/images/speaker.png';
+import repeatIcon from '../../assets/images/repeat.png';
+import repeatSource from '../../assets/sounds/repeat.mp3';
 
 Audio.setIsEnabledAsync(true);
 
-import { RoundButton, IconWithBackground } from '../components/Components';
+import { RoundButton, IconWithBackground } from '../Components';
 
 const styles = {
   container: {

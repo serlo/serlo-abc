@@ -3,11 +3,11 @@ import { addIndex, forEach, map, toUpper } from 'ramda';
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import speakerImage from '../assets/images/speaker.png';
+import speakerImage from '../../assets/images/speaker.png';
 
 Audio.setIsEnabledAsync(true);
 
-import { RoundImageWithButton } from '../components/Components';
+import { RoundImageWithButton } from '../Components';
 const mapIndexed = addIndex(map);
 
 const highlightStyle = {
