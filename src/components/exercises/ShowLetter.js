@@ -29,7 +29,9 @@ const styles = {
   }
 };
 
-const UnwrappedShowLetter = ({ letter, sounds: [letterSound, repeatSound], isRepeat }) => {
+const UnwrappedShowLetter = (
+  { letter, sounds: [letterSound, repeatSound], isRepeat }
+) => {
   const play = () => {
     if (isRepeat) this.icon.unfocus();
     letterSound.playAsync();
@@ -74,12 +76,14 @@ const UnwrappedShowLetter = ({ letter, sounds: [letterSound, repeatSound], isRep
       </View>
     </View>
   );
-}
+};
 
 const WrappedShowLetter = withAudio(UnwrappedShowLetter);
 
 const ShowLetter = ({ sound, ...props }) => {
-  const sounds = props.isRepeat ? [sound, require('../../assets/sounds/repeat.mp3')] : [sound];
+  const sounds = props.isRepeat
+    ? [sound, require('../../assets/sounds/repeat.mp3')]
+    : [sound];
   return <WrappedShowLetter sounds={sounds} {...props} />;
 };
 

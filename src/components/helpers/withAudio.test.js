@@ -19,7 +19,9 @@ class Sound {
 beforeEach(() => {
   Audio = { setIsEnabledAsync: jest.fn(), Sound };
   Component = withAudio(Audio)(View);
-  rendered = shallow(<Component sounds={sounds} foo="bar" />, { lifecycleExperimental: true });
+  rendered = shallow(<Component sounds={sounds} foo="bar" />, {
+    lifecycleExperimental: true
+  });
 
   view = rendered.find(View);
 });
