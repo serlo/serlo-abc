@@ -9,7 +9,7 @@ import {
 
 const { Video } = Components;
 
-import playIcon from '../assets/images/play.png';
+import playIcon from '../../assets/images/play.png';
 
 // TODO: missing
 const replayIcon = null;
