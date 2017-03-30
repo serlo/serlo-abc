@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
-Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
+Below you'll find information about performing common tasks.
 
 ## Table of Contents
 
@@ -15,6 +15,7 @@ Below you'll find information about performing common tasks. The most recent ver
   * [yarn test -- --watch](#yarn-test-watch)
   * [yarn ios](#yarn-ios)
   * [yarn android](#yarn-android)
+  * [yarn format](#yarn-format)
 * [Writing and Running Tests](#writing-and-running-tests)
 * [Tips and Tricks](#tips-and-tricks)
 
@@ -56,6 +57,10 @@ Like `yarn start`, but also attempts to open your app in the iOS Simulator if yo
 ### `yarn android`
 
 Like `yarn start`, but also attempts to open your app on a connected Android device or emulator. Requires an installation of Android build tools (see [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) for detailed setup).
+
+### `yarn format`
+
+Formats all JavaScript code with [prettier](https://github.com/prettier/prettier). 
 
 ## Writing and Running Tests
 
