@@ -40,13 +40,13 @@ const ShowLetter = ({ letter, sound, isRepeat }) => {
 
   const play = () => {
     if (isRepeat) this.icon.unfocus();
-    letterSound.play();
+    letterSound.playAsync();
     letterSound.setPlaybackFinishedCallback(() => {
-      letterSound.setPosition(0);
+      letterSound.setPositionAsync(0);
       if (isRepeat) this.icon.focus();
-      repeatSound.play();
+      repeatSound.playAsync();
       repeatSound.setPlaybackFinishedCallback(() => {
-        repeatSound.setPosition(0);
+        repeatSound.setPositionAsync(0);
       });
     });
   };
