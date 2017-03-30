@@ -34,20 +34,27 @@ const styles = {
 
 const ShowLetter = ({ letter, sound, isRepeat }) => {
   const letterSound = new Audio.Sound({ source: sound });
-  const repeatSound = new Audio.Sound({ source: repeatSource });
   letterSound.loadAsync();
-  repeatSound.loadAsync();
+
+  let repeatSound;
+
+  if (isRepeat) {
+    repeatSound = new Audio.Sound({ source: repeatSource });
+    repeatSound.loadAsync();
+  }
 
   const play = () => {
     if (isRepeat) this.icon.unfocus();
     letterSound.playAsync();
     letterSound.setPlaybackFinishedCallback(() => {
       letterSound.setPositionAsync(0);
-      if (isRepeat) this.icon.focus();
-      repeatSound.playAsync();
-      repeatSound.setPlaybackFinishedCallback(() => {
-        repeatSound.setPositionAsync(0);
-      });
+      if (isRepeat) {
+        this.icon.focus();
+        repeatSound.playAsync();
+        repeatSound.setPlaybackFinishedCallback(() => {
+          repeatSound.setPositionAsync(0);
+        });
+      }
     });
   };
 
