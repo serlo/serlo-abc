@@ -1,13 +1,10 @@
-import { Audio } from 'expo';
 import React from 'react';
 import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
 import repeatIcon from '../../assets/images/repeat.png';
-import repeatSource from '../../assets/sounds/repeat.mp3';
 
-Audio.setIsEnabledAsync(true);
-
+import withAudio from '../helpers/withAudio';
 import { RoundButton, IconWithBackground } from '../Components';
 
 const styles = {
@@ -32,17 +29,7 @@ const styles = {
   }
 };
 
-const ShowLetter = ({ letter, sound, isRepeat }) => {
-  const letterSound = new Audio.Sound({ source: sound });
-  letterSound.loadAsync();
-
-  let repeatSound;
-
-  if (isRepeat) {
-    repeatSound = new Audio.Sound({ source: repeatSource });
-    repeatSound.loadAsync();
-  }
-
+const UnwrappedShowLetter = ({ letter, sounds: [letterSound, repeatSound], isRepeat }) => {
   const play = () => {
     if (isRepeat) this.icon.unfocus();
     letterSound.playAsync();
@@ -87,6 +74,13 @@ const ShowLetter = ({ letter, sound, isRepeat }) => {
       </View>
     </View>
   );
+}
+
+const WrappedShowLetter = withAudio(UnwrappedShowLetter);
+
+const ShowLetter = ({ sound, ...props }) => {
+  const sounds = props.isRepeat ? [sound, require('../../assets/sounds/repeat.mp3')] : [sound];
+  return <WrappedShowLetter sounds={sounds} {...props} />;
 };
 
 export default ShowLetter;

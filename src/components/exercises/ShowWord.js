@@ -1,12 +1,10 @@
-import { Audio } from 'expo';
 import { addIndex, forEach, map, toUpper } from 'ramda';
 import React from 'react';
 import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
 
-Audio.setIsEnabledAsync(true);
-
+import withAudio from '../helpers/withAudio';
 import { RoundImageWithButton } from '../Components';
 const mapIndexed = addIndex(map);
 
@@ -16,9 +14,6 @@ const highlightStyle = {
 };
 
 const ShowWord = ({ image, sounds, text, letter }) => {
-  const wordSounds = map(source => new Audio.Sound({ source }), sounds);
-  forEach(sound => sound.loadAsync(), wordSounds);
-
   const play = () => {
     const playAll = ([sound, ...rest]) => {
       sound.playAsync();
@@ -29,7 +24,7 @@ const ShowWord = ({ image, sounds, text, letter }) => {
         }
       });
     };
-    playAll(wordSounds);
+    playAll(sounds);
   };
 
   const letters = mapIndexed(
@@ -72,4 +67,4 @@ const ShowWord = ({ image, sounds, text, letter }) => {
   );
 };
 
-export default ShowWord;
+export default withAudio(ShowWord);
