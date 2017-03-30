@@ -1,4 +1,4 @@
-import { Components } from 'expo';
+import { Video } from 'expo';
 import React, { Component } from 'react';
 import {
   Image,
@@ -6,8 +6,6 @@ import {
   TouchableWithoutFeedback,
   TouchableOpacity
 } from 'react-native';
-
-const { Video } = Components;
 
 import playIcon from '../../assets/images/play.png';
 
