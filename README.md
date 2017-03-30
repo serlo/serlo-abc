@@ -12,7 +12,7 @@ Below you'll find information about performing common tasks.
   * [yarn install](#yarn-install)
   * [yarn start](#yarn-start)
   * [yarn test](#yarn-test)
-  * [yarn test -- --watch](#yarn-test-watch)
+  * [yarn test -- --watch](#yarn-test------watch)
   * [yarn ios](#yarn-ios)
   * [yarn android](#yarn-android)
   * [yarn format](#yarn-format)
