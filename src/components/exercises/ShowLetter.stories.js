@@ -8,5 +8,9 @@ storiesOf('exercises/ShowLetter', module)
     <ShowLetter letter="A" sound={require('../../assets/sounds/a.mp3')} />
   ))
   .add('B (with repeat)', () => (
-    <ShowLetter letter="B" sound={require('../../assets/sounds/b.mp3')} isRepeat />
+    <ShowLetter
+      letter="B"
+      sound={require('../../assets/sounds/b.mp3')}
+      isRepeat
+    />
   ));

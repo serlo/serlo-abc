@@ -3744,6 +3744,14 @@ jest-environment-node@^19.0.2:
     jest-mock "^19.0.0"
     jest-util "^19.0.2"
 
+jest-expo@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/jest-expo/-/jest-expo-0.3.1.tgz#b04ba289b54cf03bb7442cdc7500532f7fd9360b"
+  dependencies:
+    babel-jest "^19.0.0"
+    jest "^19.0.2"
+    react-test-renderer "~15.4.2"
+
 jest-file-exists@^19.0.0:
   version "19.0.0"
   resolved "https://registry.yarnpkg.com/jest-file-exists/-/jest-file-exists-19.0.0.tgz#cca2e587a11ec92e24cfeab3f8a94d657f3fceb8"
@@ -5665,7 +5673,7 @@ react-stubber@^1.0.0:
   dependencies:
     babel-runtime "^6.5.0"
 
-react-test-renderer@^15.4.2:
+react-test-renderer@^15.4.2, react-test-renderer@~15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-15.4.2.tgz#27e1dff5d26d0e830f99614c487622bc831416f3"
   dependencies:

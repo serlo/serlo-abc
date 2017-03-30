@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing (with repeat) 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00B4D5",
+      "flex": 1,
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFF",
+          "fontSize": 180,
+          "fontWeight": "bold",
+          "height": 200,
+          "paddingLeft": 50,
+          "textAlign": "center",
+          "width": 200,
+        }
+      }
+    >
+      B
+    </Text>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#73DBFF",
+            "borderRadius": 9999,
+            "elevation": 10,
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 40,
+              "resizeMode": "contain",
+              "width": 40,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    height={80}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 9999,
+          "padding": 20,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 40,
+            "resizeMode": "contain",
+            "width": 40,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders without crashing (without repeat) 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00B4D5",
+      "flex": 1,
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFF",
+          "fontSize": 180,
+          "fontWeight": "bold",
+          "height": 200,
+          "paddingLeft": 50,
+          "textAlign": "center",
+          "width": 200,
+        }
+      }
+    >
+      A
+    </Text>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#73DBFF",
+            "borderRadius": 9999,
+            "elevation": 10,
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 40,
+              "resizeMode": "contain",
+              "width": 40,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    height={80}
+  />
+</View>
+`;
