@@ -21,9 +21,9 @@ const ShowWord = ({ image, sounds, text, letter }) => {
 
   const play = () => {
     const playAll = ([sound, ...rest]) => {
-      sound.play();
+      sound.playAsync();
       sound.setPlaybackFinishedCallback(() => {
-        sound.setPosition(0);
+        sound.setPositionAsync(0);
         if (rest.length > 0) {
           setTimeout(() => playAll(rest), 1000);
         }
