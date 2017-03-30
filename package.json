@@ -5,6 +5,8 @@
   "devDependencies": {
     "@kadira/react-native-storybook": "^2.2.4",
     "concurrently": "^3.4.0",
+    "flow-bin": "^0.38.0",
+    "flow-typed": "^2.0.0",
     "jest": "^19.0.2",
     "prettier": "^0.22.0",
     "react-native-scripts": "^0.0.26",
@@ -18,7 +20,8 @@
     "android": "concurrently --kill-others \"storybook start -p 19001\" \"react-native-scripts android\"",
     "ios": "concurrently --kill-others \"storybook start -p 19001\" \"react-native-scripts ios\"",
     "test": "jest",
-    "format": "prettier --single-quote --write \"{{src,storybook}/**/*,*}.js\""
+    "format": "prettier --single-quote --write \"{{src,storybook}/**/*,*}.js\"",
+    "postinstall": "flow-typed install"
   },
   "jest": {
     "preset": "react-native"
