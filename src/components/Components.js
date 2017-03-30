@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, View, Image } from 'react-native';
+import { TouchableOpacity, View, Image, Text } from 'react-native';
 
 const styles = {
   buttonWithInset: {
@@ -93,7 +93,56 @@ export const RoundButton = ({ icon, size, style, onPress }) => (
     </View>
   </TouchableOpacity>
 );
+export const RoundTextButton = ({ onPress, style, ...props }) => (
+  <TouchableOpacity onPress={onPress} style={style}>
+    <RoundText
+      {...props}
+      style={{
+        backgroundColor: '#73DBFF',
+        elevation: 5,
+        shadowColor: 'rgba(0, 0, 0, 0.1)',
+        shadowOpacity: 1,
+        shadowRadius: 0,
+        shadowOffset: {
+          height: 4,
+          width: 4
+        },
+        opacity: 1
+      }}
+    />
+  </TouchableOpacity>
+);
 
+export const RoundText = ({ text, size, style, textstyle }) => (
+  <View
+    style={[
+      {
+        backgroundColor: 'rgba(255,255,255,0.2)',
+        opacity: 0.4,
+        borderRadius: 9999,
+        padding: 5
+      },
+      style
+    ]}
+  >
+    <Text
+      style={[
+        {
+          backgroundColor: 'transparent',
+          color: '#fff',
+          fontSize: 40,
+          fontWeight: 'bold',
+          height: size,
+          width: size,
+          textAlign: 'center'
+        },
+        textstyle
+      ]}
+    >
+      {text}
+    </Text>
+  </View>
+);
 export const RoundImageWithButton = (
   { image, imageSize, icon, buttonSize, onPress }
 ) => (
