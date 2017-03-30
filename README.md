@@ -62,6 +62,10 @@ Like `yarn start`, but also attempts to open your app on a connected Android dev
 
 Formats all JavaScript code with [prettier](https://github.com/prettier/prettier). 
 
+### `yarn flow`
+
+Runs the [flow](https://flow.org) static type checker on your JavaScript code. The [flow documentation](https://flow.org/en/docs/editors/) contains guides on how to integrate flow into your editor.
+
 ## Writing and Running Tests
 
 This project is set up to use [jest](https://facebook.github.io/jest/) for tests. Files with suffix `.test.js` will be loaded by jest. The [jest documentation](https://facebook.github.io/jest/docs/getting-started.html) is also a wonderful resource, as is the [React Native testing tutorial](https://facebook.github.io/jest/docs/tutorial-react-native.html).
