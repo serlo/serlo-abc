@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgb(181,206,77)",
+      "flex": 1,
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#FFF",
+        "fontSize": 40,
+        "fontWeight": "bold",
+        "textAlign": "center",
+      }
+    }
+  >
+    Wiederholen Sie den Buchstaben.
+  </Text>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#73DBFF",
+          "borderRadius": 9999,
+          "elevation": 10,
+          "padding": 5,
+          "shadowColor": "rgba(0, 0, 0, 0.1)",
+          "shadowOffset": Object {
+            "height": 4,
+            "width": 4,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 40,
+            "resizeMode": "contain",
+            "width": 40,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

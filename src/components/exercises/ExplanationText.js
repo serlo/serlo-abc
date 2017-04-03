@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { RoundButton } from '../Components';
-import withAudio from '../helpers/withAudio';
+
 import speakerImage from '../../assets/images/speaker.png';
+import { loadSound } from '../helpers/audio';
+import { RoundButton } from '../Components';
 
 const styles = {
   container: {
@@ -19,11 +20,11 @@ const styles = {
   }
 };
 
-const UnwrappedExplanationText = ({ text, sounds: [textSound] }) => {
+const ExplanationText = ({ text, sound }) => {
   const play = () => {
-    textSound.playAsync();
-    textSound.setPlaybackFinishedCallback(() => {
-      textSound.setPositionAsync(0);
+    sound.playAsync();
+    sound.setPlaybackFinishedCallback(() => {
+      sound.setPositionAsync(0);
     });
   };
 
@@ -37,10 +38,4 @@ const UnwrappedExplanationText = ({ text, sounds: [textSound] }) => {
   );
 };
 
-const WrappedExplanationText = withAudio(UnwrappedExplanationText);
-
-const ExplanationText = ({ sound, ...props }) => {
-  return <WrappedExplanationText sounds={[sound]} {...props} />;
-};
-
-export default ExplanationText;
+export default loadSound(ExplanationText);
