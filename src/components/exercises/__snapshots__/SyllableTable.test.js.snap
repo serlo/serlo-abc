@@ -1,0 +1,393 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00B4D5",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginTop": 50,
+        "width": 300,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(255,255,255,0.2)",
+            "borderRadius": 9999,
+            "opacity": 0.4,
+            "padding": 5,
+          },
+          Object {
+            "margin": 5,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#fff",
+              "fontSize": 40,
+              "fontWeight": "bold",
+              "height": 60,
+              "textAlign": "center",
+              "width": 60,
+            },
+            undefined,
+          ]
+        }
+      >
+        na
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "margin": 5,
+          "opacity": 1,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(255,255,255,0.2)",
+              "borderRadius": 9999,
+              "opacity": 0.4,
+              "padding": 5,
+            },
+            Object {
+              "backgroundColor": "#73DBFF",
+              "elevation": 5,
+              "opacity": 1,
+              "shadowColor": "rgba(0, 0, 0, 0.1)",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 4,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#fff",
+                "fontSize": 40,
+                "fontWeight": "bold",
+                "height": 60,
+                "textAlign": "center",
+                "width": 60,
+              },
+              undefined,
+            ]
+          }
+        >
+          ne
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(255,255,255,0.2)",
+            "borderRadius": 9999,
+            "opacity": 0.4,
+            "padding": 5,
+          },
+          Object {
+            "margin": 5,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#fff",
+              "fontSize": 40,
+              "fontWeight": "bold",
+              "height": 60,
+              "textAlign": "center",
+              "width": 60,
+            },
+            undefined,
+          ]
+        }
+      >
+        no
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(255,255,255,0.2)",
+            "borderRadius": 9999,
+            "opacity": 0.4,
+            "padding": 5,
+          },
+          Object {
+            "margin": 5,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#fff",
+              "fontSize": 40,
+              "fontWeight": "bold",
+              "height": 60,
+              "textAlign": "center",
+              "width": 60,
+            },
+            undefined,
+          ]
+        }
+      >
+        sa
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(255,255,255,0.2)",
+            "borderRadius": 9999,
+            "opacity": 0.4,
+            "padding": 5,
+          },
+          Object {
+            "margin": 5,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#fff",
+              "fontSize": 40,
+              "fontWeight": "bold",
+              "height": 60,
+              "textAlign": "center",
+              "width": 60,
+            },
+            undefined,
+          ]
+        }
+      >
+        se
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(255,255,255,0.2)",
+            "borderRadius": 9999,
+            "opacity": 0.4,
+            "padding": 5,
+          },
+          Object {
+            "margin": 5,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#fff",
+              "fontSize": 40,
+              "fontWeight": "bold",
+              "height": 60,
+              "textAlign": "center",
+              "width": 60,
+            },
+            undefined,
+          ]
+        }
+      >
+        so
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(255,255,255,0.2)",
+            "borderRadius": 9999,
+            "opacity": 0.4,
+            "padding": 5,
+          },
+          Object {
+            "margin": 5,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#fff",
+              "fontSize": 40,
+              "fontWeight": "bold",
+              "height": 60,
+              "textAlign": "center",
+              "width": 60,
+            },
+            undefined,
+          ]
+        }
+      >
+        ta
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(255,255,255,0.2)",
+            "borderRadius": 9999,
+            "opacity": 0.4,
+            "padding": 5,
+          },
+          Object {
+            "margin": 5,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#fff",
+              "fontSize": 40,
+              "fontWeight": "bold",
+              "height": 60,
+              "textAlign": "center",
+              "width": 60,
+            },
+            undefined,
+          ]
+        }
+      >
+        te
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(255,255,255,0.2)",
+            "borderRadius": 9999,
+            "opacity": 0.4,
+            "padding": 5,
+          },
+          Object {
+            "margin": 5,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#fff",
+              "fontSize": 40,
+              "fontWeight": "bold",
+              "height": 60,
+              "textAlign": "center",
+              "width": 60,
+            },
+            undefined,
+          ]
+        }
+      >
+        to
+      </Text>
+    </View>
+  </View>
+</View>
+`;

@@ -1,10 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import speakerImage from '../../assets/images/speaker.png';
 import repeatIcon from '../../assets/images/repeat.png';
-
-import withAudio from '../helpers/withAudio';
+import speakerImage from '../../assets/images/speaker.png';
+import { loadSounds } from '../helpers/audio';
 import { RoundButton, IconWithBackground } from '../Components';
 
 const styles = {
@@ -78,7 +77,7 @@ const UnwrappedShowLetter = (
   );
 };
 
-const WrappedShowLetter = withAudio(UnwrappedShowLetter);
+const WrappedShowLetter = loadSounds(UnwrappedShowLetter);
 
 const ShowLetter = ({ sound, ...props }) => {
   const sounds = props.isRepeat

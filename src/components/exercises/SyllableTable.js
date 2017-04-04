@@ -1,12 +1,13 @@
 import React from 'react';
 import { addIndex, map } from 'ramda';
-import { View, Text } from 'react-native';
-import withAudio from '../helpers/withAudio';
-import { RoundTextButton, RoundText } from '../../components/Components';
+import { View } from 'react-native';
 
-const mapIndex = addIndex(map);
+import { loadSound } from '../helpers/audio';
+import { RoundTextButton, RoundText } from '../Components';
 
-const UnwrappedSyllableTable = ({ syllables, sounds: [sound], index }) => {
+const mapIndexed = addIndex(map);
+
+const SyllableTable = ({ syllables, sound, index }) => {
   const play = () => {
     sound.playAsync();
     sound.setPlaybackFinishedCallback(() => {
@@ -32,7 +33,7 @@ const UnwrappedSyllableTable = ({ syllables, sounds: [sound], index }) => {
           marginTop: 50
         }}
       >
-        {mapIndex(
+        {mapIndexed(
           (syllable, key) => {
             if (key === index) {
               return (
@@ -62,10 +63,4 @@ const UnwrappedSyllableTable = ({ syllables, sounds: [sound], index }) => {
   );
 };
 
-const WrappedSyllableTable = withAudio(UnwrappedSyllableTable);
-
-const SyllableTable = ({ sound, ...props }) => {
-  return <WrappedSyllableTable sounds={[sound]} {...props} />;
-};
-
-export default SyllableTable;
+export default loadSound(SyllableTable);
