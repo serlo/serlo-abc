@@ -3,22 +3,30 @@ import { TouchableOpacity, View, Image, Text } from 'react-native';
 
 const styles = {
   buttonWithInset: {
-    marginLeft: -50
+    marginLeft: -70
   }
 };
 
 export const RoundImageWithBorder = ({ image, size }) => (
-  <Image
-    resizeMode="cover"
-    source={image}
+  <View
     style={{
-      height: size,
-      width: size,
-      margin: 20,
-      borderRadius: size / 2,
-      borderColor: 'rgba(0, 0, 0, 0.05)'
+      backgroundColor: 'rgba(0, 0, 0, 0.05)',
+      borderRadius: 9999999,
+      margin: size / 10
     }}
-  />
+  >
+    <Image
+      resizeMode="cover"
+      source={image}
+      style={{
+        height: size,
+        width: size,
+        margin: size / 10,
+        borderRadius: size / 2,
+        borderColor: 'rgba(0, 0, 0, 0.05)'
+      }}
+    />
+  </View>
 );
 
 export class IconWithBackground extends Component {
@@ -143,13 +151,12 @@ export const RoundText = ({ text, size, style, textstyle }) => (
     </Text>
   </View>
 );
+
 export const RoundImageWithButton = (
   { image, imageSize, icon, buttonSize, onPress }
 ) => (
   <View
     style={{
-      backgroundColor: 'rgba(0, 0, 0, 0.05)',
-      borderRadius: 9999999,
       flexDirection: 'row',
       alignItems: 'flex-end'
     }}
@@ -159,7 +166,10 @@ export const RoundImageWithButton = (
       icon={icon}
       size={buttonSize}
       onPress={onPress}
-      style={styles.buttonWithInset}
+      style={{
+        marginLeft: -(buttonSize + imageSize / 10 + 10),
+        marginRight: imageSize / 10
+      }}
     />
   </View>
 );
