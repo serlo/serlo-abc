@@ -3,9 +3,9 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
-
-import withAudio from '../helpers/withAudio';
+import { loadSounds } from '../helpers/audio';
 import { RoundImageWithButton } from '../Components';
+
 const mapIndexed = addIndex(map);
 
 const highlightStyle = {
@@ -67,4 +67,4 @@ const ShowWord = ({ image, sounds, text, letter }) => {
   );
 };
 
-export default withAudio(ShowWord);
+export default loadSounds(ShowWord);

@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@kadira/react-native-storybook';
+
 import ExplanationText from './ExplanationText';
 
 storiesOf('components/ExplanationText', module).add('default', () => (
