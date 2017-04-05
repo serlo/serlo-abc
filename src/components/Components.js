@@ -7,13 +7,18 @@ const styles = {
   }
 };
 
-export const RoundImageWithBorder = ({ image, size }) => (
+export const RoundImageWithBorder = ({ image, size, white, style }) => (
   <View
-    style={{
-      backgroundColor: 'rgba(0, 0, 0, 0.05)',
-      borderRadius: 9999999,
-      margin: size / 10
-    }}
+    style={[
+      {
+        backgroundColor: white
+          ? 'rgba(255, 255, 255, 0.2)'
+          : 'rgba(0, 0, 0, 0.05)',
+        borderRadius: 9999999,
+        margin: size / 10
+      },
+      style
+    ]}
   >
     <Image
       resizeMode="cover"
@@ -22,8 +27,7 @@ export const RoundImageWithBorder = ({ image, size }) => (
         height: size,
         width: size,
         margin: size / 10,
-        borderRadius: size / 2,
-        borderColor: 'rgba(0, 0, 0, 0.05)'
+        borderRadius: size / 2
       }}
     />
   </View>
@@ -126,9 +130,12 @@ export const RoundText = ({ text, size, style, textstyle }) => (
     style={[
       {
         backgroundColor: 'rgba(255,255,255,0.2)',
-        opacity: 0.4,
         borderRadius: 9999,
-        padding: 5
+        padding: 5,
+        height: size,
+        width: size,
+        alignItems: 'center',
+        justifyContent: 'center'
       },
       style
     ]}
@@ -140,8 +147,6 @@ export const RoundText = ({ text, size, style, textstyle }) => (
           color: '#fff',
           fontSize: 40,
           fontWeight: 'bold',
-          height: size,
-          width: size,
           textAlign: 'center'
         },
         textstyle
