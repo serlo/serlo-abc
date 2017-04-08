@@ -4,5 +4,6 @@ import '../src/components/exercises/TutorialVideo.stories';
 import '../src/components/exercises/ShowLetter.stories';
 import '../src/components/exercises/ExplanationText.stories';
 import '../src/components/exercises/SyllableTable.stories';
+import '../src/components/exercises/MissingLetter.stories';
 import '../src/components/exercises/IntroduceLetter.stories';
 import '../src/components/exercises/FindLetter.stories';
