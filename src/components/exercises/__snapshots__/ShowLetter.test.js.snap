@@ -5,7 +5,7 @@ exports[`renders without crashing (with repeat) 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#00B4D5",
+      "backgroundColor": "#00b4d5",
       "flex": 1,
       "justifyContent": "space-around",
     }
@@ -25,7 +25,7 @@ exports[`renders without crashing (with repeat) 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "#FFF",
+          "color": "#ffffff",
           "fontSize": 180,
           "fontWeight": "bold",
           "height": 200,
@@ -62,7 +62,7 @@ exports[`renders without crashing (with repeat) 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#73DBFF",
+            "backgroundColor": "#73dbff",
             "borderRadius": 9999,
             "elevation": 10,
             "padding": 5,
@@ -121,7 +121,7 @@ exports[`renders without crashing (without repeat) 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#00B4D5",
+      "backgroundColor": "#00b4d5",
       "flex": 1,
       "justifyContent": "space-around",
     }
@@ -141,7 +141,7 @@ exports[`renders without crashing (without repeat) 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "#FFF",
+          "color": "#ffffff",
           "fontSize": 180,
           "fontWeight": "bold",
           "height": 200,
@@ -178,7 +178,7 @@ exports[`renders without crashing (without repeat) 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#73DBFF",
+            "backgroundColor": "#73dbff",
             "borderRadius": 9999,
             "elevation": 10,
             "padding": 5,

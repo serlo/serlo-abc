@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text, Dimensions } from 'react-native';
+import { View, Dimensions } from 'react-native';
+
+import { GREEN } from '../../styles/colors';
 import { RoundImageWithBorder, RoundText } from '../Components';
 
 const ScaleFourImages = ({ displaySize, images, letter }) => {
@@ -57,7 +59,7 @@ const IntroduceLetter = props => {
     <View
       style={{
         flex: 1,
-        backgroundColor: '#b5ce4d',
+        backgroundColor: GREEN,
         alignItems: 'center',
         justifyContent: 'center'
       }}

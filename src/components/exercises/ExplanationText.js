@@ -2,18 +2,19 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
+import { WHITE, GREEN } from '../../styles/colors';
 import { loadSound } from '../helpers/audio';
 import { RoundButton } from '../Components';
 
 const styles = {
   container: {
     flex: 1,
-    backgroundColor: 'rgb(181,206,77)',
+    backgroundColor: GREEN,
     alignItems: 'center',
     justifyContent: 'space-around'
   },
   text: {
-    color: '#FFF',
+    color: WHITE,
     fontSize: 40,
     fontWeight: 'bold',
     textAlign: 'center'

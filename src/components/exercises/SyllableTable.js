@@ -2,6 +2,7 @@ import React from 'react';
 import { addIndex, map } from 'ramda';
 import { View } from 'react-native';
 
+import { PRIMARY } from '../../styles/colors';
 import { loadSound } from '../helpers/audio';
 import { RoundTextButton, RoundText } from '../Components';
 
@@ -19,7 +20,7 @@ const SyllableTable = ({ syllables, sound, index }) => {
     <View
       style={{
         flex: 1,
-        backgroundColor: '#00B4D5',
+        backgroundColor: PRIMARY,
         alignItems: 'center'
       }}
     >
