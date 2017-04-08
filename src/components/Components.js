@@ -1,3 +1,4 @@
+import { addIndex, map } from 'ramda';
 import React, { Component } from 'react';
 import { TouchableOpacity, View, Image, Text } from 'react-native';
 
@@ -6,6 +7,7 @@ const styles = {
     marginLeft: -50
   }
 };
+const mapIndexed = addIndex(map);
 
 export const RoundImageWithBorder = ({ image, size }) => (
   <Image
@@ -163,3 +165,85 @@ export const RoundImageWithButton = (
     />
   </View>
 );
+
+export class TextPicker extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      optionsVisible: false,
+      selectedValue: ''
+    };
+  }
+
+  selectOption = key =>
+    () => {
+      this.setState({
+        optionsVisible: false,
+        selectedValue: this.props.options[key]
+      });
+    };
+
+  togglePickerOptions = () => {
+    this.setState({
+      optionsVisible: !this.state.optionsVisible
+    });
+  };
+
+  styles = {
+    button: {
+      backgroundColor: '#73DBFF',
+      padding: 5,
+      borderRadius: 20,
+      elevation: 10,
+      shadowColor: 'rgba(0, 0, 0, 0.1)',
+      shadowOpacity: 1,
+      shadowRadius: 0,
+      shadowOffset: {
+        height: 4,
+        width: 4
+      }
+    },
+    text: {
+      color: '#fff',
+      fontSize: 40,
+      fontWeight: 'bold',
+      textAlign: 'center'
+    }
+  };
+
+  render() {
+    return (
+      <View
+        style={{
+          flex: 1,
+          flexDirection: 'column',
+          justifyContent: 'flex-end'
+        }}
+      >
+
+        {this.state.optionsVisible
+          ? mapIndexed(
+              (option, key) => (
+                <TouchableOpacity onPress={this.selectOption(key)} key={key}>
+                  <View style={this.styles.button}>
+                    <Text style={this.styles.text}>
+                      {option}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              ),
+              this.props.options
+            )
+          : null}
+
+        <TouchableOpacity onPress={this.togglePickerOptions}>
+          <View style={this.styles.button}>
+            <Text style={this.styles.text}>
+              {this.state.selectedValue}
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+}
