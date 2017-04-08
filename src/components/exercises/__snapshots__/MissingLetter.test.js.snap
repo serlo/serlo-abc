@@ -1,0 +1,266 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00B4D5",
+      "flex": 1,
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(0, 0, 0, 0.05)",
+            "borderRadius": 9999999,
+            "margin": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        resizeMode="cover"
+        source={1}
+        style={
+          Object {
+            "borderRadius": 100,
+            "height": 200,
+            "margin": 20,
+            "width": 200,
+          }
+        }
+      />
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "marginLeft": -70,
+          "marginRight": 20,
+          "opacity": 1,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#73DBFF",
+            "borderRadius": 9999,
+            "elevation": 10,
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 40,
+              "resizeMode": "contain",
+              "width": 40,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "padding": 5,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 40,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        A
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 5,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 40,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        p
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 5,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 40,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        f
+      </Text>
+    </View>
+    <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "justifyContent": "flex-end",
+          }
+        }
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#73DBFF",
+                "borderRadius": 20,
+                "elevation": 10,
+                "padding": 5,
+                "shadowColor": "rgba(0, 0, 0, 0.1)",
+                "shadowOffset": Object {
+                  "height": 4,
+                  "width": 4,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 0,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 40,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 5,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 40,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        l
+      </Text>
+    </View>
+  </View>
+</View>
+`;
