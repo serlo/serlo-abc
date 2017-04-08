@@ -6,9 +6,9 @@ import IntroduceLetter from './IntroduceLetter';
 storiesOf('components/IntroduceLetter', module).add('default', () => (
   <IntroduceLetter
     images={[
-      require('../assets/images/ananas.jpg'),
-      require('../assets/images/apfel.jpg'),
-      require('../assets/images/affe.jpg')
+      require('../../assets/images/ananas.jpg'),
+      require('../../assets/images/apfel.jpg'),
+      require('../../assets/images/affe.jpg')
     ]}
     letter="Aa"
   />
