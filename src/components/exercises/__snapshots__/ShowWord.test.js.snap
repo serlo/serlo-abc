@@ -125,8 +125,9 @@ exports[`renders without crashing 1`] = `
         style={
           Object {
             "color": "#ffffff",
-            "fontSize": 40,
-            "fontWeight": "bold",
+            "fontFamily": "norddruck",
+            "fontSize": 35,
+            "textAlign": "center",
           }
         }
       >
@@ -150,8 +151,9 @@ exports[`renders without crashing 1`] = `
         style={
           Object {
             "color": "#ffffff",
-            "fontSize": 40,
-            "fontWeight": "bold",
+            "fontFamily": "norddruck",
+            "fontSize": 35,
+            "textAlign": "center",
           }
         }
       >
@@ -178,8 +180,9 @@ exports[`renders without crashing 1`] = `
         style={
           Object {
             "color": "#ffffff",
-            "fontSize": 40,
-            "fontWeight": "bold",
+            "fontFamily": "norddruck",
+            "fontSize": 35,
+            "textAlign": "center",
           }
         }
       >
@@ -203,8 +206,9 @@ exports[`renders without crashing 1`] = `
         style={
           Object {
             "color": "#ffffff",
-            "fontSize": 40,
-            "fontWeight": "bold",
+            "fontFamily": "norddruck",
+            "fontSize": 35,
+            "textAlign": "center",
           }
         }
       >
@@ -231,8 +235,9 @@ exports[`renders without crashing 1`] = `
         style={
           Object {
             "color": "#ffffff",
-            "fontSize": 40,
-            "fontWeight": "bold",
+            "fontFamily": "norddruck",
+            "fontSize": 35,
+            "textAlign": "center",
           }
         }
       >
@@ -256,8 +261,9 @@ exports[`renders without crashing 1`] = `
         style={
           Object {
             "color": "#ffffff",
-            "fontSize": 40,
-            "fontWeight": "bold",
+            "fontFamily": "norddruck",
+            "fontSize": 35,
+            "textAlign": "center",
           }
         }
       >

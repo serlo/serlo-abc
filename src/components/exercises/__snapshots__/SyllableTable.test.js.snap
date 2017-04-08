@@ -47,10 +47,9 @@ exports[`renders without crashing 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "transparent",
               "color": "#ffffff",
-              "fontSize": 40,
-              "fontWeight": "bold",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
               "textAlign": "center",
             },
             undefined,
@@ -117,10 +116,9 @@ exports[`renders without crashing 1`] = `
           style={
             Array [
               Object {
-                "backgroundColor": "transparent",
                 "color": "#ffffff",
-                "fontSize": 40,
-                "fontWeight": "bold",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
                 "textAlign": "center",
               },
               undefined,
@@ -156,10 +154,9 @@ exports[`renders without crashing 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "transparent",
               "color": "#ffffff",
-              "fontSize": 40,
-              "fontWeight": "bold",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
               "textAlign": "center",
             },
             undefined,
@@ -194,10 +191,9 @@ exports[`renders without crashing 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "transparent",
               "color": "#ffffff",
-              "fontSize": 40,
-              "fontWeight": "bold",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
               "textAlign": "center",
             },
             undefined,
@@ -232,10 +228,9 @@ exports[`renders without crashing 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "transparent",
               "color": "#ffffff",
-              "fontSize": 40,
-              "fontWeight": "bold",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
               "textAlign": "center",
             },
             undefined,
@@ -270,10 +265,9 @@ exports[`renders without crashing 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "transparent",
               "color": "#ffffff",
-              "fontSize": 40,
-              "fontWeight": "bold",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
               "textAlign": "center",
             },
             undefined,
@@ -308,10 +302,9 @@ exports[`renders without crashing 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "transparent",
               "color": "#ffffff",
-              "fontSize": 40,
-              "fontWeight": "bold",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
               "textAlign": "center",
             },
             undefined,
@@ -346,10 +339,9 @@ exports[`renders without crashing 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "transparent",
               "color": "#ffffff",
-              "fontSize": 40,
-              "fontWeight": "bold",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
               "textAlign": "center",
             },
             undefined,
@@ -384,10 +376,9 @@ exports[`renders without crashing 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "transparent",
               "color": "#ffffff",
-              "fontSize": 40,
-              "fontWeight": "bold",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
               "textAlign": "center",
             },
             undefined,
