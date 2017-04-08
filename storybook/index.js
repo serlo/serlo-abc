@@ -1,6 +1,8 @@
 import { getStorybookUI, configure } from '@kadira/react-native-storybook';
+import React from 'react';
 import url from 'url';
 
+import loadFonts from '../src/components/helpers/fonts';
 import './addons';
 
 import { NativeModules } from 'react-native';
@@ -14,4 +16,10 @@ configure(
 
 const { hostname } = url.parse(NativeModules.SourceCode.scriptURL);
 
-export default getStorybookUI({ port: 19001, host: hostname });
+const StorybookUI = getStorybookUI({ port: 19001, host: hostname });
+
+const App = ({ fontsLoaded }) => fontsLoaded && <StorybookUI />;
+
+export default loadFonts({
+  norddruck: require('../src/assets/fonts/norddruck.ttf')
+})(App);
