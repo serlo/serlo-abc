@@ -26,10 +26,13 @@ exports[`renders without crashing 1`] = `
       style={
         Array [
           Object {
+            "alignItems": "center",
             "backgroundColor": "rgba(255,255,255,0.2)",
             "borderRadius": 9999,
-            "opacity": 0.4,
+            "height": 60,
+            "justifyContent": "center",
             "padding": 5,
+            "width": 60,
           },
           Object {
             "margin": 5,
@@ -48,9 +51,7 @@ exports[`renders without crashing 1`] = `
               "color": "#fff",
               "fontSize": 40,
               "fontWeight": "bold",
-              "height": 60,
               "textAlign": "center",
-              "width": 60,
             },
             undefined,
           ]
@@ -86,10 +87,13 @@ exports[`renders without crashing 1`] = `
         style={
           Array [
             Object {
+              "alignItems": "center",
               "backgroundColor": "rgba(255,255,255,0.2)",
               "borderRadius": 9999,
-              "opacity": 0.4,
+              "height": 60,
+              "justifyContent": "center",
               "padding": 5,
+              "width": 60,
             },
             Object {
               "backgroundColor": "#73DBFF",
@@ -117,9 +121,7 @@ exports[`renders without crashing 1`] = `
                 "color": "#fff",
                 "fontSize": 40,
                 "fontWeight": "bold",
-                "height": 60,
                 "textAlign": "center",
-                "width": 60,
               },
               undefined,
             ]
@@ -133,10 +135,13 @@ exports[`renders without crashing 1`] = `
       style={
         Array [
           Object {
+            "alignItems": "center",
             "backgroundColor": "rgba(255,255,255,0.2)",
             "borderRadius": 9999,
-            "opacity": 0.4,
+            "height": 60,
+            "justifyContent": "center",
             "padding": 5,
+            "width": 60,
           },
           Object {
             "margin": 5,
@@ -155,9 +160,7 @@ exports[`renders without crashing 1`] = `
               "color": "#fff",
               "fontSize": 40,
               "fontWeight": "bold",
-              "height": 60,
               "textAlign": "center",
-              "width": 60,
             },
             undefined,
           ]
@@ -170,10 +173,13 @@ exports[`renders without crashing 1`] = `
       style={
         Array [
           Object {
+            "alignItems": "center",
             "backgroundColor": "rgba(255,255,255,0.2)",
             "borderRadius": 9999,
-            "opacity": 0.4,
+            "height": 60,
+            "justifyContent": "center",
             "padding": 5,
+            "width": 60,
           },
           Object {
             "margin": 5,
@@ -192,9 +198,7 @@ exports[`renders without crashing 1`] = `
               "color": "#fff",
               "fontSize": 40,
               "fontWeight": "bold",
-              "height": 60,
               "textAlign": "center",
-              "width": 60,
             },
             undefined,
           ]
@@ -207,10 +211,13 @@ exports[`renders without crashing 1`] = `
       style={
         Array [
           Object {
+            "alignItems": "center",
             "backgroundColor": "rgba(255,255,255,0.2)",
             "borderRadius": 9999,
-            "opacity": 0.4,
+            "height": 60,
+            "justifyContent": "center",
             "padding": 5,
+            "width": 60,
           },
           Object {
             "margin": 5,
@@ -229,9 +236,7 @@ exports[`renders without crashing 1`] = `
               "color": "#fff",
               "fontSize": 40,
               "fontWeight": "bold",
-              "height": 60,
               "textAlign": "center",
-              "width": 60,
             },
             undefined,
           ]
@@ -244,10 +249,13 @@ exports[`renders without crashing 1`] = `
       style={
         Array [
           Object {
+            "alignItems": "center",
             "backgroundColor": "rgba(255,255,255,0.2)",
             "borderRadius": 9999,
-            "opacity": 0.4,
+            "height": 60,
+            "justifyContent": "center",
             "padding": 5,
+            "width": 60,
           },
           Object {
             "margin": 5,
@@ -266,9 +274,7 @@ exports[`renders without crashing 1`] = `
               "color": "#fff",
               "fontSize": 40,
               "fontWeight": "bold",
-              "height": 60,
               "textAlign": "center",
-              "width": 60,
             },
             undefined,
           ]
@@ -281,10 +287,13 @@ exports[`renders without crashing 1`] = `
       style={
         Array [
           Object {
+            "alignItems": "center",
             "backgroundColor": "rgba(255,255,255,0.2)",
             "borderRadius": 9999,
-            "opacity": 0.4,
+            "height": 60,
+            "justifyContent": "center",
             "padding": 5,
+            "width": 60,
           },
           Object {
             "margin": 5,
@@ -303,9 +312,7 @@ exports[`renders without crashing 1`] = `
               "color": "#fff",
               "fontSize": 40,
               "fontWeight": "bold",
-              "height": 60,
               "textAlign": "center",
-              "width": 60,
             },
             undefined,
           ]
@@ -318,10 +325,13 @@ exports[`renders without crashing 1`] = `
       style={
         Array [
           Object {
+            "alignItems": "center",
             "backgroundColor": "rgba(255,255,255,0.2)",
             "borderRadius": 9999,
-            "opacity": 0.4,
+            "height": 60,
+            "justifyContent": "center",
             "padding": 5,
+            "width": 60,
           },
           Object {
             "margin": 5,
@@ -340,9 +350,7 @@ exports[`renders without crashing 1`] = `
               "color": "#fff",
               "fontSize": 40,
               "fontWeight": "bold",
-              "height": 60,
               "textAlign": "center",
-              "width": 60,
             },
             undefined,
           ]
@@ -355,10 +363,13 @@ exports[`renders without crashing 1`] = `
       style={
         Array [
           Object {
+            "alignItems": "center",
             "backgroundColor": "rgba(255,255,255,0.2)",
             "borderRadius": 9999,
-            "opacity": 0.4,
+            "height": 60,
+            "justifyContent": "center",
             "padding": 5,
+            "width": 60,
           },
           Object {
             "margin": 5,
@@ -377,9 +388,7 @@ exports[`renders without crashing 1`] = `
               "color": "#fff",
               "fontSize": 40,
               "fontWeight": "bold",
-              "height": 60,
               "textAlign": "center",
-              "width": 60,
             },
             undefined,
           ]
