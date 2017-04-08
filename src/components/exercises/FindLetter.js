@@ -49,13 +49,14 @@ class FindLetter extends Component {
     playAll(this.props.sounds);
   };
 
-  toggleLetter = key => () => {
-    this.setState(({ highlighted }) => {
-      highlighted[key] = !highlighted[key];
+  toggleLetter = key =>
+    () => {
+      this.setState(({ highlighted }) => {
+        highlighted[key] = !highlighted[key];
 
-      return { highlighted }
-    })
-  };
+        return { highlighted };
+      });
+    };
 
   render() {
     const letters = mapIndexed(
@@ -63,7 +64,10 @@ class FindLetter extends Component {
         <TouchableOpacity
           key={key}
           onPress={this.toggleLetter(key)}
-          style={[ styles.letter, this.state.highlighted[key] ? styles.highlighted : null ]}
+          style={[
+            styles.letter,
+            this.state.highlighted[key] ? styles.highlighted : null
+          ]}
         >
           <Text style={{ color: '#fff', fontSize: 40, fontWeight: 'bold' }}>
             {char}
