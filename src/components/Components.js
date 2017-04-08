@@ -2,15 +2,20 @@ import { addIndex, map } from 'ramda';
 import React, { Component } from 'react';
 import { TouchableOpacity, View, Image, Text } from 'react-native';
 
+import {
+  BLACK_TRANSPARENT,
+  WHITE,
+  WHITE_TRANSPARENT,
+  PRIMARY_WEAK
+} from '../styles/colors';
+
 const mapIndexed = addIndex(map);
 
 export const RoundImageWithBorder = ({ image, size, white, style }) => (
   <View
     style={[
       {
-        backgroundColor: white
-          ? 'rgba(255, 255, 255, 0.2)'
-          : 'rgba(0, 0, 0, 0.05)',
+        backgroundColor: white ? WHITE_TRANSPARENT : BLACK_TRANSPARENT,
         borderRadius: 9999999,
         margin: size / 10
       },
@@ -48,7 +53,7 @@ export class IconWithBackground extends Component {
   // Draws the semi-transparent background behind the icon
   focus = () => {
     this.setState({
-      backgroundColor: 'rgba(255,255,255,0.15)'
+      backgroundColor: WHITE_TRANSPARENT
     });
   };
 
@@ -78,11 +83,11 @@ export const RoundButton = ({ icon, size, style, onPress }) => (
   <TouchableOpacity onPress={onPress} style={style}>
     <View
       style={{
-        backgroundColor: '#73DBFF',
+        backgroundColor: PRIMARY_WEAK,
         borderRadius: 9999,
         padding: 5,
         elevation: 10,
-        shadowColor: 'rgba(0, 0, 0, 0.1)',
+        shadowColor: BLACK_TRANSPARENT,
         shadowOpacity: 1,
         shadowRadius: 0,
         shadowOffset: {
@@ -107,9 +112,9 @@ export const RoundTextButton = ({ onPress, style, ...props }) => (
     <RoundText
       {...props}
       style={{
-        backgroundColor: '#73DBFF',
+        backgroundColor: PRIMARY_WEAK,
         elevation: 5,
-        shadowColor: 'rgba(0, 0, 0, 0.1)',
+        shadowColor: BLACK_TRANSPARENT,
         shadowOpacity: 1,
         shadowRadius: 0,
         shadowOffset: {
@@ -126,7 +131,7 @@ export const RoundText = ({ text, size, style, textstyle }) => (
   <View
     style={[
       {
-        backgroundColor: 'rgba(255,255,255,0.2)',
+        backgroundColor: WHITE_TRANSPARENT,
         borderRadius: 9999,
         padding: 5,
         height: size,
@@ -141,7 +146,7 @@ export const RoundText = ({ text, size, style, textstyle }) => (
       style={[
         {
           backgroundColor: 'transparent',
-          color: '#fff',
+          color: WHITE,
           fontSize: 40,
           fontWeight: 'bold',
           textAlign: 'center'
@@ -201,11 +206,11 @@ export class TextPicker extends Component {
 
   styles = {
     button: {
-      backgroundColor: '#73DBFF',
+      backgroundColor: PRIMARY_WEAK,
       padding: 5,
       borderRadius: 20,
       elevation: 10,
-      shadowColor: 'rgba(0, 0, 0, 0.1)',
+      shadowColor: BLACK_TRANSPARENT,
       shadowOpacity: 1,
       shadowRadius: 0,
       shadowOffset: {
@@ -214,7 +219,7 @@ export class TextPicker extends Component {
       }
     },
     text: {
-      color: '#fff',
+      color: WHITE,
       fontSize: 40,
       fontWeight: 'bold',
       textAlign: 'center'

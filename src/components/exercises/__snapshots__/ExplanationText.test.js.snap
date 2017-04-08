@@ -5,7 +5,7 @@ exports[`renders without crashing 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "rgb(181,206,77)",
+      "backgroundColor": "#b5ce4d",
       "flex": 1,
       "justifyContent": "space-around",
     }
@@ -17,7 +17,7 @@ exports[`renders without crashing 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "color": "#FFF",
+        "color": "#ffffff",
         "fontSize": 40,
         "fontWeight": "bold",
         "textAlign": "center",
@@ -51,7 +51,7 @@ exports[`renders without crashing 1`] = `
     <View
       style={
         Object {
-          "backgroundColor": "#73DBFF",
+          "backgroundColor": "#73dbff",
           "borderRadius": 9999,
           "elevation": 10,
           "padding": 5,

@@ -5,7 +5,7 @@ exports[`renders without crashing 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#00B4D5",
+      "backgroundColor": "#00b4d5",
       "flex": 1,
       "justifyContent": "space-around",
     }
@@ -23,7 +23,7 @@ exports[`renders without crashing 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "rgba(0, 0, 0, 0.05)",
+            "backgroundColor": "rgba(0, 0, 0, 0.1)",
             "borderRadius": 9999999,
             "margin": 20,
           },
@@ -71,7 +71,7 @@ exports[`renders without crashing 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#73DBFF",
+            "backgroundColor": "#73dbff",
             "borderRadius": 9999,
             "elevation": 10,
             "padding": 5,
@@ -118,7 +118,7 @@ exports[`renders without crashing 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "#fff",
+            "color": "#ffffff",
             "fontSize": 40,
             "fontWeight": "bold",
           }
@@ -140,7 +140,7 @@ exports[`renders without crashing 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "#fff",
+            "color": "#ffffff",
             "fontSize": 40,
             "fontWeight": "bold",
           }
@@ -162,7 +162,7 @@ exports[`renders without crashing 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "#fff",
+            "color": "#ffffff",
             "fontSize": 40,
             "fontWeight": "bold",
           }
@@ -206,7 +206,7 @@ exports[`renders without crashing 1`] = `
           <View
             style={
               Object {
-                "backgroundColor": "#73DBFF",
+                "backgroundColor": "#73dbff",
                 "borderRadius": 20,
                 "elevation": 10,
                 "padding": 5,
@@ -226,7 +226,7 @@ exports[`renders without crashing 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "#fff",
+                  "color": "#ffffff",
                   "fontSize": 40,
                   "fontWeight": "bold",
                   "textAlign": "center",
@@ -252,7 +252,7 @@ exports[`renders without crashing 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "#fff",
+            "color": "#ffffff",
             "fontSize": 40,
             "fontWeight": "bold",
           }

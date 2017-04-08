@@ -3,13 +3,14 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
+import { WHITE, WHITE_TRANSPARENT, PRIMARY } from '../../styles/colors';
 import { loadSounds } from '../helpers/audio';
 import { RoundImageWithButton } from '../Components';
 
 const mapIndexed = addIndex(map);
 
 const highlightStyle = {
-  backgroundColor: 'rgba(255,255,255,0.42)',
+  backgroundColor: WHITE_TRANSPARENT,
   borderRadius: 20
 };
 
@@ -36,7 +37,7 @@ const ShowWord = ({ image, sounds, text, letter }) => {
           toUpper(char) === toUpper(letter) ? highlightStyle : null
         ]}
       >
-        <Text style={{ color: '#fff', fontSize: 40, fontWeight: 'bold' }}>
+        <Text style={{ color: WHITE, fontSize: 40, fontWeight: 'bold' }}>
           {char}
         </Text>
       </View>
@@ -48,7 +49,7 @@ const ShowWord = ({ image, sounds, text, letter }) => {
     <View
       style={{
         flex: 1,
-        backgroundColor: '#00B4D5',
+        backgroundColor: PRIMARY,
         alignItems: 'center',
         justifyContent: 'space-around'
       }}

@@ -1,9 +1,10 @@
 import { addIndex, map } from 'ramda';
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
 
+import { WHITE, PRIMARY } from '../../styles/colors';
 import { loadSounds } from '../helpers/audio';
 import { RoundImageWithButton, TextPicker } from '../Components';
 const mapIndexed = addIndex(map);
@@ -29,7 +30,7 @@ const MissingLetter = ({ image, sounds, text, missing, options }) => {
             <TextPicker options={options} />
           </View>
         : <View key={key} style={{ padding: 5 }}>
-            <Text style={{ color: '#fff', fontSize: 40, fontWeight: 'bold' }}>
+            <Text style={{ color: WHITE, fontSize: 40, fontWeight: 'bold' }}>
               {char}
             </Text>
           </View>;
@@ -41,7 +42,7 @@ const MissingLetter = ({ image, sounds, text, missing, options }) => {
     <View
       style={{
         flex: 1,
-        backgroundColor: '#00B4D5',
+        backgroundColor: PRIMARY,
         alignItems: 'center',
         justifyContent: 'space-around'
       }}
