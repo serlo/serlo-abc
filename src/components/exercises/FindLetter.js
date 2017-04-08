@@ -4,18 +4,25 @@ import { TouchableOpacity, View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
 
+import {
+  BLACK_TRANSPARENT,
+  WHITE,
+  PRIMARY,
+  PRIMARY_WEAK,
+  PRIMARY_STRONG
+} from '../../styles/colors';
 import { loadSounds } from '../helpers/audio';
 import { RoundImageWithButton } from '../Components';
 const mapIndexed = addIndex(map);
 
 const styles = {
   letter: {
-    backgroundColor: '#17BCDE',
+    backgroundColor: PRIMARY_STRONG,
     padding: 5,
     margin: 2,
     borderRadius: 20,
     elevation: 10,
-    shadowColor: 'rgba(0, 0, 0, 0.1)',
+    shadowColor: BLACK_TRANSPARENT,
     shadowOpacity: 1,
     shadowRadius: 0,
     shadowOffset: {
@@ -24,7 +31,7 @@ const styles = {
     }
   },
   highlighted: {
-    backgroundColor: '#73DBFF'
+    backgroundColor: PRIMARY_WEAK
   }
 };
 
@@ -69,7 +76,7 @@ class FindLetter extends Component {
             this.state.highlighted[key] ? styles.highlighted : null
           ]}
         >
-          <Text style={{ color: '#fff', fontSize: 40, fontWeight: 'bold' }}>
+          <Text style={{ color: WHITE, fontSize: 40, fontWeight: 'bold' }}>
             {char}
           </Text>
         </TouchableOpacity>
@@ -81,7 +88,7 @@ class FindLetter extends Component {
       <View
         style={{
           flex: 1,
-          backgroundColor: '#00B4D5',
+          backgroundColor: PRIMARY,
           alignItems: 'center',
           justifyContent: 'space-around'
         }}

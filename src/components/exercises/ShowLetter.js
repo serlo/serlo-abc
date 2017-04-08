@@ -3,13 +3,14 @@ import { View, Text } from 'react-native';
 
 import repeatIcon from '../../assets/images/repeat.png';
 import speakerImage from '../../assets/images/speaker.png';
+import { WHITE, PRIMARY } from '../../styles/colors';
 import { loadSounds } from '../helpers/audio';
 import { RoundButton, IconWithBackground } from '../Components';
 
 const styles = {
   container: {
     flex: 1,
-    backgroundColor: '#00B4D5',
+    backgroundColor: PRIMARY,
     alignItems: 'center',
     justifyContent: 'space-around'
   },
@@ -21,7 +22,7 @@ const styles = {
     paddingLeft: 50,
     height: 200,
     width: 200,
-    color: '#FFF',
+    color: WHITE,
     fontSize: 180,
     fontWeight: 'bold',
     textAlign: 'center'

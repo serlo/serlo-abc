@@ -5,7 +5,7 @@ exports[`renders without crashing 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#00B4D5",
+      "backgroundColor": "#00b4d5",
       "flex": 1,
     }
   }
@@ -27,7 +27,7 @@ exports[`renders without crashing 1`] = `
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "rgba(255,255,255,0.2)",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
@@ -48,7 +48,7 @@ exports[`renders without crashing 1`] = `
           Array [
             Object {
               "backgroundColor": "transparent",
-              "color": "#fff",
+              "color": "#ffffff",
               "fontSize": 40,
               "fontWeight": "bold",
               "textAlign": "center",
@@ -88,7 +88,7 @@ exports[`renders without crashing 1`] = `
           Array [
             Object {
               "alignItems": "center",
-              "backgroundColor": "rgba(255,255,255,0.2)",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
               "borderRadius": 9999,
               "height": 60,
               "justifyContent": "center",
@@ -96,7 +96,7 @@ exports[`renders without crashing 1`] = `
               "width": 60,
             },
             Object {
-              "backgroundColor": "#73DBFF",
+              "backgroundColor": "#73dbff",
               "elevation": 5,
               "opacity": 1,
               "shadowColor": "rgba(0, 0, 0, 0.1)",
@@ -118,7 +118,7 @@ exports[`renders without crashing 1`] = `
             Array [
               Object {
                 "backgroundColor": "transparent",
-                "color": "#fff",
+                "color": "#ffffff",
                 "fontSize": 40,
                 "fontWeight": "bold",
                 "textAlign": "center",
@@ -136,7 +136,7 @@ exports[`renders without crashing 1`] = `
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "rgba(255,255,255,0.2)",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
@@ -157,7 +157,7 @@ exports[`renders without crashing 1`] = `
           Array [
             Object {
               "backgroundColor": "transparent",
-              "color": "#fff",
+              "color": "#ffffff",
               "fontSize": 40,
               "fontWeight": "bold",
               "textAlign": "center",
@@ -174,7 +174,7 @@ exports[`renders without crashing 1`] = `
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "rgba(255,255,255,0.2)",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
@@ -195,7 +195,7 @@ exports[`renders without crashing 1`] = `
           Array [
             Object {
               "backgroundColor": "transparent",
-              "color": "#fff",
+              "color": "#ffffff",
               "fontSize": 40,
               "fontWeight": "bold",
               "textAlign": "center",
@@ -212,7 +212,7 @@ exports[`renders without crashing 1`] = `
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "rgba(255,255,255,0.2)",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
@@ -233,7 +233,7 @@ exports[`renders without crashing 1`] = `
           Array [
             Object {
               "backgroundColor": "transparent",
-              "color": "#fff",
+              "color": "#ffffff",
               "fontSize": 40,
               "fontWeight": "bold",
               "textAlign": "center",
@@ -250,7 +250,7 @@ exports[`renders without crashing 1`] = `
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "rgba(255,255,255,0.2)",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
@@ -271,7 +271,7 @@ exports[`renders without crashing 1`] = `
           Array [
             Object {
               "backgroundColor": "transparent",
-              "color": "#fff",
+              "color": "#ffffff",
               "fontSize": 40,
               "fontWeight": "bold",
               "textAlign": "center",
@@ -288,7 +288,7 @@ exports[`renders without crashing 1`] = `
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "rgba(255,255,255,0.2)",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
@@ -309,7 +309,7 @@ exports[`renders without crashing 1`] = `
           Array [
             Object {
               "backgroundColor": "transparent",
-              "color": "#fff",
+              "color": "#ffffff",
               "fontSize": 40,
               "fontWeight": "bold",
               "textAlign": "center",
@@ -326,7 +326,7 @@ exports[`renders without crashing 1`] = `
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "rgba(255,255,255,0.2)",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
@@ -347,7 +347,7 @@ exports[`renders without crashing 1`] = `
           Array [
             Object {
               "backgroundColor": "transparent",
-              "color": "#fff",
+              "color": "#ffffff",
               "fontSize": 40,
               "fontWeight": "bold",
               "textAlign": "center",
@@ -364,7 +364,7 @@ exports[`renders without crashing 1`] = `
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "rgba(255,255,255,0.2)",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
@@ -385,7 +385,7 @@ exports[`renders without crashing 1`] = `
           Array [
             Object {
               "backgroundColor": "transparent",
-              "color": "#fff",
+              "color": "#ffffff",
               "fontSize": 40,
               "fontWeight": "bold",
               "textAlign": "center",

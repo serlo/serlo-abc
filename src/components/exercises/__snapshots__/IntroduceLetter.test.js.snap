@@ -25,7 +25,7 @@ exports[`renders without crashing 1`] = `
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "rgba(255,255,255,0.2)",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
             "borderRadius": 9999,
             "height": 135.41666666666669,
             "justifyContent": "center",
@@ -46,7 +46,7 @@ exports[`renders without crashing 1`] = `
           Array [
             Object {
               "backgroundColor": "transparent",
-              "color": "#fff",
+              "color": "#ffffff",
               "fontSize": 40,
               "fontWeight": "bold",
               "textAlign": "center",
