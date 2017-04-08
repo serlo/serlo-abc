@@ -2,11 +2,6 @@ import { addIndex, map } from 'ramda';
 import React, { Component } from 'react';
 import { TouchableOpacity, View, Image, Text } from 'react-native';
 
-const styles = {
-  buttonWithInset: {
-    marginLeft: -70
-  }
-};
 const mapIndexed = addIndex(map);
 
 export const RoundImageWithBorder = ({ image, size, white, style }) => (
