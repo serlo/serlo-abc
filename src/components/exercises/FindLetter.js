@@ -4,12 +4,13 @@ import { TouchableOpacity, View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
 
-import withAudio from '../helpers/withAudio';
+import { loadSounds } from '../helpers/audio';
 import { RoundImageWithButton } from '../Components';
 const mapIndexed = addIndex(map);
 
 const styles = {
   letter: {
+    backgroundColor: '#17BCDE',
     padding: 5,
     margin: 2,
     borderRadius: 20,
@@ -24,9 +25,6 @@ const styles = {
   },
   highlighted: {
     backgroundColor: '#73DBFF'
-  },
-  normal: {
-    backgroundColor: '#17BCDE'
   }
 };
 
@@ -51,12 +49,12 @@ class FindLetter extends Component {
     playAll(this.props.sounds);
   };
 
-  toggleLetter = key => {
-    const highlighted = [...this.state.highlighted];
-    highlighted[key] = !highlighted[key];
-    this.setState({
-      highlighted: highlighted
-    });
+  toggleLetter = key => () => {
+    this.setState(({ highlighted }) => {
+      highlighted[key] = !highlighted[key];
+
+      return { highlighted }
+    })
   };
 
   render() {
@@ -64,11 +62,8 @@ class FindLetter extends Component {
       (char, key) => (
         <TouchableOpacity
           key={key}
-          onPress={() => this.toggleLetter(key)}
-          style={[
-            this.state.highlighted[key] ? styles.highlighted : styles.normal,
-            styles.letter
-          ]}
+          onPress={this.toggleLetter(key)}
+          style={[ styles.letter, this.state.highlighted[key] ? styles.highlighted : null ]}
         >
           <Text style={{ color: '#fff', fontSize: 40, fontWeight: 'bold' }}>
             {char}
@@ -102,4 +97,4 @@ class FindLetter extends Component {
   }
 }
 
-export default withAudio(FindLetter);
+export default loadSounds(FindLetter);
