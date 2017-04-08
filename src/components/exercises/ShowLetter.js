@@ -4,6 +4,7 @@ import { View, Text } from 'react-native';
 import repeatIcon from '../../assets/images/repeat.png';
 import speakerImage from '../../assets/images/speaker.png';
 import { WHITE, PRIMARY } from '../../styles/colors';
+import { DEFAULT } from '../../styles/text';
 import { loadSounds } from '../helpers/audio';
 import { RoundButton, IconWithBackground } from '../Components';
 
@@ -19,13 +20,9 @@ const styles = {
     alignItems: 'flex-end'
   },
   bigLetter: {
+    ...DEFAULT,
     paddingLeft: 50,
-    height: 200,
-    width: 200,
-    color: WHITE,
-    fontSize: 180,
-    fontWeight: 'bold',
-    textAlign: 'center'
+    fontSize: 180
   }
 };
 

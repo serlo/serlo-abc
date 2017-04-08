@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
 import { WHITE, GREEN } from '../../styles/colors';
+import { DEFAULT } from '../../styles/text';
 import { loadSound } from '../helpers/audio';
 import { RoundButton } from '../Components';
 
@@ -13,12 +14,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-around'
   },
-  text: {
-    color: WHITE,
-    fontSize: 40,
-    fontWeight: 'bold',
-    textAlign: 'center'
-  }
+  text: DEFAULT
 };
 
 const ExplanationText = ({ text, sound }) => {

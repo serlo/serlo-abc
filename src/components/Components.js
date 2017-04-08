@@ -4,10 +4,10 @@ import { TouchableOpacity, View, Image, Text } from 'react-native';
 
 import {
   BLACK_TRANSPARENT,
-  WHITE,
   WHITE_TRANSPARENT,
   PRIMARY_WEAK
 } from '../styles/colors';
+import { DEFAULT } from '../styles/text';
 
 const mapIndexed = addIndex(map);
 
@@ -142,18 +142,7 @@ export const RoundText = ({ text, size, style, textstyle }) => (
       style
     ]}
   >
-    <Text
-      style={[
-        {
-          backgroundColor: 'transparent',
-          color: WHITE,
-          fontSize: 40,
-          fontWeight: 'bold',
-          textAlign: 'center'
-        },
-        textstyle
-      ]}
-    >
+    <Text style={[DEFAULT, textstyle]}>
       {text}
     </Text>
   </View>
@@ -218,12 +207,7 @@ export class TextPicker extends Component {
         width: 4
       }
     },
-    text: {
-      color: WHITE,
-      fontSize: 40,
-      fontWeight: 'bold',
-      textAlign: 'center'
-    }
+    text: DEFAULT
   };
 
   render() {

@@ -3,7 +3,8 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
-import { WHITE, WHITE_TRANSPARENT, PRIMARY } from '../../styles/colors';
+import { WHITE_TRANSPARENT, PRIMARY } from '../../styles/colors';
+import { DEFAULT } from '../../styles/text';
 import { loadSounds } from '../helpers/audio';
 import { RoundImageWithButton } from '../Components';
 
@@ -37,7 +38,7 @@ const ShowWord = ({ image, sounds, text, letter }) => {
           toUpper(char) === toUpper(letter) ? highlightStyle : null
         ]}
       >
-        <Text style={{ color: WHITE, fontSize: 40, fontWeight: 'bold' }}>
+        <Text style={DEFAULT}>
           {char}
         </Text>
       </View>

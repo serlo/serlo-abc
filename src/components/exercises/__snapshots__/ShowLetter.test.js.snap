@@ -26,12 +26,10 @@ exports[`renders without crashing (with repeat) 1`] = `
       style={
         Object {
           "color": "#ffffff",
+          "fontFamily": "norddruck",
           "fontSize": 180,
-          "fontWeight": "bold",
-          "height": 200,
           "paddingLeft": 50,
           "textAlign": "center",
-          "width": 200,
         }
       }
     >
@@ -142,12 +140,10 @@ exports[`renders without crashing (without repeat) 1`] = `
       style={
         Object {
           "color": "#ffffff",
+          "fontFamily": "norddruck",
           "fontSize": 180,
-          "fontWeight": "bold",
-          "height": 200,
           "paddingLeft": 50,
           "textAlign": "center",
-          "width": 200,
         }
       }
     >
