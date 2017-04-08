@@ -12,7 +12,7 @@
     "jest-expo": "^0.3.1",
     "prettier": "^0.22.0",
     "react-addons-test-utils": "^15.4.2",
-    "react-native-scripts": "^0.0.26",
+    "react-native-scripts": "^0.0.27",
     "react-test-renderer": "^15.4.2",
     "remote-redux-devtools": "0.5.0"
   },
