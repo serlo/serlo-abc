@@ -7,5 +7,6 @@ storiesOf('exercises/LetterRotated', module).add('', () => (
   <LetterRotated
     letters={['a', 'N', 'E', 's', 'T']}
     rotated={4}
+    angle={'50deg'}
   />
 ));
