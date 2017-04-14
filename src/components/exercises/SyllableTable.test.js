@@ -8,8 +8,9 @@ it('renders without crashing', () => {
   const tree = renderer.create(
     <SyllableTable
       sound={require('../../assets/sounds/ne.mp3')}
-      syllables={['na', 'ne', 'no', 'sa', 'se', 'so', 'ta', 'te', 'to']}
-      index={1}
+      letters={['n', 's', 't']}
+      vowels={['a', 'e', 'o']}
+      indices={{ letter: 0, vowel: 1 }}
     />
   );
   expect(tree).toMatchSnapshot();
