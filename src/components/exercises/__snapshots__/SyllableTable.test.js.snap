@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders without crashing 1`] = `
+exports[`renders without crashing (3x3) 1`] = `
 <View
   style={
     Object {
@@ -43,6 +43,7 @@ exports[`renders without crashing 1`] = `
             },
             Object {
               "margin": 5,
+              "opacity": 0.4,
             },
           ]
         }
@@ -67,41 +68,74 @@ exports[`renders without crashing 1`] = `
         </Text>
       </View>
       <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-            },
-          ]
+          Object {
+            "margin": 5,
+            "opacity": 1,
+          }
         }
+        testID={undefined}
+        tvParallaxProperties={undefined}
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+        <View
           style={
             Array [
               Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
+                "alignItems": "center",
+                "backgroundColor": "rgba(255, 255, 255, 0.2)",
+                "borderRadius": 9999,
+                "height": 60,
+                "justifyContent": "center",
+                "padding": 5,
+                "width": 60,
               },
-              undefined,
+              Object {
+                "backgroundColor": "#73dbff",
+                "elevation": 5,
+                "opacity": 1,
+                "shadowColor": "rgba(0, 0, 0, 0.1)",
+                "shadowOffset": Object {
+                  "height": 4,
+                  "width": 4,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 0,
+              },
             ]
           }
         >
-          ne
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#ffffff",
+                  "fontFamily": "norddruck",
+                  "fontSize": 35,
+                  "textAlign": "center",
+                },
+                undefined,
+              ]
+            }
+          >
+            ne
+          </Text>
+        </View>
       </View>
       <View
         style={
@@ -117,6 +151,7 @@ exports[`renders without crashing 1`] = `
             },
             Object {
               "margin": 5,
+              "opacity": 0.4,
             },
           ]
         }
@@ -164,6 +199,7 @@ exports[`renders without crashing 1`] = `
             },
             Object {
               "margin": 5,
+              "opacity": 0.4,
             },
           ]
         }
@@ -201,6 +237,7 @@ exports[`renders without crashing 1`] = `
             },
             Object {
               "margin": 5,
+              "opacity": 0.4,
             },
           ]
         }
@@ -238,6 +275,7 @@ exports[`renders without crashing 1`] = `
             },
             Object {
               "margin": 5,
+              "opacity": 0.4,
             },
           ]
         }
@@ -285,6 +323,7 @@ exports[`renders without crashing 1`] = `
             },
             Object {
               "margin": 5,
+              "opacity": 0.4,
             },
           ]
         }
@@ -322,6 +361,7 @@ exports[`renders without crashing 1`] = `
             },
             Object {
               "margin": 5,
+              "opacity": 0.4,
             },
           ]
         }
@@ -359,6 +399,873 @@ exports[`renders without crashing 1`] = `
             },
             Object {
               "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          to
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders without crashing (5x4) 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00b4d5",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "marginTop": 50,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "margin": 5,
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgba(255, 255, 255, 0.2)",
+                "borderRadius": 9999,
+                "height": 60,
+                "justifyContent": "center",
+                "padding": 5,
+                "width": 60,
+              },
+              Object {
+                "backgroundColor": "#73dbff",
+                "elevation": 5,
+                "opacity": 1,
+                "shadowColor": "rgba(0, 0, 0, 0.1)",
+                "shadowOffset": Object {
+                  "height": 4,
+                  "width": 4,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 0,
+              },
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#ffffff",
+                  "fontFamily": "norddruck",
+                  "fontSize": 35,
+                  "textAlign": "center",
+                },
+                undefined,
+              ]
+            }
+          >
+            ha
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          he
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          hi
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          ho
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          na
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          ne
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          ni
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          no
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          ra
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          re
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          ri
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          ro
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          sa
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          se
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          si
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          so
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          ta
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          te
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          ti
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(255, 255, 255, 0.2)",
+              "borderRadius": 9999,
+              "height": 60,
+              "justifyContent": "center",
+              "padding": 5,
+              "width": 60,
+            },
+            Object {
+              "margin": 5,
+              "opacity": 0.4,
             },
           ]
         }
