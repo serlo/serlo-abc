@@ -155,17 +155,18 @@ export class RoundText extends Component {
     ) {
       const baseFontSize = this.getBaseFontSize(nextProps);
 
-      Animated.timing(this.state.size, {
-        toValue: nextProps.highlighted
-          ? scaleFactor * nextProps.size
-          : nextProps.size
-      }).start();
-
-      Animated.timing(this.state.fontSize, {
-        toValue: nextProps.highlighted
-          ? scaleFactor * baseFontSize
-          : baseFontSize
-      }).start();
+      Animated.parallel([
+        Animated.timing(this.state.size, {
+          toValue: nextProps.highlighted
+            ? scaleFactor * nextProps.size
+            : nextProps.size
+        }),
+        Animated.timing(this.state.fontSize, {
+          toValue: nextProps.highlighted
+            ? scaleFactor * baseFontSize
+            : baseFontSize
+        })
+      ]).start();
     }
   }
 
