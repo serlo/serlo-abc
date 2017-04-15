@@ -7,12 +7,9 @@ import './addons';
 
 import { NativeModules } from 'react-native';
 
-configure(
-  function() {
-    require('./stories');
-  },
-  module
-);
+configure(function() {
+  require('./stories');
+}, module);
 
 const { hostname } = url.parse(NativeModules.SourceCode.scriptURL);
 

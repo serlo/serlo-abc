@@ -205,9 +205,13 @@ export class RoundText extends Component {
   }
 }
 
-export const RoundImageWithButton = (
-  { image, imageSize, icon, buttonSize, onPress }
-) => (
+export const RoundImageWithButton = ({
+  image,
+  imageSize,
+  icon,
+  buttonSize,
+  onPress
+}) => (
   <View
     style={{
       flexDirection: 'row',
@@ -236,13 +240,12 @@ export class TextPicker extends Component {
     };
   }
 
-  selectOption = key =>
-    () => {
-      this.setState({
-        optionsVisible: false,
-        selectedValue: this.props.options[key]
-      });
-    };
+  selectOption = key => () => {
+    this.setState({
+      optionsVisible: false,
+      selectedValue: this.props.options[key]
+    });
+  };
 
   togglePickerOptions = () => {
     this.setState({

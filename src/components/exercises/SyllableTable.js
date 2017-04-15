@@ -34,31 +34,28 @@ const SyllableTable = ({ syllables, sound, index }) => {
           marginTop: 50
         }}
       >
-        {mapIndexed(
-          (syllable, key) => {
-            if (key === index) {
-              return (
-                <RoundTextButton
-                  style={{ margin: 5 }}
-                  text={syllable}
-                  size={60}
-                  onPress={play}
-                  key={key}
-                />
-              );
-            } else {
-              return (
-                <RoundText
-                  style={{ margin: 5 }}
-                  text={syllable}
-                  size={60}
-                  key={key}
-                />
-              );
-            }
-          },
-          syllables
-        )}
+        {mapIndexed((syllable, key) => {
+          if (key === index) {
+            return (
+              <RoundTextButton
+                style={{ margin: 5 }}
+                text={syllable}
+                size={60}
+                onPress={play}
+                key={key}
+              />
+            );
+          } else {
+            return (
+              <RoundText
+                style={{ margin: 5 }}
+                text={syllable}
+                size={60}
+                key={key}
+              />
+            );
+          }
+        }, syllables)}
       </View>
     </View>
   );
