@@ -24,20 +24,17 @@ const MissingLetter = ({ image, sounds, text, missing, options }) => {
     playAll(sounds);
   };
 
-  const letters = mapIndexed(
-    (char, key) => {
-      return key === missing
-        ? <View key={key}>
-            <TextPicker options={options} />
-          </View>
-        : <View key={key} style={{ padding: 5 }}>
-            <Text style={DEFAULT}>
-              {char}
-            </Text>
-          </View>;
-    },
-    text
-  );
+  const letters = mapIndexed((char, key) => {
+    return key === missing
+      ? <View key={key}>
+          <TextPicker options={options} />
+        </View>
+      : <View key={key} style={{ padding: 5 }}>
+          <Text style={DEFAULT}>
+            {char}
+          </Text>
+        </View>;
+  }, text);
 
   return (
     <View

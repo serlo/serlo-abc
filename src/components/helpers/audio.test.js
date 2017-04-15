@@ -46,23 +46,17 @@ describe('loadSounds', () => {
   });
 
   it('loads all passed sounds', () => {
-    forEach(
-      sound => {
-        expect(sound.loadAsync).toHaveBeenCalled();
-      },
-      view.prop('sounds')
-    );
+    forEach(sound => {
+      expect(sound.loadAsync).toHaveBeenCalled();
+    }, view.prop('sounds'));
   });
 
   it('unloads all sounds on unmount', () => {
     rendered.unmount();
 
-    forEach(
-      sound => {
-        expect(sound.unloadAsync).toHaveBeenCalled();
-      },
-      view.prop('sounds')
-    );
+    forEach(sound => {
+      expect(sound.unloadAsync).toHaveBeenCalled();
+    }, view.prop('sounds'));
   });
 });
 
