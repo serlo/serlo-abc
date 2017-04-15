@@ -22,20 +22,16 @@ exports[`renders without crashing 1`] = `
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "rgba(255, 255, 255, 0.2)",
-            "borderRadius": 9999,
-            "height": 135.41666666666669,
-            "justifyContent": "center",
-            "padding": 5,
-            "width": 135.41666666666669,
-          },
-          Object {
-            "marginLeft": 36.458333333333336,
-          },
-        ]
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(255, 255, 255, 0.2)",
+          "borderRadius": 9999,
+          "height": 135.41666666666669,
+          "justifyContent": "center",
+          "marginLeft": 36.458333333333336,
+          "padding": 5,
+          "width": 135.41666666666669,
+        }
       }
     >
       <Text
@@ -43,17 +39,12 @@ exports[`renders without crashing 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Array [
-            Object {
-              "color": "#ffffff",
-              "fontFamily": "norddruck",
-              "fontSize": 35,
-              "textAlign": "center",
-            },
-            Object {
-              "fontSize": 52.083333333333336,
-            },
-          ]
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "norddruck",
+            "fontSize": 52.083333333333336,
+            "textAlign": "center",
+          }
         }
       >
         Aa

@@ -1,9 +1,10 @@
-import { addIndex, map } from 'ramda';
+import { addIndex, map, path } from 'ramda';
 import React, { Component } from 'react';
-import { TouchableOpacity, View, Image, Text } from 'react-native';
+import { Animated, TouchableOpacity, View, Image, Text } from 'react-native';
 
 import {
   BLACK_TRANSPARENT,
+  WHITE,
   WHITE_TRANSPARENT,
   PRIMARY_WEAK
 } from '../styles/colors';
@@ -108,45 +109,101 @@ export const RoundButton = ({ icon, size, style, onPress }) => (
   </TouchableOpacity>
 );
 export const RoundTextButton = ({ onPress, style, ...props }) => (
-  <TouchableOpacity onPress={onPress} style={style}>
+  <TouchableOpacity onPress={onPress}>
     <RoundText
       {...props}
-      style={{
-        backgroundColor: PRIMARY_WEAK,
-        elevation: 5,
-        shadowColor: BLACK_TRANSPARENT,
-        shadowOpacity: 1,
-        shadowRadius: 0,
-        shadowOffset: {
-          height: 4,
-          width: 4
+      style={[
+        {
+          backgroundColor: PRIMARY_WEAK,
+          elevation: 5,
+          shadowColor: BLACK_TRANSPARENT,
+          shadowOpacity: 1,
+          shadowRadius: 0,
+          shadowOffset: {
+            height: 4,
+            width: 4
+          },
+          opacity: 1
         },
-        opacity: 1
-      }}
+        style
+      ]}
+      // size={highlighted ? size * 1.2 : size}
     />
   </TouchableOpacity>
 );
 
-export const RoundText = ({ text, size, style, textstyle }) => (
-  <View
-    style={[
-      {
-        backgroundColor: WHITE_TRANSPARENT,
-        borderRadius: 9999,
-        padding: 5,
-        height: size,
-        width: size,
-        alignItems: 'center',
-        justifyContent: 'center'
-      },
-      style
-    ]}
-  >
-    <Text style={[DEFAULT, textstyle]}>
-      {text}
-    </Text>
-  </View>
-);
+export class RoundText extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      size: new Animated.Value(props.size),
+      fontSize: new Animated.Value(this.getBaseFontSize(props))
+    };
+  }
+
+  getBaseFontSize = props =>
+    path(['textStyle', 'fontSize'], props) || DEFAULT.fontSize;
+
+  componentWillReceiveProps(nextProps) {
+    const scaleFactor = 1.2;
+
+    if (
+      this.props.size !== nextProps.size ||
+      this.getBaseFontSize(this.props) !== this.getBaseFontSize(nextProps) ||
+      this.props.highlighted !== nextProps.highlighted
+    ) {
+      const baseFontSize = this.getBaseFontSize(nextProps);
+
+      Animated.parallel([
+        Animated.timing(this.state.size, {
+          toValue: nextProps.highlighted
+            ? scaleFactor * nextProps.size
+            : nextProps.size
+        }),
+        Animated.timing(this.state.fontSize, {
+          toValue: nextProps.highlighted
+            ? scaleFactor * baseFontSize
+            : baseFontSize
+        })
+      ]).start();
+    }
+  }
+
+  render() {
+    const { highlighted, text, style, textStyle } = this.props;
+    const { size, fontSize } = this.state;
+
+    return (
+      <Animated.View
+        style={[
+          {
+            backgroundColor: WHITE_TRANSPARENT,
+            borderRadius: 9999,
+            padding: 5,
+            height: size,
+            width: size,
+            alignItems: 'center',
+            justifyContent: 'center'
+          },
+          style,
+          highlighted ? { backgroundColor: WHITE } : {}
+        ]}
+      >
+        <Animated.Text
+          style={[
+            DEFAULT,
+            highlighted ? { color: PRIMARY_WEAK } : {},
+            textStyle,
+            { fontSize }
+          ]}
+        >
+          {text}
+        </Animated.Text>
+      </Animated.View>
+    );
+  }
+}
 
 export const RoundImageWithButton = (
   { image, imageSize, icon, buttonSize, onPress }
