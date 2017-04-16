@@ -25,7 +25,6 @@ const SyllableRow = (
         justifyContent: 'center',
         flexDirection: 'row'
       }}
-      key={letterKey}
     >
       {mapIndexed(
         (vowel, vowelKey) => {
