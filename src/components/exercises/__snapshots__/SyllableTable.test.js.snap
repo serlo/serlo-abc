@@ -31,21 +31,17 @@ exports[`renders without crashing (3x3) 1`] = `
     >
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -53,15 +49,12 @@ exports[`renders without crashing (3x3) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           na
@@ -83,7 +76,6 @@ exports[`renders without crashing (3x3) 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "margin": 5,
             "opacity": 1,
           }
         }
@@ -92,29 +84,25 @@ exports[`renders without crashing (3x3) 1`] = `
       >
         <View
           style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgba(255, 255, 255, 0.2)",
-                "borderRadius": 9999,
-                "height": 60,
-                "justifyContent": "center",
-                "padding": 5,
-                "width": 60,
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#73dbff",
+              "borderRadius": 9999,
+              "elevation": 5,
+              "height": 60,
+              "justifyContent": "center",
+              "margin": 5,
+              "opacity": 1,
+              "padding": 5,
+              "shadowColor": "rgba(0, 0, 0, 0.1)",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 4,
               },
-              Object {
-                "backgroundColor": "#73dbff",
-                "elevation": 5,
-                "opacity": 1,
-                "shadowColor": "rgba(0, 0, 0, 0.1)",
-                "shadowOffset": Object {
-                  "height": 4,
-                  "width": 4,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 0,
-              },
-            ]
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+              "width": 60,
+            }
           }
         >
           <Text
@@ -122,15 +110,12 @@ exports[`renders without crashing (3x3) 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
-              Array [
-                Object {
-                  "color": "#ffffff",
-                  "fontFamily": "norddruck",
-                  "fontSize": 35,
-                  "textAlign": "center",
-                },
-                undefined,
-              ]
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              }
             }
           >
             ne
@@ -139,21 +124,17 @@ exports[`renders without crashing (3x3) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -161,15 +142,12 @@ exports[`renders without crashing (3x3) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           no
@@ -187,21 +165,17 @@ exports[`renders without crashing (3x3) 1`] = `
     >
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -209,15 +183,12 @@ exports[`renders without crashing (3x3) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           sa
@@ -225,21 +196,17 @@ exports[`renders without crashing (3x3) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -247,15 +214,12 @@ exports[`renders without crashing (3x3) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           se
@@ -263,21 +227,17 @@ exports[`renders without crashing (3x3) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -285,15 +245,12 @@ exports[`renders without crashing (3x3) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           so
@@ -311,21 +268,17 @@ exports[`renders without crashing (3x3) 1`] = `
     >
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -333,15 +286,12 @@ exports[`renders without crashing (3x3) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           ta
@@ -349,21 +299,17 @@ exports[`renders without crashing (3x3) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -371,15 +317,12 @@ exports[`renders without crashing (3x3) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           te
@@ -387,21 +330,17 @@ exports[`renders without crashing (3x3) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -409,15 +348,12 @@ exports[`renders without crashing (3x3) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           to
@@ -473,7 +409,6 @@ exports[`renders without crashing (5x4) 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "margin": 5,
             "opacity": 1,
           }
         }
@@ -482,29 +417,25 @@ exports[`renders without crashing (5x4) 1`] = `
       >
         <View
           style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgba(255, 255, 255, 0.2)",
-                "borderRadius": 9999,
-                "height": 60,
-                "justifyContent": "center",
-                "padding": 5,
-                "width": 60,
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#73dbff",
+              "borderRadius": 9999,
+              "elevation": 5,
+              "height": 60,
+              "justifyContent": "center",
+              "margin": 5,
+              "opacity": 1,
+              "padding": 5,
+              "shadowColor": "rgba(0, 0, 0, 0.1)",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 4,
               },
-              Object {
-                "backgroundColor": "#73dbff",
-                "elevation": 5,
-                "opacity": 1,
-                "shadowColor": "rgba(0, 0, 0, 0.1)",
-                "shadowOffset": Object {
-                  "height": 4,
-                  "width": 4,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 0,
-              },
-            ]
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+              "width": 60,
+            }
           }
         >
           <Text
@@ -512,15 +443,12 @@ exports[`renders without crashing (5x4) 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
-              Array [
-                Object {
-                  "color": "#ffffff",
-                  "fontFamily": "norddruck",
-                  "fontSize": 35,
-                  "textAlign": "center",
-                },
-                undefined,
-              ]
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              }
             }
           >
             ha
@@ -529,21 +457,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -551,15 +475,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           he
@@ -567,21 +488,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -589,15 +506,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           hi
@@ -605,21 +519,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -627,15 +537,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           ho
@@ -653,21 +560,17 @@ exports[`renders without crashing (5x4) 1`] = `
     >
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -675,15 +578,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           na
@@ -691,21 +591,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -713,15 +609,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           ne
@@ -729,21 +622,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -751,15 +640,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           ni
@@ -767,21 +653,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -789,15 +671,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           no
@@ -815,21 +694,17 @@ exports[`renders without crashing (5x4) 1`] = `
     >
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -837,15 +712,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           ra
@@ -853,21 +725,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -875,15 +743,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           re
@@ -891,21 +756,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -913,15 +774,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           ri
@@ -929,21 +787,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -951,15 +805,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           ro
@@ -977,21 +828,17 @@ exports[`renders without crashing (5x4) 1`] = `
     >
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -999,15 +846,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           sa
@@ -1015,21 +859,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -1037,15 +877,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           se
@@ -1053,21 +890,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -1075,15 +908,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           si
@@ -1091,21 +921,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -1113,15 +939,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           so
@@ -1139,21 +962,17 @@ exports[`renders without crashing (5x4) 1`] = `
     >
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -1161,15 +980,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           ta
@@ -1177,21 +993,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -1199,15 +1011,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           te
@@ -1215,21 +1024,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -1237,15 +1042,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           ti
@@ -1253,21 +1055,17 @@ exports[`renders without crashing (5x4) 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999,
-              "height": 60,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 60,
-            },
-            Object {
-              "margin": 5,
-              "opacity": 0.4,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999,
+            "height": 60,
+            "justifyContent": "center",
+            "margin": 5,
+            "opacity": 0.4,
+            "padding": 5,
+            "width": 60,
+          }
         }
       >
         <Text
@@ -1275,15 +1073,12 @@ exports[`renders without crashing (5x4) 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
-              },
-              undefined,
-            ]
+            Object {
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 35,
+              "textAlign": "center",
+            }
           }
         >
           to
