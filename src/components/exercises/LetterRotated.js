@@ -9,29 +9,41 @@ class LettersRotated extends Component {
     super(props);
 
     this.state = {
-      highlighted: null
+      highlighted: [false, false, false, false, false]
+    };
+  }
+
+  allAngles(size, angles, rotated) {
+    var ret = new Array(size), index;
+    for (var i = 0; i < size; i++) {
+      index = rotated.indexOf(i);
+      ret[i] = index !== -1 ? angles[index] : '0deg';
     }
+    return ret;
   }
 
   createLetterButton = index => {
-    const { angle, letters, rotated } = this.props
-
+    const { angles, letters, rotated, difficulty } = this.props;
+    var allAngles = this.allAngles(letters.length, angles, rotated);
     return (
       <RoundTextButton
         onPress={() => {
-          this.setState({
-            highlighted: index
-          })
+          this.setState(({ highlighted }) => {
+            highlighted[index] = !highlighted[index];
+            return {
+              highlighted: highlighted
+            };
+          });
         }}
-        highlighted={index === this.state.highlighted}
+        highlighted={this.state.highlighted[index]}
         text={letters[index]}
         size={60}
         style={[
           {
             marginLeft: 5,
-            marginRight: 5
-          },
-          index === rotated ? { transform: [{ rotate: angle }] } : {}
+            marginRight: 5,
+            transform: [{ rotate: allAngles[index] }]
+          }
         ]}
       />
     );
@@ -58,16 +70,17 @@ class LettersRotated extends Component {
           {this.createLetterButton(1)}
           {this.createLetterButton(2)}
         </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
-          {this.createLetterButton(3)}
-          {this.createLetterButton(4)}
-        </View>
+        {this.props.difficulty >= 0.2 &&
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            {this.createLetterButton(3)}
+            {this.createLetterButton(4)}
+          </View>}
       </View>
     );
   }
