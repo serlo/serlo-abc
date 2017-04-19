@@ -26,9 +26,11 @@ const styles = {
   }
 };
 
-const UnwrappedShowLetter = (
-  { letter, sounds: [letterSound, repeatSound], isRepeat }
-) => {
+const UnwrappedShowLetter = ({
+  letter,
+  sounds: [letterSound, repeatSound],
+  isRepeat
+}) => {
   const play = () => {
     if (isRepeat) this.icon.unfocus();
     letterSound.playAsync();

@@ -127,6 +127,7 @@ export const RoundTextButton = ({ onPress, style, ...props }) => (
         },
         style
       ]}
+
       // size={highlighted ? size * 1.2 : size}
     />
   </TouchableOpacity>
@@ -154,25 +155,24 @@ export class RoundText extends Component {
       this.props.highlighted !== nextProps.highlighted
     ) {
       const baseFontSize = this.getBaseFontSize(nextProps);
-
-      Animated.timing(this.state.size, {
-        toValue: nextProps.highlighted
-          ? scaleFactor * nextProps.size
-          : nextProps.size
-      }).start();
-
-      Animated.timing(this.state.fontSize, {
-        toValue: nextProps.highlighted
-          ? scaleFactor * baseFontSize
-          : baseFontSize
-      }).start();
+      Animated.parallel([
+        Animated.timing(this.state.size, {
+          toValue: nextProps.highlighted
+            ? scaleFactor * nextProps.size
+            : nextProps.size
+        }),
+        Animated.timing(this.state.fontSize, {
+          toValue: nextProps.highlighted
+            ? scaleFactor * baseFontSize
+            : baseFontSize
+        })
+      ]).start();
     }
   }
 
   render() {
     const { highlighted, text, style, textStyle } = this.props;
     const { size, fontSize } = this.state;
-
     return (
       <Animated.View
         style={[
@@ -204,9 +204,13 @@ export class RoundText extends Component {
   }
 }
 
-export const RoundImageWithButton = (
-  { image, imageSize, icon, buttonSize, onPress }
-) => (
+export const RoundImageWithButton = ({
+  image,
+  imageSize,
+  icon,
+  buttonSize,
+  onPress
+}) => (
   <View
     style={{
       flexDirection: 'row',
@@ -235,13 +239,12 @@ export class TextPicker extends Component {
     };
   }
 
-  selectOption = key =>
-    () => {
-      this.setState({
-        optionsVisible: false,
-        selectedValue: this.props.options[key]
-      });
-    };
+  selectOption = key => () => {
+    this.setState({
+      optionsVisible: false,
+      selectedValue: this.props.options[key]
+    });
+  };
 
   togglePickerOptions = () => {
     this.setState({

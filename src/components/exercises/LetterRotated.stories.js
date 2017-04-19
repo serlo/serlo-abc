@@ -8,7 +8,7 @@ storiesOf('exercises/LetterRotated', module)
     <LetterRotated
       letters={['a', 'N', 'E']}
       rotated={[4]}
-      angles={["50deg"]}
+      angles={['50deg']}
       difficulty={0.1}
     />
   ))
@@ -16,7 +16,7 @@ storiesOf('exercises/LetterRotated', module)
     <LetterRotated
       letters={['a', 'N', 'E', 's', 'T']}
       rotated={[4]}
-      angles={["50deg"]}
+      angles={['50deg']}
       difficulty={0.3}
     />
   ))
@@ -24,7 +24,7 @@ storiesOf('exercises/LetterRotated', module)
     <LetterRotated
       letters={['a', 'N', 'E', 's', 'T']}
       rotated={[3, 4]}
-      angles={["50deg", "-30deg"]}
+      angles={['50deg', '-30deg']}
       difficulty={0.5}
     />
   ));

@@ -56,14 +56,13 @@ class FindLetter extends Component {
     playAll(this.props.sounds);
   };
 
-  toggleLetter = key =>
-    () => {
-      this.setState(({ highlighted }) => {
-        highlighted[key] = !highlighted[key];
+  toggleLetter = key => () => {
+    this.setState(({ highlighted }) => {
+      highlighted[key] = !highlighted[key];
 
-        return { highlighted };
-      });
-    };
+      return { highlighted };
+    });
+  };
 
   render() {
     const letters = mapIndexed(
