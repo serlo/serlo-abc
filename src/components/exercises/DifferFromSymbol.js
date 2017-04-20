@@ -3,10 +3,8 @@ import { View } from 'react-native';
 import { PRIMARY } from '../../styles/colors';
 import { RoundTextButton, RoundText } from '../Components';
 
-
-const DifferFromSymbol =({letter}) => {
-
-return (
+const DifferFromSymbol = ({ symbols }) => {
+  return (
     <View
       style={{
         flex: 1,
@@ -24,22 +22,10 @@ return (
           marginTop: 50
         }}
       >
-       <RoundTextButton
-                  style={{ margin: 5 }}
-                  text= {letter[0]}
-                  size={80}
-                />
-       <RoundTextButton
-                  style={{ margin: 5 }}
-                  text={letter[1]}
-                  size={80}
-                />
-       <RoundTextButton
-                  style={{ margin: 5 }}
-                  text={letter[2]}
-                  size={80}
-                />
-     </View>
+        <RoundTextButton style={{ margin: 5 }} text={symbols[0]} size={80} />
+        <RoundTextButton style={{ margin: 5 }} text={symbols[1]} size={80} />
+        <RoundTextButton style={{ margin: 5 }} text={symbols[2]} size={80} />
+      </View>
       <View
         style={{
           alignItems: 'center',
@@ -49,19 +35,11 @@ return (
           width: 300
         }}
       >
-       <RoundTextButton
-                  style={{ margin: 5 }}
-                  text={letter[3]}
-                  size={80}
-                />
-       <RoundTextButton
-                  style={{ margin: 5 }}
-                  text={letter[4]}
-                  size={80}
-                />
-     </View>
-   </View>)
-
+        <RoundTextButton style={{ margin: 5 }} text={symbols[3]} size={80} />
+        <RoundTextButton style={{ margin: 5 }} text={symbols[4]} size={80} />
+      </View>
+    </View>
+  );
 };
 
 export default DifferFromSymbol;
