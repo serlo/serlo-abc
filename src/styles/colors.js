@@ -9,3 +9,18 @@ export const PRIMARY_WEAK = '#73dbff';
 export const PRIMARY_STRONG = '#17bcde';
 
 export const GREEN = '#b5ce4d';
+
+export const ARTICLES = {
+  DER: {
+    STRONG: '#0000fe',
+    WEAK: '#6666fe'
+  },
+  DIE: {
+    STRONG: '#fe0000',
+    WEAK: '#fe6666'
+  },
+  DAS: {
+    STRONG: '#01af00',
+    WEAK: '#67af66'
+  }
+}
