@@ -13,3 +13,4 @@ import '../src/components/exercises/TutorialVideo.stories';
 import '../src/components/exercises/VideoQuestion.stories';
 import '../src/components/exercises/ChooseArticle.stories';
 import '../src/components/helpers/difficulty.stories';
+import '../src/components/exercises/ChooseArticle.stories';
