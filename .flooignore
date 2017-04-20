@@ -1,0 +1,4 @@
+node_modules/
+.expo/
+.idea/workspace.xml
+.idea/misc.xml
