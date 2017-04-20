@@ -19,7 +19,7 @@ const ScaleFourImages = ({ displaySize, images, letter }) => {
           marginLeft: 35 * scale
         }}
         text={letter}
-        textstyle={{
+        textStyle={{
           fontSize: 50 * scale
         }}
         size={130 * scale}

@@ -8,7 +8,14 @@ import { RoundTextButton, RoundText } from '../Components';
 
 const mapIndexed = addIndex(map);
 
-const SyllableTable = ({ syllables, sound, index }) => {
+const SyllableRow = ({
+  letter,
+  letterKey,
+  sound,
+  vowels,
+  letterIndex,
+  vowelIndex
+}) => {
   const play = () => {
     sound.playAsync();
     sound.setPlaybackFinishedCallback(() => {
@@ -16,6 +23,42 @@ const SyllableTable = ({ syllables, sound, index }) => {
     });
   };
 
+  return (
+    <View
+      style={{
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row'
+      }}
+    >
+      {mapIndexed((vowel, vowelKey) => {
+        const syllable = letter + vowel;
+        if (letterKey === letterIndex && vowelKey === vowelIndex) {
+          return (
+            <RoundTextButton
+              key={vowelKey}
+              style={{ margin: 5 }}
+              text={syllable}
+              size={60}
+              onPress={play}
+            />
+          );
+        }
+
+        return (
+          <RoundText
+            key={vowelKey}
+            style={{ margin: 5, opacity: 0.4 }}
+            text={syllable}
+            size={60}
+          />
+        );
+      }, vowels)}
+    </View>
+  );
+};
+
+const SyllableTable = ({ letters, ...props }) => {
   return (
     <View
       style={{
@@ -28,36 +71,20 @@ const SyllableTable = ({ syllables, sound, index }) => {
         style={{
           alignItems: 'center',
           justifyContent: 'center',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          width: 300,
+          flexDirection: 'column',
           marginTop: 50
         }}
       >
         {mapIndexed(
-          (syllable, key) => {
-            if (key === index) {
-              return (
-                <RoundTextButton
-                  style={{ margin: 5 }}
-                  text={syllable}
-                  size={60}
-                  onPress={play}
-                  key={key}
-                />
-              );
-            } else {
-              return (
-                <RoundText
-                  style={{ margin: 5 }}
-                  text={syllable}
-                  size={60}
-                  key={key}
-                />
-              );
-            }
-          },
-          syllables
+          (letter, letterKey) => (
+            <SyllableRow
+              key={letterKey}
+              letter={letter}
+              letterKey={letterKey}
+              {...props}
+            />
+          ),
+          letters
         )}
       </View>
     </View>
