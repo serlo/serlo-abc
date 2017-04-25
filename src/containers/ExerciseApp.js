@@ -9,9 +9,14 @@ import * as exerciseActions from '../actions/exerciseActions';
 
 class ExerciseApp extends React.Component {
   render() {
-    const { state, actions } = this.props;
+    console.log('ExerciseApp', this.props);
+    const { state, actions, exerciseComponent, exerciseProps } = this.props;
     return (
-      <Exercise course={state.course} />
+      <Exercise
+        course={state.course}
+        exerciseComponent={exerciseComponent}
+        exerciseProps={exerciseProps}
+      />
     );
   }
 }

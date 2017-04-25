@@ -1,13 +1,20 @@
 import React from 'react';
 import { View, ScrollView, Text, StyleSheet, Button } from 'react-native';
-import { Route, Link, withRouter } from 'react-router-native';
+import { Actions } from 'react-native-redux-router';
 import { RoundTextButton } from '../components/Components';
 import exercises from '../components/exercises';
 import NavigationMenu from '../components/NavigationMenu';
 
-const componentWrapper = (params) => {
-  const props = JSON.parse(params.props);
-  const Component = exercises[params.name];
+const componentWrapper = (name, props) => {
+  console.log('componentWrapper', name);
+  const Component = exercises[name];
+  if (Component === undefined) {
+    return (
+      <Text style={{ padding: 20, paddingTop: 70 }}>
+        Please select an Exercise
+      </Text>
+    );
+  }
   return <Component {...props} />;
 }
 
@@ -41,15 +48,15 @@ class Exercise extends React.Component {
       nextExercise: '/test',
       navigationMenuVisible: false,
     };
-    this.locationPath = props.location.pathname;
+    // this.locationPath = props.location.pathname;
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.locationPath !== nextProps.location.pathname) {
-      this.locationPath = nextProps.location.pathname;
-      this.setState({ navigationMenuVisible: false });
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (this.locationPath !== nextProps.location.pathname) {
+  //     this.locationPath = nextProps.location.pathname;
+  //     this.setState({ navigationMenuVisible: false });
+  //   }
+  // }
 
   toggleNavigationMenu = () => {
     this.setState({
@@ -57,22 +64,25 @@ class Exercise extends React.Component {
     });
   }
 
+  // <Route
+  //   exact
+  //   path="/exercise/:name/:props"
+  //   render={({ match }) => componentWrapper(match.params)}
+  // />
+  // <Route
+  //   exact
+  //   path="/exercise"
+  //   render={() => (
+  //     <Text style={{ padding: 20, paddingTop: 70 }}>Please select an Exercise</Text>
+  //   )}
+  // />
+
   render () {
-    const { course } = this.props;
+    const { course, exerciseComponent, exerciseProps } = this.props;
+    console.log(this.props);
     return (
       <View style={{ flex: 1 }}>
-        <Route
-          exact
-          path="/exercise/:name/:props"
-          render={({ match }) => componentWrapper(match.params)}
-        />
-        <Route
-          exact
-          path="/exercise"
-          render={() => (
-            <Text style={{ padding: 20, paddingTop: 70 }}>Please select an Exercise</Text>
-          )}
-        />
+        {componentWrapper(exerciseComponent, exerciseProps)}
 
         <NavigationMenu
           visible={this.state.navigationMenuVisible}
@@ -88,12 +98,16 @@ class Exercise extends React.Component {
                     const name = exercise.component;
                     const props = JSON.stringify(exercise.props);
                     return (
-                      <Link
-                        to={`/exercise/${name}/${props}`}
-                        component={Button}
+                      <Button
                         title={exercise.title}
                         color={'white'}
                         key={`exercise-${exerciseIndex}`}
+                        onPress={() => {
+                          Actions.exercise({
+                            exerciseComponent: exercise.component,
+                            exerciseProps: exercise.props,
+                          });
+                        }}
                       />
                     );
                   })}
@@ -112,12 +126,12 @@ class Exercise extends React.Component {
           />
         </View>
         <View style={[styles.hoveringButton, styles.right]}>
-          <Link
-            to={`/exercise`}
-            component={RoundTextButton}
+          <RoundTextButton
+            title={exercise.title}
             size={30}
             textStyle={{ fontSize: 15 }}
             text="➔"
+            onPress={() => Actions.exercise()}
           />
         </View>
       </View>
@@ -125,4 +139,4 @@ class Exercise extends React.Component {
   }
 }
 
-export default withRouter(Exercise);
+export default Exercise;
