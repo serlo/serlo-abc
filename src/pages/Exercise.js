@@ -5,8 +5,6 @@ import { RoundTextButton } from '../components/Components';
 import exercises from '../components/exercises';
 import NavigationMenu from '../components/NavigationMenu';
 
-const course = require('../assets/courses/course.json');
-
 const componentWrapper = (params) => {
   const props = JSON.parse(params.props);
   const Component = exercises[params.name];
@@ -60,6 +58,7 @@ class Exercise extends React.Component {
   }
 
   render () {
+    const { course } = this.props;
     return (
       <View style={{ flex: 1 }}>
         <Route
