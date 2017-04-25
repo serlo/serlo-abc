@@ -2,16 +2,14 @@ import React from 'react';
 import { View, ScrollView, Text, StyleSheet, Button } from 'react-native';
 import { Route, Link, withRouter } from 'react-router-native';
 import { RoundTextButton } from '../components/Components';
-import DifferFromSymbol from '../components/exercises/DifferFromSymbol';
-import LetterRotated from '../components/exercises/LetterRotated';
+import exercises from '../components/exercises';
 import NavigationMenu from '../components/NavigationMenu';
 
 const course = require('../assets/courses/course.json');
 
-const components = {DifferFromSymbol, LetterRotated}
 const componentWrapper = (params) => {
   const props = JSON.parse(params.props);
-  const Component = components[params.name];
+  const Component = exercises[params.name];
   return <Component {...props} />;
 }
 
