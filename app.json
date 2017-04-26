@@ -1,5 +1,13 @@
 {
   "expo": {
-    "sdkVersion": "15.0.0"
+    "sdkVersion": "15.0.0",
+    "name": "Serlo-ABC",
+    "version": "1.0.0",
+    "ios": {
+      "bundleIdentifier": "org.rnplay.exp",
+    },
+    "android": {
+      "package": "org.rnplay.exp",
+    },
   }
 }
