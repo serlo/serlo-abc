@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, routerReducer, Route, Container, Animations, Schema } from 'react-native-redux-router';
+import { Router, Route, routerReducer } from 'react-native-redux-router';
 import { storiesOf } from '@kadira/react-native-storybook';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
