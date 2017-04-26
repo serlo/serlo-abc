@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, Text, StyleSheet, StatusBar } from 'react-native';
+import { View, ScrollView, Text, StyleSheet } from 'react-native';
 import { RoundTextButton } from '../components/Components';
 import NavigationMenu from '../components/NavigationMenu';
 import { WHITE, GREEN } from '../styles/colors';
@@ -8,7 +8,7 @@ import { WHITE, GREEN } from '../styles/colors';
 const styles = StyleSheet.create({
   hoveringButton: {
     position: 'absolute',
-    top: StatusBar.currentHeight + 15,
+    top: 30,
   },
   left: {
     left: 10,
@@ -61,7 +61,7 @@ class ExerciseLayout extends React.Component {
 
         <NavigationMenu
           visible={this.state.navigationMenuVisible}
-          style={{ padding: 20, paddingTop: StatusBar.currentHeight + 60 }}
+          style={{ padding: 20, paddingTop: 80 }}
         >
           {course.sections.map((section, sectionIndex) => {
             let exerciseIndex = 0;
