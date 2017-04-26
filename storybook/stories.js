@@ -1,6 +1,6 @@
 import '../src/index.stories';
-import '../src/containers/ExerciseApp.stories.js';
 import '../src/components/NavigationMenu.stories.js';
+import '../src/containers/ExerciseApp.stories.js';
 import '../src/components/exercises/DifferFromSymbol.stories';
 import '../src/components/exercises/ExplanationText.stories';
 import '../src/components/exercises/FindLetter.stories';

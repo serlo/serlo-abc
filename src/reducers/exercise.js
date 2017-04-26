@@ -10,6 +10,7 @@ for (let i = 0; i < course.sections.length; i++) {
     const chapter = section.chapters[j];
     for (let k = 0; k < chapter.exercises.length; k++) {
       const exercise = chapter.exercises[k];
+      exercise.complete = false; // later take this info from storage
       exercises.push(exercise);
     }
   }
@@ -18,11 +19,28 @@ for (let i = 0; i < course.sections.length; i++) {
 const initialState = {
   course,
   exercises,
+  currentExercise: 0, // index in exercises array (later init from storage)
 };
 
 export default exercise = (state = initialState, action = {}) => {
   console.log(action);
   switch (action.type) {
+    case types.MARK_CURRENT_EXERCISE_COMPLETE:
+      state.exercises[currentExercise].complete = true;
+      if (state.currentExercise < exercises.length - 1) {
+        state.currentExercise += 1;
+      }
+      return { ...state };
+      break;
+    case types.CHANGE_EXERCISE:
+      return { ...state, currentExercise: action.index };
+      break;
+    case types.NEXT_EXERCISE:
+      if (state.currentExercise < exercises.length - 1) {
+        state.currentExercise += 1;
+      }
+      return { ...state };
+      break;
     default:
       return state;
   }

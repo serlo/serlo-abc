@@ -20,11 +20,15 @@ const componentWrapper = (name, props) => {
 
 class ExerciseApp extends React.Component {
   render() {
-    console.log('ExerciseApp', this.props);
-    const { state, actions, exerciseComponent, exerciseProps } = this.props;
+    const { state, actions, routes } = this.props;
+    const exercise = state.exercises[state.currentExercise];
     return (
-      <ExerciseLayout course={state.course}>
-        {componentWrapper(exerciseComponent, exerciseProps)}
+      <ExerciseLayout
+        course={state.course}
+        changeExercise={actions.changeExercise}
+        nextExercise={actions.nextExercise}
+      >
+        {componentWrapper(exercise.component, exercise.props)}
       </ExerciseLayout>
     );
   }
@@ -32,8 +36,8 @@ class ExerciseApp extends React.Component {
 
 const mapStateToProps = state => ({
   state: state.exercise,
-});
-const mapDispatchToProps = (dispatch) => ({
+})
+const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(exerciseActions, dispatch),
 })
 

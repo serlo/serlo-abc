@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, ScrollView, Text, StyleSheet, Button } from 'react-native';
-import { Actions } from 'react-native-redux-router';
 import { RoundTextButton } from '../components/Components';
 import NavigationMenu from '../components/NavigationMenu';
 
@@ -28,6 +27,7 @@ const styles = StyleSheet.create({
   },
 });
 
+
 class ExerciseLayout extends React.Component {
   constructor(props) {
     super(props);
@@ -37,6 +37,12 @@ class ExerciseLayout extends React.Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      navigationMenuVisible: false,
+    });
+  }
+
   toggleNavigationMenu = () => {
     this.setState({
       navigationMenuVisible: !this.state.navigationMenuVisible,
@@ -44,7 +50,7 @@ class ExerciseLayout extends React.Component {
   }
 
   render () {
-    const { course } = this.props;
+    const { course, changeExercise, nextExercise } = this.props;
     return (
       <View style={{ flex: 1 }}>
         {this.props.children}
@@ -53,33 +59,30 @@ class ExerciseLayout extends React.Component {
           visible={this.state.navigationMenuVisible}
           style={{ padding: 20, paddingTop: 70 }}
         >
-          {course.sections.map((section, sectionIndex) => (
-            <View key={`section-${sectionIndex}`}>
-              <Text style={styles.sectionText}>Section {section.title}</Text>
-              {section.chapters.map((chapter, chapterIndex) => (
-                <View key={`chapter-${chapterIndex}`}>
-                  <Text style={styles.chapterText}>Chapter {chapter.title}</Text>
-                  {chapter.exercises.map((exercise, exerciseIndex) => {
-                    const name = exercise.component;
-                    const props = JSON.stringify(exercise.props);
-                    return (
-                      <Button
-                        title={exercise.title}
-                        color={'white'}
-                        key={`exercise-${exerciseIndex}`}
-                        onPress={() => {
-                          Actions.exercise({
-                            exerciseComponent: exercise.component,
-                            exerciseProps: exercise.props,
-                          });
-                        }}
-                      />
-                    );
-                  })}
-                </View>
-              ))}
-            </View>
-          ))}
+          {course.sections.map((section, sectionIndex) => {
+            let exerciseIndex = 0;
+            return (
+              <View key={`section-${sectionIndex}`}>
+                <Text style={styles.sectionText}>Section {section.title}</Text>
+                {section.chapters.map((chapter, chapterIndex) => (
+                  <View key={`chapter-${chapterIndex}`}>
+                    <Text style={styles.chapterText}>Chapter {chapter.title}</Text>
+                    {chapter.exercises.map((exercise, exerciseIndex) => {
+                      exerciseIndex += 1;
+                      return (
+                        <Button
+                          title={exercise.title}
+                          color={'white'}
+                          key={`exercise-${exerciseIndex}`}
+                          onPress={() => changeExercise(exerciseIndex - 1)}
+                        />
+                      );
+                    })}
+                  </View>
+                ))}
+              </View>
+            );
+          })}
         </NavigationMenu>
 
         <View style={[styles.hoveringButton, styles.left]}>
@@ -96,7 +99,7 @@ class ExerciseLayout extends React.Component {
             size={30}
             textStyle={{ fontSize: 15 }}
             text="➔"
-            onPress={() => Actions.exercise()}
+            onPress={() => nextExercise()}
           />
         </View>
       </View>
