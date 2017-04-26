@@ -25,6 +25,7 @@ class ExerciseApp extends React.Component {
     return (
       <ExerciseLayout
         course={state.course}
+        currentExercise={state.currentExercise}
         changeExercise={actions.changeExercise}
         nextExercise={actions.nextExercise}
       >

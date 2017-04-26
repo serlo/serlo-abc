@@ -26,7 +26,6 @@ const BasicLayout = (props) => (
 
 class RouterStory extends React.Component {
   componentDidMount() {
-    console.log(Actions);
     setTimeout(function () {
       Actions.exercise();
     }, 3000);
