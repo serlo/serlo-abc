@@ -8,5 +8,4 @@ export const PRIMARY = '#00b4d5';
 export const PRIMARY_WEAK = '#73dbff';
 export const PRIMARY_STRONG = '#17bcde';
 
-export const RED = '#cf614d';
 export const GREEN = '#b5ce4d';

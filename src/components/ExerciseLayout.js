@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, Text, StyleSheet, Alert } from 'react-native';
+import { View, ScrollView, Text, StyleSheet } from 'react-native';
 import { RoundTextButton } from '../components/Components';
 import NavigationMenu from '../components/NavigationMenu';
 import { WHITE, GREEN } from '../styles/colors';
@@ -8,12 +8,7 @@ import { WHITE, GREEN } from '../styles/colors';
 const styles = StyleSheet.create({
   hoveringButton: {
     position: 'absolute',
-  },
-  top: {
     top: 30,
-  },
-  bottom: {
-    bottom: 10,
   },
   left: {
     left: 10,
@@ -30,11 +25,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "500",
     color: WHITE,
-    marginBottom: 10,
   },
   menuButton: {
     margin: 10,
-    marginTop: 0,
   }
 });
 
@@ -60,78 +53,50 @@ class ExerciseLayout extends React.Component {
     });
   }
 
-  submitExercise = () => {
-    if (this.props.currentAnswer === null) {
-      Alert.alert('Please select an answer first');
-    } else {
-      this.props.submitExercise();
-      setTimeout(() => {
-        this.props.nextExercise();
-      }, 1000);
-    }
-  }
-
   render () {
-    const {
-      course,
-      changeExercise,
-      nextExercise,
-      currentExercise,
-    } = this.props;
+    const { course, changeExercise, nextExercise, currentExercise } = this.props;
     return (
       <View style={{ flex: 1 }}>
         {this.props.children}
-
-        <View style={[styles.hoveringButton, styles.bottom, styles.right]}>
-          <RoundTextButton
-            textStyle={{ fontSize: 18 }}
-            text="Submit"
-            onPress={this.submitExercise}
-          />
-        </View>
 
         <NavigationMenu
           visible={this.state.navigationMenuVisible}
           style={{ padding: 20, paddingTop: 80 }}
         >
-          {course.sections.map((section, sIndex) => (
-            <View key={`s_${sIndex}`}>
-              <Text style={styles.sectionText}>
-                Section {section.title}
-              </Text>
-              {section.chapters.map((chapter, cIndex) => (
-                <View key={`s_${sIndex}_c_${cIndex}`}>
-                  <Text style={styles.chapterText}>
-                    Chapter {chapter.title}
-                  </Text>
-                  {chapter.exercises.map((exercise, eIndex) => {
-                    const menuButton = [styles.menuButton];
-                    let onPress = () => changeExercise(sIndex, cIndex, eIndex);
-                    if (
-                      currentExercise.section === sIndex &&
-                      currentExercise.chapter === cIndex &&
-                      currentExercise.exercise === eIndex
-                    ) {
-                      menuButton.push({ backgroundColor: GREEN });
-                      onPress = () => {}
-                    }
-                    return (
-                      <RoundTextButton
-                        text={exercise.title}
-                        textStyle={{ fontSize: 18 }}
-                        style={menuButton}
-                        key={`s_${sIndex}_c_${cIndex}_e_${eIndex}`}
-                        onPress={onPress}
-                      />
-                    );;
-                  })}
-                </View>
-              ))}
-            </View>
-          ))}
+          {course.sections.map((section, sectionIndex) => {
+            let exerciseIndex = 0;
+            return (
+              <View key={`s_${sectionIndex}`}>
+                <Text style={styles.sectionText}>Section {section.title}</Text>
+                {section.chapters.map((chapter, chapterIndex) => (
+                  <View key={`s_${sectionIndex}_c_${chapterIndex}`}>
+                    <Text style={styles.chapterText}>Chapter {chapter.title}</Text>
+                    {chapter.exercises.map((exercise) => {
+                      const eIndex = exerciseIndex;
+                      exerciseIndex += 1;
+                      const menuButton = [styles.menuButton];
+                      let onPress = () => changeExercise(eIndex);
+                      if (currentExercise === eIndex) {
+                        menuButton.push({ backgroundColor: GREEN });
+                        onPress = () => {}
+                      }
+                      return (
+                        <RoundTextButton
+                          text={exercise.title}
+                          style={menuButton}
+                          key={`e_${eIndex}`}
+                          onPress={onPress}
+                        />
+                      );;
+                    })}
+                  </View>
+                ))}
+              </View>
+            );
+          })}
         </NavigationMenu>
 
-        <View style={[styles.hoveringButton, styles.top, styles.left]}>
+        <View style={[styles.hoveringButton, styles.left]}>
           <RoundTextButton
             size={30}
             textStyle={{ fontSize: 15 }}
@@ -139,12 +104,12 @@ class ExerciseLayout extends React.Component {
             onPress={this.toggleNavigationMenu}
           />
         </View>
-        <View style={[styles.hoveringButton, styles.top, styles.right]}>
+        <View style={[styles.hoveringButton, styles.right]}>
           <RoundTextButton
             size={30}
             textStyle={{ fontSize: 15 }}
             text="➔"
-            onPress={nextExercise}
+            onPress={() => nextExercise()}
           />
         </View>
       </View>
