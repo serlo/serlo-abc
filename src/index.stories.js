@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@kadira/react-native-storybook';
-// import { Router, Route, Actions, routerReducer } from 'react-native-redux-router';
 import { Scene, Router, Actions } from 'react-native-router-flux';
-import { Button, View } from 'react-native';
+import { Button, View, Text } from 'react-native';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
@@ -15,36 +14,37 @@ import App from '.';
 storiesOf('App', module).add('default', () => <App />);
 
 // router demonstration
-const reducer = combineReducers(reducers);
-const store = createStore(reducer);
+const PageOne = () => (
+  <View style={{ flex: 1, paddingTop: 30 }}>
+    <Text>Page One</Text>
+    <Button
+      title="Go to Page Two"
+      onPress={Actions.pageTwo}
+    />
+  </View>
+)
 
-const BasicLayout = (props) => (
-  <View style={{ flex: 1 }}>
-    {props.children}
+const PageTwo = () => (
+  <View style={{ flex: 1, paddingTop: 30 }}>
+    <Text>Page Two</Text>
+    <Button
+      title="Go to Page One"
+      onPress={Actions.pageOne}
+    />
   </View>
 )
 
 class RouterStory extends React.Component {
-  componentDidMount() {
-    setTimeout(function () {
-      Actions.exercise();
-    }, 3000);
-  }
-
   render() {
     return (
       <Router>
         <Scene key="root" hideNavBar duration={0}>
-          <Scene key="splash" component={Splash} />
-          <Scene key="exercise" component={ExerciseApp} />
+          <Scene key="pageOne" component={PageOne} />
+          <Scene key="pageTwo" component={PageTwo} />
         </Scene>
       </Router>
     );
   }
 }
 
-storiesOf('App', module).add('router demonstration', () => (
-  <Provider store={store}>
-    <RouterStory />
-  </Provider>
-));
+storiesOf('App', module).add('router demonstration', () => <RouterStory />);
