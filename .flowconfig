@@ -30,6 +30,14 @@
 ; Ignore react-native-fbads dependency of the expo sdk
 .*/node_modules/react-native-fbads/*
 
+; Ignore react-native-experimental-navigation errors
+; https://github.com/aksonov/react-native-experimental-navigation/issues/12
+.*/node_modules/react-native-experimental-navigation/.*
+
+; Ignore react-native-router-flux errors
+; https://github.com/aksonov/react-native-router-flux/issues/1465
+.*/node_modules/react-static-container/.*
+
 [include]
 
 [libs]
