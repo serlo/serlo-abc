@@ -1,4 +1,4 @@
-// flow-typed signature: 820d00a4b240bc93878c6cec2b563d24
+// flow-typed signature: e265110a8aae7dff1a4822b25d8ef40e
 // flow-typed version: <<STUB>>/ramda_v^0.23.0/flow_v0.38.0
 
 /**
@@ -27,6 +27,14 @@ declare module 'ramda/dist/ramda' {
 }
 
 declare module 'ramda/dist/ramda.min' {
+  declare module.exports: any;
+}
+
+declare module 'ramda/src/F' {
+  declare module.exports: any;
+}
+
+declare module 'ramda/src/T' {
   declare module.exports: any;
 }
 
@@ -266,10 +274,6 @@ declare module 'ramda/src/evolve' {
   declare module.exports: any;
 }
 
-declare module 'ramda/src/F' {
-  declare module.exports: any;
-}
-
 declare module 'ramda/src/filter' {
   declare module.exports: any;
 }
@@ -371,6 +375,10 @@ declare module 'ramda/src/insert' {
 }
 
 declare module 'ramda/src/insertAll' {
+  declare module.exports: any;
+}
+
+declare module 'ramda/src/internal/_Set' {
   declare module.exports: any;
 }
 
@@ -559,10 +567,6 @@ declare module 'ramda/src/internal/_reduce' {
 }
 
 declare module 'ramda/src/internal/_reduced' {
-  declare module.exports: any;
-}
-
-declare module 'ramda/src/internal/_Set' {
   declare module.exports: any;
 }
 
@@ -974,11 +978,11 @@ declare module 'ramda/src/propOr' {
   declare module.exports: any;
 }
 
-declare module 'ramda/src/props' {
+declare module 'ramda/src/propSatisfies' {
   declare module.exports: any;
 }
 
-declare module 'ramda/src/propSatisfies' {
+declare module 'ramda/src/props' {
   declare module.exports: any;
 }
 
@@ -994,15 +998,15 @@ declare module 'ramda/src/reduceBy' {
   declare module.exports: any;
 }
 
-declare module 'ramda/src/reduced' {
-  declare module.exports: any;
-}
-
 declare module 'ramda/src/reduceRight' {
   declare module.exports: any;
 }
 
 declare module 'ramda/src/reduceWhile' {
+  declare module.exports: any;
+}
+
+declare module 'ramda/src/reduced' {
   declare module.exports: any;
 }
 
@@ -1083,10 +1087,6 @@ declare module 'ramda/src/symmetricDifference' {
 }
 
 declare module 'ramda/src/symmetricDifferenceWith' {
-  declare module.exports: any;
-}
-
-declare module 'ramda/src/T' {
   declare module.exports: any;
 }
 
@@ -1283,6 +1283,12 @@ declare module 'ramda/index' {
 declare module 'ramda/index.js' {
   declare module.exports: $Exports<'ramda'>;
 }
+declare module 'ramda/src/F.js' {
+  declare module.exports: $Exports<'ramda/src/F'>;
+}
+declare module 'ramda/src/T.js' {
+  declare module.exports: $Exports<'ramda/src/T'>;
+}
 declare module 'ramda/src/__.js' {
   declare module.exports: $Exports<'ramda/src/__'>;
 }
@@ -1460,9 +1466,6 @@ declare module 'ramda/src/equals.js' {
 declare module 'ramda/src/evolve.js' {
   declare module.exports: $Exports<'ramda/src/evolve'>;
 }
-declare module 'ramda/src/F.js' {
-  declare module.exports: $Exports<'ramda/src/F'>;
-}
 declare module 'ramda/src/filter.js' {
   declare module.exports: $Exports<'ramda/src/filter'>;
 }
@@ -1540,6 +1543,9 @@ declare module 'ramda/src/insert.js' {
 }
 declare module 'ramda/src/insertAll.js' {
   declare module.exports: $Exports<'ramda/src/insertAll'>;
+}
+declare module 'ramda/src/internal/_Set.js' {
+  declare module.exports: $Exports<'ramda/src/internal/_Set'>;
 }
 declare module 'ramda/src/internal/_aperture.js' {
   declare module.exports: $Exports<'ramda/src/internal/_aperture'>;
@@ -1681,9 +1687,6 @@ declare module 'ramda/src/internal/_reduce.js' {
 }
 declare module 'ramda/src/internal/_reduced.js' {
   declare module.exports: $Exports<'ramda/src/internal/_reduced'>;
-}
-declare module 'ramda/src/internal/_Set.js' {
-  declare module.exports: $Exports<'ramda/src/internal/_Set'>;
 }
 declare module 'ramda/src/internal/_stepCat.js' {
   declare module.exports: $Exports<'ramda/src/internal/_stepCat'>;
@@ -1991,11 +1994,11 @@ declare module 'ramda/src/propIs.js' {
 declare module 'ramda/src/propOr.js' {
   declare module.exports: $Exports<'ramda/src/propOr'>;
 }
-declare module 'ramda/src/props.js' {
-  declare module.exports: $Exports<'ramda/src/props'>;
-}
 declare module 'ramda/src/propSatisfies.js' {
   declare module.exports: $Exports<'ramda/src/propSatisfies'>;
+}
+declare module 'ramda/src/props.js' {
+  declare module.exports: $Exports<'ramda/src/props'>;
 }
 declare module 'ramda/src/range.js' {
   declare module.exports: $Exports<'ramda/src/range'>;
@@ -2006,14 +2009,14 @@ declare module 'ramda/src/reduce.js' {
 declare module 'ramda/src/reduceBy.js' {
   declare module.exports: $Exports<'ramda/src/reduceBy'>;
 }
-declare module 'ramda/src/reduced.js' {
-  declare module.exports: $Exports<'ramda/src/reduced'>;
-}
 declare module 'ramda/src/reduceRight.js' {
   declare module.exports: $Exports<'ramda/src/reduceRight'>;
 }
 declare module 'ramda/src/reduceWhile.js' {
   declare module.exports: $Exports<'ramda/src/reduceWhile'>;
+}
+declare module 'ramda/src/reduced.js' {
+  declare module.exports: $Exports<'ramda/src/reduced'>;
 }
 declare module 'ramda/src/reject.js' {
   declare module.exports: $Exports<'ramda/src/reject'>;
@@ -2074,9 +2077,6 @@ declare module 'ramda/src/symmetricDifference.js' {
 }
 declare module 'ramda/src/symmetricDifferenceWith.js' {
   declare module.exports: $Exports<'ramda/src/symmetricDifferenceWith'>;
-}
-declare module 'ramda/src/T.js' {
-  declare module.exports: $Exports<'ramda/src/T'>;
 }
 declare module 'ramda/src/tail.js' {
   declare module.exports: $Exports<'ramda/src/tail'>;

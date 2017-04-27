@@ -20,18 +20,8 @@ for (let i = 0; i < course.sections.length; i++) {
 const initialState = {
   course,
   exercises,
+  currentExercise: 0,
 };
-
-// init current exercise from storage
-AsyncStorage
-  .getItem('@exercise:currentExercise')
-  .then((value) => {
-    if (value === null) {
-      initialState.currentExercise = 0;
-    } else {
-      initialState.currentExercise = JSON.parse(value);
-    }
-  });
 
 export default exercise = (state = initialState, action = {}) => {
   switch (action.type) {
@@ -43,19 +33,11 @@ export default exercise = (state = initialState, action = {}) => {
       return { ...state };
       break;
     case types.CHANGE_EXERCISE:
-      AsyncStorage.setItem(
-        '@exercise:currentExercise',
-        JSON.stringify(action.index)
-      );
       return { ...state, currentExercise: action.index };
       break;
     case types.NEXT_EXERCISE:
       if (state.currentExercise < exercises.length - 1) {
         state.currentExercise += 1;
-        AsyncStorage.setItem(
-          '@exercise:currentExercise',
-          JSON.stringify(state.currentExercise)
-        );
       }
       return { ...state };
       break;

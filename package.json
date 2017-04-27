@@ -37,6 +37,7 @@
     "react": "~15.4.2",
     "react-native": "^0.42.0",
     "react-native-router-flux": "3.38.0",
-    "react-redux": "^5.0.4"
+    "react-redux": "^5.0.4",
+    "redux-persist": "^4.6.0"
   }
 }

@@ -1,4 +1,4 @@
-// flow-typed signature: c939d7933ab717b0a7cea534dfb477be
+// flow-typed signature: 0521aa764862c6e55b4dc4045d2e3a51
 // flow-typed version: <<STUB>>/expo_v^15.1.3/flow_v0.38.0
 
 /**
@@ -22,15 +22,7 @@ declare module 'expo' {
  * require those files directly. Feel free to delete any files that aren't
  * needed.
  */
-declare module 'expo/src/__tests__/Notifications-tests' {
-  declare module.exports: any;
-}
-
 declare module 'expo/src/Accelerometer' {
-  declare module.exports: any;
-}
-
-declare module 'expo/src/apisAreAvailable' {
   declare module.exports: any;
 }
 
@@ -70,10 +62,6 @@ declare module 'expo/src/Contacts' {
   declare module.exports: any;
 }
 
-declare module 'expo/src/createTHREEViewClass' {
-  declare module.exports: any;
-}
-
 declare module 'expo/src/DangerZone' {
   declare module.exports: any;
 }
@@ -90,15 +78,15 @@ declare module 'expo/src/FacebookAds/BannerViewManager' {
   declare module.exports: any;
 }
 
-declare module 'expo/src/FacebookAds/index' {
-  declare module.exports: any;
-}
-
 declare module 'expo/src/FacebookAds/InterstitialAdManager' {
   declare module.exports: any;
 }
 
 declare module 'expo/src/FacebookAds/NativeAdsManager' {
+  declare module.exports: any;
+}
+
+declare module 'expo/src/FacebookAds/index' {
   declare module.exports: any;
 }
 
@@ -134,14 +122,6 @@ declare module 'expo/src/KeepAwake' {
   declare module.exports: any;
 }
 
-declare module 'expo/src/lib/createSensorWrapper' {
-  declare module.exports: any;
-}
-
-declare module 'expo/src/lib/Queue' {
-  declare module.exports: any;
-}
-
 declare module 'expo/src/LinearGradient.android' {
   declare module.exports: any;
 }
@@ -166,19 +146,39 @@ declare module 'expo/src/Permissions' {
   declare module.exports: any;
 }
 
-declare module 'expo/src/registerRootComponent' {
-  declare module.exports: any;
-}
-
 declare module 'expo/src/Svg' {
   declare module.exports: any;
 }
 
-declare module 'expo/src/takeSnapshotAsync' {
+declare module 'expo/src/Video' {
   declare module.exports: any;
 }
 
-declare module 'expo/src/Video' {
+declare module 'expo/src/__tests__/Notifications-tests' {
+  declare module.exports: any;
+}
+
+declare module 'expo/src/apisAreAvailable' {
+  declare module.exports: any;
+}
+
+declare module 'expo/src/createTHREEViewClass' {
+  declare module.exports: any;
+}
+
+declare module 'expo/src/lib/Queue' {
+  declare module.exports: any;
+}
+
+declare module 'expo/src/lib/createSensorWrapper' {
+  declare module.exports: any;
+}
+
+declare module 'expo/src/registerRootComponent' {
+  declare module.exports: any;
+}
+
+declare module 'expo/src/takeSnapshotAsync' {
   declare module.exports: any;
 }
 
@@ -187,14 +187,8 @@ declare module 'expo/tools/hashAssetFiles' {
 }
 
 // Filename aliases
-declare module 'expo/src/__tests__/Notifications-tests.js' {
-  declare module.exports: $Exports<'expo/src/__tests__/Notifications-tests'>;
-}
 declare module 'expo/src/Accelerometer.js' {
   declare module.exports: $Exports<'expo/src/Accelerometer'>;
-}
-declare module 'expo/src/apisAreAvailable.js' {
-  declare module.exports: $Exports<'expo/src/apisAreAvailable'>;
 }
 declare module 'expo/src/AppLoading.android.js' {
   declare module.exports: $Exports<'expo/src/AppLoading.android'>;
@@ -223,9 +217,6 @@ declare module 'expo/src/Constants.js' {
 declare module 'expo/src/Contacts.js' {
   declare module.exports: $Exports<'expo/src/Contacts'>;
 }
-declare module 'expo/src/createTHREEViewClass.js' {
-  declare module.exports: $Exports<'expo/src/createTHREEViewClass'>;
-}
 declare module 'expo/src/DangerZone.js' {
   declare module.exports: $Exports<'expo/src/DangerZone'>;
 }
@@ -238,14 +229,14 @@ declare module 'expo/src/FacebookAds/AdSettings.js' {
 declare module 'expo/src/FacebookAds/BannerViewManager.js' {
   declare module.exports: $Exports<'expo/src/FacebookAds/BannerViewManager'>;
 }
-declare module 'expo/src/FacebookAds/index.js' {
-  declare module.exports: $Exports<'expo/src/FacebookAds/index'>;
-}
 declare module 'expo/src/FacebookAds/InterstitialAdManager.js' {
   declare module.exports: $Exports<'expo/src/FacebookAds/InterstitialAdManager'>;
 }
 declare module 'expo/src/FacebookAds/NativeAdsManager.js' {
   declare module.exports: $Exports<'expo/src/FacebookAds/NativeAdsManager'>;
+}
+declare module 'expo/src/FacebookAds/index.js' {
+  declare module.exports: $Exports<'expo/src/FacebookAds/index'>;
 }
 declare module 'expo/src/FacebookAds/withNativeAd.js' {
   declare module.exports: $Exports<'expo/src/FacebookAds/withNativeAd'>;
@@ -271,12 +262,6 @@ declare module 'expo/src/ImagePicker.js' {
 declare module 'expo/src/KeepAwake.js' {
   declare module.exports: $Exports<'expo/src/KeepAwake'>;
 }
-declare module 'expo/src/lib/createSensorWrapper.js' {
-  declare module.exports: $Exports<'expo/src/lib/createSensorWrapper'>;
-}
-declare module 'expo/src/lib/Queue.js' {
-  declare module.exports: $Exports<'expo/src/lib/Queue'>;
-}
 declare module 'expo/src/LinearGradient.android.js' {
   declare module.exports: $Exports<'expo/src/LinearGradient.android'>;
 }
@@ -295,17 +280,32 @@ declare module 'expo/src/Notifications.js' {
 declare module 'expo/src/Permissions.js' {
   declare module.exports: $Exports<'expo/src/Permissions'>;
 }
-declare module 'expo/src/registerRootComponent.js' {
-  declare module.exports: $Exports<'expo/src/registerRootComponent'>;
-}
 declare module 'expo/src/Svg.js' {
   declare module.exports: $Exports<'expo/src/Svg'>;
 }
-declare module 'expo/src/takeSnapshotAsync.js' {
-  declare module.exports: $Exports<'expo/src/takeSnapshotAsync'>;
-}
 declare module 'expo/src/Video.js' {
   declare module.exports: $Exports<'expo/src/Video'>;
+}
+declare module 'expo/src/__tests__/Notifications-tests.js' {
+  declare module.exports: $Exports<'expo/src/__tests__/Notifications-tests'>;
+}
+declare module 'expo/src/apisAreAvailable.js' {
+  declare module.exports: $Exports<'expo/src/apisAreAvailable'>;
+}
+declare module 'expo/src/createTHREEViewClass.js' {
+  declare module.exports: $Exports<'expo/src/createTHREEViewClass'>;
+}
+declare module 'expo/src/lib/Queue.js' {
+  declare module.exports: $Exports<'expo/src/lib/Queue'>;
+}
+declare module 'expo/src/lib/createSensorWrapper.js' {
+  declare module.exports: $Exports<'expo/src/lib/createSensorWrapper'>;
+}
+declare module 'expo/src/registerRootComponent.js' {
+  declare module.exports: $Exports<'expo/src/registerRootComponent'>;
+}
+declare module 'expo/src/takeSnapshotAsync.js' {
+  declare module.exports: $Exports<'expo/src/takeSnapshotAsync'>;
 }
 declare module 'expo/tools/hashAssetFiles.js' {
   declare module.exports: $Exports<'expo/tools/hashAssetFiles'>;

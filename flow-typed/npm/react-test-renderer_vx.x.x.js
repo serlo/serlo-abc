@@ -1,4 +1,4 @@
-// flow-typed signature: 9b2721f9d4179c80b4855787e306d57b
+// flow-typed signature: 5a03fffad0e46d058c60139ec70d9515
 // flow-typed version: <<STUB>>/react-test-renderer_v~15.4.2/flow_v0.38.0
 
 /**
@@ -22,31 +22,7 @@ declare module 'react-test-renderer' {
  * require those files directly. Feel free to delete any files that aren't
  * needed.
  */
-declare module 'react-test-renderer/lib/accumulate' {
-  declare module.exports: any;
-}
-
-declare module 'react-test-renderer/lib/accumulateInto' {
-  declare module.exports: any;
-}
-
-declare module 'react-test-renderer/lib/adler32' {
-  declare module.exports: any;
-}
-
 declare module 'react-test-renderer/lib/CallbackQueue' {
-  declare module.exports: any;
-}
-
-declare module 'react-test-renderer/lib/canDefineProperty' {
-  declare module.exports: any;
-}
-
-declare module 'react-test-renderer/lib/checkReactTypeSpec' {
-  declare module.exports: any;
-}
-
-declare module 'react-test-renderer/lib/deprecated' {
   declare module.exports: any;
 }
 
@@ -67,34 +43,6 @@ declare module 'react-test-renderer/lib/EventPluginUtils' {
 }
 
 declare module 'react-test-renderer/lib/EventPropagators' {
-  declare module.exports: any;
-}
-
-declare module 'react-test-renderer/lib/flattenChildren' {
-  declare module.exports: any;
-}
-
-declare module 'react-test-renderer/lib/forEachAccumulated' {
-  declare module.exports: any;
-}
-
-declare module 'react-test-renderer/lib/getHostComponentFromComposite' {
-  declare module.exports: any;
-}
-
-declare module 'react-test-renderer/lib/getIteratorFn' {
-  declare module.exports: any;
-}
-
-declare module 'react-test-renderer/lib/getNextDebugID' {
-  declare module.exports: any;
-}
-
-declare module 'react-test-renderer/lib/instantiateReactComponent' {
-  declare module.exports: any;
-}
-
-declare module 'react-test-renderer/lib/isTextInputElement' {
   declare module.exports: any;
 }
 
@@ -238,10 +186,6 @@ declare module 'react-test-renderer/lib/ReactPriorityLevel' {
   declare module.exports: any;
 }
 
-declare module 'react-test-renderer/lib/reactProdInvariant' {
-  declare module.exports: any;
-}
-
 declare module 'react-test-renderer/lib/ReactPropTypeLocationNames' {
   declare module.exports: any;
 }
@@ -326,10 +270,6 @@ declare module 'react-test-renderer/lib/ResponderTouchHistoryStore' {
   declare module.exports: any;
 }
 
-declare module 'react-test-renderer/lib/shouldUpdateReactComponent' {
-  declare module.exports: any;
-}
-
 declare module 'react-test-renderer/lib/SyntheticEvent' {
   declare module.exports: any;
 }
@@ -339,6 +279,66 @@ declare module 'react-test-renderer/lib/TouchHistoryMath' {
 }
 
 declare module 'react-test-renderer/lib/Transaction' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/accumulate' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/accumulateInto' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/adler32' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/canDefineProperty' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/checkReactTypeSpec' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/deprecated' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/flattenChildren' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/forEachAccumulated' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/getHostComponentFromComposite' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/getIteratorFn' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/getNextDebugID' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/instantiateReactComponent' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/isTextInputElement' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/reactProdInvariant' {
+  declare module.exports: any;
+}
+
+declare module 'react-test-renderer/lib/shouldUpdateReactComponent' {
   declare module.exports: any;
 }
 
@@ -353,26 +353,8 @@ declare module 'react-test-renderer/index' {
 declare module 'react-test-renderer/index.js' {
   declare module.exports: $Exports<'react-test-renderer'>;
 }
-declare module 'react-test-renderer/lib/accumulate.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/accumulate'>;
-}
-declare module 'react-test-renderer/lib/accumulateInto.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/accumulateInto'>;
-}
-declare module 'react-test-renderer/lib/adler32.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/adler32'>;
-}
 declare module 'react-test-renderer/lib/CallbackQueue.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/CallbackQueue'>;
-}
-declare module 'react-test-renderer/lib/canDefineProperty.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/canDefineProperty'>;
-}
-declare module 'react-test-renderer/lib/checkReactTypeSpec.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/checkReactTypeSpec'>;
-}
-declare module 'react-test-renderer/lib/deprecated.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/deprecated'>;
 }
 declare module 'react-test-renderer/lib/EventConstants.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/EventConstants'>;
@@ -388,27 +370,6 @@ declare module 'react-test-renderer/lib/EventPluginUtils.js' {
 }
 declare module 'react-test-renderer/lib/EventPropagators.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/EventPropagators'>;
-}
-declare module 'react-test-renderer/lib/flattenChildren.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/flattenChildren'>;
-}
-declare module 'react-test-renderer/lib/forEachAccumulated.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/forEachAccumulated'>;
-}
-declare module 'react-test-renderer/lib/getHostComponentFromComposite.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/getHostComponentFromComposite'>;
-}
-declare module 'react-test-renderer/lib/getIteratorFn.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/getIteratorFn'>;
-}
-declare module 'react-test-renderer/lib/getNextDebugID.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/getNextDebugID'>;
-}
-declare module 'react-test-renderer/lib/instantiateReactComponent.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/instantiateReactComponent'>;
-}
-declare module 'react-test-renderer/lib/isTextInputElement.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/isTextInputElement'>;
 }
 declare module 'react-test-renderer/lib/KeyEscapeUtils.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/KeyEscapeUtils'>;
@@ -515,9 +476,6 @@ declare module 'react-test-renderer/lib/ReactPerf.js' {
 declare module 'react-test-renderer/lib/ReactPriorityLevel.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactPriorityLevel'>;
 }
-declare module 'react-test-renderer/lib/reactProdInvariant.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/reactProdInvariant'>;
-}
 declare module 'react-test-renderer/lib/ReactPropTypeLocationNames.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactPropTypeLocationNames'>;
 }
@@ -581,9 +539,6 @@ declare module 'react-test-renderer/lib/ResponderSyntheticEvent.js' {
 declare module 'react-test-renderer/lib/ResponderTouchHistoryStore.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ResponderTouchHistoryStore'>;
 }
-declare module 'react-test-renderer/lib/shouldUpdateReactComponent.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/shouldUpdateReactComponent'>;
-}
 declare module 'react-test-renderer/lib/SyntheticEvent.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/SyntheticEvent'>;
 }
@@ -592,6 +547,51 @@ declare module 'react-test-renderer/lib/TouchHistoryMath.js' {
 }
 declare module 'react-test-renderer/lib/Transaction.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/Transaction'>;
+}
+declare module 'react-test-renderer/lib/accumulate.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/accumulate'>;
+}
+declare module 'react-test-renderer/lib/accumulateInto.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/accumulateInto'>;
+}
+declare module 'react-test-renderer/lib/adler32.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/adler32'>;
+}
+declare module 'react-test-renderer/lib/canDefineProperty.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/canDefineProperty'>;
+}
+declare module 'react-test-renderer/lib/checkReactTypeSpec.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/checkReactTypeSpec'>;
+}
+declare module 'react-test-renderer/lib/deprecated.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/deprecated'>;
+}
+declare module 'react-test-renderer/lib/flattenChildren.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/flattenChildren'>;
+}
+declare module 'react-test-renderer/lib/forEachAccumulated.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/forEachAccumulated'>;
+}
+declare module 'react-test-renderer/lib/getHostComponentFromComposite.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/getHostComponentFromComposite'>;
+}
+declare module 'react-test-renderer/lib/getIteratorFn.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/getIteratorFn'>;
+}
+declare module 'react-test-renderer/lib/getNextDebugID.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/getNextDebugID'>;
+}
+declare module 'react-test-renderer/lib/instantiateReactComponent.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/instantiateReactComponent'>;
+}
+declare module 'react-test-renderer/lib/isTextInputElement.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/isTextInputElement'>;
+}
+declare module 'react-test-renderer/lib/reactProdInvariant.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/reactProdInvariant'>;
+}
+declare module 'react-test-renderer/lib/shouldUpdateReactComponent.js' {
+  declare module.exports: $Exports<'react-test-renderer/lib/shouldUpdateReactComponent'>;
 }
 declare module 'react-test-renderer/lib/traverseAllChildren.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/traverseAllChildren'>;
