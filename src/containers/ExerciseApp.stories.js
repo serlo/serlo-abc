@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@kadira/react-native-storybook';
-import { AsyncStorage } from 'react-native';
+import { AsyncStorage, Text } from 'react-native';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import { persistStore, autoRehydrate } from 'redux-persist';
@@ -17,3 +17,10 @@ storiesOf('exercises', module).add('Exercise Page (uses Redux)', () => (
     <ExerciseApp />
   </Provider>
 ));
+
+storiesOf('exercises', module).add('Purge Redux Store', () => {
+  persistStore(store, { storage: AsyncStorage }).purge();
+  return (
+    <Text>Redux Store Purged</Text>
+  )
+});
