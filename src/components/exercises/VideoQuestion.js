@@ -87,11 +87,9 @@ class VideoQuestion extends Component {
   };
 
   selectAnswer = key => () => {
-    this.setState(({ highlighted }) => {
-      highlighted: highlighted === key ? null : key;
-
-      return { highlighted };
-    });
+    this.setState(({ highlighted }) => ({
+      highlighted: highlighted === key ? null : key
+    }))
   };
 
   render() {
