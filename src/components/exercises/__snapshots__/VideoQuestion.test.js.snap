@@ -113,7 +113,7 @@ exports[`renders without crashing 1`] = `
         ]
       }
     >
-      Wer ist eine Ananas? 
+      Wer ist eine Ananas?
     </Text>
     <View>
       <View
