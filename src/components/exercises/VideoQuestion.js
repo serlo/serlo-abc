@@ -1,10 +1,16 @@
-import React, {Component} from 'react';
-import {View, Text, TouchableWithoutFeedback, TouchableOpacity, Image} from "react-native";
-import {addIndex, map} from 'ramda';
-import {PRIMARY, GREEN} from '../../styles/colors'
-import {DEFAULT} from '../../styles/text'
-import {RoundTextButton} from '../Components';
-import {Video} from "expo";
+import React, { Component } from 'react';
+import {
+  View,
+  Text,
+  TouchableWithoutFeedback,
+  TouchableOpacity,
+  Image
+} from 'react-native';
+import { addIndex, map } from 'ramda';
+import { PRIMARY, GREEN } from '../../styles/colors';
+import { DEFAULT } from '../../styles/text';
+import { RoundTextButton } from '../Components';
+import { Video } from 'expo';
 import playIcon from '../../assets/images/play.png';
 
 const replayIcon = playIcon;
@@ -17,11 +23,11 @@ const styles = {
   vidContainer: {
     flex: 3,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   video: {
     width: '90%',
-    height: '100%',
+    height: '100%'
   },
   button: {
     position: 'absolute',
@@ -48,7 +54,6 @@ const styles = {
 };
 
 class VideoQuestion extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -69,7 +74,7 @@ class VideoQuestion extends Component {
       isPaused: !this.state.isPaused
     });
     if (!this.state.isPaused) {
-      this.setState({isFinished: false})
+      this.setState({ isFinished: false });
     }
   };
 
@@ -82,16 +87,23 @@ class VideoQuestion extends Component {
   };
 
   selectAnswer = key => () => {
-    this.setState(({highlighted}) => {
-      highlighted = highlighted === key ? null : key;
+    this.setState(({ highlighted }) => {
+      highlighted: highlighted === key ? null : key;
 
-      return {highlighted};
+      return { highlighted };
     });
   };
 
   render() {
     return (
-      <View style={{alignItems: "center", justifyContent: "space-around", flex: 1, backgroundColor: PRIMARY}}>
+      <View
+        style={{
+          alignItems: 'center',
+          justifyContent: 'space-around',
+          flex: 1,
+          backgroundColor: PRIMARY
+        }}
+      >
         <View style={styles.vidContainer}>
           <TouchableWithoutFeedback onPress={this.playPause}>
             <Video
@@ -105,21 +117,42 @@ class VideoQuestion extends Component {
               onEnd={this.onEnd}
             />
           </TouchableWithoutFeedback>
-          <TouchableOpacity style={[styles.button, !this.state.isPaused && !this.state.isFinished ? styles.hidden : null]}
-                            onPress={this.state.isFinished ? this.replay : this.playPause}>
-            <Image source={ this.state.isFinished ? replayIcon : playIcon } style={styles.icon}/>
+          <TouchableOpacity
+            style={[
+              styles.button,
+              !this.state.isPaused && !this.state.isFinished
+                ? styles.hidden
+                : null
+            ]}
+            onPress={this.state.isFinished ? this.replay : this.playPause}
+          >
+            <Image
+              source={this.state.isFinished ? replayIcon : playIcon}
+              style={styles.icon}
+            />
           </TouchableOpacity>
         </View>
-        <View style={{flex: 4, alignItems: "center", justifyContent: "center"}}>
-          <Text style={[DEFAULT, {marginBottom: 25}]}>{this.props.question}</Text>
-          <View>{mapIndexed((item, key) => (
-            <RoundTextButton text={item}
-                             style={[
-                               styles.answer,
-                               this.state.highlighted === key ? styles.highlighted : null
-                             ]}
-                             key={key}
-                             onPress={this.selectAnswer(key)}/>), this.props.answers)}
+        <View
+          style={{ flex: 4, alignItems: 'center', justifyContent: 'center' }}
+        >
+          <Text style={[DEFAULT, { marginBottom: 25 }]}>
+            {this.props.question}
+          </Text>
+          <View>
+            {mapIndexed(
+              (item, key) => (
+                <RoundTextButton
+                  text={item}
+                  style={[
+                    styles.answer,
+                    this.state.highlighted === key ? styles.highlighted : null
+                  ]}
+                  key={key}
+                  onPress={this.selectAnswer(key)}
+                />
+              ),
+              this.props.answers
+            )}
           </View>
         </View>
       </View>
