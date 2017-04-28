@@ -42,8 +42,12 @@ export default exercise = (state = initialState, action = {}) => {
       } else {
         exercise.success = false;
         if (exercise.originalIndex === null) {
-          const repetitionExercise = { ...exercise };
-          repetitionExercise.originalIndex = state.currentExercise.exercise;
+          const repetitionExercise = {
+            ...exercise,
+            complete: false,
+            success: false,
+            originalIndex: state.currentExercise.exercise
+          };
           chapter.exercises.push(repetitionExercise);
         }
       }
@@ -62,6 +66,14 @@ export default exercise = (state = initialState, action = {}) => {
         exercise: action.exercise,
       }
       state.currentAnswer = null;
+      const nextExercise = (
+        state.course
+        .sections[action.section]
+        .chapters[action.chapter]
+        .exercises[action.exercise]
+      )
+      nextExercise.complete = false;
+      nextExercise.success = false;
       return { ...state };
       break;
     case types.NEXT_EXERCISE:

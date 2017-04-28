@@ -2,7 +2,7 @@ import React from 'react';
 import { View, ScrollView, Text, StyleSheet, Alert } from 'react-native';
 import { RoundTextButton } from '../components/Components';
 import NavigationMenu from '../components/NavigationMenu';
-import { WHITE, GREEN } from '../styles/colors';
+import { WHITE, PRIMARY_STRONG, GREEN, RED } from '../styles/colors';
 
 
 const styles = StyleSheet.create({
@@ -49,9 +49,11 @@ class ExerciseLayout extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({
-      navigationMenuVisible: false,
-    });
+    if (this.props.children !== nextProps.children) {
+      this.setState({
+        navigationMenuVisible: false,
+      });
+    }
   }
 
   toggleNavigationMenu = () => {
@@ -107,12 +109,17 @@ class ExerciseLayout extends React.Component {
                   {chapter.exercises.map((exercise, eIndex) => {
                     const menuButton = [styles.menuButton];
                     let onPress = () => changeExercise(sIndex, cIndex, eIndex);
+                    if (exercise.complete) {
+                      menuButton.push({
+                        backgroundColor: exercise.success ? GREEN : RED
+                      });
+                    }
                     if (
                       currentExercise.section === sIndex &&
                       currentExercise.chapter === cIndex &&
                       currentExercise.exercise === eIndex
                     ) {
-                      menuButton.push({ backgroundColor: GREEN });
+                      menuButton.push({ backgroundColor: PRIMARY_STRONG });
                       onPress = () => {}
                     }
                     return (

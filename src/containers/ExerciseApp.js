@@ -28,7 +28,6 @@ class ExerciseApp extends React.Component {
     const section = state.course.sections[state.currentExercise.section];
     const chapter = section.chapters[state.currentExercise.chapter];
     const exercise = chapter.exercises[state.currentExercise.exercise];
-    console.log(exercise);
     return (
       <ExerciseLayout
         course={state.course}
