@@ -9,22 +9,17 @@ class LettersRotated extends Component {
     super(props);
 
     this.state = {
-      highlighted: [false, false, false, false, false]
+      highlighted: props.letters.map(() => false)
     };
   }
 
-  allAngles(size, angles, rotated) {
-    var ret = new Array(size), index;
-    for (var i = 0; i < size; i++) {
-      index = rotated.indexOf(i);
-      ret[i] = index !== -1 ? angles[index] : '0deg';
-    }
-    return ret;
-  }
+  getTransform = index => {
+    const angleIndex = this.props.rotated.indexOf(index);
+    return angleIndex !== -1 ? [{ rotate: this.props.angles[angleIndex] }] : [];
+  };
 
   createLetterButton = index => {
     const { angles, letters, rotated, difficulty } = this.props;
-    var allAngles = this.allAngles(letters.length, angles, rotated);
     return (
       <RoundTextButton
         onPress={() => {
@@ -42,7 +37,7 @@ class LettersRotated extends Component {
           {
             marginLeft: 5,
             marginRight: 5,
-            transform: [{ rotate: allAngles[index] }]
+            transform: this.getTransform(index)
           }
         ]}
       />
