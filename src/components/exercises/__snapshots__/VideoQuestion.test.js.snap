@@ -1,0 +1,308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00b4d5",
+      "flex": 1,
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 3,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Video
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      onEnd={[Function]}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      paused={false}
+      resizeMode={undefined}
+      source={1}
+      style={
+        Object {
+          "height": "100%",
+          "width": "90%",
+        }
+      }
+      testID={undefined}
+    />
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgba(0, 0, 0, 0.6)",
+          "borderRadius": 9999,
+          "height": 0,
+          "opacity": 1,
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "absolute",
+          "width": 0,
+          "zIndex": 9999,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 50,
+            "width": 50,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 4,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "norddruck",
+            "fontSize": 35,
+            "textAlign": "center",
+          },
+          Object {
+            "marginBottom": 25,
+          },
+        ]
+      }
+    >
+      Wer ist eine Ananas?
+    </Text>
+    <View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#73dbff",
+              "borderRadius": 9999,
+              "elevation": 5,
+              "height": NaN,
+              "justifyContent": "center",
+              "margin": 5,
+              "opacity": 1,
+              "padding": 5,
+              "shadowColor": "rgba(0, 0, 0, 0.1)",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 4,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+              "width": NaN,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              }
+            }
+          >
+            Ich bin eine Ananas
+          </Text>
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#73dbff",
+              "borderRadius": 9999,
+              "elevation": 5,
+              "height": NaN,
+              "justifyContent": "center",
+              "margin": 5,
+              "opacity": 1,
+              "padding": 5,
+              "shadowColor": "rgba(0, 0, 0, 0.1)",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 4,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+              "width": NaN,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              }
+            }
+          >
+            Du bist eine Ananas
+          </Text>
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#73dbff",
+              "borderRadius": 9999,
+              "elevation": 5,
+              "height": NaN,
+              "justifyContent": "center",
+              "margin": 5,
+              "opacity": 1,
+              "padding": 5,
+              "shadowColor": "rgba(0, 0, 0, 0.1)",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 4,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+              "width": NaN,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "norddruck",
+                "fontSize": 35,
+                "textAlign": "center",
+              }
+            }
+          >
+            Wir sind eine Ananas
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
