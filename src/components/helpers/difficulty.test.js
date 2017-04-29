@@ -15,7 +15,7 @@ describe.only('withDifficulty', () => {
   let Component, rendered, c;
 
   beforeEach(() => {
-    Component = createWithDifficulty(() => 1/2)(C);
+    Component = createWithDifficulty(() => 1 / 2)(C);
     rendered = shallow(<Component label="foo" />);
 
     c = rendered.find(C);
@@ -26,6 +26,6 @@ describe.only('withDifficulty', () => {
   });
 
   it('passes down the difficulty level', () => {
-    expect(c.prop('difficulty')).toEqual(1/2);
+    expect(c.prop('difficulty')).toEqual(1 / 2);
   });
 });
