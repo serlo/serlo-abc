@@ -60,7 +60,7 @@ Like `yarn start`, but also attempts to open your app on a connected Android dev
 
 ### `yarn format`
 
-Formats all JavaScript code with [prettier](https://github.com/prettier/prettier). 
+Formats all JavaScript code with [prettier](https://github.com/prettier/prettier). Will be automatically run as a pre-commit git hook.
 
 ### `yarn flow`
 
