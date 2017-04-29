@@ -127,6 +127,7 @@ export const RoundTextButton = ({ onPress, style, ...props }) => (
         },
         style
       ]}
+
       // size={highlighted ? size * 1.2 : size}
     />
   </TouchableOpacity>
@@ -154,7 +155,6 @@ export class RoundText extends Component {
       this.props.highlighted !== nextProps.highlighted
     ) {
       const baseFontSize = this.getBaseFontSize(nextProps);
-
       Animated.parallel([
         Animated.timing(this.state.size, {
           toValue: nextProps.highlighted
@@ -173,7 +173,6 @@ export class RoundText extends Component {
   render() {
     const { highlighted, text, style, textStyle } = this.props;
     const { size, fontSize } = this.state;
-
     return (
       <Animated.View
         style={[
