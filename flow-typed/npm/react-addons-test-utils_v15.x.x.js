@@ -1,4 +1,4 @@
-// flow-typed signature: 323fcc1a3353d5f7a36c5f1edcd963ef
+// flow-typed signature: 418080affa1bc580bffb4be69a4899be
 // flow-typed version: 41f45a7d8c/react-addons-test-utils_v15.x.x/flow_>=v0.23.x
 
 declare type ReactAddonTest$FunctionOrComponentClass = React$Component<any, any, any> | Function;
