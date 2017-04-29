@@ -1,5 +1,3 @@
-// @flow
-import App from './storybook';
-// import App from './src';
-
-export default App;
+export default (__DEV__
+  ? require('./storybook').default
+  : require('./src').defaut);
