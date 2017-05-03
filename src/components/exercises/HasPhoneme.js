@@ -7,7 +7,7 @@ import { PRIMARY } from '../../styles/colors';
 import { RoundTextButton, RoundImageWithButton } from '../Components';
 import { loadSounds } from '../helpers/audio';
 
-class SyllableContained extends Component {
+class HasPhoneme extends Component {
   constructor(props) {
     super(props);
 
@@ -29,7 +29,7 @@ class SyllableContained extends Component {
     playAll(this.props.sounds);
   };
 
-  createSyllableButton = (index, crossedOut) => {
+  createPhonemeButton = (index, style) => {
     return (
       <RoundTextButton
         onPress={() => {
@@ -45,6 +45,7 @@ class SyllableContained extends Component {
             marginLeft: 5,
             marginRight: 5
           },
+          style
         ]}
       />
     );
@@ -74,12 +75,12 @@ class SyllableContained extends Component {
             justifyContent: 'center'
           }}
         >
-          {this.createSyllableButton(0, false)}
-          {this.createSyllableButton(1, true)}
+          {this.createPhonemeButton(0)}
+          {this.createPhonemeButton(1)}
         </View>
       </View>
     );
   }
 }
 
-export default loadSounds(SyllableContained);
+export default loadSounds(HasPhoneme);
