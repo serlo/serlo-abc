@@ -10,4 +10,4 @@ export const PRIMARY_STRONG = '#17bcde';
 
 export const GREEN = '#b5ce4d';
 
-export const TRANSPARENT = 'rgba(255,0,0,0)';
+export const TRANSPARENT = 'transparent';

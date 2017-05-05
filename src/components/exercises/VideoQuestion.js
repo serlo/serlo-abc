@@ -133,7 +133,7 @@ class VideoQuestion extends Component {
         <View
           style={{ flex: 4, alignItems: 'center', justifyContent: 'center' }}
         >
-          <Text style={[DEFAULT, { marginBottom: 25 , backgroundColor: TRANSPARENT }]}>
+          <Text style={[DEFAULT, { marginBottom: 25 }]}>
             {this.props.question}
           </Text>
           <View>
