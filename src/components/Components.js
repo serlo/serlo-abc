@@ -6,7 +6,8 @@ import {
   BLACK_TRANSPARENT,
   WHITE,
   WHITE_TRANSPARENT,
-  PRIMARY_WEAK
+  PRIMARY_WEAK,
+  TRANSPARENT
 } from '../styles/colors';
 import { DEFAULT } from '../styles/text';
 
@@ -193,6 +194,7 @@ export class RoundText extends Component {
           style={[
             DEFAULT,
             highlighted ? { color: PRIMARY_WEAK } : {},
+            { backgroundColor: TRANSPARENT },
             textStyle,
             { fontSize }
           ]}

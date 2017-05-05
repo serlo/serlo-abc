@@ -7,7 +7,7 @@ import {
   Image
 } from 'react-native';
 import { addIndex, map } from 'ramda';
-import { PRIMARY, GREEN } from '../../styles/colors';
+import { PRIMARY, GREEN, TRANSPARENT } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 import { RoundTextButton } from '../Components';
 import { Video } from 'expo';

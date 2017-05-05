@@ -73,6 +73,7 @@ exports[`renders without crashing (difficulty level 1) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
@@ -137,6 +138,7 @@ exports[`renders without crashing (difficulty level 1) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
@@ -201,6 +203,7 @@ exports[`renders without crashing (difficulty level 1) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
@@ -289,6 +292,7 @@ exports[`renders without crashing (difficulty level 2) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
@@ -353,6 +357,7 @@ exports[`renders without crashing (difficulty level 2) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
@@ -417,6 +422,7 @@ exports[`renders without crashing (difficulty level 2) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
@@ -491,6 +497,7 @@ exports[`renders without crashing (difficulty level 2) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
@@ -559,6 +566,7 @@ exports[`renders without crashing (difficulty level 2) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
@@ -647,6 +655,7 @@ exports[`renders without crashing (difficulty level 3) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
@@ -711,6 +720,7 @@ exports[`renders without crashing (difficulty level 3) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
@@ -775,6 +785,7 @@ exports[`renders without crashing (difficulty level 3) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
@@ -853,6 +864,7 @@ exports[`renders without crashing (difficulty level 3) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
@@ -921,6 +933,7 @@ exports[`renders without crashing (difficulty level 3) 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
+              "backgroundColor": "transparent",
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
