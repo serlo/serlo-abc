@@ -10,6 +10,8 @@ export const PRIMARY_STRONG = '#17bcde';
 
 export const GREEN = '#b5ce4d';
 
+export const TRANSPARENT = 'transparent';
+
 export const ARTICLES = {
   DER: {
     STRONG: '#0000fe',
