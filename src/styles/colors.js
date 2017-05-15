@@ -10,3 +10,5 @@ export const PRIMARY_STRONG = '#17bcde';
 
 export const RED = '#cf614d';
 export const GREEN = '#b5ce4d';
+
+export const TRANSPARENT = 'transparent';

@@ -12,4 +12,5 @@ import '../src/components/exercises/ShowWord.stories';
 import '../src/components/exercises/Splash.stories';
 import '../src/components/exercises/SyllableTable.stories';
 import '../src/components/exercises/TutorialVideo.stories';
+import '../src/components/exercises/VideoQuestion.stories';
 import '../src/components/helpers/difficulty.stories';

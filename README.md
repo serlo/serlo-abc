@@ -60,11 +60,7 @@ Like `yarn start`, but also attempts to open your app on a connected Android dev
 
 ### `yarn format`
 
-Formats all JavaScript code with [prettier](https://github.com/prettier/prettier). 
-
-### `yarn flow`
-
-Runs the [flow](https://flow.org) static type checker on your JavaScript code. The [flow documentation](https://flow.org/en/docs/editors/) contains guides on how to integrate flow into your editor.
+Formats all JavaScript code with [prettier](https://github.com/prettier/prettier). Will be automatically run as a pre-commit git hook.
 
 ## Writing and Running Tests
 

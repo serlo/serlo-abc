@@ -11,6 +11,6 @@ export const createWithDifficulty = generateDifficulty => C => {
 };
 
 // TODO: fancy logic
-const difficultyGenerator = () => 1/3
+const difficultyGenerator = () => 1 / 3;
 
-export default createWithDifficulty(difficultyGenerator)
+export default createWithDifficulty(difficultyGenerator);
