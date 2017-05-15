@@ -20,8 +20,9 @@
               "component": "LetterRotated",
               "props": {
                 "letters": ["a", "N", "E", "s", "T"],
-                "rotated": 4,
-                "angle": "50deg"
+                "rotated": [3, 4],
+                "angles": ["50deg", "-30deg"],
+                "difficulty": 0.5,
               }
             },
           ]

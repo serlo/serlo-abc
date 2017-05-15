@@ -12,21 +12,20 @@ const DifferFromSymbol = (props) => {
     exerciseSuccess,
   } = props;
 
-  let selectedButtonColor = colors.PRIMARY_STRONG;
-  if (exerciseComplete) {
-    if (exerciseSuccess) {
-      selectedButtonColor = colors.GREEN;
-    } else {
-      selectedButtonColor = colors.RED;
-    }
-  }
-
   const generateButtonStyle = (answer) => {
     const style = { margin: 5 };
-    if (answer === selectedAnswer) {
-      style.backgroundColor = selectedButtonColor;
+    if (answer === selectedAnswer && exerciseComplete) {
+      if (exerciseSuccess) {
+        style.backgroundColor = colors.GREEN;
+      } else {
+        style.backgroundColor = colors.RED;
+      }
     }
     return style;
+  }
+
+  const buttonIsHighlighted = (answer) => {
+    return answer === selectedAnswer && !exerciseComplete;
   }
 
   return (
@@ -49,18 +48,21 @@ const DifferFromSymbol = (props) => {
       >
         <RoundTextButton
           style={generateButtonStyle(0)}
+          highlighted={buttonIsHighlighted(0)}
           text={symbols[0]}
           size={80}
           onPress={() => selectAnswer(0)}
         />
         <RoundTextButton
           style={generateButtonStyle(1)}
+          highlighted={buttonIsHighlighted(1)}
           text={symbols[1]}
           size={80}
           onPress={() => selectAnswer(1)}
         />
         <RoundTextButton
           style={generateButtonStyle(2)}
+          highlighted={buttonIsHighlighted(2)}
           text={symbols[2]}
           size={80}
           onPress={() => selectAnswer(2)}
@@ -77,12 +79,14 @@ const DifferFromSymbol = (props) => {
       >
         <RoundTextButton
           style={generateButtonStyle(3)}
+          highlighted={buttonIsHighlighted(3)}
           text={symbols[3]}
           size={80}
           onPress={() => selectAnswer(3)}
         />
         <RoundTextButton
           style={generateButtonStyle(4)}
+          highlighted={buttonIsHighlighted(4)}
           text={symbols[4]}
           size={80}
           onPress={() => selectAnswer(4)}
