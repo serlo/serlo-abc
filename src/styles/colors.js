@@ -12,17 +12,9 @@ export const GREEN = '#b5ce4d';
 
 export const TRANSPARENT = 'transparent';
 
-export const ARTICLES = {
-  DER: {
-    STRONG: '#0000fe',
-    WEAK: '#6666fe'
-  },
-  DIE: {
-    STRONG: '#fe0000',
-    WEAK: '#fe6666'
-  },
-  DAS: {
-    STRONG: '#01af00',
-    WEAK: '#67af66'
-  }
-}
+export const MASCULINE_STRONG = '#0000fe';
+export const MASCULINE_WEAK = '#6666fe';
+export const FEMININE_STRONG = '#fe0000';
+export const FEMININE_WEAK = '#fe6666';
+export const NEUTER_STRONG = '#01af00';
+export const NEUTER_WEAK = '#67af66';

@@ -3,16 +3,43 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
-import { BLACK_TRANSPARENT, PRIMARY_STRONG , PRIMARY, ARTICLES } from '../../styles/colors';
+import {
+  BLACK_TRANSPARENT,
+  PRIMARY_STRONG,
+  PRIMARY,
+  MASCULINE_STRONG,
+  MASCULINE_WEAK,
+  FEMININE_STRONG,
+  FEMININE_WEAK,
+  NEUTER_STRONG,
+  NEUTER_WEAK
+} from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 import { loadSounds } from '../helpers/audio';
 import { RoundImageWithButton } from '../Components';
 
 const mapIndexed = addIndex(map);
 
+const articles = ['der', 'die', 'das'];
+
+const a = {
+  [articles[0]]: {
+    weak: MASCULINE_WEAK,
+    strong: MASCULINE_STRONG
+  },
+  [articles[1]]: {
+    weak: FEMININE_WEAK,
+    strong: FEMININE_STRONG
+  },
+  [articles[2]]: {
+    weak: NEUTER_WEAK,
+    strong: NEUTER_STRONG
+  }
+};
+
 const styles = {
   letterStyle: {
-    backgroundColor: PRIMARY_STRONG,
+    backgroundColor: PRIMARY_STRONG
   },
   article: {
     marginHorizontal: 10,
@@ -38,8 +65,8 @@ class ChooseArticle extends React.Component {
     super();
 
     this.state = {
-      selectedArticle: ''
-    }
+      selectedArticle: null
+    };
   }
 
   play = () => {
@@ -55,26 +82,18 @@ class ChooseArticle extends React.Component {
     playAll(this.props.sounds);
   };
 
-  selectArticle = key => () => {
-    this.setState(({ selectedArticle }) => {
-      if (selectedArticle === key) {
-        return { selectedArticle: '' };
-      }
-
-      return { selectedArticle: key };
-    });
-  }
+  selectArticle = article => () => {
+    this.setState(({ selectedArticle }) => ({
+      selectedArticle: selectedArticle === article ? null : article
+    }));
+  };
 
   render() {
     const letters = mapIndexed(
       (char, key) => (
         <View
           key={key}
-          style={[
-            { padding: 5 },
-            styles.letterStyle,
-            styles.shared
-          ]}
+          style={[{ padding: 5 }, styles.letterStyle, styles.shared]}
         >
           <Text style={DEFAULT}>
             {char}
@@ -84,22 +103,26 @@ class ChooseArticle extends React.Component {
       this.props.text
     );
 
-    const articles = mapIndexed(
+    const articleButtons = mapIndexed(
       (article, key) => (
         <TouchableOpacity
           key={key}
           style={[
             styles.shared,
             styles.article,
-            {backgroundColor: this.state.selectedArticle === article ? ARTICLES[toUpper(article)].STRONG : ARTICLES[toUpper(article)].WEAK}
+            {
+              backgroundColor: this.state.selectedArticle === article
+                ? a[article].strong
+                : a[article].weak
+            }
           ]}
           onPress={this.selectArticle(article)}
         >
           <Text style={DEFAULT}>{article}</Text>
         </TouchableOpacity>
       ),
-      ['der', 'die', 'das']
-    )
+      articles
+    );
 
     return (
       <View
@@ -121,7 +144,7 @@ class ChooseArticle extends React.Component {
           {letters}
         </View>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-          {articles}
+          {articleButtons}
         </View>
       </View>
     );
