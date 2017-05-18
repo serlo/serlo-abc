@@ -4,65 +4,64 @@ import { RoundTextButton } from '../components/Components';
 import NavigationMenu from '../components/NavigationMenu';
 import { WHITE, PRIMARY_STRONG, GREEN, RED } from '../styles/colors';
 
-
 const styles = StyleSheet.create({
   hoveringButton: {
-    position: 'absolute',
+    position: 'absolute'
   },
   top: {
-    top: 30,
+    top: 30
   },
   bottom: {
-    bottom: 10,
+    bottom: 10
   },
   left: {
-    left: 10,
+    left: 10
   },
   right: {
-    right: 10,
+    right: 10
   },
   sectionText: {
     fontSize: 18,
-    fontWeight: "600",
-    color: WHITE,
+    fontWeight: '600',
+    color: WHITE
   },
   chapterText: {
     fontSize: 16,
-    fontWeight: "500",
+    fontWeight: '500',
     color: WHITE,
-    marginBottom: 10,
+    marginBottom: 10
   },
   menuButton: {
     margin: 10,
-    marginTop: 0,
+    marginTop: 0
   }
 });
-
 
 class ExerciseLayout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       nextExercise: '/test',
-      navigationMenuVisible: false,
+      navigationMenuVisible: false
     };
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.children !== nextProps.children) {
       this.setState({
-        navigationMenuVisible: false,
+        navigationMenuVisible: false
       });
     }
   }
 
   toggleNavigationMenu = () => {
     this.setState({
-      navigationMenuVisible: !this.state.navigationMenuVisible,
+      navigationMenuVisible: !this.state.navigationMenuVisible
     });
-  }
+  };
 
   submitExercise = () => {
+    console.log('submitExercise');
     if (this.props.currentAnswer === null) {
       Alert.alert('Please select an answer first');
     } else {
@@ -71,14 +70,14 @@ class ExerciseLayout extends React.Component {
         this.props.nextExercise();
       }, 1000);
     }
-  }
+  };
 
-  render () {
+  render() {
     const {
       course,
       changeExercise,
       nextExercise,
-      currentExercise,
+      currentExercise
     } = this.props;
     return (
       <View style={{ flex: 1 }}>
@@ -120,7 +119,7 @@ class ExerciseLayout extends React.Component {
                       currentExercise.exercise === eIndex
                     ) {
                       menuButton.push({ backgroundColor: PRIMARY_STRONG });
-                      onPress = () => {}
+                      onPress = () => {};
                     }
                     return (
                       <RoundTextButton
@@ -130,7 +129,7 @@ class ExerciseLayout extends React.Component {
                         key={`s_${sIndex}_c_${cIndex}_e_${eIndex}`}
                         onPress={onPress}
                       />
-                    );;
+                    );
                   })}
                 </View>
               ))}
