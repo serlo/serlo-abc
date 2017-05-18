@@ -51,7 +51,12 @@ export default class SvgExample extends Component {
         // }
         const svgCircleArray = this.state.svgCircleArray;
         const circle = (
-          <Circle cx={gestureState.x0} cy="150" r="15" fill="pink" />
+          <Circle
+            cx={gestureState.x0}
+            cy={gestureState.y0}
+            r="15"
+            fill="pink"
+          />
         );
         svgCircleArray.push(circle);
         this.setState({ svgCircleArray });

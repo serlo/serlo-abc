@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
 export default class DragAndDropExample extends React.Component {
   constructor() {
     super();
-    this.itemNo = 5;
+    this.itemNo = 4;
     this.panResponderArr = [];
     this.initialPositionArr = [];
 
@@ -182,7 +182,7 @@ export default class DragAndDropExample extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        {this.renderDots(6)}
+        {this.renderDots(this.itemNo)}
         {this.renderDraggable(this.itemNo)}
       </View>
     );
