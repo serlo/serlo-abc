@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   }
 });
 
-const sentenceArray = ['doing', 'like', 'I', 'exercises'];
+const sentenceArray = ['doing', 'like', 'I', 'exercises', 'and', 'Mary'];
 
 export default class DragAndDropExample extends React.Component {
   constructor() {
@@ -76,7 +76,9 @@ export default class DragAndDropExample extends React.Component {
     this.state = {
       panArr,
       dotsLayout: [],
-      recsLayout: []
+      recsLayout: [],
+      dotsWidthArray: [],
+      dotsFlagArray: []
     };
   }
 
@@ -109,8 +111,9 @@ export default class DragAndDropExample extends React.Component {
             x: this.initialPositionArr[i].x,
             y: this.initialPositionArr[i].y
           };
-          for (let i = 0; i < keys.length; i++) {
-            const key = keys[i];
+          let dotIndex = -1;
+          for (let m = 0; m < keys.length; m++) {
+            const key = keys[m];
             const zone = this.state.dotsLayout[key];
             if (
               zone.x < gesture.moveX &&
@@ -118,47 +121,106 @@ export default class DragAndDropExample extends React.Component {
               zone.y < gesture.moveY &&
               gesture.moveY < zone.y + zone.height
             ) {
-              springTo.x =
-                zone.x + zone.width / 2 - this.state.recsLayout[i].width / 2;
-              springTo.y =
-                zone.y + zone.height / 2 - this.state.recsLayout[i].height / 2;
+              dotIndex = m;
+              this.state.dotsFlagArray[dotIndex] = i;
+              // springTo.x = zone.x + zone.width / 2 - this.state.recsLayout[i].width / 2;
+              // springTo.y = zone.y + zone.height / 2 - this.state.recsLayout[i].height / 2;
               break;
             }
           }
-          let overlappedIndex = -1;
-          for (let j = 0; j < this.state.panArr.length; j++) {
-            if (
-              parseInt(springTo.x, 10) ===
-                parseInt(this.state.panArr[j].x._value, 10) &&
-              parseInt(springTo.y, 10) ===
-                parseInt(this.state.panArr[j].y._value, 10)
-            ) {
-              console.log(j);
-              // springTo.x = this.initialPositionArr[i].x;
-              // springTo.y = this.initialPositionArr[i].y;
-              overlappedIndex = j;
-            }
-          }
-          Animated.spring(this.state.panArr[i], {
-            toValue: { ...springTo }
-          }).start();
-          if (overlappedIndex !== -1) {
-            Animated.spring(this.state.panArr[overlappedIndex], {
-              toValue: {
-                x: this.initialPositionArr[overlappedIndex].x,
-                y: this.initialPositionArr[overlappedIndex].y
+          if (dotIndex !== -1) {
+            const dotsWidthArray = this.state.dotsWidthArray;
+            dotsWidthArray[dotIndex] = this.state.recsLayout[i].width;
+            this.setState({ dotsWidthArray });
+            setTimeout(() => {
+              for (let n = 0; n < this.state.dotsFlagArray.length; n++) {
+                if (this.state.dotsFlagArray[n] !== -1) {
+                  const keys = Object.keys(this.state.dotsLayout);
+                  const key = keys[n];
+                  const zone = this.state.dotsLayout[key];
+                  const rectangleIndex = this.state.dotsFlagArray[n];
+                  const moveTo = {
+                    x: zone.x +
+                      zone.width / 2 -
+                      this.state.recsLayout[rectangleIndex].width / 2,
+                    y: zone.y +
+                      zone.height / 2 -
+                      this.state.recsLayout[rectangleIndex].height / 2
+                  };
+                  Animated.spring(this.state.panArr[rectangleIndex], {
+                    toValue: { ...moveTo }
+                  }).start();
+                }
               }
+            }, 5);
+          } else {
+            Animated.spring(this.state.panArr[i], {
+              toValue: { ...springTo }
             }).start();
           }
+
+          // () => {
+          //   const keys = Object.keys(this.state.dotsLayout);
+          //   const key = keys[dotIndex];
+          //   const zone = this.state.dotsLayout[key];
+          //   springTo.x = zone.x + zone.width / 2 - this.state.recsLayout[i].width / 2;
+          //   springTo.y = zone.y + zone.height / 2 - this.state.recsLayout[i].height / 2;
+          //
+          // }
+          // setTimeout(() => {
+          //   for (let m = 0; m < keys.length; m++) {
+          //     const key = keys[m];
+          //     const zone = this.state.dotsLayout[key];
+          //     if (
+          //       zone.x < gesture.moveX &&
+          //       gesture.moveX < zone.x + zone.width &&
+          //       zone.y < gesture.moveY &&
+          //       gesture.moveY < zone.y + zone.height
+          //     ) {
+          //       springTo.x = zone.x + zone.width / 2 - this.state.recsLayout[i].width / 2;
+          //       springTo.y = zone.y + zone.height / 2 - this.state.recsLayout[i].height / 2;
+          //       break;
+          //     }
+          //   }
+          //   Animated.spring(this.state.panArr[i], {
+          //     toValue: { ...springTo }
+          //   }).start();
+          // }, 500);
+
+          // let overlappedIndex = -1;
+          // for (let n = 0; n < this.state.panArr.length; n++) {
+          //   if (
+          //     parseInt(springTo.x, 10) === parseInt(this.state.panArr[n].x._value, 10) &&
+          //     parseInt(springTo.y, 10) === parseInt(this.state.panArr[n].y._value, 10)
+          //   ) { overlappedIndex = n; }
+          // }
+
+          // if (overlappedIndex !== -1) {
+          //   Animated.spring(this.state.panArr[overlappedIndex], {
+          //     toValue: {
+          //       x: this.initialPositionArr[overlappedIndex].x,
+          //       y: this.initialPositionArr[overlappedIndex].y
+          //     }
+          //   }).start();
+          // }
           console.log(this.state.panArr);
         }
       });
       this.panResponderArr.push(panResponder);
     }
+
+    // initialize dots width array and flag array
+    const dotsWidthArray = this.state.dotsWidthArray;
+    const dotsFlagArray = this.state.dotsFlagArray;
+    for (let i = 0; i < sentenceArray.length; i++) {
+      dotsWidthArray.push('25%');
+      dotsFlagArray.push(-1);
+    }
+    this.setState({ dotsWidthArray, dotsFlagArray });
   };
 
   updateDotLayout = (event, dotNumber) => {
-    console.log('updateDotLayout', event.nativeEvent);
+    console.log('update dot layout');
     const dotsLayout = this.state.dotsLayout;
     dotsLayout[dotNumber] = event.nativeEvent.layout;
     this.setState({ dotsLayout });
@@ -182,7 +244,7 @@ export default class DragAndDropExample extends React.Component {
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center',
-            minWidth: '25%'
+            minWidth: this.state.dotsWidthArray[i]
           }}
         >
           <View style={styles.dot} />
