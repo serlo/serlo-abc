@@ -1,6 +1,6 @@
 import React from 'react';
-import { storiesOf } from '@kadira/react-native-storybook';
+import { storiesOf } from '@storybook/react-native';
 
 import Splash from './Splash';
 
-storiesOf('components/Splash', module).add('default', () => <Splash />);
+storiesOf('exercises/Splash', module).add('default', () => <Splash />);

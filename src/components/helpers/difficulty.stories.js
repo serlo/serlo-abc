@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { storiesOf } from '@kadira/react-native-storybook';
+import { storiesOf } from '@storybook/react-native';
 
 import withDifficulty from './difficulty';
 
