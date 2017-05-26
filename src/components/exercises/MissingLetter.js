@@ -6,24 +6,11 @@ import speakerImage from '../../assets/images/speaker.png';
 
 import { WHITE, PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { loadSounds } from '../helpers/audio';
+import { loadSounds, playAll } from '../helpers/audio';
 import { RoundImageWithButton, TextPicker } from '../Components';
 const mapIndexed = addIndex(map);
 
 const MissingLetter = ({ image, sounds, text, missing, options }) => {
-  const play = () => {
-    const playAll = ([sound, ...rest]) => {
-      sound.playAsync();
-      sound.setPlaybackFinishedCallback(() => {
-        sound.setPositionAsync(0);
-        if (rest.length > 0) {
-          setTimeout(() => playAll(rest), 1000);
-        }
-      });
-    };
-    playAll(sounds);
-  };
-
   const letters = mapIndexed((char, key) => {
     return key === missing
       ? <View key={key}>
@@ -50,7 +37,7 @@ const MissingLetter = ({ image, sounds, text, missing, options }) => {
         imageSize={200}
         icon={speakerImage}
         buttonSize={40}
-        onPress={play}
+        onPress={() => playAll(sounds)}
       />
       <View style={{ flexDirection: 'row' }}>
         {letters}
