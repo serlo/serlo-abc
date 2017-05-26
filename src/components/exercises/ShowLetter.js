@@ -5,7 +5,7 @@ import repeatIcon from '../../assets/images/repeat.png';
 import speakerImage from '../../assets/images/speaker.png';
 import { WHITE, PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { loadSounds } from '../helpers/audio';
+import { loadSounds, playAll } from '../helpers/audio';
 import { RoundButton, IconWithBackground } from '../Components';
 
 const styles = {
@@ -26,23 +26,11 @@ const styles = {
   }
 };
 
-const UnwrappedShowLetter = ({
-  letter,
-  sounds: [letterSound, repeatSound],
-  isRepeat
-}) => {
+const UnwrappedShowLetter = ({ letter, sounds, isRepeat }) => {
   const play = () => {
     if (isRepeat) this.icon.unfocus();
-    letterSound.playAsync();
-    letterSound.setPlaybackFinishedCallback(() => {
-      letterSound.setPositionAsync(0);
-      if (isRepeat) {
-        this.icon.focus();
-        repeatSound.playAsync();
-        repeatSound.setPlaybackFinishedCallback(() => {
-          repeatSound.setPositionAsync(0);
-        });
-      }
+    playAll(sounds).then(() => {
+      if (isRepeat) this.icon.focus();
     });
   };
 
