@@ -2,6 +2,34 @@ import { Audio } from 'expo';
 import { forEach, map } from 'ramda';
 import React, { Component } from 'react';
 
+export const play = sound =>
+  new Promise(resolve => {
+    sound.playAsync();
+
+    sound.setPlaybackFinishedCallback(() => {
+      // Rewind the audio file so that it can be played again
+      sound.setPositionAsync(0);
+      resolve();
+    });
+  });
+
+export const playAll = (sounds, delay = 1000) =>
+  new Promise(resolve => {
+    const playAllRecursive = ([sound, ...rest]) => {
+      play(sound).then(() => {
+        if (rest.length === 0) {
+          return resolve();
+        }
+
+        setTimeout(() => {
+          playAllRecursive(rest, delay);
+        }, delay);
+      });
+    };
+
+    playAllRecursive(sounds);
+  });
+
 export const createLoadSounds = Audio => C => {
   Audio.setIsEnabledAsync(true);
 
