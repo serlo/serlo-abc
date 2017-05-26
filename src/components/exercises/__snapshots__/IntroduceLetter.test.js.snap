@@ -26,11 +26,11 @@ exports[`renders without crashing 1`] = `
           "alignItems": "center",
           "backgroundColor": "rgba(255, 255, 255, 0.2)",
           "borderRadius": 9999,
-          "height": 135.41666666666669,
+          "height": 270.83333333333337,
           "justifyContent": "center",
-          "marginLeft": 36.458333333333336,
+          "marginLeft": 72.91666666666667,
           "padding": 5,
-          "width": 135.41666666666669,
+          "width": 270.83333333333337,
         }
       }
     >
@@ -43,7 +43,7 @@ exports[`renders without crashing 1`] = `
             "backgroundColor": "transparent",
             "color": "#ffffff",
             "fontFamily": "norddruck",
-            "fontSize": 52.083333333333336,
+            "fontSize": 104.16666666666667,
             "textAlign": "center",
           }
         }
@@ -56,7 +56,7 @@ exports[`renders without crashing 1`] = `
         Object {
           "alignItems": "center",
           "flexDirection": "row",
-          "marginTop": -28.125000000000004,
+          "marginTop": -56.25000000000001,
         }
       }
     >
@@ -66,7 +66,7 @@ exports[`renders without crashing 1`] = `
             Object {
               "backgroundColor": "rgba(255, 255, 255, 0.2)",
               "borderRadius": 9999999,
-              "margin": 13.541666666666668,
+              "margin": 27.083333333333336,
             },
             Object {
               "margin": 0,
@@ -79,10 +79,10 @@ exports[`renders without crashing 1`] = `
           source={1}
           style={
             Object {
-              "borderRadius": 67.70833333333334,
-              "height": 135.41666666666669,
-              "margin": 13.541666666666668,
-              "width": 135.41666666666669,
+              "borderRadius": 135.41666666666669,
+              "height": 270.83333333333337,
+              "margin": 27.083333333333336,
+              "width": 270.83333333333337,
             }
           }
         />
@@ -93,7 +93,7 @@ exports[`renders without crashing 1`] = `
             Object {
               "backgroundColor": "rgba(255, 255, 255, 0.2)",
               "borderRadius": 9999999,
-              "margin": 11.458333333333334,
+              "margin": 22.916666666666668,
             },
             Object {
               "margin": 0,
@@ -106,10 +106,10 @@ exports[`renders without crashing 1`] = `
           source={1}
           style={
             Object {
-              "borderRadius": 57.29166666666667,
-              "height": 114.58333333333334,
-              "margin": 11.458333333333334,
-              "width": 114.58333333333334,
+              "borderRadius": 114.58333333333334,
+              "height": 229.16666666666669,
+              "margin": 22.916666666666668,
+              "width": 229.16666666666669,
             }
           }
         />
@@ -121,11 +121,11 @@ exports[`renders without crashing 1`] = `
           Object {
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
             "borderRadius": 9999999,
-            "margin": 13.541666666666668,
+            "margin": 27.083333333333336,
           },
           Object {
-            "marginLeft": 52.083333333333336,
-            "marginTop": -26.041666666666668,
+            "marginLeft": 104.16666666666667,
+            "marginTop": -52.083333333333336,
           },
         ]
       }
@@ -135,10 +135,10 @@ exports[`renders without crashing 1`] = `
         source={1}
         style={
           Object {
-            "borderRadius": 67.70833333333334,
-            "height": 135.41666666666669,
-            "margin": 13.541666666666668,
-            "width": 135.41666666666669,
+            "borderRadius": 135.41666666666669,
+            "height": 270.83333333333337,
+            "margin": 27.083333333333336,
+            "width": 270.83333333333337,
           }
         }
       />
