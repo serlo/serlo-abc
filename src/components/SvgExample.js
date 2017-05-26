@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, PanResponder } from 'react-native';
-import Svg, { Circle, Path } from 'react-native-svg';
+import Svg, { Circle, Path, G } from 'react-native-svg';
 
 export default class SvgExample extends Component {
   constructor() {
@@ -52,23 +52,18 @@ export default class SvgExample extends Component {
     this._panResponder = PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onPanResponderGrant: (evt, gestureState) => {
-        console.log('grant');
         const points = this.state.points;
         points.push([]);
         points[points.length - 1].push([gestureState.x0, gestureState.y0]);
         this.setState({ points });
       },
       onPanResponderMove: (evt, gestureState) => {
-        console.log('move');
         const points = this.state.points;
         points[points.length - 1].push([gestureState.moveX, gestureState.moveY]);
         this.setState({ points });
-        console.log(points[points.length - 1].length);
       },
       onPanResponderRelease: (evt, gestureState) => {
-        console.log('release');
         const points = this.state.points;
-        console.log(this.checkAnswer(this.state.points));
       }
     });
   }
@@ -128,8 +123,6 @@ export default class SvgExample extends Component {
 
     targetResult = targetPassed.reduce((a, b) => a + b, 0) / targetPassed.length > this.passThreshold;
     pointResult = pointPassed.reduce((a, b) => a + b, 0) / pointPassed.length > this.passThreshold;
-    console.log(targetPassed.reduce((a, b) => a + b, 0) / targetPassed.length);
-    console.log(pointPassed.reduce((a, b) => a + b, 0) / pointPassed.length);
     return (targetResult && pointResult);
   }
 
@@ -150,32 +143,27 @@ export default class SvgExample extends Component {
             />
           ))}
           {this.state.points.map((path, index) => (
-            <Circle
-              key={`first_circle_${index}`}
-              cx={path[0][0]}
-              cy={path[0][1]}
-              r={this.strokeWidth / 2}
-              fill="black"
-            />
-          ))}
-          {this.state.points.map((path, index) => (
-            <Path
-              key={`path_${index}`}
-              d={this.generatePath(path)}
-              fill="none"
-              stroke="black"
-              strokeLinejoin="round"
-              strokeWidth={this.strokeWidth}
-            />
-          ))}
-          {this.state.points.map((path, index) => (
-            <Circle
-              key={`second_circle_${index}`}
-              cx={path[path.length - 1][0]}
-              cy={path[path.length - 1][1]}
-              r={this.strokeWidth / 2}
-              fill="black"
-            />
+            <G key={`path_${index}`}>
+              <Circle
+                cx={path[0][0]}
+                cy={path[0][1]}
+                r={this.strokeWidth / 2}
+                fill="black"
+              />
+              <Path
+                d={this.generatePath(path)}
+                fill="none"
+                stroke="black"
+                strokeLinejoin="round"
+                strokeWidth={this.strokeWidth}
+              />
+              <Circle
+                cx={path[path.length - 1][0]}
+                cy={path[path.length - 1][1]}
+                r={this.strokeWidth / 2}
+                fill="black"
+              />
+            </G>
           ))}
         </Svg>
       </View>
