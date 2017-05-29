@@ -61,7 +61,6 @@ class ExerciseLayout extends React.Component {
   };
 
   submitExercise = () => {
-    console.log('submitExercise');
     if (this.props.currentAnswer === null) {
       Alert.alert('Please select an answer first');
     } else {

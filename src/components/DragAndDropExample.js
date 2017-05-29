@@ -13,8 +13,6 @@ const CIRCLE_RADIUS = 36;
 const CIRCLE_DIAMETER = 72;
 const DOT_RADIUS = 5;
 const Window = Dimensions.get('window');
-console.log('window object', Window);
-console.log('minWidth', Window.width / 4);
 const styles = StyleSheet.create({
   text: {
     marginTop: 25,
@@ -88,7 +86,6 @@ export default class DragAndDropExample extends React.Component {
       const panResponder = PanResponder.create({
         onStartShouldSetPanResponder: () => true,
         onPanResponderGrant: (e, gestureState) => {
-          console.log('grant', gestureState);
           this.state.panArr[i].setOffset({
             x: this.state.panArr[i].x._value,
             y: this.state.panArr[i].y._value
@@ -103,8 +100,6 @@ export default class DragAndDropExample extends React.Component {
           }
         ]),
         onPanResponderRelease: (e, gesture) => {
-          console.log(this.state.pan, gesture);
-          console.log('recsLayout', this.state.recsLayout[i]);
           this.state.panArr[i].flattenOffset();
           const keys = Object.keys(this.state.dotsLayout);
           const springTo = {
@@ -203,7 +198,6 @@ export default class DragAndDropExample extends React.Component {
           //     }
           //   }).start();
           // }
-          console.log(this.state.panArr);
         }
       });
       this.panResponderArr.push(panResponder);
@@ -220,14 +214,12 @@ export default class DragAndDropExample extends React.Component {
   };
 
   updateDotLayout = (event, dotNumber) => {
-    console.log('update dot layout');
     const dotsLayout = this.state.dotsLayout;
     dotsLayout[dotNumber] = event.nativeEvent.layout;
     this.setState({ dotsLayout });
   };
 
   updateRectangleLayout = (event, recIndex) => {
-    console.log('updateRecLayout', event.nativeEvent);
     const recsLayout = this.state.recsLayout;
     recsLayout[recIndex] = event.nativeEvent.layout;
     this.setState({ recsLayout });
