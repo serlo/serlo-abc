@@ -2,15 +2,12 @@ import React from 'react';
 import {
   StyleSheet,
   View,
-  Text,
   PanResponder,
   Animated,
-  Easing,
   Dimensions
 } from 'react-native';
 import { RoundText } from './Components';
 
-const CIRCLE_RADIUS = 36;
 const DOT_RADIUS = 5;
 const Window = Dimensions.get('window');
 
@@ -42,24 +39,27 @@ const sentence =
 export default class DragAndDropExample extends React.Component {
   constructor(props) {
     super(props);
-    // TODO: take sentence from props laterm, reinit these values on prop change
-    // initialize pan and initialPosition for all words (items)
-    const wordArray = sentence.split(' ');
+    // TODO: take sentence from props later, reinit these values on prop change
+    // NOTE: there is a number of arrays, every item (word) represented there
+    // by index (so all arrays are connected by index), maybe it won't be
+    // a bad idea to create one array of objects with parameters instead
+
+    // initialize arrays for all words (items)
+    this.wordCount = sentence.split(' ').length;
+    this.initialPositions = Array(this.wordCount);
+    this.panResponders = Array(this.wordCount);
+    this.zoneLayouts = Array(this.wordCount);
+    this.itemLayouts = Array(this.wordCount);
     const panArray = [];
-    this.initialPositions = [];
-    this.panResponders = [];
-    this.zoneLayouts = [];
-    this.itemLayouts = [];
-    for (let i = 0; i < wordArray.length; i++) {
+    const itemLinkedZoneArray = [];
+    for (let i = 0; i < this.wordCount; i++) {
       panArray.push(null);
-      this.initialPositions.push(null);
-      this.panResponders.push(null);
-      this.zoneLayouts.push(null);
-      this.itemLayouts.push(null);
+      itemLinkedZoneArray.push(-1);
     }
 
     this.state = {
-      pan: panArray
+      pan: panArray,
+      itemLinkedZone: itemLinkedZoneArray
     };
   }
 
@@ -82,24 +82,45 @@ export default class DragAndDropExample extends React.Component {
       ]),
       onPanResponderRelease: (e, gesture) => {
         this.state.pan[index].flattenOffset();
-        const keys = Object.keys(this.zoneLayouts);
         const springTo = {
           x: this.initialPositions[index].x,
           y: this.initialPositions[index].y
         };
-        for (let i = 0; i < keys.length; i++) {
-          const key = keys[i];
-          const zone = this.zoneLayouts[key];
+        const itemLinkedZone = this.state.itemLinkedZone;
+        let linkedZoneFound = false;
+        for (let i = 0; i < this.zoneLayouts.length; i++) {
+          const zone = this.zoneLayouts[i];
           if (
             zone.x < gesture.moveX &&
             gesture.moveX < zone.x + zone.width &&
             zone.y < gesture.moveY &&
             gesture.moveY < zone.y + zone.height
           ) {
-            springTo.x = zone.x + zone.width / 2 - CIRCLE_RADIUS;
-            springTo.y = zone.y + zone.height / 2 - CIRCLE_RADIUS;
+            springTo.x =
+              zone.x + zone.width / 2 - this.itemLayouts[index].width / 2;
+            springTo.y =
+              zone.y + zone.height / 2 - this.itemLayouts[index].height / 2;
+            linkedZoneFound = true;
+            secondItemInZone = this.state.itemLinkedZone.indexOf(i);
+            if (secondItemInZone >= 0) {
+              itemLinkedZone[secondItemInZone] = itemLinkedZone[index];
+              if (itemLinkedZone[index] === -1) {
+                Animated.spring(this.state.pan[secondItemInZone], {
+                  toValue: {
+                    x: this.initialPositions[secondItemInZone].x,
+                    y: this.initialPositions[secondItemInZone].y
+                  }
+                }).start();
+              }
+            }
+            itemLinkedZone[index] = i;
+            this.setState({ itemLinkedZone });
             break;
           }
+        }
+        if (!linkedZoneFound) {
+          itemLinkedZone[index] = -1;
+          this.setState({ itemLinkedZone });
         }
         Animated.spring(this.state.pan[index], {
           toValue: { ...springTo }
@@ -109,12 +130,24 @@ export default class DragAndDropExample extends React.Component {
   };
 
   updateZoneLayout = (event, index) => {
-    this.zoneLayouts[index] = event.nativeEvent.layout;
+    const layout = event.nativeEvent.layout;
+    this.zoneLayouts[index] = layout;
+    const itemIndex = this.state.itemLinkedZone.indexOf(index);
+    if (itemIndex >= 0) {
+      const springTo = {
+        x: layout.x + layout.width / 2 - this.itemLayouts[itemIndex].width / 2,
+        y: layout.y + layout.height / 2 - this.itemLayouts[itemIndex].height / 2
+      };
+      Animated.spring(this.state.pan[itemIndex], {
+        toValue: { ...springTo }
+      }).start();
+    }
   };
 
   renderZones = n => {
     const zones = [];
     for (let i = 0; i < n; i++) {
+      const itemIndex = this.state.itemLinkedZone.indexOf(i);
       zones.push(
         <View
           key={`zone_${i}`}
@@ -122,8 +155,8 @@ export default class DragAndDropExample extends React.Component {
           style={{
             justifyContent: 'center',
             alignItems: 'center',
-            width: 50,
-            height: 60
+            width: itemIndex >= 0 ? this.itemLayouts[itemIndex].width : 50,
+            height: 70
           }}
         >
           <View style={styles.dot} />
@@ -217,10 +250,9 @@ export default class DragAndDropExample extends React.Component {
   };
 
   render() {
-    const wordCount = sentence.split(' ').length;
     return (
       <View style={{ flex: 1, backgroundColor: 'blue' }}>
-        {this.renderZones(wordCount)}
+        {this.renderZones(this.wordCount)}
         {this.renderDraggable(sentence)}
       </View>
     );
