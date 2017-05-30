@@ -59,7 +59,8 @@ export default class DragAndDropExample extends React.Component {
 
     this.state = {
       pan: panArray,
-      itemLinkedZone: itemLinkedZoneArray
+      itemLinkedZone: itemLinkedZoneArray,
+      movingItem: -1
     };
   }
 
@@ -67,6 +68,7 @@ export default class DragAndDropExample extends React.Component {
     this.panResponders[index] = PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onPanResponderGrant: (e, gestureState) => {
+        this.setState({ movingItem: index });
         this.state.pan[index].setOffset({
           x: this.state.pan[index].x._value,
           y: this.state.pan[index].y._value
@@ -125,6 +127,7 @@ export default class DragAndDropExample extends React.Component {
         Animated.spring(this.state.pan[index], {
           toValue: { ...springTo }
         }).start();
+        this.setState({ movingItem: -1 });
       }
     });
   };
@@ -186,7 +189,7 @@ export default class DragAndDropExample extends React.Component {
     this.setState({ pan: this.state.pan });
   };
 
-  renderDraggable = sentence => {
+  renderItems = sentence => {
     // the idea is to place objects first on the screen using html (flex grid
     // here, for example), and only then make it interactable
     // and initialize the coordinates
@@ -197,7 +200,8 @@ export default class DragAndDropExample extends React.Component {
     );
 
     // if all items are initialized -> move container to top
-    let containerStyle = { position: 'absolute' };
+    // (to use as a relative object for items)
+    let containerStyle = { position: 'absolute', top: 0, left: 0 };
     if (!allItemsInitialized) {
       containerStyle = {
         ...containerStyle,
@@ -245,6 +249,22 @@ export default class DragAndDropExample extends React.Component {
             />
           </Animated.View>
         ))}
+
+        {/*
+          A bit of a hack here to keep moving item on top of the others (we
+          basically render in one more time after all other items),
+          dynamically changing zIndex of the items didn't work,
+          will try to check what else can be done as a better solution
+        */}
+        {this.state.movingItem !== -1
+          ? <Animated.View style={itemStyle[this.state.movingItem]}>
+              <RoundText
+                text={wordArray[this.state.movingItem]}
+                textStyle={textStyle}
+                style={styles.textContainer}
+              />
+            </Animated.View>
+          : null}
       </View>
     );
   };
@@ -253,7 +273,7 @@ export default class DragAndDropExample extends React.Component {
     return (
       <View style={{ flex: 1, backgroundColor: 'blue' }}>
         {this.renderZones(this.wordCount)}
-        {this.renderDraggable(sentence)}
+        {this.renderItems(sentence)}
       </View>
     );
   }
