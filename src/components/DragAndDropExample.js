@@ -8,71 +8,88 @@ import {
   Easing,
   Dimensions
 } from 'react-native';
+import { RoundText } from './Components';
 
 const CIRCLE_RADIUS = 36;
 const DOT_RADIUS = 5;
 const Window = Dimensions.get('window');
+
 const styles = StyleSheet.create({
-  text: {
-    marginTop: 25,
-    marginLeft: 5,
-    marginRight: 5,
-    textAlign: 'center',
-    color: '#fff'
+  textContainer: {
+    backgroundColor: '#1abc9c',
+    margin: 5,
+    borderWidth: 1
   },
   dot: {
     backgroundColor: 'white',
     width: DOT_RADIUS * 2,
     height: DOT_RADIUS * 2,
     borderRadius: DOT_RADIUS
-  },
-  circle: {
-    backgroundColor: '#1abc9c',
-    width: CIRCLE_RADIUS * 2,
-    height: CIRCLE_RADIUS * 2,
-    borderRadius: CIRCLE_RADIUS
   }
 });
 
-const sentence = 'Lorem ipsum dolor sit amet';
+// NOTE: RoundText doesn't work well with StyleSheet (calling path on props)
+const textStyle = {
+  margin: 5,
+  textAlign: 'center',
+  color: '#fff',
+  fontSize: 20
+};
+
+const sentence =
+  'conveying a statement, question, exclamation, or command, and consisting of a main clause';
 
 export default class DragAndDropExample extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    // TODO: take sentence from props laterm, reinit these values on prop change
+    // initialize pan and initialPosition for all words (items)
+    const wordArray = sentence.split(' ');
+    const panArray = [];
+    this.initialPositions = [];
+    this.panResponders = [];
+    this.zoneLayouts = [];
+    this.itemLayouts = [];
+    for (let i = 0; i < wordArray.length; i++) {
+      panArray.push(null);
+      this.initialPositions.push(null);
+      this.panResponders.push(null);
+      this.zoneLayouts.push(null);
+      this.itemLayouts.push(null);
+    }
+
     this.state = {
-      pan: null //new Animated.ValueXY(this.initialPosition),
+      pan: panArray
     };
-    this.dotsLayout = [];
   }
 
   initPanResponder = index => {
-    this.panResponder = PanResponder.create({
+    this.panResponders[index] = PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onPanResponderGrant: (e, gestureState) => {
-        this.state.pan.setOffset({
-          x: this.state.pan.x._value,
-          y: this.state.pan.y._value
+        this.state.pan[index].setOffset({
+          x: this.state.pan[index].x._value,
+          y: this.state.pan[index].y._value
         });
-        this.state.pan.setValue({ x: 0, y: 0 });
+        this.state.pan[index].setValue({ x: 0, y: 0 });
       },
       onPanResponderMove: Animated.event([
         null,
         {
-          dx: this.state.pan.x,
-          dy: this.state.pan.y
+          dx: this.state.pan[index].x,
+          dy: this.state.pan[index].y
         }
       ]),
       onPanResponderRelease: (e, gesture) => {
-        console.log(this.state.pan, gesture);
-        this.state.pan.flattenOffset();
-        const keys = Object.keys(this.dotsLayout);
+        this.state.pan[index].flattenOffset();
+        const keys = Object.keys(this.zoneLayouts);
         const springTo = {
-          x: this.initialPosition.x,
-          y: this.initialPosition.y
+          x: this.initialPositions[index].x,
+          y: this.initialPositions[index].y
         };
         for (let i = 0; i < keys.length; i++) {
           const key = keys[i];
-          const zone = this.dotsLayout[key];
+          const zone = this.zoneLayouts[key];
           if (
             zone.x < gesture.moveX &&
             gesture.moveX < zone.x + zone.width &&
@@ -84,29 +101,29 @@ export default class DragAndDropExample extends React.Component {
             break;
           }
         }
-        Animated.spring(this.state.pan, { toValue: { ...springTo } }).start();
+        Animated.spring(this.state.pan[index], {
+          toValue: { ...springTo }
+        }).start();
       }
     });
   };
 
-  updateDotLayout = (event, dotNumber) => {
-    const dotsLayout = this.dotsLayout;
-    dotsLayout[dotNumber] = event.nativeEvent.layout;
-    this.setState({ dotsLayout });
+  updateZoneLayout = (event, index) => {
+    this.zoneLayouts[index] = event.nativeEvent.layout;
   };
 
-  renderDots = n => {
-    const dots = [];
+  renderZones = n => {
+    const zones = [];
     for (let i = 0; i < n; i++) {
-      dots.push(
+      zones.push(
         <View
-          key={`answer_${i}`}
-          onLayout={e => this.updateDotLayout(e, i)}
+          key={`zone_${i}`}
+          onLayout={e => this.updateZoneLayout(e, i)}
           style={{
-            flex: 1,
             justifyContent: 'center',
             alignItems: 'center',
-            minWidth: '25%'
+            width: 50,
+            height: 60
           }}
         >
           <View style={styles.dot} />
@@ -116,30 +133,39 @@ export default class DragAndDropExample extends React.Component {
     return (
       <View
         style={{
-          height: '25%',
           flexDirection: 'row',
-          flexWrap: 'wrap'
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          backgroundColor: 'orange'
         }}
       >
-        {dots}
+        {zones}
       </View>
     );
   };
 
-  updateWordLayout = (event, index) => {
+  updateItemLayouts = (event, index) => {
     const layout = event.nativeEvent.layout;
-    this.initialPosition = { x: layout.x, y: layout.y };
-    this.state.pan = new Animated.ValueXY(this.initialPosition);
-    this.initPanResponder();
+    this.itemLayouts[index] = layout;
+    this.initialPositions[index] = { x: layout.x, y: layout.y };
+    this.state.pan[index] = new Animated.ValueXY(this.initialPositions[index]);
+    this.initPanResponder(index);
     this.setState({ pan: this.state.pan });
   };
 
-  renderDraggable = () => {
-    // the idea is to place objects first on the screen using flex divs,
-    // and only then make it interactable and init the coordinates
-    let containerStyle = { position: 'absolute', backgroundColor: 'orange' };
-    let itemStyle, itemPanHandlers, itemOnLayout;
-    if (this.state.pan === null) {
+  renderDraggable = sentence => {
+    // the idea is to place objects first on the screen using html (flex grid
+    // here, for example), and only then make it interactable
+    // and initialize the coordinates
+    const wordArray = sentence.split(' ');
+    const allItemsInitialized = this.state.pan.reduce(
+      (acc, val) => acc && val !== null,
+      true
+    );
+
+    // if all items are initialized -> move container to top
+    let containerStyle = { position: 'absolute' };
+    if (!allItemsInitialized) {
       containerStyle = {
         ...containerStyle,
         width: '100%',
@@ -149,44 +175,53 @@ export default class DragAndDropExample extends React.Component {
         flexDirection: 'row',
         flexWrap: 'wrap'
       };
-      itemStyle = [styles.circle];
-      itemPanHandlers = {};
-      itemOnLayout = e => this.updateWordLayout(e, 0);
-    } else {
-      itemStyle = [this.state.pan.getLayout(), styles.circle];
-      itemPanHandlers = this.panResponder.panHandlers;
-      itemOnLayout = () => {};
     }
+
+    // initialize items params
+    const itemStyle = [];
+    const itemPanHandlers = [];
+    const itemOnLayout = [];
+    for (let i = 0; i < wordArray.length; i++) {
+      if (allItemsInitialized) {
+        itemPanHandlers.push(this.panResponders[i].panHandlers);
+        itemOnLayout.push(() => {});
+        itemStyle.push([
+          this.state.pan[i].getLayout(),
+          { position: 'absolute' }
+        ]);
+      } else {
+        itemPanHandlers.push({});
+        itemOnLayout.push(e => this.updateItemLayouts(e, i));
+        itemStyle.push({});
+      }
+    }
+
     return (
       <View style={containerStyle}>
-        <View style={{ backgroundColor: 'white' }}><Text>test</Text></View>
-        <Animated.View
-          {...itemPanHandlers}
-          style={itemStyle}
-          onLayout={itemOnLayout}
-        >
-          <Text style={styles.text}>Drag me!</Text>
-        </Animated.View>
-        <View style={{ width: 100, height: 100, backgroundColor: 'white' }} />
-        <View style={{ width: 100, height: 100, backgroundColor: 'white' }} />
-        <View style={{ width: 100, height: 100, backgroundColor: 'white' }} />
+        {wordArray.map((word, index) => (
+          <Animated.View
+            key={`word_${index}`}
+            {...itemPanHandlers[index]}
+            style={itemStyle[index]}
+            onLayout={itemOnLayout[index]}
+          >
+            <RoundText
+              text={word}
+              textStyle={textStyle}
+              style={styles.textContainer}
+            />
+          </Animated.View>
+        ))}
       </View>
     );
-    // <View style={{ position: 'absolute', backgroundColor: 'orange' }}>
-    <Animated.View
-      {...this.panResponder.panHandlers}
-      style={[this.state.pan.getLayout(), styles.circle]}
-    >
-      <Text style={styles.text}>Drag me!</Text>
-    </Animated.View>;
-    // </View>
   };
 
   render() {
+    const wordCount = sentence.split(' ').length;
     return (
       <View style={{ flex: 1, backgroundColor: 'blue' }}>
-        {this.renderDots(6)}
-        {this.renderDraggable()}
+        {this.renderZones(wordCount)}
+        {this.renderDraggable(sentence)}
       </View>
     );
   }
