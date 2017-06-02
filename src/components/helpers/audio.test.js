@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme';
-import { forEach, times } from 'ramda';
+import { forEach, times, xprod } from 'ramda';
 import React from 'react';
 import { View } from 'react-native';
 
@@ -11,10 +11,14 @@ class Sound {
     this.unloadAsync = jest.fn();
 
     this.playAsync = jest.fn();
-    this.setPositionAsync = jest.fn();
-    this.setPlaybackFinishedCallback = jest.fn(cb => {
-      this.simulateFinishedPlaying = cb;
+    this.stopAsync = jest.fn();
+    this.setCallback = jest.fn(cb => {
+      this.cb = cb;
     });
+
+    this.simulateFinishedPlaying = () => {
+      this.cb({ didJustFinish: true });
+    };
   }
 }
 
@@ -33,17 +37,15 @@ describe('play', () => {
   it('returns a promise that resolves after the sound has been played', done => {
     play(sound).then(done);
 
-    // Check that finished playing callback is passed correctly
-    expect(sound.setPlaybackFinishedCallback).toHaveBeenCalledWith(
-      sound.simulateFinishedPlaying
-    );
+    // Check that callback is passed correctly
+    expect(sound.setPlaybackFinishedCallback).toHaveBeenCalledWith(sound.cb);
 
     sound.simulateFinishedPlaying();
   });
 
   it('rewinds the sound file after it has finished playing', done => {
     play(sound).then(() => {
-      expect(sound.setPositionAsync).toHaveBeenCalledWith(0);
+      expect(sound.stopAsync).toHaveBeenCalled();
       done();
     });
 
@@ -63,7 +65,7 @@ describe('playAll', () => {
     const sound = new Sound();
 
     playAll([sound]).then(() => {
-      expect(sound.setPositionAsync).toHaveBeenCalledWith(0);
+      expect(sound.stopAsync).toHaveBeenCalled();
       done();
     });
 
@@ -77,8 +79,8 @@ describe('playAll', () => {
       const sounds = times(() => new Sound(), 2);
 
       playAll(sounds, 1337).then(() => {
-        expect(sounds[0].setPositionAsync).toHaveBeenCalledWith(0);
-        expect(sounds[1].setPositionAsync).toHaveBeenCalledWith(0);
+        expect(sounds[0].stopAsync).toHaveBeenCalled();
+        expect(sounds[1].stopAsync).toHaveBeenCalled();
         done();
       });
 
@@ -138,9 +140,9 @@ describe('loadSounds', () => {
   });
 
   it('loads all passed sounds', () => {
-    forEach(sound => {
-      expect(sound.loadAsync).toHaveBeenCalled();
-    }, view.prop('sounds'));
+    forEach(([sound, source]) => {
+      expect(sound.loadAsync).toHaveBeenCalledWith(source);
+    }, xprod(view.prop('sounds'), sounds));
   });
 
   it('unloads all sounds on unmount', () => {
@@ -179,7 +181,7 @@ describe('loadSound', () => {
   });
 
   it('loads all passed sounds', () => {
-    expect(view.prop('sound').loadAsync).toHaveBeenCalled();
+    expect(view.prop('sound').loadAsync).toHaveBeenCalledWith(sound);
   });
 
   it('unloads all sounds on unmount', () => {
