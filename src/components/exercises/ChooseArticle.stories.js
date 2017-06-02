@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
-import FindLetter from './FindLetter';
+import ChooseArticle from './ChooseArticle';
 
-storiesOf('exercises/FindLetter', module)
+storiesOf('exercises/ChooseArticle', module)
   .add('Ananas', () => (
-    <FindLetter
+    <ChooseArticle
       image={require('../../assets/images/ananas.jpg')}
       sounds={[
         require('../../assets/sounds/ananas_short.mp3'),
@@ -15,7 +15,7 @@ storiesOf('exercises/FindLetter', module)
     />
   ))
   .add('Apfel', () => (
-    <FindLetter
+    <ChooseArticle
       image={require('../../assets/images/apfel.jpg')}
       sounds={[
         require('../../assets/sounds/apfel_short.mp3'),

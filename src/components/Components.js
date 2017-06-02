@@ -6,7 +6,8 @@ import {
   BLACK_TRANSPARENT,
   WHITE,
   WHITE_TRANSPARENT,
-  PRIMARY_WEAK
+  PRIMARY_WEAK,
+  TRANSPARENT
 } from '../styles/colors';
 import { DEFAULT } from '../styles/text';
 
@@ -127,6 +128,7 @@ export const RoundTextButton = ({ onPress, style, ...props }) => (
         },
         style
       ]}
+
       // size={highlighted ? size * 1.2 : size}
     />
   </TouchableOpacity>
@@ -154,7 +156,6 @@ export class RoundText extends Component {
       this.props.highlighted !== nextProps.highlighted
     ) {
       const baseFontSize = this.getBaseFontSize(nextProps);
-
       Animated.parallel([
         Animated.timing(this.state.size, {
           toValue: nextProps.highlighted
@@ -173,7 +174,6 @@ export class RoundText extends Component {
   render() {
     const { highlighted, text, style, textStyle } = this.props;
     const { size, fontSize } = this.state;
-
     return (
       <Animated.View
         style={[
@@ -194,6 +194,7 @@ export class RoundText extends Component {
           style={[
             DEFAULT,
             highlighted ? { color: PRIMARY_WEAK } : {},
+            { backgroundColor: TRANSPARENT },
             textStyle,
             { fontSize }
           ]}

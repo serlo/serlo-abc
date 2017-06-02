@@ -1,40 +1,52 @@
 {
   "name": "serlo-abc",
   "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "@kadira/react-native-storybook": "^2.2.4",
-    "concurrently": "^3.4.0",
-    "enzyme": "^2.8.2",
-    "flow-bin": "^0.38.0",
-    "flow-typed": "^2.0.0",
-    "jest": "^19.0.2",
-    "jest-expo": "^0.3.1",
-    "prettier": "^1.1.0",
-    "react-addons-test-utils": "~15.4.2",
-    "react-native-scripts": "^0.0.27",
-    "react-test-renderer": "~15.4.2"
-  },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
+    "build": "exp start",
+    "build:android": "exp build:android",
+    "build:ios": "exp build:ios",
+    "build:status": "exp build:status",
     "start": "concurrently --kill-others \"storybook start -p 19001\" \"react-native-scripts start\"",
     "eject": "react-native-scripts eject",
     "android": "concurrently --kill-others \"storybook start -p 19001\" \"react-native-scripts android\"",
     "ios": "concurrently --kill-others \"storybook start -p 19001\" \"react-native-scripts ios\"",
     "test": "jest",
     "format": "prettier --single-quote --write \"{{src,storybook}/**/*,*}.js\"",
-    "postinstall": "flow-typed install"
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "expo": "^17.0.0",
+    "ramda": "^0.24.1",
+    "react": "16.0.0-alpha.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-17.0.0.tar.gz"
+  },
+  "devDependencies": {
+    "@storybook/react-native": "^3.0.0",
+    "concurrently": "^3.4.0",
+    "enzyme": "^2.8.2",
+    "exp": "^41.0.0",
+    "husky": "^0.13.4",
+    "jest": "^20.0.4",
+    "jest-expo": "^1.0.1",
+    "lint-staged": "^3.6.0",
+    "prettier": "^1.3.1",
+    "react-addons-test-utils": "16.0.0-alpha.3",
+    "react-dom": "~15.4.2",
+    "react-native-scripts": "0.0.30",
+    "react-test-renderer": "16.0.0-alpha.6"
+  },
+  "private": true,
+  "lint-staged": {
+    "{{src,storybook}/**/*,*}.js": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
   },
   "jest": {
     "preset": "jest-expo",
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
     }
-  },
-  "dependencies": {
-    "expo": "^15.1.3",
-    "ramda": "^0.23.0",
-    "react": "~15.4.2",
-    "react-native": "^0.42.0"
   }
 }

@@ -1,13 +1,12 @@
-import { getStorybookUI, configure } from '@kadira/react-native-storybook';
+import { getStorybookUI, configure } from '@storybook/react-native';
 import React from 'react';
+import { NativeModules } from 'react-native';
 import url from 'url';
 
 import loadFonts from '../src/components/helpers/fonts';
 import './addons';
 
-import { NativeModules } from 'react-native';
-
-configure(function() {
+configure(() => {
   require('./stories');
 }, module);
 
@@ -18,5 +17,6 @@ const StorybookUI = getStorybookUI({ port: 19001, host: hostname });
 const App = ({ fontsLoaded }) => fontsLoaded && <StorybookUI />;
 
 export default loadFonts({
-  norddruck: require('../src/assets/fonts/norddruck.ttf')
+  norddruck: require('../src/assets/fonts/norddruck.ttf'),
+  serlo: require('../src/assets/fonts/serlo.ttf')
 })(App);

@@ -5,7 +5,7 @@ import { View, Text } from 'react-native';
 import speakerImage from '../../assets/images/speaker.png';
 import { WHITE_TRANSPARENT, PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { loadSounds } from '../helpers/audio';
+import { loadSounds, playAll } from '../helpers/audio';
 import { RoundImageWithButton } from '../Components';
 
 const mapIndexed = addIndex(map);
@@ -16,19 +16,6 @@ const highlightStyle = {
 };
 
 const ShowWord = ({ image, sounds, text, letter }) => {
-  const play = () => {
-    const playAll = ([sound, ...rest]) => {
-      sound.playAsync();
-      sound.setPlaybackFinishedCallback(() => {
-        sound.setPositionAsync(0);
-        if (rest.length > 0) {
-          setTimeout(() => playAll(rest), 1000);
-        }
-      });
-    };
-    playAll(sounds);
-  };
-
   const letters = mapIndexed(
     (char, key) => (
       <View
@@ -60,7 +47,7 @@ const ShowWord = ({ image, sounds, text, letter }) => {
         imageSize={200}
         icon={speakerImage}
         buttonSize={40}
-        onPress={play}
+        onPress={() => playAll(sounds)}
       />
       <View style={{ flexDirection: 'row' }}>
         {letters}
