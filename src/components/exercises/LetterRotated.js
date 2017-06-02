@@ -9,21 +9,28 @@ class LettersRotated extends Component {
     super(props);
 
     this.state = {
-      highlighted: null
+      highlighted: props.letters.map(() => false)
     };
   }
 
-  createLetterButton = index => {
-    const { angle, letters, rotated } = this.props;
+  getTransform = index => {
+    const angleIndex = this.props.rotated.indexOf(index);
+    return angleIndex !== -1 ? [{ rotate: this.props.angles[angleIndex] }] : [];
+  };
 
+  createLetterButton = index => {
+    const { angles, letters, rotated, difficulty } = this.props;
     return (
       <RoundTextButton
         onPress={() => {
-          this.setState({
-            highlighted: index
+          this.setState(({ highlighted }) => {
+            highlighted[index] = !highlighted[index];
+            return {
+              highlighted: highlighted
+            };
           });
         }}
-        highlighted={index === this.state.highlighted}
+        highlighted={this.state.highlighted[index]}
         text={letters[index]}
         size={60}
         style={{
@@ -56,16 +63,17 @@ class LettersRotated extends Component {
           {this.createLetterButton(1)}
           {this.createLetterButton(2)}
         </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
-          {this.createLetterButton(3)}
-          {this.createLetterButton(4)}
-        </View>
+        {this.props.difficulty >= 0.2 &&
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            {this.createLetterButton(3)}
+            {this.createLetterButton(4)}
+          </View>}
       </View>
     );
   }

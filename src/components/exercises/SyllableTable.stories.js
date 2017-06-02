@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@kadira/react-native-storybook';
+import { storiesOf } from '@storybook/react-native';
 
 import SyllableTable from './SyllableTable';
 

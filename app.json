@@ -1,5 +1,14 @@
 {
   "expo": {
-    "sdkVersion": "15.0.0"
+    "name": "Serlo ABC",
+    "slug": "serlo-abc",
+    "sdkVersion": "17.0.0",
+    "version": "0.1.0",
+    "ios": {
+      "bundleIdentifier": "org.serlo.abc"
+    },
+    "android": {
+      "package": "org.serlo.abc"
+    }
   }
 }

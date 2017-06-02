@@ -53,6 +53,7 @@ const ScaleFourImages = ({ displaySize, images, letter }) => {
     </View>
   );
 };
+
 const IntroduceLetter = props => {
   const { width } = Dimensions.get('window');
   return (
