@@ -6,10 +6,11 @@ export const play = sound =>
   new Promise(resolve => {
     sound.playAsync();
 
-    sound.setPlaybackFinishedCallback(() => {
-      // Rewind the audio file so that it can be played again
-      sound.setPositionAsync(0);
-      resolve();
+    sound.setCallback(status => {
+      if (status.didJustFinish) {
+        sound.stopAsync();
+        resolve();
+      }
     });
   });
 
@@ -38,8 +39,8 @@ export const createLoadSounds = Audio => C => {
       super(props);
 
       this.sounds = map(source => {
-        const sound = new Audio.Sound({ source });
-        sound.loadAsync();
+        const sound = new Audio.Sound();
+        sound.loadAsync(source);
         return sound;
       }, this.props.sounds);
     }
@@ -63,8 +64,8 @@ export const createLoadSound = Audio => C => {
     constructor(props) {
       super(props);
 
-      this.sound = new Audio.Sound({ source: this.props.sound });
-      this.sound.loadAsync();
+      this.sound = new Audio.Sound();
+      this.sound.loadAsync(this.props.sound);
     }
 
     componentWillUnmount() {
