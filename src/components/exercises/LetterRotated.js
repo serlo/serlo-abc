@@ -26,13 +26,11 @@ class LettersRotated extends Component {
         highlighted={index === this.state.highlighted}
         text={letters[index]}
         size={60}
-        style={[
-          {
+        style={{
             marginLeft: 5,
             marginRight: 5
-          },
-          index === rotated ? { transform: [{ rotate: angle }] } : {}
-        ]}
+          }}
+        textStyle={index === rotated ? { transform: [{ rotate: angle }] } : {}}
       />
     );
   };
