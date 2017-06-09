@@ -36,133 +36,122 @@ const textStyle = {
 export default class DragAndDropExample extends React.Component {
   constructor(props) {
     super(props);
-    // NOTE: there is a number of arrays, every item (word) represented there
-    // by index (so all arrays are connected by index), maybe it won't be
-    // a bad idea to create one array of objects with parameters instead
-
-    // initialize arrays for all words (items)
-    this.initialPositions = Array(props.sentence.length);
-    this.panResponders = Array(props.sentence.length);
-    this.zoneLayouts = Array(props.sentence.length);
-    this.itemLayouts = Array(props.sentence.length);
-    const panArray = [];
-    const itemLinkedZoneArray = [];
-    for (let i = 0; i < props.sentence.length; i++) {
-      panArray.push(null);
-      itemLinkedZoneArray.push(-1);
-    }
-
     this.state = {
-      pan: panArray,
-      itemLinkedZone: itemLinkedZoneArray,
-      movingItem: -1
+      movingItem: -1,
+      items: this.initItems(props.sentence),
+      zones: this.initZones(props.sentence)
     };
   }
 
-  componentWillReceiveProps(nextProps) {}
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      movingItem: -1,
+      items: this.initItems(nextProps.sentence),
+      zones: this.initZones(nextProps.sentence)
+    });
+  }
 
-  initPanResponder = index => {
-    this.panResponders[index] = PanResponder.create({
+  initItems = sentence => {
+    const items = [];
+    for (let i = 0; i < sentence.length; i++) {
+      items.push({
+        id: i,
+        word: sentence[i],
+        layout: null,
+        position: null,
+        pan: null,
+        panResponder: null
+      });
+    }
+    return items;
+  };
+
+  initZones = sentence => {
+    const zones = [];
+    for (let i = 0; i < sentence.length; i++) {
+      zones.push({
+        id: i,
+        layout: null,
+        item: -1
+      });
+    }
+    return zones;
+  };
+
+  initPanResponder = item => {
+    item.panResponder = PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onPanResponderGrant: (e, gestureState) => {
-        this.setState({ movingItem: index });
-        this.state.pan[index].setOffset({
-          x: this.state.pan[index].x._value,
-          y: this.state.pan[index].y._value
+        this.setState({ movingItem: item.id });
+        item.pan.setOffset({
+          x: item.pan.x._value,
+          y: item.pan.y._value
         });
-        this.state.pan[index].setValue({ x: 0, y: 0 });
+        item.pan.setValue({ x: 0, y: 0 });
       },
       onPanResponderMove: Animated.event([
         null,
-        {
-          dx: this.state.pan[index].x,
-          dy: this.state.pan[index].y
-        }
+        { dx: item.pan.x, dy: item.pan.y }
       ]),
       onPanResponderRelease: (e, gesture) => {
-        this.state.pan[index].flattenOffset();
-        const springTo = {
-          x: this.initialPositions[index].x,
-          y: this.initialPositions[index].y
-        };
-        const itemLinkedZone = this.state.itemLinkedZone;
-        let linkedZoneFound = false;
-        for (let i = 0; i < this.zoneLayouts.length; i++) {
-          const zone = this.zoneLayouts[i];
+        item.pan.flattenOffset();
+        const springTo = { ...item.position };
+        for (let i = 0; i < this.state.zones.length; i++) {
+          const zone = this.state.zones[i];
           if (
-            zone.x < gesture.moveX &&
-            gesture.moveX < zone.x + zone.width &&
-            zone.y < gesture.moveY &&
-            gesture.moveY < zone.y + zone.height
+            zone.layout.x < gesture.moveX &&
+            gesture.moveX < zone.layout.x + zone.layout.width &&
+            zone.layout.y < gesture.moveY &&
+            gesture.moveY < zone.layout.y + zone.layout.height
           ) {
             springTo.x =
-              zone.x + zone.width / 2 - this.itemLayouts[index].width / 2;
+              zone.layout.x + zone.layout.width / 2 - item.layout.width / 2;
             springTo.y =
-              zone.y + zone.height / 2 - this.itemLayouts[index].height / 2;
-            linkedZoneFound = true;
-            secondItemInZone = this.state.itemLinkedZone.indexOf(i);
-            if (secondItemInZone >= 0) {
-              itemLinkedZone[secondItemInZone] = itemLinkedZone[index];
-              if (itemLinkedZone[index] === -1) {
-                Animated.spring(this.state.pan[secondItemInZone], {
-                  toValue: {
-                    x: this.initialPositions[secondItemInZone].x,
-                    y: this.initialPositions[secondItemInZone].y
-                  }
-                }).start();
+              zone.layout.y + zone.layout.height / 2 - item.layout.height / 2;
+
+            // check if some other zone contains current item and in this
+            // case swap items in zone and second zone
+            let zoneFound = false;
+            for (let j = 0; j < this.state.zones.length; j++) {
+              const secondZone = this.state.zones[j];
+              if (secondZone.item == item.id) {
+                secondZone.item = zone.item;
+                zoneFound = true;
+                break;
               }
             }
-            itemLinkedZone[index] = i;
-            this.setState({ itemLinkedZone });
+            // if second zone wasn't found but there's some item in found zone
+            // we need to put this item back to initial position
+            if (zone.item >= 0 && !zoneFound) {
+              const secondItem = this.state.items[zone.item];
+              Animated.spring(secondItem.pan, {
+                toValue: { ...secondItem.position }
+              }).start();
+            }
+            zone.item = item.id;
             break;
           }
         }
-        if (!linkedZoneFound) {
-          itemLinkedZone[index] = -1;
-          this.setState({ itemLinkedZone });
-        }
-        Animated.spring(this.state.pan[index], {
-          toValue: { ...springTo }
-        }).start();
+        Animated.spring(item.pan, { toValue: { ...springTo } }).start();
         this.setState({ movingItem: -1 });
       }
     });
   };
 
-  updateZoneLayout = (event, index) => {
+  updateZoneLayout = (event, zone) => {
     const layout = event.nativeEvent.layout;
-    this.zoneLayouts[index] = layout;
-    const itemIndex = this.state.itemLinkedZone.indexOf(index);
-    if (itemIndex >= 0) {
+    zone.layout = layout;
+    if (zone.item >= 0) {
+      const item = this.state.items[zone.item];
       const springTo = {
-        x: layout.x + layout.width / 2 - this.itemLayouts[itemIndex].width / 2,
-        y: layout.y + layout.height / 2 - this.itemLayouts[itemIndex].height / 2
+        x: layout.x + layout.width / 2 - item.layout.width / 2,
+        y: layout.y + layout.height / 2 - item.layout.height / 2
       };
-      Animated.spring(this.state.pan[itemIndex], {
-        toValue: { ...springTo }
-      }).start();
+      Animated.spring(item.pan, { toValue: { ...springTo } }).start();
     }
   };
 
   renderZones = () => {
-    const zones = [];
-    for (let i = 0; i < this.props.sentence.length; i++) {
-      const itemIndex = this.state.itemLinkedZone.indexOf(i);
-      zones.push(
-        <View
-          key={`zone_${i}`}
-          onLayout={e => this.updateZoneLayout(e, i)}
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: itemIndex >= 0 ? this.itemLayouts[itemIndex].width : 50,
-            height: 70
-          }}
-        >
-          <View style={styles.dot} />
-        </View>
-      );
-    }
     return (
       <View
         style={{
@@ -172,30 +161,50 @@ export default class DragAndDropExample extends React.Component {
           backgroundColor: 'orange'
         }}
       >
-        {zones}
+        {this.state.zones.map(zone => {
+          let width = 50;
+          if (zone.item >= 0) {
+            const item = this.state.items[zone.item];
+            width = item.layout.width;
+          }
+          return (
+            <View
+              key={zone.id}
+              onLayout={event => this.updateZoneLayout(event, zone)}
+              style={{
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: 70,
+                width
+              }}
+            >
+              <View style={styles.dot} />
+            </View>
+          );
+        })}
       </View>
     );
   };
 
-  updateItemLayouts = (event, index) => {
+  updateItemLayouts = (event, item) => {
     const layout = event.nativeEvent.layout;
-    this.itemLayouts[index] = layout;
-    this.initialPositions[index] = { x: layout.x, y: layout.y };
-    this.state.pan[index] = new Animated.ValueXY(this.initialPositions[index]);
-    this.initPanResponder(index);
-    this.setState({ pan: this.state.pan });
+    item.layout = layout;
+    item.position = { x: layout.x, y: layout.y };
+    item.pan = new Animated.ValueXY(item.position);
+    this.initPanResponder(item); // shouldn't be here
+    this.setState({ items: this.state.items });
   };
 
   renderItems = () => {
     // the idea is to place objects first on the screen using html (flex grid
     // here, for example), and only then make it interactable
     // and initialize the coordinates
-    const allItemsInitialized = this.state.pan.reduce(
-      (acc, val) => acc && val !== null,
+    const allItemsInitialized = this.state.items.reduce(
+      (acc, item) => acc && item.pan !== null,
       true
     );
 
-    // if all items are initialized -> move container to top
+    // if all items are initialized -> move container to the top
     // (to use as a relative object for items)
     let containerStyle = { position: 'absolute', top: 0, left: 0 };
     if (!allItemsInitialized) {
@@ -214,32 +223,30 @@ export default class DragAndDropExample extends React.Component {
     const itemStyle = [];
     const itemPanHandlers = [];
     const itemOnLayout = [];
-    for (let i = 0; i < this.props.sentence.length; i++) {
+    for (let i = 0; i < this.state.items.length; i++) {
+      const item = this.state.items[i];
       if (allItemsInitialized) {
-        itemPanHandlers.push(this.panResponders[i].panHandlers);
-        itemOnLayout.push(() => {});
-        itemStyle.push([
-          this.state.pan[i].getLayout(),
-          { position: 'absolute' }
-        ]);
+        itemPanHandlers[item.id] = item.panResponder.panHandlers;
+        itemOnLayout[item.id] = () => {};
+        itemStyle[item.id] = [item.pan.getLayout(), { position: 'absolute' }];
       } else {
-        itemPanHandlers.push({});
-        itemOnLayout.push(e => this.updateItemLayouts(e, i));
-        itemStyle.push({});
+        itemPanHandlers[item.id] = {};
+        itemOnLayout[item.id] = event => this.updateItemLayouts(event, item);
+        itemStyle[item.id] = {};
       }
     }
 
     return (
       <View style={containerStyle}>
-        {this.props.sentence.map((word, index) => (
+        {this.state.items.map(item => (
           <Animated.View
-            key={`word_${index}`}
-            {...itemPanHandlers[index]}
-            style={itemStyle[index]}
-            onLayout={itemOnLayout[index]}
+            key={item.id}
+            {...itemPanHandlers[item.id]}
+            style={itemStyle[item.id]}
+            onLayout={itemOnLayout[item.id]}
           >
             <RoundText
-              text={word}
+              text={item.word}
               textStyle={textStyle}
               style={styles.textContainer}
             />
@@ -255,7 +262,7 @@ export default class DragAndDropExample extends React.Component {
         {this.state.movingItem !== -1
           ? <Animated.View style={itemStyle[this.state.movingItem]}>
               <RoundText
-                text={this.props.sentence[this.state.movingItem]}
+                text={this.state.items[this.state.movingItem].word}
                 textStyle={textStyle}
                 style={styles.textContainer}
               />
