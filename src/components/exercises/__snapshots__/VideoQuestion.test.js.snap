@@ -20,69 +20,38 @@ exports[`renders without crashing 1`] = `
       }
     }
   >
-    <Video
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      onEnd={[Function]}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      paused={false}
-      resizeMode={undefined}
-      source={1}
-      style={
-        Object {
-          "height": "100%",
-          "width": "90%",
-        }
-      }
-      testID={undefined}
-    />
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "rgba(0, 0, 0, 0.6)",
-          "borderRadius": 9999,
-          "height": 0,
-          "opacity": 1,
-          "overflow": "hidden",
-          "padding": 0,
-          "position": "absolute",
-          "width": 0,
-          "zIndex": 9999,
+          "alignItems": "center",
+          "justifyContent": "center",
+          "width": "100%",
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
-      <Image
+      <Video
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        callback={[Function]}
+        hitSlop={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        resizeMode={undefined}
+        shouldPlay={true}
         source={1}
         style={
           Object {
-            "height": 50,
-            "width": 50,
+            "width": "100%",
           }
         }
+        testID={undefined}
       />
     </View>
   </View>

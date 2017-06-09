@@ -10,10 +10,8 @@ import { addIndex, map } from 'ramda';
 import { PRIMARY, GREEN, TRANSPARENT } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 import { RoundTextButton } from '../Components';
-import { Video } from 'expo';
-import playIcon from '../../assets/images/play.png';
+import Video from '../common/Video';
 
-const replayIcon = playIcon;
 const mapIndexed = addIndex(map);
 
 const styles = {
@@ -25,29 +23,6 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center'
   },
-  video: {
-    width: '90%',
-    height: '100%'
-  },
-  button: {
-    position: 'absolute',
-    padding: 15,
-    width: 80,
-    height: 80,
-    borderRadius: 9999,
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
-    zIndex: 9999
-  },
-  icon: {
-    width: 50,
-    height: 50
-  },
-  hidden: {
-    width: 0,
-    height: 0,
-    padding: 0,
-    overflow: 'hidden'
-  },
   highlighted: {
     backgroundColor: GREEN
   }
@@ -57,34 +32,9 @@ class VideoQuestion extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      highlighted: null,
-      isPaused: false,
-      isFinished: false
+      highlighted: null
     };
   }
-
-  onEnd = () => {
-    this.setState({
-      isFinished: true
-    });
-  };
-
-  playPause = () => {
-    this.setState({
-      isPaused: !this.state.isPaused
-    });
-    if (!this.state.isPaused) {
-      this.setState({ isFinished: false });
-    }
-  };
-
-  replay = () => {
-    this.player.seek(0);
-    this.setState({
-      isPaused: false,
-      isFinished: false
-    });
-  };
 
   selectAnswer = key => () => {
     this.setState(({ highlighted }) => ({
@@ -103,32 +53,7 @@ class VideoQuestion extends Component {
         }}
       >
         <View style={styles.vidContainer}>
-          <TouchableWithoutFeedback onPress={this.playPause}>
-            <Video
-              ref={ref => {
-                this.player = ref;
-              }}
-              resizeMode={Video.RESIZE_MODE_CONTAIN}
-              source={this.props.video}
-              style={styles.video}
-              paused={this.state.isPaused}
-              onEnd={this.onEnd}
-            />
-          </TouchableWithoutFeedback>
-          <TouchableOpacity
-            style={[
-              styles.button,
-              !this.state.isPaused && !this.state.isFinished
-                ? styles.hidden
-                : null
-            ]}
-            onPress={this.state.isFinished ? this.replay : this.playPause}
-          >
-            <Image
-              source={this.state.isFinished ? replayIcon : playIcon}
-              style={styles.icon}
-            />
-          </TouchableOpacity>
+          <Video video={this.props.video} />
         </View>
         <View
           style={{ flex: 4, alignItems: 'center', justifyContent: 'center' }}
