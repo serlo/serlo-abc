@@ -17,7 +17,7 @@ const highlightStyle = {
 
 const ShowWord = ({ image, sounds, text, letter }) => {
   const letters = mapIndexed(
-    (char, key) => (
+    (char, key) =>
       <View
         key={key}
         style={[
@@ -28,8 +28,7 @@ const ShowWord = ({ image, sounds, text, letter }) => {
         <Text style={DEFAULT}>
           {char}
         </Text>
-      </View>
-    ),
+      </View>,
     text
   );
 
