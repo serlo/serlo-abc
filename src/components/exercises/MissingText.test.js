@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MissingLetter from './MissingLetter';
+import MissingLetter from './MissingText';
 
 import renderer from 'react-test-renderer';
 

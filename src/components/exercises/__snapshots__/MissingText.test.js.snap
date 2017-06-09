@@ -209,6 +209,7 @@ exports[`renders without crashing 1`] = `
                 "backgroundColor": "#73dbff",
                 "borderRadius": 20,
                 "elevation": 10,
+                "minWidth": 25,
                 "padding": 5,
                 "shadowColor": "rgba(0, 0, 0, 0.1)",
                 "shadowOffset": Object {
@@ -233,7 +234,7 @@ exports[`renders without crashing 1`] = `
                 }
               }
             >
-              
+               
             </Text>
           </View>
         </View>
