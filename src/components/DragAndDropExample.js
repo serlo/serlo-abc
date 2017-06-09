@@ -33,26 +33,21 @@ const textStyle = {
   fontSize: 20
 };
 
-const sentence =
-  'conveying a statement, question, exclamation, or command, and consisting of a main clause';
-
 export default class DragAndDropExample extends React.Component {
   constructor(props) {
     super(props);
-    // TODO: take sentence from props later, reinit these values on prop change
     // NOTE: there is a number of arrays, every item (word) represented there
     // by index (so all arrays are connected by index), maybe it won't be
     // a bad idea to create one array of objects with parameters instead
 
     // initialize arrays for all words (items)
-    this.wordCount = sentence.split(' ').length;
-    this.initialPositions = Array(this.wordCount);
-    this.panResponders = Array(this.wordCount);
-    this.zoneLayouts = Array(this.wordCount);
-    this.itemLayouts = Array(this.wordCount);
+    this.initialPositions = Array(props.sentence.length);
+    this.panResponders = Array(props.sentence.length);
+    this.zoneLayouts = Array(props.sentence.length);
+    this.itemLayouts = Array(props.sentence.length);
     const panArray = [];
     const itemLinkedZoneArray = [];
-    for (let i = 0; i < this.wordCount; i++) {
+    for (let i = 0; i < props.sentence.length; i++) {
       panArray.push(null);
       itemLinkedZoneArray.push(-1);
     }
@@ -63,6 +58,8 @@ export default class DragAndDropExample extends React.Component {
       movingItem: -1
     };
   }
+
+  componentWillReceiveProps(nextProps) {}
 
   initPanResponder = index => {
     this.panResponders[index] = PanResponder.create({
@@ -147,9 +144,9 @@ export default class DragAndDropExample extends React.Component {
     }
   };
 
-  renderZones = n => {
+  renderZones = () => {
     const zones = [];
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < this.props.sentence.length; i++) {
       const itemIndex = this.state.itemLinkedZone.indexOf(i);
       zones.push(
         <View
@@ -189,11 +186,10 @@ export default class DragAndDropExample extends React.Component {
     this.setState({ pan: this.state.pan });
   };
 
-  renderItems = sentence => {
+  renderItems = () => {
     // the idea is to place objects first on the screen using html (flex grid
     // here, for example), and only then make it interactable
     // and initialize the coordinates
-    const wordArray = sentence.split(' ');
     const allItemsInitialized = this.state.pan.reduce(
       (acc, val) => acc && val !== null,
       true
@@ -218,7 +214,7 @@ export default class DragAndDropExample extends React.Component {
     const itemStyle = [];
     const itemPanHandlers = [];
     const itemOnLayout = [];
-    for (let i = 0; i < wordArray.length; i++) {
+    for (let i = 0; i < this.props.sentence.length; i++) {
       if (allItemsInitialized) {
         itemPanHandlers.push(this.panResponders[i].panHandlers);
         itemOnLayout.push(() => {});
@@ -235,7 +231,7 @@ export default class DragAndDropExample extends React.Component {
 
     return (
       <View style={containerStyle}>
-        {wordArray.map((word, index) => (
+        {this.props.sentence.map((word, index) => (
           <Animated.View
             key={`word_${index}`}
             {...itemPanHandlers[index]}
@@ -259,7 +255,7 @@ export default class DragAndDropExample extends React.Component {
         {this.state.movingItem !== -1
           ? <Animated.View style={itemStyle[this.state.movingItem]}>
               <RoundText
-                text={wordArray[this.state.movingItem]}
+                text={this.props.sentence[this.state.movingItem]}
                 textStyle={textStyle}
                 style={styles.textContainer}
               />
@@ -272,8 +268,8 @@ export default class DragAndDropExample extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, backgroundColor: 'blue' }}>
-        {this.renderZones(this.wordCount)}
-        {this.renderItems(sentence)}
+        {this.renderZones()}
+        {this.renderItems()}
       </View>
     );
   }
