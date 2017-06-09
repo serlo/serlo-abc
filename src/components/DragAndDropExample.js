@@ -118,6 +118,7 @@ export default class DragAndDropExample extends React.Component {
         onPanResponderRelease: (e, gesture) => {
           item.pan.flattenOffset();
           const springTo = { ...item.position };
+          let zoneFound = false;
           for (let i = 0; i < this.state.zones.length; i++) {
             const zone = this.state.zones[i];
             if (
@@ -126,6 +127,7 @@ export default class DragAndDropExample extends React.Component {
               zone.layout.y < gesture.moveY &&
               gesture.moveY < zone.layout.y + zone.layout.height
             ) {
+              zoneFound = true;
               springTo.x =
                 zone.layout.x + zone.layout.width / 2 - item.layout.width / 2;
               springTo.y =
@@ -133,18 +135,18 @@ export default class DragAndDropExample extends React.Component {
 
               // check if some other zone contains current item and in this
               // case swap items in zone and second zone
-              let zoneFound = false;
+              let secondZoneFound = false;
               for (let j = 0; j < this.state.zones.length; j++) {
                 const secondZone = this.state.zones[j];
                 if (secondZone.item == item.id) {
+                  secondZoneFound = true;
                   secondZone.item = zone.item;
-                  zoneFound = true;
                   break;
                 }
               }
               // if second zone wasn't found but there's some item in found zone
               // we need to put this item back to initial position
-              if (zone.item >= 0 && !zoneFound) {
+              if (zone.item >= 0 && !secondZoneFound) {
                 const secondItem = this.state.items[zone.item];
                 Animated.spring(secondItem.pan, {
                   toValue: { ...secondItem.position }
@@ -152,6 +154,16 @@ export default class DragAndDropExample extends React.Component {
               }
               zone.item = item.id;
               break;
+            }
+          }
+
+          if (!zoneFound) {
+            for (let j = 0; j < this.state.zones.length; j++) {
+              const zone = this.state.zones[j];
+              if (zone.item == item.id) {
+                zone.item = -1;
+                break;
+              }
             }
           }
           Animated.spring(item.pan, { toValue: { ...springTo } }).start();
