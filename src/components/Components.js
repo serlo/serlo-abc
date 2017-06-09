@@ -13,7 +13,7 @@ import { DEFAULT } from '../styles/text';
 
 const mapIndexed = addIndex(map);
 
-export const RoundImageWithBorder = ({ image, size, white, style }) => (
+export const RoundImageWithBorder = ({ image, size, white, style }) =>
   <View
     style={[
       {
@@ -34,8 +34,7 @@ export const RoundImageWithBorder = ({ image, size, white, style }) => (
         borderRadius: size / 2
       }}
     />
-  </View>
-);
+  </View>;
 
 export class IconWithBackground extends Component {
   constructor(props) {
@@ -81,7 +80,7 @@ export class IconWithBackground extends Component {
   }
 }
 
-export const RoundButton = ({ icon, size, style, onPress }) => (
+export const RoundButton = ({ icon, size, style, onPress }) =>
   <TouchableOpacity onPress={onPress} style={style}>
     <View
       style={{
@@ -107,9 +106,8 @@ export const RoundButton = ({ icon, size, style, onPress }) => (
         }}
       />
     </View>
-  </TouchableOpacity>
-);
-export const RoundTextButton = ({ onPress, style, ...props }) => (
+  </TouchableOpacity>;
+export const RoundTextButton = ({ onPress, style, ...props }) =>
   <TouchableOpacity onPress={onPress}>
     <RoundText
       {...props}
@@ -131,8 +129,7 @@ export const RoundTextButton = ({ onPress, style, ...props }) => (
 
       // size={highlighted ? size * 1.2 : size}
     />
-  </TouchableOpacity>
-);
+  </TouchableOpacity>;
 
 export class RoundText extends Component {
   constructor(props) {
@@ -212,7 +209,7 @@ export const RoundImageWithButton = ({
   icon,
   buttonSize,
   onPress
-}) => (
+}) =>
   <View
     style={{
       flexDirection: 'row',
@@ -229,8 +226,7 @@ export const RoundImageWithButton = ({
         marginRight: imageSize / 10
       }}
     />
-  </View>
-);
+  </View>;
 
 export class TextPicker extends Component {
   constructor(props) {
@@ -283,15 +279,14 @@ export class TextPicker extends Component {
 
         {this.state.optionsVisible
           ? mapIndexed(
-              (option, key) => (
+              (option, key) =>
                 <TouchableOpacity onPress={this.selectOption(key)} key={key}>
                   <View style={this.styles.button}>
                     <Text style={this.styles.text}>
                       {option}
                     </Text>
                   </View>
-                </TouchableOpacity>
-              ),
+                </TouchableOpacity>,
               this.props.options
             )
           : null}

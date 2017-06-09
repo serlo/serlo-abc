@@ -4,13 +4,13 @@ import { storiesOf } from '@storybook/react-native';
 import ShowLetter from './ShowLetter';
 
 storiesOf('exercises/ShowLetter', module)
-  .add('A (without repeat)', () => (
+  .add('A (without repeat)', () =>
     <ShowLetter letter="A" sound={require('../../assets/sounds/a.mp3')} />
-  ))
-  .add('B (with repeat)', () => (
+  )
+  .add('B (with repeat)', () =>
     <ShowLetter
       letter="B"
       sound={require('../../assets/sounds/b.mp3')}
       isRepeat
     />
-  ));
+  );
