@@ -21,14 +21,11 @@ exports[`renders without crashing 1`] = `
   >
     <View
       style={
-        Array [
-          Object {
-            "backgroundColor": "rgba(0, 0, 0, 0.1)",
-            "borderRadius": 9999999,
-            "margin": 20,
-          },
-          undefined,
-        ]
+        Object {
+          "backgroundColor": "rgba(0, 0, 0, 0.1)",
+          "borderRadius": 9999999,
+          "margin": 20,
+        }
       }
     >
       <Image
