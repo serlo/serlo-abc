@@ -41,6 +41,7 @@ export default class DragAndDropExample extends React.Component {
       items: this.initItems(props.sentence),
       zones: this.initZones(props.sentence)
     };
+    this.itemsReady = false;
   }
 
   componentWillReceiveProps(nextProps) {
@@ -49,6 +50,7 @@ export default class DragAndDropExample extends React.Component {
       items: this.initItems(nextProps.sentence),
       zones: this.initZones(nextProps.sentence)
     });
+    this.itemsReady = false;
   }
 
   initItems = sentence => {
@@ -63,7 +65,25 @@ export default class DragAndDropExample extends React.Component {
         panResponder: null
       });
     }
+
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      item.props = {
+        onLayout: event => this.updateItemLayouts(event, item)
+      };
+    }
+
     return items;
+  };
+
+  initItemsProps = () => {
+    for (let i = 0; i < this.state.items.length; i++) {
+      const item = this.state.items[i];
+      item.props = {
+        ...item.panResponder.panHandlers,
+        style: [item.pan.getLayout(), { position: 'absolute' }]
+      };
+    }
   };
 
   initZones = sentence => {
@@ -78,64 +98,67 @@ export default class DragAndDropExample extends React.Component {
     return zones;
   };
 
-  initPanResponder = item => {
-    item.panResponder = PanResponder.create({
-      onStartShouldSetPanResponder: () => true,
-      onPanResponderGrant: (e, gestureState) => {
-        this.setState({ movingItem: item.id });
-        item.pan.setOffset({
-          x: item.pan.x._value,
-          y: item.pan.y._value
-        });
-        item.pan.setValue({ x: 0, y: 0 });
-      },
-      onPanResponderMove: Animated.event([
-        null,
-        { dx: item.pan.x, dy: item.pan.y }
-      ]),
-      onPanResponderRelease: (e, gesture) => {
-        item.pan.flattenOffset();
-        const springTo = { ...item.position };
-        for (let i = 0; i < this.state.zones.length; i++) {
-          const zone = this.state.zones[i];
-          if (
-            zone.layout.x < gesture.moveX &&
-            gesture.moveX < zone.layout.x + zone.layout.width &&
-            zone.layout.y < gesture.moveY &&
-            gesture.moveY < zone.layout.y + zone.layout.height
-          ) {
-            springTo.x =
-              zone.layout.x + zone.layout.width / 2 - item.layout.width / 2;
-            springTo.y =
-              zone.layout.y + zone.layout.height / 2 - item.layout.height / 2;
+  initPanResponders = () => {
+    for (let m = 0; m < this.state.items.length; m++) {
+      const item = this.state.items[m];
+      item.panResponder = PanResponder.create({
+        onStartShouldSetPanResponder: () => true,
+        onPanResponderGrant: (e, gestureState) => {
+          this.setState({ movingItem: item.id });
+          item.pan.setOffset({
+            x: item.pan.x._value,
+            y: item.pan.y._value
+          });
+          item.pan.setValue({ x: 0, y: 0 });
+        },
+        onPanResponderMove: Animated.event([
+          null,
+          { dx: item.pan.x, dy: item.pan.y }
+        ]),
+        onPanResponderRelease: (e, gesture) => {
+          item.pan.flattenOffset();
+          const springTo = { ...item.position };
+          for (let i = 0; i < this.state.zones.length; i++) {
+            const zone = this.state.zones[i];
+            if (
+              zone.layout.x < gesture.moveX &&
+              gesture.moveX < zone.layout.x + zone.layout.width &&
+              zone.layout.y < gesture.moveY &&
+              gesture.moveY < zone.layout.y + zone.layout.height
+            ) {
+              springTo.x =
+                zone.layout.x + zone.layout.width / 2 - item.layout.width / 2;
+              springTo.y =
+                zone.layout.y + zone.layout.height / 2 - item.layout.height / 2;
 
-            // check if some other zone contains current item and in this
-            // case swap items in zone and second zone
-            let zoneFound = false;
-            for (let j = 0; j < this.state.zones.length; j++) {
-              const secondZone = this.state.zones[j];
-              if (secondZone.item == item.id) {
-                secondZone.item = zone.item;
-                zoneFound = true;
-                break;
+              // check if some other zone contains current item and in this
+              // case swap items in zone and second zone
+              let zoneFound = false;
+              for (let j = 0; j < this.state.zones.length; j++) {
+                const secondZone = this.state.zones[j];
+                if (secondZone.item == item.id) {
+                  secondZone.item = zone.item;
+                  zoneFound = true;
+                  break;
+                }
               }
+              // if second zone wasn't found but there's some item in found zone
+              // we need to put this item back to initial position
+              if (zone.item >= 0 && !zoneFound) {
+                const secondItem = this.state.items[zone.item];
+                Animated.spring(secondItem.pan, {
+                  toValue: { ...secondItem.position }
+                }).start();
+              }
+              zone.item = item.id;
+              break;
             }
-            // if second zone wasn't found but there's some item in found zone
-            // we need to put this item back to initial position
-            if (zone.item >= 0 && !zoneFound) {
-              const secondItem = this.state.items[zone.item];
-              Animated.spring(secondItem.pan, {
-                toValue: { ...secondItem.position }
-              }).start();
-            }
-            zone.item = item.id;
-            break;
           }
+          Animated.spring(item.pan, { toValue: { ...springTo } }).start();
+          this.setState({ movingItem: -1 });
         }
-        Animated.spring(item.pan, { toValue: { ...springTo } }).start();
-        this.setState({ movingItem: -1 });
-      }
-    });
+      });
+    }
   };
 
   updateZoneLayout = (event, zone) => {
@@ -191,7 +214,18 @@ export default class DragAndDropExample extends React.Component {
     item.layout = layout;
     item.position = { x: layout.x, y: layout.y };
     item.pan = new Animated.ValueXY(item.position);
-    this.initPanResponder(item); // shouldn't be here
+
+    // check if we know layouts of all items
+    this.itemsReady = this.state.items.reduce(
+      (acc, item) => acc && item.pan !== null,
+      true
+    );
+    // when all items are ready - we can initialize drag and drop
+    // functionality, after that layout is not updated anymore.
+    if (this.itemsReady) {
+      this.initPanResponders();
+      this.initItemsProps();
+    }
     this.setState({ items: this.state.items });
   };
 
@@ -199,15 +233,11 @@ export default class DragAndDropExample extends React.Component {
     // the idea is to place objects first on the screen using html (flex grid
     // here, for example), and only then make it interactable
     // and initialize the coordinates
-    const allItemsInitialized = this.state.items.reduce(
-      (acc, item) => acc && item.pan !== null,
-      true
-    );
 
     // if all items are initialized -> move container to the top
     // (to use as a relative object for items)
     let containerStyle = { position: 'absolute', top: 0, left: 0 };
-    if (!allItemsInitialized) {
+    if (!this.itemsReady) {
       containerStyle = {
         ...containerStyle,
         width: '100%',
@@ -219,32 +249,10 @@ export default class DragAndDropExample extends React.Component {
       };
     }
 
-    // initialize items params
-    const itemStyle = [];
-    const itemPanHandlers = [];
-    const itemOnLayout = [];
-    for (let i = 0; i < this.state.items.length; i++) {
-      const item = this.state.items[i];
-      if (allItemsInitialized) {
-        itemPanHandlers[item.id] = item.panResponder.panHandlers;
-        itemOnLayout[item.id] = () => {};
-        itemStyle[item.id] = [item.pan.getLayout(), { position: 'absolute' }];
-      } else {
-        itemPanHandlers[item.id] = {};
-        itemOnLayout[item.id] = event => this.updateItemLayouts(event, item);
-        itemStyle[item.id] = {};
-      }
-    }
-
     return (
       <View style={containerStyle}>
         {this.state.items.map(item => (
-          <Animated.View
-            key={item.id}
-            {...itemPanHandlers[item.id]}
-            style={itemStyle[item.id]}
-            onLayout={itemOnLayout[item.id]}
-          >
+          <Animated.View key={item.id} {...item.props}>
             <RoundText
               text={item.word}
               textStyle={textStyle}
@@ -260,7 +268,9 @@ export default class DragAndDropExample extends React.Component {
           will try to check what else can be done as a better solution
         */}
         {this.state.movingItem !== -1
-          ? <Animated.View style={itemStyle[this.state.movingItem]}>
+          ? <Animated.View
+              style={this.state.items[this.state.movingItem].props.style}
+            >
               <RoundText
                 text={this.state.items[this.state.movingItem].word}
                 textStyle={textStyle}
