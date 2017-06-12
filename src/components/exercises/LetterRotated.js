@@ -33,13 +33,11 @@ class LettersRotated extends Component {
         highlighted={this.state.highlighted[index]}
         text={letters[index]}
         size={60}
-        style={[
-          {
+        style={{
             marginLeft: 5,
-            marginRight: 5,
-            transform: this.getTransform(index)
-          }
-        ]}
+            marginRight: 5
+          }}
+        textStyle={index === rotated ? { transform: [{ rotate: angle }] } : {}}
       />
     );
   };
