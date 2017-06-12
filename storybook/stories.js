@@ -1,4 +1,5 @@
 import '../src/index.stories';
+import '../src/components/exercises/BuildSentence.stories';
 import '../src/components/exercises/DifferFromSymbol.stories';
 import '../src/components/exercises/ExplanationText.stories';
 import '../src/components/exercises/FindLetter.stories';
