@@ -204,7 +204,7 @@ export class RoundText extends Component {
   }
 
   render() {
-    const { highlighted, text, style, textStyle } = this.props;
+    const { highlighted, crossedOut, text, style, textStyle } = this.props;
     const { size, fontSize } = this.state;
     return (
       <Animated.View
@@ -212,11 +212,12 @@ export class RoundText extends Component {
           {
             backgroundColor: WHITE_TRANSPARENT,
             borderRadius: 9999,
-            padding: 5,
+            borderColor: highlighted ? PRIMARY_WEAK : WHITE,
             height: size,
             width: size,
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            overflow: 'hidden'
           },
           style,
           highlighted ? { backgroundColor: WHITE } : {}
@@ -226,13 +227,25 @@ export class RoundText extends Component {
           style={[
             DEFAULT,
             highlighted ? { color: PRIMARY_WEAK } : {},
-            { backgroundColor: TRANSPARENT },
+            { backgroundColor: TRANSPARENT, marginTop: 5 },
             textStyle,
             { fontSize }
           ]}
         >
           {text}
         </Animated.Text>
+        {crossedOut &&
+          <Animated.View
+            style={{
+              position: 'absolute',
+              height: 3.5,
+              width: size,
+              borderRadius: 1,
+              backgroundColor: highlighted ? PRIMARY_WEAK : WHITE,
+              transform: [{ rotate: '-45deg' }],
+              opacity: 0.8
+            }}
+          />}
       </Animated.View>
     );
   }

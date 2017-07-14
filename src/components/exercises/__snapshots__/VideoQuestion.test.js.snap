@@ -143,13 +143,14 @@ exports[`renders without crashing 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "#73dbff",
+              "borderColor": "#ffffff",
               "borderRadius": 9999,
               "elevation": 5,
               "height": NaN,
               "justifyContent": "center",
               "margin": 5,
               "opacity": 1,
-              "padding": 5,
+              "overflow": "hidden",
               "shadowColor": "rgba(0, 0, 0, 0.1)",
               "shadowOffset": Object {
                 "height": 4,
@@ -171,6 +172,7 @@ exports[`renders without crashing 1`] = `
                 "color": "#ffffff",
                 "fontFamily": "norddruck",
                 "fontSize": 35,
+                "marginTop": 5,
                 "textAlign": "center",
               }
             }
@@ -206,13 +208,14 @@ exports[`renders without crashing 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "#73dbff",
+              "borderColor": "#ffffff",
               "borderRadius": 9999,
               "elevation": 5,
               "height": NaN,
               "justifyContent": "center",
               "margin": 5,
               "opacity": 1,
-              "padding": 5,
+              "overflow": "hidden",
               "shadowColor": "rgba(0, 0, 0, 0.1)",
               "shadowOffset": Object {
                 "height": 4,
@@ -234,6 +237,7 @@ exports[`renders without crashing 1`] = `
                 "color": "#ffffff",
                 "fontFamily": "norddruck",
                 "fontSize": 35,
+                "marginTop": 5,
                 "textAlign": "center",
               }
             }
@@ -269,13 +273,14 @@ exports[`renders without crashing 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "#73dbff",
+              "borderColor": "#ffffff",
               "borderRadius": 9999,
               "elevation": 5,
               "height": NaN,
               "justifyContent": "center",
               "margin": 5,
               "opacity": 1,
-              "padding": 5,
+              "overflow": "hidden",
               "shadowColor": "rgba(0, 0, 0, 0.1)",
               "shadowOffset": Object {
                 "height": 4,
@@ -297,6 +302,7 @@ exports[`renders without crashing 1`] = `
                 "color": "#ffffff",
                 "fontFamily": "norddruck",
                 "fontSize": 35,
+                "marginTop": 5,
                 "textAlign": "center",
               }
             }
