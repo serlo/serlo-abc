@@ -25,11 +25,12 @@ exports[`renders without crashing 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "rgba(255, 255, 255, 0.2)",
+          "borderColor": "#ffffff",
           "borderRadius": 9999,
           "height": 270.83333333333337,
           "justifyContent": "center",
           "marginLeft": 72.91666666666667,
-          "padding": 5,
+          "overflow": "hidden",
           "width": 270.83333333333337,
         }
       }
@@ -44,6 +45,7 @@ exports[`renders without crashing 1`] = `
             "color": "#ffffff",
             "fontFamily": "norddruck",
             "fontSize": 104.16666666666667,
+            "marginTop": 5,
             "textAlign": "center",
           }
         }
