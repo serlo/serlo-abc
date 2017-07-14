@@ -6,8 +6,8 @@ import HasPhoneme from './HasPhoneme';
 storiesOf('exercises/HasPhoneme', module).add('one letter', () => (
   <HasPhoneme
     image={require('../../assets/images/gabel.jpg')}
-    sounds={[require('../../assets/sounds/gabel_short.mp3')]}
+    sound={require('../../assets/sounds/gabel_short.mp3')}
     word="gabel"
-    syllable={'b'}
+    phoneme={'b'}
   />
 ));
