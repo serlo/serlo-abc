@@ -291,7 +291,7 @@ export class TextPicker extends Component {
     super(props);
     this.state = {
       optionsVisible: false,
-      selectedValue: ''
+      selectedValue: null
     };
   }
 
@@ -320,7 +320,8 @@ export class TextPicker extends Component {
       shadowOffset: {
         height: 4,
         width: 4
-      }
+      },
+      minWidth: this.props.size || 25
     },
     text: DEFAULT
   };
@@ -353,7 +354,7 @@ export class TextPicker extends Component {
         <TouchableOpacity onPress={this.togglePickerOptions}>
           <View style={this.styles.button}>
             <Text style={this.styles.text}>
-              {this.state.selectedValue}
+              {this.state.selectedValue || ' '}
             </Text>
           </View>
         </TouchableOpacity>
