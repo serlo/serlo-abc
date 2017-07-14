@@ -34,12 +34,13 @@ exports[`renders without crashing (3x3) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -54,6 +55,7 @@ exports[`renders without crashing (3x3) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -88,13 +90,14 @@ exports[`renders without crashing (3x3) 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "#73dbff",
+              "borderColor": "#ffffff",
               "borderRadius": 9999,
               "elevation": 5,
               "height": 60,
               "justifyContent": "center",
               "margin": 5,
               "opacity": 1,
-              "padding": 5,
+              "overflow": "hidden",
               "shadowColor": "rgba(0, 0, 0, 0.1)",
               "shadowOffset": Object {
                 "height": 4,
@@ -116,6 +119,7 @@ exports[`renders without crashing (3x3) 1`] = `
                 "color": "#ffffff",
                 "fontFamily": "norddruck",
                 "fontSize": 35,
+                "marginTop": 5,
                 "textAlign": "center",
               }
             }
@@ -129,12 +133,13 @@ exports[`renders without crashing (3x3) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -149,6 +154,7 @@ exports[`renders without crashing (3x3) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -171,12 +177,13 @@ exports[`renders without crashing (3x3) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -191,6 +198,7 @@ exports[`renders without crashing (3x3) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -203,12 +211,13 @@ exports[`renders without crashing (3x3) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -223,6 +232,7 @@ exports[`renders without crashing (3x3) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -235,12 +245,13 @@ exports[`renders without crashing (3x3) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -255,6 +266,7 @@ exports[`renders without crashing (3x3) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -277,12 +289,13 @@ exports[`renders without crashing (3x3) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -297,6 +310,7 @@ exports[`renders without crashing (3x3) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -309,12 +323,13 @@ exports[`renders without crashing (3x3) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -329,6 +344,7 @@ exports[`renders without crashing (3x3) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -341,12 +357,13 @@ exports[`renders without crashing (3x3) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -361,6 +378,7 @@ exports[`renders without crashing (3x3) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -429,13 +447,14 @@ exports[`renders without crashing (5x4) 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "#73dbff",
+              "borderColor": "#ffffff",
               "borderRadius": 9999,
               "elevation": 5,
               "height": 60,
               "justifyContent": "center",
               "margin": 5,
               "opacity": 1,
-              "padding": 5,
+              "overflow": "hidden",
               "shadowColor": "rgba(0, 0, 0, 0.1)",
               "shadowOffset": Object {
                 "height": 4,
@@ -457,6 +476,7 @@ exports[`renders without crashing (5x4) 1`] = `
                 "color": "#ffffff",
                 "fontFamily": "norddruck",
                 "fontSize": 35,
+                "marginTop": 5,
                 "textAlign": "center",
               }
             }
@@ -470,12 +490,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -490,6 +511,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -502,12 +524,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -522,6 +545,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -534,12 +558,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -554,6 +579,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -576,12 +602,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -596,6 +623,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -608,12 +636,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -628,6 +657,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -640,12 +670,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -660,6 +691,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -672,12 +704,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -692,6 +725,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -714,12 +748,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -734,6 +769,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -746,12 +782,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -766,6 +803,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -778,12 +816,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -798,6 +837,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -810,12 +850,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -830,6 +871,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -852,12 +894,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -872,6 +915,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -884,12 +928,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -904,6 +949,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -916,12 +962,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -936,6 +983,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -948,12 +996,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -968,6 +1017,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -990,12 +1040,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -1010,6 +1061,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -1022,12 +1074,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -1042,6 +1095,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -1054,12 +1108,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -1074,6 +1129,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }
@@ -1086,12 +1142,13 @@ exports[`renders without crashing (5x4) 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
             "borderRadius": 9999,
             "height": 60,
             "justifyContent": "center",
             "margin": 5,
             "opacity": 0.4,
-            "padding": 5,
+            "overflow": "hidden",
             "width": 60,
           }
         }
@@ -1106,6 +1163,7 @@ exports[`renders without crashing (5x4) 1`] = `
               "color": "#ffffff",
               "fontFamily": "norddruck",
               "fontSize": 35,
+              "marginTop": 5,
               "textAlign": "center",
             }
           }

@@ -193,32 +193,20 @@ export class RoundText extends Component {
           style={[
             DEFAULT,
             highlighted ? { color: PRIMARY_WEAK } : {},
-            { backgroundColor: TRANSPARENT },
+            { backgroundColor: TRANSPARENT, marginTop: 5 },
             textStyle,
-            { fontSize },
-            { marginTop: 5 }
+            { fontSize }
           ]}
         >
           {text}
         </Animated.Text>
-        <Animated.View
-          style={{
-            borderRadius: 9999,
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            height: size,
-            width: size,
-            overflow: 'hidden'
-          }}
-        />
         {crossedOut &&
           <Animated.View
             style={{
+              position: 'absolute',
               height: 3.5,
               width: size,
               borderRadius: 1,
-              top: '-40.7%',
               backgroundColor: highlighted ? PRIMARY_WEAK : WHITE,
               transform: [{ rotate: '-45deg' }],
               opacity: 0.8
