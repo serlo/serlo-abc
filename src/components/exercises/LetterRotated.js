@@ -36,10 +36,10 @@ class LettersRotated extends Component {
         style={[
           {
             marginLeft: 5,
-            marginRight: 5,
-            transform: this.getTransform(index)
+            marginRight: 5
           }
         ]}
+        textStyle={{ transform: this.getTransform(index) }}
       />
     );
   };
