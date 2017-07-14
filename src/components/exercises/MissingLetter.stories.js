@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
 import MissingLetter from './MissingLetter';
-storiesOf('exercises/MissingLetter', module).add('Apfel', () => (
+storiesOf('exercises/MissingLetter', module).add('Apfel', () =>
   <MissingLetter
     image={require('../../assets/images/apfel.jpg')}
     sounds={[
@@ -13,4 +13,4 @@ storiesOf('exercises/MissingLetter', module).add('Apfel', () => (
     missing={3}
     options={['a', 'n', 'e']}
   />
-));
+);

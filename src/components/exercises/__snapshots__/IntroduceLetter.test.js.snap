@@ -64,16 +64,11 @@ exports[`renders without crashing 1`] = `
     >
       <View
         style={
-          Array [
-            Object {
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999999,
-              "margin": 27.083333333333336,
-            },
-            Object {
-              "margin": 0,
-            },
-          ]
+          Object {
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999999,
+            "margin": 0,
+          }
         }
       >
         <Image
@@ -91,16 +86,11 @@ exports[`renders without crashing 1`] = `
       </View>
       <View
         style={
-          Array [
-            Object {
-              "backgroundColor": "rgba(255, 255, 255, 0.2)",
-              "borderRadius": 9999999,
-              "margin": 22.916666666666668,
-            },
-            Object {
-              "margin": 0,
-            },
-          ]
+          Object {
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderRadius": 9999999,
+            "margin": 0,
+          }
         }
       >
         <Image
@@ -119,17 +109,13 @@ exports[`renders without crashing 1`] = `
     </View>
     <View
       style={
-        Array [
-          Object {
-            "backgroundColor": "rgba(255, 255, 255, 0.2)",
-            "borderRadius": 9999999,
-            "margin": 27.083333333333336,
-          },
-          Object {
-            "marginLeft": 104.16666666666667,
-            "marginTop": -52.083333333333336,
-          },
-        ]
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 0.2)",
+          "borderRadius": 9999999,
+          "margin": 27.083333333333336,
+          "marginLeft": 104.16666666666667,
+          "marginTop": -52.083333333333336,
+        }
       }
     >
       <Image

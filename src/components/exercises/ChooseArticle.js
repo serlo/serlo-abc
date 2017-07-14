@@ -79,7 +79,7 @@ class ChooseArticle extends React.Component {
 
   render() {
     const letters = mapIndexed(
-      (char, key) => (
+      (char, key) =>
         <View
           key={key}
           style={[{ padding: 5 }, styles.letterStyle, styles.shared]}
@@ -87,13 +87,12 @@ class ChooseArticle extends React.Component {
           <Text style={DEFAULT}>
             {char}
           </Text>
-        </View>
-      ),
+        </View>,
       this.props.text
     );
 
     const articleButtons = mapIndexed(
-      (article, key) => (
+      (article, key) =>
         <TouchableOpacity
           key={key}
           style={[
@@ -108,8 +107,7 @@ class ChooseArticle extends React.Component {
           onPress={this.selectArticle(article)}
         >
           <Text style={DEFAULT}>{article}</Text>
-        </TouchableOpacity>
-      ),
+        </TouchableOpacity>,
       articles
     );
 

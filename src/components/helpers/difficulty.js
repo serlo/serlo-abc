@@ -3,9 +3,8 @@ import React from 'react';
 export const createWithDifficulty = generateDifficulty => C => {
   const difficulty = generateDifficulty();
 
-  const WithDifficultyComponent = props => (
-    <C {...props} difficulty={difficulty} />
-  );
+  const WithDifficultyComponent = props =>
+    <C {...props} difficulty={difficulty} />;
 
   return WithDifficultyComponent;
 };

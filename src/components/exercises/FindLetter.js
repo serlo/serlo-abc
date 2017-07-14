@@ -55,7 +55,7 @@ class FindLetter extends Component {
 
   render() {
     const letters = mapIndexed(
-      (char, key) => (
+      (char, key) =>
         <TouchableOpacity
           key={key}
           onPress={this.toggleLetter(key)}
@@ -67,8 +67,7 @@ class FindLetter extends Component {
           <Text style={DEFAULT}>
             {char}
           </Text>
-        </TouchableOpacity>
-      ),
+        </TouchableOpacity>,
       this.props.text
     );
 
