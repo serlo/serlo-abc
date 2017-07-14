@@ -22,36 +22,48 @@ exports[`renders without crashing 1`] = `
   >
     <View
       style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "rgba(255, 255, 255, 0.2)",
-          "borderColor": "#ffffff",
-          "borderRadius": 9999,
-          "height": 270.83333333333337,
-          "justifyContent": "center",
-          "marginLeft": 72.91666666666667,
-          "overflow": "hidden",
-          "width": 270.83333333333337,
-        }
+        Array [
+          Object {
+            "backgroundColor": "rgba(255, 255, 255, 0.2)",
+            "borderColor": "#ffffff",
+            "borderRadius": 9999,
+          },
+          Object {
+            "marginLeft": 72.91666666666667,
+          },
+          Object {},
+        ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+      <View
         style={
           Object {
-            "backgroundColor": "transparent",
-            "color": "#ffffff",
-            "fontFamily": "norddruck",
-            "fontSize": 104.16666666666667,
-            "marginTop": 5,
-            "textAlign": "center",
+            "alignItems": "center",
+            "height": 270.83333333333337,
+            "justifyContent": "center",
+            "overflow": "hidden",
+            "width": 270.83333333333337,
           }
         }
       >
-        Aa
-      </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#ffffff",
+              "fontFamily": "norddruck",
+              "fontSize": 104.16666666666667,
+              "marginTop": 5,
+              "textAlign": "center",
+            }
+          }
+        >
+          Aa
+        </Text>
+      </View>
     </View>
     <View
       style={

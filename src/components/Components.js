@@ -63,8 +63,9 @@ export class RoundImageWithBorder extends Component {
             height: size,
             width: size,
             margin: this.props.size / 10,
-            borderRadius:
-              (highlighted ? 1.2 * this.props.size : this.props.size) / 2
+            borderRadius: (highlighted
+              ? 1.2 * this.props.size
+              : this.props.size) / 2
           }}
         />
       </Animated.View>
@@ -116,7 +117,7 @@ export class IconWithBackground extends Component {
   }
 }
 
-export const RoundButton = ({ icon, size, style, onPress }) =>
+export const RoundButton = ({ icon, size, style, onPress }) => (
   <TouchableOpacity onPress={onPress} style={style}>
     <View
       style={{
@@ -142,9 +143,10 @@ export const RoundButton = ({ icon, size, style, onPress }) =>
         }}
       />
     </View>
-  </TouchableOpacity>;
+  </TouchableOpacity>
+);
 
-export const RoundTextButton = ({ onPress, style, ...props }) =>
+export const RoundTextButton = ({ onPress, style, ...props }) => (
   <TouchableOpacity onPress={onPress}>
     <RoundText
       {...props}
@@ -164,7 +166,8 @@ export const RoundTextButton = ({ onPress, style, ...props }) =>
         style
       ]}
     />
-  </TouchableOpacity>;
+  </TouchableOpacity>
+);
 
 export class RoundText extends Component {
   constructor(props) {
@@ -207,46 +210,52 @@ export class RoundText extends Component {
     const { highlighted, crossedOut, text, style, textStyle } = this.props;
     const { size, fontSize } = this.state;
     return (
-      <Animated.View
+      <View
         style={[
           {
             backgroundColor: WHITE_TRANSPARENT,
             borderRadius: 9999,
-            borderColor: highlighted ? PRIMARY_WEAK : WHITE,
-            height: size,
-            width: size,
-            alignItems: 'center',
-            justifyContent: 'center',
-            overflow: 'hidden'
+            borderColor: highlighted ? PRIMARY_WEAK : WHITE
           },
           style,
           highlighted ? { backgroundColor: WHITE } : {}
         ]}
       >
-        <Animated.Text
-          style={[
-            DEFAULT,
-            highlighted ? { color: PRIMARY_WEAK } : {},
-            { backgroundColor: TRANSPARENT, marginTop: 5 },
-            textStyle,
-            { fontSize }
-          ]}
+        <Animated.View
+          style={{
+            overflow: 'hidden',
+            alignItems: 'center',
+            justifyContent: 'center',
+            // backgroundColor: 'red',
+            height: size,
+            width: size
+          }}
         >
-          {text}
-        </Animated.Text>
-        {crossedOut &&
-          <Animated.View
-            style={{
-              position: 'absolute',
-              height: 3.5,
-              width: size,
-              borderRadius: 1,
-              backgroundColor: highlighted ? PRIMARY_WEAK : WHITE,
-              transform: [{ rotate: '-45deg' }],
-              opacity: 0.8
-            }}
-          />}
-      </Animated.View>
+          <Animated.Text
+            style={[
+              DEFAULT,
+              highlighted ? { color: PRIMARY_WEAK } : {},
+              { backgroundColor: TRANSPARENT, marginTop: 5 },
+              textStyle,
+              { fontSize }
+            ]}
+          >
+            {text}
+          </Animated.Text>
+          {crossedOut &&
+            <Animated.View
+              style={{
+                position: 'absolute',
+                height: 3.5,
+                width: size,
+                borderRadius: 1,
+                backgroundColor: highlighted ? PRIMARY_WEAK : WHITE,
+                transform: [{ rotate: '-45deg' }],
+                opacity: 0.8
+              }}
+            />}
+        </Animated.View>
+      </View>
     );
   }
 }
@@ -257,7 +266,7 @@ export const RoundImageWithButton = ({
   icon,
   buttonSize,
   onPress
-}) =>
+}) => (
   <View
     style={{
       flexDirection: 'row',
@@ -274,7 +283,8 @@ export const RoundImageWithButton = ({
         marginRight: imageSize / 10
       }}
     />
-  </View>;
+  </View>
+);
 
 export class TextPicker extends Component {
   constructor(props) {
@@ -327,14 +337,15 @@ export class TextPicker extends Component {
 
         {this.state.optionsVisible
           ? mapIndexed(
-              (option, key) =>
+              (option, key) => (
                 <TouchableOpacity onPress={this.selectOption(key)} key={key}>
                   <View style={this.styles.button}>
                     <Text style={this.styles.text}>
                       {option}
                     </Text>
                   </View>
-                </TouchableOpacity>,
+                </TouchableOpacity>
+              ),
               this.props.options
             )
           : null}
