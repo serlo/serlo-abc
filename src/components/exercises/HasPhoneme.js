@@ -29,7 +29,7 @@ class HasPhoneme extends Component {
     playAll(this.props.sounds);
   };
 
-  createPhonemeButton = (index, style) => {
+  createPhonemeButton = (index, crossed_out) => {
     return (
       <RoundTextButton
         onPress={() => {
@@ -45,8 +45,9 @@ class HasPhoneme extends Component {
             marginLeft: 5,
             marginRight: 5
           },
-          style
+          crossed_out && { borderWidth: 3 }
         ]}
+        crossed_out={crossed_out}
       />
     );
   };
@@ -75,8 +76,8 @@ class HasPhoneme extends Component {
             justifyContent: 'center'
           }}
         >
-          {this.createPhonemeButton(0)}
-          {this.createPhonemeButton(1)}
+          {this.createPhonemeButton(0, false)}
+          {this.createPhonemeButton(1, true)}
         </View>
       </View>
     );
