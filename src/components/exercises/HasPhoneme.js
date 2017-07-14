@@ -16,7 +16,7 @@ class HasPhoneme extends Component {
     };
   }
 
-  createPhonemeButton = (index, crossed_out) => {
+  createPhonemeButton = (index, crossedOut) => {
     return (
       <RoundTextButton
         onPress={() => {
@@ -32,9 +32,9 @@ class HasPhoneme extends Component {
             marginLeft: 5,
             marginRight: 5
           },
-          crossed_out && { borderWidth: 3 }
+          crossedOut && { borderWidth: 3 }
         ]}
-        crossed_out={crossed_out}
+        crossedOut={crossedOut}
       />
     );
   };

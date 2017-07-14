@@ -128,8 +128,6 @@ export const RoundTextButton = ({ onPress, style, ...props }) => (
         },
         style
       ]}
-
-      // size={highlighted ? size * 1.2 : size}
     />
   </TouchableOpacity>
 );
@@ -172,7 +170,7 @@ export class RoundText extends Component {
   }
 
   render() {
-    const { highlighted, crossed_out, text, style, textStyle } = this.props;
+    const { highlighted, crossedOut, text, style, textStyle } = this.props;
     const { size, fontSize } = this.state;
     return (
       <Animated.View
@@ -184,7 +182,8 @@ export class RoundText extends Component {
             height: size,
             width: size,
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            overflow: 'hidden'
           },
           style,
           highlighted ? { backgroundColor: WHITE } : {}
@@ -213,7 +212,7 @@ export class RoundText extends Component {
             overflow: 'hidden'
           }}
         />
-        {crossed_out &&
+        {crossedOut &&
           <Animated.View
             style={{
               height: 3.5,
