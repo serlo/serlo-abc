@@ -6,6 +6,7 @@ import {
   BLACK_TRANSPARENT,
   WHITE,
   WHITE_TRANSPARENT,
+  WHITE_LESS_TRANSPARENT,
   PRIMARY_WEAK,
   TRANSPARENT
 } from '../styles/colors';
@@ -13,29 +14,64 @@ import { DEFAULT } from '../styles/text';
 
 const mapIndexed = addIndex(map);
 
-export const RoundImageWithBorder = ({ image, size, white, style }) => (
-  <View
-    style={[
-      {
-        backgroundColor: white ? WHITE_TRANSPARENT : BLACK_TRANSPARENT,
-        borderRadius: 9999999,
-        margin: size / 10
-      },
-      style
-    ]}
-  >
-    <Image
-      resizeMode="cover"
-      source={image}
-      style={{
-        height: size,
-        width: size,
-        margin: size / 10,
-        borderRadius: size / 2
-      }}
-    />
-  </View>
-);
+export class RoundImageWithBorder extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      size: new Animated.Value(props.size)
+    };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const scaleFactor = 1.2;
+
+    if (
+      this.props.size !== nextProps.size ||
+      this.props.highlighted !== nextProps.highlighted
+    ) {
+      Animated.timing(this.state.size, {
+        toValue: nextProps.highlighted
+          ? scaleFactor * nextProps.size
+          : nextProps.size
+      }).start();
+    }
+  }
+
+  render() {
+    const { highlighted, image, white, style } = this.props;
+    const { size } = this.state;
+
+    return (
+      <Animated.View
+        style={[
+          {
+            backgroundColor: white ? WHITE_TRANSPARENT : BLACK_TRANSPARENT,
+            borderRadius: 9999999,
+            margin: this.props.size / 10
+          },
+          highlighted && {
+            backgroundColor: WHITE_LESS_TRANSPARENT
+          },
+          style
+        ]}
+      >
+        <Animated.Image
+          resizeMode="cover"
+          source={image}
+          style={{
+            height: size,
+            width: size,
+            margin: this.props.size / 10,
+            borderRadius: (highlighted
+              ? 1.2 * this.props.size
+              : this.props.size) / 2
+          }}
+        />
+      </Animated.View>
+    );
+  }
+}
 
 export class IconWithBackground extends Component {
   constructor(props) {
@@ -109,6 +145,7 @@ export const RoundButton = ({ icon, size, style, onPress }) => (
     </View>
   </TouchableOpacity>
 );
+
 export const RoundTextButton = ({ onPress, style, ...props }) => (
   <TouchableOpacity onPress={onPress}>
     <RoundText
@@ -128,8 +165,6 @@ export const RoundTextButton = ({ onPress, style, ...props }) => (
         },
         style
       ]}
-
-      // size={highlighted ? size * 1.2 : size}
     />
   </TouchableOpacity>
 );
@@ -172,36 +207,55 @@ export class RoundText extends Component {
   }
 
   render() {
-    const { highlighted, text, style, textStyle } = this.props;
+    const { highlighted, crossedOut, text, style, textStyle } = this.props;
     const { size, fontSize } = this.state;
     return (
-      <Animated.View
+      <View
         style={[
           {
             backgroundColor: WHITE_TRANSPARENT,
             borderRadius: 9999,
-            padding: 5,
-            height: size,
-            width: size,
-            alignItems: 'center',
-            justifyContent: 'center'
+            borderColor: highlighted ? PRIMARY_WEAK : WHITE
           },
           style,
           highlighted ? { backgroundColor: WHITE } : {}
         ]}
       >
-        <Animated.Text
-          style={[
-            DEFAULT,
-            highlighted ? { color: PRIMARY_WEAK } : {},
-            { backgroundColor: TRANSPARENT },
-            textStyle,
-            { fontSize }
-          ]}
+        <Animated.View
+          style={{
+            overflow: 'hidden',
+            alignItems: 'center',
+            justifyContent: 'center',
+            // backgroundColor: 'red',
+            height: size,
+            width: size
+          }}
         >
-          {text}
-        </Animated.Text>
-      </Animated.View>
+          <Animated.Text
+            style={[
+              DEFAULT,
+              highlighted ? { color: PRIMARY_WEAK } : {},
+              { backgroundColor: TRANSPARENT, marginTop: 5 },
+              textStyle,
+              { fontSize }
+            ]}
+          >
+            {text}
+          </Animated.Text>
+          {crossedOut &&
+            <Animated.View
+              style={{
+                position: 'absolute',
+                height: 3.5,
+                width: size,
+                borderRadius: 1,
+                backgroundColor: highlighted ? PRIMARY_WEAK : WHITE,
+                transform: [{ rotate: '-45deg' }],
+                opacity: 0.8
+              }}
+            />}
+        </Animated.View>
+      </View>
     );
   }
 }

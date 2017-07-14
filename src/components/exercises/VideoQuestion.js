@@ -63,7 +63,7 @@ class VideoQuestion extends Component {
           </Text>
           <View>
             {mapIndexed(
-              (item, key) => (
+              (item, key) =>
                 <RoundTextButton
                   text={item}
                   style={[
@@ -72,8 +72,7 @@ class VideoQuestion extends Component {
                   ]}
                   key={key}
                   onPress={this.selectAnswer(key)}
-                />
-              ),
+                />,
               this.props.answers
             )}
           </View>
