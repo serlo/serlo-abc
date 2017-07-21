@@ -48,10 +48,10 @@ const MissingText = ({ image, video, sounds, text, missing, options }) => {
             onPress={() => playAll(sounds)}
           />
         : video
-            ? <View style={styles.vidContainer}>
-                <Video video={video} />
-              </View>
-            : null}
+          ? <View style={styles.vidContainer}>
+              <Video video={video} />
+            </View>
+          : null}
 
       <View style={{ flexDirection: 'row' }}>
         {textParts}
