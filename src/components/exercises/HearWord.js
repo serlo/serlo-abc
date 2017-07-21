@@ -35,17 +35,18 @@ class HearWord extends Component {
     }
   };
 
-  createWordButton = word => {
+  createWordButton = (word, index) => {
     return (
       <RoundTextButton
         onPress={() => {
           this.setState({
-            highlighted: word
+            highlighted: index
           });
         }}
-        highlighted={word == this.state.highlighted}
+        highlighted={index == this.state.highlighted}
         text={word}
         style={this.styles.textButton}
+        key={index}
       />
     );
   };
