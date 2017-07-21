@@ -6,7 +6,9 @@ import withDifficulty from './difficulty';
 
 const C = ({ label, difficulty }) =>
   <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    <Text>{label}: {difficulty}</Text>
+    <Text>
+      {label}: {difficulty}
+    </Text>
   </View>;
 
 const WrappedComponent = withDifficulty(C);

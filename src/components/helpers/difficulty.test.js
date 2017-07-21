@@ -7,7 +7,9 @@ import { createWithDifficulty } from './difficulty';
 
 const C = ({ label, difficulty }) =>
   <View>
-    <Text>{label}: {difficulty}</Text>
+    <Text>
+      {label}: {difficulty}
+    </Text>
   </View>;
 
 describe.only('withDifficulty', () => {

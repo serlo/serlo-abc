@@ -14,7 +14,6 @@ const Splash = () => {
         justifyContent: 'space-around'
       }}
     >
-
       <RoundImageWithBorder
         image={require('../../assets/images/serlo.png')}
         size={130}
@@ -23,11 +22,8 @@ const Splash = () => {
         <Text style={[DEFAULT, { color: BLACK, fontFamily: 'serlo' }]}>
           Serlo
         </Text>
-        <Text style={[DEFAULT, { marginLeft: 5, color: '#007EC1' }]}>
-          abc
-        </Text>
+        <Text style={[DEFAULT, { marginLeft: 5, color: '#007EC1' }]}>abc</Text>
       </View>
-
     </View>
   );
 };

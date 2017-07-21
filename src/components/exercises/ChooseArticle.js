@@ -99,14 +99,17 @@ class ChooseArticle extends React.Component {
             styles.shared,
             styles.article,
             {
-              backgroundColor: this.state.selectedArticle === article
-                ? a[article].strong
-                : a[article].weak
+              backgroundColor:
+                this.state.selectedArticle === article
+                  ? a[article].strong
+                  : a[article].weak
             }
           ]}
           onPress={this.selectArticle(article)}
         >
-          <Text style={DEFAULT}>{article}</Text>
+          <Text style={DEFAULT}>
+            {article}
+          </Text>
         </TouchableOpacity>,
       articles
     );

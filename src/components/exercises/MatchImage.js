@@ -57,7 +57,9 @@ class MatchImage extends Component {
           </View>
         </View>
         <View style={[styles.row, { alignItems: 'flex-end' }]}>
-          <Text style={styles.bigLetter}>{text}</Text>
+          <Text style={styles.bigLetter}>
+            {text}
+          </Text>
           <RoundButton
             icon={icon}
             size={20}
