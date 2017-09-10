@@ -1,8 +1,7 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 
 import ExplanationText from './ExplanationText';
-
-import renderer from 'react-test-renderer';
 
 it('renders without crashing', () => {
   const tree = renderer.create(

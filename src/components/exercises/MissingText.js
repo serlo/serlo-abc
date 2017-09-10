@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
 
-import { WHITE, PRIMARY } from '../../styles/colors';
+import { PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 import { loadSounds, playAll } from '../helpers/audio';
 import { RoundImageWithButton, TextPicker } from '../Components';

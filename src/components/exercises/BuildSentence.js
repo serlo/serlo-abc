@@ -115,6 +115,7 @@ export default class BuildSentence extends React.Component {
       const item = this.state.items[m];
       item.panResponder = PanResponder.create({
         onStartShouldSetPanResponder: () => true,
+        // eslint-disable-next-line handle-callback-err
         onPanResponderGrant: (e, gestureState) => {
           this.setState({ movingItem: item.id });
           item.pan.setOffset({
@@ -127,6 +128,7 @@ export default class BuildSentence extends React.Component {
           null,
           { dx: item.pan.x, dy: item.pan.y }
         ]),
+        // eslint-disable-next-line handle-callback-err
         onPanResponderRelease: (e, gesture) => {
           item.pan.flattenOffset();
           const springTo = { ...item.position };
@@ -150,7 +152,7 @@ export default class BuildSentence extends React.Component {
               let secondZoneFound = false;
               for (let j = 0; j < this.state.zones.length; j++) {
                 const secondZone = this.state.zones[j];
-                if (secondZone.item == item.id) {
+                if (secondZone.item === item.id) {
                   secondZoneFound = true;
                   secondZone.item = zone.item;
                   break;
@@ -172,7 +174,7 @@ export default class BuildSentence extends React.Component {
           if (!zoneFound) {
             for (let j = 0; j < this.state.zones.length; j++) {
               const zone = this.state.zones[j];
-              if (zone.item == item.id) {
+              if (zone.item === item.id) {
                 zone.item = -1;
                 break;
               }

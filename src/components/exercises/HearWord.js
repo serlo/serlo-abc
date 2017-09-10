@@ -43,7 +43,7 @@ class HearWord extends Component {
             highlighted: index
           });
         }}
-        highlighted={index == this.state.highlighted}
+        highlighted={index === this.state.highlighted}
         text={word}
         style={this.styles.textButton}
         key={index}

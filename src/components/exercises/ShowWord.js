@@ -1,4 +1,4 @@
-import { addIndex, forEach, map, toUpper } from 'ramda';
+import { addIndex, map, toUpper } from 'ramda';
 import React from 'react';
 import { View, Text } from 'react-native';
 

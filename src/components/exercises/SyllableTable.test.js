@@ -1,8 +1,7 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 
 import SyllableTable from './SyllableTable';
-
-import renderer from 'react-test-renderer';
 
 it('renders without crashing (3x3)', () => {
   const tree = renderer.create(

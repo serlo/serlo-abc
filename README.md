@@ -16,6 +16,7 @@ Below you'll find information about performing common tasks.
   * [yarn ios](#yarn-ios)
   * [yarn android](#yarn-android)
   * [yarn format](#yarn-format)
+  * [yarn lint](#yarn-lint)
 * [Writing and Running Tests](#writing-and-running-tests)
 * [Tips and Tricks](#tips-and-tricks)
 
@@ -61,6 +62,10 @@ Like `yarn start`, but also attempts to open your app on a connected Android dev
 ### `yarn format`
 
 Formats all JavaScript code with [prettier](https://github.com/prettier/prettier). Will be automatically run as a pre-commit git hook.
+
+### `yarn lint`
+
+Reports possible issues in all JavaScript code with [ESLint](https://github.com/eslint/eslint).
 
 ## Writing and Running Tests
 

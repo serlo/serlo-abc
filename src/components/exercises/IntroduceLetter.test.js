@@ -1,8 +1,7 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 
 import IntroduceLetter from './IntroduceLetter';
-
-import renderer from 'react-test-renderer';
 
 it('renders without crashing', () => {
   const tree = renderer.create(
