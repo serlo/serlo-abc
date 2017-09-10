@@ -1,15 +1,14 @@
 import { shallow } from 'enzyme';
-import { forEach } from 'ramda';
 import React from 'react';
 import { View } from 'react-native';
 
 import { createLoadFonts } from './fonts';
 
 describe('loadFonts', () => {
-  let Font, fonts, promise, Component, rendered, view;
+  let Font, fonts, Component, rendered, view;
 
   beforeEach(() => {
-    Font = { loadAsync: jest.fn() };
+    Font = { loadAsync: jest.fn(() => new Promise(resolve => resolve())) };
     fonts = {
       norddruck: require('../../assets/fonts/norddruck.ttf'),
       norddruckArrows: require('../../assets/fonts/norddruck_arrows.ttf')

@@ -1,6 +1,7 @@
 import React from 'react';
-import VideoQuestion from './VideoQuestion';
 import renderer from 'react-test-renderer';
+
+import VideoQuestion from './VideoQuestion';
 
 jest.mock('expo', () => ({
   Video: 'Video'
