@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react-native';
 import SyllableTable from './SyllableTable';
 
 storiesOf('exercises/SyllableTable', module)
-  .add('ne (3x3)', () =>
+  .add('ne (3x3)', () => (
     <SyllableTable
       sound={require('../../assets/sounds/ne.mp3')}
       letters={['n', 's', 't']}
@@ -12,8 +12,8 @@ storiesOf('exercises/SyllableTable', module)
       letterIndex={0}
       vowelIndex={1}
     />
-  )
-  .add('ha (5x4)', () =>
+  ))
+  .add('ha (5x4)', () => (
     <SyllableTable
       sound={require('../../assets/sounds/ha.mp3')}
       letters={['h', 'n', 'r', 's', 't']}
@@ -21,4 +21,4 @@ storiesOf('exercises/SyllableTable', module)
       letterIndex={0}
       vowelIndex={0}
     />
-  );
+  ));

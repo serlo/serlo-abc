@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react-native';
 import ChooseArticle from './ChooseArticle';
 
 storiesOf('exercises/ChooseArticle', module)
-  .add('Ananas', () =>
+  .add('Ananas', () => (
     <ChooseArticle
       image={require('../../assets/images/ananas.jpg')}
       sounds={[
@@ -13,8 +13,8 @@ storiesOf('exercises/ChooseArticle', module)
       ]}
       text="Ananas"
     />
-  )
-  .add('Apfel', () =>
+  ))
+  .add('Apfel', () => (
     <ChooseArticle
       image={require('../../assets/images/apfel.jpg')}
       sounds={[
@@ -23,4 +23,4 @@ storiesOf('exercises/ChooseArticle', module)
       ]}
       text="Apfel"
     />
-  );
+  ));

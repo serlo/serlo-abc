@@ -19,21 +19,21 @@
     "expo": "^17.0.0",
     "ramda": "^0.24.1",
     "react": "16.0.0-alpha.6",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-17.0.0.tar.gz"
+    "react-native": "^0.44.3"
   },
   "devDependencies": {
-    "@storybook/react-native": "^3.1.9",
+    "@storybook/react-native": "^3.2.8",
     "concurrently": "^3.5.0",
     "enzyme": "^2.9.1",
     "exp": "^41.0.0",
     "husky": "^0.14.3",
-    "jest": "^20.0.4",
-    "jest-expo": "^1.0.2",
-    "lint-staged": "^4.0.2",
-    "prettier": "^1.5.3",
+    "jest": "^21.0.2",
+    "jest-expo": "^20.0.0",
+    "lint-staged": "^4.1.3",
+    "prettier": "^1.6.1",
     "react-addons-test-utils": "16.0.0-alpha.3",
     "react-dom": "~15.4.2",
-    "react-native-scripts": "0.0.50",
+    "react-native-scripts": "^1.3.1",
     "react-test-renderer": "16.0.0-alpha.6"
   },
   "private": true,
