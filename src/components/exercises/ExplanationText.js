@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
-import { WHITE, GREEN } from '../../styles/colors';
+import { GREEN } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 import { loadSound, play } from '../helpers/audio';
 import { RoundButton } from '../Components';

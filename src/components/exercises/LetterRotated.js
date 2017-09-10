@@ -19,14 +19,15 @@ class LettersRotated extends Component {
   };
 
   createLetterButton = index => {
-    const { angles, letters, rotated, difficulty } = this.props;
+    const { letters } = this.props;
+
     return (
       <RoundTextButton
         onPress={() => {
           this.setState(({ highlighted }) => {
             highlighted[index] = !highlighted[index];
             return {
-              highlighted: highlighted
+              highlighted
             };
           });
         }}

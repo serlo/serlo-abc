@@ -1,8 +1,7 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 
 import LetterRotated from './LetterRotated';
-
-import renderer from 'react-test-renderer';
 
 it('renders without crashing (difficulty level 1)', () => {
   const tree = renderer.create(
