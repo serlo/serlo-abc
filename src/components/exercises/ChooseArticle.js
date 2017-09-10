@@ -79,20 +79,19 @@ class ChooseArticle extends React.Component {
 
   render() {
     const letters = mapIndexed(
-      (char, key) =>
+      (char, key) => (
         <View
           key={key}
           style={[{ padding: 5 }, styles.letterStyle, styles.shared]}
         >
-          <Text style={DEFAULT}>
-            {char}
-          </Text>
-        </View>,
+          <Text style={DEFAULT}>{char}</Text>
+        </View>
+      ),
       this.props.text
     );
 
     const articleButtons = mapIndexed(
-      (article, key) =>
+      (article, key) => (
         <TouchableOpacity
           key={key}
           style={[
@@ -107,10 +106,9 @@ class ChooseArticle extends React.Component {
           ]}
           onPress={this.selectArticle(article)}
         >
-          <Text style={DEFAULT}>
-            {article}
-          </Text>
-        </TouchableOpacity>,
+          <Text style={DEFAULT}>{article}</Text>
+        </TouchableOpacity>
+      ),
       articles
     );
 
@@ -130,9 +128,7 @@ class ChooseArticle extends React.Component {
           buttonSize={40}
           onPress={this.play}
         />
-        <View style={{ flexDirection: 'row' }}>
-          {letters}
-        </View>
+        <View style={{ flexDirection: 'row' }}>{letters}</View>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           {articleButtons}
         </View>

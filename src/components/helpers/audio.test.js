@@ -38,7 +38,7 @@ describe('play', () => {
     play(sound).then(done);
 
     // Check that callback is passed correctly
-    expect(sound.setPlaybackFinishedCallback).toHaveBeenCalledWith(sound.cb);
+    expect(sound.setCallback).toHaveBeenCalledWith(sound.cb);
 
     sound.simulateFinishedPlaying();
   });
@@ -73,37 +73,34 @@ describe('playAll', () => {
     sound.simulateFinishedPlaying();
   });
 
-  it.only(
-    'plays the second sound after the specified delay when the first sound has finished playing',
-    done => {
-      const sounds = times(() => new Sound(), 2);
+  it('plays the second sound after the specified delay when the first sound has finished playing', done => {
+    const sounds = times(() => new Sound(), 2);
 
-      playAll(sounds, 1337).then(() => {
-        expect(sounds[0].stopAsync).toHaveBeenCalled();
-        expect(sounds[1].stopAsync).toHaveBeenCalled();
-        done();
-      });
+    playAll(sounds, 1337).then(() => {
+      expect(sounds[0].stopAsync).toHaveBeenCalled();
+      expect(sounds[1].stopAsync).toHaveBeenCalled();
+      done();
+    });
 
-      // First sound should have started playing
-      expect(sounds[0].playAsync).toHaveBeenCalled();
+    // First sound should have started playing
+    expect(sounds[0].playAsync).toHaveBeenCalled();
+    expect(sounds[1].playAsync).not.toHaveBeenCalled();
+    expect(setTimeout).not.toHaveBeenCalled();
+
+    sounds[0].simulateFinishedPlaying();
+
+    // Wait for the pending promises to flush, see https://github.com/facebook/jest/issues/2157
+    setImmediate(() => {
+      expect(setTimeout.mock.calls.length).toEqual(1);
+      expect(setTimeout.mock.calls[0][1]).toEqual(1337);
       expect(sounds[1].playAsync).not.toHaveBeenCalled();
-      expect(setTimeout).not.toHaveBeenCalled();
 
-      sounds[0].simulateFinishedPlaying();
+      jest.runOnlyPendingTimers();
 
-      // Wait for the pending promises to flush, see https://github.com/facebook/jest/issues/2157
-      setImmediate(() => {
-        expect(setTimeout.mock.calls.length).toEqual(1);
-        expect(setTimeout.mock.calls[0][1]).toEqual(1337);
-        expect(sounds[1].playAsync).not.toHaveBeenCalled();
-
-        jest.runOnlyPendingTimers();
-
-        expect(sounds[1].playAsync).toHaveBeenCalled();
-        sounds[1].simulateFinishedPlaying();
-      });
-    }
-  );
+      expect(sounds[1].playAsync).toHaveBeenCalled();
+      sounds[1].simulateFinishedPlaying();
+    });
+  });
 });
 
 describe('loadSounds', () => {

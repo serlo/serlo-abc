@@ -45,7 +45,7 @@ exports[`renders without crashing 1`] = `
         onStartShouldSetResponder={[Function]}
         resizeMode={undefined}
         shouldPlay={true}
-        source={1}
+        source={1337}
         style={
           Object {
             "width": "100%",

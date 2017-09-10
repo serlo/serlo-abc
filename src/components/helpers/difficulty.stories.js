@@ -4,15 +4,16 @@ import { storiesOf } from '@storybook/react-native';
 
 import withDifficulty from './difficulty';
 
-const C = ({ label, difficulty }) =>
+const C = ({ label, difficulty }) => (
   <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
     <Text>
       {label}: {difficulty}
     </Text>
-  </View>;
+  </View>
+);
 
 const WrappedComponent = withDifficulty(C);
 
-storiesOf('helpers/difficulty', module).add('placeholder', () =>
+storiesOf('helpers/difficulty', module).add('placeholder', () => (
   <WrappedComponent label="Foo" />
-);
+));

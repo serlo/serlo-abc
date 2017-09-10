@@ -15,7 +15,7 @@ const SyllableRow = ({
   vowels,
   letterIndex,
   vowelIndex
-}) =>
+}) => (
   <View
     style={{
       alignItems: 'center',
@@ -46,7 +46,8 @@ const SyllableRow = ({
         />
       );
     }, vowels)}
-  </View>;
+  </View>
+);
 
 const SyllableTable = ({ letters, ...props }) => {
   return (
@@ -66,13 +67,14 @@ const SyllableTable = ({ letters, ...props }) => {
         }}
       >
         {mapIndexed(
-          (letter, letterKey) =>
+          (letter, letterKey) => (
             <SyllableRow
               key={letterKey}
               letter={letter}
               letterKey={letterKey}
               {...props}
-            />,
+            />
+          ),
           letters
         )}
       </View>

@@ -17,12 +17,11 @@ const styles = {
   text: DEFAULT
 };
 
-const ExplanationText = ({ text, sound }) =>
+const ExplanationText = ({ text, sound }) => (
   <View style={styles.container}>
-    <Text style={styles.text}>
-      {text}
-    </Text>
+    <Text style={styles.text}>{text}</Text>
     <RoundButton icon={speakerImage} size={40} onPress={() => play(sound)} />
-  </View>;
+  </View>
+);
 
 export default loadSound(ExplanationText);

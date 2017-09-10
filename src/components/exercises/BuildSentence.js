@@ -274,7 +274,7 @@ export default class BuildSentence extends React.Component {
 
     return (
       <View style={containerStyle}>
-        {this.state.items.map(item =>
+        {this.state.items.map(item => (
           <Animated.View key={item.id} {...item.props}>
             <RoundText
               text={item.word}
@@ -282,7 +282,7 @@ export default class BuildSentence extends React.Component {
               style={styles.textContainer}
             />
           </Animated.View>
-        )}
+        ))}
 
         {/*
           A bit of a hack here to keep moving item on top of the others (we
@@ -290,17 +290,17 @@ export default class BuildSentence extends React.Component {
           dynamically changing zIndex of the items didn't work,
           will try to check what else can be done as a better solution
         */}
-        {this.state.movingItem !== -1
-          ? <Animated.View
-              style={this.state.items[this.state.movingItem].props.style}
-            >
-              <RoundText
-                text={this.state.items[this.state.movingItem].word}
-                textStyle={textStyle}
-                style={styles.textContainer}
-              />
-            </Animated.View>
-          : null}
+        {this.state.movingItem !== -1 ? (
+          <Animated.View
+            style={this.state.items[this.state.movingItem].props.style}
+          >
+            <RoundText
+              text={this.state.items[this.state.movingItem].word}
+              textStyle={textStyle}
+              style={styles.textContainer}
+            />
+          </Animated.View>
+        ) : null}
       </View>
     );
   };

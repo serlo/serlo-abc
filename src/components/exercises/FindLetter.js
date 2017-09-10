@@ -55,7 +55,7 @@ class FindLetter extends Component {
 
   render() {
     const letters = mapIndexed(
-      (char, key) =>
+      (char, key) => (
         <TouchableOpacity
           key={key}
           onPress={this.toggleLetter(key)}
@@ -64,10 +64,9 @@ class FindLetter extends Component {
             this.state.highlighted[key] ? styles.highlighted : null
           ]}
         >
-          <Text style={DEFAULT}>
-            {char}
-          </Text>
-        </TouchableOpacity>,
+          <Text style={DEFAULT}>{char}</Text>
+        </TouchableOpacity>
+      ),
       this.props.text
     );
 
@@ -87,9 +86,7 @@ class FindLetter extends Component {
           buttonSize={40}
           onPress={this.play}
         />
-        <View style={{ flexDirection: 'row' }}>
-          {letters}
-        </View>
+        <View style={{ flexDirection: 'row' }}>{letters}</View>
       </View>
     );
   }
