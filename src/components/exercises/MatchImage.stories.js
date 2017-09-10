@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react-native';
 
 import MatchImage from './MatchImage';
 
-storiesOf('exercises/MatchImage', module).add('Apfel', () =>
+storiesOf('exercises/MatchImage', module).add('Apfel', () => (
   <MatchImage
     images={[
       require('../../assets/images/affe.jpg'),
@@ -14,4 +14,4 @@ storiesOf('exercises/MatchImage', module).add('Apfel', () =>
     text="Apfel"
     sound={require('../../assets/sounds/apfel_short.mp3')}
   />
-);
+));

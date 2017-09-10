@@ -17,7 +17,7 @@ const highlightStyle = {
 
 const ShowWord = ({ image, sounds, text, letter }) => {
   const letters = mapIndexed(
-    (char, key) =>
+    (char, key) => (
       <View
         key={key}
         style={[
@@ -25,10 +25,9 @@ const ShowWord = ({ image, sounds, text, letter }) => {
           toUpper(char) === toUpper(letter) ? highlightStyle : null
         ]}
       >
-        <Text style={DEFAULT}>
-          {char}
-        </Text>
-      </View>,
+        <Text style={DEFAULT}>{char}</Text>
+      </View>
+    ),
     text
   );
 
@@ -48,9 +47,7 @@ const ShowWord = ({ image, sounds, text, letter }) => {
         buttonSize={40}
         onPress={() => playAll(sounds)}
       />
-      <View style={{ flexDirection: 'row' }}>
-        {letters}
-      </View>
+      <View style={{ flexDirection: 'row' }}>{letters}</View>
     </View>
   );
 };

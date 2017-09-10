@@ -53,14 +53,10 @@ const UnwrappedShowLetter = ({ letter, sounds, isRepeat }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.bigLetter}>
-          {letter}
-        </Text>
+        <Text style={styles.bigLetter}>{letter}</Text>
         <RoundButton icon={speakerImage} size={40} onPress={play} />
       </View>
-      <View height={80}>
-        {toggleRepeatButton()}
-      </View>
+      <View height={80}>{toggleRepeatButton()}</View>
     </View>
   );
 };

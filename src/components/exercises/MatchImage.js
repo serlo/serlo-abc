@@ -31,7 +31,7 @@ class MatchImage extends Component {
     };
   }
 
-  createImageButton = index =>
+  createImageButton = index => (
     <TouchableOpacity onPress={() => this.setState({ highlighted: index })}>
       <RoundImageWithBorder
         white
@@ -39,7 +39,8 @@ class MatchImage extends Component {
         image={this.props.images[index]}
         size={100}
       />
-    </TouchableOpacity>;
+    </TouchableOpacity>
+  );
 
   render() {
     const { text, sound } = this.props;
@@ -57,9 +58,7 @@ class MatchImage extends Component {
           </View>
         </View>
         <View style={[styles.row, { alignItems: 'flex-end' }]}>
-          <Text style={styles.bigLetter}>
-            {text}
-          </Text>
+          <Text style={styles.bigLetter}>{text}</Text>
           <RoundButton
             icon={icon}
             size={20}

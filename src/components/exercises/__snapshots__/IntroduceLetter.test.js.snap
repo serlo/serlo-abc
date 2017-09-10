@@ -85,7 +85,7 @@ exports[`renders without crashing 1`] = `
       >
         <Image
           resizeMode="cover"
-          source={1}
+          source={1337}
           style={
             Object {
               "borderRadius": 135.41666666666669,
@@ -107,7 +107,7 @@ exports[`renders without crashing 1`] = `
       >
         <Image
           resizeMode="cover"
-          source={1}
+          source={1337}
           style={
             Object {
               "borderRadius": 114.58333333333334,
@@ -132,7 +132,7 @@ exports[`renders without crashing 1`] = `
     >
       <Image
         resizeMode="cover"
-        source={1}
+        source={1337}
         style={
           Object {
             "borderRadius": 135.41666666666669,

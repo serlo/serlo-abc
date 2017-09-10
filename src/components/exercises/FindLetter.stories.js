@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react-native';
 import FindLetter from './FindLetter';
 
 storiesOf('exercises/FindLetter', module)
-  .add('Ananas', () =>
+  .add('Ananas', () => (
     <FindLetter
       image={require('../../assets/images/ananas.jpg')}
       sounds={[
@@ -13,8 +13,8 @@ storiesOf('exercises/FindLetter', module)
       ]}
       text="Ananas"
     />
-  )
-  .add('Apfel', () =>
+  ))
+  .add('Apfel', () => (
     <FindLetter
       image={require('../../assets/images/apfel.jpg')}
       sounds={[
@@ -23,4 +23,4 @@ storiesOf('exercises/FindLetter', module)
       ]}
       text="Apfel"
     />
-  );
+  ));

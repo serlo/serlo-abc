@@ -5,12 +5,13 @@ import { View } from 'react-native';
 
 import { createWithDifficulty } from './difficulty';
 
-const C = ({ label, difficulty }) =>
+const C = ({ label, difficulty }) => (
   <View>
     <Text>
       {label}: {difficulty}
     </Text>
-  </View>;
+  </View>
+);
 
 describe.only('withDifficulty', () => {
   let Component, rendered, c;

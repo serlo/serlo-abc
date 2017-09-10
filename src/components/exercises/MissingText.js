@@ -26,36 +26,34 @@ const styles = {
 
 const MissingText = ({ image, video, sounds, text, missing, options }) => {
   const textParts = mapIndexed((part, key) => {
-    return key === missing
-      ? <View key={key}>
-          <TextPicker options={options} />
-        </View>
-      : <View key={key} style={{ padding: 5 }}>
-          <Text style={DEFAULT}>
-            {part}
-          </Text>
-        </View>;
+    return key === missing ? (
+      <View key={key}>
+        <TextPicker options={options} />
+      </View>
+    ) : (
+      <View key={key} style={{ padding: 5 }}>
+        <Text style={DEFAULT}>{part}</Text>
+      </View>
+    );
   }, text);
 
   return (
     <View style={styles.container}>
-      {image
-        ? <RoundImageWithButton
-            image={image}
-            imageSize={200}
-            icon={speakerImage}
-            buttonSize={40}
-            onPress={() => playAll(sounds)}
-          />
-        : video
-          ? <View style={styles.vidContainer}>
-              <Video video={video} />
-            </View>
-          : null}
+      {image ? (
+        <RoundImageWithButton
+          image={image}
+          imageSize={200}
+          icon={speakerImage}
+          buttonSize={40}
+          onPress={() => playAll(sounds)}
+        />
+      ) : video ? (
+        <View style={styles.vidContainer}>
+          <Video video={video} />
+        </View>
+      ) : null}
 
-      <View style={{ flexDirection: 'row' }}>
-        {textParts}
-      </View>
+      <View style={{ flexDirection: 'row' }}>{textParts}</View>
     </View>
   );
 };

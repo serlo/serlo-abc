@@ -75,7 +75,7 @@ exports[`renders without crashing (with repeat) 1`] = `
         }
       >
         <Image
-          source={1}
+          source={1337}
           style={
             Object {
               "height": 40,
@@ -100,7 +100,7 @@ exports[`renders without crashing (with repeat) 1`] = `
       }
     >
       <Image
-        source={1}
+        source={1337}
         style={
           Object {
             "height": 40,
@@ -189,7 +189,7 @@ exports[`renders without crashing (without repeat) 1`] = `
         }
       >
         <Image
-          source={1}
+          source={1337}
           style={
             Object {
               "height": 40,
