@@ -6,7 +6,7 @@ export const play = sound =>
   new Promise(resolve => {
     sound.playAsync();
 
-    sound.setCallback(status => {
+    sound.setOnPlaybackStatusUpdate(status => {
       if (status.didJustFinish) {
         sound.stopAsync();
         resolve();

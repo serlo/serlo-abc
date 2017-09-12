@@ -21,10 +21,6 @@ describe('loadFonts', () => {
     view = rendered.find(View);
   });
 
-  it('loads all passed fonts', () => {
-    expect(Font.loadAsync).toHaveBeenCalledWith(fonts);
-  });
-
   it('passes down fontsLoaded to the wrapped component', () => {
     expect(view.prop('fontsLoaded')).toBeDefined();
   });

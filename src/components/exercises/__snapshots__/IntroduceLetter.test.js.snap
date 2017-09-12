@@ -36,6 +36,7 @@ exports[`renders without crashing 1`] = `
       }
     >
       <View
+        collapsable={undefined}
         style={
           Object {
             "alignItems": "center",
@@ -49,6 +50,8 @@ exports[`renders without crashing 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
+          collapsable={undefined}
+          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -75,6 +78,7 @@ exports[`renders without crashing 1`] = `
       }
     >
       <View
+        collapsable={undefined}
         style={
           Object {
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
@@ -84,6 +88,7 @@ exports[`renders without crashing 1`] = `
         }
       >
         <Image
+          collapsable={undefined}
           resizeMode="cover"
           source={1337}
           style={
@@ -97,6 +102,7 @@ exports[`renders without crashing 1`] = `
         />
       </View>
       <View
+        collapsable={undefined}
         style={
           Object {
             "backgroundColor": "rgba(255, 255, 255, 0.2)",
@@ -106,6 +112,7 @@ exports[`renders without crashing 1`] = `
         }
       >
         <Image
+          collapsable={undefined}
           resizeMode="cover"
           source={1337}
           style={
@@ -120,6 +127,7 @@ exports[`renders without crashing 1`] = `
       </View>
     </View>
     <View
+      collapsable={undefined}
       style={
         Object {
           "backgroundColor": "rgba(255, 255, 255, 0.2)",
@@ -131,6 +139,7 @@ exports[`renders without crashing 1`] = `
       }
     >
       <Image
+        collapsable={undefined}
         resizeMode="cover"
         source={1337}
         style={
