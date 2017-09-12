@@ -12,7 +12,7 @@
     "android": "concurrently --kill-others \"storybook start -p 19001\" \"react-native-scripts android\"",
     "ios": "concurrently --kill-others \"storybook start -p 19001\" \"react-native-scripts ios\"",
     "test": "jest",
-    "format": "prettier --write \"{{src,storybook}/**/*,*}.js\"",
+    "format": "prettier --write \"{{scripts, src,storybook}/**/*,*}.js\"",
     "lint": "eslint \"{{src,storybook}/**/*,*}.js\"",
     "precommit": "lint-staged"
   },
