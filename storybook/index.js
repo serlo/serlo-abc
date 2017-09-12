@@ -12,7 +12,7 @@ configure(() => {
 
 const { hostname } = url.parse(NativeModules.SourceCode.scriptURL);
 
-const StorybookUI = getStorybookUI({ port: 19001, host: hostname });
+const StorybookUI = getStorybookUI({ port: 7007, host: hostname });
 
 const App = ({ fontsLoaded }) => fontsLoaded && <StorybookUI />;
 

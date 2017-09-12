@@ -20,6 +20,7 @@ exports[`renders without crashing 1`] = `
     }
   >
     <View
+      collapsable={undefined}
       style={
         Object {
           "backgroundColor": "rgba(0, 0, 0, 0.1)",
@@ -29,6 +30,7 @@ exports[`renders without crashing 1`] = `
       }
     >
       <Image
+        collapsable={undefined}
         resizeMode="cover"
         source={1337}
         style={
@@ -46,8 +48,10 @@ exports[`renders without crashing 1`] = `
       accessibilityLabel={undefined}
       accessibilityTraits={undefined}
       accessible={true}
+      collapsable={undefined}
       hitSlop={undefined}
       isTVSelectable={true}
+      nativeID={undefined}
       onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -130,6 +134,7 @@ exports[`renders without crashing 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={false}
         ellipsizeMode="tail"
         style={
           Object {
@@ -171,6 +176,7 @@ exports[`renders without crashing 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={false}
         ellipsizeMode="tail"
         style={
           Object {
@@ -212,6 +218,7 @@ exports[`renders without crashing 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={false}
         ellipsizeMode="tail"
         style={
           Object {
@@ -253,6 +260,7 @@ exports[`renders without crashing 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={false}
         ellipsizeMode="tail"
         style={
           Object {
@@ -294,6 +302,7 @@ exports[`renders without crashing 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={false}
         ellipsizeMode="tail"
         style={
           Object {
@@ -335,6 +344,7 @@ exports[`renders without crashing 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={false}
         ellipsizeMode="tail"
         style={
           Object {
@@ -362,8 +372,10 @@ exports[`renders without crashing 1`] = `
       accessibilityLabel={undefined}
       accessibilityTraits={undefined}
       accessible={true}
+      collapsable={undefined}
       hitSlop={undefined}
       isTVSelectable={true}
+      nativeID={undefined}
       onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -395,6 +407,7 @@ exports[`renders without crashing 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={false}
         ellipsizeMode="tail"
         style={
           Object {
@@ -413,8 +426,10 @@ exports[`renders without crashing 1`] = `
       accessibilityLabel={undefined}
       accessibilityTraits={undefined}
       accessible={true}
+      collapsable={undefined}
       hitSlop={undefined}
       isTVSelectable={true}
+      nativeID={undefined}
       onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -446,6 +461,7 @@ exports[`renders without crashing 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={false}
         ellipsizeMode="tail"
         style={
           Object {
@@ -464,8 +480,10 @@ exports[`renders without crashing 1`] = `
       accessibilityLabel={undefined}
       accessibilityTraits={undefined}
       accessible={true}
+      collapsable={undefined}
       hitSlop={undefined}
       isTVSelectable={true}
+      nativeID={undefined}
       onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -497,6 +515,7 @@ exports[`renders without crashing 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={false}
         ellipsizeMode="tail"
         style={
           Object {

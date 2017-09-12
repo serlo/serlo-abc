@@ -46,6 +46,7 @@ exports[`renders without crashing (3x3) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -59,6 +60,8 @@ exports[`renders without crashing (3x3) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -80,8 +83,10 @@ exports[`renders without crashing (3x3) 1`] = `
         accessibilityLabel={undefined}
         accessibilityTraits={undefined}
         accessible={true}
+        collapsable={undefined}
         hitSlop={undefined}
         isTVSelectable={true}
+        nativeID={undefined}
         onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -127,6 +132,7 @@ exports[`renders without crashing (3x3) 1`] = `
           }
         >
           <View
+            collapsable={undefined}
             style={
               Object {
                 "alignItems": "center",
@@ -140,6 +146,8 @@ exports[`renders without crashing (3x3) 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              collapsable={undefined}
+              disabled={false}
               ellipsizeMode="tail"
               style={
                 Object {
@@ -174,6 +182,7 @@ exports[`renders without crashing (3x3) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -187,6 +196,8 @@ exports[`renders without crashing (3x3) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -230,6 +241,7 @@ exports[`renders without crashing (3x3) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -243,6 +255,8 @@ exports[`renders without crashing (3x3) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -276,6 +290,7 @@ exports[`renders without crashing (3x3) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -289,6 +304,8 @@ exports[`renders without crashing (3x3) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -322,6 +339,7 @@ exports[`renders without crashing (3x3) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -335,6 +353,8 @@ exports[`renders without crashing (3x3) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -378,6 +398,7 @@ exports[`renders without crashing (3x3) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -391,6 +412,8 @@ exports[`renders without crashing (3x3) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -424,6 +447,7 @@ exports[`renders without crashing (3x3) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -437,6 +461,8 @@ exports[`renders without crashing (3x3) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -470,6 +496,7 @@ exports[`renders without crashing (3x3) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -483,6 +510,8 @@ exports[`renders without crashing (3x3) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -538,8 +567,10 @@ exports[`renders without crashing (5x4) 1`] = `
         accessibilityLabel={undefined}
         accessibilityTraits={undefined}
         accessible={true}
+        collapsable={undefined}
         hitSlop={undefined}
         isTVSelectable={true}
+        nativeID={undefined}
         onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -585,6 +616,7 @@ exports[`renders without crashing (5x4) 1`] = `
           }
         >
           <View
+            collapsable={undefined}
             style={
               Object {
                 "alignItems": "center",
@@ -598,6 +630,8 @@ exports[`renders without crashing (5x4) 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              collapsable={undefined}
+              disabled={false}
               ellipsizeMode="tail"
               style={
                 Object {
@@ -632,6 +666,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -645,6 +680,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -678,6 +715,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -691,6 +729,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -724,6 +764,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -737,6 +778,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -780,6 +823,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -793,6 +837,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -826,6 +872,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -839,6 +886,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -872,6 +921,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -885,6 +935,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -918,6 +970,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -931,6 +984,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -974,6 +1029,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -987,6 +1043,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -1020,6 +1078,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -1033,6 +1092,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -1066,6 +1127,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -1079,6 +1141,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -1112,6 +1176,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -1125,6 +1190,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -1168,6 +1235,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -1181,6 +1249,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -1214,6 +1284,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -1227,6 +1298,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -1260,6 +1333,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -1273,6 +1347,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -1306,6 +1382,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -1319,6 +1396,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -1362,6 +1441,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -1375,6 +1455,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -1408,6 +1490,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -1421,6 +1504,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -1454,6 +1539,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -1467,6 +1553,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -1500,6 +1588,7 @@ exports[`renders without crashing (5x4) 1`] = `
         }
       >
         <View
+          collapsable={undefined}
           style={
             Object {
               "alignItems": "center",
@@ -1513,6 +1602,8 @@ exports[`renders without crashing (5x4) 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            collapsable={undefined}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {

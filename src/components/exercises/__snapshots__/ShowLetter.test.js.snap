@@ -22,6 +22,7 @@ exports[`renders without crashing (with repeat) 1`] = `
     <Text
       accessible={true}
       allowFontScaling={true}
+      disabled={false}
       ellipsizeMode="tail"
       style={
         Object {
@@ -40,8 +41,10 @@ exports[`renders without crashing (with repeat) 1`] = `
       accessibilityLabel={undefined}
       accessibilityTraits={undefined}
       accessible={true}
+      collapsable={undefined}
       hitSlop={undefined}
       isTVSelectable={true}
+      nativeID={undefined}
       onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -136,6 +139,7 @@ exports[`renders without crashing (without repeat) 1`] = `
     <Text
       accessible={true}
       allowFontScaling={true}
+      disabled={false}
       ellipsizeMode="tail"
       style={
         Object {
@@ -154,8 +158,10 @@ exports[`renders without crashing (without repeat) 1`] = `
       accessibilityLabel={undefined}
       accessibilityTraits={undefined}
       accessible={true}
+      collapsable={undefined}
       hitSlop={undefined}
       isTVSelectable={true}
+      nativeID={undefined}
       onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
