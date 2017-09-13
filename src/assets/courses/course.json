@@ -1,0 +1,33 @@
+{
+  "title": "Course name",
+  "sections": [
+    {
+      "title": "A, N, E",
+      "chapters": [
+        {
+          "title": "Buchstabenpräsentation",
+          "exercises": [
+            {
+              "title": "Majuskel",
+              "component": "DifferFromSymbol",
+              "props": {
+                "symbols": ["X", "X", "X", "X", "M"],
+                "correctIndex": 4
+              }
+            },
+            {
+              "title": "Minuskel",
+              "component": "LetterRotated",
+              "props": {
+                "letters": ["a", "N", "E", "s", "T"],
+                "rotated": [3, 4],
+                "angles": ["50deg", "-30deg"],
+                "difficulty": 0.5,
+              }
+            },
+          ]
+        }
+      ]
+    }
+  ]
+}
