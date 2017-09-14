@@ -20,69 +20,38 @@ exports[`renders without crashing 1`] = `
       }
     }
   >
-    <Video
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      onEnd={[Function]}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      paused={false}
-      resizeMode={undefined}
-      source={1}
-      style={
-        Object {
-          "height": "100%",
-          "width": "90%",
-        }
-      }
-      testID={undefined}
-    />
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "rgba(0, 0, 0, 0.6)",
-          "borderRadius": 9999,
-          "height": 0,
-          "opacity": 1,
-          "overflow": "hidden",
-          "padding": 0,
-          "position": "absolute",
-          "width": 0,
-          "zIndex": 9999,
+          "alignItems": "center",
+          "justifyContent": "center",
+          "width": "100%",
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
-      <Image
+      <Video
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        callback={[Function]}
+        hitSlop={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        resizeMode={undefined}
+        shouldPlay={true}
         source={1}
         style={
           Object {
-            "height": 50,
-            "width": 50,
+            "width": "100%",
           }
         }
+        testID={undefined}
       />
     </View>
   </View>
@@ -140,43 +109,65 @@ exports[`renders without crashing 1`] = `
       >
         <View
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#73dbff",
-              "borderRadius": 9999,
-              "elevation": 5,
-              "height": NaN,
-              "justifyContent": "center",
-              "margin": 5,
-              "opacity": 1,
-              "padding": 5,
-              "shadowColor": "rgba(0, 0, 0, 0.1)",
-              "shadowOffset": Object {
-                "height": 4,
-                "width": 4,
+            Array [
+              Object {
+                "backgroundColor": "rgba(255, 255, 255, 0.2)",
+                "borderColor": "#ffffff",
+                "borderRadius": 9999,
               },
-              "shadowOpacity": 1,
-              "shadowRadius": 0,
-              "width": NaN,
-            }
+              Array [
+                Object {
+                  "backgroundColor": "#73dbff",
+                  "elevation": 5,
+                  "opacity": 1,
+                  "shadowColor": "rgba(0, 0, 0, 0.1)",
+                  "shadowOffset": Object {
+                    "height": 4,
+                    "width": 4,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 0,
+                },
+                Array [
+                  Object {
+                    "margin": 5,
+                  },
+                  null,
+                ],
+              ],
+              Object {},
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
             style={
               Object {
-                "backgroundColor": "transparent",
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
+                "alignItems": "center",
+                "height": NaN,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "width": NaN,
               }
             }
           >
-            Ich bin eine Ananas
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#ffffff",
+                  "fontFamily": "norddruck",
+                  "fontSize": 35,
+                  "marginTop": 5,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Ich bin eine Ananas
+            </Text>
+          </View>
         </View>
       </View>
       <View
@@ -203,43 +194,65 @@ exports[`renders without crashing 1`] = `
       >
         <View
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#73dbff",
-              "borderRadius": 9999,
-              "elevation": 5,
-              "height": NaN,
-              "justifyContent": "center",
-              "margin": 5,
-              "opacity": 1,
-              "padding": 5,
-              "shadowColor": "rgba(0, 0, 0, 0.1)",
-              "shadowOffset": Object {
-                "height": 4,
-                "width": 4,
+            Array [
+              Object {
+                "backgroundColor": "rgba(255, 255, 255, 0.2)",
+                "borderColor": "#ffffff",
+                "borderRadius": 9999,
               },
-              "shadowOpacity": 1,
-              "shadowRadius": 0,
-              "width": NaN,
-            }
+              Array [
+                Object {
+                  "backgroundColor": "#73dbff",
+                  "elevation": 5,
+                  "opacity": 1,
+                  "shadowColor": "rgba(0, 0, 0, 0.1)",
+                  "shadowOffset": Object {
+                    "height": 4,
+                    "width": 4,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 0,
+                },
+                Array [
+                  Object {
+                    "margin": 5,
+                  },
+                  null,
+                ],
+              ],
+              Object {},
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
             style={
               Object {
-                "backgroundColor": "transparent",
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
+                "alignItems": "center",
+                "height": NaN,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "width": NaN,
               }
             }
           >
-            Du bist eine Ananas
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#ffffff",
+                  "fontFamily": "norddruck",
+                  "fontSize": 35,
+                  "marginTop": 5,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Du bist eine Ananas
+            </Text>
+          </View>
         </View>
       </View>
       <View
@@ -266,43 +279,65 @@ exports[`renders without crashing 1`] = `
       >
         <View
           style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#73dbff",
-              "borderRadius": 9999,
-              "elevation": 5,
-              "height": NaN,
-              "justifyContent": "center",
-              "margin": 5,
-              "opacity": 1,
-              "padding": 5,
-              "shadowColor": "rgba(0, 0, 0, 0.1)",
-              "shadowOffset": Object {
-                "height": 4,
-                "width": 4,
+            Array [
+              Object {
+                "backgroundColor": "rgba(255, 255, 255, 0.2)",
+                "borderColor": "#ffffff",
+                "borderRadius": 9999,
               },
-              "shadowOpacity": 1,
-              "shadowRadius": 0,
-              "width": NaN,
-            }
+              Array [
+                Object {
+                  "backgroundColor": "#73dbff",
+                  "elevation": 5,
+                  "opacity": 1,
+                  "shadowColor": "rgba(0, 0, 0, 0.1)",
+                  "shadowOffset": Object {
+                    "height": 4,
+                    "width": 4,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 0,
+                },
+                Array [
+                  Object {
+                    "margin": 5,
+                  },
+                  null,
+                ],
+              ],
+              Object {},
+            ]
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
             style={
               Object {
-                "backgroundColor": "transparent",
-                "color": "#ffffff",
-                "fontFamily": "norddruck",
-                "fontSize": 35,
-                "textAlign": "center",
+                "alignItems": "center",
+                "height": NaN,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "width": NaN,
               }
             }
           >
-            Wir sind eine Ananas
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#ffffff",
+                  "fontFamily": "norddruck",
+                  "fontSize": 35,
+                  "marginTop": 5,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Wir sind eine Ananas
+            </Text>
+          </View>
         </View>
       </View>
     </View>

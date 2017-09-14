@@ -230,7 +230,9 @@ declare module 'expo/src/FacebookAds/BannerViewManager.js' {
   declare module.exports: $Exports<'expo/src/FacebookAds/BannerViewManager'>;
 }
 declare module 'expo/src/FacebookAds/InterstitialAdManager.js' {
-  declare module.exports: $Exports<'expo/src/FacebookAds/InterstitialAdManager'>;
+  declare module.exports: $Exports<
+    'expo/src/FacebookAds/InterstitialAdManager'
+  >;
 }
 declare module 'expo/src/FacebookAds/NativeAdsManager.js' {
   declare module.exports: $Exports<'expo/src/FacebookAds/NativeAdsManager'>;

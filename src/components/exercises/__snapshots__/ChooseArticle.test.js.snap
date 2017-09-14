@@ -103,38 +103,29 @@ exports[`renders without crashing 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
-        Object {
-          "backgroundColor": "#17bcde",
-          "borderRadius": 20,
-          "elevation": 10,
-          "margin": 2,
-          "opacity": 1,
-          "padding": 5,
-          "shadowColor": "rgba(0, 0, 0, 0.1)",
-          "shadowOffset": Object {
-            "height": 4,
-            "width": 4,
+        Array [
+          Object {
+            "padding": 5,
           },
-          "shadowOpacity": 1,
-          "shadowRadius": 0,
-        }
+          Object {
+            "backgroundColor": "#17bcde",
+          },
+          Object {
+            "borderRadius": 20,
+            "elevation": 10,
+            "margin": 2,
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+          },
+        ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -153,38 +144,29 @@ exports[`renders without crashing 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
-        Object {
-          "backgroundColor": "#17bcde",
-          "borderRadius": 20,
-          "elevation": 10,
-          "margin": 2,
-          "opacity": 1,
-          "padding": 5,
-          "shadowColor": "rgba(0, 0, 0, 0.1)",
-          "shadowOffset": Object {
-            "height": 4,
-            "width": 4,
+        Array [
+          Object {
+            "padding": 5,
           },
-          "shadowOpacity": 1,
-          "shadowRadius": 0,
-        }
+          Object {
+            "backgroundColor": "#17bcde",
+          },
+          Object {
+            "borderRadius": 20,
+            "elevation": 10,
+            "margin": 2,
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+          },
+        ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -203,38 +185,29 @@ exports[`renders without crashing 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
-        Object {
-          "backgroundColor": "#17bcde",
-          "borderRadius": 20,
-          "elevation": 10,
-          "margin": 2,
-          "opacity": 1,
-          "padding": 5,
-          "shadowColor": "rgba(0, 0, 0, 0.1)",
-          "shadowOffset": Object {
-            "height": 4,
-            "width": 4,
+        Array [
+          Object {
+            "padding": 5,
           },
-          "shadowOpacity": 1,
-          "shadowRadius": 0,
-        }
+          Object {
+            "backgroundColor": "#17bcde",
+          },
+          Object {
+            "borderRadius": 20,
+            "elevation": 10,
+            "margin": 2,
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+          },
+        ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -253,38 +226,29 @@ exports[`renders without crashing 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
-        Object {
-          "backgroundColor": "#17bcde",
-          "borderRadius": 20,
-          "elevation": 10,
-          "margin": 2,
-          "opacity": 1,
-          "padding": 5,
-          "shadowColor": "rgba(0, 0, 0, 0.1)",
-          "shadowOffset": Object {
-            "height": 4,
-            "width": 4,
+        Array [
+          Object {
+            "padding": 5,
           },
-          "shadowOpacity": 1,
-          "shadowRadius": 0,
-        }
+          Object {
+            "backgroundColor": "#17bcde",
+          },
+          Object {
+            "borderRadius": 20,
+            "elevation": 10,
+            "margin": 2,
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+          },
+        ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -303,38 +267,29 @@ exports[`renders without crashing 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
-        Object {
-          "backgroundColor": "#17bcde",
-          "borderRadius": 20,
-          "elevation": 10,
-          "margin": 2,
-          "opacity": 1,
-          "padding": 5,
-          "shadowColor": "rgba(0, 0, 0, 0.1)",
-          "shadowOffset": Object {
-            "height": 4,
-            "width": 4,
+        Array [
+          Object {
+            "padding": 5,
           },
-          "shadowOpacity": 1,
-          "shadowRadius": 0,
-        }
+          Object {
+            "backgroundColor": "#17bcde",
+          },
+          Object {
+            "borderRadius": 20,
+            "elevation": 10,
+            "margin": 2,
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+          },
+        ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -353,38 +308,29 @@ exports[`renders without crashing 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
-        Object {
-          "backgroundColor": "#17bcde",
-          "borderRadius": 20,
-          "elevation": 10,
-          "margin": 2,
-          "opacity": 1,
-          "padding": 5,
-          "shadowColor": "rgba(0, 0, 0, 0.1)",
-          "shadowOffset": Object {
-            "height": 4,
-            "width": 4,
+        Array [
+          Object {
+            "padding": 5,
           },
-          "shadowOpacity": 1,
-          "shadowRadius": 0,
-        }
+          Object {
+            "backgroundColor": "#17bcde",
+          },
+          Object {
+            "borderRadius": 20,
+            "elevation": 10,
+            "margin": 2,
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+          },
+        ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -400,6 +346,168 @@ exports[`renders without crashing 1`] = `
         }
       >
         s
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#6666fe",
+          "borderRadius": 20,
+          "elevation": 10,
+          "margin": 2,
+          "marginHorizontal": 10,
+          "opacity": 1,
+          "padding": 10,
+          "shadowColor": "rgba(0, 0, 0, 0.1)",
+          "shadowOffset": Object {
+            "height": 4,
+            "width": 4,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 0,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "norddruck",
+            "fontSize": 35,
+            "textAlign": "center",
+          }
+        }
+      >
+        der
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#fe6666",
+          "borderRadius": 20,
+          "elevation": 10,
+          "margin": 2,
+          "marginHorizontal": 10,
+          "opacity": 1,
+          "padding": 10,
+          "shadowColor": "rgba(0, 0, 0, 0.1)",
+          "shadowOffset": Object {
+            "height": 4,
+            "width": 4,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 0,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "norddruck",
+            "fontSize": 35,
+            "textAlign": "center",
+          }
+        }
+      >
+        die
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#67af66",
+          "borderRadius": 20,
+          "elevation": 10,
+          "margin": 2,
+          "marginHorizontal": 10,
+          "opacity": 1,
+          "padding": 10,
+          "shadowColor": "rgba(0, 0, 0, 0.1)",
+          "shadowOffset": Object {
+            "height": 4,
+            "width": 4,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 0,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "norddruck",
+            "fontSize": 35,
+            "textAlign": "center",
+          }
+        }
+      >
+        das
       </Text>
     </View>
   </View>

@@ -13,14 +13,14 @@ const exerciseWrapper = (exercise, state, actions) => {
   const Component = exercises[exercise.component];
   return (
     <Component
-      selectAnswer={actions.selectAnswer}
-      selectedAnswer={state.currentAnswer}
+      changeAnswer={actions.changeAnswer}
+      currentAnswer={state.currentAnswer}
       exerciseComplete={exercise.complete}
       exerciseSuccess={exercise.success}
       {...exercise.props}
     />
   );
-}
+};
 
 class ExerciseApp extends React.Component {
   render() {
@@ -31,8 +31,10 @@ class ExerciseApp extends React.Component {
     return (
       <ExerciseLayout
         course={state.course}
-        currentAnswer={state.currentAnswer}
+        currentExerciseComplete={exercise.complete}
+        currentExerciseSuccess={exercise.success}
         currentExercise={state.currentExercise}
+        currentAnswer={state.currentAnswer}
         nextExercise={actions.nextExercise}
         changeExercise={actions.changeExercise}
         submitExercise={actions.submitExercise}
@@ -44,10 +46,10 @@ class ExerciseApp extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  state: state.exercise,
-})
+  state: state.exercise
+});
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(exerciseActions, dispatch),
-})
+  actions: bindActionCreators(exerciseActions, dispatch)
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(ExerciseApp);

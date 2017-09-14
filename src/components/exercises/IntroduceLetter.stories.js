@@ -1,9 +1,9 @@
 import React from 'react';
-import { storiesOf } from '@kadira/react-native-storybook';
+import { storiesOf } from '@storybook/react-native';
 
 import IntroduceLetter from './IntroduceLetter';
 
-storiesOf('exercises/IntroduceLetter', module).add('A', () => (
+storiesOf('exercises/IntroduceLetter', module).add('A', () =>
   <IntroduceLetter
     images={[
       require('../../assets/images/ananas.jpg'),
@@ -12,4 +12,4 @@ storiesOf('exercises/IntroduceLetter', module).add('A', () => (
     ]}
     letter="Aa"
   />
-));
+);

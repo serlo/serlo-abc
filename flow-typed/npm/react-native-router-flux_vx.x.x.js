@@ -100,7 +100,9 @@ declare module 'react-native-router-flux/src/Actions.js' {
   declare module.exports: $Exports<'react-native-router-flux/src/Actions'>;
 }
 declare module 'react-native-router-flux/src/DefaultRenderer.js' {
-  declare module.exports: $Exports<'react-native-router-flux/src/DefaultRenderer'>;
+  declare module.exports: $Exports<
+    'react-native-router-flux/src/DefaultRenderer'
+  >;
 }
 declare module 'react-native-router-flux/src/Modal.js' {
   declare module.exports: $Exports<'react-native-router-flux/src/Modal'>;
@@ -133,11 +135,17 @@ declare module 'react-native-router-flux/src/Util.js' {
   declare module.exports: $Exports<'react-native-router-flux/src/Util'>;
 }
 declare module 'react-native-router-flux/test/Actions.test.js' {
-  declare module.exports: $Exports<'react-native-router-flux/test/Actions.test'>;
+  declare module.exports: $Exports<
+    'react-native-router-flux/test/Actions.test'
+  >;
 }
 declare module 'react-native-router-flux/test/Reducer.popAndReplace.test.js' {
-  declare module.exports: $Exports<'react-native-router-flux/test/Reducer.popAndReplace.test'>;
+  declare module.exports: $Exports<
+    'react-native-router-flux/test/Reducer.popAndReplace.test'
+  >;
 }
 declare module 'react-native-router-flux/test/Reducer.test.js' {
-  declare module.exports: $Exports<'react-native-router-flux/test/Reducer.test'>;
+  declare module.exports: $Exports<
+    'react-native-router-flux/test/Reducer.test'
+  >;
 }

@@ -11,7 +11,7 @@ import {
   PRIMARY_WEAK,
   PRIMARY_STRONG
 } from '../../styles/colors';
-import { loadSounds } from '../helpers/audio';
+import { loadSounds, playAll } from '../helpers/audio';
 import { RoundImageWithButton } from '../Components';
 const mapIndexed = addIndex(map);
 
@@ -43,18 +43,7 @@ class FindLetter extends Component {
     };
   }
 
-  play = () => {
-    const playAll = ([sound, ...rest]) => {
-      sound.playAsync();
-      sound.setPlaybackFinishedCallback(() => {
-        sound.setPositionAsync(0);
-        if (rest.length > 0) {
-          setTimeout(() => playAll(rest), 1000);
-        }
-      });
-    };
-    playAll(this.props.sounds);
-  };
+  play = () => playAll(this.props.sounds);
 
   toggleLetter = key => () => {
     this.setState(({ highlighted }) => {
@@ -66,7 +55,7 @@ class FindLetter extends Component {
 
   render() {
     const letters = mapIndexed(
-      (char, key) => (
+      (char, key) =>
         <TouchableOpacity
           key={key}
           onPress={this.toggleLetter(key)}
@@ -78,8 +67,7 @@ class FindLetter extends Component {
           <Text style={DEFAULT}>
             {char}
           </Text>
-        </TouchableOpacity>
-      ),
+        </TouchableOpacity>,
       this.props.text
     );
 

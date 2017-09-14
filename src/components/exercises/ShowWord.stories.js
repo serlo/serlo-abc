@@ -1,10 +1,10 @@
 import React from 'react';
-import { storiesOf } from '@kadira/react-native-storybook';
+import { storiesOf } from '@storybook/react-native';
 
 import ShowWord from './ShowWord';
 
 storiesOf('exercises/ShowWord', module)
-  .add('Ananas', () => (
+  .add('Ananas', () =>
     <ShowWord
       image={require('../../assets/images/ananas.jpg')}
       sounds={[
@@ -14,8 +14,8 @@ storiesOf('exercises/ShowWord', module)
       text="Ananas"
       letter="A"
     />
-  ))
-  .add('Affe', () => (
+  )
+  .add('Affe', () =>
     <ShowWord
       image={require('../../assets/images/affe.jpg')}
       sounds={[
@@ -25,4 +25,4 @@ storiesOf('exercises/ShowWord', module)
       text="Affe"
       letter="A"
     />
-  ));
+  );

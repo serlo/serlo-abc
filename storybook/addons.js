@@ -1,1 +1,1 @@
-import '@kadira/react-native-storybook/addons';
+import '@storybook/addon-actions/register';

@@ -8,21 +8,29 @@
           "title": "Buchstabenpräsentation",
           "exercises": [
             {
-              "title": "Majuskel",
+              "title": "Find Letter M",
               "component": "DifferFromSymbol",
+              "correctAnswer": 4,
               "props": {
                 "symbols": ["X", "X", "X", "X", "M"],
-                "correctIndex": 4
               }
             },
             {
-              "title": "Minuskel",
-              "component": "LetterRotated",
+              "title": "Build a sentence",
+              "component": "BuildSentence",
+              "correctAnswer": "this is an exercise",
               "props": {
-                "letters": ["a", "N", "E", "s", "T"],
-                "rotated": [3, 4],
-                "angles": ["50deg", "-30deg"],
-                "difficulty": 0.5,
+                "sentence": ["is", "exercise", "an", "this"],
+              }
+            },
+            {
+              "title": "Find a missing letter",
+              "component": "MissingText",
+              "correctAnswer": 2,
+              "props": {
+                "text": ["A", "p", "f", "e", "l"],
+                "missing": 3,
+                "options": ["a", "n", "e"],
               }
             },
           ]

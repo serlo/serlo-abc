@@ -11,33 +11,39 @@ exports[`renders without crashing 1`] = `
     }
   }
 >
-  <Video
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
-    accessible={true}
-    hitSlop={undefined}
-    onEnd={[Function]}
-    onLayout={undefined}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    paused={false}
-    resizeMode={undefined}
-    source={1}
+  <View
     style={
       Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
+        "alignItems": "center",
+        "justifyContent": "center",
+        "width": "100%",
       }
     }
-    testID={undefined}
-  />
+  >
+    <Video
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      callback={[Function]}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      resizeMode={undefined}
+      shouldPlay={true}
+      source={1}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      testID={undefined}
+    />
+  </View>
 </View>
 `;

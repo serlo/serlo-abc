@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@kadira/react-native-storybook';
+import { storiesOf } from '@storybook/react-native';
 import { AsyncStorage, Text } from 'react-native';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
@@ -22,7 +22,5 @@ storiesOf('exercises', module)
   })
   .add('Purge Redux Store', () => {
     persistStore(store, { storage: AsyncStorage }).purge();
-    return (
-      <Text>Redux Store Purged</Text>
-    )
+    return <Text>Redux Store Purged</Text>;
   });

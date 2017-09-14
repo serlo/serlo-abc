@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@kadira/react-native-storybook';
+import { storiesOf } from '@storybook/react-native';
 import { Scene, Router, Actions } from 'react-native-router-flux';
 import { Button, View, Text } from 'react-native';
 import { createStore, combineReducers } from 'redux';
@@ -14,25 +14,17 @@ import App from '.';
 storiesOf('App', module).add('default', () => <App />);
 
 // router demonstration
-const PageOne = () => (
+const PageOne = () =>
   <View style={{ flex: 1, paddingTop: 30 }}>
     <Text>Page One</Text>
-    <Button
-      title="Go to Page Two"
-      onPress={Actions.pageTwo}
-    />
-  </View>
-)
+    <Button title="Go to Page Two" onPress={Actions.pageTwo} />
+  </View>;
 
-const PageTwo = () => (
+const PageTwo = () =>
   <View style={{ flex: 1, paddingTop: 30 }}>
     <Text>Page Two</Text>
-    <Button
-      title="Go to Page One"
-      onPress={Actions.pageOne}
-    />
-  </View>
-)
+    <Button title="Go to Page One" onPress={Actions.pageOne} />
+  </View>;
 
 class RouterStory extends React.Component {
   render() {

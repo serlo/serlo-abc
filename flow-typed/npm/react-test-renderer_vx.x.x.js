@@ -363,7 +363,9 @@ declare module 'react-test-renderer/lib/EventPluginHub.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/EventPluginHub'>;
 }
 declare module 'react-test-renderer/lib/EventPluginRegistry.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/EventPluginRegistry'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/EventPluginRegistry'
+  >;
 }
 declare module 'react-test-renderer/lib/EventPluginUtils.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/EventPluginUtils'>;
@@ -384,13 +386,19 @@ declare module 'react-test-renderer/lib/ReactChildFiber.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactChildFiber'>;
 }
 declare module 'react-test-renderer/lib/ReactChildReconciler.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactChildReconciler'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactChildReconciler'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactComponentEnvironment.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactComponentEnvironment'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactComponentEnvironment'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactCompositeComponent.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactCompositeComponent'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactCompositeComponent'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactCoroutine.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactCoroutine'>;
@@ -399,19 +407,27 @@ declare module 'react-test-renderer/lib/ReactDebugTool.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactDebugTool'>;
 }
 declare module 'react-test-renderer/lib/ReactDefaultBatchingStrategy.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactDefaultBatchingStrategy'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactDefaultBatchingStrategy'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactElementSymbol.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactElementSymbol'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactElementSymbol'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactEmptyComponent.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactEmptyComponent'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactEmptyComponent'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactErrorUtils.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactErrorUtils'>;
 }
 declare module 'react-test-renderer/lib/ReactEventEmitterMixin.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactEventEmitterMixin'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactEventEmitterMixin'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactFeatureFlags.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactFeatureFlags'>;
@@ -420,31 +436,47 @@ declare module 'react-test-renderer/lib/ReactFiber.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactFiber'>;
 }
 declare module 'react-test-renderer/lib/ReactFiberBeginWork.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactFiberBeginWork'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactFiberBeginWork'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactFiberCommitWork.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactFiberCommitWork'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactFiberCommitWork'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactFiberCompleteWork.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactFiberCompleteWork'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactFiberCompleteWork'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactFiberReconciler.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactFiberReconciler'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactFiberReconciler'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactFiberRoot.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactFiberRoot'>;
 }
 declare module 'react-test-renderer/lib/ReactFiberScheduler.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactFiberScheduler'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactFiberScheduler'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactFiberUpdateQueue.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactFiberUpdateQueue'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactFiberUpdateQueue'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactHostComponent.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactHostComponent'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactHostComponent'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactHostOperationHistoryHook.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactHostOperationHistoryHook'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactHostOperationHistoryHook'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactInstanceMap.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactInstanceMap'>;
@@ -453,16 +485,22 @@ declare module 'react-test-renderer/lib/ReactInstanceType.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactInstanceType'>;
 }
 declare module 'react-test-renderer/lib/ReactInstrumentation.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactInstrumentation'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactInstrumentation'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactInvalidSetStateWarningHook.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactInvalidSetStateWarningHook'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactInvalidSetStateWarningHook'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactMultiChild.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactMultiChild'>;
 }
 declare module 'react-test-renderer/lib/ReactMultiChildUpdateTypes.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactMultiChildUpdateTypes'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactMultiChildUpdateTypes'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactNodeTypes.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactNodeTypes'>;
@@ -474,16 +512,24 @@ declare module 'react-test-renderer/lib/ReactPerf.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactPerf'>;
 }
 declare module 'react-test-renderer/lib/ReactPriorityLevel.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactPriorityLevel'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactPriorityLevel'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactPropTypeLocationNames.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactPropTypeLocationNames'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactPropTypeLocationNames'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactPropTypeLocations.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactPropTypeLocations'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactPropTypeLocations'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactPropTypesSecret.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactPropTypesSecret'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactPropTypesSecret'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactReconciler.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactReconciler'>;
@@ -495,25 +541,35 @@ declare module 'react-test-renderer/lib/ReactReifiedYield.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactReifiedYield'>;
 }
 declare module 'react-test-renderer/lib/ReactSimpleEmptyComponent.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactSimpleEmptyComponent'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactSimpleEmptyComponent'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactSyntheticEventType.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactSyntheticEventType'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactSyntheticEventType'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactTestEmptyComponent.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactTestEmptyComponent'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactTestEmptyComponent'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactTestMount.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactTestMount'>;
 }
 declare module 'react-test-renderer/lib/ReactTestReconcileTransaction.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactTestReconcileTransaction'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactTestReconcileTransaction'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactTestRenderer.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactTestRenderer'>;
 }
 declare module 'react-test-renderer/lib/ReactTestTextComponent.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ReactTestTextComponent'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ReactTestTextComponent'
+  >;
 }
 declare module 'react-test-renderer/lib/ReactTypeOfWork.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactTypeOfWork'>;
@@ -531,13 +587,19 @@ declare module 'react-test-renderer/lib/ReactVersion.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/ReactVersion'>;
 }
 declare module 'react-test-renderer/lib/ResponderEventPlugin.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ResponderEventPlugin'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ResponderEventPlugin'
+  >;
 }
 declare module 'react-test-renderer/lib/ResponderSyntheticEvent.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ResponderSyntheticEvent'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ResponderSyntheticEvent'
+  >;
 }
 declare module 'react-test-renderer/lib/ResponderTouchHistoryStore.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/ResponderTouchHistoryStore'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/ResponderTouchHistoryStore'
+  >;
 }
 declare module 'react-test-renderer/lib/SyntheticEvent.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/SyntheticEvent'>;
@@ -561,7 +623,9 @@ declare module 'react-test-renderer/lib/canDefineProperty.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/canDefineProperty'>;
 }
 declare module 'react-test-renderer/lib/checkReactTypeSpec.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/checkReactTypeSpec'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/checkReactTypeSpec'
+  >;
 }
 declare module 'react-test-renderer/lib/deprecated.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/deprecated'>;
@@ -570,10 +634,14 @@ declare module 'react-test-renderer/lib/flattenChildren.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/flattenChildren'>;
 }
 declare module 'react-test-renderer/lib/forEachAccumulated.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/forEachAccumulated'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/forEachAccumulated'
+  >;
 }
 declare module 'react-test-renderer/lib/getHostComponentFromComposite.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/getHostComponentFromComposite'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/getHostComponentFromComposite'
+  >;
 }
 declare module 'react-test-renderer/lib/getIteratorFn.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/getIteratorFn'>;
@@ -582,17 +650,27 @@ declare module 'react-test-renderer/lib/getNextDebugID.js' {
   declare module.exports: $Exports<'react-test-renderer/lib/getNextDebugID'>;
 }
 declare module 'react-test-renderer/lib/instantiateReactComponent.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/instantiateReactComponent'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/instantiateReactComponent'
+  >;
 }
 declare module 'react-test-renderer/lib/isTextInputElement.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/isTextInputElement'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/isTextInputElement'
+  >;
 }
 declare module 'react-test-renderer/lib/reactProdInvariant.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/reactProdInvariant'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/reactProdInvariant'
+  >;
 }
 declare module 'react-test-renderer/lib/shouldUpdateReactComponent.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/shouldUpdateReactComponent'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/shouldUpdateReactComponent'
+  >;
 }
 declare module 'react-test-renderer/lib/traverseAllChildren.js' {
-  declare module.exports: $Exports<'react-test-renderer/lib/traverseAllChildren'>;
+  declare module.exports: $Exports<
+    'react-test-renderer/lib/traverseAllChildren'
+  >;
 }

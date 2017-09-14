@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 import speakerImage from '../../assets/images/speaker.png';
 import { WHITE, GREEN } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { loadSound } from '../helpers/audio';
+import { loadSound, play } from '../helpers/audio';
 import { RoundButton } from '../Components';
 
 const styles = {
@@ -17,22 +17,12 @@ const styles = {
   text: DEFAULT
 };
 
-const ExplanationText = ({ text, sound }) => {
-  const play = () => {
-    sound.playAsync();
-    sound.setPlaybackFinishedCallback(() => {
-      sound.setPositionAsync(0);
-    });
-  };
-
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>
-        {text}
-      </Text>
-      <RoundButton icon={speakerImage} size={40} onPress={play} />
-    </View>
-  );
-};
+const ExplanationText = ({ text, sound }) =>
+  <View style={styles.container}>
+    <Text style={styles.text}>
+      {text}
+    </Text>
+    <RoundButton icon={speakerImage} size={40} onPress={() => play(sound)} />
+  </View>;
 
 export default loadSound(ExplanationText);

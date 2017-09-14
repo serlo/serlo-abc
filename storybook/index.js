@@ -1,13 +1,12 @@
-import { getStorybookUI, configure } from '@kadira/react-native-storybook';
+import { getStorybookUI, configure } from '@storybook/react-native';
 import React from 'react';
+import { NativeModules } from 'react-native';
 import url from 'url';
 
 import loadFonts from '../src/components/helpers/fonts';
 import './addons';
 
-import { NativeModules } from 'react-native';
-
-configure(function() {
+configure(() => {
   require('./stories');
 }, module);
 

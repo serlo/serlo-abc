@@ -1581,7 +1581,9 @@ declare module 'ramda/src/internal/_containsWith.js' {
   declare module.exports: $Exports<'ramda/src/internal/_containsWith'>;
 }
 declare module 'ramda/src/internal/_createPartialApplicator.js' {
-  declare module.exports: $Exports<'ramda/src/internal/_createPartialApplicator'>;
+  declare module.exports: $Exports<
+    'ramda/src/internal/_createPartialApplicator'
+  >;
 }
 declare module 'ramda/src/internal/_curry1.js' {
   declare module.exports: $Exports<'ramda/src/internal/_curry1'>;
