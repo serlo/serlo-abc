@@ -15,7 +15,7 @@ export const submitExercise = () => ({
   type: types.SUBMIT_EXERCISE
 });
 
-export const selectAnswer = answer => ({
-  type: types.SELECT_EXERCISE_ANSWER,
+export const changeAnswer = answer => ({
+  type: types.CHANGE_EXERCISE_ANSWER,
   answer
 });

@@ -287,15 +287,32 @@ export class TextPicker extends Component {
     super(props);
     this.state = {
       optionsVisible: false,
-      selectedValue: null
+      selectedValue: this.initSelectedValue(props.selectedKey)
     };
   }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.selectedKey !== nextProps.selectedKey) {
+      this.setState({
+        optionsVisible: false,
+        selectedValue: this.initSelectedValue(nextProps.selectedKey)
+      });
+    }
+  }
+
+  initSelectedValue = key => {
+    const { options } = this.props;
+    return key !== null && options ? options[key] : null;
+  };
 
   selectOption = key => () => {
     this.setState({
       optionsVisible: false,
       selectedValue: this.props.options[key]
     });
+    if (this.props.onChange) {
+      this.props.onChange(key);
+    }
   };
 
   togglePickerOptions = () => {

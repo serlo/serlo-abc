@@ -41,16 +41,30 @@ class ExerciseLayout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      nextExercise: '/test',
       navigationMenuVisible: false
     };
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.children !== nextProps.children) {
-      this.setState({
-        navigationMenuVisible: false
-      });
+    if (this.props.currentExercise !== nextProps.currentExercise) {
+      this.setState({ navigationMenuVisible: false });
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    console.log(
+      this.props.currentExerciseComplete,
+      prevProps.currentExerciseComplete
+    );
+    if (this.props.currentExercise !== prevProps.currentExercise) {
+      this.showResult();
+    } else if (
+      this.props.currentExerciseComplete !==
+        prevProps.currentExerciseComplete &&
+      this.props.currentExerciseComplete
+    ) {
+      console.log('show result');
+      this.showResult();
     }
   }
 
@@ -65,9 +79,28 @@ class ExerciseLayout extends React.Component {
       Alert.alert('Please select an answer first');
     } else {
       this.props.submitExercise();
-      setTimeout(() => {
-        this.props.nextExercise();
-      }, 1000);
+    }
+  };
+
+  showResult = props => {
+    const section = this.props.course.sections[
+      this.props.currentExercise.section
+    ];
+    const chapter = section.chapters[this.props.currentExercise.chapter];
+    const jumpToNextExercise =
+      this.props.currentExercise.exercise < chapter.exercises.length - 1;
+    if (this.props.currentExerciseComplete) {
+      Alert.alert(
+        'Exercise result',
+        this.props.currentExerciseSuccess ? 'Correct!' : 'Wrong!',
+        [
+          {
+            text: 'Next Exercise',
+            onPress: jumpToNextExercise ? this.props.nextExercise : () => {}
+          },
+          { text: 'OK' }
+        ]
+      );
     }
   };
 
@@ -80,16 +113,20 @@ class ExerciseLayout extends React.Component {
     } = this.props;
     return (
       <View style={{ flex: 1 }}>
+        {/* Here goes an exercise */}
         {this.props.children}
 
+        {/* Submit Button */}
         <View style={[styles.hoveringButton, styles.bottom, styles.right]}>
           <RoundTextButton
+            style={{ padding: 5 }}
             textStyle={{ fontSize: 18 }}
             text="Submit"
             onPress={this.submitExercise}
           />
         </View>
 
+        {/* Navigation Menu */}
         <NavigationMenu
           visible={this.state.navigationMenuVisible}
           style={{ padding: 20, paddingTop: 80 }}
@@ -136,6 +173,7 @@ class ExerciseLayout extends React.Component {
           )}
         </NavigationMenu>
 
+        {/* Navigation Buttons */}
         <View style={[styles.hoveringButton, styles.top, styles.left]}>
           <RoundTextButton
             size={30}

@@ -15,5 +15,6 @@ storiesOf('exercises/BuildSentence', module).add('example', () =>
       'native',
       'and'
     ]}
+    changeAnswer={() => {}}
   />
 );

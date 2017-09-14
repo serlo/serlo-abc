@@ -1,3 +1,4 @@
+import BuildSentence from './BuildSentence';
 import DifferFromSymbol from './DifferFromSymbol';
 import SyllableTable from './SyllableTable';
 import ExplanationText from './ExplanationText';
@@ -11,6 +12,7 @@ import ShowLetter from './ShowLetter';
 import Splash from './Splash';
 
 export default {
+  BuildSentence,
   DifferFromSymbol,
   SyllableTable,
   ExplanationText,

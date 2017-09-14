@@ -24,19 +24,37 @@ const styles = {
   }
 };
 
-const MissingText = ({ image, video, sounds, text, missing, options }) => {
+const MissingText = ({
+  image,
+  video,
+  sounds,
+  text,
+  missing,
+  options,
+  ...props
+}) => {
   const textParts = mapIndexed((part, key) => {
-    return key === missing
-      ? <View key={key}>
-          <TextPicker options={options} />
+    if (key === missing) {
+      return (
+        <View key={key}>
+          <TextPicker
+            options={options}
+            onChange={props.changeAnswer}
+            selectedKey={props.currentAnswer}
+          />
         </View>
-      : <View key={key} style={{ padding: 5 }}>
-          <Text style={DEFAULT}>
-            {part}
-          </Text>
-        </View>;
+      );
+    }
+    return (
+      <View key={key} style={{ padding: 5 }}>
+        <Text style={DEFAULT}>
+          {part}
+        </Text>
+      </View>
+    );
   }, text);
 
+  // TODO: think about the way to dynamically load resources (images/sounds/videos)
   return (
     <View style={styles.container}>
       {image
@@ -45,7 +63,7 @@ const MissingText = ({ image, video, sounds, text, missing, options }) => {
             imageSize={200}
             icon={speakerImage}
             buttonSize={40}
-            onPress={() => playAll(sounds)}
+            onPress={() => (sounds ? playAll(sounds) : null)}
           />
         : video
           ? <View style={styles.vidContainer}>
