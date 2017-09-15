@@ -13,7 +13,7 @@
     "ios": "react-native-scripts ios",
     "storybook": "storybook start -p 7007",
     "test": "jest",
-    "format": "prettier --write \"{{src,storybook}/**/*,*}.js\"",
+    "format": "prettier --write \"{{scripts, src,storybook}/**/*,*}.js\"",
     "lint": "eslint \"{{src,storybook}/**/*,*}.js\"",
     "precommit": "lint-staged"
   },
