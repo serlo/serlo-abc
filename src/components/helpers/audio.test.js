@@ -12,7 +12,7 @@ class Sound {
 
     this.playAsync = jest.fn();
     this.stopAsync = jest.fn();
-    this.setCallback = jest.fn(cb => {
+    this.setOnPlaybackStatusUpdate = jest.fn(cb => {
       this.cb = cb;
     });
 
@@ -38,7 +38,7 @@ describe('play', () => {
     play(sound).then(done);
 
     // Check that callback is passed correctly
-    expect(sound.setCallback).toHaveBeenCalledWith(sound.cb);
+    expect(sound.setOnPlaybackStatusUpdate).toHaveBeenCalledWith(sound.cb);
 
     sound.simulateFinishedPlaying();
   });
