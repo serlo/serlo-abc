@@ -4,8 +4,7 @@ import {
   View,
   PanResponder,
   Animated,
-  Dimensions,
-  Alert
+  Dimensions
 } from 'react-native';
 import {
   PRIMARY,

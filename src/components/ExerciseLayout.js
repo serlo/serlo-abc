@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, Text, StyleSheet, Alert } from 'react-native';
+import { View, Text, StyleSheet, Alert } from 'react-native';
 import { RoundTextButton } from '../components/Components';
 import NavigationMenu from '../components/NavigationMenu';
 import { WHITE, PRIMARY_STRONG, GREEN, RED } from '../styles/colors';
@@ -131,12 +131,10 @@ class ExerciseLayout extends React.Component {
           visible={this.state.navigationMenuVisible}
           style={{ padding: 20, paddingTop: 80 }}
         >
-          {course.sections.map((section, sIndex) =>
+          {course.sections.map((section, sIndex) => (
             <View key={`s_${sIndex}`}>
-              <Text style={styles.sectionText}>
-                Section {section.title}
-              </Text>
-              {section.chapters.map((chapter, cIndex) =>
+              <Text style={styles.sectionText}>Section {section.title}</Text>
+              {section.chapters.map((chapter, cIndex) => (
                 <View key={`s_${sIndex}_c_${cIndex}`}>
                   <Text style={styles.chapterText}>
                     Chapter {chapter.title}
@@ -168,9 +166,9 @@ class ExerciseLayout extends React.Component {
                     );
                   })}
                 </View>
-              )}
+              ))}
             </View>
-          )}
+          ))}
         </NavigationMenu>
 
         {/* Navigation Buttons */}

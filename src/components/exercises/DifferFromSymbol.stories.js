@@ -22,6 +22,6 @@ class DifferFromSymbolContainer extends React.Component {
   }
 }
 
-storiesOf('exercises/DifferFromSymbol', module).add('M', () =>
+storiesOf('exercises/DifferFromSymbol', module).add('M', () => (
   <DifferFromSymbolContainer />
-);
+));

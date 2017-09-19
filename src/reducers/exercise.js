@@ -26,7 +26,7 @@ const initialState = {
   currentAnswer: null
 };
 
-export default (exercise = (state = initialState, action = {}) => {
+const exercise = (state = initialState, action = {}) => {
   const section = state.course.sections[state.currentExercise.section];
   const chapter = section.chapters[state.currentExercise.chapter];
   const exercise = chapter.exercises[state.currentExercise.exercise];
@@ -51,14 +51,12 @@ export default (exercise = (state = initialState, action = {}) => {
         }
       }
       return { ...state };
-      break;
 
     case types.CHANGE_EXERCISE_ANSWER:
       exercise.complete = false;
       exercise.success = false;
       state.currentAnswer = action.answer;
       return { ...state };
-      break;
 
     case types.CHANGE_EXERCISE:
       state.currentExercise = {
@@ -68,7 +66,6 @@ export default (exercise = (state = initialState, action = {}) => {
       };
       state.currentAnswer = null;
       return { ...state };
-      break;
 
     case types.NEXT_EXERCISE:
       if (state.currentExercise.exercise < chapter.exercises.length - 1) {
@@ -77,8 +74,10 @@ export default (exercise = (state = initialState, action = {}) => {
         state.currentAnswer = null;
       }
       return { ...state };
-      break;
+
     default:
       return state;
   }
-});
+};
+
+export default exercise;

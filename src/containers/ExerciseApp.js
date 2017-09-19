@@ -3,11 +3,9 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Text } from 'react-native';
 import ExerciseLayout from '../components/ExerciseLayout';
 import exercises from '../components/exercises';
 import * as exerciseActions from '../actions/exerciseActions';
-import { GREEN, RED } from '../styles/colors';
 
 const exerciseWrapper = (exercise, state, actions) => {
   const Component = exercises[exercise.component];
