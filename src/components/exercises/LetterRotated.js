@@ -19,14 +19,15 @@ class LettersRotated extends Component {
   };
 
   createLetterButton = index => {
-    const { angles, letters, rotated, difficulty } = this.props;
+    const { letters } = this.props;
+
     return (
       <RoundTextButton
         onPress={() => {
           this.setState(({ highlighted }) => {
             highlighted[index] = !highlighted[index];
             return {
-              highlighted: highlighted
+              highlighted
             };
           });
         }}
@@ -65,7 +66,7 @@ class LettersRotated extends Component {
           {this.createLetterButton(1)}
           {this.createLetterButton(2)}
         </View>
-        {this.props.difficulty >= 0.2 &&
+        {this.props.difficulty >= 0.2 && (
           <View
             style={{
               flexDirection: 'row',
@@ -75,7 +76,8 @@ class LettersRotated extends Component {
           >
             {this.createLetterButton(3)}
             {this.createLetterButton(4)}
-          </View>}
+          </View>
+        )}
       </View>
     );
   }

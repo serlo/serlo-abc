@@ -118,6 +118,7 @@ export default class BuildSentence extends React.Component {
       const item = this.state.items[m];
       item.panResponder = PanResponder.create({
         onStartShouldSetPanResponder: () => true,
+        // eslint-disable-next-line handle-callback-err
         onPanResponderGrant: (e, gestureState) => {
           this.setState({ movingItem: item.id });
           item.pan.setOffset({
@@ -130,6 +131,7 @@ export default class BuildSentence extends React.Component {
           null,
           { dx: item.pan.x, dy: item.pan.y }
         ]),
+        // eslint-disable-next-line handle-callback-err
         onPanResponderRelease: (e, gesture) => {
           item.pan.flattenOffset();
           const springTo = { ...item.position };
@@ -153,7 +155,7 @@ export default class BuildSentence extends React.Component {
               let secondZoneFound = false;
               for (let j = 0; j < this.state.zones.length; j++) {
                 const secondZone = this.state.zones[j];
-                if (secondZone.item == item.id) {
+                if (secondZone.item === item.id) {
                   secondZoneFound = true;
                   secondZone.item = zone.item;
                   break;
@@ -182,7 +184,7 @@ export default class BuildSentence extends React.Component {
           if (!zoneFound) {
             for (let j = 0; j < this.state.zones.length; j++) {
               const zone = this.state.zones[j];
-              if (zone.item == item.id) {
+              if (zone.item === item.id) {
                 zone.item = -1;
                 break;
               }
@@ -284,7 +286,7 @@ export default class BuildSentence extends React.Component {
 
     return (
       <View style={containerStyle}>
-        {this.state.items.map(item =>
+        {this.state.items.map(item => (
           <Animated.View key={item.id} {...item.props}>
             <RoundText
               text={item.word}
@@ -292,7 +294,7 @@ export default class BuildSentence extends React.Component {
               style={styles.textContainer}
             />
           </Animated.View>
-        )}
+        ))}
 
         {/*
           A bit of a hack here to keep moving item on top of the others (we
@@ -300,17 +302,17 @@ export default class BuildSentence extends React.Component {
           dynamically changing zIndex of the items didn't work,
           will try to check what else can be done as a better solution
         */}
-        {this.state.movingItem !== -1
-          ? <Animated.View
-              style={this.state.items[this.state.movingItem].props.style}
-            >
-              <RoundText
-                text={this.state.items[this.state.movingItem].word}
-                textStyle={textStyle}
-                style={styles.textContainer}
-              />
-            </Animated.View>
-          : null}
+        {this.state.movingItem !== -1 ? (
+          <Animated.View
+            style={this.state.items[this.state.movingItem].props.style}
+          >
+            <RoundText
+              text={this.state.items[this.state.movingItem].word}
+              textStyle={textStyle}
+              style={styles.textContainer}
+            />
+          </Animated.View>
+        ) : null}
       </View>
     );
   };

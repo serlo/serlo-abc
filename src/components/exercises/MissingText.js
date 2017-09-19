@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
 
-import { WHITE, PRIMARY } from '../../styles/colors';
+import { PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 import { loadSounds, playAll } from '../helpers/audio';
 import { RoundImageWithButton, TextPicker } from '../Components';
@@ -47,33 +47,37 @@ const MissingText = ({
     }
     return (
       <View key={key} style={{ padding: 5 }}>
-        <Text style={DEFAULT}>
-          {part}
-        </Text>
+        <Text style={DEFAULT}>{part}</Text>
       </View>
     );
   }, text);
 
-  // TODO: think about the way to dynamically load resources (images/sounds/videos)
+  const renderAssets = () => {
+    if (image) {
+      return (
+        <RoundImageWithButton
+          image={image}
+          imageSize={200}
+          icon={speakerImage}
+          buttonSize={40}
+          onPress={() => (sounds ? playAll(sounds) : null)}
+        />
+      );
+    }
+    if (video) {
+      return (
+        <View style={styles.vidContainer}>
+          <Video video={video} />
+        </View>
+      );
+    }
+    return null;
+  };
+
   return (
     <View style={styles.container}>
-      {image
-        ? <RoundImageWithButton
-            image={image}
-            imageSize={200}
-            icon={speakerImage}
-            buttonSize={40}
-            onPress={() => (sounds ? playAll(sounds) : null)}
-          />
-        : video
-          ? <View style={styles.vidContainer}>
-              <Video video={video} />
-            </View>
-          : null}
-
-      <View style={{ flexDirection: 'row' }}>
-        {textParts}
-      </View>
+      {renderAssets()}
+      <View style={{ flexDirection: 'row' }}>{textParts}</View>
     </View>
   );
 };

@@ -14,6 +14,7 @@ exports[`renders without crashing 1`] = `
   <Text
     accessible={true}
     allowFontScaling={true}
+    disabled={false}
     ellipsizeMode="tail"
     style={
       Object {
@@ -31,8 +32,10 @@ exports[`renders without crashing 1`] = `
     accessibilityLabel={undefined}
     accessibilityTraits={undefined}
     accessible={true}
+    collapsable={undefined}
     hitSlop={undefined}
     isTVSelectable={true}
+    nativeID={undefined}
     onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -66,7 +69,7 @@ exports[`renders without crashing 1`] = `
       }
     >
       <Image
-        source={1}
+        source={1337}
         style={
           Object {
             "height": 40,

@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 
 import repeatIcon from '../../assets/images/repeat.png';
 import speakerImage from '../../assets/images/speaker.png';
-import { WHITE, PRIMARY } from '../../styles/colors';
+import { PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 import { loadSounds, playAll } from '../helpers/audio';
 import { RoundButton, IconWithBackground } from '../Components';
@@ -53,14 +53,10 @@ const UnwrappedShowLetter = ({ letter, sounds, isRepeat }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.bigLetter}>
-          {letter}
-        </Text>
+        <Text style={styles.bigLetter}>{letter}</Text>
         <RoundButton icon={speakerImage} size={40} onPress={play} />
       </View>
-      <View height={80}>
-        {toggleRepeatButton()}
-      </View>
+      <View height={80}>{toggleRepeatButton()}</View>
     </View>
   );
 };

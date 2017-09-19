@@ -1,16 +1,16 @@
 import { shallow } from 'enzyme';
-import { forEach } from 'ramda';
 import React from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { createWithDifficulty } from './difficulty';
 
-const C = ({ label, difficulty }) =>
+const C = ({ label, difficulty }) => (
   <View>
     <Text>
       {label}: {difficulty}
     </Text>
-  </View>;
+  </View>
+);
 
 describe.only('withDifficulty', () => {
   let Component, rendered, c;

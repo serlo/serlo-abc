@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react-native';
 
 import BuildSentence from './BuildSentence';
 
-storiesOf('exercises/BuildSentence', module).add('example', () =>
+storiesOf('exercises/BuildSentence', module).add('example', () => (
   <BuildSentence
     sentence={[
       'JavaScript',
@@ -17,4 +17,4 @@ storiesOf('exercises/BuildSentence', module).add('example', () =>
     ]}
     changeAnswer={() => {}}
   />
-);
+));

@@ -3,8 +3,7 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   Image,
-  View,
-  Text
+  View
 } from 'react-native';
 import { Video } from 'expo';
 import playIcon from '../../assets/images/play.png';
@@ -49,7 +48,7 @@ export default class VideoComponent extends Component {
     };
   }
 
-  callback = playbackStatus => {
+  onPlaybackStatusUpdate = playbackStatus => {
     if (playbackStatus.didJustFinish) {
       this.setState({
         isFinished: true
@@ -110,7 +109,7 @@ export default class VideoComponent extends Component {
             source={this.props.video}
             style={styles.video}
             shouldPlay={this.state.shouldPlay}
-            callback={this.callback}
+            onPlaybackStatusUpdate={this.onPlaybackStatusUpdate}
           />
         </TouchableWithoutFeedback>
         {this.getVideoControls()}

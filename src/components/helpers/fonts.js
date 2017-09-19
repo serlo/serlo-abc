@@ -1,5 +1,4 @@
 import { Font } from 'expo';
-import { forEach, map } from 'ramda';
 import React, { Component } from 'react';
 
 export const createLoadFonts = Font => fonts => C => {
@@ -10,10 +9,8 @@ export const createLoadFonts = Font => fonts => C => {
       this.state = { fontsLoaded: false };
     }
 
-    async componentDidMount() {
-      await Font.loadAsync(fonts);
-
-      this.setState({ fontsLoaded: true });
+    componentDidMount() {
+      Font.loadAsync(fonts).then(() => this.setState({ fontsLoaded: true }));
     }
 
     render() {

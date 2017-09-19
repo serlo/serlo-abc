@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  TouchableWithoutFeedback,
-  TouchableOpacity,
-  Image
-} from 'react-native';
+import { View, Text } from 'react-native';
 import { addIndex, map } from 'ramda';
-import { PRIMARY, GREEN, TRANSPARENT } from '../../styles/colors';
+import { PRIMARY, GREEN } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 import { RoundTextButton } from '../Components';
 import Video from '../common/Video';
@@ -63,7 +57,7 @@ class VideoQuestion extends Component {
           </Text>
           <View>
             {mapIndexed(
-              (item, key) =>
+              (item, key) => (
                 <RoundTextButton
                   text={item}
                   style={[
@@ -72,7 +66,8 @@ class VideoQuestion extends Component {
                   ]}
                   key={key}
                   onPress={this.changeAnswer(key)}
-                />,
+                />
+              ),
               this.props.answers
             )}
           </View>

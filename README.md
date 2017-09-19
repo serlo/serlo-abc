@@ -16,6 +16,7 @@ Below you'll find information about performing common tasks.
   * [yarn ios](#yarn-ios)
   * [yarn android](#yarn-android)
   * [yarn format](#yarn-format)
+  * [yarn lint](#yarn-lint)
 * [Writing and Running Tests](#writing-and-running-tests)
 * [Tips and Tricks](#tips-and-tricks)
 
@@ -42,6 +43,10 @@ Runs your app in development mode.
 
 Open it in the [Expo app](https://expo.io) on your phone to view it. It will reload if you save edits to your files, and you will see build errors and logs in the terminal.
 
+### `yarn storybook`
+
+Starts the storybook.
+
 ### `yarn test`
 
 Runs the [jest](https://github.com/facebook/jest) test runner on your tests.
@@ -61,6 +66,10 @@ Like `yarn start`, but also attempts to open your app on a connected Android dev
 ### `yarn format`
 
 Formats all JavaScript code with [prettier](https://github.com/prettier/prettier). Will be automatically run as a pre-commit git hook.
+
+### `yarn lint`
+
+Reports possible issues in all JavaScript code with [ESLint](https://github.com/eslint/eslint).
 
 ## Writing and Running Tests
 
