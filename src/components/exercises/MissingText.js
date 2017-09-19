@@ -24,35 +24,59 @@ const styles = {
   }
 };
 
-const MissingText = ({ image, video, sounds, text, missing, options }) => {
+const MissingText = ({
+  image,
+  video,
+  sounds,
+  text,
+  missing,
+  options,
+  ...props
+}) => {
   const textParts = mapIndexed((part, key) => {
-    return key === missing ? (
-      <View key={key}>
-        <TextPicker options={options} />
-      </View>
-    ) : (
+    if (key === missing) {
+      return (
+        <View key={key}>
+          <TextPicker
+            options={options}
+            onChange={props.changeAnswer}
+            selectedKey={props.currentAnswer}
+          />
+        </View>
+      );
+    }
+    return (
       <View key={key} style={{ padding: 5 }}>
         <Text style={DEFAULT}>{part}</Text>
       </View>
     );
   }, text);
 
-  return (
-    <View style={styles.container}>
-      {image ? (
+  const renderAssets = () => {
+    if (image) {
+      return (
         <RoundImageWithButton
           image={image}
           imageSize={200}
           icon={speakerImage}
           buttonSize={40}
-          onPress={() => playAll(sounds)}
+          onPress={() => (sounds ? playAll(sounds) : null)}
         />
-      ) : video ? (
+      );
+    }
+    if (video) {
+      return (
         <View style={styles.vidContainer}>
           <Video video={video} />
         </View>
-      ) : null}
+      );
+    }
+    return null;
+  };
 
+  return (
+    <View style={styles.container}>
+      {renderAssets()}
       <View style={{ flexDirection: 'row' }}>{textParts}</View>
     </View>
   );

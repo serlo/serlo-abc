@@ -57,12 +57,14 @@ export default class BuildSentence extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({
-      movingItem: -1,
-      items: this.initItems(nextProps.sentence),
-      zones: this.initZones(nextProps.sentence)
-    });
-    this.itemsReady = false;
+    if (this.props.sentence !== nextProps.sentence) {
+      this.setState({
+        movingItem: -1,
+        items: this.initItems(nextProps.sentence),
+        zones: this.initZones(nextProps.sentence)
+      });
+      this.itemsReady = false;
+    }
   }
 
   initItems = sentence => {
@@ -167,6 +169,13 @@ export default class BuildSentence extends React.Component {
                 }).start();
               }
               zone.item = item.id;
+
+              const answer = this.state.zones
+                .map(zone => {
+                  if (zone.item >= 0) return this.state.items[zone.item].word;
+                })
+                .join(' ');
+              this.props.changeAnswer(answer);
               break;
             }
           }

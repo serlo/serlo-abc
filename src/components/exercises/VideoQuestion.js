@@ -30,7 +30,7 @@ class VideoQuestion extends Component {
     };
   }
 
-  selectAnswer = key => () => {
+  changeAnswer = key => () => {
     this.setState(({ highlighted }) => ({
       highlighted: highlighted === key ? null : key
     }));
@@ -65,7 +65,7 @@ class VideoQuestion extends Component {
                     this.state.highlighted === key ? styles.highlighted : null
                   ]}
                   key={key}
-                  onPress={this.selectAnswer(key)}
+                  onPress={this.changeAnswer(key)}
                 />
               ),
               this.props.answers
