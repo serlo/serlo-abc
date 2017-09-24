@@ -1,3 +1,4 @@
+/* eslint-disable */
 // commit: 7a5804d3247a83b67b874447d0e56907b8eb9ba0
 var gWords = new Array();
 

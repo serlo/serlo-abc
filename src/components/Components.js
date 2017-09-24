@@ -352,18 +352,18 @@ export class TextPicker extends Component {
           justifyContent: 'flex-end'
         }}
       >
-        {this.state.optionsVisible ? (
-          mapIndexed(
-            (option, key) => (
-              <TouchableOpacity onPress={this.selectOption(key)} key={key}>
-                <View style={this.styles.button}>
-                  <Text style={this.styles.text}>{option}</Text>
-                </View>
-              </TouchableOpacity>
-            ),
-            this.props.options
-          )
-        ) : null}
+        {this.state.optionsVisible
+          ? mapIndexed(
+              (option, key) => (
+                <TouchableOpacity onPress={this.selectOption(key)} key={key}>
+                  <View style={this.styles.button}>
+                    <Text style={this.styles.text}>{option}</Text>
+                  </View>
+                </TouchableOpacity>
+              ),
+              this.props.options
+            )
+          : null}
 
         <TouchableOpacity onPress={this.togglePickerOptions}>
           <View style={this.styles.button}>
