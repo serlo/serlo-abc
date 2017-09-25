@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
+import { playAll } from '../../helpers/audio';
 import { DEFAULT } from '../../styles/text';
 
 import {
@@ -11,7 +12,7 @@ import {
   PRIMARY_WEAK,
   PRIMARY_STRONG
 } from '../../styles/colors';
-import { loadSounds, playAll } from '../helpers/audio';
+import { loadSounds } from '../helpers/audio';
 import { RoundImageWithButton } from '../Components';
 const mapIndexed = addIndex(map);
 

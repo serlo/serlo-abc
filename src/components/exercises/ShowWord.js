@@ -3,9 +3,11 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
+import { playAll } from '../../helpers/audio';
+import { getImage, getSound, getLongSound, getWord } from '../../helpers/words';
 import { WHITE_TRANSPARENT, PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { loadSounds, playAll } from '../helpers/audio';
+import { loadSounds } from '../helpers/audio';
 import { RoundImageWithButton } from '../Components';
 
 const mapIndexed = addIndex(map);
@@ -52,4 +54,19 @@ const ShowWord = ({ image, sounds, text, letter }) => {
   );
 };
 
-export default loadSounds(ShowWord);
+const LegacyShowWords = loadSounds(ShowWord);
+
+const NewShowWords = props => {
+  const { word } = props;
+
+  return (
+    <LegacyShowWords
+      image={getImage(word)}
+      sounds={[getLongSound(word), getSound(word)]}
+      text={getWord(word)}
+      {...props}
+    />
+  );
+};
+
+export default NewShowWords;

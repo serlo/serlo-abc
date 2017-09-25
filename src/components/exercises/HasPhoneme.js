@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
-
+import { play } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
 import { RoundTextButton, RoundImageWithButton } from '../Components';
-import { loadSound, play } from '../helpers/audio';
+import { loadSound } from '../helpers/audio';
 
 class HasPhoneme extends Component {
   constructor(props) {

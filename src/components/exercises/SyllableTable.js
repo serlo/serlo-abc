@@ -2,8 +2,9 @@ import React from 'react';
 import { addIndex, map } from 'ramda';
 import { View } from 'react-native';
 
+import { play } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
-import { loadSound, play } from '../helpers/audio';
+import { loadSound } from '../helpers/audio';
 import { RoundTextButton, RoundText } from '../Components';
 
 const mapIndexed = addIndex(map);

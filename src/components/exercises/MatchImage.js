@@ -3,7 +3,8 @@ import { Text, TouchableOpacity, View } from 'react-native';
 
 import { RoundButton, RoundImageWithBorder } from '../Components';
 import icon from '../../assets/images/speaker.png';
-import { play, loadSound } from '../helpers/audio';
+import { play } from '../../helpers/audio';
+import { loadSound } from '../helpers/audio';
 
 const styles = {
   container: {

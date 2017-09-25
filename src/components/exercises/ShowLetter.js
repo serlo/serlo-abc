@@ -3,9 +3,10 @@ import { View, Text } from 'react-native';
 
 import repeatIcon from '../../assets/images/repeat.png';
 import speakerImage from '../../assets/images/speaker.png';
+import { playAll } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { loadSounds, playAll } from '../helpers/audio';
+import { loadSounds } from '../helpers/audio';
 import { RoundButton, IconWithBackground } from '../Components';
 
 const styles = {
