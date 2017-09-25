@@ -1,9 +1,10 @@
+/* eslint-env node */
 const fs = require('fs');
 const path = require('path');
 const R = require('ramda');
 
 // Legacy words_data from https://github.com/serlo-org/abc-legacy/blob/gh-pages/try/js/word_data.js
-const raw_words = require('./words_data.js');
+const raw_words = require('./wordsData.js');
 const words = {};
 
 const assetsPath = path.join(__dirname, '..', 'src', 'assets');

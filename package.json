@@ -13,32 +13,32 @@
     "ios": "react-native-scripts ios",
     "storybook": "storybook start -p 7007",
     "test": "jest",
-    "format": "prettier --write \"{{scripts, src,storybook}/**/*,*}.js\"",
-    "lint": "eslint \"{{src,storybook}/**/*,*}.js\"",
+    "format": "prettier --write \"{{scripts,src,storybook}/**/*,*}.js\"",
+    "lint": "eslint \"{{scripts,src,storybook}/**/*,*}.js\"",
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "expo": "^20.1.3",
+    "expo": "^21.0.1",
     "ramda": "^0.24.1",
     "react": "16.0.0-alpha.12",
-    "react-native": "^0.47.1",
+    "react-native": "^0.48.4",
     "react-native-router-flux": "3.38.0",
     "react-redux": "^5.0.4",
-    "redux-persist": "^4.6.0"
+    "redux-persist": "^4.10.0"
   },
   "devDependencies": {
-    "@storybook/react-native": "^3.2.8",
+    "@storybook/react-native": "^3.2.10",
     "babel-preset-es2015": "^6.24.1",
     "concurrently": "^3.5.0",
     "enzyme": "^2.9.1",
-    "eslint": "^4.6.1",
+    "eslint": "^4.7.2",
     "eslint-config-universe": "^1.0.5",
     "exp": "^44.0.0",
     "husky": "^0.14.3",
-    "jest": "^21.0.2",
-    "jest-expo": "^20.0.0",
-    "lint-staged": "^4.1.3",
-    "prettier": "^1.6.1",
+    "jest": "^21.1.0",
+    "jest-expo": "^21.0.2",
+    "lint-staged": "^4.2.2",
+    "prettier": "^1.7.0",
     "react-addons-test-utils": "16.0.0-alpha.3",
     "react-dom": "16.0.0-alpha.12",
     "react-native-scripts": "^1.3.1",
@@ -46,7 +46,7 @@
   },
   "private": true,
   "lint-staged": {
-    "{{src,storybook}/**/*,*}.js": [
+    "{{scripts,src,storybook}/**/*,*}.js": [
       "prettier --write",
       "git add"
     ]
