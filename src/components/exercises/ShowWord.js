@@ -7,7 +7,7 @@ import { playAll } from '../../helpers/audio';
 import { getImage, getSound, getLongSound, getWord } from '../../helpers/words';
 import { WHITE_TRANSPARENT, PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { loadSounds } from '../helpers/audio';
+import { LoadSounds } from '../helpers/Audio';
 import { RoundImageWithButton } from '../Components';
 
 const mapIndexed = addIndex(map);
@@ -17,7 +17,7 @@ const highlightStyle = {
   borderRadius: 20
 };
 
-const ShowWord = ({ image, sounds, text, letter }) => {
+const UnwrappedShowWord = ({ image, sounds, text, letter }) => {
   const letters = mapIndexed(
     (char, key) => (
       <View
@@ -54,19 +54,22 @@ const ShowWord = ({ image, sounds, text, letter }) => {
   );
 };
 
-const LegacyShowWords = loadSounds(ShowWord);
-
-const NewShowWords = props => {
+const ShowWord = props => {
   const { word } = props;
 
   return (
-    <LegacyShowWords
-      image={getImage(word)}
+    <LoadSounds
       sounds={[getLongSound(word), getSound(word)]}
-      text={getWord(word)}
-      {...props}
+      render={sounds => (
+        <UnwrappedShowWord
+          sounds={sounds}
+          image={getImage(word)}
+          text={getWord(word)}
+          {...props}
+        />
+      )}
     />
   );
 };
 
-export default NewShowWords;
+export default ShowWord;

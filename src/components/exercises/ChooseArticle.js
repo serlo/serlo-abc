@@ -16,7 +16,7 @@ import {
   NEUTER_WEAK
 } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { loadSounds } from '../helpers/audio';
+import { LoadSounds } from '../helpers/Audio';
 import { RoundImageWithButton } from '../Components';
 
 const mapIndexed = addIndex(map);
@@ -138,4 +138,11 @@ class ChooseArticle extends React.Component {
   }
 }
 
-export default loadSounds(ChooseArticle);
+const ChooseArticleWrapper = ({ sounds, ...props }) => (
+  <LoadSounds
+    sounds={sounds}
+    render={sounds => <ChooseArticle sounds={sounds} {...props} />}
+  />
+);
+
+export default ChooseArticleWrapper;

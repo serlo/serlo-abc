@@ -6,7 +6,7 @@ import speakerImage from '../../assets/images/speaker.png';
 import { playAll } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { loadSounds } from '../helpers/audio';
+import { LoadSounds } from '../helpers/Audio';
 import { RoundButton, IconWithBackground } from '../Components';
 
 const styles = {
@@ -62,13 +62,17 @@ const UnwrappedShowLetter = ({ letter, sounds, isRepeat }) => {
   );
 };
 
-const WrappedShowLetter = loadSounds(UnwrappedShowLetter);
-
 const ShowLetter = ({ sound, ...props }) => {
   const sounds = props.isRepeat
     ? [sound, require('../../assets/sounds/repeat.mp3')]
     : [sound];
-  return <WrappedShowLetter sounds={sounds} {...props} />;
+
+  return (
+    <LoadSounds
+      sounds={sounds}
+      render={sounds => <UnwrappedShowLetter sounds={sounds} {...props} />}
+    />
+  );
 };
 
 export default ShowLetter;

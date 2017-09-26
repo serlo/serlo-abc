@@ -4,7 +4,7 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { RoundButton, RoundImageWithBorder } from '../Components';
 import icon from '../../assets/images/speaker.png';
 import { play } from '../../helpers/audio';
-import { loadSound } from '../helpers/audio';
+import { LoadSound } from '../helpers/Audio';
 
 const styles = {
   container: {
@@ -74,4 +74,11 @@ class MatchImage extends Component {
   }
 }
 
-export default loadSound(MatchImage);
+const MatchImageWrapper = ({ sound, ...props }) => (
+  <LoadSound
+    sound={sound}
+    render={sound => <MatchImage sound={sound} {...props} />}
+  />
+);
+
+export default MatchImageWrapper;

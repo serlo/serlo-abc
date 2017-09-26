@@ -5,7 +5,7 @@ import speakerImage from '../../assets/images/speaker.png';
 import { play } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
 import { RoundButton, RoundTextButton } from '../Components';
-import { loadSound } from '../helpers/audio';
+import { LoadSound } from '../helpers/Audio';
 
 class HearWord extends Component {
   constructor(props) {
@@ -69,4 +69,11 @@ class HearWord extends Component {
   }
 }
 
-export default loadSound(HearWord);
+const HearWordWrapper = ({ sound, ...props }) => (
+  <LoadSound
+    sound={sound}
+    render={sound => <HearWord sound={sound} {...props} />}
+  />
+);
+
+export default HearWordWrapper;

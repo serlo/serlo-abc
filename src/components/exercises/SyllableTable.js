@@ -4,7 +4,7 @@ import { View } from 'react-native';
 
 import { play } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
-import { loadSound } from '../helpers/audio';
+import { LoadSound } from '../helpers/Audio';
 import { RoundTextButton, RoundText } from '../Components';
 
 const mapIndexed = addIndex(map);
@@ -50,37 +50,41 @@ const SyllableRow = ({
   </View>
 );
 
-const SyllableTable = ({ letters, ...props }) => {
-  return (
-    <View
-      style={{
-        flex: 1,
-        backgroundColor: PRIMARY,
-        alignItems: 'center'
-      }}
-    >
+const SyllableTable = ({ letters, sound, ...props }) => (
+  <LoadSound
+    sound={sound}
+    render={sound => (
       <View
         style={{
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection: 'column',
-          marginTop: 50
+          flex: 1,
+          backgroundColor: PRIMARY,
+          alignItems: 'center'
         }}
       >
-        {mapIndexed(
-          (letter, letterKey) => (
-            <SyllableRow
-              key={letterKey}
-              letter={letter}
-              letterKey={letterKey}
-              {...props}
-            />
-          ),
-          letters
-        )}
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+            marginTop: 50
+          }}
+        >
+          {mapIndexed(
+            (letter, letterKey) => (
+              <SyllableRow
+                key={letterKey}
+                letter={letter}
+                letterKey={letterKey}
+                sound={sound}
+                {...props}
+              />
+            ),
+            letters
+          )}
+        </View>
       </View>
-    </View>
-  );
-};
+    )}
+  />
+);
 
-export default loadSound(SyllableTable);
+export default SyllableTable;

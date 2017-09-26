@@ -12,7 +12,7 @@ import {
   PRIMARY_WEAK,
   PRIMARY_STRONG
 } from '../../styles/colors';
-import { loadSounds } from '../helpers/audio';
+import { LoadSounds } from '../helpers/Audio';
 import { RoundImageWithButton } from '../Components';
 const mapIndexed = addIndex(map);
 
@@ -93,4 +93,11 @@ class FindLetter extends Component {
   }
 }
 
-export default loadSounds(FindLetter);
+const FindLetterWrapper = ({ sounds, ...props }) => (
+  <LoadSounds
+    sounds={sounds}
+    render={sounds => <FindLetter sounds={sounds} {...props} />}
+  />
+);
+
+export default FindLetterWrapper;
