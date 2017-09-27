@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
-
+import { play } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
 import { RoundTextButton, RoundImageWithButton } from '../Components';
-import { loadSound, play } from '../helpers/audio';
+import { LoadSound } from '../helpers/Audio';
 
 class HasPhoneme extends Component {
   constructor(props) {
@@ -71,4 +71,11 @@ class HasPhoneme extends Component {
   }
 }
 
-export default loadSound(HasPhoneme);
+const HasPhonemeWrapper = ({ sound, ...props }) => (
+  <LoadSound
+    sound={sound}
+    render={sound => <HasPhoneme sound={sound} {...props} />}
+  />
+);
+
+export default HasPhonemeWrapper;

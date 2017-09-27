@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
+import { playAll } from '../../helpers/audio';
 import { DEFAULT } from '../../styles/text';
 
 import {
@@ -11,7 +12,7 @@ import {
   PRIMARY_WEAK,
   PRIMARY_STRONG
 } from '../../styles/colors';
-import { loadSounds, playAll } from '../helpers/audio';
+import { LoadSounds } from '../helpers/Audio';
 import { RoundImageWithButton } from '../Components';
 const mapIndexed = addIndex(map);
 
@@ -92,4 +93,11 @@ class FindLetter extends Component {
   }
 }
 
-export default loadSounds(FindLetter);
+const FindLetterWrapper = ({ sounds, ...props }) => (
+  <LoadSounds
+    sounds={sounds}
+    render={sounds => <FindLetter sounds={sounds} {...props} />}
+  />
+);
+
+export default FindLetterWrapper;

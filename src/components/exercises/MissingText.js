@@ -3,10 +3,10 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
-
+import { playAll } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { loadSounds, playAll } from '../helpers/audio';
+import { LoadSounds } from '../helpers/Audio';
 import { RoundImageWithButton, TextPicker } from '../Components';
 import Video from '../common/Video';
 const mapIndexed = addIndex(map);
@@ -82,7 +82,17 @@ const MissingText = ({
   );
 };
 
-export default props => {
-  const C = props.sounds ? loadSounds(MissingText) : MissingText;
-  return <C {...props} />;
+const MissingTextWrapper = ({ sounds, ...props }) => {
+  if (sounds) {
+    return (
+      <LoadSounds
+        sounds={sounds}
+        render={sounds => <MissingText sounds={sounds} {...props} />}
+      />
+    );
+  }
+
+  return <MissingText {...props} />;
 };
+
+export default MissingTextWrapper;
