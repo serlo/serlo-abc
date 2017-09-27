@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text } from 'react-native';
 
-const App = () => <Text>Welcome to Serlo ABC</Text>;
+import Splash from './components/exercises/Splash';
+
+const App = () => <Splash />;
 
 export default App;

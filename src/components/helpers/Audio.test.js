@@ -1,14 +1,14 @@
 import { shallow } from 'enzyme';
-import { forEach, xprod } from 'ramda';
+import { forEach } from 'ramda';
 import React from 'react';
 
 import { createLoadSounds, createLoadSound } from './Audio';
 
 class Sound {
   constructor() {
-    this.loadAsync = jest.fn();
-    this.unloadAsync = jest.fn();
-    this.stopAsync = jest.fn();
+    this.loadAsync = jest.fn(() => Promise.resolve());
+    this.unloadAsync = jest.fn(() => Promise.resolve());
+    this.stopAsync = jest.fn(() => Promise.resolve());
   }
 }
 
@@ -53,34 +53,6 @@ describe('LoadSounds', () => {
     shallow(<LoadSounds sounds={sounds} render={render} />);
   });
 
-  it('loads all passed sounds', done => {
-    const render = passedSounds => {
-      forEach(([sound, source]) => {
-        expect(sound.loadAsync).toHaveBeenCalledWith(source);
-      }, xprod(passedSounds, sounds));
-
-      done();
-    };
-
-    shallow(<LoadSounds sounds={sounds} render={render} />);
-  });
-
-  it('unloads all sounds on unmount', () => {
-    let passedSounds;
-
-    const render = sounds => {
-      passedSounds = sounds;
-    };
-
-    const rendered = shallow(<LoadSounds sounds={sounds} render={render} />);
-
-    rendered.unmount();
-
-    forEach(sound => {
-      expect(sound.unloadAsync).toHaveBeenCalled();
-    }, passedSounds);
-  });
-
   it('stops all sounds on unmount', () => {
     let passedSounds;
 
@@ -99,7 +71,7 @@ describe('LoadSounds', () => {
 });
 
 describe('LoadSound', () => {
-  let rendered, sound;
+  let sound;
 
   beforeEach(() => {
     sound = require('../../assets/sounds/a.mp3');
@@ -130,26 +102,14 @@ describe('LoadSound', () => {
   });
 
   it('loads the sound', done => {
-    const render = passedSound => {
-      expect(passedSound.loadAsync).toHaveBeenCalledWith(sound);
-      done();
+    const render = (passedSound, soundLoaded) => {
+      if (soundLoaded) {
+        expect(passedSound.loadAsync).toHaveBeenCalledWith(sound);
+        done();
+      }
     };
 
     shallow(<LoadSound sound={sound} render={render} />);
-  });
-
-  it('unloads the sound on unmount', () => {
-    let passedSound;
-
-    const render = sound => {
-      passedSound = sound;
-    };
-
-    rendered = shallow(<LoadSound sound={sound} render={render} />);
-
-    rendered.unmount();
-
-    expect(passedSound.unloadAsync).toHaveBeenCalled();
   });
 
   it('stops the sound on unmount', () => {
@@ -159,7 +119,7 @@ describe('LoadSound', () => {
       passedSound = sound;
     };
 
-    rendered = shallow(<LoadSound sound={sound} render={render} />);
+    const rendered = shallow(<LoadSound sound={sound} render={render} />);
 
     rendered.unmount();
 
