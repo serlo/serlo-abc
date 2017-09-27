@@ -2,9 +2,10 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
+import { play } from '../../helpers/audio';
 import { GREEN } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { loadSound, play } from '../helpers/audio';
+import { LoadSound } from '../helpers/Audio';
 import { RoundButton } from '../Components';
 
 const styles = {
@@ -18,10 +19,19 @@ const styles = {
 };
 
 const ExplanationText = ({ text, sound }) => (
-  <View style={styles.container}>
-    <Text style={styles.text}>{text}</Text>
-    <RoundButton icon={speakerImage} size={40} onPress={() => play(sound)} />
-  </View>
+  <LoadSound
+    sound={sound}
+    render={sound => (
+      <View style={styles.container}>
+        <Text style={styles.text}>{text}</Text>
+        <RoundButton
+          icon={speakerImage}
+          size={40}
+          onPress={() => play(sound)}
+        />
+      </View>
+    )}
+  />
 );
 
-export default loadSound(ExplanationText);
+export default ExplanationText;
