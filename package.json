@@ -7,6 +7,8 @@
     "build:android": "exp build:android",
     "build:ios": "exp build:ios",
     "build:status": "exp build:status",
+    "exp:login": "exp login",
+    "exp:publish": "exp publish",
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
