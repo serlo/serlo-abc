@@ -32,7 +32,7 @@ const getId = (raw_word, index) => {
   const id = getWord(raw_word)
     .toLowerCase()
     .replace(/\s/g, '_')
-    .replace(/ß/g, 'ss')
+    .replace(/ß/g, 'sz')
     .replace(/ä/g, 'ae')
     .replace(/ü/g, 'ue')
     .replace(/ö/g, 'oe')
@@ -101,7 +101,7 @@ const getImage = (raw_word, index) => {
 };
 
 const getSound = (raw_word, index) => {
-  const suffixes = ['_short.mp3', 'mp3'];
+  const suffixes = ['_short.mp3', '.mp3'];
 
   for (let i = 0; i < suffixes.length; i++) {
     const sound = `${getId(raw_word)}${suffixes[i]}`;
