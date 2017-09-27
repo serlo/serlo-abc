@@ -15,6 +15,8 @@ const good_keys = ['word', 'def', 'singular', 'plural', 'img'];
 
 const good_articles = ['der', 'die', 'das'];
 
+let str = '';
+
 const getWord = (raw_word, index) => {
   const { word } = raw_word;
 
@@ -39,6 +41,10 @@ const getId = (raw_word, index) => {
   if (id.match(/[^(a-z|_)]/)) {
     console.log(`[ERR] Bad id ${id}:`, getWord(raw_word));
     return null;
+  }
+
+  if (id === 'null') {
+    return 'zero';
   }
 
   return id;
@@ -142,6 +148,7 @@ raw_words.forEach((raw_word, index) => {
 
   if (words[id]) {
     console.warn(`[WARN] Duplicate id ${id}:`, getWord(raw_word));
+    return;
   }
 
   const article = getArticle(raw_word);
@@ -151,19 +158,20 @@ raw_words.forEach((raw_word, index) => {
   const sound = getSound(raw_word);
   const longSound = getLongSound(raw_word);
 
-  words[id] = {
-    id,
-    word,
-    article,
-    singular,
-    plural,
-    image,
-    sound,
-    longSound
-  };
+  words[id] = true;
+
+  str += `
+export const ${id} = {
+  id: "${id}",
+  word: "${word}",
+  article: ${article && `"${article}"`},
+  singular: ${singular && `"${singular}"`},
+  plural: ${plural && `"${plural}"`},
+  image: ${image && `require('./images/${image}')`},
+  sound: ${sound && `require('./sounds/${sound}')`},
+  longSound: ${longSound && `require('./sounds/${longSound}')`}
+}
+  `;
 });
 
-fs.writeFile(
-  path.join(assetsPath, 'words.json'),
-  JSON.stringify(words, null, 2)
-);
+fs.writeFile(path.join(assetsPath, 'words.js'), str);
