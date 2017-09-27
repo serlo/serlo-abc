@@ -15,6 +15,7 @@
     "ios": "react-native-scripts ios",
     "storybook": "storybook start -p 7007",
     "test": "jest",
+    "test:watch": "jest --watch",
     "format": "prettier --write \"{{scripts,src,storybook}/**/*,*}.{js,json}\"",
     "lint": "eslint \"{{scripts,src,storybook}/**/*,*}.js\"",
     "precommit": "lint-staged"

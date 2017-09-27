@@ -1,5 +1,5 @@
 import { Audio } from 'expo';
-import { forEach, map } from 'ramda';
+import { all, forEach, filter, identity, map, zipWith } from 'ramda';
 import { Component } from 'react';
 
 export const createLoadSounds = Audio => {
@@ -7,24 +7,33 @@ export const createLoadSounds = Audio => {
     constructor(props) {
       super(props);
 
-      this.sounds = map(source => {
-        const sound = new Audio.Sound();
-        sound.loadAsync(source);
-        return sound;
-      }, this.props.sounds || []);
+      this.sources = filter(identity, this.props.sounds || []);
+      this.sounds = map(_source => new Audio.Sound(), this.sources);
+      this.state = { soundsLoaded: false };
+    }
+
+    componentDidMount() {
+      Promise.all(
+        zipWith(
+          (sound, source) => sound.loadAsync(source),
+          this.sounds,
+          this.sources
+        )
+      ).then(() => this.setState({ soundsLoaded: true }));
     }
 
     componentWillUnmount() {
       forEach(sound => {
-        sound.stopAsync();
-        sound.unloadAsync();
+        sound.stopAsync().then(() => {
+          sound.unloadAsync();
+        });
       }, this.sounds);
     }
 
     render() {
       const render = this.props.render || (() => null);
 
-      return render(this.sounds);
+      return render(this.sounds, all(this.state.soundsLoaded));
     }
   }
 
@@ -36,25 +45,31 @@ export const createLoadSound = Audio => {
     constructor(props) {
       super(props);
 
-      const { sound } = this.props;
-
-      this.sound = null;
-
-      if (sound) {
+      if (this.props.sound) {
         this.sound = new Audio.Sound();
-        this.sound.loadAsync(this.props.sound);
+        this.state = { soundLoaded: false };
+      } else {
+        this.sound = null;
+        this.state = { soundLoaded: true };
+      }
+    }
+
+    componentDidMount() {
+      if (this.sound) {
+        this.sound.loadAsync(this.props.sound).then(() => {
+          this.setState({ soundLoaded: true });
+        });
       }
     }
 
     componentWillUnmount() {
-      this.sound.stopAsync();
-      this.sound.unloadAsync();
+      this.sound.stopAsync().then(() => this.sound.unloadAsync());
     }
 
     render() {
       const render = this.props.render || (() => null);
 
-      return render(this.sound);
+      return render(this.sound, this.state.soundLoaded);
     }
   }
 
