@@ -6,8 +6,9 @@ import speakerImage from '../../assets/images/speaker.png';
 import { playAll } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
+import RoundImageWithButton from '../common/RoundImageWithButton';
+import TextPicker from '../common/TextPicker';
 import { LoadSounds } from '../helpers/Audio';
-import { RoundImageWithButton, TextPicker } from '../Components';
 import Video from '../common/Video';
 const mapIndexed = addIndex(map);
 

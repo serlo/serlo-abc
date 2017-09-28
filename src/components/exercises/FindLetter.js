@@ -4,16 +4,16 @@ import { TouchableOpacity, View, Text } from 'react-native';
 
 import speakerImage from '../../assets/images/speaker.png';
 import { playAll } from '../../helpers/audio';
-import { DEFAULT } from '../../styles/text';
-
 import {
   BLACK_TRANSPARENT,
   PRIMARY,
   PRIMARY_WEAK,
   PRIMARY_STRONG
 } from '../../styles/colors';
+import { DEFAULT } from '../../styles/text';
+import RoundImageWithButton from '../common/RoundImageWithButton';
 import { LoadSounds } from '../helpers/Audio';
-import { RoundImageWithButton } from '../Components';
+
 const mapIndexed = addIndex(map);
 
 const styles = {
