@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet, Alert } from 'react-native';
-import { RoundTextButton } from '../components/Components';
-import NavigationMenu from '../components/NavigationMenu';
+
 import { WHITE, PRIMARY_STRONG, GREEN, RED } from '../styles/colors';
+import RoundTextButton from './common/RoundTextButton';
+import NavigationMenu from './NavigationMenu';
 
 const styles = StyleSheet.create({
   hoveringButton: {

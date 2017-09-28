@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import * as colors from '../../styles/colors';
-import { RoundTextButton } from '../Components';
+import RoundTextButton from '../common/RoundTextButton';
 
 const DifferFromSymbol = props => {
   const {

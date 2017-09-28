@@ -6,7 +6,7 @@ import { play } from '../../helpers/audio';
 import { GREEN } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 import { LoadSound } from '../helpers/Audio';
-import { RoundButton } from '../Components';
+import RoundButton from '../common/RoundButton';
 
 const styles = {
   container: {

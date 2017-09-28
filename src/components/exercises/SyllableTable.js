@@ -4,8 +4,9 @@ import { View } from 'react-native';
 
 import { play } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
+import RoundText from '../common/RoundText';
+import RoundTextButton from '../common/RoundTextButton';
 import { LoadSound } from '../helpers/Audio';
-import { RoundTextButton, RoundText } from '../Components';
 
 const mapIndexed = addIndex(map);
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 
 import { PRIMARY } from '../../styles/colors';
-import { RoundTextButton } from '../Components';
+import RoundTextButton from '../common/RoundTextButton';
 
 class LettersRotated extends Component {
   constructor(props) {

@@ -6,13 +6,14 @@ import {
   Animated,
   Dimensions
 } from 'react-native';
+
 import {
   PRIMARY,
   PRIMARY_WEAK,
   WHITE,
   BLACK_TRANSPARENT
 } from '../../styles/colors';
-import { RoundText } from '../Components';
+import RoundText from '../common/RoundText';
 
 const DOT_RADIUS = 5;
 const Window = Dimensions.get('window');

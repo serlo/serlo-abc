@@ -17,7 +17,7 @@ import {
 } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 import { LoadSounds } from '../helpers/Audio';
-import { RoundImageWithButton } from '../Components';
+import RoundImageWithButton from '../common/RoundImageWithButton';
 
 const mapIndexed = addIndex(map);
 

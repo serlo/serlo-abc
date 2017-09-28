@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 
-import { RoundButton, RoundImageWithBorder } from '../Components';
 import icon from '../../assets/images/speaker.png';
 import { play } from '../../helpers/audio';
+import RoundButton from '../common/RoundButton';
+import RoundImageWithBorder from '../common/RoundImageWithBorder';
 import { LoadSound } from '../helpers/Audio';
 
 const styles = {
