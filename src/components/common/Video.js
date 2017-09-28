@@ -3,13 +3,15 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   Image,
-  View
+  View,
+  Dimensions
 } from 'react-native';
 import { Video } from 'expo';
 
 import playIcon from '../../assets/images/play.png';
-const replayIcon = playIcon;
 
+const replayIcon = playIcon;
+var res = Dimensions.get('window');
 const styles = {
   container: {
     width: '100%',
@@ -17,7 +19,8 @@ const styles = {
     justifyContent: 'center'
   },
   video: {
-    width: '100%'
+    width: res.width,
+    height: 0.3*res.height
   },
   button: {
     position: 'absolute',
