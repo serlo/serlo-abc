@@ -4,7 +4,8 @@ import { View } from 'react-native';
 import speakerImage from '../../assets/images/speaker.png';
 import { play } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
-import { RoundTextButton, RoundImageWithButton } from '../Components';
+import RoundImageWithButton from '../common/RoundImageWithButton';
+import RoundTextButton from '../common/RoundTextButton';
 import { LoadSound } from '../helpers/Audio';
 
 class HasPhoneme extends Component {

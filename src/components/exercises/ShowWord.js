@@ -7,8 +7,8 @@ import { playAll } from '../../helpers/audio';
 import { getImage, getSound, getLongSound, getWord } from '../../helpers/words';
 import { WHITE_TRANSPARENT, PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
+import RoundImageWithButton from '../common/RoundImageWithButton';
 import { LoadSounds } from '../helpers/Audio';
-import { RoundImageWithButton } from '../Components';
 
 const mapIndexed = addIndex(map);
 

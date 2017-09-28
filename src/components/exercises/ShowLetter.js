@@ -6,8 +6,9 @@ import speakerImage from '../../assets/images/speaker.png';
 import { playAll } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
+import IconWithBackground from '../common/IconWithBackground';
+import RoundButton from '../common/RoundButton';
 import { LoadSounds } from '../helpers/Audio';
-import { RoundButton, IconWithBackground } from '../Components';
 
 const styles = {
   container: {

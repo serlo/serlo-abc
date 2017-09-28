@@ -6,6 +6,7 @@ import {
   View
 } from 'react-native';
 import { Video } from 'expo';
+
 import playIcon from '../../assets/images/play.png';
 const replayIcon = playIcon;
 

@@ -4,7 +4,8 @@ import { View } from 'react-native';
 import speakerImage from '../../assets/images/speaker.png';
 import { play } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
-import { RoundButton, RoundTextButton } from '../Components';
+import RoundButton from '../common/RoundButton';
+import RoundTextButton from '../common/RoundTextButton';
 import { LoadSound } from '../helpers/Audio';
 
 class HearWord extends Component {

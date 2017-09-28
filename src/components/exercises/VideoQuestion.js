@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { addIndex, map } from 'ramda';
+
 import { PRIMARY, GREEN } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { RoundTextButton } from '../Components';
+import RoundTextButton from '../common/RoundTextButton';
 import Video from '../common/Video';
 
 const mapIndexed = addIndex(map);
