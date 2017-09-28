@@ -6,7 +6,7 @@ import BuildSentenceVideo from './BuildSentenceVideo';
 storiesOf('exercises/BuildSentenceVideo', module).add('8_words', () => (
   <BuildSentenceVideo
     video={require('../../assets/videos/placeholder.mp4')}
-    words={[
+    sentence={[
       'JavaScript',
       'React',
       'using',

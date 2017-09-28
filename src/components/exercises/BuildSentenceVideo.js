@@ -1,42 +1,27 @@
 import React, { Component } from 'react';
-import View from 'react-native';
+import { View, Dimensions } from 'react-native';
 
 import PRIMARY from '../../styles/colors';
 import Video from '../common/Video';
-
 import BuildSentence from './BuildSentence';
 
-const styles = {
-  vidContainer: {
-    flex: 3,
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-};
+var Window = Dimensions.get('window');
 
-class BuildSentenceVideo extends Component {
+export default class BuildSentenceVideo extends Component {
   constructor(props) {
     super(props);
 }
 
 render(){
 	return(
-		<View
-        style={{
-          alignItems: 'center',
-          justifyContent: 'space-around',
-          flex: 1,
-          backgroundColor: PRIMARY
-        }}
-      	>
-			<View style={styles.vidContainer}>
-	          <Video video={this.props.video} />
-	        </View>
-	        <BuildSentence
-	        	sentence={this.props.words}
-	      	/>	
+		<View style={{flex: 3,
+					 alignItems: 'center',
+					 justifyContent: 'center',
+					 backgroundColor: PRIMARY
+					}}>
+			<Video video={this.props.video}/>
+	        <BuildSentence sentence={this.props.sentence} paddingTop={Window.height * 0.3}/>
 	    </View>    
 		);
 	}
 }
-export default BuildSentenceVideo;
