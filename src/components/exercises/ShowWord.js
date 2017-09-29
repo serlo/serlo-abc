@@ -2,13 +2,10 @@ import { addIndex, map, toUpper } from 'ramda';
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import speakerImage from '../../assets/images/speaker.png';
-import { playAll } from '../../helpers/audio';
-import { getImage, getSound, getLongSound, getWord } from '../../helpers/words';
+import { getWord } from '../../helpers/words';
 import { WHITE_TRANSPARENT, PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import RoundImageWithButton from '../common/RoundImageWithButton';
-import { LoadSounds } from '../helpers/Audio';
+import WordImageWithSounds from '../common/WordImageWithSounds';
 
 const mapIndexed = addIndex(map);
 
@@ -17,7 +14,7 @@ const highlightStyle = {
   borderRadius: 20
 };
 
-const UnwrappedShowWord = ({ image, sounds, text, letter }) => {
+const ShowWord = ({ word, letter }) => {
   const letters = mapIndexed(
     (char, key) => (
       <View
@@ -30,7 +27,7 @@ const UnwrappedShowWord = ({ image, sounds, text, letter }) => {
         <Text style={DEFAULT}>{char}</Text>
       </View>
     ),
-    text
+    getWord(word)
   );
 
   return (
@@ -42,33 +39,9 @@ const UnwrappedShowWord = ({ image, sounds, text, letter }) => {
         justifyContent: 'space-around'
       }}
     >
-      <RoundImageWithButton
-        image={image}
-        imageSize={200}
-        icon={speakerImage}
-        buttonSize={40}
-        onPress={() => playAll(sounds)}
-      />
+      <WordImageWithSounds longSound word={word} />
       <View style={{ flexDirection: 'row' }}>{letters}</View>
     </View>
-  );
-};
-
-const ShowWord = props => {
-  const { word } = props;
-
-  return (
-    <LoadSounds
-      sounds={[getLongSound(word), getSound(word)]}
-      render={sounds => (
-        <UnwrappedShowWord
-          sounds={sounds}
-          image={getImage(word)}
-          text={getWord(word)}
-          {...props}
-        />
-      )}
-    />
   );
 };
 
