@@ -29,6 +29,6 @@ class NavigationMenuStory extends React.Component {
   }
 }
 
-storiesOf('Navigation', module).add('Navigation Menu', () => (
+storiesOf('common', module).add('NavigationMenu', () => (
   <NavigationMenuStory />
 ));
