@@ -2,8 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet, Alert } from 'react-native';
 
 import { WHITE, PRIMARY_STRONG, GREEN, RED } from '../styles/colors';
+import NavigationMenu from './common/NavigationMenu';
 import RoundTextButton from './common/RoundTextButton';
-import NavigationMenu from './NavigationMenu';
 
 const styles = StyleSheet.create({
   hoveringButton: {
@@ -53,10 +53,6 @@ class ExerciseLayout extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    console.log(
-      this.props.currentExerciseComplete,
-      prevProps.currentExerciseComplete
-    );
     if (this.props.currentExercise !== prevProps.currentExercise) {
       this.showResult();
     } else if (
@@ -64,7 +60,6 @@ class ExerciseLayout extends React.Component {
         prevProps.currentExerciseComplete &&
       this.props.currentExerciseComplete
     ) {
-      console.log('show result');
       this.showResult();
     }
   }

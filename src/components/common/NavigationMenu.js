@@ -36,22 +36,26 @@ class NavigationMenu extends React.Component {
   }
 
   render() {
-    const navigationMenuStyle = {
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      paddingTop: 25,
-      backgroundColor: 'rgba(0, 0, 0, 0.6)',
-      top: this.state.top,
-      opacity: this.state.opacity,
-      ...this.props.style
-    };
-
     if (this.state.visible) {
       return (
-        <Animated.ScrollView style={navigationMenuStyle}>
-          {this.props.children}
-        </Animated.ScrollView>
+        <Animated.View
+          style={{
+            position: 'absolute',
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+            opacity: this.state.opacity,
+            height: '100%',
+            width: '100%'
+          }}
+        >
+          <Animated.ScrollView
+            style={{
+              top: this.state.top,
+              ...this.props.style
+            }}
+          >
+            {this.props.children}
+          </Animated.ScrollView>
+        </Animated.View>
       );
     }
 
