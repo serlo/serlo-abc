@@ -12,7 +12,7 @@
               "component": "DifferFromSymbol",
               "correctAnswer": 4,
               "props": {
-                "symbols": ["X", "X", "X", "X", "M"],
+                "symbols": ["X", "X", "X", "X", "M"]
               }
             },
             {
@@ -20,7 +20,7 @@
               "component": "BuildSentence",
               "correctAnswer": "this is an exercise",
               "props": {
-                "sentence": ["is", "exercise", "an", "this"],
+                "sentence": ["is", "exercise", "an", "this"]
               }
             },
             {
@@ -30,9 +30,9 @@
               "props": {
                 "text": ["A", "p", "f", "e", "l"],
                 "missing": 3,
-                "options": ["a", "n", "e"],
+                "options": ["a", "n", "e"]
               }
-            },
+            }
           ]
         }
       ]

@@ -15,7 +15,7 @@
     "ios": "react-native-scripts ios",
     "storybook": "storybook start -p 7007",
     "test": "jest",
-    "format": "prettier --write \"{{scripts,src,storybook}/**/*,*}.js\"",
+    "format": "prettier --write \"{{scripts,src,storybook}/**/*,*}.{js,json}\"",
     "lint": "eslint \"{{scripts,src,storybook}/**/*,*}.js\"",
     "precommit": "lint-staged"
   },
@@ -29,37 +29,35 @@
     "redux-persist": "^4.10.1"
   },
   "devDependencies": {
-    "@storybook/react-native": "^3.2.10",
-    "babel-preset-es2015": "^6.24.1",
+    "@storybook/react-native": "^3.2.11",
     "concurrently": "^3.5.0",
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-16": "^1.0.0",
     "eslint": "^4.7.2",
-    "eslint-config-universe": "^1.0.5",
+    "eslint-config-universe": "^1.0.6",
     "exp": "^44.0.0",
     "husky": "^0.14.3",
-    "jest": "^21.2.0",
+    "jest": "^21.2.1",
     "jest-expo": "^21.0.2",
     "lint-staged": "^4.2.3",
-    "prettier": "^1.7.0",
+    "prettier": "^1.7.2",
     "react-dom": "16.0.0-alpha.12",
-    "react-native-scripts": "^1.3.1",
+    "react-native-scripts": "^1.5.0",
     "react-test-renderer": "^16.0.0"
   },
   "private": true,
   "lint-staged": {
-    "{{scripts,src,storybook}/**/*,*}.js": [
+    "{{scripts,src,storybook}/**/*,*}.{js,json}": [
       "prettier --write",
       "git add"
     ]
   },
   "jest": {
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+        "<rootDir>/__mocks__/fileMock.js"
     },
     "preset": "jest-expo",
-    "setupFiles": [
-      "./.enzyme"
-    ]
+    "setupFiles": ["<rootDir>/.enzyme.js"]
   }
 }
