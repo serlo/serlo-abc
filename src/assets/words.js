@@ -258,7 +258,7 @@ export const hallo = {
   singular: "H'al|lo",
   plural: null,
   image: null,
-  sound: null,
+  sound: require('./sounds/hallo.mp3'),
   longSound: null
 };
 
@@ -280,7 +280,7 @@ export const guten_morgen = {
   singular: null,
   plural: null,
   image: require('./images/guten_morgen.jpg'),
-  sound: null,
+  sound: require('./sounds/guten_morgen.mp3'),
   longSound: null
 };
 
@@ -291,7 +291,7 @@ export const guten_tag = {
   singular: null,
   plural: null,
   image: require('./images/guten_tag.jpg'),
-  sound: null,
+  sound: require('./sounds/guten_tag.mp3'),
   longSound: null
 };
 
@@ -302,7 +302,7 @@ export const guten_abend = {
   singular: null,
   plural: null,
   image: require('./images/guten_abend.jpg'),
-  sound: null,
+  sound: require('./sounds/guten_abend.mp3'),
   longSound: null
 };
 
@@ -1604,14 +1604,14 @@ export const klein = {
   longSound: null
 };
 
-export const weiss = {
-  id: 'weiss',
+export const weisz = {
+  id: 'weisz',
   word: 'weiß',
   article: null,
   singular: 'weiß',
   plural: 'weiß',
-  image: null,
-  sound: null,
+  image: require('./images/weisz.jpg'),
+  sound: require('./sounds/weisz_short.mp3'),
   longSound: null
 };
 
@@ -2176,58 +2176,58 @@ export const muenze = {
   longSound: null
 };
 
-export const fuss = {
-  id: 'fuss',
+export const fusz = {
+  id: 'fusz',
   word: 'Fuß',
   article: 'der',
   singular: 'F-uß',
   plural: 'F-ü|ße',
   image: null,
-  sound: null,
+  sound: require('./sounds/fusz_short.mp3'),
   longSound: null
 };
 
-export const strasse = {
-  id: 'strasse',
+export const strasze = {
+  id: 'strasze',
   word: 'Straße',
   article: 'die',
   singular: "Str'a|ße",
   plural: "Str'a|ßen",
-  image: null,
-  sound: null,
+  image: require('./images/strasze.jpg'),
+  sound: require('./sounds/strasze_short.mp3'),
   longSound: null
 };
 
-export const gross = {
-  id: 'gross',
+export const grosz = {
+  id: 'grosz',
   word: 'groß',
   article: null,
   singular: 'gr-oß',
   plural: 'gr-oß',
   image: null,
-  sound: null,
+  sound: require('./sounds/grosz_short.mp3'),
   longSound: null
 };
 
-export const sosse = {
-  id: 'sosse',
+export const sosze = {
+  id: 'sosze',
   word: 'Soße',
   article: 'die',
   singular: 'S-o|ße',
   plural: 'S-o|ßen',
-  image: null,
-  sound: null,
+  image: require('./images/sosze.jpg'),
+  sound: require('./sounds/sosze_short.mp3'),
   longSound: null
 };
 
-export const heissen = {
-  id: 'heissen',
+export const heiszen = {
+  id: 'heiszen',
   word: 'heißen',
   article: null,
   singular: 'h-ei|ßen',
   plural: 'h-ei|ßen',
   image: null,
-  sound: null,
+  sound: require('./sounds/heiszen_short.mp3'),
   longSound: null
 };
 
