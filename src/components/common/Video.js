@@ -46,7 +46,7 @@ export default class VideoComponent extends Component {
       shouldPlay: true,
       isFinished: false,
       width: width,
-      height: height
+      height: this.props.aspectRatio ? this.props.aspectRatio * width : height
     };
   }
 
@@ -103,7 +103,7 @@ export default class VideoComponent extends Component {
     const { width, height } = Dimensions.get('window');
     this.setState({
       width: width,
-      height: height
+      height: this.props.aspectRatio ? this.props.aspectRatio * width : height
     });
   };
 
