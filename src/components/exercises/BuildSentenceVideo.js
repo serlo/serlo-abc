@@ -5,23 +5,20 @@ import PRIMARY from '../../styles/colors';
 import Video from '../common/Video';
 import BuildSentence from './BuildSentence';
 
-var Window = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 
-export default class BuildSentenceVideo extends Component {
-  constructor(props) {
-    super(props);
-}
+BuildSentenceVideo = props => (
+  <View
+    style={{
+      flex: 3,
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: PRIMARY
+    }}
+  >
+    <Video video={props.video} />
+    <BuildSentence sentence={props.sentence} paddingTop={height * 0.3} />
+  </View>
+);
 
-render(){
-	return(
-		<View style={{flex: 3,
-					 alignItems: 'center',
-					 justifyContent: 'center',
-					 backgroundColor: PRIMARY
-					}}>
-			<Video video={this.props.video}/>
-	        <BuildSentence sentence={this.props.sentence} paddingTop={Window.height * 0.3}/>
-	    </View>    
-		);
-	}
-}
+export default BuildSentenceVideo;
