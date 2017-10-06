@@ -11,16 +11,11 @@ import { Video } from 'expo';
 import playIcon from '../../assets/images/play.png';
 
 const replayIcon = playIcon;
-var res = Dimensions.get('window');
 const styles = {
   container: {
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center'
-  },
-  video: {
-    width: res.width,
-    height: 0.3*res.height
   },
   button: {
     position: 'absolute',
@@ -46,9 +41,12 @@ const styles = {
 export default class VideoComponent extends Component {
   constructor(props) {
     super(props);
+    const { width, height } = Dimensions.get('window');
     this.state = {
       shouldPlay: true,
-      isFinished: false
+      isFinished: false,
+      width: width,
+      height: height
     };
   }
 
@@ -101,6 +99,22 @@ export default class VideoComponent extends Component {
     });
   };
 
+  resize = () => {
+    const { width, height } = Dimensions.get('window');
+    this.setState({
+      width: width,
+      height: height
+    });
+  };
+
+  componentDidMount() {
+    Dimensions.addEventListener('change', this.resize);
+  }
+
+  componentWillUnmount() {
+    Dimensions.removeEventListener('change', this.resize);
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -111,7 +125,10 @@ export default class VideoComponent extends Component {
             }}
             resizeMode={Video.RESIZE_MODE_CONTAIN}
             source={this.props.video}
-            style={styles.video}
+            style={{
+              width: this.state.width,
+              height: this.state.height
+            }}
             shouldPlay={this.state.shouldPlay}
             onPlaybackStatusUpdate={this.onPlaybackStatusUpdate}
           />
