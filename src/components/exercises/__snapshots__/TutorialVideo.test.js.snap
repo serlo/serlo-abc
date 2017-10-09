@@ -40,7 +40,9 @@ exports[`renders without crashing 1`] = `
       source={1337}
       style={
         Object {
-          "width": "100%",
+          "backgroundColor": "transparent",
+          "height": 1334,
+          "width": 750,
         }
       }
       testID={undefined}

@@ -3,21 +3,19 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   Image,
-  View
+  View,
+  Dimensions
 } from 'react-native';
 import { Video } from 'expo';
 
 import playIcon from '../../assets/images/play.png';
-const replayIcon = playIcon;
 
+const replayIcon = playIcon;
 const styles = {
   container: {
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center'
-  },
-  video: {
-    width: '100%'
   },
   button: {
     position: 'absolute',
@@ -43,11 +41,18 @@ const styles = {
 export default class VideoComponent extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       shouldPlay: true,
-      isFinished: false
+      isFinished: false,
+      ...this.getSize(Dimensions.get('window'))
     };
   }
+
+  getSize = ({ width, height }) => ({
+    width,
+    height: this.props.aspectRatio ? this.props.aspectRatio * width : height
+  });
 
   onPlaybackStatusUpdate = playbackStatus => {
     if (playbackStatus.didJustFinish) {
@@ -98,6 +103,18 @@ export default class VideoComponent extends Component {
     });
   };
 
+  resize = ({ window }) => {
+    this.setState(this.getSize(window));
+  };
+
+  componentDidMount() {
+    Dimensions.addEventListener('change', this.resize);
+  }
+
+  componentWillUnmount() {
+    Dimensions.removeEventListener('change', this.resize);
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -108,7 +125,11 @@ export default class VideoComponent extends Component {
             }}
             resizeMode={Video.RESIZE_MODE_CONTAIN}
             source={this.props.video}
-            style={styles.video}
+            style={{
+              backgroundColor: 'transparent',
+              width: this.state.width,
+              height: this.state.height
+            }}
             shouldPlay={this.state.shouldPlay}
             onPlaybackStatusUpdate={this.onPlaybackStatusUpdate}
           />
