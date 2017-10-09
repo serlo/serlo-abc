@@ -47,9 +47,7 @@ class VideoQuestion extends Component {
           backgroundColor: PRIMARY
         }}
       >
-        <View style={styles.vidContainer}>
-          <Video video={this.props.video} />
-        </View>
+        <Video video={this.props.video} aspectRatio={3 / 4} />
         <View
           style={{ flex: 4, alignItems: 'center', justifyContent: 'center' }}
         >
