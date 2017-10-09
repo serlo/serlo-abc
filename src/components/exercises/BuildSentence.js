@@ -138,11 +138,12 @@ export default class BuildSentence extends React.Component {
           let zoneFound = false;
           for (let i = 0; i < this.state.zones.length; i++) {
             const zone = this.state.zones[i];
+            const paddingTop = this.props.paddingTop + 20;
             if (
               zone.layout.x < gesture.moveX &&
               gesture.moveX < zone.layout.x + zone.layout.width &&
-              zone.layout.y < gesture.moveY &&
-              gesture.moveY < zone.layout.y + zone.layout.height
+              zone.layout.y - paddingTop < gesture.moveY &&
+              gesture.moveY - paddingTop < zone.layout.y + zone.layout.height
             ) {
               zoneFound = true;
               springTo.x =
@@ -275,8 +276,8 @@ export default class BuildSentence extends React.Component {
     if (!this.itemsReady) {
       containerStyle = {
         ...containerStyle,
-        width: '100%',
-        paddingTop: Window.height / 2,
+        width: Window.width,
+        paddingTop: this.props.paddingTop,
         justifyContent: 'space-around',
         alignItems: 'center',
         flexDirection: 'row',
