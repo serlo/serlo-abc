@@ -6,6 +6,10 @@
     "sdkVersion": "21.0.0",
     "version": "0.0.0-development",
     "icon": "./appIcon.png",
+    "packagerOpts": {
+      "sourceExts": ["ts", "tsx"],
+      "transformer": "node_modules/react-native-typescript-transformer/index.js"
+    },
     "ios": {
       "bundleIdentifier": "org.serlo.abc"
     },

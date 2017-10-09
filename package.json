@@ -18,8 +18,11 @@
     "storybook": "storybook start -p 7007",
     "test": "jest",
     "test:watch": "jest --watch",
-    "format": "prettier --write \"{{scripts,src,storybook}/**/*,*}.{js,json}\"",
-    "lint": "eslint \"{{scripts,src,storybook}/**/*,*}.js\"",
+    "format":
+      "prettier --write \"{{scripts,src,storybook}/**/*,*}.{ts,tsx,js,jsx,json}\"",
+    "lint:js": "eslint \"{{scripts,src,storybook}/**/*,*}.{js,jsx}\"",
+    "lint:ts": "tslint \"{{scripts,src,storybook}/**/*,*}.{ts,tsx}\"",
+    "lint": "npm-run-all --print-name --continue-on-error --sequential lint:*",
     "precommit": "lint-staged"
   },
   "config": {
@@ -39,6 +42,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.12",
     "@storybook/react-native": "^3.2.12",
+    "@types/jest": "^21.1.2",
     "commitizen": "^2.9.6",
     "concurrently": "^3.5.0",
     "cz-conventional-changelog": "^2.0.0",
@@ -49,12 +53,16 @@
     "exp": "^44.0.0",
     "husky": "^0.14.3",
     "jest": "^21.2.1",
-    "jest-expo": "^21.0.2",
+    "jest-expo-ts": "^21.0.0",
     "lint-staged": "^4.2.3",
+    "npm-run-all": "^4.1.1",
     "prettier": "^1.7.4",
     "react-dom": "16.0.0-alpha.12",
     "react-native-scripts": "^1.5.0",
-    "react-test-renderer": "^16.0.0"
+    "react-native-typescript-transformer": "^1.1.4",
+    "react-test-renderer": "^16.0.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3"
   },
   "private": true,
   "lint-staged": {
@@ -68,7 +76,7 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
         "<rootDir>/__mocks__/fileMock.js"
     },
-    "preset": "jest-expo",
+    "preset": "jest-expo-ts",
     "setupFiles": ["<rootDir>/.enzyme.js"]
   }
 }
