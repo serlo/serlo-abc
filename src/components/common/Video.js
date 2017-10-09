@@ -41,14 +41,18 @@ const styles = {
 export default class VideoComponent extends Component {
   constructor(props) {
     super(props);
-    const { width, height } = Dimensions.get('window');
+
     this.state = {
       shouldPlay: true,
       isFinished: false,
-      width: width,
-      height: this.props.aspectRatio ? this.props.aspectRatio * width : height
+      ...this.getSize(Dimensions.get('window'))
     };
   }
+
+  getSize = ({ width, height }) => ({
+    width,
+    height: this.props.aspectRatio ? this.props.aspectRatio * width : height
+  });
 
   onPlaybackStatusUpdate = playbackStatus => {
     if (playbackStatus.didJustFinish) {
@@ -99,12 +103,8 @@ export default class VideoComponent extends Component {
     });
   };
 
-  resize = () => {
-    const { width, height } = Dimensions.get('window');
-    this.setState({
-      width: width,
-      height: this.props.aspectRatio ? this.props.aspectRatio * width : height
-    });
+  resize = ({ window }) => {
+    this.setState(this.getSize(window));
   };
 
   componentDidMount() {
@@ -126,6 +126,7 @@ export default class VideoComponent extends Component {
             resizeMode={Video.RESIZE_MODE_CONTAIN}
             source={this.props.video}
             style={{
+              backgroundColor: 'transparent',
               width: this.state.width,
               height: this.state.height
             }}

@@ -15,46 +15,38 @@ exports[`renders without crashing 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "flex": 3,
         "justifyContent": "center",
+        "width": "100%",
       }
     }
   >
-    <View
+    <Video
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      nativeID={undefined}
+      onLayout={undefined}
+      onPlaybackStatusUpdate={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      resizeMode={undefined}
+      shouldPlay={true}
+      source={1337}
       style={
         Object {
-          "alignItems": "center",
-          "justifyContent": "center",
-          "width": "100%",
+          "backgroundColor": "transparent",
+          "height": 562.5,
+          "width": 750,
         }
       }
-    >
-      <Video
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
-        accessible={true}
-        hitSlop={undefined}
-        nativeID={undefined}
-        onLayout={undefined}
-        onPlaybackStatusUpdate={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        resizeMode={undefined}
-        shouldPlay={true}
-        source={1337}
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
-        testID={undefined}
-      />
-    </View>
+      testID={undefined}
+    />
   </View>
   <View
     style={
