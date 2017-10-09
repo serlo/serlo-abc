@@ -1,24 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Dimensions } from 'react-native';
 
-import PRIMARY from '../../styles/colors';
+import { PRIMARY } from '../../styles/colors';
 import Video from '../common/Video';
 import BuildSentence from './BuildSentence';
 
-const { height, width } = Dimensions.get('window');
+const BuildSentenceVideo = props => {
+  const { height } = Dimensions.get('window');
 
-BuildSentenceVideo = props => (
-  <View
-    style={{
-      flex: 3,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: PRIMARY
-    }}
-  >
-    <Video video={props.video} />
-    <BuildSentence sentence={props.sentence} paddingTop={height * 0.3} />
-  </View>
-);
+  return (
+    <View
+      style={{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        backgroundColor: PRIMARY
+      }}
+    >
+      <Video video={props.video} aspectRatio={3 / 4} />
+      <BuildSentence sentence={props.sentence} paddingTop={height / 3} />
+    </View>
+  );
+};
 
 export default BuildSentenceVideo;

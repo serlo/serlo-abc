@@ -217,7 +217,7 @@ export default class BuildSentence extends React.Component {
         style={{
           flexDirection: 'row',
           flexWrap: 'wrap',
-          justifyContent: 'center',
+          justifyContent: 'center'
         }}
       >
         {this.state.zones.map(zone => {
