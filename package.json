@@ -43,6 +43,7 @@
     "@storybook/addon-actions": "^3.2.12",
     "@storybook/react-native": "^3.2.12",
     "@types/jest": "^21.1.2",
+    "@types/ramda": "^0.24.16",
     "commitizen": "^2.9.6",
     "concurrently": "^3.5.0",
     "cz-conventional-changelog": "^2.0.0",
@@ -62,6 +63,7 @@
     "react-native-typescript-transformer": "^1.1.4",
     "react-test-renderer": "^16.0.0",
     "tslint": "^5.7.0",
+    "tslint-config-prettier": "^1.5.0",
     "typescript": "^2.5.3"
   },
   "private": true,
