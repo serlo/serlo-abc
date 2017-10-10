@@ -1,7 +1,7 @@
-import SerializedProgress, { Progress } from './SerializedProgress';
+import ISerializedProgress, { Progress } from './ISerializedProgress';
 
 interface IProcessStorage {
-  getProgress(id: string): Promise<SerializedProgress>;
+  getProgress(id: string): Promise<ISerializedProgress>;
   setProgress(
     id: string,
     progress: Progress,
