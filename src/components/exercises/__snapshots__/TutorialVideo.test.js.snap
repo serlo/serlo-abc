@@ -39,11 +39,13 @@ exports[`renders without crashing 1`] = `
       shouldPlay={true}
       source={1337}
       style={
-        Object {
-          "backgroundColor": "transparent",
-          "height": 1334,
-          "width": 750,
-        }
+        Array [
+          Object {
+            "height": 1334,
+            "width": 750,
+          },
+          false,
+        ]
       }
       testID={undefined}
     />
