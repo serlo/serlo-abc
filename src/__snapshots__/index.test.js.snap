@@ -1,91 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders without crashing 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#00b4d5",
-      "flex": 1,
-      "justifyContent": "space-around",
-    }
-  }
->
+<NativeRouter>
   <View
-    collapsable={undefined}
     style={
       Object {
-        "backgroundColor": "rgba(0, 0, 0, 0.1)",
-        "borderRadius": 9999999,
-        "margin": 13,
+        "flex": 1,
       }
     }
   >
-    <Image
-      collapsable={undefined}
-      resizeMode="cover"
-      source={1337}
-      style={
-        Object {
-          "borderRadius": 65,
-          "height": 130,
-          "margin": 13,
-          "width": 130,
-        }
-      }
+    <Route
+      exact={true}
+      path="/"
+      render={[Function]}
+    />
+    <Route
+      component={[Function]}
+      path="/course"
     />
   </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-      }
-    }
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#ffffff",
-            "fontFamily": "norddruck",
-            "fontSize": 35,
-            "textAlign": "center",
-          },
-          Object {
-            "color": "#000000",
-            "fontFamily": "serlo",
-          },
-        ]
-      }
-    >
-      Serlo
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#ffffff",
-            "fontFamily": "norddruck",
-            "fontSize": 35,
-            "textAlign": "center",
-          },
-          Object {
-            "color": "#007EC1",
-            "marginLeft": 5,
-          },
-        ]
-      }
-    >
-      abc
-    </Text>
-  </View>
-</View>
+</NativeRouter>
 `;
