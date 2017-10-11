@@ -64,11 +64,16 @@ const soundFromHour = hour => {
   return getSound(abend);
 };
 
-const SplashWrapper = () => {
+const SplashWrapper = props => {
   const hour = new Date().getHours();
   const sound = soundFromHour(hour);
 
-  return <LoadSound sound={sound} render={sound => <Splash sound={sound} />} />;
+  return (
+    <LoadSound
+      sound={sound}
+      render={sound => <Splash sound={sound} {...props} />}
+    />
+  );
 };
 
 export default SplashWrapper;

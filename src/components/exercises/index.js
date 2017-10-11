@@ -9,7 +9,6 @@ import TutorialVideo from './TutorialVideo';
 import FindLetter from './FindLetter';
 import LetterRotated from './LetterRotated';
 import ShowLetter from './ShowLetter';
-import Splash from './Splash';
 
 export default {
   BuildSentence,
@@ -22,6 +21,5 @@ export default {
   TutorialVideo,
   FindLetter,
   LetterRotated,
-  ShowLetter,
-  Splash
+  ShowLetter
 };
