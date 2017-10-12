@@ -13,7 +13,7 @@ class CourseStorage implements ICourseStorage {
         resolve(this.courses[id]);
       }
 
-      reject(new Error(`There exists no course with id ${id}`))
+      reject(new Error(`There exists no course with id ${id}`));
     });
   }
 }

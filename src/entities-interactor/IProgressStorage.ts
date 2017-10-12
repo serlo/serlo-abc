@@ -1,6 +1,6 @@
 import ISerializedProgress, { Progress } from './ISerializedProgress';
 
-interface IProcessStorage {
+interface IProgressStorage {
   getProgress(id: string): Promise<ISerializedProgress>;
   setProgress(
     id: string,
@@ -9,4 +9,4 @@ interface IProcessStorage {
   ): Promise<void>;
 }
 
-export default IProcessStorage;
+export default IProgressStorage;

@@ -33,10 +33,10 @@ let storage: CourseStorage;
 
 beforeEach(() => {
   storage = new CourseStorage(courses);
-})
+});
 
-it('reolves with the course with the given id', (done) => {
-  storage.getCourse('09438926-b170-4005-a6e8-5dd8fba83cde').then((course) => {
+it('reolves with the course with the given id', done => {
+  storage.getCourse('09438926-b170-4005-a6e8-5dd8fba83cde').then(course => {
     expect(course).toEqual({
       id: '09438926-b170-4005-a6e8-5dd8fba83cde',
       title: 'Foo bar',
@@ -61,13 +61,13 @@ it('reolves with the course with the given id', (done) => {
           ]
         }
       ]
-    })
-    done()
+    });
+    done();
   });
 });
 
-it('rejects with an error if no course with the given id exists', (done) => {
-  storage.getCourse('a2002037-52a1-4c2a-917d-1ccd64ea9b15').catch((err) => {
+it('rejects with an error if no course with the given id exists', done => {
+  storage.getCourse('a2002037-52a1-4c2a-917d-1ccd64ea9b15').catch(err => {
     expect(err).toBeInstanceOf(Error);
     done();
   });
