@@ -2,10 +2,11 @@ import React from 'react';
 import { View, Dimensions } from 'react-native';
 
 import { GREEN } from '../../styles/colors';
+import { getImage } from '../../helpers/words';
 import RoundImageWithBorder from '../common/RoundImageWithBorder';
 import RoundText from '../common/RoundText';
 
-const ScaleFourImages = ({ displaySize, images, letter }) => {
+const ScaleFourImages = ({ displaySize, letter, words }) => {
   const scale = displaySize / 360;
   return (
     <View
@@ -33,13 +34,13 @@ const ScaleFourImages = ({ displaySize, images, letter }) => {
         }}
       >
         <RoundImageWithBorder
-          image={images[0]}
+          image={getImage(words[0])}
           size={130 * scale}
           white
           style={{ margin: 0 }}
         />
         <RoundImageWithBorder
-          image={images[1]}
+          image={getImage(words[1])}
           size={110 * scale}
           white
           style={{ margin: 0 }}
@@ -47,7 +48,7 @@ const ScaleFourImages = ({ displaySize, images, letter }) => {
       </View>
       <RoundImageWithBorder
         style={{ marginTop: -25 * scale, marginLeft: 50 * scale }}
-        image={images[2]}
+        image={getImage(words[2])}
         size={130 * scale}
         white
       />

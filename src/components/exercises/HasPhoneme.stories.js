@@ -1,13 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
+import { getWordObject } from '../../helpers/words';
 import HasPhoneme from './HasPhoneme';
 
 storiesOf('exercises/HasPhoneme', module).add('one letter', () => (
-  <HasPhoneme
-    image={require('../../assets/images/gabel.jpg')}
-    sound={require('../../assets/sounds/gabel_short.mp3')}
-    word="gabel"
-    phoneme={'b'}
-  />
+  <HasPhoneme word={getWordObject('gabel')} phoneme={'b'} />
 ));

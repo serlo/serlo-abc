@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import speakerImage from '../../assets/images/speaker.png';
 import { play } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
+import { getImage, getSound } from '../../helpers/words';
 import RoundImageWithButton from '../common/RoundImageWithButton';
 import RoundTextButton from '../common/RoundTextButton';
 import { LoadSound } from '../helpers/Audio';
@@ -72,11 +73,15 @@ class HasPhoneme extends Component {
   }
 }
 
-const HasPhonemeWrapper = ({ sound, ...props }) => (
-  <LoadSound
-    sound={sound}
-    render={sound => <HasPhoneme sound={sound} {...props} />}
-  />
-);
-
+const HasPhonemeWrapper = props => {
+  const { word } = props;
+  return (
+    <LoadSound
+      sound={getSound(word)}
+      render={sound => (
+        <HasPhoneme image={getImage(word)} sound={sound} {...props} />
+      )}
+    />
+  );
+};
 export default HasPhonemeWrapper;

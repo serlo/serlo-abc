@@ -1,26 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
+import { getWordObject } from '../../helpers/words';
 import FindLetter from './FindLetter';
 
 storiesOf('exercises/FindLetter', module)
-  .add('Ananas', () => (
-    <FindLetter
-      image={require('../../assets/images/ananas.jpg')}
-      sounds={[
-        require('../../assets/sounds/ananas_short.mp3'),
-        require('../../assets/sounds/ananas_long.mp3')
-      ]}
-      text="Ananas"
-    />
-  ))
-  .add('Apfel', () => (
-    <FindLetter
-      image={require('../../assets/images/apfel.jpg')}
-      sounds={[
-        require('../../assets/sounds/apfel_short.mp3'),
-        require('../../assets/sounds/apfel_long.mp3')
-      ]}
-      text="Apfel"
-    />
-  ));
+  .add('Ananas', () => <FindLetter word={getWordObject('ananas')} />)
+  .add('Apfel', () => <FindLetter word={getWordObject('apfel')} />);

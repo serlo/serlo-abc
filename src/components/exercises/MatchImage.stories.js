@@ -1,17 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
+import { getWordObject } from '../../helpers/words';
 import MatchImage from './MatchImage';
 
 storiesOf('exercises/MatchImage', module).add('Apfel', () => (
   <MatchImage
-    images={[
-      require('../../assets/images/affe.jpg'),
-      require('../../assets/images/esel.jpg'),
-      require('../../assets/images/apfel.jpg'),
-      require('../../assets/images/nase.jpg')
+    words={[
+      getWordObject('affe'),
+      getWordObject('esel'),
+      getWordObject('apfel'),
+      getWordObject('nase')
     ]}
-    text="Apfel"
-    sound={require('../../assets/sounds/apfel_short.mp3')}
+    correctIndex={2}
   />
 ));

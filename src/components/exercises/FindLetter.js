@@ -11,6 +11,7 @@ import {
   PRIMARY_STRONG
 } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
+import { getImage, getSound, getLongSound, getWord } from '../../helpers/words';
 import RoundImageWithButton from '../common/RoundImageWithButton';
 import { LoadSounds } from '../helpers/Audio';
 
@@ -92,12 +93,20 @@ class FindLetter extends Component {
     );
   }
 }
-
-const FindLetterWrapper = ({ sounds, ...props }) => (
-  <LoadSounds
-    sounds={sounds}
-    render={sounds => <FindLetter sounds={sounds} {...props} />}
-  />
-);
-
+const FindLetterWrapper = props => {
+  const { word } = props;
+  return (
+    <LoadSounds
+      sounds={[getLongSound(word), getSound(word)]}
+      render={sounds => (
+        <FindLetter
+          sounds={sounds}
+          image={getImage(word)}
+          text={getWord(word)}
+          {...props}
+        />
+      )}
+    />
+  );
+};
 export default FindLetterWrapper;
