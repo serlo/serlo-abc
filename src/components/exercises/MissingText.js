@@ -6,6 +6,7 @@ import speakerImage from '../../assets/images/speaker.png';
 import { playAll } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
+import { getImage, getSound, getLongSound } from '../../helpers/words';
 import RoundImageWithButton from '../common/RoundImageWithButton';
 import TextPicker from '../common/TextPicker';
 import { LoadSounds } from '../helpers/Audio';
@@ -26,7 +27,7 @@ const styles = {
 };
 
 const MissingText = ({
-  image,
+  word,
   video,
   sounds,
   text,
@@ -54,10 +55,10 @@ const MissingText = ({
   }, text);
 
   const renderAssets = () => {
-    if (image) {
+    if (word) {
       return (
         <RoundImageWithButton
-          image={image}
+          image={getImage(word)}
           imageSize={200}
           icon={speakerImage}
           buttonSize={40}
@@ -83,11 +84,11 @@ const MissingText = ({
   );
 };
 
-const MissingTextWrapper = ({ sounds, ...props }) => {
-  if (sounds) {
+const MissingTextWrapper = ({ word, ...props }) => {
+  if (word) {
     return (
       <LoadSounds
-        sounds={sounds}
+        sounds={[getSound(word), getLongSound(word)]}
         render={sounds => <MissingText sounds={sounds} {...props} />}
       />
     );

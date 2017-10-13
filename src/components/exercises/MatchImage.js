@@ -6,6 +6,7 @@ import { play } from '../../helpers/audio';
 import RoundButton from '../common/RoundButton';
 import RoundImageWithBorder from '../common/RoundImageWithBorder';
 import { LoadSound } from '../helpers/Audio';
+import { getSound, getWord, getImage } from '../../helpers/words';
 
 const styles = {
   container: {
@@ -38,14 +39,14 @@ class MatchImage extends Component {
       <RoundImageWithBorder
         white
         highlighted={this.state.highlighted === index}
-        image={this.props.images[index]}
+        image={getImage(this.props.word[index])}
         size={100}
       />
     </TouchableOpacity>
   );
 
   render() {
-    const { text, sound } = this.props;
+    const { sound } = this.props;
 
     return (
       <View style={styles.container}>
@@ -60,7 +61,7 @@ class MatchImage extends Component {
           </View>
         </View>
         <View style={[styles.row, { alignItems: 'flex-end' }]}>
-          <Text style={styles.bigLetter}>{text}</Text>
+          <Text style={styles.bigLetter}>{this.props.text}</Text>
           <RoundButton
             icon={icon}
             size={20}
@@ -75,11 +76,20 @@ class MatchImage extends Component {
   }
 }
 
-const MatchImageWrapper = ({ sound, ...props }) => (
-  <LoadSound
-    sound={sound}
-    render={sound => <MatchImage sound={sound} {...props} />}
-  />
-);
+const MatchImageWrapper = props => {
+  const { words, correctIndex } = props;
+  return (
+    <LoadSound
+      sound={getSound(words[correctIndex])}
+      render={sound => (
+        <MatchImage
+          text={getWord(words[correctIndex])}
+          sound={sound}
+          {...props}
+        />
+      )}
+    />
+  );
+};
 
 export default MatchImageWrapper;

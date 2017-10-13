@@ -1,15 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 import MissingText from './MissingText';
+import { getWordObject } from '../../helpers/words';
 
 storiesOf('exercises/MissingLetter', module)
   .add('Apfel', () => (
     <MissingText
-      image={require('../../assets/images/apfel.jpg')}
-      sounds={[
-        require('../../assets/sounds/apfel_short.mp3'),
-        require('../../assets/sounds/apfel_long.mp3')
-      ]}
+      word={getWordObject('apfel')}
       text={['A', 'p', 'f', 'e', 'l']}
       missing={3}
       options={['a', 'n', 'e']}
@@ -17,8 +14,7 @@ storiesOf('exercises/MissingLetter', module)
   ))
   .add('Missing word with picture', () => (
     <MissingText
-      image={require('../../assets/images/kiwi.jpg')}
-      sounds={[require('../../assets/sounds/kiwi_short.mp3')]}
+      word={getWordObject('kiwi')}
       text={['Das', 'ist', 'keine', 'Ananas']}
       missing={2}
       options={['keine', 'eine']}
