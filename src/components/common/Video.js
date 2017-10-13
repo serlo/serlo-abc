@@ -1,3 +1,4 @@
+import { propOr } from 'ramda';
 import React, { Component } from 'react';
 import {
   TouchableOpacity,
@@ -6,7 +7,7 @@ import {
   View,
   Dimensions
 } from 'react-native';
-import { Video } from 'expo';
+import { Constants, Video } from 'expo';
 
 import playIcon from '../../assets/images/play.png';
 
@@ -116,6 +117,8 @@ export default class VideoComponent extends Component {
   }
 
   render() {
+    const platform = propOr('unknown', Constants, 'platform');
+
     return (
       <View style={styles.container}>
         <TouchableWithoutFeedback onPress={this.playPause}>
@@ -125,11 +128,13 @@ export default class VideoComponent extends Component {
             }}
             resizeMode={Video.RESIZE_MODE_CONTAIN}
             source={this.props.video}
-            style={{
-              backgroundColor: 'transparent',
-              width: this.state.width,
-              height: this.state.height
-            }}
+            style={[
+              {
+                width: this.state.width,
+                height: this.state.height
+              },
+              platform === 'ios' && { backgroundColor: 'transparent' }
+            ]}
             shouldPlay={this.state.shouldPlay}
             onPlaybackStatusUpdate={this.onPlaybackStatusUpdate}
           />
