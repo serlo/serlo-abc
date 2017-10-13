@@ -15,8 +15,12 @@ exports[`renders without crashing 1`] = `
       render={[Function]}
     />
     <Route
-      component={[Function]}
       path="/course"
+      render={[Function]}
+    />
+    <Route
+      component={[Function]}
+      path="/section/:id"
     />
   </View>
 </NativeRouter>

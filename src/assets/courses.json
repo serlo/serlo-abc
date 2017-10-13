@@ -1,24 +1,98 @@
 {
   "09438926-b170-4005-a6e8-5dd8fba83cde": {
     "id": "09438926-b170-4005-a6e8-5dd8fba83cde",
-    "title": "Foo bar",
+    "title": "Default course",
     "children": [
       {
-        "id": "01f23c2a-b681-43db-9d27-5d8d59f62aed",
+        "id": "ANE",
+        "title": "ANE",
         "children": [
           {
-            "id": "23e20d5b-ad8e-41be-9891-5ca7b12675c4",
-            "type": "foo"
+            "id": "A",
+            "title": "A",
+            "children": []
+          },
+          {
+            "id": "N",
+            "title": "N",
+            "children": []
+          },
+          {
+            "id": "E",
+            "title": "E",
+            "children": []
+          },
+          {
+            "id": "Hallo!",
+            "title": "Hallo!",
+            "children": []
+          },
+          {
+            "id": "A N E",
+            "title": "A N E",
+            "children": []
           }
         ]
       },
       {
-        "id": "e194f80b-7312-43a2-995e-060f64631782",
+        "id": "STO",
+        "title": "STO",
         "children": [
           {
-            "id": "84fdc1a1-e3bf-4a87-8360-0c3b7beec179",
-            "foo": "bar",
-            "type": "foo"
+            "id": "S",
+            "title": "S",
+            "children": []
+          },
+          {
+            "id": "T",
+            "title": "T",
+            "children": []
+          },
+          {
+            "id": "O",
+            "title": "O",
+            "children": []
+          },
+          {
+            "id": "Hallo 2!",
+            "title": "Hallo 2!",
+            "children": []
+          },
+          {
+            "id": "S T O",
+            "title": "S T O",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "RIH",
+        "title": "RIH",
+        "children": [
+          {
+            "id": "R",
+            "title": "R",
+            "children": []
+          },
+          {
+            "id": "I",
+            "title": "I",
+            "children": []
+          },
+          {
+            "id": "H",
+            "title": "H",
+            "children": []
+          },
+          {
+            "id": "Hallo 3!",
+            "title": "Hallo 3!",
+            "children": []
+          },
+          {
+            "id": "R I H",
+            "title": "R I H",
+            "children": []
           }
         ]
       }
