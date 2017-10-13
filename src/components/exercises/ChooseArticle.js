@@ -2,6 +2,7 @@ import { addIndex, map } from 'ramda';
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
+import { getImage, getSound, getLongSound, getWord } from '../../helpers/words';
 import speakerImage from '../../assets/images/speaker.png';
 import { playAll } from '../../helpers/audio';
 import {
@@ -138,11 +139,21 @@ class ChooseArticle extends React.Component {
   }
 }
 
-const ChooseArticleWrapper = ({ sounds, ...props }) => (
-  <LoadSounds
-    sounds={sounds}
-    render={sounds => <ChooseArticle sounds={sounds} {...props} />}
-  />
-);
+const ChooseArticleWrapper = props => {
+  const { word } = props;
+  return (
+    <LoadSounds
+      sounds={[getLongSound(word), getSound(word)]}
+      render={sounds => (
+        <ChooseArticle
+          sounds={sounds}
+          image={getImage(word)}
+          text={getWord(word)}
+          {...props}
+        />
+      )}
+    />
+  );
+};
 
 export default ChooseArticleWrapper;

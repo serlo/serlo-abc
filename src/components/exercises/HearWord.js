@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-
 import speakerImage from '../../assets/images/speaker.png';
 import { play } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
 import RoundButton from '../common/RoundButton';
 import RoundTextButton from '../common/RoundTextButton';
 import { LoadSound } from '../helpers/Audio';
+import { getSound, getWord } from '../../helpers/words';
 
 class HearWord extends Component {
   constructor(props) {
@@ -70,11 +70,16 @@ class HearWord extends Component {
   }
 }
 
-const HearWordWrapper = ({ sound, ...props }) => (
-  <LoadSound
-    sound={sound}
-    render={sound => <HearWord sound={sound} {...props} />}
-  />
-);
+const HearWordWrapper = props => {
+  const { words, correctIndex } = props;
+  return (
+    <LoadSound
+      sound={getSound(words[correctIndex])}
+      render={sound => (
+        <HearWord words={getWord(words)} sound={sound} {...props} />
+      )}
+    />
+  );
+};
 
 export default HearWordWrapper;
