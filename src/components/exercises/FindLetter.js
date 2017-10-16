@@ -2,7 +2,6 @@ import { addIndex, map } from 'ramda';
 import React, { Component } from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 
-import speakerImage from '../../assets/images/speaker.png';
 import { playAll } from '../../helpers/audio';
 import {
   BLACK_TRANSPARENT,
@@ -11,9 +10,8 @@ import {
   PRIMARY_STRONG
 } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { getImage, getSound, getLongSound, getWord } from '../../helpers/words';
-import RoundImageWithButton from '../common/RoundImageWithButton';
-import { LoadSounds } from '../helpers/Audio';
+import { getWord } from '../../helpers/words';
+import WordImageWithSounds from '../common/WordImageWithSounds';
 
 const mapIndexed = addIndex(map);
 
@@ -41,7 +39,7 @@ class FindLetter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      highlighted: map(() => false, this.props.text)
+      highlighted: map(() => false, getWord(this.props.word))
     };
   }
 
@@ -69,7 +67,7 @@ class FindLetter extends Component {
           <Text style={DEFAULT}>{char}</Text>
         </TouchableOpacity>
       ),
-      this.props.text
+      getWord(this.props.word)
     );
 
     return (
@@ -81,32 +79,11 @@ class FindLetter extends Component {
           justifyContent: 'space-around'
         }}
       >
-        <RoundImageWithButton
-          image={this.props.image}
-          imageSize={200}
-          icon={speakerImage}
-          buttonSize={40}
-          onPress={this.play}
-        />
+        <WordImageWithSounds word={this.props.word} longSound />
         <View style={{ flexDirection: 'row' }}>{letters}</View>
       </View>
     );
   }
 }
-const FindLetterWrapper = props => {
-  const { word } = props;
-  return (
-    <LoadSounds
-      sounds={[getLongSound(word), getSound(word)]}
-      render={sounds => (
-        <FindLetter
-          sounds={sounds}
-          image={getImage(word)}
-          text={getWord(word)}
-          {...props}
-        />
-      )}
-    />
-  );
-};
-export default FindLetterWrapper;
+
+export default FindLetter;

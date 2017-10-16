@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import speakerImage from '../../assets/images/speaker.png';
-import { play } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
-import RoundButton from '../common/RoundButton';
 import RoundTextButton from '../common/RoundTextButton';
-import { LoadSound } from '../helpers/Audio';
-import { getSound, getWord } from '../../helpers/words';
+import WordImageWithSounds from '../common/WordImageWithSounds';
+import { getWord } from '../../helpers/words';
 
 class HearWord extends Component {
   constructor(props) {
@@ -45,7 +42,7 @@ class HearWord extends Component {
           });
         }}
         highlighted={index === this.state.highlighted}
-        text={word}
+        text={getWord(word)}
         style={this.styles.textButton}
         key={index}
       />
@@ -56,10 +53,8 @@ class HearWord extends Component {
     return (
       <View style={this.styles.mainView}>
         <View style={[this.styles.subView, { height: '35%' }]}>
-          <RoundButton
-            icon={speakerImage}
-            size={60}
-            onPress={() => play(this.props.sound)}
+          <WordImageWithSounds
+            word={this.props.words[this.props.correctIndex]}
           />
         </View>
         <View style={this.styles.subView}>
@@ -70,16 +65,4 @@ class HearWord extends Component {
   }
 }
 
-const HearWordWrapper = props => {
-  const { words, correctIndex } = props;
-  return (
-    <LoadSound
-      sound={getSound(words[correctIndex])}
-      render={sound => (
-        <HearWord words={getWord(words)} sound={sound} {...props} />
-      )}
-    />
-  );
-};
-
-export default HearWordWrapper;
+export default HearWord;
