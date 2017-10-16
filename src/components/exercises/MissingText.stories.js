@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
-import MissingText from './MissingText';
+
 import { getWordObject } from '../../helpers/words';
+import MissingText from './MissingText';
 
 storiesOf('exercises/MissingLetter', module)
   .add('Apfel', () => (
