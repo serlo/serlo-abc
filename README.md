@@ -1,4 +1,7 @@
-# Serlo ABC [![Build Status](https://travis-ci.org/serlo-org/serlo-abc.svg?branch=master)](https://travis-ci.org/serlo-org/serlo-abc)
+# Serlo ABC
+
+[![Build Status](https://img.shields.io/travis/serlo-org/serlo-abc.svg?style=flat-square)](https://travis-ci.org/serlo-org/serlo-abc)
+[![Expo](https://img.shields.io/badge/expo.io-project-brightgreen.svg?style=flat-square)](https://expo.io/@serlo-org/serlo-abc)
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
