@@ -39,7 +39,7 @@ class MatchImage extends Component {
       <RoundImageWithBorder
         white
         highlighted={this.state.highlighted === index}
-        image={getImage(this.props.word[index])}
+        image={getImage(this.props.words[index])}
         size={100}
       />
     </TouchableOpacity>

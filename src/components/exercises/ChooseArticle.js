@@ -2,9 +2,7 @@ import { addIndex, map } from 'ramda';
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
-import { getImage, getSound, getLongSound, getWord } from '../../helpers/words';
-import speakerImage from '../../assets/images/speaker.png';
-import { playAll } from '../../helpers/audio';
+import { getWord } from '../../helpers/words';
 import {
   BLACK_TRANSPARENT,
   PRIMARY_STRONG,
@@ -17,8 +15,7 @@ import {
   NEUTER_WEAK
 } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import { LoadSounds } from '../helpers/Audio';
-import RoundImageWithButton from '../common/RoundImageWithButton';
+import WordImageWithSounds from '../common/WordImageWithSounds';
 
 const mapIndexed = addIndex(map);
 
@@ -71,8 +68,6 @@ class ChooseArticle extends React.Component {
     };
   }
 
-  play = () => playAll(this.props.sounds);
-
   selectArticle = article => () => {
     this.setState(({ selectedArticle }) => ({
       selectedArticle: selectedArticle === article ? null : article
@@ -89,7 +84,7 @@ class ChooseArticle extends React.Component {
           <Text style={DEFAULT}>{char}</Text>
         </View>
       ),
-      this.props.text
+      getWord(this.props.word)
     );
 
     const articleButtons = mapIndexed(
@@ -123,13 +118,7 @@ class ChooseArticle extends React.Component {
           justifyContent: 'space-around'
         }}
       >
-        <RoundImageWithButton
-          image={this.props.image}
-          imageSize={200}
-          icon={speakerImage}
-          buttonSize={40}
-          onPress={this.play}
-        />
+        <WordImageWithSounds word={this.props.word} longSound />
         <View style={{ flexDirection: 'row' }}>{letters}</View>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           {articleButtons}
@@ -139,21 +128,4 @@ class ChooseArticle extends React.Component {
   }
 }
 
-const ChooseArticleWrapper = props => {
-  const { word } = props;
-  return (
-    <LoadSounds
-      sounds={[getLongSound(word), getSound(word)]}
-      render={sounds => (
-        <ChooseArticle
-          sounds={sounds}
-          image={getImage(word)}
-          text={getWord(word)}
-          {...props}
-        />
-      )}
-    />
-  );
-};
-
-export default ChooseArticleWrapper;
+export default ChooseArticle;

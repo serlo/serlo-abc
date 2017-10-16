@@ -9,7 +9,7 @@ storiesOf('exercises/HearWord', module).add('three words', () => (
     words={[
       getWordObject('apfel'),
       getWordObject('nase'),
-      getWordObject('anna')
+      getWordObject('ball')
     ]}
     correctIndex={1}
   />
