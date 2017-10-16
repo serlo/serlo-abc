@@ -1,16 +1,18 @@
 {
   "name": "serlo-abc",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "repository": "serlo-org/serlo-abc",
   "scripts": {
+    "commit": "git-cz",
     "build": "exp start",
     "build:android": "exp build:android",
     "build:ios": "exp build:ios",
     "build:status": "exp build:status",
+    "exp:config": "node scripts/generateAppConfig",
     "exp:login": "exp login",
     "exp:publish": "exp publish",
     "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "storybook": "storybook start -p 7007",
@@ -18,11 +20,17 @@
     "test:watch": "jest --watch",
     "format": "prettier --write \"{{scripts,src,storybook}/**/*,*}.{js,json}\"",
     "lint": "eslint \"{{scripts,src,storybook}/**/*,*}.js\"",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "semantic-release": "semantic-release pre && semantic-release post"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "expo": "^21.0.2",
-    "ramda": "^0.24.1",
+    "ramda": "^0.25.0",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.48.4",
     "react-redux": "^5.0.4",
@@ -32,20 +40,23 @@
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.12",
     "@storybook/react-native": "^3.2.12",
+    "commitizen": "^2.9.6",
     "concurrently": "^3.5.0",
-    "enzyme": "^3.0.0",
-    "enzyme-adapter-react-16": "^1.0.0",
-    "eslint": "^4.7.2",
+    "cz-conventional-changelog": "^2.0.0",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "eslint": "^4.9.0",
     "eslint-config-universe": "^1.0.6",
     "exp": "^44.0.0",
     "husky": "^0.14.3",
     "jest": "^21.2.1",
     "jest-expo": "^21.0.2",
     "lint-staged": "^4.2.3",
-    "prettier": "^1.7.2",
+    "prettier": "^1.7.4",
     "react-dom": "16.0.0-alpha.12",
     "react-native-scripts": "^1.5.0",
-    "react-test-renderer": "^16.0.0"
+    "react-test-renderer": "^16.0.0",
+    "semantic-release": "^8.2.0"
   },
   "private": true,
   "lint-staged": {
