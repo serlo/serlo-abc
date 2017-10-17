@@ -25,12 +25,14 @@
           {
             "id": "Hallo!",
             "title": "Hallo!",
-            "children": []
+            "children": [],
+            "icon": "ios-chatbubbles"
           },
           {
             "id": "A N E",
             "title": "A N E",
-            "children": []
+            "children": [],
+            "icon": "ios-refresh"
           }
         ]
       },
@@ -56,12 +58,14 @@
           {
             "id": "Hallo 2!",
             "title": "Hallo 2!",
-            "children": []
+            "children": [],
+            "icon": "ios-chatbubbles"
           },
           {
             "id": "S T O",
             "title": "S T O",
-            "children": []
+            "children": [],
+            "icon": "ios-refresh"
           }
         ]
       },
@@ -87,12 +91,14 @@
           {
             "id": "Hallo 3!",
             "title": "Hallo 3!",
-            "children": []
+            "children": [],
+            "icon": "ios-chatbubbles"
           },
           {
             "id": "R I H",
             "title": "R I H",
-            "children": []
+            "children": [],
+            "icon": "ios-refresh"
           }
         ]
       }

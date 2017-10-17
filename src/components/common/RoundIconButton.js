@@ -1,19 +1,18 @@
+import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 
-import RoundText from './RoundText';
+import { BLACK_TRANSPARENT, PRIMARY_WEAK, WHITE } from '../../styles/colors';
 
-import { BLACK_TRANSPARENT, PRIMARY_WEAK } from '../../styles/colors';
-
-const RoundTextButton = ({ onPress, style, ...props }) => (
+const RoundIconButton = ({ onPress, style, children, ...props }) => (
   <TouchableOpacity onPress={onPress}>
-    <RoundText
-      {...props}
+    <View
       style={[
         {
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: PRIMARY_WEAK,
+          borderRadius: 9999,
           elevation: 5,
           shadowColor: BLACK_TRANSPARENT,
           shadowOpacity: 1,
@@ -26,8 +25,10 @@ const RoundTextButton = ({ onPress, style, ...props }) => (
         },
         style
       ]}
-    />
+    >
+      <Ionicons {...props} color={WHITE} size={30} />
+    </View>
   </TouchableOpacity>
 );
 
-export default RoundTextButton;
+export default RoundIconButton;

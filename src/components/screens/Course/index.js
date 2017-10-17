@@ -1,11 +1,13 @@
-import { flatten, map } from 'ramda';
+import { map } from 'ramda';
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
-import RoundTextButton from '../../common/RoundTextButton';
+import { PRIMARY } from '../../../styles/colors';
 import courses from '../../../assets/courses.json';
 import Interactor from '../../../entities-interactor';
 import Storage from '../../../storage/CourseStorage';
+import RoundIconButton from '../../common/RoundIconButton';
+import RoundTextButton from '../../common/RoundTextButton';
 
 class Course extends Component {
   constructor(props) {
@@ -33,40 +35,62 @@ class Course extends Component {
     const { course } = this.state;
     const { goToSection } = this.props;
 
-    console.warn(goToSection);
-
     if (!course) {
       return null;
     }
 
-    console.warn(JSON.stringify(course, null, 2));
-
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        {flatten(
-          map(
-            chapter =>
-              map(
-                section => (
-                  <RoundTextButton
-                    text={section.title}
-                    textStyle={{ fontSize: 18 }}
-                    style={{
-                      margin: 10,
-                      marginTop: 0,
-                      paddingLeft: 10,
-                      paddingRight: 10
-                    }}
-                    key={section.id}
-                    onPress={() => {
-                      goToSection(section.id);
-                    }}
-                  />
-                ),
-                chapter.children
-              ),
-            course.children
-          )
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: PRIMARY,
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        {map(
+          chapter => (
+            <View
+              key={chapter.id}
+              style={{
+                flexDirection: 'row',
+                marginTop: 10,
+                marginBottom: 10
+              }}
+            >
+              {map(section => {
+                const props = {
+                  key: section.id,
+                  style: {
+                    margin: 5,
+                    marginTop: 0,
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                    width: 60,
+                    height: 40
+                  },
+                  onPress: () => {
+                    goToSection(section.id);
+                  }
+                };
+
+                if (section.icon) {
+                  return <RoundIconButton name={section.icon} {...props} />;
+                }
+
+                if (section.title) {
+                  return (
+                    <RoundTextButton
+                      text={section.title}
+                      textStyle={{ fontSize: 18 }}
+                      {...props}
+                    />
+                  );
+                }
+              }, chapter.children)}
+            </View>
+          ),
+          course.children
         )}
       </View>
     );
