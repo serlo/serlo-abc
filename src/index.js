@@ -1,9 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 import { NativeRouter, Route } from 'react-router-native';
 
 import Course from './components/screens/Course';
 import Splash from './components/screens/Splash';
+
+const Section = ({ match }) => {
+  return <Text>Section {match.params.id}!</Text>;
+};
 
 const App = () => (
   <NativeRouter>
@@ -19,7 +23,13 @@ const App = () => (
           <Splash next={() => history.push('/course')} />
         )}
       />
-      <Route path="/course" component={Course} />
+      <Route
+        path="/course"
+        render={({ history }) => (
+          <Course goToSection={id => history.push(`/section/${id}`)} />
+        )}
+      />
+      <Route path="/section/:id" component={Section} />
     </View>
   </NativeRouter>
 );
