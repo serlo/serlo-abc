@@ -16,5 +16,6 @@ storiesOf('exercises/BuildSentenceVideo', module).add('8_words', () => (
       'native',
       'and'
     ]}
+    changeAnswer={() => {}}
   />
 ));
