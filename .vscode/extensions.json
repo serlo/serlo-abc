@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "EditorConfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "Orta.vscode-jest",
+    "christian-kohler.npm-intellisense",
+    "zhuangtongfa.material-theme",
+    "esbenp.prettier-vscode",
+    "vsmobile.vscode-react-native",
+    "eg2.tslint"
+  ]
+}

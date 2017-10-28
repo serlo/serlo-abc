@@ -1,5 +1,5 @@
 abstract class AbstractExercise<Props = {}, State = {}> {
-  protected props: Props;
+  private props: Props;
 
   constructor(props: Props) {
     this.props = props;
