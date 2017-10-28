@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`createCourse\` creates a course from \`CourseInput\` 1`] = `
+InternalNode {
+  "children": Array [
+    InternalNode {
+      "children": Array [
+        Leaf {
+          "id": "23e20d5b-ad8e-41be-9891-5ca7b12675c4",
+          "props": Object {},
+          "type": "foo",
+        },
+      ],
+      "icon": undefined,
+      "id": "01f23c2a-b681-43db-9d27-5d8d59f62aed",
+      "props": Object {},
+      "title": undefined,
+    },
+    InternalNode {
+      "children": Array [
+        Leaf {
+          "id": "84fdc1a1-e3bf-4a87-8360-0c3b7beec179",
+          "props": Object {
+            "foo": "bar",
+          },
+          "type": "foo",
+        },
+      ],
+      "icon": undefined,
+      "id": "e194f80b-7312-43a2-995e-060f64631782",
+      "props": Object {},
+      "title": undefined,
+    },
+  ],
+  "icon": undefined,
+  "id": "09438926-b170-4005-a6e8-5dd8fba83cde",
+  "props": Object {},
+  "title": "Foo bar",
+}
+`;

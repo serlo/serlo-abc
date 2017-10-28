@@ -1,0 +1,107 @@
+{
+  "09438926-b170-4005-a6e8-5dd8fba83cde": {
+    "id": "09438926-b170-4005-a6e8-5dd8fba83cde",
+    "title": "Default course",
+    "children": [
+      {
+        "id": "ANE",
+        "title": "ANE",
+        "children": [
+          {
+            "id": "A",
+            "title": "A",
+            "children": []
+          },
+          {
+            "id": "N",
+            "title": "N",
+            "children": []
+          },
+          {
+            "id": "E",
+            "title": "E",
+            "children": []
+          },
+          {
+            "id": "Hallo!",
+            "title": "Hallo!",
+            "children": [],
+            "icon": "ios-chatbubbles"
+          },
+          {
+            "id": "A N E",
+            "title": "A N E",
+            "children": [],
+            "icon": "ios-refresh"
+          }
+        ]
+      },
+      {
+        "id": "STO",
+        "title": "STO",
+        "children": [
+          {
+            "id": "S",
+            "title": "S",
+            "children": []
+          },
+          {
+            "id": "T",
+            "title": "T",
+            "children": []
+          },
+          {
+            "id": "O",
+            "title": "O",
+            "children": []
+          },
+          {
+            "id": "Hallo 2!",
+            "title": "Hallo 2!",
+            "children": [],
+            "icon": "ios-chatbubbles"
+          },
+          {
+            "id": "S T O",
+            "title": "S T O",
+            "children": [],
+            "icon": "ios-refresh"
+          }
+        ]
+      },
+      {
+        "id": "RIH",
+        "title": "RIH",
+        "children": [
+          {
+            "id": "R",
+            "title": "R",
+            "children": []
+          },
+          {
+            "id": "I",
+            "title": "I",
+            "children": []
+          },
+          {
+            "id": "H",
+            "title": "H",
+            "children": []
+          },
+          {
+            "id": "Hallo 3!",
+            "title": "Hallo 3!",
+            "children": [],
+            "icon": "ios-chatbubbles"
+          },
+          {
+            "id": "R I H",
+            "title": "R I H",
+            "children": [],
+            "icon": "ios-refresh"
+          }
+        ]
+      }
+    ]
+  }
+}

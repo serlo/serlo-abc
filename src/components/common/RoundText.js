@@ -67,7 +67,6 @@ class RoundText extends Component {
             overflow: 'hidden',
             alignItems: 'center',
             justifyContent: 'center',
-            // backgroundColor: 'red',
             height: size,
             width: size
           }}
