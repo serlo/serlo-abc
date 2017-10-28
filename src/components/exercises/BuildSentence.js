@@ -138,7 +138,7 @@ export default class BuildSentence extends React.Component {
           let zoneFound = false;
           for (let i = 0; i < this.state.zones.length; i++) {
             const zone = this.state.zones[i];
-            const paddingTop = this.props.paddingTop + 20;
+            const paddingTop = this.props.paddingTop + 40;
             if (
               zone.layout.x < gesture.moveX &&
               gesture.moveX < zone.layout.x + zone.layout.width &&
