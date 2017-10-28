@@ -18,7 +18,11 @@ const BuildSentenceVideo = props => {
       }}
     >
       <Video video={props.video} aspectRatio={3 / 4} />
-      <BuildSentence sentence={props.sentence} paddingTop={height / 3} />
+      <BuildSentence
+        sentence={props.sentence}
+        paddingTop={height / 3}
+        changeAnswer={() => {}}
+      />
     </View>
   );
 };
