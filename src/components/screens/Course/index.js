@@ -17,9 +17,7 @@ class Course extends Component {
     const progress = null; // TODO:
     this.interactor = new Interactor(storage, progress);
 
-    this.state = {
-      course: null
-    };
+    this.state = { course: null };
   }
 
   componentDidMount() {
