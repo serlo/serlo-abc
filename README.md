@@ -1,5 +1,7 @@
 # Serlo ABC
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/serlo-org/serlo-abc.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://img.shields.io/travis/serlo-org/serlo-abc.svg?style=flat-square)](https://travis-ci.org/serlo-org/serlo-abc)
 [![Expo](https://img.shields.io/badge/expo.io-project-brightgreen.svg?style=flat-square)](https://expo.io/@serlo-org/serlo-abc)
 
