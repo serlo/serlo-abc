@@ -1,15 +1,16 @@
-abstract class AbstractExercise {
-  protected props: { [propName: string]: any };
+abstract class AbstractExercise<Props = {}, State = {}> {
+  protected props: Props;
 
-  constructor(props: { [propName: string]: any }) {
+  constructor(props: Props) {
     this.props = props;
   }
 
-  public getInitialState(): { [propName: string]: any } {
+  public getProps(): Props {
     return this.props;
   }
 
-  public abstract isCorrect(state: any): boolean;
+  public abstract getInitialState(): State;
+  public abstract isCorrect(state: State): boolean;
 }
 
 export default AbstractExercise;

@@ -19,5 +19,6 @@ import '../src/components/exercises/VideoQuestion.stories';
 import '../src/components/exercises/ChooseArticle.stories';
 import '../src/components/helpers/difficulty.stories';
 import '../src/components/screens/Course/index.stories';
+import '../src/components/screens/Exercise/Mock.stories';
 import '../src/components/screens/Splash.stories';
 import '../src/containers/ExerciseApp.stories.js';
