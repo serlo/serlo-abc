@@ -5343,13 +5343,13 @@ jest-environment-node@^21.2.1:
     jest-mock "^21.2.0"
     jest-util "^21.2.1"
 
-jest-expo-ts@^22.0.0:
-  version "22.0.0"
-  resolved "https://registry.yarnpkg.com/jest-expo-ts/-/jest-expo-ts-22.0.0.tgz#c0543abba844731645debb37ab61b42ff0007735"
+jest-expo-ts@^22.0.1:
+  version "22.0.1"
+  resolved "https://registry.yarnpkg.com/jest-expo-ts/-/jest-expo-ts-22.0.1.tgz#d8136ac2239a958e07fa2caf55002c797d4101a1"
   dependencies:
-    jest-expo "^22.0.0"
+    jest-expo "^22.0.1"
 
-jest-expo@^22.0.0:
+jest-expo@^22.0.1:
   version "22.0.1"
   resolved "https://registry.yarnpkg.com/jest-expo/-/jest-expo-22.0.1.tgz#029d73ad6f21a365fe55fff0c64d6cdb0046df68"
   dependencies:
