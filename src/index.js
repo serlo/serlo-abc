@@ -5,6 +5,8 @@ import { NativeRouter, Route } from 'react-router-native';
 import Course from './components/screens/Course';
 import Splash from './components/screens/Splash';
 
+import loadFonts from './components/helpers/fonts';
+
 const Section = ({ match }) => {
   return <Text>Section {match.params.id}!</Text>;
 };
@@ -34,4 +36,7 @@ const App = () => (
   </NativeRouter>
 );
 
-export default App;
+export default loadFonts({
+  norddruck: require('./assets/fonts/norddruck.ttf'),
+  serlo: require('./assets/fonts/serlo.ttf')
+})(App);
