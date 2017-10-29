@@ -1,22 +1,19 @@
 language: node_js
 
 node_js:
-  - "8"
+- "8"
 
 cache:
   yarn: true
   directories:
-    - node_modules
+  - node_modules
 
 notifications:
   email: false
 
 script:
-  - yarn lint
-  - yarn test
-
-# after_success:
-#   - yarn semantic-release
+- yarn lint
+- yarn test
 
 deploy:
   provider: script
@@ -27,5 +24,5 @@ deploy:
 
 env:
   global:
-    - EXP_USERNAME=serlo-org
-    - secure: "xOrXqmliLxeJ1RVaPYN5BwIRI15UBHZFFoH7ju7qN9kqrmOip5bsDqdU2WJx/qGAP+AmqZ+H9XKz5fyyjutVGFteft+I0YllUa7ROKV4mD1WusuZ6m0lmK0dg2+lL34qOh7axSfQah5d0k87zdfo2MG/6U2qSPZ7HesU2l4AyaeFmWZPMcCHqz4qg2SQcbZGM7BBo/Zn+Rh96CgkP9o7yqG84+lIRz8DP+CWiTXwWPn3dkPRlusD991MEFcw3NmjVmdfCWJwiIoQJjpN98KoSfQJ4wKoTBpc/QeemI30mLveg1QrLk2v1cRzJ33eYTvDUOPaKFZRzXJj8fnycRheuRlhV2Q8M6B0Q5ftmDhVu2tp6D1afgtBnMq3rv3SXvK+k+oQqD3Y6I42TrDakuMbtXA4Sbyw4q7vx5eLggpH6kedxWk2IM+QshUJehRNEcMOP+jzo0aCWkmUcWk6V6T48HBDQgmiidlCX6YtS6uNOVrb9rE5BVLrkzrnCBp4/kd4InJZmRFOXYVYNo1KcDdl0vJcbhMbgD+Q+4APvDydvND4wO6Kljj4F0L4e4z69ocqkflUrtU7KVQ1Bsy6bJGMQvSYcP/8HuB7FzvWl4y8pZSNQB2SGKsGwPB+A0Z7KnbTtexAzR3xz41SJvOHzAwXF3swmqXOsAt4qkhV0ZCk/0Y="
+  - EXP_USERNAME=serlo-org
+  - secure: "xOrXqmliLxeJ1RVaPYN5BwIRI15UBHZFFoH7ju7qN9kqrmOip5bsDqdU2WJx/qGAP+AmqZ+H9XKz5fyyjutVGFteft+I0YllUa7ROKV4mD1WusuZ6m0lmK0dg2+lL34qOh7axSfQah5d0k87zdfo2MG/6U2qSPZ7HesU2l4AyaeFmWZPMcCHqz4qg2SQcbZGM7BBo/Zn+Rh96CgkP9o7yqG84+lIRz8DP+CWiTXwWPn3dkPRlusD991MEFcw3NmjVmdfCWJwiIoQJjpN98KoSfQJ4wKoTBpc/QeemI30mLveg1QrLk2v1cRzJ33eYTvDUOPaKFZRzXJj8fnycRheuRlhV2Q8M6B0Q5ftmDhVu2tp6D1afgtBnMq3rv3SXvK+k+oQqD3Y6I42TrDakuMbtXA4Sbyw4q7vx5eLggpH6kedxWk2IM+QshUJehRNEcMOP+jzo0aCWkmUcWk6V6T48HBDQgmiidlCX6YtS6uNOVrb9rE5BVLrkzrnCBp4/kd4InJZmRFOXYVYNo1KcDdl0vJcbhMbgD+Q+4APvDydvND4wO6Kljj4F0L4e4z69ocqkflUrtU7KVQ1Bsy6bJGMQvSYcP/8HuB7FzvWl4y8pZSNQB2SGKsGwPB+A0Z7KnbTtexAzR3xz41SJvOHzAwXF3swmqXOsAt4qkhV0ZCk/0Y="
