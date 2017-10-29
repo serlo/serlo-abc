@@ -54,9 +54,12 @@ exports[`renders without crashing 1`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "backgroundColor": "#73dbff",
           "borderRadius": 9999,
           "elevation": 10,
+          "height": 55,
+          "justifyContent": "center",
           "padding": 5,
           "shadowColor": "rgba(0, 0, 0, 0.1)",
           "shadowOffset": Object {
@@ -65,18 +68,15 @@ exports[`renders without crashing 1`] = `
           },
           "shadowOpacity": 1,
           "shadowRadius": 0,
+          "width": 55,
         }
       }
     >
-      <Image
-        source={1337}
-        style={
-          Object {
-            "height": 40,
-            "resizeMode": "contain",
-            "width": 40,
-          }
-        }
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
       />
     </View>
   </View>

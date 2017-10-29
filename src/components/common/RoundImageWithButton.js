@@ -1,3 +1,4 @@
+import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { View } from 'react-native';
 
@@ -19,7 +20,8 @@ const RoundImageWithButton = ({
   >
     <RoundImageWithBorder image={image} size={imageSize} />
     <RoundButton
-      icon={icon}
+      IconComponent={Ionicons}
+      name="md-volume-up"
       size={buttonSize}
       onPress={onPress}
       style={{
