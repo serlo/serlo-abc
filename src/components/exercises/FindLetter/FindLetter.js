@@ -2,16 +2,15 @@ import { addIndex, map } from 'ramda';
 import React, { Component } from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 
-import { playAll } from '../../helpers/audio';
+import { playAll } from '../../../helpers/audio';
 import {
   BLACK_TRANSPARENT,
-  PRIMARY,
   PRIMARY_WEAK,
   PRIMARY_STRONG
-} from '../../styles/colors';
-import { DEFAULT } from '../../styles/text';
-import { getWord } from '../../helpers/words';
-import WordImageWithSounds from '../common/WordImageWithSounds';
+} from '../../../styles/colors';
+import { DEFAULT } from '../../../styles/text';
+import { getWord } from '../../../helpers/words';
+import WordImageWithSounds from '../../common/WordImageWithSounds';
 
 const mapIndexed = addIndex(map);
 
@@ -36,20 +35,13 @@ const styles = {
 };
 
 class FindLetter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      highlighted: map(() => false, getWord(this.props.word))
-    };
-  }
-
   play = () => playAll(this.props.sounds);
 
   toggleLetter = key => () => {
-    this.setState(({ highlighted }) => {
-      highlighted[key] = !highlighted[key];
+    this.props.setState(state => {
+      state[key] = !state[key];
 
-      return { highlighted };
+      return state;
     });
   };
 
@@ -61,7 +53,7 @@ class FindLetter extends Component {
           onPress={this.toggleLetter(key)}
           style={[
             styles.letter,
-            this.state.highlighted[key] ? styles.highlighted : null
+            this.props.state[key] ? styles.highlighted : null
           ]}
         >
           <Text style={DEFAULT}>{char}</Text>
@@ -74,7 +66,6 @@ class FindLetter extends Component {
       <View
         style={{
           flex: 1,
-          backgroundColor: PRIMARY,
           alignItems: 'center',
           justifyContent: 'space-around'
         }}

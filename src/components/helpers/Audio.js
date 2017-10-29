@@ -1,5 +1,5 @@
 import { Audio } from 'expo';
-import { all, forEach, filter, identity, map, zipWith } from 'ramda';
+import { forEach, filter, identity, map, zipWith } from 'ramda';
 import { Component } from 'react';
 
 export const createLoadSounds = Audio => {
@@ -24,16 +24,17 @@ export const createLoadSounds = Audio => {
 
     componentWillUnmount() {
       forEach(sound => {
-        sound.stopAsync().then(() => {
-          sound.unloadAsync();
-        });
+        sound
+          .stopAsync()
+          .then(() => sound.unloadAsync())
+          .catch(() => {});
       }, this.sounds);
     }
 
     render() {
       const render = this.props.render || (() => null);
 
-      return render(this.sounds, all(this.state.soundsLoaded));
+      return render(this.sounds, this.state.soundsLoaded);
     }
   }
 

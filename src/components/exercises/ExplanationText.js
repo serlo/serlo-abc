@@ -1,7 +1,7 @@
+import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import speakerImage from '../../assets/images/speaker.png';
 import { play } from '../../helpers/audio';
 import { GREEN } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
@@ -25,7 +25,8 @@ const ExplanationText = ({ text, sound }) => (
       <View style={styles.container}>
         <Text style={styles.text}>{text}</Text>
         <RoundButton
-          icon={speakerImage}
+          IconComponent={Ionicons}
+          name="md-volume-up"
           size={40}
           onPress={() => play(sound)}
         />
