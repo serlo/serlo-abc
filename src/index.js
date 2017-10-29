@@ -10,7 +10,7 @@ import Exercise from './components/screens/Exercise';
 import Splash from './components/screens/Splash';
 import { LoadSounds } from './components/helpers/Audio';
 import loadFonts from './components/helpers/fonts';
-import { play } from './helpers/audio';
+import { play, getSound } from './helpers/audio';
 import { getWordObject } from './helpers/words';
 import Interactor from './entities-interactor';
 import Storage from './storage/CourseStorage';
@@ -137,7 +137,8 @@ export class AppRoutes extends Component {
 
                 const exercise = new exerciseType.Exercise({
                   ...props,
-                  words: map(getWordObject, props.words || [])
+                  words: map(getWordObject, props.words || []),
+                  sound: props.sound && getSound(props.sound)
                 });
 
                 return (

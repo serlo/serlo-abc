@@ -1,3 +1,9 @@
+import * as sounds from '../assets/sounds';
+
+export const getSound = id => {
+  return sounds[id];
+};
+
 export const play = sound =>
   new Promise(resolve => {
     sound.playAsync();
