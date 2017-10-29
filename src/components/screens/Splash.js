@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 
 import { play } from '../../helpers/audio';
 import { getWordObject, getSound } from '../../helpers/words';
-import { BLACK, PRIMARY } from '../../styles/colors';
+import { BLACK } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 import RoundImageWithBorder from '../common/RoundImageWithBorder';
 import { LoadSound } from '../helpers/Audio';
@@ -30,7 +30,6 @@ class Splash extends Component {
       <View
         style={{
           flex: 1,
-          backgroundColor: PRIMARY,
           alignItems: 'center',
           justifyContent: 'space-around'
         }}

@@ -12,10 +12,14 @@ const createCourse = (course: ISerializedCourse): AbstractNode => {
   if ((course as ISerializedInternalNode).children) {
     const { children, ...props } = course as ISerializedInternalNode;
 
-    return new InternalNode({
+    const entity = new InternalNode({
       ...props,
       children: map(createCourse, children)
     });
+
+    map(child => child.setParent(entity), entity.getChildren());
+
+    return entity;
   }
 
   const leaf = course as ISerializedLeaf;

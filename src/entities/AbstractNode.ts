@@ -4,10 +4,15 @@ import { IIdentifiableObject } from './types';
 abstract class AbstractNode {
   private id: string;
   private props: {};
+  private parent?: AbstractNode;
 
   constructor({ id, ...props }: IIdentifiableObject) {
     this.id = id;
     this.props = props;
+  }
+
+  public setParent(parent: AbstractNode) {
+    this.parent = parent;
   }
 
   public getId() {
@@ -18,21 +23,36 @@ abstract class AbstractNode {
     return this.props;
   }
 
+  public getParent() {
+    return this.parent;
+  }
+
   public getStructure(): IIdentifiableObject {
+    const parent = this.getParent();
+
     return {
-      id: this.getId()
+      id: this.getId(),
+      parent: parent && parent.getId()
     };
   }
 
   public getInfo(): IIdentifiableObject {
     return {
       ...this.getStructure(),
-      ...this.props
+      props: this.props
     };
   }
 
   public getTree(level: number = Infinity): IIdentifiableObject {
     return this.getStructure();
+  }
+
+  public findEntity(id: string): AbstractNode | null {
+    if (id === this.getId()) {
+      return this;
+    }
+
+    return null;
   }
 }
 

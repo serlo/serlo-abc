@@ -37,8 +37,7 @@
     "react": "16.0.0-beta.5",
     "react-native": "^0.49.5",
     "react-redux": "^5.0.4",
-    "react-router-native": "^4.2.0",
-    "redux-persist": "^4.10.1"
+    "react-router-native": "^4.2.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.13",
