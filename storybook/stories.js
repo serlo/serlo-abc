@@ -2,13 +2,13 @@ import '../src/index.stories';
 import '../src/components/exercises/FindLetter/index.stories';
 import '../src/components/exercises/ChooseArticle/index.stories';
 import '../src/components/exercises/DifferFromSymbol/index.stories';
+import '../src/components/exercises/HearWord/index.stories';
 
 import '../src/components/common/NavigationMenu.stories.js';
 import '../src/components/exercises/BuildSentence.stories';
 import '../src/components/exercises/BuildSentenceVideo.stories';
 import '../src/components/exercises/ExplanationText.stories';
 import '../src/components/exercises/HasPhoneme.stories';
-import '../src/components/exercises/HearWord.stories';
 import '../src/components/exercises/IntroduceLetter.stories';
 import '../src/components/exercises/LetterRotated.stories';
 import '../src/components/exercises/MissingText.stories';

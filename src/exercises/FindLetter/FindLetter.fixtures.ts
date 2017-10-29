@@ -2,7 +2,7 @@ import { getWordObject } from '../../helpers/words.js';
 import { Fixtures } from '../helpers';
 import { IProps, IState } from './FindLetter';
 
-const props = {
+const props: IProps = {
   word: getWordObject('ananas'),
   letter: 'A'
 };

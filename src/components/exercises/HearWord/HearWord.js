@@ -1,22 +1,13 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { PRIMARY } from '../../styles/colors';
-import RoundTextButton from '../common/RoundTextButton';
-import WordImageWithSounds from '../common/WordImageWithSounds';
-import { getWord } from '../../helpers/words';
+import RoundTextButton from '../../common/RoundTextButton';
+import WordImageWithSounds from '../../common/WordImageWithSounds';
+import { getWord } from '../../../helpers/words';
 
 class HearWord extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      highlighted: null
-    };
-  }
-
   styles = {
     mainView: {
       flex: 1,
-      backgroundColor: PRIMARY,
       alignItems: 'center',
       justifyContent: 'flex-end'
     },
@@ -37,11 +28,9 @@ class HearWord extends Component {
     return (
       <RoundTextButton
         onPress={() => {
-          this.setState({
-            highlighted: index
-          });
+          this.props.setState(index);
         }}
-        highlighted={index === this.state.highlighted}
+        highlighted={index === this.props.state}
         text={getWord(word)}
         style={this.styles.textButton}
         key={index}
