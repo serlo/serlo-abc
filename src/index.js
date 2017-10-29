@@ -111,7 +111,6 @@ export class AppRoutes extends Component {
                   return <Redirect to={`/section/${section.id}`} />;
                 }
 
-                console.warn('end of course');
                 return null;
               }}
             />
@@ -137,8 +136,10 @@ export class AppRoutes extends Component {
 
                 const exercise = new exerciseType.Exercise({
                   ...props,
-                  words: map(getWordObject, props.words || []),
-                  sound: props.sound && getSound(props.sound)
+                  sound: props.sound && getSound(props.sound),
+                  sounds: map(getSound, props.sounds || []),
+                  word: props.word && getWordObject(props.word),
+                  words: map(getWordObject, props.words || [])
                 });
 
                 return (
