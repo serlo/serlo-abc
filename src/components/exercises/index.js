@@ -1,9 +1,11 @@
 import * as FindLetter from './FindLetter';
 import * as IntroduceLetter from './IntroduceLetter';
+import * as ShowLetter from './ShowLetter';
 
 const exercises = {
   FindLetter,
-  IntroduceLetter
+  IntroduceLetter,
+  ShowLetter
 };
 
 export default type => {
