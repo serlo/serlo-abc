@@ -11,29 +11,13 @@ class TextPicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      optionsVisible: false,
-      selectedValue: this.initSelectedValue(props.selectedKey)
+      optionsVisible: false
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.selectedKey !== nextProps.selectedKey) {
-      this.setState({
-        optionsVisible: false,
-        selectedValue: this.initSelectedValue(nextProps.selectedKey)
-      });
-    }
-  }
-
-  initSelectedValue = key => {
-    const { options } = this.props;
-    return key !== null && options ? options[key] : null;
-  };
-
   selectOption = key => () => {
     this.setState({
-      optionsVisible: false,
-      selectedValue: this.props.options[key]
+      optionsVisible: false
     });
     if (this.props.onChange) {
       this.props.onChange(key);
@@ -89,7 +73,7 @@ class TextPicker extends Component {
         <TouchableOpacity onPress={this.togglePickerOptions}>
           <View style={this.styles.button}>
             <Text style={this.styles.text}>
-              {this.state.selectedValue || ' '}
+              {this.props.selectedValue || ' '}
             </Text>
           </View>
         </TouchableOpacity>

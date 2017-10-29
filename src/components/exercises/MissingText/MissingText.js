@@ -2,17 +2,15 @@ import { addIndex, map } from 'ramda';
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import { PRIMARY } from '../../styles/colors';
-import { DEFAULT } from '../../styles/text';
-import WordImageWithSounds from '../common/WordImageWithSounds';
-import TextPicker from '../common/TextPicker';
-import Video from '../common/Video';
+import { DEFAULT } from '../../../styles/text';
+import WordImageWithSounds from '../../common/WordImageWithSounds';
+import TextPicker from '../../common/TextPicker';
+import Video from '../../common/Video';
 const mapIndexed = addIndex(map);
 
 const styles = {
   container: {
     flex: 1,
-    backgroundColor: PRIMARY,
     alignItems: 'center',
     justifyContent: 'space-around'
   },
@@ -22,23 +20,17 @@ const styles = {
   }
 };
 
-const MissingText = ({
-  word,
-  video,
-  sounds,
-  text,
-  missing,
-  options,
-  ...props
-}) => {
+const MissingText = ({ word, video, text, missing, options, ...props }) => {
   const textParts = mapIndexed((part, key) => {
     if (key === missing) {
       return (
         <View key={key}>
           <TextPicker
             options={options}
-            onChange={props.changeAnswer}
-            selectedKey={props.currentAnswer}
+            onChange={answer => {
+              props.setState(answer);
+            }}
+            selectedValue={options[props.state]}
           />
         </View>
       );
