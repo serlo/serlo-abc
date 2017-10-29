@@ -6,6 +6,10 @@ collectors:
   # pull requests for updates to our major version
   - type: js-npm
     versions: "L.Y.Y"
+    # react version depends on Expo SDK and therefore fixed by chocie
+    dependencies_not_matching: "^(react|react-dom)$"
   # create issues for new major versions
   - type: repo-issue
-    versions: "Y.0.0"
+    versions: "Y.0.0 || 0.Y.0"
+    # react version depends on Expo SDK and therefore fixed by chocie
+    dependencies_not_matching: "^(react|react-dom)$"
