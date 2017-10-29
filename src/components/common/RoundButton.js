@@ -1,9 +1,9 @@
 import React from 'react';
-import { TouchableOpacity, View, Image } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 
-import { BLACK_TRANSPARENT, PRIMARY_WEAK } from '../../styles/colors';
+import { BLACK_TRANSPARENT, PRIMARY_WEAK, WHITE } from '../../styles/colors';
 
-const RoundButton = ({ icon, size, style, onPress }) => (
+const RoundButton = ({ IconComponent, name, size, style, onPress }) => (
   <TouchableOpacity onPress={onPress} style={style}>
     <View
       style={{
@@ -17,17 +17,14 @@ const RoundButton = ({ icon, size, style, onPress }) => (
         shadowOffset: {
           height: 4,
           width: 4
-        }
+        },
+        width: size + 15,
+        height: size + 15,
+        alignItems: 'center',
+        justifyContent: 'center'
       }}
     >
-      <Image
-        source={icon}
-        style={{
-          height: size,
-          width: size,
-          resizeMode: 'contain'
-        }}
-      />
+      <IconComponent name={name} size={size} color={WHITE} />
     </View>
   </TouchableOpacity>
 );

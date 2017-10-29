@@ -1,13 +1,25 @@
+import { Entypo } from '@expo/vector-icons';
 import * as React from 'react';
-import { Button, View } from 'react-native';
+import {
+  Button,
+  StatusBar,
+  StyleSheet,
+  TouchableOpacity,
+  View
+} from 'react-native';
 
 import AbstractExercise from '../../../exercises/AbstractExercise';
+import { play } from '../../../helpers/audio';
 import { GREEN, PRIMARY, WHITE } from '../../../styles/colors';
+import RoundButton from '../../common/RoundButton';
+import { LoadSounds } from '../../helpers/Audio';
 
 interface IProps<Props, State> {
   exercise: AbstractExercise<Props, State>;
   Component: any; // TODO:
   submitted?: State;
+  onCorrect: () => void; // TODO:
+  onWrong: () => void; // TODO:
 }
 
 interface IState<Props, State> {
@@ -16,7 +28,25 @@ interface IState<Props, State> {
   submitted: boolean;
 }
 
-class MockExercise<Props, State> extends React.Component<
+const styles = StyleSheet.create({
+  hoveringButton: {
+    position: 'absolute'
+  },
+  top: {
+    top: (StatusBar.currentHeight || 20) + 15
+  },
+  bottom: {
+    bottom: 15
+  },
+  left: {
+    left: 15
+  },
+  right: {
+    right: 15
+  }
+});
+
+class Exercise<Props, State> extends React.Component<
   IProps<Props, State>,
   IState<Props, State>
 > {
@@ -53,22 +83,44 @@ class MockExercise<Props, State> extends React.Component<
           showFeedback={submitted && !isCorrect}
           {...exercise.getProps()}
           state={state}
-          setState={(newState: State) => this.setState({ state: newState })}
+          setState={this.updateState}
         />
-        <Button onPress={this.submit} title="Submit" color={WHITE} />
+        <View style={[styles.hoveringButton, styles.top, styles.right]}>
+          <RoundButton
+            onPress={this.submit}
+            IconComponent={Entypo}
+            name="chevron-right"
+            size={25}
+          />
+        </View>
       </View>
     );
   }
 
   private submit = (): void => {
-    const { exercise } = this.props;
+    const { exercise, onCorrect, onWrong } = this.props;
     const { state } = this.state;
+
+    const isCorrect = exercise.isCorrect(state);
+
+    isCorrect ? onCorrect() : onWrong();
 
     this.setState({
       isCorrect: exercise.isCorrect(state),
       submitted: true
     });
   };
+
+  private updateState = (
+    newState: State | ((oldState: State) => State)
+  ): void => {
+    if (typeof newState === 'function') {
+      this.setState(({ state }) => ({ state: newState(state) }));
+      return;
+    }
+
+    this.setState({ state: newState });
+  };
 }
 
-export default MockExercise;
+export default Exercise;
