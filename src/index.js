@@ -145,6 +145,7 @@ export class AppRoutes extends Component {
                   <Exercise
                     exercise={exercise}
                     Component={exerciseType.Component}
+                    goToNav={() => history.push('/course')}
                     onCorrect={() => {
                       play(correctSound).then(() => {
                         this.markAsCorrect(id);
