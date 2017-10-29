@@ -1,18 +1,9 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 
-import { PRIMARY } from '../../styles/colors';
-import RoundTextButton from '../common/RoundTextButton';
+import RoundTextButton from '../../common/RoundTextButton';
 
-class LettersRotated extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      highlighted: props.letters.map(() => false)
-    };
-  }
-
+class LetterRotated extends Component {
   getTransform = index => {
     const angleIndex = this.props.rotated.indexOf(index);
     return angleIndex !== -1 ? [{ rotate: this.props.angles[angleIndex] }] : [];
@@ -24,14 +15,12 @@ class LettersRotated extends Component {
     return (
       <RoundTextButton
         onPress={() => {
-          this.setState(({ highlighted }) => {
-            highlighted[index] = !highlighted[index];
-            return {
-              highlighted
-            };
+          this.props.setState(state => {
+            state[index] = !state[index];
+            return state;
           });
         }}
-        highlighted={this.state.highlighted[index]}
+        highlighted={this.props.state[index]}
         text={letters[index]}
         size={60}
         style={[
@@ -50,7 +39,6 @@ class LettersRotated extends Component {
       <View
         style={{
           flex: 1,
-          backgroundColor: PRIMARY,
           alignItems: 'center'
         }}
       >
@@ -83,4 +71,4 @@ class LettersRotated extends Component {
   }
 }
 
-export default LettersRotated;
+export default LetterRotated;
