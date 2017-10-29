@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { addIndex, map } from 'ramda';
 
-import { PRIMARY, GREEN } from '../../styles/colors';
-import { DEFAULT } from '../../styles/text';
-import RoundTextButton from '../common/RoundTextButton';
-import Video from '../common/Video';
+import { GREEN } from '../../../styles/colors';
+import { DEFAULT } from '../../../styles/text';
+import RoundTextButton from '../../common/RoundTextButton';
+import Video from '../../common/Video';
 
 const mapIndexed = addIndex(map);
 
@@ -24,17 +24,8 @@ const styles = {
 };
 
 class VideoQuestion extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      highlighted: null
-    };
-  }
-
   changeAnswer = key => () => {
-    this.setState(({ highlighted }) => ({
-      highlighted: highlighted === key ? null : key
-    }));
+    this.props.setState(state => (state === key ? null : key));
   };
 
   render() {
@@ -43,8 +34,7 @@ class VideoQuestion extends Component {
         style={{
           alignItems: 'center',
           justifyContent: 'space-around',
-          flex: 1,
-          backgroundColor: PRIMARY
+          flex: 1
         }}
       >
         <Video video={this.props.video} aspectRatio={3 / 4} />
@@ -61,7 +51,7 @@ class VideoQuestion extends Component {
                   text={item}
                   style={[
                     styles.answer,
-                    this.state.highlighted === key ? styles.highlighted : null
+                    this.props.state === key ? styles.highlighted : null
                   ]}
                   key={key}
                   onPress={this.changeAnswer(key)}

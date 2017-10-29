@@ -1,10 +1,11 @@
-import * as FindLetter from './FindLetter';
 import * as ChooseArticle from './ChooseArticle';
 import * as DifferFromSymbol from './DifferFromSymbol';
+import * as FindLetter from './FindLetter';
 import * as HearWord from './HearWord';
 import * as LetterRotated from './LetterRotated';
 import * as MatchImage from './MatchImage';
 import * as MissingText from './MissingText';
+import * as VideoQuestion from './VideoQuestion';
 
 export {
   FindLetter,
@@ -13,5 +14,6 @@ export {
   HearWord,
   LetterRotated,
   MatchImage,
-  MissingText
+  MissingText,
+  VideoQuestion
 };

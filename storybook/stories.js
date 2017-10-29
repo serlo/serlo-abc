@@ -6,6 +6,7 @@ import '../src/components/exercises/HearWord/index.stories';
 import '../src/components/exercises/LetterRotated/index.stories';
 import '../src/components/exercises/MatchImage/index.stories';
 import '../src/components/exercises/MissingText/index.stories';
+import '../src/components/exercises/VideoQuestion/index.stories';
 
 import '../src/components/common/NavigationMenu.stories.js';
 import '../src/components/exercises/BuildSentence.stories';
@@ -17,7 +18,6 @@ import '../src/components/exercises/ShowLetter.stories';
 import '../src/components/exercises/ShowWord.stories';
 import '../src/components/exercises/SyllableTable.stories';
 import '../src/components/exercises/TutorialVideo.stories';
-import '../src/components/exercises/VideoQuestion.stories';
 import '../src/components/helpers/difficulty.stories';
 import '../src/components/screens/Course/index.stories';
 import '../src/components/screens/Splash.stories';

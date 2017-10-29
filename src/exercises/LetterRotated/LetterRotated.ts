@@ -1,4 +1,4 @@
-import { map, contains } from 'ramda';
+import { contains, map } from 'ramda';
 import AbstractExercise from '../AbstractExercise';
 
 export interface IProps {

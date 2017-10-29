@@ -6,7 +6,6 @@ import { getWord } from '../../../helpers/words';
 import {
   BLACK_TRANSPARENT,
   PRIMARY_STRONG,
-  PRIMARY,
   MASCULINE_STRONG,
   MASCULINE_WEAK,
   FEMININE_STRONG,
