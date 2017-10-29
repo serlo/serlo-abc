@@ -1,38 +1,166 @@
-import React from 'react';
-import { Text, View } from 'react-native';
-import { NativeRouter, Route } from 'react-router-native';
+import { map } from 'ramda';
+import React, { Component } from 'react';
+import { View } from 'react-native';
+import { NativeRouter, Redirect, Route } from 'react-router-native';
 
+import courses from './assets/courses.json';
+import getExercise from './components/exercises';
 import Course from './components/screens/Course';
+import Exercise from './components/screens/Exercise';
 import Splash from './components/screens/Splash';
-
+import { LoadSounds } from './components/helpers/Audio';
 import loadFonts from './components/helpers/fonts';
+import { play } from './helpers/audio';
+import { getWordObject } from './helpers/words';
+import Interactor from './entities-interactor';
+import Storage from './storage/CourseStorage';
+import { PRIMARY } from './styles/colors';
 
-const Section = ({ match }) => {
-  return <Text>Section {match.params.id}!</Text>;
-};
+export class AppRoutes extends Component {
+  constructor(props) {
+    super(props);
+
+    const storage = new Storage(courses);
+    const progress = null; // TODO:
+    this.interactor = new Interactor(storage, progress);
+
+    this.state = { course: null };
+  }
+
+  getNextChild = id => {
+    if (this.state.course) {
+      return this.interactor.getNextChild(id);
+    }
+  };
+
+  getNextSibling = id => {
+    return this.interactor.getNextSibling(id);
+  };
+
+  findEntity = id => {
+    return this.interactor.findEntity(id);
+  };
+
+  componentDidMount() {
+    this.interactor
+      .loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde')
+      .then(() => {
+        const course = this.interactor.getStructure();
+        this.setState({ course });
+      });
+  }
+
+  render() {
+    return (
+      <LoadSounds
+        sounds={[
+          require('./assets/sounds/correct.mp3'),
+          require('./assets/sounds/wrong.mp3')
+        ]}
+        render={([correctSound, wrongSound]) => (
+          <View
+            style={{
+              flex: 1,
+              backgroundColor: PRIMARY
+            }}
+          >
+            <Route
+              exact
+              path="/"
+              render={({ history }) => (
+                <Splash next={() => history.push('/course')} />
+              )}
+            />
+            <Route
+              path="/course"
+              render={({ history }) => {
+                if (!this.state.course) {
+                  return null;
+                }
+
+                return (
+                  <Course
+                    course={this.state.course}
+                    goToSection={id => history.push(`/section/${id}`)}
+                  />
+                );
+              }}
+            />
+            <Route
+              path="/section/:id"
+              render={({ match }) => {
+                if (!this.state.course) {
+                  return null;
+                }
+
+                const exercise = this.getNextChild(match.params.id);
+
+                if (exercise) {
+                  return <Redirect to={`/exercise/${exercise.id}`} />;
+                }
+
+                const section = this.getNextSibling(match.params.id);
+
+                if (section) {
+                  return <Redirect to={`/section/${section.id}`} />;
+                }
+
+                return null;
+              }}
+            />
+            <Route
+              path="/exercise/:id"
+              render={({ match, history }) => {
+                const entity = this.findEntity(match.params.id);
+
+                if (!entity) {
+                  return <Redirect to="/course" />;
+                }
+
+                const { type, props } = entity;
+
+                const exerciseType = getExercise(type);
+
+                if (!exerciseType) {
+                  console.warn('no view found for type', type);
+                  return null;
+                }
+
+                const next = () => {
+                  history.push(`/section/${entity.parent}`);
+                };
+
+                const exercise = new exerciseType.Exercise({
+                  ...props,
+                  words: map(getWordObject, props.words || [])
+                });
+
+                return (
+                  <Exercise
+                    exercise={exercise}
+                    Component={exerciseType.Component}
+                    onCorrect={() => {
+                      play(correctSound).then(() => {
+                        next();
+                      });
+                    }}
+                    onWrong={() => {
+                      play(wrongSound);
+                    }}
+                  />
+                );
+              }}
+            />
+          </View>
+        )}
+      />
+    );
+  }
+}
 
 const App = () => (
   <NativeRouter>
-    <View
-      style={{
-        flex: 1
-      }}
-    >
-      <Route
-        exact
-        path="/"
-        render={({ history }) => (
-          <Splash next={() => history.push('/course')} />
-        )}
-      />
-      <Route
-        path="/course"
-        render={({ history }) => (
-          <Course goToSection={id => history.push(`/section/${id}`)} />
-        )}
-      />
-      <Route path="/section/:id" component={Section} />
-    </View>
+    <AppRoutes />
   </NativeRouter>
 );
 

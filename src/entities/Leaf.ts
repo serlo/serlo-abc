@@ -16,7 +16,7 @@ class Leaf extends AbstractNode {
 
   public getStructure() {
     return {
-      id: this.getId(),
+      ...super.getStructure(),
       type: this.getType()
     };
   }

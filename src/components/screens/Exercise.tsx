@@ -8,11 +8,11 @@ import {
   View
 } from 'react-native';
 
-import AbstractExercise from '../../../exercises/AbstractExercise';
-import { play } from '../../../helpers/audio';
-import { GREEN, PRIMARY, WHITE } from '../../../styles/colors';
-import RoundButton from '../../common/RoundButton';
-import { LoadSounds } from '../../helpers/Audio';
+import AbstractExercise from '../../exercises/AbstractExercise';
+import { play } from '../../helpers/audio';
+import { GREEN, PRIMARY, WHITE } from '../../styles/colors';
+import RoundButton from '../common/RoundButton';
+import { LoadSounds } from '../helpers/Audio';
 
 interface IProps<Props, State> {
   exercise: AbstractExercise<Props, State>;

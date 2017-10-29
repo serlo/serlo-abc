@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Dimensions } from 'react-native';
 
-import { GREEN } from '../../styles/colors';
-import { getImage } from '../../helpers/words';
-import RoundImageWithBorder from '../common/RoundImageWithBorder';
-import RoundText from '../common/RoundText';
+import { GREEN } from '../../../styles/colors';
+import { getImage } from '../../../helpers/words';
+import RoundImageWithBorder from '../../common/RoundImageWithBorder';
+import RoundText from '../../common/RoundText';
 
 const ScaleFourImages = ({ displaySize, letter, words }) => {
   const scale = displaySize / 360;
