@@ -1,12 +1,14 @@
-import { dropWhile } from 'ramda';
+import { dropWhile, filter } from 'ramda';
 
 import { AbstractNode, InternalNode, Leaf } from '../entities';
 import AbstractCourseInteractor from './AbstractCourseInteractor';
 import createCourse from './CourseFactory';
 import { ICourseStructure } from './ICourseStructure';
+import { Progress } from './ISerializedProgress';
 
 class CourseInteractor extends AbstractCourseInteractor {
   private course: AbstractNode;
+  private mockedProgress: any;
 
   public loadCourse(id: string): Promise<void> {
     return new Promise((resolve, reject) => {
@@ -29,12 +31,16 @@ class CourseInteractor extends AbstractCourseInteractor {
 
     if ((entity as InternalNode).getChildren()) {
       const children = (entity as InternalNode).getChildren();
+      const unseenChildren = filter(
+        child => this.getProgress(child.getId()).progress === Progress.Unseen,
+        children
+      );
 
-      if (children.length === 0) {
+      if (unseenChildren.length === 0) {
         return null;
       }
 
-      return children[0].getInfo() as ICourseStructure;
+      return unseenChildren[0].getInfo() as ICourseStructure;
     }
 
     return null;
@@ -70,6 +76,25 @@ class CourseInteractor extends AbstractCourseInteractor {
   public findEntity(id: string) {
     const entity = this.course.findEntity(id);
     return entity && (entity.getInfo() as ICourseStructure | null);
+  }
+
+  public getProgress(id: string) {
+    return (this.mockedProgress || {})[id] || { progress: Progress.Unseen };
+  }
+
+  public setProgress(id: string, progress: Progress) {
+    this.mockedProgress = this.mockedProgress || {};
+    this.mockedProgress[id] = { progress };
+  }
+
+  public markAsCorrect(id: string) {
+    // return this.progress.setProgress(id, Progress.Correct, {})
+    this.setProgress(id, Progress.Correct);
+  }
+
+  public markAsIncorrect(id: string) {
+    // return this.progress.setProgress(id, Progress.Incorrect, {})
+    this.setProgress(id, Progress.Incorrect);
   }
 }
 
