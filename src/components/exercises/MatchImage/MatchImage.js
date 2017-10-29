@@ -2,16 +2,15 @@ import { Ionicons } from '@expo/vector-icons';
 import React, { Component } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 
-import { play } from '../../helpers/audio';
-import RoundButton from '../common/RoundButton';
-import RoundImageWithBorder from '../common/RoundImageWithBorder';
-import { LoadSound } from '../helpers/Audio';
-import { getSound, getWord, getImage } from '../../helpers/words';
+import { play } from '../../../helpers/audio';
+import RoundButton from '../../common/RoundButton';
+import RoundImageWithBorder from '../../common/RoundImageWithBorder';
+import { LoadSound } from '../../helpers/Audio';
+import { getSound, getWord, getImage } from '../../../helpers/words';
 
 const styles = {
   container: {
     flex: 1,
-    backgroundColor: '#00B4D5',
     alignItems: 'center',
     justifyContent: 'space-around'
   },
@@ -26,19 +25,11 @@ const styles = {
 };
 
 class MatchImage extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      highlighted: null
-    };
-  }
-
   createImageButton = index => (
-    <TouchableOpacity onPress={() => this.setState({ highlighted: index })}>
+    <TouchableOpacity onPress={() => this.props.setState(index)}>
       <RoundImageWithBorder
         white
-        highlighted={this.state.highlighted === index}
+        highlighted={this.props.state === index}
         image={getImage(this.props.words[index])}
         size={100}
       />
