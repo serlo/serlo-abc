@@ -28,9 +28,7 @@ export class AppRoutes extends Component {
   }
 
   getNextChild = id => {
-    if (this.state.course) {
-      return this.interactor.getNextChild(id);
-    }
+    return this.interactor.getNextChild(id);
   };
 
   getNextSibling = id => {
@@ -39,6 +37,14 @@ export class AppRoutes extends Component {
 
   findEntity = id => {
     return this.interactor.findEntity(id);
+  };
+
+  markAsCorrect = id => {
+    return this.interactor.markAsCorrect(id);
+  };
+
+  markAsIncorrect = id => {
+    return this.interactor.markAsIncorrect(id);
   };
 
   componentDidMount() {
@@ -105,13 +111,16 @@ export class AppRoutes extends Component {
                   return <Redirect to={`/section/${section.id}`} />;
                 }
 
+                console.warn('end of course');
                 return null;
               }}
             />
             <Route
               path="/exercise/:id"
               render={({ match, history }) => {
-                const entity = this.findEntity(match.params.id);
+                const { id } = match.params;
+
+                const entity = this.findEntity(id);
 
                 if (!entity) {
                   return <Redirect to="/course" />;
@@ -126,10 +135,6 @@ export class AppRoutes extends Component {
                   return null;
                 }
 
-                const next = () => {
-                  history.push(`/section/${entity.parent}`);
-                };
-
                 const exercise = new exerciseType.Exercise({
                   ...props,
                   words: map(getWordObject, props.words || [])
@@ -141,11 +146,14 @@ export class AppRoutes extends Component {
                     Component={exerciseType.Component}
                     onCorrect={() => {
                       play(correctSound).then(() => {
-                        next();
+                        this.markAsCorrect(id);
+                        history.push(`/section/${entity.parent}`);
                       });
                     }}
                     onWrong={() => {
-                      play(wrongSound);
+                      play(wrongSound).then(() => {
+                        this.markAsIncorrect(id);
+                      });
                     }}
                   />
                 );
