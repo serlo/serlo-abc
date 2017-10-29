@@ -1,38 +1,22 @@
 import React from 'react';
 import { View } from 'react-native';
-import * as colors from '../../styles/colors';
-import RoundTextButton from '../common/RoundTextButton';
+import RoundTextButton from '../../common/RoundTextButton';
 
 const DifferFromSymbol = props => {
-  const {
-    symbols,
-    changeAnswer,
-    currentAnswer,
-    exerciseComplete,
-    exerciseSuccess
-  } = props;
+  const { symbols, state } = props;
 
-  const generateButtonStyle = answer => {
-    const style = { margin: 5 };
-    if (answer === currentAnswer && exerciseComplete) {
-      if (exerciseSuccess) {
-        style.backgroundColor = colors.GREEN;
-      } else {
-        style.backgroundColor = colors.RED;
-      }
-    }
-    return style;
-  };
+  changeAnswer = answer => this.props.setState(answer);
+
+  const buttonStyle = { margin: 5 };
 
   const buttonIsHighlighted = answer => {
-    return answer === currentAnswer && !exerciseComplete;
+    return answer === state;
   };
 
   return (
     <View
       style={{
         flex: 1,
-        backgroundColor: colors.PRIMARY,
         alignItems: 'center'
       }}
     >
@@ -47,21 +31,21 @@ const DifferFromSymbol = props => {
         }}
       >
         <RoundTextButton
-          style={generateButtonStyle(0)}
+          style={buttonStyle}
           highlighted={buttonIsHighlighted(0)}
           text={symbols[0]}
           size={80}
           onPress={() => changeAnswer(0)}
         />
         <RoundTextButton
-          style={generateButtonStyle(1)}
+          style={buttonStyle}
           highlighted={buttonIsHighlighted(1)}
           text={symbols[1]}
           size={80}
           onPress={() => changeAnswer(1)}
         />
         <RoundTextButton
-          style={generateButtonStyle(2)}
+          style={buttonStyle}
           highlighted={buttonIsHighlighted(2)}
           text={symbols[2]}
           size={80}
@@ -78,14 +62,14 @@ const DifferFromSymbol = props => {
         }}
       >
         <RoundTextButton
-          style={generateButtonStyle(3)}
+          style={buttonStyle}
           highlighted={buttonIsHighlighted(3)}
           text={symbols[3]}
           size={80}
           onPress={() => changeAnswer(3)}
         />
         <RoundTextButton
-          style={generateButtonStyle(4)}
+          style={buttonStyle}
           highlighted={buttonIsHighlighted(4)}
           text={symbols[4]}
           size={80}
