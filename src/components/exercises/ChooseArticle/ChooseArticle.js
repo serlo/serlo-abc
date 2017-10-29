@@ -1,8 +1,8 @@
 import { addIndex, map } from 'ramda';
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
-import { getWord } from '../../helpers/words';
+import { getWord } from '../../../helpers/words';
 import {
   BLACK_TRANSPARENT,
   PRIMARY_STRONG,
@@ -13,9 +13,9 @@ import {
   FEMININE_WEAK,
   NEUTER_STRONG,
   NEUTER_WEAK
-} from '../../styles/colors';
-import { DEFAULT } from '../../styles/text';
-import WordImageWithSounds from '../common/WordImageWithSounds';
+} from '../../../styles/colors';
+import { DEFAULT } from '../../../styles/text';
+import WordImageWithSounds from '../../common/WordImageWithSounds';
 
 const mapIndexed = addIndex(map);
 
@@ -59,19 +59,9 @@ const styles = {
   }
 };
 
-class ChooseArticle extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      selectedArticle: null
-    };
-  }
-
+class ChooseArticle extends Component {
   selectArticle = article => () => {
-    this.setState(({ selectedArticle }) => ({
-      selectedArticle: selectedArticle === article ? null : article
-    }));
+    this.props.setState(state => (state === article ? '' : article));
   };
 
   render() {
@@ -96,7 +86,7 @@ class ChooseArticle extends React.Component {
             styles.article,
             {
               backgroundColor:
-                this.state.selectedArticle === article
+                this.props.state === article
                   ? a[article].strong
                   : a[article].weak
             }
@@ -113,7 +103,6 @@ class ChooseArticle extends React.Component {
       <View
         style={{
           flex: 1,
-          backgroundColor: PRIMARY,
           alignItems: 'center',
           justifyContent: 'space-around'
         }}

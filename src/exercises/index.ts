@@ -1,4 +1,4 @@
 import * as FindLetter from './FindLetter';
-import * as InfoScreen from './InfoScreen';
+import * as ChooseArticle from './ChooseArticle';
 
-export { FindLetter, InfoScreen };
+export { FindLetter, ChooseArticle };

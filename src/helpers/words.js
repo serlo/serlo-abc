@@ -45,3 +45,7 @@ export const getSound = word => {
 export const getLongSound = word => {
   return word.longSound;
 };
+
+export const getArticle = word => {
+  return word.article;
+};
