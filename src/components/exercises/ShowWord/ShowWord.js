@@ -2,10 +2,10 @@ import { addIndex, map, toUpper } from 'ramda';
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import { getWord } from '../../helpers/words';
-import { WHITE_TRANSPARENT, PRIMARY } from '../../styles/colors';
-import { DEFAULT } from '../../styles/text';
-import WordImageWithSounds from '../common/WordImageWithSounds';
+import { getWord } from '../../../helpers/words';
+import { WHITE_TRANSPARENT } from '../../../styles/colors';
+import { DEFAULT } from '../../../styles/text';
+import WordImageWithSounds from '../../common/WordImageWithSounds';
 
 const mapIndexed = addIndex(map);
 
@@ -34,7 +34,6 @@ const ShowWord = ({ word, letter }) => {
     <View
       style={{
         flex: 1,
-        backgroundColor: PRIMARY,
         alignItems: 'center',
         justifyContent: 'space-around'
       }}

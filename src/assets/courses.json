@@ -28,6 +28,12 @@
                 "type": "ShowLetter",
                 "letter": "a",
                 "sound": "a"
+              },
+              {
+                "id": "f160dce7-decc-4f2d-9019-faa6c2b78c44",
+                "type": "ShowWord",
+                "letter": "a",
+                "word": "ananas"
               }
             ]
           },
