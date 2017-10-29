@@ -443,6 +443,75 @@ exports[` 1`] = `
           "top": 35,
         },
         Object {
+          "left": 15,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#73dbff",
+            "borderRadius": 9999,
+            "elevation": 10,
+            "height": 40,
+            "justifyContent": "center",
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+            "width": 40,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "top": 35,
+        },
+        Object {
           "right": 15,
         },
       ]
@@ -935,6 +1004,75 @@ exports[` 2`] = `
         >
           s
         </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "top": 35,
+        },
+        Object {
+          "left": 15,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#73dbff",
+            "borderRadius": 9999,
+            "elevation": 10,
+            "height": 40,
+            "justifyContent": "center",
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+            "width": 40,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+        />
       </View>
     </View>
   </View>
@@ -1453,6 +1591,75 @@ exports[` 3`] = `
           "top": 35,
         },
         Object {
+          "left": 15,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#73dbff",
+            "borderRadius": 9999,
+            "elevation": 10,
+            "height": 40,
+            "justifyContent": "center",
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+            "width": 40,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "top": 35,
+        },
+        Object {
           "right": 15,
         },
       ]
@@ -1945,6 +2152,75 @@ exports[` 4`] = `
         >
           s
         </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "top": 35,
+        },
+        Object {
+          "left": 15,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#73dbff",
+            "borderRadius": 9999,
+            "elevation": 10,
+            "height": 40,
+            "justifyContent": "center",
+            "padding": 5,
+            "shadowColor": "rgba(0, 0, 0, 0.1)",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0,
+            "width": 40,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+        />
       </View>
     </View>
   </View>

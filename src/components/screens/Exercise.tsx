@@ -85,6 +85,14 @@ class Exercise<Props, State> extends React.Component<
           state={state}
           setState={this.updateState}
         />
+        <View style={[styles.hoveringButton, styles.top, styles.left]}>
+          <RoundButton
+            onPress={this.props.goToNav}
+            IconComponent={Entypo}
+            name="menu"
+            size={25}
+          />
+        </View>
         <View style={[styles.hoveringButton, styles.top, styles.right]}>
           <RoundButton
             onPress={this.submit}
