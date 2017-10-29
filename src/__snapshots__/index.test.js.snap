@@ -5,6 +5,7 @@ exports[`renders without crashing 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#00b4d5",
         "flex": 1,
       }
     }
@@ -19,8 +20,12 @@ exports[`renders without crashing 1`] = `
       render={[Function]}
     />
     <Route
-      component={[Function]}
       path="/section/:id"
+      render={[Function]}
+    />
+    <Route
+      path="/exercise/:id"
+      render={[Function]}
     />
   </View>
 </NativeRouter>
