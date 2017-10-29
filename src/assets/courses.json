@@ -16,6 +16,18 @@
                 "type": "IntroduceLetter",
                 "words": ["ananas", "apfel", "affe"],
                 "letter": "Aa"
+              },
+              {
+                "id": "eebb00e5-2760-481c-aeb2-44a16d29c923",
+                "type": "ShowLetter",
+                "letter": "A",
+                "sound": "a"
+              },
+              {
+                "id": "7429b311-42ef-4923-9c66-7b6fb2306a79",
+                "type": "ShowLetter",
+                "letter": "a",
+                "sound": "a"
               }
             ]
           },
@@ -44,13 +56,13 @@
             ]
           },
           {
-            "id": "Hallo!",
+            "id": "01196a10-507b-4216-ae20-931a0494c265",
             "title": "Hallo!",
             "children": [],
             "icon": "ios-chatbubbles"
           },
           {
-            "id": "A N E",
+            "id": "e5ed7299-8bdd-42a2-97f8-0366faa42296",
             "title": "A N E",
             "children": [],
             "icon": "ios-refresh"
@@ -58,32 +70,32 @@
         ]
       },
       {
-        "id": "STO",
+        "id": "cea0fb8f-2ddb-4fa3-b32b-9e56948300d6",
         "title": "STO",
         "children": [
           {
-            "id": "S",
+            "id": "4d22a6b9-24bf-48c7-a824-f4cbb7b2cafc",
             "title": "S",
             "children": []
           },
           {
-            "id": "T",
+            "id": "ca7d36df-9660-404b-b06a-8a36deac6ce1",
             "title": "T",
             "children": []
           },
           {
-            "id": "O",
+            "id": "a8dff654-abdb-484b-97a3-209daa5e48f7",
             "title": "O",
             "children": []
           },
           {
-            "id": "Hallo 2!",
+            "id": "dde29015-6fee-4717-afb6-5662e5be08ab",
             "title": "Hallo 2!",
             "children": [],
             "icon": "ios-chatbubbles"
           },
           {
-            "id": "S T O",
+            "id": "76395248-2d1d-4ff8-8c84-60869e794d83",
             "title": "S T O",
             "children": [],
             "icon": "ios-refresh"
@@ -91,32 +103,32 @@
         ]
       },
       {
-        "id": "RIH",
+        "id": "74779d77-fb55-4d32-a686-21b3021a1520",
         "title": "RIH",
         "children": [
           {
-            "id": "R",
+            "id": "3a5b285c-1788-4da2-97a0-8d8d29cf89e5",
             "title": "R",
             "children": []
           },
           {
-            "id": "I",
+            "id": "3fa1e326-d76d-4edc-9653-2ba2f8b3adf7",
             "title": "I",
             "children": []
           },
           {
-            "id": "H",
+            "id": "517cf62f-074a-4aef-ad32-776ea62407ac",
             "title": "H",
             "children": []
           },
           {
-            "id": "Hallo 3!",
+            "id": "0d707da7-ca60-41ee-8225-fa84bcf66f6f",
             "title": "Hallo 3!",
             "children": [],
             "icon": "ios-chatbubbles"
           },
           {
-            "id": "R I H",
+            "id": "4e3e5d34-d733-43f8-81f5-ee8949105556",
             "title": "R I H",
             "children": [],
             "icon": "ios-refresh"
