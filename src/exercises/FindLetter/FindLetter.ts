@@ -1,14 +1,14 @@
 import { map } from 'ramda';
 
-import { getWord } from '../helpers/words.js';
-import AbstractExercise from './AbstractExercise';
+import { getWord } from '../../helpers/words.js';
+import AbstractExercise from '../AbstractExercise';
 
-interface IProps {
+export interface IProps {
   word: any;
   letter: string;
 }
 
-type IState = boolean[];
+export type IState = boolean[];
 
 class FindLetter extends AbstractExercise<IProps, IState> {
   public getInitialState() {

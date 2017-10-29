@@ -1,8 +1,8 @@
+import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { View, Text } from 'react-native';
 
 import repeatIcon from '../../assets/images/repeat.png';
-import speakerImage from '../../assets/images/speaker.png';
 import { playAll } from '../../helpers/audio';
 import { PRIMARY } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
@@ -56,7 +56,12 @@ const UnwrappedShowLetter = ({ letter, sounds, isRepeat }) => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.bigLetter}>{letter}</Text>
-        <RoundButton icon={speakerImage} size={40} onPress={play} />
+        <RoundButton
+          IconComponent={Ionicons}
+          name="md-volume-up"
+          size={40}
+          onPress={play}
+        />
       </View>
       <View height={80}>{toggleRepeatButton()}</View>
     </View>

@@ -1,7 +1,7 @@
+import { Ionicons } from '@expo/vector-icons';
 import React, { Component } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 
-import icon from '../../assets/images/speaker.png';
 import { play } from '../../helpers/audio';
 import RoundButton from '../common/RoundButton';
 import RoundImageWithBorder from '../common/RoundImageWithBorder';
@@ -63,7 +63,8 @@ class MatchImage extends Component {
         <View style={[styles.row, { alignItems: 'flex-end' }]}>
           <Text style={styles.bigLetter}>{this.props.text}</Text>
           <RoundButton
-            icon={icon}
+            IconComponent={Ionicons}
+            name="md-volume-up"
             size={20}
             onPress={() => play(sound)}
             style={{

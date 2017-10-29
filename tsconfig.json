@@ -4,7 +4,9 @@
     "module": "commonjs",
     "jsx": "react-native",
     "strict": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "noEmit": true,
+    "skipLibCheck": true
   },
   "exclude": ["node_modules"]
 }

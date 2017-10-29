@@ -63,9 +63,12 @@ exports[`renders without crashing (with repeat) 1`] = `
       <View
         style={
           Object {
+            "alignItems": "center",
             "backgroundColor": "#73dbff",
             "borderRadius": 9999,
             "elevation": 10,
+            "height": 55,
+            "justifyContent": "center",
             "padding": 5,
             "shadowColor": "rgba(0, 0, 0, 0.1)",
             "shadowOffset": Object {
@@ -74,19 +77,32 @@ exports[`renders without crashing (with repeat) 1`] = `
             },
             "shadowOpacity": 1,
             "shadowRadius": 0,
+            "width": 55,
           }
         }
       >
-        <Image
-          source={1337}
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          disabled={false}
+          ellipsizeMode="tail"
           style={
-            Object {
-              "height": 40,
-              "resizeMode": "contain",
-              "width": 40,
-            }
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontSize": 40,
+              },
+              undefined,
+              Object {
+                "fontFamily": "ExponentFont-mock-ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+            ]
           }
-        />
+        >
+          
+        </Text>
       </View>
     </View>
   </View>
@@ -180,9 +196,12 @@ exports[`renders without crashing (without repeat) 1`] = `
       <View
         style={
           Object {
+            "alignItems": "center",
             "backgroundColor": "#73dbff",
             "borderRadius": 9999,
             "elevation": 10,
+            "height": 55,
+            "justifyContent": "center",
             "padding": 5,
             "shadowColor": "rgba(0, 0, 0, 0.1)",
             "shadowOffset": Object {
@@ -191,18 +210,15 @@ exports[`renders without crashing (without repeat) 1`] = `
             },
             "shadowOpacity": 1,
             "shadowRadius": 0,
+            "width": 55,
           }
         }
       >
-        <Image
-          source={1337}
-          style={
-            Object {
-              "height": 40,
-              "resizeMode": "contain",
-              "width": 40,
-            }
-          }
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
         />
       </View>
     </View>
