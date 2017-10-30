@@ -36,4 +36,8 @@ describe('helpers/words', () => {
   it('getLongSound returns the long sound of the word', () => {
     expect(helpers.getLongSound(word)).toBeDefined();
   });
+
+  it('getArticle returns the article of the word', () => {
+    expect(helpers.getArticle(word)).toBe('der');
+  });
 });
