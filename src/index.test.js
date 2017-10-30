@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import App from '.';
+import { AppRoutes } from '.';
 
 jest.mock('react-router-native', () => ({
   NativeRouter: 'NativeRouter',
@@ -9,6 +9,6 @@ jest.mock('react-router-native', () => ({
 }));
 
 it('renders without crashing', () => {
-  const tree = renderer.create(<App />);
+  const tree = renderer.create(<AppRoutes />);
   expect(tree).toMatchSnapshot();
 });
