@@ -66,7 +66,7 @@ class Exercise<Props, State> extends React.Component<
   public componentDidMount() {
     const { submitted } = this.props;
 
-    if (submitted) {
+    if (typeof submitted !== 'undefined') {
       this.setState({ state: submitted }, () => {
         this.submit();
       });
