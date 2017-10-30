@@ -1,32 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders without crashing 1`] = `
-<NativeRouter>
-  <View
-    style={
-      Object {
-        "backgroundColor": "#00b4d5",
-        "flex": 1,
-      }
+<View
+  style={
+    Object {
+      "backgroundColor": "#00b4d5",
+      "flex": 1,
     }
-  >
-    <Route
-      exact={true}
-      path="/"
-      render={[Function]}
-    />
-    <Route
-      path="/course"
-      render={[Function]}
-    />
-    <Route
-      path="/section/:id"
-      render={[Function]}
-    />
-    <Route
-      path="/exercise/:id"
-      render={[Function]}
-    />
-  </View>
-</NativeRouter>
+  }
+>
+  <Route
+    exact={true}
+    path="/"
+    render={[Function]}
+  />
+  <Route
+    path="/course"
+    render={[Function]}
+  />
+  <Route
+    path="/section/:id"
+    render={[Function]}
+  />
+  <Route
+    path="/exercise/:id"
+    render={[Function]}
+  />
+</View>
 `;
