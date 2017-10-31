@@ -2,6 +2,24 @@
 
 exports[` 1`] = `
 <View
+  config={
+    Object {
+      "directionalOffsetThreshold": 160,
+    }
+  }
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onSwipeLeft={[Function]}
   style={
     Object {
       "backgroundColor": "#00b4d5",
@@ -681,6 +699,24 @@ exports[` 1`] = `
 
 exports[` 2`] = `
 <View
+  config={
+    Object {
+      "directionalOffsetThreshold": 160,
+    }
+  }
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onSwipeLeft={[Function]}
   style={
     Object {
       "backgroundColor": "#00b4d5",
@@ -1318,6 +1354,24 @@ exports[` 2`] = `
 
 exports[` 3`] = `
 <View
+  config={
+    Object {
+      "directionalOffsetThreshold": 160,
+    }
+  }
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onSwipeLeft={[Function]}
   style={
     Object {
       "backgroundColor": "#b5ce4d",
@@ -1997,6 +2051,24 @@ exports[` 3`] = `
 
 exports[` 4`] = `
 <View
+  config={
+    Object {
+      "directionalOffsetThreshold": 160,
+    }
+  }
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onSwipeLeft={[Function]}
   style={
     Object {
       "backgroundColor": "#00b4d5",
