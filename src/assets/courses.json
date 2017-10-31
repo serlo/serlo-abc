@@ -34,6 +34,12 @@
                 "type": "ShowWord",
                 "letter": "a",
                 "word": "ananas"
+              },
+              {
+                "id": "12d49d12-9c8b-4963-ab6d-08f062d4ddf8",
+                "type": "ExplanationText",
+                "text": "Wiederholen Sie den Buchstaben.",
+                "sound": "exercises/wiederholen_sie_den_buchstaben_a"
               }
             ]
           },

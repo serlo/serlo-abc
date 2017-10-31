@@ -2,11 +2,11 @@ import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import { play } from '../../helpers/audio';
-import { GREEN } from '../../styles/colors';
-import { DEFAULT } from '../../styles/text';
-import { LoadSound } from '../helpers/Audio';
-import RoundButton from '../common/RoundButton';
+import { play } from '../../../helpers/audio';
+import { GREEN } from '../../../styles/colors';
+import { DEFAULT } from '../../../styles/text';
+import { LoadSound } from '../../helpers/Audio';
+import RoundButton from '../../common/RoundButton';
 
 const styles = {
   container: {
