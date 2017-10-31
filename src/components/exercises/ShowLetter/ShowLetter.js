@@ -74,7 +74,9 @@ const ShowLetter = ({ sound, ...props }) => {
   return (
     <LoadSounds
       sounds={sounds}
-      render={sounds => <UnwrappedShowLetter sounds={sounds} {...props} />}
+      render={sounds => {
+        return <UnwrappedShowLetter {...props} sounds={sounds} />;
+      }}
     />
   );
 };
