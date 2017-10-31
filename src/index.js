@@ -1,4 +1,4 @@
-import { map } from 'ramda';
+import { map, mergeAll } from 'ramda';
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
@@ -134,13 +134,15 @@ export class AppRoutes extends Component {
                   return null;
                 }
 
-                const exercise = new exerciseType.Exercise({
-                  ...props,
-                  sound: props.sound && getSound(props.sound),
-                  sounds: map(getSound, props.sounds || []),
-                  word: props.word && getWordObject(props.word),
-                  words: map(getWordObject, props.words || [])
-                });
+                const exercise = new exerciseType.Exercise(
+                  mergeAll([
+                    props,
+                    props.sound && { sound: getSound(props.sound) },
+                    props.sounds && { sounds: map(getSound, props.sounds) },
+                    props.word && { word: getWordObject(props.word) },
+                    props.words && { words: map(getWordObject, props.words) }
+                  ])
+                );
 
                 return (
                   <Exercise
