@@ -9,7 +9,9 @@ import '../src/components/exercises/LetterRotated/index.stories';
 import '../src/components/exercises/MatchImage/index.stories';
 import '../src/components/exercises/MissingText/index.stories';
 import '../src/components/exercises/ShowLetter/index.stories';
+import '../src/components/exercises/ShowLetterRepeat/index.stories';
 import '../src/components/exercises/ShowWord/index.stories';
+import '../src/components/exercises/ShowWordRepeat/index.stories';
 import '../src/components/exercises/VideoQuestion/index.stories';
 
 import '../src/components/common/NavigationMenu.stories.js';

@@ -26,28 +26,18 @@ const styles = {
   }
 };
 
-const UnwrappedShowLetter = ({ letter, sounds, isRepeat }) => {
+const UnwrappedShowLetter = ({ letter, sounds, isRepeat, setState }) => {
   const play = () => {
-    if (isRepeat) this.icon.unfocus();
-    playAll(sounds).then(() => {
-      if (isRepeat) this.icon.focus();
-    });
-  };
-
-  const toggleRepeatButton = () => {
     if (isRepeat) {
-      return (
-        <IconWithBackground
-          ref={view => {
-            this.icon = view;
-          }}
-          icon={repeatIcon}
-          size={40}
-        />
-      );
+      this.icon.unfocus();
+      setState(false);
     }
-
-    return null;
+    playAll(sounds).then(() => {
+      if (isRepeat) {
+        this.icon.focus();
+        setState(true);
+      }
+    });
   };
 
   return (
@@ -61,7 +51,17 @@ const UnwrappedShowLetter = ({ letter, sounds, isRepeat }) => {
           onPress={play}
         />
       </View>
-      <View height={80}>{toggleRepeatButton()}</View>
+      <View height={80}>
+        {isRepeat && (
+          <IconWithBackground
+            ref={view => {
+              this.icon = view;
+            }}
+            icon={repeatIcon}
+            size={40}
+          />
+        )}
+      </View>
     </View>
   );
 };
