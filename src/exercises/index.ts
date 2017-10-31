@@ -6,6 +6,7 @@ import * as InfoScreen from './InfoScreen';
 import * as LetterRotated from './LetterRotated';
 import * as MatchImage from './MatchImage';
 import * as MissingText from './MissingText';
+import * as RepeatSound from './RepeatSound';
 import * as VideoQuestion from './VideoQuestion';
 export {
   FindLetter,
@@ -16,5 +17,6 @@ export {
   LetterRotated,
   MatchImage,
   MissingText,
+  RepeatSound,
   VideoQuestion
 };
