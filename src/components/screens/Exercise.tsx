@@ -7,6 +7,9 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
+import GestureRecognizer, {
+  swipeDirections
+} from 'react-native-swipe-gestures';
 
 import AbstractExercise from '../../exercises/AbstractExercise';
 import { play } from '../../helpers/audio';
@@ -78,7 +81,11 @@ class Exercise<Props, State> extends React.Component<
     const { isCorrect, state, submitted } = this.state;
 
     return (
-      <View style={{ flex: 1, backgroundColor: isCorrect ? GREEN : PRIMARY }}>
+      <GestureRecognizer
+        onSwipeLeft={() => this.submit()}
+        config={{ directionalOffsetThreshold: 160 }}
+        style={{ flex: 1, backgroundColor: isCorrect ? GREEN : PRIMARY }}
+      >
         <Component
           showFeedback={submitted && !isCorrect}
           {...exercise.getProps()}
@@ -101,7 +108,7 @@ class Exercise<Props, State> extends React.Component<
             size={25}
           />
         </View>
-      </View>
+      </GestureRecognizer>
     );
   }
 
