@@ -1,4 +1,4 @@
-import { MissingText } from '../../../exercises';
+import { MissingText } from '../../../../packages/entities/exercises';
 import Component from './MissingText';
 
 export const Exercise = MissingText.Exercise;

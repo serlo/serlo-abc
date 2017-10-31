@@ -1,31 +1,30 @@
+// @ts-ignore: TODO: add declaration file
 import { Entypo } from '@expo/vector-icons';
 import * as React from 'react';
-import {
-  Button,
-  StatusBar,
-  StyleSheet,
-  TouchableOpacity,
-  View
-} from 'react-native';
-import GestureRecognizer, {
-  swipeDirections
-} from 'react-native-swipe-gestures';
+import { StatusBar, StyleSheet, View } from 'react-native';
+// @ts-ignore: TODO: add declaration file
+import GestureRecognizer from 'react-native-swipe-gestures';
 
-import AbstractExercise from '../../exercises/AbstractExercise';
+import AbstractExercise from '../../../packages/entities/exercises/AbstractExercise';
+// @ts-ignore: TODO: migrate to TypeScript
 import { play } from '../../helpers/audio';
-import { GREEN, PRIMARY, WHITE } from '../../styles/colors';
+import { GREEN, PRIMARY } from '../../styles/colors';
+// @ts-ignore: TODO: migrate to TypeScript
 import RoundButton from '../common/RoundButton';
+// @ts-ignore: TODO: migrate to TypeScript
 import { LoadSounds } from '../helpers/Audio';
 
 interface IProps<Props, State> {
   exercise: AbstractExercise<Props, State>;
-  Component: any; // TODO:
+  // TODO: specify type
+  Component: any;
   submitted?: State;
-  onCorrect: () => void; // TODO:
-  onWrong: () => void; // TODO:
+  goToNav: () => void;
+  onCorrect: () => void;
+  onWrong: () => void;
 }
 
-interface IState<Props, State> {
+interface IState<State> {
   state: State;
   isCorrect: boolean;
   submitted: boolean;
@@ -51,7 +50,7 @@ const styles = StyleSheet.create({
 
 class Exercise<Props, State> extends React.Component<
   IProps<Props, State>,
-  IState<Props, State>
+  IState<State>
 > {
   constructor(props: IProps<Props, State>) {
     super(props);

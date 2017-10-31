@@ -6,7 +6,6 @@ import { play } from '../../../helpers/audio';
 import RoundButton from '../../common/RoundButton';
 import RoundImageWithBorder from '../../common/RoundImageWithBorder';
 import { LoadSound } from '../../helpers/Audio';
-import { getSound, getWord, getImage } from '../../../helpers/words';
 
 const styles = {
   container: {
@@ -30,7 +29,7 @@ class MatchImage extends Component {
       <RoundImageWithBorder
         white
         highlighted={this.props.state === index}
-        image={getImage(this.props.words[index])}
+        image={this.props.words[index].getImage()}
         size={100}
       />
     </TouchableOpacity>
@@ -72,10 +71,10 @@ const MatchImageWrapper = props => {
   const { words, correctIndex } = props;
   return (
     <LoadSound
-      sound={getSound(words[correctIndex])}
+      sound={words[correctIndex].getSound()}
       render={sound => (
         <MatchImage
-          text={getWord(words[correctIndex])}
+          text={words[correctIndex].toString()}
           sound={sound}
           {...props}
         />

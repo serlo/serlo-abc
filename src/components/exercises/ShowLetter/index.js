@@ -1,4 +1,4 @@
-import { InfoScreen } from '../../../exercises';
+import { InfoScreen } from '../../../../packages/entities/exercises';
 import Component from './ShowLetter';
 
 export const Exercise = InfoScreen.Exercise;

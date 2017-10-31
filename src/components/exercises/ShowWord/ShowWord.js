@@ -3,7 +3,6 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import repeatIcon from '../../../assets/images/repeat.png';
-import { getWord } from '../../../helpers/words';
 import { WHITE_TRANSPARENT } from '../../../styles/colors';
 import { DEFAULT } from '../../../styles/text';
 import IconWithBackground from '../../common/IconWithBackground';
@@ -29,7 +28,7 @@ const ShowWord = ({ word, letter, sound, setState, isRepeat }) => {
         <Text style={DEFAULT}>{char}</Text>
       </View>
     ),
-    getWord(word)
+    word.toString()
   );
 
   return (

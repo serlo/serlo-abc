@@ -1,4 +1,4 @@
-import { VideoQuestion } from '../../../exercises';
+import { VideoQuestion } from '../../../../packages/entities/exercises';
 import Component from './VideoQuestion';
 
 export const Exercise = VideoQuestion.Exercise;

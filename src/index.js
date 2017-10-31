@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
 
+import Interactor from '../packages/entities-interactor';
 import courses from './assets/courses.json';
 import getExercise from './components/exercises';
 import Course from './components/screens/Course';
@@ -11,10 +12,9 @@ import Splash from './components/screens/Splash';
 import { LoadSounds } from './components/helpers/Audio';
 import loadFonts from './components/helpers/fonts';
 import { play, getSound } from './helpers/audio';
-import { getWordObject } from './helpers/words';
-import Interactor from './entities-interactor';
 import Storage from './storage/CourseStorage';
 import { PRIMARY } from './styles/colors';
+import Word from './word';
 
 export class AppRoutes extends Component {
   constructor(props) {
@@ -139,8 +139,10 @@ export class AppRoutes extends Component {
                     props,
                     props.sound && { sound: getSound(props.sound) },
                     props.sounds && { sounds: map(getSound, props.sounds) },
-                    props.word && { word: getWordObject(props.word) },
-                    props.words && { words: map(getWordObject, props.words) }
+                    props.word && { word: new Word(props.word) },
+                    props.words && {
+                      words: map(word => new Word(word), props.words)
+                    }
                   ])
                 );
 
