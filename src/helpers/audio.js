@@ -1,4 +1,4 @@
-import * as sounds from '../assets/sounds';
+import sounds from '../assets/sounds';
 
 export const getSound = id => {
   return sounds[id];

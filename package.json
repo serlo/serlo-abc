@@ -9,6 +9,8 @@
     "build:android": "exp build:android",
     "build:ios": "exp build:ios",
     "build:status": "exp build:status",
+    "course:ids": "node scripts/generateIds",
+    "postcourse:ids": "yarn format",
     "tsc": "tsc",
     "exp:config": "node scripts/generateAppConfig",
     "exp:login": "exp login",
