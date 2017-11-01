@@ -15,7 +15,7 @@ export const createTestsFromFixtures = <Props, State>({
   Exercise,
   fixtures
 }: {
-  Exercise: any;
+  Exercise: new (props: Props) => AbstractExercise<Props, State>;
   fixtures: Fixtures<Props, State>;
 }): void => {
   describe('isCorrect()', () => {

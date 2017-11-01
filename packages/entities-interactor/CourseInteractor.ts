@@ -9,6 +9,7 @@ import { Progress } from './ISerializedProgress';
 
 class CourseInteractor extends AbstractCourseInteractor {
   private course: AbstractNode;
+  /* tslint:disable-next-line: no-any TODO: temporary code */
   private mockedProgress: any;
 
   public loadCourse(id: string): Promise<void> {

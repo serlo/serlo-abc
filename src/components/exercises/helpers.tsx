@@ -2,6 +2,7 @@ import { forEach, map, uniq } from 'ramda';
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 
+import AbstractExercise from '../../../packages/entities/exercises/AbstractExercise';
 import { Fixtures } from '../../../packages/entities/exercises/helpers';
 // @ts-ignore: TODO: migrate to TypeScript
 import { play } from '../../helpers/audio';
@@ -10,13 +11,19 @@ import { LoadSounds } from '../helpers/Audio';
 import Container from '../screens/Exercise';
 
 const wrapExercise = <Props, State>(
-  Exercise: any,
-  Component: any,
+  Exercise: new (props: Props) => AbstractExercise<Props, State>,
+  Component: React.ComponentType<{
+    showFeedback: boolean;
+    state: State;
+    setState: (state: State) => void;
+  }>,
   props: Props,
   state?: State
+  /* tslint:disable-next-line:no-any TODO: */
 ): ((props: any) => React.ReactElement<any>) => {
   const exercise = new Exercise(props);
 
+  /* tslint:disable-next-line:no-any TODO: */
   return (additionalProps: any) => (
     <Container
       {...additionalProps}
@@ -32,8 +39,12 @@ const getPropsFromFixtures = <Props, State>(
 ): Props[] => uniq(map(({ props }) => props, fixtures));
 
 interface IArgs<Props, State> {
-  Exercise: any; // TODO:
-  Component: any; // TODO:,
+  Exercise: new (props: Props) => AbstractExercise<Props, State>;
+  Component: React.ComponentType<{
+    showFeedback: boolean;
+    state: State;
+    setState: (state: State) => void;
+  }>;
   fixtures: Fixtures<Props, State>;
 }
 
@@ -43,9 +54,9 @@ export const createElementsFromFixtures = <Props, State>({
   fixtures
 }: IArgs<Props, State>): Array<{
   name: string;
+  /* tslint:disable-next-line:no-any TODO: */
   createElement: (props: any) => React.ReactElement<any>;
 }> => [
-  // TODO:
   ...map(props => {
     const createElement = wrapExercise(Exercise, Component, props);
 
@@ -59,6 +70,7 @@ export const createElementsFromFixtures = <Props, State>({
 ];
 
 export const createStoriesFromFixtures = <Props, State>(
+  /* tslint:disable-next-line:no-any TODO: */
   story: any,
   args: IArgs<Props, State>
 ): void => {
@@ -69,6 +81,7 @@ export const createStoriesFromFixtures = <Props, State>(
           require('../../assets/sounds/correct.mp3'),
           require('../../assets/sounds/wrong.mp3')
         ]}
+        /* tslint:disable-next-line:no-any TODO: */
         render={([correctSound, wrongSound]: any[], soundsLoaded: boolean) =>
           soundsLoaded &&
           createElement({

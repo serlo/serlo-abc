@@ -16,8 +16,11 @@ import { LoadSounds } from '../helpers/Audio';
 
 interface IProps<Props, State> {
   exercise: AbstractExercise<Props, State>;
-  // TODO: specify type
-  Component: any;
+  Component: React.ComponentType<{
+    showFeedback: boolean;
+    state: State;
+    setState: (state: State) => void;
+  }>;
   submitted?: State;
   goToNav: () => void;
   onCorrect: () => void;
@@ -86,8 +89,8 @@ class Exercise<Props, State> extends React.Component<
         style={{ flex: 1, backgroundColor: isCorrect ? GREEN : PRIMARY }}
       >
         <Component
-          showFeedback={submitted && !isCorrect}
           {...exercise.getProps()}
+          showFeedback={submitted && !isCorrect}
           state={state}
           setState={this.updateState}
         />
