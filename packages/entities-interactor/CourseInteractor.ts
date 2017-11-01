@@ -1,5 +1,6 @@
 import { dropWhile, filter } from 'ramda';
 
+import { Optional } from '../../src/types';
 import { AbstractNode, InternalNode } from '../entities/course';
 import AbstractCourseInteractor from './AbstractCourseInteractor';
 import createCourse from './CourseFactory';
@@ -26,7 +27,7 @@ class CourseInteractor extends AbstractCourseInteractor {
     return this.course.getTree(level) as ICourseStructure;
   }
 
-  public getNextChild(id: string) {
+  public getNextChild(id: string): Optional<ICourseStructure> {
     const entity = this.course.findEntity(id);
 
     if ((entity as InternalNode).getChildren()) {
@@ -36,46 +37,41 @@ class CourseInteractor extends AbstractCourseInteractor {
         children
       );
 
-      if (unseenChildren.length === 0) {
-        return null;
+      if (unseenChildren.length !== 0) {
+        return unseenChildren[0].getInfo() as ICourseStructure;
       }
-
-      return unseenChildren[0].getInfo() as ICourseStructure;
     }
 
-    return null;
+    return;
   }
 
-  public getNextSibling(id: string) {
+  public getNextSibling(id: string): Optional<ICourseStructure> {
     const entity = this.course.findEntity(id);
 
     if (!entity) {
-      return null;
+      return;
     }
 
     const parent = entity.getParent();
 
     if (!parent) {
-      return null;
+      return;
     }
 
     if ((parent as InternalNode).getChildren()) {
       const children = (parent as InternalNode).getChildren();
       const siblings = dropWhile(child => child.getId() !== id, children);
 
-      if (siblings.length <= 1) {
-        return null;
+      if (siblings.length > 1) {
+        return siblings[1].getInfo() as ICourseStructure;
       }
-
-      return siblings[1].getInfo() as ICourseStructure;
     }
 
-    return null;
+    return;
   }
 
   public findEntity(id: string) {
-    const entity = this.course.findEntity(id);
-    return entity && (entity.getInfo() as ICourseStructure | null);
+    return this.course.findEntity(id) as Optional<ICourseStructure>;
   }
 
   public getProgress(id: string) {

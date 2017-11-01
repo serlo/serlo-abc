@@ -1,3 +1,4 @@
+import { Optional } from '../../../../src/types/index';
 // TODO: don't depend on React Native app
 import Word from '../../../../src/word';
 import AbstractExercise from '../AbstractExercise';
@@ -7,11 +8,11 @@ export interface IProps {
   correctIndex: number;
 }
 
-export type IState = number | null;
+export type IState = Optional<number>;
 
 class MatchImage extends AbstractExercise<IProps, IState> {
   public getInitialState() {
-    return null as IState;
+    return undefined;
   }
 
   public isCorrect(state: IState) {
