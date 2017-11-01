@@ -1,3 +1,4 @@
+import { Optional } from '../../../../src/types/index';
 import AbstractExercise from '../AbstractExercise';
 
 export interface IProps {
@@ -5,11 +6,11 @@ export interface IProps {
   correctIndex: number;
 }
 
-export type IState = number | null;
+export type IState = Optional<number>;
 
 class DifferFromSymbol extends AbstractExercise<IProps, IState> {
   public getInitialState() {
-    return null as IState;
+    return undefined;
   }
 
   public isCorrect(state: IState) {
