@@ -1,4 +1,4 @@
-import { ISerializedCourse } from '../entities-interactor';
+import { ISerializedCourse } from '../../packages/entities-interactor';
 import CourseStorage from './CourseStorage';
 
 const courses: { [propName: string]: ISerializedCourse } = {

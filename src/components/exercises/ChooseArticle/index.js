@@ -1,4 +1,4 @@
-import { ChooseArticle } from '../../../exercises';
+import { ChooseArticle } from '../../../../packages/entities/exercises';
 import Component from './ChooseArticle';
 
 export const Exercise = ChooseArticle.Exercise;

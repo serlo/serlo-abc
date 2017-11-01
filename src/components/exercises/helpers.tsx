@@ -1,9 +1,11 @@
-import { compose, forEach, map, uniq } from 'ramda';
+import { forEach, map, uniq } from 'ramda';
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 
-import { Fixtures } from '../../exercises/helpers';
+import { Fixtures } from '../../../packages/entities/exercises/helpers';
+// @ts-ignore: TODO: migrate to TypeScript
 import { play } from '../../helpers/audio';
+// @ts-ignore: TODO: migrate to TypeScript
 import { LoadSounds } from '../helpers/Audio';
 import Container from '../screens/Exercise';
 

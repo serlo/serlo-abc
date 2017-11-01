@@ -1,4 +1,4 @@
-import { MatchImage } from '../../../exercises';
+import { MatchImage } from '../../../../packages/entities/exercises';
 import Component from './MatchImage';
 
 export const Exercise = MatchImage.Exercise;

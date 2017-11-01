@@ -1,4 +1,7 @@
-import { ICourseStorage, ISerializedCourse } from '../entities-interactor';
+import {
+  ICourseStorage,
+  ISerializedCourse
+} from '../../packages/entities-interactor';
 
 class CourseStorage implements ICourseStorage {
   private courses: { [propName: string]: ISerializedCourse };

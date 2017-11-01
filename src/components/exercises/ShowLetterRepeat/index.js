@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { RepeatSound } from '../../../exercises';
+import { RepeatSound } from '../../../../packages/entities/exercises';
 import ShowLetter from '../ShowLetter/ShowLetter';
 
 const Component = props => <ShowLetter {...props} isRepeat />;

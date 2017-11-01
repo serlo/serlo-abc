@@ -2,7 +2,6 @@ import { addIndex, map } from 'ramda';
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
-import { getWord } from '../../../helpers/words';
 import {
   BLACK_TRANSPARENT,
   PRIMARY_STRONG,
@@ -73,7 +72,7 @@ class ChooseArticle extends Component {
           <Text style={DEFAULT}>{char}</Text>
         </View>
       ),
-      getWord(this.props.word)
+      this.props.word.toString()
     );
 
     const articleButtons = mapIndexed(

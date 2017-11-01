@@ -1,4 +1,4 @@
-import { DifferFromSymbol } from '../../../exercises';
+import { DifferFromSymbol } from '../../../../packages/entities/exercises';
 import Component from './DifferFromSymbol';
 
 export const Exercise = DifferFromSymbol.Exercise;

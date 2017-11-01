@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import RoundTextButton from '../../common/RoundTextButton';
 import WordImageWithSounds from '../../common/WordImageWithSounds';
-import { getWord } from '../../../helpers/words';
 
 class HearWord extends Component {
   styles = {
@@ -31,7 +30,7 @@ class HearWord extends Component {
           this.props.setState(index);
         }}
         highlighted={index === this.props.state}
-        text={getWord(word)}
+        text={word.toString()}
         style={this.styles.textButton}
         key={index}
       />

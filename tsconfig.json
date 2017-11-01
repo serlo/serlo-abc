@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "module": "commonjs",
+    "forceConsistentCasingInFileNames": true,
     "jsx": "react-native",
-    "strict": true,
+    "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": true,
-    "skipLibCheck": true
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2015"
   },
   "exclude": ["node_modules"]
 }
