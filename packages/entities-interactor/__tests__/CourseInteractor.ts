@@ -61,6 +61,7 @@ class MockProgressStorage implements IProgressStorage {
   public setProgress(
     id: string,
     progress: Progress,
+    /* tslint:disable-next-line: no-any */
     props: { [propName: string]: any }
   ): Promise<void> {
     return new Promise(resolve => resolve());

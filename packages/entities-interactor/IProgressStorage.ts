@@ -5,6 +5,7 @@ interface IProgressStorage {
   setProgress(
     id: string,
     progress: Progress,
+    /* tslint:disable-next-line: no-any */
     props: { [propName: string]: any }
   ): Promise<void>;
 }
