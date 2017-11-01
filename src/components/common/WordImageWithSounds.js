@@ -3,7 +3,6 @@ import React from 'react';
 
 import speakerImage from '../../assets/images/speaker.png';
 import { playAll } from '../../helpers/audio';
-import { getImage, getSound, getLongSound } from '../../helpers/words';
 import { LoadSounds } from '../helpers/Audio';
 import RoundImageWithButton from './RoundImageWithButton';
 
@@ -18,8 +17,8 @@ const WordImageWithSounds = ({
   isRepeat = false
 }) => {
   const sounds = filter(identity, [
-    getSound(word),
-    longSound && getLongSound(word),
+    word.getSound(),
+    longSound && word.getLongSound(),
     isRepeat && require('../../assets/sounds/repeat.mp3')
   ]);
 
@@ -28,7 +27,7 @@ const WordImageWithSounds = ({
       sounds={sounds}
       render={sounds => (
         <RoundImageWithButton
-          image={getImage(word)}
+          image={word.getImage()}
           imageSize={200}
           icon={speakerImage}
           buttonSize={40}

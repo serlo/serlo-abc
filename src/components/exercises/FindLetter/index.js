@@ -1,4 +1,4 @@
-import { FindLetter } from '../../../exercises';
+import { FindLetter } from '../../../../packages/entities/exercises';
 import Component from './FindLetter';
 
 export const Exercise = FindLetter.Exercise;

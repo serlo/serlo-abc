@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { RepeatSound } from '../../../exercises';
-import { getWordObject } from '../../../helpers/words';
+import { RepeatSound } from '../../../../packages/entities/exercises';
+import Word from '../../../word';
 import ShowWord from '../ShowWord/ShowWord';
 
 const Component = props => <ShowWord {...props} isRepeat />;
@@ -11,7 +11,7 @@ export const fixtures = RepeatSound.createFixtures([
   {
     name: 'Ananas',
     props: {
-      word: getWordObject('ananas'),
+      word: new Word('ananas'),
       letter: 'A'
     }
   }

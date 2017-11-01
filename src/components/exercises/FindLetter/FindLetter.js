@@ -9,7 +9,6 @@ import {
   PRIMARY_STRONG
 } from '../../../styles/colors';
 import { DEFAULT } from '../../../styles/text';
-import { getWord } from '../../../helpers/words';
 import WordImageWithSounds from '../../common/WordImageWithSounds';
 
 const mapIndexed = addIndex(map);
@@ -59,7 +58,7 @@ class FindLetter extends Component {
           <Text style={DEFAULT}>{char}</Text>
         </TouchableOpacity>
       ),
-      getWord(this.props.word)
+      this.props.word.toString()
     );
 
     return (

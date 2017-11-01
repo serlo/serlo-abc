@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
 import { play } from '../../helpers/audio';
-import { getWordObject, getSound } from '../../helpers/words';
 import { BLACK } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
+import Word from '../../word';
 import RoundImageWithBorder from '../common/RoundImageWithBorder';
 import { LoadSound } from '../helpers/Audio';
 
-const morgen = getWordObject('guten_morgen');
-const tag = getWordObject('guten_tag');
-const abend = getWordObject('guten_abend');
+const morgen = new Word('guten_morgen');
+const tag = new Word('guten_tag');
+const abend = new Word('guten_abend');
 
 class Splash extends Component {
   componentDidMount() {
@@ -53,14 +53,14 @@ class Splash extends Component {
 
 const soundFromHour = hour => {
   if (hour < 10) {
-    return getSound(morgen);
+    return morgen.getSound();
   }
 
   if (hour < 18) {
-    return getSound(tag);
+    return tag.getSound();
   }
 
-  return getSound(abend);
+  return abend.getSound();
 };
 
 const SplashWrapper = props => {

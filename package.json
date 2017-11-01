@@ -9,10 +9,12 @@
     "build:android": "exp build:android",
     "build:ios": "exp build:ios",
     "build:status": "exp build:status",
-    "course:ids": "node scripts/generateIds",
-    "postcourse:ids": "yarn format",
+    "generate:words": "node scripts/generate-words",
+    "postgenerate:words": "yarn format",
+    "generate:ids": "node scripts/generate-ids",
+    "postgenerate:ids": "yarn format",
     "tsc": "tsc",
-    "exp:config": "node scripts/generateAppConfig",
+    "exp:config": "node scripts/generate-app-config",
     "exp:login": "exp login",
     "exp:publish": "exp publish",
     "start": "react-native-scripts start",
@@ -25,7 +27,8 @@
       "prettier --write \"{{scripts,src,storybook}/**/*,*}.{ts,tsx,js,jsx,json}\"",
     "lint:js": "eslint \"{{scripts,src,storybook}/**/*,*}.{js,jsx}\"",
     "lint:ts": "tslint \"{{scripts,src,storybook}/**/*,*}.{ts,tsx}\"",
-    "lint": "npm-run-all --print-name --continue-on-error --sequential lint:*",
+    "lint":
+      "npm-run-all --print-name --continue-on-error --sequential lint:* tsc",
     "precommit": "lint-staged"
   },
   "config": {

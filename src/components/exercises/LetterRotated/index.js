@@ -1,4 +1,4 @@
-import { LetterRotated } from '../../../exercises';
+import { LetterRotated } from '../../../../packages/entities/exercises';
 import Component from './LetterRotated';
 
 export const Exercise = LetterRotated.Exercise;
