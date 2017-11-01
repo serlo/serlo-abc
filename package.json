@@ -76,7 +76,7 @@
   },
   "private": true,
   "lint-staged": {
-    "{{scripts,src,storybook}/**/*,*}.{ts,tsx,js,jsx,json}": [
+    "{{packages,scripts,src,storybook}/**/*,*}.{ts,tsx,js,jsx,json}": [
       "prettier --write",
       "git add"
     ]
