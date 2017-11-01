@@ -24,9 +24,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "format":
-      "prettier --write \"{{scripts,src,storybook}/**/*,*}.{ts,tsx,js,jsx,json}\"",
-    "lint:js": "eslint \"{{scripts,src,storybook}/**/*,*}.{js,jsx}\"",
-    "lint:ts": "tslint \"{{scripts,src,storybook}/**/*,*}.{ts,tsx}\"",
+      "prettier --write \"{{packages,scripts,src,storybook}/**/*,*}.{ts,tsx,js,jsx,json}\"",
+    "lint:js": "eslint \"{{packages,scripts,src,storybook}/**/*,*}.{js,jsx}\"",
+    "lint:ts": "tslint \"{{packages,scripts,src,storybook}/**/*,*}.{ts,tsx}\"",
     "lint":
       "npm-run-all --print-name --continue-on-error --sequential lint:* tsc",
     "precommit": "lint-staged"

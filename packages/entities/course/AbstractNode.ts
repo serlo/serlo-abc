@@ -1,3 +1,4 @@
+import { Optional } from '../../../src/types';
 import { IIdentifiableObject } from './types';
 
 // An AbstractNode has a required id and optional additional props
@@ -47,12 +48,12 @@ abstract class AbstractNode {
     return this.getStructure();
   }
 
-  public findEntity(id: string): AbstractNode | null {
+  public findEntity(id: string): Optional<AbstractNode> {
     if (id === this.getId()) {
       return this;
     }
 
-    return null;
+    return;
   }
 }
 

@@ -1,5 +1,6 @@
 // TODO: don't depend on React Native app
 import { IVideoAsset } from '../../../../src/types/assets';
+import { Optional } from '../../../../src/types/index';
 // TODO: don't depend on React Native app
 import Word from '../../../../src/word';
 import AbstractExercise from '../AbstractExercise';
@@ -12,15 +13,15 @@ export interface IProps {
   options: string[];
 }
 
-export type IState = number | null;
+export type IState = Optional<number>;
 
 class MissingText extends AbstractExercise<IProps, IState> {
   public getInitialState() {
-    return null as IState;
+    return undefined;
   }
 
   public isCorrect(state: IState) {
-    if (state !== null) {
+    if (typeof state !== 'undefined') {
       const { options, text, missing } = this.getProps();
       return text[missing] === options[state];
     }

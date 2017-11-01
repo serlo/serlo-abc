@@ -9,7 +9,7 @@ export default <Props>(
   map(
     fixture => ({
       isCorrect: true,
-      state: null,
+      state: undefined,
       ...fixture
     }),
     fixtures

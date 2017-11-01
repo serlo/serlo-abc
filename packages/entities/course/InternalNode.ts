@@ -1,5 +1,6 @@
 import { find, map } from 'ramda';
 
+import { Optional } from '../../../src/types';
 import AbstractNode from './AbstractNode';
 import { IIdentifiableObject } from './types';
 
@@ -27,11 +28,11 @@ class InternalNode extends AbstractNode {
     this.icon = icon;
   }
 
-  public getTitle(): string | undefined {
+  public getTitle(): Optional<string> {
     return this.title;
   }
 
-  public getIcon(): string | undefined {
+  public getIcon(): Optional<string> {
     return this.icon;
   }
 
@@ -58,7 +59,7 @@ class InternalNode extends AbstractNode {
     };
   }
 
-  public findEntity(id: string): AbstractNode | null {
+  public findEntity(id: string): Optional<AbstractNode> {
     const entity = super.findEntity(id);
 
     if (entity) {
@@ -66,9 +67,7 @@ class InternalNode extends AbstractNode {
     }
 
     const recursiveFind = map(child => child.findEntity(id), this.children);
-    const foundEntity = find(found => !!found, recursiveFind);
-
-    return foundEntity || null;
+    return find(found => !!found, recursiveFind);
   }
 }
 
