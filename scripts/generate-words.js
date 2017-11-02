@@ -8,7 +8,7 @@ const raw_words = require('./words-data.js');
 const words = {};
 
 const assetsPath = path.join(__dirname, '..', 'src', 'assets');
-const imagesPath = path.join(assetsPath, 'images');
+const imagesPath = path.join(__dirname, '..', 'packages', 'assets', 'images');
 const soundsPath = path.join(assetsPath, 'sounds');
 
 const good_keys = ['word', 'def', 'singular', 'plural', 'img'];
