@@ -4,8 +4,10 @@ import { View } from 'react-native';
 
 import RoundIconButton from '../common/RoundIconButton';
 import RoundTextButton from '../common/RoundTextButton';
+import { Progress } from '../../../packages/entities-interactor/ISerializedProgress';
+import { WHITE, GREEN, BLACK } from '../../styles/colors';
 
-const Course = ({ course, goToSection }) => {
+const Course = ({ course, goToSection, getProgress }) => {
   if (!course) {
     return null;
   }
@@ -29,15 +31,29 @@ const Course = ({ course, goToSection }) => {
             }}
           >
             {map(section => {
+              const { id } = section;
+              const { progress } = getProgress(id);
+
               const props = {
-                key: section.id,
-                style: {
-                  margin: 5,
-                  marginTop: 0,
-                  paddingLeft: 10,
-                  paddingRight: 10,
-                  width: 60,
-                  height: 40
+                key: id,
+                style: [
+                  progress === Progress.Incorrect && {
+                    backgroundColor: WHITE
+                  },
+                  progress === Progress.Correct && { backgroundColor: GREEN },
+                  {
+                    margin: 5,
+                    marginTop: 0,
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                    width: 60,
+                    height: 40
+                  }
+                ],
+                color: progress === Progress.Incorrect ? BLACK : WHITE,
+                textStyle: {
+                  fontSize: 18,
+                  color: progress === Progress.Incorrect ? BLACK : WHITE
                 },
                 onPress: () => {
                   goToSection(section.id);
@@ -49,13 +65,7 @@ const Course = ({ course, goToSection }) => {
               }
 
               if (section.title) {
-                return (
-                  <RoundTextButton
-                    text={section.title}
-                    textStyle={{ fontSize: 18 }}
-                    {...props}
-                  />
-                );
+                return <RoundTextButton text={section.title} {...props} />;
               }
             }, chapter.children)}
           </View>

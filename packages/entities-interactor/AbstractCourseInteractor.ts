@@ -4,15 +4,13 @@ import { ICourseStructure } from './ICourseStructure';
 import IProgressStorage from './IProgressStorage';
 
 abstract class AbstractCourseInteractor {
-  protected storage: ICourseStorage;
-  protected progress: IProgressStorage;
+  constructor(
+    protected storage: ICourseStorage,
+    protected progressStorage: IProgressStorage
+  ) {}
 
-  constructor(storage: ICourseStorage, progress: IProgressStorage) {
-    this.storage = storage;
-    this.progress = progress;
-  }
-
-  public abstract loadCourse(id: string): Promise<void>;
+  /* tslint:disable-next-line:no-any */
+  public abstract loadCourse(id: string): Promise<any>;
   public abstract getStructure(level?: number): ICourseStructure;
   public abstract getNextChild(id: string): Optional<ICourseStructure>;
   public abstract getNextSibling(id: string): Optional<ICourseStructure>;

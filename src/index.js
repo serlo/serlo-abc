@@ -1,6 +1,6 @@
 import { map, mergeAll } from 'ramda';
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { Button, View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
 
 import Interactor from '../packages/entities-interactor';
@@ -13,6 +13,7 @@ import { LoadSounds } from './components/helpers/Audio';
 import loadFonts from './components/helpers/fonts';
 import { play, getSound } from './helpers/audio';
 import Storage from './storage/CourseStorage';
+import ProgressStorage from './storage/ProgressStorage';
 import { PRIMARY } from './styles/colors';
 import Word from './word';
 
@@ -21,8 +22,8 @@ export class AppRoutes extends Component {
     super(props);
 
     const storage = new Storage(courses);
-    const progress = null; // TODO:
-    this.interactor = new Interactor(storage, progress);
+    const progressStorage = new ProgressStorage();
+    this.interactor = new Interactor(storage, progressStorage);
 
     this.state = { course: null };
   }
@@ -33,6 +34,10 @@ export class AppRoutes extends Component {
 
   getNextSibling = id => {
     return this.interactor.getNextSibling(id);
+  };
+
+  getProgress = id => {
+    return this.interactor.getProgress(id);
   };
 
   findEntity = id => {
@@ -84,17 +89,46 @@ export class AppRoutes extends Component {
                   return null;
                 }
 
-                return (
+                return [
                   <Course
+                    key="course"
+                    getProgress={this.getProgress}
                     course={this.state.course}
                     goToSection={id => history.push(`/section/${id}`)}
+                  />,
+                  <Button
+                    key="reset"
+                    onPress={() => {
+                      this.interactor.resetProgress();
+                    }}
+                    title="Reset progress"
                   />
-                );
+                ];
+              }}
+            />
+            <Route
+              path="/chapter/:id"
+              render={({ match, history }) => {
+                if (!this.state.course) {
+                  return null;
+                }
+
+                const section = this.getNextChild(match.params.id);
+
+                if (section) {
+                  this.markAsIncorrect(match.params.id);
+
+                  return <Redirect to={`/section/${section.id}`} />;
+                }
+
+                this.markAsCorrect(match.params.id);
+
+                return <Redirect to="/course" />;
               }}
             />
             <Route
               path="/section/:id"
-              render={({ match }) => {
+              render={({ match, history }) => {
                 if (!this.state.course) {
                   return null;
                 }
@@ -102,16 +136,14 @@ export class AppRoutes extends Component {
                 const exercise = this.getNextChild(match.params.id);
 
                 if (exercise) {
+                  this.markAsIncorrect(match.params.id);
+
                   return <Redirect to={`/exercise/${exercise.id}`} />;
                 }
 
-                const section = this.getNextSibling(match.params.id);
+                this.markAsCorrect(match.params.id);
 
-                if (section) {
-                  return <Redirect to={`/section/${section.id}`} />;
-                }
-
-                return null;
+                return <Redirect to="/course" />;
               }}
             />
             <Route

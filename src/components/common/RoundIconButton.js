@@ -4,7 +4,13 @@ import { TouchableOpacity, View } from 'react-native';
 
 import { BLACK_TRANSPARENT, PRIMARY_WEAK, WHITE } from '../../styles/colors';
 
-const RoundIconButton = ({ onPress, style, children, ...props }) => (
+const RoundIconButton = ({
+  color = WHITE,
+  onPress,
+  style,
+  children,
+  ...props
+}) => (
   <TouchableOpacity onPress={onPress}>
     <View
       style={[
@@ -26,7 +32,7 @@ const RoundIconButton = ({ onPress, style, children, ...props }) => (
         style
       ]}
     >
-      <Ionicons {...props} color={WHITE} size={30} />
+      <Ionicons {...props} color={color} size={30} />
     </View>
   </TouchableOpacity>
 );
