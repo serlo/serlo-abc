@@ -6,12 +6,11 @@ export const getSound = id => {
 
 export const play = sound =>
   new Promise(resolve => {
-    sound.playAsync();
+    sound.playFromPositionAsync(0);
 
     sound.setOnPlaybackStatusUpdate(status => {
       if (status.didJustFinish) {
-        sound.stopAsync();
-        resolve();
+        sound.stopAsync().then(() => resolve());
       }
     });
   });
