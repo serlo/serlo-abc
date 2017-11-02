@@ -19,6 +19,10 @@ exports[`renders without crashing 1`] = `
     render={[Function]}
   />
   <Route
+    path="/chapter/:id"
+    render={[Function]}
+  />
+  <Route
     path="/section/:id"
     render={[Function]}
   />
