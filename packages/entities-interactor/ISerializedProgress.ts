@@ -4,12 +4,14 @@ export enum Progress {
   Correct
 }
 
+export interface IIndividualProgress {
+  progress: Progress;
+  /* tslint:disable-next-line: no-any */
+  [propName: string]: any;
+}
+
 interface ISerializedProgress {
-  [id: string]: {
-    progress: Progress;
-    /* tslint:disable-next-line: no-any */
-    [propName: string]: any;
-  };
+  [id: string]: IIndividualProgress;
 }
 
 export default ISerializedProgress;

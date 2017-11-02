@@ -4,8 +4,8 @@ import { play } from './audio';
 
 class Sound {
   constructor() {
-    this.playAsync = jest.fn();
-    this.stopAsync = jest.fn();
+    this.playFromPositionAsync = jest.fn();
+    this.stopAsync = jest.fn(() => Promise.resolve());
     this.setOnPlaybackStatusUpdate = jest.fn(cb => {
       this.cb = cb;
     });
@@ -25,7 +25,7 @@ describe('play', () => {
 
   it('plays the sound', () => {
     play(sound);
-    expect(sound.playAsync).toHaveBeenCalled();
+    expect(sound.playFromPositionAsync).toHaveBeenCalledWith(0);
   });
 
   it('returns a promise that resolves after the sound has been played', done => {
@@ -63,7 +63,7 @@ describe('playAll', () => {
       done();
     });
 
-    expect(sound.playAsync).toHaveBeenCalled();
+    expect(sound.playFromPositionAsync).toHaveBeenCalledWith(0);
     sound.simulateFinishedPlaying();
   });
 
@@ -77,8 +77,8 @@ describe('playAll', () => {
     });
 
     // First sound should have started playing
-    expect(sounds[0].playAsync).toHaveBeenCalled();
-    expect(sounds[1].playAsync).not.toHaveBeenCalled();
+    expect(sounds[0].playFromPositionAsync).toHaveBeenCalledWith(0);
+    expect(sounds[1].playFromPositionAsync).not.toHaveBeenCalled();
     expect(setTimeout).not.toHaveBeenCalled();
 
     sounds[0].simulateFinishedPlaying();
@@ -87,11 +87,11 @@ describe('playAll', () => {
     setImmediate(() => {
       expect(setTimeout.mock.calls.length).toEqual(1);
       expect(setTimeout.mock.calls[0][1]).toEqual(1337);
-      expect(sounds[1].playAsync).not.toHaveBeenCalled();
+      expect(sounds[1].playFromPositionAsync).not.toHaveBeenCalled();
 
       jest.runOnlyPendingTimers();
 
-      expect(sounds[1].playAsync).toHaveBeenCalled();
+      expect(sounds[1].playFromPositionAsync).toHaveBeenCalledWith(0);
       sounds[1].simulateFinishedPlaying();
     });
   });

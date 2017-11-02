@@ -178,22 +178,35 @@ export class AppRoutes extends Component {
                   ])
                 );
 
+                let firstAttempt = true;
+
+                const handleCorrect = () => {
+                  play(correctSound).then(() => {
+                    if (firstAttempt) {
+                      this.markAsCorrect(id);
+                    }
+
+                    history.push(`/section/${entity.parent}`);
+                  });
+                };
+
+                const handleWrong = () => {
+                  if (firstAttempt) {
+                    this.markAsIncorrect(id);
+                  }
+
+                  firstAttempt = false;
+
+                  play(wrongSound);
+                };
+
                 return (
                   <Exercise
                     exercise={exercise}
                     Component={exerciseType.Component}
                     goToNav={() => history.push('/course')}
-                    onCorrect={() => {
-                      play(correctSound).then(() => {
-                        this.markAsCorrect(id);
-                        history.push(`/section/${entity.parent}`);
-                      });
-                    }}
-                    onWrong={() => {
-                      play(wrongSound).then(() => {
-                        this.markAsIncorrect(id);
-                      });
-                    }}
+                    onCorrect={handleCorrect}
+                    onWrong={handleWrong}
                   />
                 );
               }}
