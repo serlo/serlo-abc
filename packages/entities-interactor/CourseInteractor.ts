@@ -5,23 +5,23 @@ import { AbstractNode, InternalNode } from '../entities/course';
 import AbstractCourseInteractor from './AbstractCourseInteractor';
 import createCourse from './CourseFactory';
 import { ICourseStructure } from './ICourseStructure';
-import { Progress } from './ISerializedProgress';
+import ISerializedProgress, { Progress } from './ISerializedProgress';
 
 class CourseInteractor extends AbstractCourseInteractor {
+  private courseId: string;
   private course: AbstractNode;
-  /* tslint:disable-next-line: no-any TODO: temporary code */
-  private mockedProgress: any;
+  private progress: ISerializedProgress;
 
-  public loadCourse(id: string): Promise<void> {
-    return new Promise((resolve, reject) => {
-      this.storage
-        .getCourse(id)
-        .then(course => {
-          this.course = createCourse(course);
-          resolve();
-        })
-        .catch(reject);
-    });
+  public loadCourse(id: string) {
+    this.courseId = id;
+    return Promise.all([
+      this.storage.getCourse(id).then(course => {
+        this.course = createCourse(course);
+      }),
+      this.progressStorage.getProgress(id).then(progress => {
+        this.progress = progress;
+      })
+    ]);
   }
 
   public getStructure(level = Infinity) {
@@ -30,6 +30,10 @@ class CourseInteractor extends AbstractCourseInteractor {
 
   public getNextChild(id: string): Optional<ICourseStructure> {
     const entity = this.course.findEntity(id);
+
+    if (!entity) {
+      return undefined;
+    }
 
     if ((entity as InternalNode).getChildren()) {
       const children = (entity as InternalNode).getChildren();
@@ -43,20 +47,20 @@ class CourseInteractor extends AbstractCourseInteractor {
       }
     }
 
-    return;
+    return undefined;
   }
 
   public getNextSibling(id: string): Optional<ICourseStructure> {
     const entity = this.course.findEntity(id);
 
     if (!entity) {
-      return;
+      return undefined;
     }
 
     const parent = entity.getParent();
 
     if (!parent) {
-      return;
+      return undefined;
     }
 
     if ((parent as InternalNode).getChildren()) {
@@ -68,29 +72,33 @@ class CourseInteractor extends AbstractCourseInteractor {
       }
     }
 
-    return;
+    return undefined;
   }
 
   public findEntity(id: string) {
-    return this.course.findEntity(id) as Optional<ICourseStructure>;
+    const entity = this.course.findEntity(id);
+
+    return entity && (entity.getInfo() as Optional<ICourseStructure>);
   }
 
   public getProgress(id: string) {
-    return (this.mockedProgress || {})[id] || { progress: Progress.Unseen };
+    return this.progress[id] || { progress: Progress.Unseen };
   }
 
   public setProgress(id: string, progress: Progress) {
-    this.mockedProgress = this.mockedProgress || {};
-    this.mockedProgress[id] = { progress };
+    this.progress[id] = { progress };
+    return this.progressStorage.setProgress(this.courseId, this.progress);
+  }
+
+  public resetProgress() {
+    return this.progressStorage.resetProgress(this.courseId);
   }
 
   public markAsCorrect(id: string) {
-    // return this.progress.setProgress(id, Progress.Correct, {})
     this.setProgress(id, Progress.Correct);
   }
 
   public markAsIncorrect(id: string) {
-    // return this.progress.setProgress(id, Progress.Incorrect, {})
     this.setProgress(id, Progress.Incorrect);
   }
 }

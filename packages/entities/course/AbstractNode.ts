@@ -53,7 +53,7 @@ abstract class AbstractNode {
       return this;
     }
 
-    return;
+    return undefined;
   }
 }
 

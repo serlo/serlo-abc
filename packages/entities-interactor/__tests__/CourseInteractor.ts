@@ -3,7 +3,7 @@ import Interactor from '../CourseInteractor';
 import ICourseStorage from '../ICourseStorage';
 import IProgressStorage from '../IProgressStorage';
 import { ISerializedCourse } from '../ISerializedCourse';
-import ISerializedProgress, { Progress } from '../ISerializedProgress';
+import ISerializedProgress from '../ISerializedProgress';
 
 const courses: { [propName: string]: ISerializedCourse } = {
   '09438926-b170-4005-a6e8-5dd8fba83cde': {
@@ -33,7 +33,7 @@ const courses: { [propName: string]: ISerializedCourse } = {
   }
 };
 
-const progresses: { [propName: string]: ISerializedProgress } = {};
+const progresses: ISerializedProgress = {};
 
 class MockCourseStorage implements ICourseStorage {
   public getCourse(id: string) {
@@ -48,23 +48,16 @@ class MockCourseStorage implements ICourseStorage {
 }
 
 class MockProgressStorage implements IProgressStorage {
-  public getProgress(id: string): Promise<ISerializedProgress> {
-    return new Promise((resolve, reject) => {
-      if (progresses[id]) {
-        resolve(progresses[id]);
-      }
-
-      reject(new Error(`There exists no progress with id ${id}`));
-    });
+  public getProgress(id: string) {
+    return Promise.resolve(progresses);
   }
 
-  public setProgress(
-    id: string,
-    progress: Progress,
-    /* tslint:disable-next-line: no-any */
-    props: { [propName: string]: any }
-  ): Promise<void> {
-    return new Promise(resolve => resolve());
+  public setProgress(id: string, progress: ISerializedProgress): Promise<void> {
+    return Promise.resolve();
+  }
+
+  public resetProgress() {
+    return Promise.resolve();
   }
 }
 
@@ -77,21 +70,21 @@ beforeEach(() => {
   interactor = new Interactor(storage, progress);
 });
 
-it('loadCourse loads the course from storage if it exists', done => {
-  interactor.loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde').then(done);
-});
+it('loadCourse loads the course from storage if it exists', () =>
+  interactor.loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde'));
 
-it('loadCourse fails if the course does not exist', done => {
-  interactor.loadCourse('c990eacb-12af-4085-8b50-25d95d114984').catch(err => {
-    expect(err).toBeInstanceOf(Error);
-    done();
-  });
+it('loadCourse fails if the course does not exist', () => {
+  return interactor
+    .loadCourse('c990eacb-12af-4085-8b50-25d95d114984')
+    .catch(err => {
+      expect(err).toBeInstanceOf(Error);
+    });
 });
 
 describe('getStructure', () => {
-  beforeEach(done => {
-    interactor.loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde').then(done);
-  });
+  beforeEach(() =>
+    interactor.loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde')
+  );
 
   it('returns the whole tree by default', () => {
     expect(interactor.getStructure()).toMatchSnapshot();

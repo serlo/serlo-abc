@@ -1,13 +1,9 @@
-import ISerializedProgress, { Progress } from './ISerializedProgress';
+import ISerializedProgress from './ISerializedProgress';
 
 interface IProgressStorage {
   getProgress(id: string): Promise<ISerializedProgress>;
-  setProgress(
-    id: string,
-    progress: Progress,
-    /* tslint:disable-next-line: no-any */
-    props: { [propName: string]: any }
-  ): Promise<void>;
+  setProgress(id: string, progress: ISerializedProgress): Promise<void>;
+  resetProgress(id: string): Promise<void>;
 }
 
 export default IProgressStorage;

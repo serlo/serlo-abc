@@ -67,7 +67,7 @@ class InternalNode extends AbstractNode {
     }
 
     const recursiveFind = map(child => child.findEntity(id), this.children);
-    return find(found => !!found, recursiveFind);
+    return find(found => typeof found !== 'undefined', recursiveFind);
   }
 }
 

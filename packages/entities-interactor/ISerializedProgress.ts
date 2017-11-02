@@ -5,10 +5,11 @@ export enum Progress {
 }
 
 interface ISerializedProgress {
-  id: string;
-  progress: Progress;
-  /* tslint:disable-next-line: no-any */
-  [propName: string]: any;
+  [id: string]: {
+    progress: Progress;
+    /* tslint:disable-next-line: no-any */
+    [propName: string]: any;
+  };
 }
 
 export default ISerializedProgress;
