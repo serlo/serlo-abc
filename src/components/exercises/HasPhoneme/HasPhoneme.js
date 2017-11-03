@@ -1,28 +1,27 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 
-import { PRIMARY } from '../../styles/colors';
-import WordImageWithSounds from '../common/WordImageWithSounds';
-import RoundTextButton from '../common/RoundTextButton';
+import { PRIMARY } from '../../../styles/colors';
+import WordImageWithSounds from '../../common/WordImageWithSounds';
+import RoundTextButton from '../../common/RoundTextButton';
 
 class HasPhoneme extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      highlighted: null
+      claimContained: undefined
     };
   }
 
-  createPhonemeButton = (index, crossedOut) => {
+  createChoiceButton = choiceOption => {
     return (
       <RoundTextButton
         onPress={() => {
           this.setState({
-            highlighted: index
+            claimContained: choiceOption
           });
         }}
-        highlighted={index === this.state.highlighted}
+        highlighted={choiceOption == this.state.claimContained}
         text={this.props.phoneme.toUpperCase() + this.props.phoneme}
         size={60}
         style={[
@@ -30,9 +29,9 @@ class HasPhoneme extends Component {
             marginLeft: 5,
             marginRight: 5
           },
-          crossedOut && { borderWidth: 3 }
+          !choiceOption && { borderWidth: 3 }
         ]}
-        crossedOut={crossedOut}
+        crossedOut={!choiceOption}
       />
     );
   };
@@ -55,8 +54,8 @@ class HasPhoneme extends Component {
             justifyContent: 'center'
           }}
         >
-          {this.createPhonemeButton(0, false)}
-          {this.createPhonemeButton(1, true)}
+          {this.createChoiceButton(true)}
+          {this.createChoiceButton(false)}
         </View>
       </View>
     );
