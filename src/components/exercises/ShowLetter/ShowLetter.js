@@ -2,12 +2,15 @@ import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import repeatIcon from '../../../assets/images/repeat.png';
+import loadImage from '../../../assets/images';
+import loadSound from '../../../assets/sounds';
 import { playAll } from '../../../helpers/audio';
 import { DEFAULT } from '../../../styles/text';
 import IconWithBackground from '../../common/IconWithBackground';
 import RoundButton from '../../common/RoundButton';
 import { LoadSounds } from '../../helpers/Audio';
+
+const repeatIcon = loadImage.repeat();
 
 const styles = {
   container: {
@@ -67,9 +70,7 @@ const UnwrappedShowLetter = ({ letter, sounds, isRepeat, setState }) => {
 };
 
 const ShowLetter = ({ sound, ...props }) => {
-  const sounds = props.isRepeat
-    ? [sound, require('../../../assets/sounds/repeat.mp3')]
-    : [sound];
+  const sounds = props.isRepeat ? [sound, loadSound.repeat()] : [sound];
 
   return (
     <LoadSounds

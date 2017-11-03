@@ -1,4 +1,5 @@
 import { InfoScreen } from '../../../../packages/entities/exercises';
+import loadSound from '../../../assets/sounds';
 import Component from './ShowLetter';
 
 export const Exercise = InfoScreen.Exercise;
@@ -7,14 +8,14 @@ export const fixtures = InfoScreen.createFixtures([
     name: 'A',
     props: {
       letter: 'A',
-      sound: require('../../../assets/sounds/a.mp3')
+      sound: loadSound.a()
     }
   },
   {
     name: 'a',
     props: {
       letter: 'a',
-      sound: require('../../../assets/sounds/a.mp3')
+      sound: loadSound.a()
     }
   }
 ]);

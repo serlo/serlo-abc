@@ -1,7 +1,8 @@
-import sounds from '../assets/sounds';
+import loadSound from '../assets/sounds';
 
 export const getSound = id => {
-  return sounds[id];
+  const load = loadSound[id];
+  return load && load();
 };
 
 export const play = sound =>

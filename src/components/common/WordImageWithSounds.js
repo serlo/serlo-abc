@@ -1,10 +1,13 @@
 import { filter, identity } from 'ramda';
 import React from 'react';
 
-import speakerImage from '../../assets/images/speaker.png';
+import loadImage from '../../assets/images';
+import loadSounds from '../../assets/sounds';
 import { playAll } from '../../helpers/audio';
 import { LoadSounds } from '../helpers/Audio';
 import RoundImageWithButton from './RoundImageWithButton';
+
+const speakerImage = loadImage['speaker']();
 
 const doNothing = () => {
   // do nothing
@@ -19,7 +22,7 @@ const WordImageWithSounds = ({
   const sounds = filter(identity, [
     word.getSound(),
     longSound && word.getLongSound(),
-    isRepeat && require('../../assets/sounds/repeat.mp3')
+    isRepeat && loadSounds['repeat']()
   ]);
 
   return (

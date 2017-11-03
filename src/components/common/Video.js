@@ -9,7 +9,9 @@ import {
 } from 'react-native';
 import { Constants, Video } from 'expo';
 
-import playIcon from '../../assets/images/play.png';
+import loadImage from '../../assets/images';
+
+const playIcon = loadImage['play']();
 
 const replayIcon = playIcon;
 const styles = {
