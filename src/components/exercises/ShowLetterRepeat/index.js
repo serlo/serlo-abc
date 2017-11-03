@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { RepeatSound } from '../../../../packages/entities/exercises';
+import loadSound from '../../../assets/sounds';
 import ShowLetter from '../ShowLetter/ShowLetter';
 
 const Component = props => <ShowLetter {...props} isRepeat />;
@@ -11,14 +12,14 @@ export const fixtures = RepeatSound.createFixtures([
     name: 'A',
     props: {
       letter: 'A',
-      sound: require('../../../assets/sounds/a.mp3')
+      sound: loadSound.a()
     }
   },
   {
     name: 'a',
     props: {
       letter: 'a',
-      sound: require('../../../assets/sounds/a.mp3')
+      sound: loadSound.a()
     }
   }
 ]);

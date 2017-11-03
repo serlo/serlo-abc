@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
+import loadImage from '../../assets/images';
+import loadSound from '../../assets/sounds';
 import { play } from '../../helpers/audio';
 import { BLACK } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
-import Word from '../../word';
 import RoundImageWithBorder from '../common/RoundImageWithBorder';
 import { LoadSound } from '../helpers/Audio';
-
-const morgen = new Word('guten_morgen');
-const tag = new Word('guten_tag');
-const abend = new Word('guten_abend');
 
 class Splash extends Component {
   componentDidMount() {
@@ -34,10 +31,7 @@ class Splash extends Component {
           justifyContent: 'space-around'
         }}
       >
-        <RoundImageWithBorder
-          image={require('../../assets/images/serlo.png')}
-          size={130}
-        />
+        <RoundImageWithBorder image={loadImage['serlo']()} size={130} />
         <View style={{ flexDirection: 'row' }}>
           <Text style={[DEFAULT, { color: BLACK, fontFamily: 'serlo' }]}>
             Serlo
@@ -53,14 +47,14 @@ class Splash extends Component {
 
 const soundFromHour = hour => {
   if (hour < 10) {
-    return morgen.getSound();
+    return loadSound['guten_morgen']();
   }
 
   if (hour < 18) {
-    return tag.getSound();
+    return loadSound['guten_tag']();
   }
 
-  return abend.getSound();
+  return loadSound['guten_abend']();
 };
 
 const SplashWrapper = props => {
