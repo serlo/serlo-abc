@@ -64,10 +64,7 @@ export class AppRoutes extends Component {
   render() {
     return (
       <LoadSounds
-        sounds={[
-          require('./assets/sounds/correct.mp3'),
-          require('./assets/sounds/wrong.mp3')
-        ]}
+        sounds={[getSound('correct'), getSound('wrong')]}
         render={([correctSound, wrongSound]) => (
           <View
             style={{

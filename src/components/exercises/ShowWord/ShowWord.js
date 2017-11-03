@@ -2,12 +2,13 @@ import { addIndex, map, toUpper } from 'ramda';
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import repeatIcon from '../../../assets/images/repeat.png';
+import loadImage from '../../../assets/images';
 import { WHITE_TRANSPARENT } from '../../../styles/colors';
 import { DEFAULT } from '../../../styles/text';
 import IconWithBackground from '../../common/IconWithBackground';
 import WordImageWithSounds from '../../common/WordImageWithSounds';
 
+const repeatIcon = loadImage.repeat();
 const mapIndexed = addIndex(map);
 
 const highlightStyle = {

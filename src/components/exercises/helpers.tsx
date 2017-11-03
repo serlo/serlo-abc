@@ -4,6 +4,7 @@ import * as renderer from 'react-test-renderer';
 
 import AbstractExercise from '../../../packages/entities/exercises/AbstractExercise';
 import { Fixtures } from '../../../packages/entities/exercises/helpers';
+import loadSound from '../../assets/sounds';
 // @ts-ignore: TODO: migrate to TypeScript
 import { play } from '../../helpers/audio';
 // @ts-ignore: TODO: migrate to TypeScript
@@ -77,10 +78,7 @@ export const createStoriesFromFixtures = <Props, State>(
   forEach(({ name, createElement }) => {
     story.add(name, () => (
       <LoadSounds
-        sounds={[
-          require('../../assets/sounds/correct.mp3'),
-          require('../../assets/sounds/wrong.mp3')
-        ]}
+        sounds={[loadSound.correct(), loadSound.wrong()]}
         /* tslint:disable-next-line:no-any TODO: */
         render={([correctSound, wrongSound]: any[], soundsLoaded: boolean) =>
           soundsLoaded &&

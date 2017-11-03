@@ -1,8 +1,7 @@
 // TODO: don't depend on React Native app
-import { Article } from '../../../../src/assets/words';
 import { Optional } from '../../../../src/types/index';
 // TODO: don't depend on React Native app
-import Word from '../../../../src/word';
+import Word, { Article } from '../../../../src/word';
 import AbstractExercise from '../AbstractExercise';
 
 export interface IProps {

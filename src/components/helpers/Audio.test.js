@@ -2,6 +2,7 @@ import { shallow } from 'enzyme';
 import { forEach } from 'ramda';
 import React from 'react';
 
+import loadSound from '../../assets/sounds';
 import { createLoadSounds, createLoadSound } from './Audio';
 
 class Sound {
@@ -21,10 +22,7 @@ describe('LoadSounds', () => {
   let sounds;
 
   beforeEach(() => {
-    sounds = [
-      require('../../assets/sounds/a.mp3'),
-      require('../../assets/sounds/b.mp3')
-    ];
+    sounds = [loadSound.a(), loadSound.b()];
   });
 
   it('works without passing sounds', done => {
@@ -74,7 +72,7 @@ describe('LoadSound', () => {
   let sound;
 
   beforeEach(() => {
-    sound = require('../../assets/sounds/a.mp3');
+    sound = loadSound.a();
   });
 
   it('works without passing a sound', done => {

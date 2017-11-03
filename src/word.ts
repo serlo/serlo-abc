@@ -1,6 +1,20 @@
-import words, { Article, IWord } from './assets/words';
+import loadImage from './assets/words/images';
+import loadSound from './assets/words/sounds';
 import { Optional } from './types';
 import { IImageAsset, ISoundAsset } from './types/assets';
+
+/* tslint:disable-next-line:no-var-requires */
+const words: { [id: string]: IWord } = require('./assets/words.json');
+
+export type Article = 'der' | 'die' | 'das';
+
+export interface IWord {
+  id: string;
+  word: string;
+  article?: Article;
+  singular?: string;
+  plural?: string;
+}
 
 class Word {
   private word: IWord;
@@ -34,15 +48,21 @@ class Word {
   }
 
   public getImage(): Optional<IImageAsset> {
-    return this.word.image;
+    const load = loadImage[this.word.id];
+
+    return load && load();
   }
 
   public getSound(): Optional<ISoundAsset> {
-    return this.word.sound;
+    const load = loadSound[`${this.word.id}_short`];
+
+    return load && load();
   }
 
   public getLongSound(): Optional<ISoundAsset> {
-    return this.word.longSound;
+    const load = loadSound[`${this.word.id}_long`];
+
+    return load && load();
   }
 
   private removeSpecialChars(str?: string): Optional<string> {
