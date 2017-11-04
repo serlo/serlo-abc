@@ -6,22 +6,13 @@ import WordImageWithSounds from '../../common/WordImageWithSounds';
 import RoundTextButton from '../../common/RoundTextButton';
 
 class HasPhoneme extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      claimContained: undefined
-    };
-  }
-
-  createChoiceButton = choiceOption => {
+  createChoiceButton = containsPhoneme => {
     return (
       <RoundTextButton
         onPress={() => {
-          this.setState({
-            claimContained: choiceOption
-          });
+          this.props.setState({ containsPhoneme });
         }}
-        highlighted={choiceOption == this.state.claimContained}
+        highlighted={containsPhoneme === this.props.state.containsPhoneme}
         text={this.props.phoneme.toUpperCase() + this.props.phoneme}
         size={60}
         style={[
@@ -29,9 +20,9 @@ class HasPhoneme extends Component {
             marginLeft: 5,
             marginRight: 5
           },
-          !choiceOption && { borderWidth: 3 }
+          !containsPhoneme && { borderWidth: 3 }
         ]}
-        crossedOut={!choiceOption}
+        crossedOut={!containsPhoneme}
       />
     );
   };
@@ -46,7 +37,12 @@ class HasPhoneme extends Component {
           justifyContent: 'space-around'
         }}
       >
-        <WordImageWithSounds word={this.props.word} />
+        <WordImageWithSounds
+          word={this.props.word}
+          onPlayEnd={() => {
+            this.props.setState({ soundsPlayed: true });
+          }}
+        />
         <View
           style={{
             flexDirection: 'row',

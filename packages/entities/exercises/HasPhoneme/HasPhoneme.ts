@@ -1,4 +1,3 @@
-import { Optional } from '../../../../src/types/index';
 import Word from '../../../../src/word';
 import AbstractExercise from '../AbstractExercise';
 
@@ -7,17 +6,25 @@ export interface IProps {
   phoneme: string;
 }
 
-export type IState = Optional<boolean>;
+export interface IState {
+  containsPhoneme?: boolean;
+  soundsPlayed: boolean;
+}
 
 class HasPhoneme extends AbstractExercise<IProps, IState> {
   public getInitialState() {
-    return undefined;
+    return { soundsPlayed: false };
   }
 
-  public isCorrect(state: IState) {
-    const { phoneme, word } = this.getProps();
+  public isCorrect({ containsPhoneme }: IState) {
+    const { phoneme, word } = this.props;
     const wordString = word.toString().toUpperCase();
-    return state === (wordString.indexOf(phoneme) !== -1);
+
+    return containsPhoneme === (wordString.indexOf(phoneme) !== -1);
+  }
+
+  public isSubmitDisabled({ soundsPlayed }: IState) {
+    return !soundsPlayed;
   }
 }
 

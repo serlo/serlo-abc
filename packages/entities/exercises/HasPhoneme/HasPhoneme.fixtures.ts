@@ -11,12 +11,12 @@ const fixtures: Fixtures<IProps, IState> = [
   {
     name: 'affirmative choice',
     props,
-    state: true,
+    state: { containsPhoneme: true, soundsPlayed: true },
     isCorrect: true
   },
   {
     name: 'negative choice',
-    state: false,
+    state: { containsPhoneme: false, soundsPlayed: true },
     props,
     isCorrect: false
   }
