@@ -1,28 +1,18 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 
-import { PRIMARY } from '../../styles/colors';
-import WordImageWithSounds from '../common/WordImageWithSounds';
-import RoundTextButton from '../common/RoundTextButton';
+import { PRIMARY } from '../../../styles/colors';
+import WordImageWithSounds from '../../common/WordImageWithSounds';
+import RoundTextButton from '../../common/RoundTextButton';
 
 class HasPhoneme extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      highlighted: null
-    };
-  }
-
-  createPhonemeButton = (index, crossedOut) => {
+  createChoiceButton = containsPhoneme => {
     return (
       <RoundTextButton
         onPress={() => {
-          this.setState({
-            highlighted: index
-          });
+          this.props.setState({ containsPhoneme });
         }}
-        highlighted={index === this.state.highlighted}
+        highlighted={containsPhoneme === this.props.state.containsPhoneme}
         text={this.props.phoneme.toUpperCase() + this.props.phoneme}
         size={60}
         style={[
@@ -30,9 +20,9 @@ class HasPhoneme extends Component {
             marginLeft: 5,
             marginRight: 5
           },
-          crossedOut && { borderWidth: 3 }
+          !containsPhoneme && { borderWidth: 3 }
         ]}
-        crossedOut={crossedOut}
+        crossedOut={!containsPhoneme}
       />
     );
   };
@@ -47,7 +37,12 @@ class HasPhoneme extends Component {
           justifyContent: 'space-around'
         }}
       >
-        <WordImageWithSounds word={this.props.word} />
+        <WordImageWithSounds
+          word={this.props.word}
+          onPlayEnd={() => {
+            this.props.setState({ soundsPlayed: true });
+          }}
+        />
         <View
           style={{
             flexDirection: 'row',
@@ -55,8 +50,8 @@ class HasPhoneme extends Component {
             justifyContent: 'center'
           }}
         >
-          {this.createPhonemeButton(0, false)}
-          {this.createPhonemeButton(1, true)}
+          {this.createChoiceButton(true)}
+          {this.createChoiceButton(false)}
         </View>
       </View>
     );
