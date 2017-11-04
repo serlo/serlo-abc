@@ -14,7 +14,7 @@ export interface IState {
 
 class HearWord extends AbstractExercise<IProps, IState> {
   public getInitialState() {
-    return { selectedIndex: undefined, soundsPlayed: false };
+    return { soundsPlayed: false };
   }
 
   public isCorrect({ selectedIndex }: IState) {
