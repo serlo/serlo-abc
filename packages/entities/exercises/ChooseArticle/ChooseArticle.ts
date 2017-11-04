@@ -15,10 +15,10 @@ class ChooseArticle extends AbstractExercise<IProps, IState> {
     return undefined;
   }
 
-  public isCorrect(state: IState) {
-    const { word } = this.getProps();
+  public isCorrect(selectedArticle: IState) {
+    const { word } = this.props;
 
-    return word.getArticle() === state;
+    return selectedArticle === word.getArticle();
   }
 }
 

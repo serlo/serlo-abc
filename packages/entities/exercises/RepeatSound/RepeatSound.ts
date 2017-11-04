@@ -10,6 +10,10 @@ class RepeatSound<Props> extends AbstractExercise<Props, IState> {
   public isCorrect(state: IState) {
     return state;
   }
+
+  public isSubmitDisabled(state: IState) {
+    return !state;
+  }
 }
 
 export default RepeatSound;

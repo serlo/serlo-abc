@@ -27,9 +27,9 @@ class HearWord extends Component {
     return (
       <RoundTextButton
         onPress={() => {
-          this.props.setState(index);
+          this.props.setState({ selectedIndex: index });
         }}
-        highlighted={index === this.props.state}
+        highlighted={index === this.props.state.selectedIndex}
         text={word.toString()}
         style={this.styles.textButton}
         key={index}
@@ -43,6 +43,9 @@ class HearWord extends Component {
         <View style={[this.styles.subView, { height: '35%' }]}>
           <WordImageWithSounds
             word={this.props.words[this.props.correctIndex]}
+            onPlayEnd={() => {
+              this.props.setState({ soundsPlayed: true });
+            }}
           />
         </View>
         <View style={this.styles.subView}>

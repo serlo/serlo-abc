@@ -25,7 +25,7 @@ const styles = {
 
 class VideoQuestion extends Component {
   changeAnswer = key => () => {
-    this.props.setState(state => (state === key ? null : key));
+    this.props.setState(key);
   };
 
   render() {

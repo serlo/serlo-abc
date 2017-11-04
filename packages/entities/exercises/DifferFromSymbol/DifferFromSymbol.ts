@@ -13,9 +13,9 @@ class DifferFromSymbol extends AbstractExercise<IProps, IState> {
     return undefined;
   }
 
-  public isCorrect(state: IState) {
-    const { correctIndex } = this.getProps();
-    return state === correctIndex;
+  public isCorrect(selectedIndex: IState) {
+    const { correctIndex } = this.props;
+    return selectedIndex === correctIndex;
   }
 }
 

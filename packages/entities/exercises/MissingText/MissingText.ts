@@ -22,7 +22,7 @@ class MissingText extends AbstractExercise<IProps, IState> {
 
   public isCorrect(state: IState) {
     if (typeof state !== 'undefined') {
-      const { options, text, missing } = this.getProps();
+      const { options, text, missing } = this.props;
       return text[missing] === options[state];
     }
 

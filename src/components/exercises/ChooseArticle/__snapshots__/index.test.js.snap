@@ -668,7 +668,7 @@ exports[` 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#73dbff",
+            "backgroundColor": "#dbf5f5",
             "borderRadius": 9999,
             "elevation": 10,
             "height": 40,
@@ -679,7 +679,7 @@ exports[` 1`] = `
               "height": 4,
               "width": 4,
             },
-            "shadowOpacity": 1,
+            "shadowOpacity": 0,
             "shadowRadius": 0,
             "width": 40,
           }
@@ -1323,7 +1323,7 @@ exports[` 2`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#73dbff",
+            "backgroundColor": "#dbf5f5",
             "borderRadius": 9999,
             "elevation": 10,
             "height": 40,
@@ -1334,7 +1334,7 @@ exports[` 2`] = `
               "height": 4,
               "width": 4,
             },
-            "shadowOpacity": 1,
+            "shadowOpacity": 0,
             "shadowRadius": 0,
             "width": 40,
           }

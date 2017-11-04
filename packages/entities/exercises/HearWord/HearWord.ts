@@ -1,4 +1,3 @@
-import { Optional } from '../../../../src/types/index';
 // TODO: don't depend on React Native app
 import Word from '../../../../src/word';
 import AbstractExercise from '../AbstractExercise';
@@ -8,16 +7,24 @@ export interface IProps {
   correctIndex: number;
 }
 
-export type IState = Optional<number>;
+export interface IState {
+  selectedIndex?: number;
+  soundsPlayed: boolean;
+}
 
 class HearWord extends AbstractExercise<IProps, IState> {
   public getInitialState() {
-    return undefined;
+    return { selectedIndex: undefined, soundsPlayed: false };
   }
 
-  public isCorrect(state: IState) {
-    const { correctIndex } = this.getProps();
-    return state === correctIndex;
+  public isCorrect({ selectedIndex }: IState) {
+    const { correctIndex } = this.props;
+
+    return selectedIndex === correctIndex;
+  }
+
+  public isSubmitDisabled({ soundsPlayed }: IState) {
+    return !soundsPlayed;
   }
 }
 

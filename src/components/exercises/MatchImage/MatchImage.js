@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 
 import { play } from '../../../helpers/audio';
-import RoundButton from '../../common/RoundButton';
+import { RoundIconButton } from '../../common/buttons';
 import RoundImageWithBorder from '../../common/RoundImageWithBorder';
 import { LoadSound } from '../../helpers/Audio';
 
@@ -52,7 +52,7 @@ class MatchImage extends Component {
         </View>
         <View style={[styles.row, { alignItems: 'flex-end' }]}>
           <Text style={styles.bigLetter}>{this.props.text}</Text>
-          <RoundButton
+          <RoundIconButton
             IconComponent={Ionicons}
             name="md-volume-up"
             size={20}

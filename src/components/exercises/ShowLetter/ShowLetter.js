@@ -7,7 +7,7 @@ import loadSound from '../../../assets/sounds';
 import { playAll } from '../../../helpers/audio';
 import { DEFAULT } from '../../../styles/text';
 import IconWithBackground from '../../common/IconWithBackground';
-import RoundButton from '../../common/RoundButton';
+import { RoundIconButton } from '../../common/buttons';
 import { LoadSounds } from '../../helpers/Audio';
 
 const repeatIcon = loadImage.repeat();
@@ -47,7 +47,7 @@ const UnwrappedShowLetter = ({ letter, sounds, isRepeat, setState }) => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.bigLetter}>{letter}</Text>
-        <RoundButton
+        <RoundIconButton
           IconComponent={Ionicons}
           name="md-volume-up"
           size={40}
