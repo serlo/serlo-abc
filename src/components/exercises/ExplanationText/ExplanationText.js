@@ -6,7 +6,7 @@ import { play } from '../../../helpers/audio';
 import { GREEN } from '../../../styles/colors';
 import { DEFAULT } from '../../../styles/text';
 import { LoadSound } from '../../helpers/Audio';
-import RoundButton from '../../common/RoundButton';
+import { RoundIconButton } from '../../common/buttons';
 
 const styles = {
   container: {
@@ -24,7 +24,7 @@ const ExplanationText = ({ text, sound }) => (
     render={sound => (
       <View style={styles.container}>
         <Text style={styles.text}>{text}</Text>
-        <RoundButton
+        <RoundIconButton
           IconComponent={Ionicons}
           name="md-volume-up"
           size={40}

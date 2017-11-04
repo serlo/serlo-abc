@@ -12,16 +12,11 @@ export type IState = boolean[];
 
 class FindLetter extends AbstractExercise<IProps, IState> {
   public getInitialState() {
-    return map(
-      () => false,
-      this.getProps()
-        .word.toString()
-        .split('')
-    ) as IState;
+    return map(() => false, this.props.word.toString().split('')) as IState;
   }
 
   public isCorrect(state: IState) {
-    const { letter, word } = this.getProps();
+    const { letter, word } = this.props;
     const wordString = word.toString().toUpperCase();
 
     for (let i = 0; i < wordString.length; i++) {

@@ -12,13 +12,13 @@ const fixtures: Fixtures<IProps, IState> = [
   {
     name: 'correct selected',
     props,
-    state: 1,
+    state: { selectedIndex: 1, soundsPlayed: true },
     isCorrect: true
   },
   {
     name: 'wrong selected',
     props,
-    state: 2,
+    state: { selectedIndex: 2, soundsPlayed: true },
     isCorrect: false
   }
 ];
