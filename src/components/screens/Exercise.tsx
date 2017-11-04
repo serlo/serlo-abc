@@ -1,5 +1,6 @@
 // @ts-ignore: TODO: add declaration file
 import { Entypo } from '@expo/vector-icons';
+import { identity, is, merge } from 'ramda';
 import * as React from 'react';
 import { StatusBar, StyleSheet, View } from 'react-native';
 // @ts-ignore: TODO: add declaration file
@@ -10,7 +11,7 @@ import AbstractExercise from '../../../packages/entities/exercises/AbstractExerc
 import { play } from '../../helpers/audio';
 import { GREEN, PRIMARY } from '../../styles/colors';
 // @ts-ignore: TODO: migrate to TypeScript
-import RoundButton from '../common/RoundButton';
+import { RoundIconButton } from '../common/buttons';
 // @ts-ignore: TODO: migrate to TypeScript
 import { LoadSounds } from '../helpers/Audio';
 
@@ -89,13 +90,13 @@ class Exercise<Props, State> extends React.Component<
         style={{ flex: 1, backgroundColor: isCorrect ? GREEN : PRIMARY }}
       >
         <Component
-          {...exercise.getProps()}
+          {...exercise.props}
           showFeedback={submitted && !isCorrect}
           state={state}
           setState={this.updateState}
         />
         <View style={[styles.hoveringButton, styles.top, styles.left]}>
-          <RoundButton
+          <RoundIconButton
             onPress={this.props.goToNav}
             IconComponent={Entypo}
             name="menu"
@@ -103,11 +104,12 @@ class Exercise<Props, State> extends React.Component<
           />
         </View>
         <View style={[styles.hoveringButton, styles.top, styles.right]}>
-          <RoundButton
+          <RoundIconButton
             onPress={this.submit}
             IconComponent={Entypo}
             name="chevron-right"
             size={25}
+            disabled={exercise.isSubmitDisabled(state)}
           />
         </View>
       </GestureRecognizer>
@@ -131,12 +133,16 @@ class Exercise<Props, State> extends React.Component<
   private updateState = (
     newState: State | ((oldState: State) => State)
   ): void => {
-    if (typeof newState === 'function') {
-      this.setState(({ state }) => ({ state: newState(state) }));
-      return;
-    }
+    const isObject = (val: State) => typeof val === 'object' && !is(Array, val);
 
-    this.setState({ state: newState });
+    const apply = (oldState: State): ((newState: State) => State) =>
+      isObject(oldState) ? merge(oldState) : identity;
+
+    this.setState(({ state }) => ({
+      state: apply(state)(
+        typeof newState === 'function' ? newState(state) : newState
+      )
+    }));
   };
 }
 
