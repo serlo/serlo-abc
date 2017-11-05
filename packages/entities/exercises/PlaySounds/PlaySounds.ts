@@ -2,7 +2,7 @@ import AbstractExercise from '../AbstractExercise';
 
 export type IState = boolean;
 
-class RepeatSound<Props> extends AbstractExercise<Props, IState> {
+class PlaySounds<Props> extends AbstractExercise<Props, IState> {
   public getInitialState() {
     return false;
   }
@@ -16,4 +16,4 @@ class RepeatSound<Props> extends AbstractExercise<Props, IState> {
   }
 }
 
-export default RepeatSound;
+export default PlaySounds;

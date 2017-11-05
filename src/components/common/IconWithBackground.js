@@ -1,50 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Image } from 'react-native';
 
 import { WHITE_TRANSPARENT } from '../../styles/colors';
 
-class IconWithBackground extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      backgroundColor: 'transparent'
-    };
-  }
-
-  // Removes the semi-transparent background behind the icon
-  unfocus = () => {
-    this.setState({
-      backgroundColor: 'transparent'
-    });
-  };
-
-  // Draws the semi-transparent background behind the icon
-  focus = () => {
-    this.setState({
-      backgroundColor: WHITE_TRANSPARENT
-    });
-  };
-
-  render() {
-    return (
-      <View
-        style={{
-          backgroundColor: this.state.backgroundColor,
-          borderRadius: 9999,
-          padding: 20
-        }}
-      >
-        <Image
-          source={this.props.icon}
-          style={{
-            height: this.props.size,
-            width: this.props.size,
-            resizeMode: 'contain'
-          }}
-        />
-      </View>
-    );
-  }
-}
+const IconWithBackground = ({ focused, icon, size }) => (
+  <View
+    style={{
+      backgroundColor: focused ? WHITE_TRANSPARENT : 'transparent',
+      borderRadius: 9999,
+      padding: 20
+    }}
+  >
+    <Image
+      source={icon}
+      style={{
+        height: size,
+        width: size,
+        resizeMode: 'contain'
+      }}
+    />
+  </View>
+);
 
 export default IconWithBackground;

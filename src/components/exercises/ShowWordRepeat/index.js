@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { RepeatSound } from '../../../../packages/entities/exercises';
+import { PlaySounds } from '../../../../packages/entities/exercises';
 import Word from '../../../word';
 import ShowWord from '../ShowWord/ShowWord';
 
-const Component = props => <ShowWord {...props} isRepeat />;
+const Component = props => <ShowWord {...props} repeat />;
 
-export const Exercise = RepeatSound.Exercise;
-export const fixtures = RepeatSound.createFixtures([
+export const Exercise = PlaySounds.Exercise;
+export const fixtures = PlaySounds.createFixtures([
   {
     name: 'Ananas',
     props: {

@@ -23,8 +23,8 @@ class HasPhoneme extends AbstractExercise<IProps, IState> {
     return containsPhoneme === (wordString.indexOf(phoneme) !== -1);
   }
 
-  public isSubmitDisabled({ soundsPlayed }: IState) {
-    return !soundsPlayed;
+  public isSubmitDisabled({ soundsPlayed, containsPhoneme }: IState) {
+    return !soundsPlayed || typeof containsPhoneme === 'undefined';
   }
 }
 
