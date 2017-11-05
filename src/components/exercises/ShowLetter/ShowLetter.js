@@ -32,7 +32,9 @@ const ShowLetter = ({ letter, sound, repeat, setState }) => (
     playInitially
     record={repeat}
     sounds={[sound]}
-    onPlayEnd={() => setState(true)}
+    onPlayEnd={() => {
+      setState(true);
+    }}
     render={(buttonProps, isRecording) => (
       <View style={styles.container}>
         <View style={styles.header}>

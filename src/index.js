@@ -1,6 +1,6 @@
 import { map, mergeAll } from 'ramda';
 import React, { Component } from 'react';
-import { Button, View } from 'react-native';
+import { View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
 
 import Interactor from '../packages/entities-interactor';
@@ -40,6 +40,10 @@ export class AppRoutes extends Component {
     return this.interactor.getProgress(id);
   };
 
+  resetProgress = () => {
+    return this.interactor.resetProgress();
+  };
+
   findEntity = id => {
     return this.interactor.findEntity(id);
   };
@@ -50,6 +54,32 @@ export class AppRoutes extends Component {
 
   markAsIncorrect = id => {
     return this.interactor.markAsIncorrect(id);
+  };
+
+  goUp = (id, level) => {
+    if (level <= 2) {
+      return <Redirect to="/course" />;
+    }
+
+    return (
+      <Redirect
+        to={{
+          pathname: `/node/${id}`,
+          state: { level: level - 1 }
+        }}
+      />
+    );
+  };
+
+  goDown = (id, level) => {
+    return (
+      <Redirect
+        to={{
+          pathname: `/node/${id}`,
+          state: { level: level + 1 }
+        }}
+      />
+    );
   };
 
   componentDidMount() {
@@ -90,72 +120,46 @@ export class AppRoutes extends Component {
                   <Course
                     key="course"
                     getProgress={this.getProgress}
+                    resetProgress={this.resetProgress}
                     course={this.state.course}
-                    goToSection={id => history.push(`/section/${id}`)}
-                  />,
-                  <Button
-                    key="reset"
-                    onPress={() => {
-                      this.interactor.resetProgress();
-                    }}
-                    title="Reset progress"
+                    goToSection={id =>
+                      history.push(`/node/${id}`, { level: 2 })}
                   />
                 ];
               }}
             />
             <Route
-              path="/chapter/:id"
-              render={({ match, history }) => {
-                if (!this.state.course) {
-                  return null;
-                }
-
-                const section = this.getNextChild(match.params.id);
-
-                if (section) {
-                  this.markAsIncorrect(match.params.id);
-
-                  return <Redirect to={`/section/${section.id}`} />;
-                }
-
-                this.markAsCorrect(match.params.id);
-
-                return <Redirect to="/course" />;
-              }}
-            />
-            <Route
-              path="/section/:id"
-              render={({ match, history }) => {
-                if (!this.state.course) {
-                  return null;
-                }
-
-                const exercise = this.getNextChild(match.params.id);
-
-                if (exercise) {
-                  this.markAsIncorrect(match.params.id);
-
-                  return <Redirect to={`/exercise/${exercise.id}`} />;
-                }
-
-                this.markAsCorrect(match.params.id);
-
-                return <Redirect to="/course" />;
-              }}
-            />
-            <Route
-              path="/exercise/:id"
-              render={({ match, history }) => {
+              path="/node/:id"
+              render={({ location, match, history }) => {
                 const { id } = match.params;
+                const { level } = location.state;
+
+                if (!this.state.course) {
+                  return null;
+                }
 
                 const entity = this.findEntity(id);
 
                 if (!entity) {
+                  console.warn('Entity with id', id, 'does not exist');
                   return <Redirect to="/course" />;
                 }
 
                 const { type, props } = entity;
 
+                if (!type) {
+                  // Internal node
+                  const next = this.getNextChild(id);
+
+                  if (!next) {
+                    this.markAsCorrect(id);
+                    return this.goUp(entity.parent, level);
+                  }
+
+                  return this.goDown(next.id, level);
+                }
+
+                // Leaf
                 const exerciseType = getExercise(type);
 
                 if (!exerciseType) {
@@ -183,7 +187,9 @@ export class AppRoutes extends Component {
                       this.markAsCorrect(id);
                     }
 
-                    history.push(`/section/${entity.parent}`);
+                    history.push(`/node/${entity.parent}`, {
+                      level: level - 1
+                    });
                   });
                 };
 
