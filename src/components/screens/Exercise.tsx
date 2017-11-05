@@ -85,7 +85,11 @@ class Exercise<Props, State> extends React.Component<
 
     return (
       <GestureRecognizer
-        onSwipeLeft={() => this.submit()}
+        onSwipeLeft={() => {
+          if (!exercise.isSubmitDisabled(state)) {
+            this.submit();
+          }
+        }}
         config={{ directionalOffsetThreshold: 160 }}
         style={{ flex: 1, backgroundColor: isCorrect ? GREEN : PRIMARY }}
       >

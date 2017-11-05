@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 
-import { PRIMARY } from '../../../styles/colors';
 import WordImageWithSounds from '../../common/WordImageWithSounds';
 import RoundTextButton from '../../common/RoundTextButton';
 
@@ -32,12 +31,12 @@ class HasPhoneme extends Component {
       <View
         style={{
           flex: 1,
-          backgroundColor: PRIMARY,
           alignItems: 'center',
           justifyContent: 'space-around'
         }}
       >
         <WordImageWithSounds
+          playInitially
           word={this.props.word}
           onPlayEnd={() => {
             this.props.setState({ soundsPlayed: true });
