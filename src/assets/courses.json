@@ -39,7 +39,7 @@
                 "id": "12d49d12-9c8b-4963-ab6d-08f062d4ddf8",
                 "type": "ExplanationText",
                 "text": "Wiederholen Sie den Buchstaben.",
-                "sound": "exercises/wiederholen_sie_den_buchstaben_a"
+                "sound": "exercises_wiederholen_sie_den_buchstaben_a"
               },
               {
                 "id": "29f8cb0a-6fc3-4220-be34-6cfa7cfabbdd",
@@ -48,88 +48,100 @@
                 "sound": "a"
               },
               {
-                "id": "f123f4b8-8a67-4543-85ef-5500aa08bbfa",
-                "type": "ExplanationText",
-                "text": "Hören Sie die Wörter.",
-                "sound": "exercises/hoeren_sie_die_woerter_a"
+                "id": "f01c1205-0999-432c-a1ab-1310d3f8dbd1",
+                "title": "ShowWord",
+                "children": [
+                  {
+                    "id": "f123f4b8-8a67-4543-85ef-5500aa08bbfa",
+                    "type": "ExplanationText",
+                    "text": "Hören Sie die Wörter.",
+                    "sound": "exercises_hoeren_sie_die_woerter_a"
+                  },
+                  {
+                    "id": "1c407d77-f21d-40f2-9f60-ff981eaf5f71",
+                    "type": "ShowWord",
+                    "letter": "a",
+                    "word": "ananas"
+                  },
+                  {
+                    "id": "c9957f1d-359b-4685-9167-98047b6ac1c9",
+                    "type": "ShowWord",
+                    "letter": "a",
+                    "word": "apfel"
+                  },
+                  {
+                    "id": "55568864-14ac-4360-b2d4-1a8bf7a5df9f",
+                    "type": "ShowWord",
+                    "letter": "a",
+                    "word": "oma"
+                  },
+                  {
+                    "id": "121ed903-49b9-493a-8a39-84214e0f1d31",
+                    "type": "ShowWord",
+                    "letter": "a",
+                    "word": "affe"
+                  },
+                  {
+                    "id": "2cbacf03-2cc2-48d6-8b17-5e28d96a6404",
+                    "type": "ShowWord",
+                    "letter": "a",
+                    "word": "nase"
+                  },
+                  {
+                    "id": "514be7e5-e003-4711-82a0-20b6148949b7",
+                    "type": "ShowWord",
+                    "letter": "a",
+                    "word": "sofa"
+                  }
+                ]
               },
               {
-                "id": "1c407d77-f21d-40f2-9f60-ff981eaf5f71",
-                "type": "ShowWord",
-                "letter": "a",
-                "word": "ananas"
-              },
-              {
-                "id": "c9957f1d-359b-4685-9167-98047b6ac1c9",
-                "type": "ShowWord",
-                "letter": "a",
-                "word": "apfel"
-              },
-              {
-                "id": "55568864-14ac-4360-b2d4-1a8bf7a5df9f",
-                "type": "ShowWord",
-                "letter": "a",
-                "word": "oma"
-              },
-              {
-                "id": "121ed903-49b9-493a-8a39-84214e0f1d31",
-                "type": "ShowWord",
-                "letter": "a",
-                "word": "affe"
-              },
-              {
-                "id": "2cbacf03-2cc2-48d6-8b17-5e28d96a6404",
-                "type": "ShowWord",
-                "letter": "a",
-                "word": "nase"
-              },
-              {
-                "id": "514be7e5-e003-4711-82a0-20b6148949b7",
-                "type": "ShowWord",
-                "letter": "a",
-                "word": "sofa"
-              },
-              {
-                "id": "d23fec84-12f9-4093-99e1-221e0f47efcd",
-                "type": "ExplanationText",
-                "text": "Wiederholen Sie das Wort.",
-                "sound": "exercises/wiederholen_sie_das_wort_a"
-              },
-              {
-                "id": "b185a68e-5edc-4d11-8300-549dd6db756d",
-                "type": "ShowWordRepeat",
-                "letter": "a",
-                "word": "ananas"
-              },
-              {
-                "id": "669e70e0-3b68-4ff3-add9-cf9b98edd282",
-                "type": "ShowWordRepeat",
-                "letter": "a",
-                "word": "apfel"
-              },
-              {
-                "id": "9e4375b8-3eb4-40ad-a572-309d468835d8",
-                "type": "ShowWordRepeat",
-                "letter": "a",
-                "word": "oma"
-              },
-              {
-                "id": "21a61363-1a6a-43a8-90b4-e69106e22730",
-                "type": "ShowWordRepeat",
-                "letter": "a",
-                "word": "affe"
-              },
-              {
-                "id": "34435ed0-2251-4599-91a0-a8eccb9e0ae9",
-                "type": "ShowWordRepeat",
-                "letter": "a",
-                "word": "nase"
-              },
-              {
-                "id": "0503971d-8c0e-4573-9581-f9da2031562e",
-                "type": "ShowWordRepeat",
-                "letter": "a",
-                "word": "sofa"
+                "id": "caf4442d-81d0-46ec-a399-a7df4ca393a3",
+                "title": "ShowWordRepeat",
+                "children": [
+                  {
+                    "id": "d23fec84-12f9-4093-99e1-221e0f47efcd",
+                    "type": "ExplanationText",
+                    "text": "Wiederholen Sie das Wort.",
+                    "sound": "exercises_wiederholen_sie_das_wort_a"
+                  },
+                  {
+                    "id": "b185a68e-5edc-4d11-8300-549dd6db756d",
+                    "type": "ShowWordRepeat",
+                    "letter": "a",
+                    "word": "ananas"
+                  },
+                  {
+                    "id": "669e70e0-3b68-4ff3-add9-cf9b98edd282",
+                    "type": "ShowWordRepeat",
+                    "letter": "a",
+                    "word": "apfel"
+                  },
+                  {
+                    "id": "9e4375b8-3eb4-40ad-a572-309d468835d8",
+                    "type": "ShowWordRepeat",
+                    "letter": "a",
+                    "word": "oma"
+                  },
+                  {
+                    "id": "21a61363-1a6a-43a8-90b4-e69106e22730",
+                    "type": "ShowWordRepeat",
+                    "letter": "a",
+                    "word": "affe"
+                  },
+                  {
+                    "id": "34435ed0-2251-4599-91a0-a8eccb9e0ae9",
+                    "type": "ShowWordRepeat",
+                    "letter": "a",
+                    "word": "nase"
+                  },
+                  {
+                    "id": "0503971d-8c0e-4573-9581-f9da2031562e",
+                    "type": "ShowWordRepeat",
+                    "letter": "a",
+                    "word": "sofa"
+                  }
+                ]
               }
             ]
           },
