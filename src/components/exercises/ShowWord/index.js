@@ -1,9 +1,9 @@
-import { InfoScreen } from '../../../../packages/entities/exercises';
+import { InfoScreenWithSounds } from '../../../../packages/entities/exercises';
 import Word from '../../../word';
 import Component from './ShowWord';
 
-export const Exercise = InfoScreen.Exercise;
-export const fixtures = InfoScreen.createFixtures([
+export const Exercise = InfoScreenWithSounds.Exercise;
+export const fixtures = InfoScreenWithSounds.createFixtures([
   {
     name: 'Ananas',
     props: {

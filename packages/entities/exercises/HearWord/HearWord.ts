@@ -23,8 +23,8 @@ class HearWord extends AbstractExercise<IProps, IState> {
     return selectedIndex === correctIndex;
   }
 
-  public isSubmitDisabled({ soundsPlayed }: IState) {
-    return !soundsPlayed;
+  public isSubmitDisabled({ selectedIndex, soundsPlayed }: IState) {
+    return !soundsPlayed || typeof selectedIndex === 'undefined';
   }
 }
 

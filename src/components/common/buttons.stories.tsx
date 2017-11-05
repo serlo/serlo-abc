@@ -39,5 +39,3 @@ storiesOf('common/Buttons', module).add('RoundIconButton', () => {
     <PrimaryScreen key="blue" children={children} />
   ];
 });
-// .add('BlueScreen', () => <PrimaryScreen children={children} />)
-// .add('GreenScreen', () => <GreenScreen children={children} />);

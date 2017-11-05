@@ -16,7 +16,7 @@ const highlightStyle = {
   borderRadius: 20
 };
 
-const ShowWord = ({ word, letter, sound, setState, isRepeat }) => {
+const ShowWord = ({ word, letter, sound, setState, repeat }) => {
   const letters = mapIndexed(
     (char, key) => (
       <View
@@ -32,7 +32,7 @@ const ShowWord = ({ word, letter, sound, setState, isRepeat }) => {
     word.toString()
   );
 
-  return (
+  const render = (button, isRecording) => (
     <View
       style={{
         flex: 1,
@@ -40,36 +40,29 @@ const ShowWord = ({ word, letter, sound, setState, isRepeat }) => {
         justifyContent: 'space-around'
       }}
     >
-      <WordImageWithSounds
-        longSound
-        isRepeat={isRepeat}
-        word={word}
-        onPlayStart={() => {
-          if (isRepeat) {
-            this.icon.unfocus();
-            setState(false);
-          }
-        }}
-        onPlayEnd={() => {
-          if (isRepeat) {
-            this.icon.focus();
-            setState(true);
-          }
-        }}
-      />
+      {button}
       <View style={{ flexDirection: 'row' }}>{letters}</View>
       <View height={80}>
-        {isRepeat && (
+        {repeat && (
           <IconWithBackground
-            ref={view => {
-              this.icon = view;
-            }}
+            focused={isRecording}
             icon={repeatIcon}
             size={40}
           />
         )}
       </View>
     </View>
+  );
+
+  return (
+    <WordImageWithSounds
+      playInitially
+      longSound
+      record={repeat}
+      word={word}
+      onPlayEnd={() => setState(true)}
+      render={render}
+    />
   );
 };
 

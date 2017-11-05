@@ -1,10 +1,10 @@
-import { InfoScreen } from '../../../../packages/entities/exercises';
+import { InfoScreenWithSounds } from '../../../../packages/entities/exercises';
 import Component from './ExplanationText';
 
 import loadSound from '../../../assets/sounds';
 
-export const Exercise = InfoScreen.Exercise;
-export const fixtures = InfoScreen.createFixtures([
+export const Exercise = InfoScreenWithSounds.Exercise;
+export const fixtures = InfoScreenWithSounds.createFixtures([
   {
     name: 'Wiederholen Sie den Buchstaben.',
     props: {

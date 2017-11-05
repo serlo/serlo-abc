@@ -3,12 +3,10 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import loadImage from '../../../assets/images';
-import loadSound from '../../../assets/sounds';
-import { playAll } from '../../../helpers/audio';
 import { DEFAULT } from '../../../styles/text';
 import IconWithBackground from '../../common/IconWithBackground';
 import { RoundIconButton } from '../../common/buttons';
-import { LoadSounds } from '../../helpers/Audio';
+import { PlaySounds } from '../../helpers/PlaySounds';
 
 const repeatIcon = loadImage.repeat();
 
@@ -29,57 +27,35 @@ const styles = {
   }
 };
 
-const UnwrappedShowLetter = ({ letter, sounds, isRepeat, setState }) => {
-  const play = () => {
-    if (isRepeat) {
-      this.icon.unfocus();
-      setState(false);
-    }
-    playAll(sounds).then(() => {
-      if (isRepeat) {
-        this.icon.focus();
-        setState(true);
-      }
-    });
-  };
-
-  return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.bigLetter}>{letter}</Text>
-        <RoundIconButton
-          IconComponent={Ionicons}
-          name="md-volume-up"
-          size={40}
-          onPress={play}
-        />
-      </View>
-      <View height={80}>
-        {isRepeat && (
-          <IconWithBackground
-            ref={view => {
-              this.icon = view;
-            }}
-            icon={repeatIcon}
+const ShowLetter = ({ letter, sound, repeat, setState }) => (
+  <PlaySounds
+    playInitially
+    record={repeat}
+    sounds={[sound]}
+    onPlayEnd={() => setState(true)}
+    render={(buttonProps, isRecording) => (
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.bigLetter}>{letter}</Text>
+          <RoundIconButton
+            IconComponent={Ionicons}
+            name="md-volume-up"
             size={40}
+            {...buttonProps}
           />
-        )}
+        </View>
+        <View height={80}>
+          {repeat && (
+            <IconWithBackground
+              focused={isRecording}
+              icon={repeatIcon}
+              size={40}
+            />
+          )}
+        </View>
       </View>
-    </View>
-  );
-};
-
-const ShowLetter = ({ sound, ...props }) => {
-  const sounds = props.isRepeat ? [sound, loadSound.repeat()] : [sound];
-
-  return (
-    <LoadSounds
-      sounds={sounds}
-      render={sounds => {
-        return <UnwrappedShowLetter {...props} sounds={sounds} />;
-      }}
-    />
-  );
-};
+    )}
+  />
+);
 
 export default ShowLetter;
