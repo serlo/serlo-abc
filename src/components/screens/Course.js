@@ -1,6 +1,6 @@
 import { map } from 'ramda';
 import React from 'react';
-import { View } from 'react-native';
+import { View, Dimensions } from 'react-native';
 
 import RoundIconButton from '../common/RoundIconButton';
 import RoundTextButton from '../common/RoundTextButton';
@@ -11,6 +11,8 @@ const Course = ({ course, goToSection, getProgress }) => {
   if (!course) {
     return null;
   }
+  const { width } = Dimensions.get('window');
+  const scale = width / 360;
 
   return (
     <View
@@ -26,8 +28,8 @@ const Course = ({ course, goToSection, getProgress }) => {
             key={chapter.id}
             style={{
               flexDirection: 'row',
-              marginTop: 10,
-              marginBottom: 10
+              marginTop: 10 * scale,
+              marginBottom: 10 * scale
             }}
           >
             {map(section => {
@@ -42,17 +44,17 @@ const Course = ({ course, goToSection, getProgress }) => {
                   },
                   progress === Progress.Correct && { backgroundColor: GREEN },
                   {
-                    margin: 5,
+                    margin: 5 * scale,
                     marginTop: 0,
-                    paddingLeft: 10,
-                    paddingRight: 10,
-                    width: 60,
-                    height: 40
+                    paddingLeft: 10 * scale,
+                    paddingRight: 10 * scale,
+                    width: 60 * scale,
+                    height: 40 * scale
                   }
                 ],
                 color: progress === Progress.Incorrect ? BLACK : WHITE,
                 textStyle: {
-                  fontSize: 18,
+                  fontSize: 18 * scale,
                   color: progress === Progress.Incorrect ? BLACK : WHITE
                 },
                 onPress: () => {
@@ -61,7 +63,13 @@ const Course = ({ course, goToSection, getProgress }) => {
               };
 
               if (section.icon) {
-                return <RoundIconButton name={section.icon} {...props} />;
+                return (
+                  <RoundIconButton
+                    name={section.icon}
+                    {...props}
+                    size={30 * scale}
+                  />
+                );
               }
 
               if (section.title) {
