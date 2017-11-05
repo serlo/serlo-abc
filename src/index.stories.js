@@ -2,31 +2,42 @@ import { storiesOf } from '@storybook/react-native';
 import React from 'react';
 import { MemoryRouter } from 'react-router-native';
 
+import Interactor from '../packages/entities-interactor';
+import courses from './assets/courses.json';
+import Storage from './storage/CourseStorage';
+import ProgressStorage from './storage/ProgressStorage';
 import App, { AppRoutes } from '.';
 
 storiesOf('App', module).add('default', () => <App />);
 
-storiesOf('screens', module).add('Splash', () => (
-  <MemoryRouter initialEntries={['/']} initialIndex={0}>
-    <AppRoutes />
-  </MemoryRouter>
-));
+const storage = new Storage(courses);
+const progressStorage = new ProgressStorage();
+const interactor = new Interactor(storage, progressStorage);
 
-storiesOf('screens', module).add('Course', () => (
-  <MemoryRouter initialEntries={['/', '/course']} initialIndex={1}>
-    <AppRoutes />
-  </MemoryRouter>
-));
+const course = storiesOf('Course', module);
 
-storiesOf('screens', module).add('Section', () => (
-  <MemoryRouter
-    initialEntries={[
-      '/',
-      '/course',
-      '/section/b3e14abb-ce08-41c4-bc3f-3c1a86998f51'
-    ]}
-    initialIndex={2}
-  >
-    <AppRoutes />
-  </MemoryRouter>
-));
+const addStory = (entity, level) => {
+  course.add(`${level} ${entity.title || entity.id}`, () => (
+    <MemoryRouter
+      initialEntries={[
+        {
+          pathname: `/node/${entity.id}`,
+          state: { level }
+        }
+      ]}
+      initialIndex={0}
+    >
+      <AppRoutes />
+    </MemoryRouter>
+  ));
+
+  if (entity.children) {
+    entity.children.forEach(child => addStory(child, level + 1));
+  }
+};
+
+interactor.loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde').then(() => {
+  const course = interactor.getStructure();
+
+  addStory(course, 0);
+});
