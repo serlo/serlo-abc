@@ -26,30 +26,33 @@ export const RoundIconButton: React.SFC<RoundIconButtonProps> = ({
   onPress,
   disabled
 }) => (
-  <TouchableOpacity onPress={onPress} style={style} disabled={disabled}>
+  <TouchableOpacity onPress={onPress} disabled={disabled}>
     <View
-      style={{
-        backgroundColor: disabled
-          ? chroma(PRIMARY_WEAK)
-              .brighten()
-              .desaturate()
-              .hex()
-          : PRIMARY_WEAK,
-        borderRadius: 9999,
-        padding: 5,
-        elevation: 10,
-        shadowColor: BLACK_TRANSPARENT,
-        shadowOpacity: disabled ? 0 : 1,
-        shadowRadius: 0,
-        shadowOffset: {
-          height: 4,
-          width: 4
+      style={[
+        {
+          backgroundColor: disabled
+            ? chroma(PRIMARY_WEAK)
+                .brighten()
+                .desaturate()
+                .hex()
+            : PRIMARY_WEAK,
+          borderRadius: 9999,
+          padding: 5,
+          elevation: 10,
+          shadowColor: BLACK_TRANSPARENT,
+          shadowOpacity: disabled ? 0 : 1,
+          shadowRadius: 0,
+          shadowOffset: {
+            height: 4,
+            width: 4
+          },
+          width: size + 15,
+          height: size + 15,
+          alignItems: 'center',
+          justifyContent: 'center'
         },
-        width: size + 15,
-        height: size + 15,
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}
+        style
+      ]}
     >
       <IconComponent name={name} size={size} color={WHITE} />
     </View>

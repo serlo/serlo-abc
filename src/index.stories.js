@@ -21,7 +21,7 @@ const addStory = (entity, level) => {
     <MemoryRouter
       initialEntries={[
         {
-          pathname: `/node/${entity.id}`,
+          pathname: level === 0 ? '/course' : `/node/${entity.id}`,
           state: { level }
         }
       ]}

@@ -1,4 +1,4 @@
-import { map, mergeAll } from 'ramda';
+import { find, identity, map, mergeAll } from 'ramda';
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
@@ -116,8 +116,15 @@ export class AppRoutes extends Component {
                   return null;
                 }
 
+                const nexts = map(
+                  ({ id }) => this.getNextChild(id),
+                  this.state.course.children
+                );
+                const next = find(identity, nexts);
+
                 return [
                   <Course
+                    next={next && next.id}
                     key="course"
                     getProgress={this.getProgress}
                     resetProgress={this.resetProgress}

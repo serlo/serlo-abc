@@ -142,6 +142,72 @@
                     "word": "sofa"
                   }
                 ]
+              },
+              {
+                "id": "5f01e114-aafd-4aac-857f-d8695dad40fc",
+                "title": "FindLetter",
+                "children": [
+                  {
+                    "id": "736719c2-0d26-4e30-a2ed-09435e9b45de",
+                    "type": "ExplanationText",
+                    "text": "Markieren Sie alle A und a.",
+                    "sound": "exercises_markieren_sie_alle_a_a"
+                  },
+                  {
+                    "id": "46ad40b9-3cb6-4958-9c28-85686061d1c6",
+                    "type": "FindLetter",
+                    "letter": "A",
+                    "word": "ananas"
+                  },
+                  {
+                    "id": "9236b56a-6eac-4a22-b31d-9affdcaf3686",
+                    "type": "FindLetter",
+                    "letter": "A",
+                    "word": "apfel"
+                  },
+                  {
+                    "id": "8ef795e0-5789-4191-9743-2d932cca20bd",
+                    "type": "FindLetter",
+                    "letter": "A",
+                    "word": "dose"
+                  },
+                  {
+                    "id": "15c82d7e-157d-4e6a-9de5-9606f146d9bb",
+                    "type": "FindLetter",
+                    "letter": "A",
+                    "word": "oma"
+                  },
+                  {
+                    "id": "9e85df66-e62e-44cd-9aea-9617c9a9fcb2",
+                    "type": "FindLetter",
+                    "letter": "A",
+                    "word": "affe"
+                  },
+                  {
+                    "id": "0d58da12-02eb-45a3-a3e3-234b6d0cc5d9",
+                    "type": "FindLetter",
+                    "letter": "A",
+                    "word": "esel"
+                  },
+                  {
+                    "id": "ae8a70b1-f071-498b-a353-f4f9e404235f",
+                    "type": "FindLetter",
+                    "letter": "A",
+                    "word": "nase"
+                  },
+                  {
+                    "id": "462a8051-cdfa-4702-8f31-e75650727657",
+                    "type": "FindLetter",
+                    "letter": "A",
+                    "word": "sofa"
+                  },
+                  {
+                    "id": "be6a0c78-ae13-4382-a919-c316ac4a1433",
+                    "type": "FindLetter",
+                    "letter": "A",
+                    "word": "sonne"
+                  }
+                ]
               }
             ]
           },
@@ -178,72 +244,6 @@
           {
             "id": "e5ed7299-8bdd-42a2-97f8-0366faa42296",
             "title": "A N E",
-            "children": [],
-            "icon": "ios-refresh"
-          }
-        ]
-      },
-      {
-        "id": "cea0fb8f-2ddb-4fa3-b32b-9e56948300d6",
-        "title": "STO",
-        "children": [
-          {
-            "id": "4d22a6b9-24bf-48c7-a824-f4cbb7b2cafc",
-            "title": "S",
-            "children": []
-          },
-          {
-            "id": "ca7d36df-9660-404b-b06a-8a36deac6ce1",
-            "title": "T",
-            "children": []
-          },
-          {
-            "id": "a8dff654-abdb-484b-97a3-209daa5e48f7",
-            "title": "O",
-            "children": []
-          },
-          {
-            "id": "dde29015-6fee-4717-afb6-5662e5be08ab",
-            "title": "Hallo 2!",
-            "children": [],
-            "icon": "ios-chatbubbles"
-          },
-          {
-            "id": "76395248-2d1d-4ff8-8c84-60869e794d83",
-            "title": "S T O",
-            "children": [],
-            "icon": "ios-refresh"
-          }
-        ]
-      },
-      {
-        "id": "74779d77-fb55-4d32-a686-21b3021a1520",
-        "title": "RIH",
-        "children": [
-          {
-            "id": "3a5b285c-1788-4da2-97a0-8d8d29cf89e5",
-            "title": "R",
-            "children": []
-          },
-          {
-            "id": "3fa1e326-d76d-4edc-9653-2ba2f8b3adf7",
-            "title": "I",
-            "children": []
-          },
-          {
-            "id": "517cf62f-074a-4aef-ad32-776ea62407ac",
-            "title": "H",
-            "children": []
-          },
-          {
-            "id": "0d707da7-ca60-41ee-8225-fa84bcf66f6f",
-            "title": "Hallo 3!",
-            "children": [],
-            "icon": "ios-chatbubbles"
-          },
-          {
-            "id": "4e3e5d34-d733-43f8-81f5-ee8949105556",
-            "title": "R I H",
             "children": [],
             "icon": "ios-refresh"
           }
