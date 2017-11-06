@@ -20,6 +20,5 @@ import '../src/components/exercises/VideoQuestion/index.stories';
 import '../src/components/common/NavigationMenu.stories.js';
 import '../src/components/exercises/BuildSentenceVideo.stories';
 import '../src/components/exercises/SyllableTable.stories';
-import '../src/components/exercises/TutorialVideo.stories';
 import '../src/components/helpers/difficulty.stories';
 import '../src/components/helpers/PlaySounds.stories';
