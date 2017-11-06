@@ -60,7 +60,7 @@
                     "id": "f123f4b8-8a67-4543-85ef-5500aa08bbfa",
                     "type": "ExplanationText",
                     "text": "Hören Sie die Wörter.",
-                    "sound": "exercises_hoeren_sie_die_woerter_a"
+                    "sound": "exercises_hoeren_sie_die_woerter_b"
                   },
                   {
                     "id": "31912d6b-da7c-44df-b650-77fcabee73c4",
@@ -161,7 +161,7 @@
                     "id": "736719c2-0d26-4e30-a2ed-09435e9b45de",
                     "type": "ExplanationText",
                     "text": "Markieren Sie alle A und a.",
-                    "sound": "exercises_markieren_sie_alle_a_a"
+                    "sound": "exercises_markieren_sie_alle_a_b"
                   },
                   {
                     "id": "46ad40b9-3cb6-4958-9c28-85686061d1c6",
@@ -314,14 +314,135 @@
           {
             "id": "01196a10-507b-4216-ae20-931a0494c265",
             "title": "Hallo!",
-            "children": [],
-            "icon": "ios-chatbubbles"
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "4346b3df-e2c1-47e1-85f5-24da3d9f82a2",
+                "type": "TutorialVideo",
+                "video": "video_ane"
+              },
+              {
+                "id": "b6402928-136f-40b4-9309-7d394bafc540",
+                "type": "ExplanationText",
+                "text": "Hören Sie die Wörter.",
+                "sound": "exercises_hoeren_sie_die_woerter_a"
+              },
+              {
+                "id": "30812b15-7497-4eae-a208-9cad4e35f7dd",
+                "type": "ShowWord",
+                "word": "morgen"
+              },
+              {
+                "id": "59bc52e3-7bf9-4341-b9d1-9a87321b29fb",
+                "type": "ShowWord",
+                "word": "guten_morgen"
+              },
+              {
+                "id": "cd03ce5b-a899-4138-b531-d53922df7bdd",
+                "type": "ShowWord",
+                "word": "tag"
+              },
+              {
+                "id": "bd17813b-ba62-4194-b406-7d44bc8f6b8d",
+                "type": "ShowWord",
+                "word": "guten_tag"
+              },
+              {
+                "id": "c88a5dd7-6377-484a-adb1-e8c2f4e75186",
+                "type": "ShowWord",
+                "word": "abend"
+              },
+              {
+                "id": "594a8eb2-5c53-4a0a-a002-db6a61d20332",
+                "type": "ShowWord",
+                "word": "guten_abend"
+              },
+              {
+                "id": "f3c63be7-c8a3-4bb7-9580-2b6d90618861",
+                "title": "MatchImage",
+                "children": [
+                  {
+                    "id": "bbb882b2-1361-4c9f-9d47-bec066d78c0e",
+                    "type": "MatchImage",
+                    "words": ["sofa", "tag", "abend", "dose"],
+                    "correctIndex": 1
+                  },
+                  {
+                    "id": "aa5b4aa8-a8ea-446e-ba15-ce4d52296b22",
+                    "type": "MatchImage",
+                    "words": ["guten_morgen", "affe", "guten_abend", "oma"],
+                    "correctIndex": 2
+                  },
+                  {
+                    "id": "0de46f1b-378c-4f5e-821f-97c62c403281",
+                    "type": "MatchImage",
+                    "words": ["nadel", "banane", "morgen", "tag"],
+                    "correctIndex": 2
+                  },
+                  {
+                    "id": "5b7458a1-3531-456e-a05c-6d76c61e6ecf",
+                    "type": "MatchImage",
+                    "words": ["sofa", "kanne", "nadel", "affe"],
+                    "correctIndex": 1
+                  },
+                  {
+                    "id": "23cdacc4-0b5c-44da-9890-cadb73427fd4",
+                    "type": "MatchImage",
+                    "words": ["nase", "oma", "ananas", "apfel"],
+                    "correctIndex": 0
+                  },
+                  {
+                    "id": "6bd8edd9-38c3-4225-b560-d28ef610e766",
+                    "type": "MatchImage",
+                    "words": ["kanne", "sonne", "nudeln", "kaffee"],
+                    "correctIndex": 3
+                  },
+                  {
+                    "id": "1a7aca93-7860-40d4-9e94-ae87cbce034c",
+                    "type": "MatchImage",
+                    "words": ["nase", "oma", "sonne", "affe"],
+                    "correctIndex": 2
+                  },
+                  {
+                    "id": "b8d30a35-5d2b-4c4f-9b4f-62230b084ff4",
+                    "type": "MatchImage",
+                    "words": ["nudeln", "oma", "kino", "dose"],
+                    "correctIndex": 0
+                  },
+                  {
+                    "id": "31577d72-e4bc-4199-96e9-a8c790e80954",
+                    "type": "MatchImage",
+                    "words": ["apfel", "ente", "nadel", "esel"],
+                    "correctIndex": 1
+                  },
+                  {
+                    "id": "b80ef014-4040-40ad-916d-5956dd80a5d0",
+                    "type": "MatchImage",
+                    "words": ["nudeln", "affe", "abend", "morgen"],
+                    "correctIndex": 2
+                  }
+                ]
+              },
+              {
+                "id": "6742d62f-0e2c-4df7-935c-38999918046e",
+                "type": "PraiseVideo",
+                "video": "praise2",
+                "text": "Prima! Weiter so!"
+              }
+            ]
           },
           {
             "id": "e5ed7299-8bdd-42a2-97f8-0366faa42296",
             "title": "A N E",
-            "children": [],
-            "icon": "ios-refresh"
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "317a5d0d-3167-43d1-a0cc-5ce29de697ab",
+                "type": "ExplanationText",
+                "text": "Finden Sie den Buchstaben.",
+                "sound": "exercises_finden_sie_den_buchstaben_b"
+              }
+            ]
           }
         ]
       }
