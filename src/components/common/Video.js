@@ -62,6 +62,9 @@ export default class VideoComponent extends Component {
       this.setState({
         isFinished: true
       });
+      if (this.props.onPlayEnd) {
+        this.props.onPlayEnd();
+      }
     }
   };
 

@@ -1,4 +1,4 @@
-import { map, mergeAll } from 'ramda';
+import { find, identity, map, mergeAll } from 'ramda';
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
@@ -16,6 +16,13 @@ import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
 import { PRIMARY } from './styles/colors';
 import Word from './word';
+
+import loadVideo from './assets/videos';
+
+export const getVideo = id => {
+  const load = loadVideo[id];
+  return load && load();
+};
 
 export class AppRoutes extends Component {
   constructor(props) {
@@ -116,8 +123,15 @@ export class AppRoutes extends Component {
                   return null;
                 }
 
+                const nexts = map(
+                  ({ id }) => this.getNextChild(id),
+                  this.state.course.children
+                );
+                const next = find(identity, nexts);
+
                 return [
                   <Course
+                    next={next && next.id}
                     key="course"
                     getProgress={this.getProgress}
                     resetProgress={this.resetProgress}
@@ -170,6 +184,7 @@ export class AppRoutes extends Component {
                 const exercise = new exerciseType.Exercise(
                   mergeAll([
                     props,
+                    props.video && { video: getVideo(props.video) },
                     props.sound && { sound: getSound(props.sound) },
                     props.sounds && { sounds: map(getSound, props.sounds) },
                     props.word && { word: new Word(props.word) },

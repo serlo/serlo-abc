@@ -1,8 +1,10 @@
 // @ts-ignore: TODO: add declaration file
 import { Entypo } from '@expo/vector-icons';
+// @ts-ignore: TODO: add declaration file
+import { Constants } from 'expo';
 import { identity, is, merge } from 'ramda';
 import * as React from 'react';
-import { StatusBar, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 // @ts-ignore: TODO: add declaration file
 import GestureRecognizer from 'react-native-swipe-gestures';
 
@@ -39,7 +41,7 @@ const styles = StyleSheet.create({
     position: 'absolute'
   },
   top: {
-    top: (StatusBar.currentHeight || 20) + 15
+    top: Constants.statusBarHeight + 15
   },
   bottom: {
     bottom: 15
@@ -64,7 +66,7 @@ class Exercise<Props, State> extends React.Component<
 
     this.state = {
       state,
-      isCorrect: exercise.isCorrect(state),
+      isCorrect: exercise.initiallyCorrect && exercise.isCorrect(state),
       submitted: false
     };
   }

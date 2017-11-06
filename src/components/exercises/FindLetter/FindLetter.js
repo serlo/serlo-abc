@@ -69,7 +69,7 @@ class FindLetter extends Component {
           justifyContent: 'space-around'
         }}
       >
-        <WordImageWithSounds word={this.props.word} longSound />
+        <WordImageWithSounds playInitially word={this.props.word} longSound />
         <View style={{ flexDirection: 'row' }}>{letters}</View>
       </View>
     );

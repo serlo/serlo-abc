@@ -294,23 +294,26 @@ exports[` 1`] = `
     >
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#73dbff",
-            "borderRadius": 9999,
-            "elevation": 10,
-            "height": 40,
-            "justifyContent": "center",
-            "padding": 5,
-            "shadowColor": "rgba(0, 0, 0, 0.1)",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": 4,
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#73dbff",
+              "borderRadius": 9999,
+              "elevation": 10,
+              "height": 40,
+              "justifyContent": "center",
+              "padding": 5,
+              "shadowColor": "rgba(0, 0, 0, 0.1)",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 4,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+              "width": 40,
             },
-            "shadowOpacity": 1,
-            "shadowRadius": 0,
-            "width": 40,
-          }
+            undefined,
+          ]
         }
       >
         <Text
@@ -363,23 +366,26 @@ exports[` 1`] = `
     >
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#dbf5f5",
-            "borderRadius": 9999,
-            "elevation": 10,
-            "height": 40,
-            "justifyContent": "center",
-            "padding": 5,
-            "shadowColor": "rgba(0, 0, 0, 0.1)",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": 4,
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#dbf5f5",
+              "borderRadius": 9999,
+              "elevation": 10,
+              "height": 40,
+              "justifyContent": "center",
+              "padding": 5,
+              "shadowColor": "rgba(0, 0, 0, 0.1)",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 4,
+              },
+              "shadowOpacity": 0,
+              "shadowRadius": 0,
+              "width": 40,
             },
-            "shadowOpacity": 0,
-            "shadowRadius": 0,
-            "width": 40,
-          }
+            undefined,
+          ]
         }
       >
         <Text
@@ -690,23 +696,26 @@ exports[` 2`] = `
     >
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#73dbff",
-            "borderRadius": 9999,
-            "elevation": 10,
-            "height": 40,
-            "justifyContent": "center",
-            "padding": 5,
-            "shadowColor": "rgba(0, 0, 0, 0.1)",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": 4,
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#73dbff",
+              "borderRadius": 9999,
+              "elevation": 10,
+              "height": 40,
+              "justifyContent": "center",
+              "padding": 5,
+              "shadowColor": "rgba(0, 0, 0, 0.1)",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 4,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+              "width": 40,
             },
-            "shadowOpacity": 1,
-            "shadowRadius": 0,
-            "width": 40,
-          }
+            undefined,
+          ]
         }
       >
         <Text
@@ -759,23 +768,26 @@ exports[` 2`] = `
     >
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#73dbff",
-            "borderRadius": 9999,
-            "elevation": 10,
-            "height": 40,
-            "justifyContent": "center",
-            "padding": 5,
-            "shadowColor": "rgba(0, 0, 0, 0.1)",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": 4,
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#73dbff",
+              "borderRadius": 9999,
+              "elevation": 10,
+              "height": 40,
+              "justifyContent": "center",
+              "padding": 5,
+              "shadowColor": "rgba(0, 0, 0, 0.1)",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 4,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+              "width": 40,
             },
-            "shadowOpacity": 1,
-            "shadowRadius": 0,
-            "width": 40,
-          }
+            undefined,
+          ]
         }
       >
         <Text
@@ -1086,23 +1098,26 @@ exports[` 3`] = `
     >
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#73dbff",
-            "borderRadius": 9999,
-            "elevation": 10,
-            "height": 40,
-            "justifyContent": "center",
-            "padding": 5,
-            "shadowColor": "rgba(0, 0, 0, 0.1)",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": 4,
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#73dbff",
+              "borderRadius": 9999,
+              "elevation": 10,
+              "height": 40,
+              "justifyContent": "center",
+              "padding": 5,
+              "shadowColor": "rgba(0, 0, 0, 0.1)",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 4,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+              "width": 40,
             },
-            "shadowOpacity": 1,
-            "shadowRadius": 0,
-            "width": 40,
-          }
+            undefined,
+          ]
         }
       >
         <Text
@@ -1155,23 +1170,26 @@ exports[` 3`] = `
     >
       <View
         style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#73dbff",
-            "borderRadius": 9999,
-            "elevation": 10,
-            "height": 40,
-            "justifyContent": "center",
-            "padding": 5,
-            "shadowColor": "rgba(0, 0, 0, 0.1)",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": 4,
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#73dbff",
+              "borderRadius": 9999,
+              "elevation": 10,
+              "height": 40,
+              "justifyContent": "center",
+              "padding": 5,
+              "shadowColor": "rgba(0, 0, 0, 0.1)",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 4,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+              "width": 40,
             },
-            "shadowOpacity": 1,
-            "shadowRadius": 0,
-            "width": 40,
-          }
+            undefined,
+          ]
         }
       >
         <Text

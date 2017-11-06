@@ -1,20 +1,19 @@
 import React from 'react';
 import { View } from 'react-native';
-import Video from '../common/Video';
+import Video from '../../common/Video';
 
 const styles = {
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'black'
+    justifyContent: 'center'
   }
 };
 
-const TutorialVideo = ({ video }) => {
+const TutorialVideo = ({ setState, video }) => {
   return (
     <View style={styles.container}>
-      <Video video={video} />
+      <Video video={video} onPlayEnd={() => setState(true)} />
     </View>
   );
 };

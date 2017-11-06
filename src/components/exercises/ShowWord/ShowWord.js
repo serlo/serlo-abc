@@ -23,7 +23,7 @@ const ShowWord = ({ word, letter, sound, setState, repeat }) => {
         key={key}
         style={[
           { padding: 5 },
-          toUpper(char) === toUpper(letter) ? highlightStyle : null
+          letter && toUpper(char) === toUpper(letter) ? highlightStyle : null
         ]}
       >
         <Text style={DEFAULT}>{char}</Text>
