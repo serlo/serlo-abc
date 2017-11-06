@@ -17,6 +17,13 @@ import ProgressStorage from './storage/ProgressStorage';
 import { PRIMARY } from './styles/colors';
 import Word from './word';
 
+import loadVideo from './assets/videos';
+
+export const getVideo = id => {
+  const load = loadVideo[id];
+  return load && load();
+};
+
 export class AppRoutes extends Component {
   constructor(props) {
     super(props);
@@ -177,6 +184,7 @@ export class AppRoutes extends Component {
                 const exercise = new exerciseType.Exercise(
                   mergeAll([
                     props,
+                    props.video && { video: getVideo(props.video) },
                     props.sound && { sound: getSound(props.sound) },
                     props.sounds && { sounds: map(getSound, props.sounds) },
                     props.word && { word: new Word(props.word) },

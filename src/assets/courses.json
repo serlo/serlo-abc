@@ -42,6 +42,11 @@
                 "sound": "exercises_wiederholen_sie_den_buchstaben_a"
               },
               {
+                "id": "13fcac07-13de-487e-b4d9-435ef653f779",
+                "type": "TutorialVideo",
+                "video": "explanation_show_letter"
+              },
+              {
                 "id": "29f8cb0a-6fc3-4220-be34-6cfa7cfabbdd",
                 "type": "ShowLetterRepeat",
                 "letter": "A",
@@ -56,6 +61,11 @@
                     "type": "ExplanationText",
                     "text": "Hören Sie die Wörter.",
                     "sound": "exercises_hoeren_sie_die_woerter_a"
+                  },
+                  {
+                    "id": "31912d6b-da7c-44df-b650-77fcabee73c4",
+                    "type": "TutorialVideo",
+                    "video": "explanation_show_word"
                   },
                   {
                     "id": "1c407d77-f21d-40f2-9f60-ff981eaf5f71",
@@ -208,6 +218,72 @@
                     "word": "sonne"
                   }
                 ]
+              },
+              {
+                "id": "c848306b-bf18-45b2-8a88-23f3329bf394",
+                "title": "MatchImage",
+                "children": [
+                  {
+                    "id": "8810c9df-bebe-4f8e-8c28-f7a773917b44",
+                    "type": "MatchImage",
+                    "words": ["dose", "ananas", "sonne", "affe"],
+                    "correctIndex": 1
+                  },
+                  {
+                    "id": "4d6d55f4-2e64-497d-8439-b13b368f953c",
+                    "type": "MatchImage",
+                    "words": ["dose", "sonne", "ananas", "oma"],
+                    "correctIndex": 3
+                  },
+                  {
+                    "id": "0f4a418b-7486-4fb3-baaa-8d8a66b4eeb3",
+                    "type": "MatchImage",
+                    "words": ["affe", "dose", "sofa", "oma"],
+                    "correctIndex": 1
+                  },
+                  {
+                    "id": "74236aa5-2dd9-4b33-9628-c29a52af1ceb",
+                    "type": "MatchImage",
+                    "words": ["dose", "oma", "esel", "affe"],
+                    "correctIndex": 2
+                  },
+                  {
+                    "id": "ace6c4c3-28a6-4638-94bc-d908dad55120",
+                    "type": "MatchImage",
+                    "words": ["nase", "oma", "ananas", "apfel"],
+                    "correctIndex": 0
+                  },
+                  {
+                    "id": "88cc6fd7-20b5-48c5-b458-6546cee75e4a",
+                    "type": "MatchImage",
+                    "words": ["dose", "affe", "sonne", "apfel"],
+                    "correctIndex": 3
+                  },
+                  {
+                    "id": "866b4d51-d466-4165-a43f-af1748105c5c",
+                    "type": "MatchImage",
+                    "words": ["nase", "oma", "sonne", "affe"],
+                    "correctIndex": 2
+                  },
+                  {
+                    "id": "c3aa57fa-1508-4671-8e07-0da6ac0cf356",
+                    "type": "MatchImage",
+                    "words": ["dose", "affe", "sonne", "esel"],
+                    "correctIndex": 1
+                  },
+                  {
+                    "id": "0eb57f8f-5a78-4039-ba57-ffc0a1fbed9a",
+                    "type": "MatchImage",
+                    "words": ["sofa", "apfel", "oma", "dose"],
+                    "correctIndex": 3
+                  }
+                ]
+              },
+              {
+                "id": "58933346-6fbe-476f-a937-6a9ae5576dcf",
+                "type": "PraiseVideo",
+                "video": "praise1",
+                "text": "Super!"
               }
             ]
           },
