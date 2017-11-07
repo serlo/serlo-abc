@@ -226,9 +226,9 @@
   version "6.0.88"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.88.tgz#f618f11a944f6a18d92b5c472028728a3e3d4b66"
 
-"@types/ramda@^0.25.0":
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.25.0.tgz#f62d5a9f76b7bb40eb45cf69dac0ac548aca9222"
+"@types/ramda@^0.25.3":
+  version "0.25.3"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.25.3.tgz#ae5d1714e1c8b1d2622deca3690bd3e2fd0446dd"
 
 "@types/react-native@^0.49.5":
   version "0.49.5"
