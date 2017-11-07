@@ -26,12 +26,10 @@
     "storybook": "storybook start -p 7007",
     "test": "jest",
     "test:watch": "jest --watch",
-    "format":
-      "prettier --write \"{{packages,scripts,src,storybook}/**/*,*}.{ts,tsx,js,jsx,json}\"",
+    "format": "prettier --write \"{{packages,scripts,src,storybook}/**/*,*}.{ts,tsx,js,jsx,json}\"",
     "lint:js": "eslint \"{{packages,scripts,src,storybook}/**/*,*}.{js,jsx}\"",
     "lint:ts": "tslint \"{{packages,scripts,src,storybook}/**/*,*}.{ts,tsx}\"",
-    "lint":
-      "npm-run-all --print-name --continue-on-error --sequential lint:* tsc",
+    "lint": "npm-run-all --print-name --continue-on-error --sequential lint:* tsc",
     "precommit": "lint-staged"
   },
   "config": {
@@ -49,7 +47,7 @@
     "react-router-native": "^4.2.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.2.13",
+    "@storybook/addon-actions": "^3.2.14",
     "@storybook/react-native": "^3.2.13",
     "@types/chroma-js": "^1.3.3",
     "@types/gm": "^1.17.33",
@@ -92,10 +90,11 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-        "<rootDir>/__mocks__/fileMock.js"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
     },
     "preset": "jest-expo-ts",
-    "setupFiles": ["<rootDir>/.enzyme.js"]
+    "setupFiles": [
+      "<rootDir>/.enzyme.js"
+    ]
   }
 }
