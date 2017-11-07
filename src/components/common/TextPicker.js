@@ -1,4 +1,4 @@
-import { addIndex, map } from 'ramda';
+import { addIndex, map, max, reduce, repeat } from 'ramda';
 import React, { Component } from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 
@@ -49,6 +49,10 @@ class TextPicker extends Component {
   };
 
   render() {
+    const optionLengths = map(option => option.length, this.props.options);
+    const maxLength = reduce(max, 1, optionLengths);
+    const defaultText = repeat('  ', maxLength).join('');
+
     return (
       <View
         style={{
@@ -73,7 +77,7 @@ class TextPicker extends Component {
         <TouchableOpacity onPress={this.togglePickerOptions}>
           <View style={this.styles.button}>
             <Text style={this.styles.text}>
-              {this.props.selectedValue || ' '}
+              {this.props.selectedValue || defaultText}
             </Text>
           </View>
         </TouchableOpacity>

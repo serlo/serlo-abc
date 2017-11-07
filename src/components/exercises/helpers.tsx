@@ -1,4 +1,4 @@
-import { forEach, map, uniq } from 'ramda';
+import { addIndex, forEach, map, uniq } from 'ramda';
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 
@@ -10,6 +10,8 @@ import { play } from '../../helpers/audio';
 // @ts-ignore: TODO: migrate to TypeScript
 import { LoadSounds } from '../helpers/Audio';
 import Container from '../screens/Exercise';
+
+const mapIndexed = addIndex(map);
 
 const wrapExercise = <Props, State>(
   Exercise: new (props: Props) => AbstractExercise<Props, State>,
@@ -58,10 +60,10 @@ export const createElementsFromFixtures = <Props, State>({
   /* tslint:disable-next-line:no-any TODO: */
   createElement: (props: any) => React.ReactElement<any>;
 }> => [
-  ...map(props => {
+  ...mapIndexed((props, index) => {
     const createElement = wrapExercise(Exercise, Component, props);
 
-    return { name: 'default', createElement };
+    return { name: `default ${index}`, createElement };
   }, getPropsFromFixtures(fixtures)),
   ...map(({ name, state, props }) => {
     const createElement = wrapExercise(Exercise, Component, props, state);
