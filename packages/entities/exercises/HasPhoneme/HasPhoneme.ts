@@ -11,20 +11,38 @@ export interface IState {
   soundsPlayed: boolean;
 }
 
-class HasPhoneme extends AbstractExercise<IProps, IState> {
+export interface IFeedback {
+  highlightedChoice?: boolean;
+}
+
+class HasPhoneme extends AbstractExercise<IProps, IState, IFeedback> {
   public getInitialState() {
     return { soundsPlayed: false };
   }
 
-  public isCorrect({ containsPhoneme }: IState) {
-    const { phoneme, word } = this.props;
-    const wordString = word.toString().toUpperCase();
+  public getFeedback(state: IState) {
+    if (this.isSubmitDisabled(state) || this.isCorrect(state)) {
+      return {};
+    }
 
-    return containsPhoneme === (wordString.indexOf(phoneme) !== -1);
+    return {
+      highlightedChoice: state.containsPhoneme
+    };
+  }
+
+  public isCorrect({ containsPhoneme }: IState) {
+    return containsPhoneme === this.containsPhoneme();
   }
 
   public isSubmitDisabled({ soundsPlayed, containsPhoneme }: IState) {
     return !soundsPlayed || typeof containsPhoneme === 'undefined';
+  }
+
+  private containsPhoneme(): boolean {
+    const { phoneme, word } = this.props;
+    const wordString = word.toString().toUpperCase();
+
+    return wordString.indexOf(phoneme) !== -1;
   }
 }
 
