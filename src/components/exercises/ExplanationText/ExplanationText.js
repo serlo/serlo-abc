@@ -5,6 +5,7 @@ import { View, Text } from 'react-native';
 import { DEFAULT } from '../../../styles/text';
 import { PlaySounds } from '../../helpers/PlaySounds';
 import { RoundIconButton } from '../../common/buttons';
+import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 
 const styles = {
   container: {
@@ -16,22 +17,24 @@ const styles = {
 };
 
 const ExplanationText = ({ text, sound, setState }) => (
-  <PlaySounds
-    playInitially
-    onPlayEnd={() => setState(true)}
-    sounds={[sound]}
-    render={buttonProps => (
-      <View style={styles.container}>
-        <Text style={styles.text}>{text}</Text>
-        <RoundIconButton
-          IconComponent={Ionicons}
-          name="md-volume-up"
-          size={40}
-          {...buttonProps}
-        />
-      </View>
-    )}
-  />
+  <PortraitScreenOrientation>
+    <PlaySounds
+      playInitially
+      onPlayEnd={() => setState(true)}
+      sounds={[sound]}
+      render={buttonProps => (
+        <View style={styles.container}>
+          <Text style={styles.text}>{text}</Text>
+          <RoundIconButton
+            IconComponent={Ionicons}
+            name="md-volume-up"
+            size={40}
+            {...buttonProps}
+          />
+        </View>
+      )}
+    />
+  </PortraitScreenOrientation>
 );
 
 export default ExplanationText;

@@ -7,6 +7,7 @@ import { PRIMARY } from '../../styles/colors';
 import RoundText from '../common/RoundText';
 import RoundTextButton from '../common/RoundTextButton';
 import { LoadSound } from '../helpers/Audio';
+import { PortraitScreenOrientation } from '../helpers/screen-orientation';
 
 const mapIndexed = addIndex(map);
 
@@ -52,40 +53,42 @@ const SyllableRow = ({
 );
 
 const SyllableTable = ({ letters, sound, ...props }) => (
-  <LoadSound
-    sound={sound}
-    render={sound => (
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: PRIMARY,
-          alignItems: 'center'
-        }}
-      >
+  <PortraitScreenOrientation>
+    <LoadSound
+      sound={sound}
+      render={sound => (
         <View
           style={{
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'column',
-            marginTop: 50
+            flex: 1,
+            backgroundColor: PRIMARY,
+            alignItems: 'center'
           }}
         >
-          {mapIndexed(
-            (letter, letterKey) => (
-              <SyllableRow
-                key={letterKey}
-                letter={letter}
-                letterKey={letterKey}
-                sound={sound}
-                {...props}
-              />
-            ),
-            letters
-          )}
+          <View
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'column',
+              marginTop: 50
+            }}
+          >
+            {mapIndexed(
+              (letter, letterKey) => (
+                <SyllableRow
+                  key={letterKey}
+                  letter={letter}
+                  letterKey={letterKey}
+                  sound={sound}
+                  {...props}
+                />
+              ),
+              letters
+            )}
+          </View>
         </View>
-      </View>
-    )}
-  />
+      )}
+    />
+  </PortraitScreenOrientation>
 );
 
 export default SyllableTable;

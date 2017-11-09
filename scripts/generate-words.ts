@@ -3,7 +3,7 @@
 import * as path from 'path';
 import * as R from 'ramda';
 
-import { writeFile } from '../packages/node-promises/index';
+import { writeFile } from '../packages/node-promises';
 import { Article, IWord } from '../src/word';
 // Legacy words_data from https://github.com/serlo-org/abc-legacy/blob/gh-pages/try/js/word_data.js
 // @ts-ignore

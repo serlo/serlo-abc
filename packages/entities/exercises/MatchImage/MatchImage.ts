@@ -1,4 +1,4 @@
-import { Optional } from '../../../../src/types/index';
+import { Optional } from '../../../../src/types';
 // TODO: don't depend on React Native app
 import Word from '../../../../src/word';
 import AbstractExercise from '../AbstractExercise';

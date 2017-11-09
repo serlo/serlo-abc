@@ -6,6 +6,7 @@ import { play } from '../../../helpers/audio';
 import { RoundIconButton } from '../../common/buttons';
 import RoundImageWithBorder from '../../common/RoundImageWithBorder';
 import { LoadSound } from '../../helpers/Audio';
+import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 
 const styles = {
   container: {
@@ -39,30 +40,32 @@ class MatchImage extends Component {
     const { sound } = this.props;
 
     return (
-      <View style={styles.container}>
-        <View>
-          <View style={styles.row}>
-            {this.createImageButton(0)}
-            {this.createImageButton(1)}
+      <PortraitScreenOrientation>
+        <View style={styles.container}>
+          <View>
+            <View style={styles.row}>
+              {this.createImageButton(0)}
+              {this.createImageButton(1)}
+            </View>
+            <View style={styles.row}>
+              {this.createImageButton(2)}
+              {this.createImageButton(3)}
+            </View>
           </View>
-          <View style={styles.row}>
-            {this.createImageButton(2)}
-            {this.createImageButton(3)}
+          <View style={[styles.row, { alignItems: 'flex-end' }]}>
+            <Text style={styles.bigLetter}>{this.props.text}</Text>
+            <RoundIconButton
+              IconComponent={Ionicons}
+              name="md-volume-up"
+              size={20}
+              onPress={() => play(sound)}
+              style={{
+                marginLeft: 10
+              }}
+            />
           </View>
         </View>
-        <View style={[styles.row, { alignItems: 'flex-end' }]}>
-          <Text style={styles.bigLetter}>{this.props.text}</Text>
-          <RoundIconButton
-            IconComponent={Ionicons}
-            name="md-volume-up"
-            size={20}
-            onPress={() => play(sound)}
-            style={{
-              marginLeft: 10
-            }}
-          />
-        </View>
-      </View>
+      </PortraitScreenOrientation>
     );
   }
 }

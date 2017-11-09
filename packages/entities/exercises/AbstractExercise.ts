@@ -5,6 +5,11 @@ abstract class AbstractExercise<Props, State> {
    * @member initiallyCorrect
    */
   public initiallyCorrect: boolean = false;
+  /**
+   * States iff the exercise can be submitted by swiping
+   * @member enableSubmitBySwipe
+   */
+  public enableSubmitBySwipe: boolean = true;
 
   /**
    * @param props the props that will be passed down to the exercise view

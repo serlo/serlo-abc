@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import Video from '../../common/Video';
+import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 
 const styles = {
   container: {
@@ -12,9 +13,11 @@ const styles = {
 
 const TutorialVideo = ({ setState, video }) => {
   return (
-    <View style={styles.container}>
-      <Video video={video} onPlayEnd={() => setState(true)} />
-    </View>
+    <PortraitScreenOrientation>
+      <View style={styles.container}>
+        <Video video={video} onPlayEnd={() => setState(true)} />
+      </View>
+    </PortraitScreenOrientation>
   );
 };
 
