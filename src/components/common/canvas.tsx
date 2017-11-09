@@ -1,26 +1,27 @@
 // @ts-ignore: TODO: add declaration file
 import { MaterialIcons } from '@expo/vector-icons';
 // @ts-ignore TODO: add declaration file
-import { Svg } from 'expo';
+import { Constants, Svg } from 'expo';
 import * as R from 'ramda';
 import * as React from 'react';
-import { PanResponder, PanResponderInstance, View } from 'react-native';
+import { PanResponder, PanResponderInstance, Text, View } from 'react-native';
 
-import { PRIMARY_WEAK } from '../../styles/colors';
+import { BLACK_TRANSPARENT, PRIMARY_WEAK } from '../../styles/colors';
+import { WithDimensions } from '../helpers/dimensions';
 import { RoundIconButton } from './buttons';
-// @ts-ignore TODO: add declaration file
-// import Svg, { Circle, G, Polyline } from 'react-native-svg';
 
 export type RawPoint = [number, number];
 export type RawPath = RawPoint[];
+
+interface Props {
+  strokeWidth: number;
+}
 
 interface State {
   paths: RawPath[];
 }
 
-const strokeWidth = 20;
-
-export class Canvas extends React.Component<{}, State> {
+export class Canvas extends React.Component<Props, State> {
   public state: State = {
     paths: []
   };
@@ -70,7 +71,13 @@ export class Canvas extends React.Component<{}, State> {
           this.dy = -event.nativeEvent.layout.y;
         }}
         {...this.panResponder.panHandlers}
-        style={{ flex: 1, width: '100%' }}
+        style={{
+          flex: 1,
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          top: Constants.statusBarHeight
+        }}
       >
         <Svg style={{ flex: 1 }}>
           {R.addIndex(R.map)(
@@ -79,7 +86,7 @@ export class Canvas extends React.Component<{}, State> {
                 <Svg.Circle
                   cx={path[0][0]}
                   cy={path[0][1]}
-                  r={strokeWidth / 2}
+                  r={this.props.strokeWidth / 2}
                   fill={PRIMARY_WEAK}
                 />
                 <Svg.Polyline
@@ -87,12 +94,12 @@ export class Canvas extends React.Component<{}, State> {
                   fill="none"
                   stroke={PRIMARY_WEAK}
                   strokeLinejoin="round"
-                  strokeWidth={strokeWidth}
+                  strokeWidth={this.props.strokeWidth}
                 />
                 <Svg.Circle
                   cx={path[path.length - 1][0]}
                   cy={path[path.length - 1][1]}
-                  r={strokeWidth / 2}
+                  r={this.props.strokeWidth / 2}
                   fill={PRIMARY_WEAK}
                 />
               </Svg.G>
@@ -102,8 +109,10 @@ export class Canvas extends React.Component<{}, State> {
         </Svg>
         <View
           style={{
+            width: '100%',
             alignItems: 'center',
-            paddingBottom: 15
+            position: 'absolute',
+            bottom: 15 + Constants.statusBarHeight
           }}
         >
           <RoundIconButton
@@ -120,9 +129,26 @@ export class Canvas extends React.Component<{}, State> {
     );
   }
 
-  // NOTE: it's better to append new value to given path during movement
-  // and keep paths to prevent recalculation every time
   private generateTextPoints(path: RawPath) {
     return R.map(point => point.join(','), path).join(' ');
   }
 }
+
+export const TextCanvas = ({ text }: { text: string }) => (
+  <WithDimensions
+    render={({ height }) => (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text
+          style={{
+            color: BLACK_TRANSPARENT,
+            fontSize: height / 2,
+            fontFamily: 'norddruck_arrows'
+          }}
+        >
+          {text}
+        </Text>
+        <Canvas strokeWidth={height / 20} />
+      </View>
+    )}
+  />
+);

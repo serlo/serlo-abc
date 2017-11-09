@@ -1,7 +1,7 @@
 import { ascend, dropWhile, filter } from 'ramda';
 import { Optional } from '../../src/types';
 import { AbstractNode, InternalNode } from '../entities/course';
-import { stableSortWith } from '../stable-sort/index';
+import { stableSortWith } from '../stable-sort';
 import AbstractCourseInteractor from './AbstractCourseInteractor';
 import createCourse from './CourseFactory';
 import { ICourseStructure } from './ICourseStructure';

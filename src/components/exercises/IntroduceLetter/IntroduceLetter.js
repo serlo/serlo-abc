@@ -4,6 +4,7 @@ import { View, Dimensions } from 'react-native';
 import { GREEN } from '../../../styles/colors';
 import RoundImageWithBorder from '../../common/RoundImageWithBorder';
 import RoundText from '../../common/RoundText';
+import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 
 const ScaleFourImages = ({ displaySize, letter, words }) => {
   const scale = displaySize / 360;
@@ -58,16 +59,18 @@ const ScaleFourImages = ({ displaySize, letter, words }) => {
 const IntroduceLetter = props => {
   const { width } = Dimensions.get('window');
   return (
-    <View
-      style={{
-        flex: 1,
-        backgroundColor: GREEN,
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}
-    >
-      <ScaleFourImages displaySize={width} {...props} />
-    </View>
+    <PortraitScreenOrientation>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: GREEN,
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <ScaleFourImages displaySize={width} {...props} />
+      </View>
+    </PortraitScreenOrientation>
   );
 };
 

@@ -245,5 +245,6 @@ const App = () => (
 
 export default loadFonts({
   norddruck: require('./assets/fonts/norddruck.ttf'),
+  norddruck_arrows: require('./assets/fonts/norddruck_arrows.ttf'),
   serlo: require('./assets/fonts/serlo.ttf')
 })(App);

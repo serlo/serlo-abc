@@ -6,6 +6,7 @@ import { TouchableOpacityProperties } from 'react-native';
 import loadSound from '../../assets/sounds';
 // @ts-ignore: transform to TypeScript
 import { play, playAll } from '../../helpers/audio';
+import { ReactRenderReturn } from '../../types';
 import { ISoundAsset } from '../../types/assets';
 // @ts-ignore: transform to TypeScript
 import { LoadSounds } from './Audio';
@@ -19,14 +20,7 @@ interface PlaySoundsProps {
   render: (
     buttonProps: TouchableOpacityProperties,
     isRecording: boolean
-  ) =>
-    | JSX.Element
-    | JSX.Element[]
-    | React.ReactPortal
-    | string
-    | number
-    | null
-    | false;
+  ) => ReactRenderReturn;
 }
 
 interface PlaySoundsInnerProps extends PlaySoundsProps {

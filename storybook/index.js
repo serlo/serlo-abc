@@ -15,5 +15,6 @@ const StorybookUI = getStorybookUI({ port: 7007, host: hostname });
 
 export default loadFonts({
   norddruck: require('../src/assets/fonts/norddruck.ttf'),
+  norddruck_arrows: require('../src/assets/fonts/norddruck_arrows.ttf'),
   serlo: require('../src/assets/fonts/serlo.ttf')
 })(StorybookUI);

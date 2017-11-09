@@ -1,4 +1,4 @@
-import { Optional } from '../../../../src/types/index';
+import { Optional } from '../../../../src/types';
 import AbstractExercise from '../AbstractExercise';
 
 export interface IProps {

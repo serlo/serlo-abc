@@ -85,16 +85,23 @@ class Exercise<Props, State> extends React.Component<
     const { exercise, Component } = this.props;
     const { isCorrect, state, submitted } = this.state;
 
-    return (
-      <GestureRecognizer
-        onSwipeLeft={() => {
+    const Container = exercise.enableSubmitBySwipe ? GestureRecognizer : View;
+    const containerProps = {
+      onSwipeLeft:
+        exercise.enableSubmitBySwipe &&
+        (() => {
           if (!exercise.isSubmitDisabled(state)) {
             this.submit();
           }
-        }}
-        config={{ directionalOffsetThreshold: 160 }}
-        style={{ flex: 1, backgroundColor: isCorrect ? GREEN : PRIMARY }}
-      >
+        }),
+      config: exercise.enableSubmitBySwipe && {
+        directionalOffsetThreshold: 160
+      },
+      style: { flex: 1, backgroundColor: isCorrect ? GREEN : PRIMARY }
+    };
+
+    return (
+      <Container {...containerProps}>
         <Component
           {...exercise.props}
           showFeedback={submitted && !isCorrect}
@@ -118,7 +125,7 @@ class Exercise<Props, State> extends React.Component<
             disabled={exercise.isSubmitDisabled(state)}
           />
         </View>
-      </GestureRecognizer>
+      </Container>
     );
   }
 

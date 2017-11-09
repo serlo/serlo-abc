@@ -7,6 +7,7 @@ import { WHITE_TRANSPARENT } from '../../../styles/colors';
 import { DEFAULT } from '../../../styles/text';
 import IconWithBackground from '../../common/IconWithBackground';
 import WordImageWithSounds from '../../common/WordImageWithSounds';
+import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 
 const repeatIcon = loadImage.repeat();
 const mapIndexed = addIndex(map);
@@ -55,14 +56,16 @@ const ShowWord = ({ word, letter, sound, setState, repeat }) => {
   );
 
   return (
-    <WordImageWithSounds
-      playInitially
-      longSound
-      record={repeat}
-      word={word}
-      onPlayEnd={() => setState(true)}
-      render={render}
-    />
+    <PortraitScreenOrientation>
+      <WordImageWithSounds
+        playInitially
+        longSound
+        record={repeat}
+        word={word}
+        onPlayEnd={() => setState(true)}
+        render={render}
+      />
+    </PortraitScreenOrientation>
   );
 };
 

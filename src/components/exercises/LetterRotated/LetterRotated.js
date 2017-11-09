@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 
 import RoundTextButton from '../../common/RoundTextButton';
+import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 
 class LetterRotated extends Component {
   getTransform = index => {
@@ -36,37 +37,39 @@ class LetterRotated extends Component {
 
   render() {
     return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: 'center'
-        }}
-      >
+      <PortraitScreenOrientation>
         <View
           style={{
-            flexDirection: 'row',
-            marginTop: 50,
-            alignItems: 'center',
-            justifyContent: 'center'
+            flex: 1,
+            alignItems: 'center'
           }}
         >
-          {this.createLetterButton(0)}
-          {this.createLetterButton(1)}
-          {this.createLetterButton(2)}
-        </View>
-        {this.props.difficulty >= 0.2 && (
           <View
             style={{
               flexDirection: 'row',
+              marginTop: 50,
               alignItems: 'center',
               justifyContent: 'center'
             }}
           >
-            {this.createLetterButton(3)}
-            {this.createLetterButton(4)}
+            {this.createLetterButton(0)}
+            {this.createLetterButton(1)}
+            {this.createLetterButton(2)}
           </View>
-        )}
-      </View>
+          {this.props.difficulty >= 0.2 && (
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              {this.createLetterButton(3)}
+              {this.createLetterButton(4)}
+            </View>
+          )}
+        </View>
+      </PortraitScreenOrientation>
     );
   }
 }
