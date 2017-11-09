@@ -17,10 +17,11 @@ import { RoundIconButton } from '../common/buttons';
 // @ts-ignore: TODO: migrate to TypeScript
 import { LoadSounds } from '../helpers/Audio';
 
-interface IProps<Props, State> {
-  exercise: AbstractExercise<Props, State>;
+interface IProps<Props, State, Feedback> {
+  exercise: AbstractExercise<Props, State, Feedback>;
   Component: React.ComponentType<{
     showFeedback: boolean;
+    feedback: Feedback;
     state: State;
     setState: (state: State) => void;
   }>;
@@ -30,9 +31,11 @@ interface IProps<Props, State> {
   onWrong: () => void;
 }
 
-interface IState<State> {
+interface IState<State, Feedback> {
   state: State;
+  feedback: Feedback;
   isCorrect: boolean;
+  showFeedback: boolean;
   submitted: boolean;
 }
 
@@ -54,11 +57,11 @@ const styles = StyleSheet.create({
   }
 });
 
-class Exercise<Props, State> extends React.Component<
-  IProps<Props, State>,
-  IState<State>
+class Exercise<Props, State, Feedback> extends React.Component<
+  IProps<Props, State, Feedback>,
+  IState<State, Feedback>
 > {
-  constructor(props: IProps<Props, State>) {
+  constructor(props: IProps<Props, State, Feedback>) {
     super(props);
 
     const { exercise } = props;
@@ -66,7 +69,9 @@ class Exercise<Props, State> extends React.Component<
 
     this.state = {
       state,
+      feedback: exercise.getFeedback(state),
       isCorrect: exercise.initiallyCorrect && exercise.isCorrect(state),
+      showFeedback: false,
       submitted: false
     };
   }
@@ -83,7 +88,7 @@ class Exercise<Props, State> extends React.Component<
 
   public render() {
     const { exercise, Component } = this.props;
-    const { isCorrect, state, submitted } = this.state;
+    const { feedback, isCorrect, state, showFeedback } = this.state;
 
     return (
       <GestureRecognizer
@@ -97,7 +102,8 @@ class Exercise<Props, State> extends React.Component<
       >
         <Component
           {...exercise.props}
-          showFeedback={submitted && !isCorrect}
+          showFeedback={showFeedback}
+          feedback={feedback}
           state={state}
           setState={this.updateState}
         />
@@ -127,11 +133,14 @@ class Exercise<Props, State> extends React.Component<
     const { state } = this.state;
 
     const isCorrect = exercise.isCorrect(state);
+    const feedback = exercise.getFeedback(state);
 
     isCorrect ? onCorrect() : onWrong();
 
     this.setState({
-      isCorrect: exercise.isCorrect(state),
+      isCorrect,
+      feedback,
+      showFeedback: !isCorrect,
       submitted: true
     });
   };
@@ -145,6 +154,7 @@ class Exercise<Props, State> extends React.Component<
       isObject(oldState) ? merge(oldState) : identity;
 
     this.setState(({ state }) => ({
+      showFeedback: false,
       state: apply(state)(
         typeof newState === 'function' ? newState(state) : newState
       )

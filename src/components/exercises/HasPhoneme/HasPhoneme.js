@@ -6,12 +6,18 @@ import RoundTextButton from '../../common/RoundTextButton';
 
 class HasPhoneme extends Component {
   createChoiceButton = containsPhoneme => {
+    const { showFeedback, feedback } = this.props;
+
+    const wrong =
+      showFeedback && feedback.highlightedChoice === containsPhoneme;
+
     return (
       <RoundTextButton
         onPress={() => {
           this.props.setState({ containsPhoneme });
         }}
         highlighted={containsPhoneme === this.props.state.containsPhoneme}
+        wrong={wrong}
         text={this.props.phoneme.toUpperCase() + this.props.phoneme}
         size={60}
         style={[
@@ -36,7 +42,7 @@ class HasPhoneme extends Component {
         }}
       >
         <WordImageWithSounds
-          playInitially
+          playInitially={!this.props.state.soundsPlayed}
           word={this.props.word}
           onPlayEnd={() => {
             this.props.setState({ soundsPlayed: true });

@@ -6,7 +6,8 @@ import {
   WHITE,
   WHITE_TRANSPARENT,
   PRIMARY_WEAK,
-  TRANSPARENT
+  TRANSPARENT,
+  RED
 } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 
@@ -48,18 +49,25 @@ class RoundText extends Component {
   }
 
   render() {
-    const { highlighted, crossedOut, text, style, textStyle } = this.props;
+    const {
+      highlighted,
+      crossedOut,
+      text,
+      style,
+      textStyle,
+      wrong
+    } = this.props;
     const { size, fontSize } = this.state;
     return (
       <View
         style={[
           {
-            backgroundColor: WHITE_TRANSPARENT,
+            backgroundColor: wrong ? RED : WHITE_TRANSPARENT,
             borderRadius: 9999,
-            borderColor: highlighted ? PRIMARY_WEAK : WHITE
+            borderColor: highlighted && !wrong ? PRIMARY_WEAK : WHITE
           },
           style,
-          highlighted ? { backgroundColor: WHITE } : {}
+          highlighted ? { backgroundColor: wrong ? RED : WHITE } : {}
         ]}
       >
         <Animated.View
@@ -74,8 +82,9 @@ class RoundText extends Component {
           <Animated.Text
             style={[
               DEFAULT,
-              highlighted ? { color: PRIMARY_WEAK } : {},
+              highlighted && { color: PRIMARY_WEAK },
               { backgroundColor: TRANSPARENT, marginTop: 5 },
+              wrong && { color: WHITE },
               textStyle,
               { fontSize }
             ]}
@@ -89,7 +98,7 @@ class RoundText extends Component {
                 height: 3.5,
                 width: size,
                 borderRadius: 1,
-                backgroundColor: highlighted ? PRIMARY_WEAK : WHITE,
+                backgroundColor: highlighted && !wrong ? PRIMARY_WEAK : WHITE,
                 transform: [{ rotate: '-45deg' }],
                 opacity: 0.8
               }}
