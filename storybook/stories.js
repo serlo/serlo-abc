@@ -1,5 +1,6 @@
 import '../src/index.stories';
 import '../src/components/common/buttons.stories';
+import '../src/components/common/canvas.stories';
 import '../src/components/common/screens.stories';
 import '../src/components/exercises/FindLetter/index.stories';
 import '../src/components/exercises/ChooseArticle/index.stories';
