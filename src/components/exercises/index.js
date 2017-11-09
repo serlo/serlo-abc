@@ -8,18 +8,22 @@ import * as ShowWordRepeat from './ShowWordRepeat';
 import * as TutorialVideo from './TutorialVideo';
 import * as PraiseVideo from './PraiseVideo';
 import * as MatchImage from './MatchImage';
+import * as WriteLetter from './WriteLetter';
+import * as WriteWord from './WriteWord';
 
 const exercises = {
   ExplanationText,
   FindLetter,
   IntroduceLetter,
+  MatchImage,
+  PraiseVideo,
   ShowLetter,
   ShowLetterRepeat,
   ShowWord,
   ShowWordRepeat,
   TutorialVideo,
-  PraiseVideo,
-  MatchImage
+  WriteLetter,
+  WriteWord
 };
 
 export default type => {

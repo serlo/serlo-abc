@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import RoundTextButton from '../../common/RoundTextButton';
 import WordImageWithSounds from '../../common/WordImageWithSounds';
+import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 
 class HearWord extends Component {
   styles = {
@@ -39,20 +40,22 @@ class HearWord extends Component {
 
   render() {
     return (
-      <View style={this.styles.mainView}>
-        <View style={[this.styles.subView, { height: '35%' }]}>
-          <WordImageWithSounds
-            playInitially
-            word={this.props.words[this.props.correctIndex]}
-            onPlayEnd={() => {
-              this.props.setState({ soundsPlayed: true });
-            }}
-          />
+      <PortraitScreenOrientation>
+        <View style={this.styles.mainView}>
+          <View style={[this.styles.subView, { height: '35%' }]}>
+            <WordImageWithSounds
+              playInitially
+              word={this.props.words[this.props.correctIndex]}
+              onPlayEnd={() => {
+                this.props.setState({ soundsPlayed: true });
+              }}
+            />
+          </View>
+          <View style={this.styles.subView}>
+            {this.props.words.map(this.createWordButton)}
+          </View>
         </View>
-        <View style={this.styles.subView}>
-          {this.props.words.map(this.createWordButton)}
-        </View>
-      </View>
+      </PortraitScreenOrientation>
     );
   }
 }

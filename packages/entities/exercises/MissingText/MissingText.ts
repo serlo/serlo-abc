@@ -1,6 +1,6 @@
 // TODO: don't depend on React Native app
+import { Optional } from '../../../../src/types';
 import { IVideoAsset } from '../../../../src/types/assets';
-import { Optional } from '../../../../src/types/index';
 // TODO: don't depend on React Native app
 import Word from '../../../../src/word';
 import AbstractExercise from '../AbstractExercise';

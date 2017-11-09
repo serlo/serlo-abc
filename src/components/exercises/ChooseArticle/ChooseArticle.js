@@ -14,6 +14,7 @@ import {
 } from '../../../styles/colors';
 import { DEFAULT } from '../../../styles/text';
 import WordImageWithSounds from '../../common/WordImageWithSounds';
+import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 
 const mapIndexed = addIndex(map);
 
@@ -98,19 +99,23 @@ class ChooseArticle extends Component {
     );
 
     return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: 'center',
-          justifyContent: 'space-around'
-        }}
-      >
-        <WordImageWithSounds word={this.props.word} longSound />
-        <View style={{ flexDirection: 'row' }}>{letters}</View>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-          {articleButtons}
+      <PortraitScreenOrientation>
+        <View
+          style={{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'space-around'
+          }}
+        >
+          <WordImageWithSounds word={this.props.word} longSound />
+          <View style={{ flexDirection: 'row' }}>{letters}</View>
+          <View
+            style={{ flexDirection: 'row', justifyContent: 'space-between' }}
+          >
+            {articleButtons}
+          </View>
         </View>
-      </View>
+      </PortraitScreenOrientation>
     );
   }
 }

@@ -6,6 +6,7 @@ import { DEFAULT } from '../../../styles/text';
 import WordImageWithSounds from '../../common/WordImageWithSounds';
 import TextPicker from '../../common/TextPicker';
 import Video from '../../common/Video';
+import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 const mapIndexed = addIndex(map);
 
 const styles = {
@@ -58,10 +59,12 @@ const MissingText = ({ word, video, text, missing, options, ...props }) => {
   };
 
   return (
-    <View style={styles.container}>
-      {renderAssets()}
-      <View style={{ flexDirection: 'row' }}>{textParts}</View>
-    </View>
+    <PortraitScreenOrientation>
+      <View style={styles.container}>
+        {renderAssets()}
+        <View style={{ flexDirection: 'row' }}>{textParts}</View>
+      </View>
+    </PortraitScreenOrientation>
   );
 };
 

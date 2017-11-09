@@ -3,7 +3,7 @@ import { AsyncStorage } from 'react-native';
 import {
   IProgressStorage,
   ISerializedProgress
-} from '../../packages/entities-interactor/index';
+} from '../../packages/entities-interactor';
 
 class ProgressStorage implements IProgressStorage {
   public getProgress(id: string) {

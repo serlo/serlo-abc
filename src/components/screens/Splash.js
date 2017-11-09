@@ -8,6 +8,7 @@ import { BLACK } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 import RoundImageWithBorder from '../common/RoundImageWithBorder';
 import { LoadSound } from '../helpers/Audio';
+import { PortraitScreenOrientation } from '../helpers/screen-orientation';
 
 class Splash extends Component {
   componentDidMount() {
@@ -24,23 +25,25 @@ class Splash extends Component {
 
   render() {
     return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: 'center',
-          justifyContent: 'space-around'
-        }}
-      >
-        <RoundImageWithBorder image={loadImage['serlo']()} size={130} />
-        <View style={{ flexDirection: 'row' }}>
-          <Text style={[DEFAULT, { color: BLACK, fontFamily: 'serlo' }]}>
-            Serlo
-          </Text>
-          <Text style={[DEFAULT, { marginLeft: 5, color: '#007EC1' }]}>
-            abc
-          </Text>
+      <PortraitScreenOrientation>
+        <View
+          style={{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'space-around'
+          }}
+        >
+          <RoundImageWithBorder image={loadImage['serlo']()} size={130} />
+          <View style={{ flexDirection: 'row' }}>
+            <Text style={[DEFAULT, { color: BLACK, fontFamily: 'serlo' }]}>
+              Serlo
+            </Text>
+            <Text style={[DEFAULT, { marginLeft: 5, color: '#007EC1' }]}>
+              abc
+            </Text>
+          </View>
         </View>
-      </View>
+      </PortraitScreenOrientation>
     );
   }
 }

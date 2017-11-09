@@ -17,6 +17,8 @@ import '../src/components/exercises/ShowLetterRepeat/index.stories';
 import '../src/components/exercises/ShowWord/index.stories';
 import '../src/components/exercises/ShowWordRepeat/index.stories';
 import '../src/components/exercises/VideoQuestion/index.stories';
+import '../src/components/exercises/WriteLetter/index.stories';
+import '../src/components/exercises/WriteWord/index.stories';
 
 import '../src/components/common/NavigationMenu.stories.js';
 import '../src/components/exercises/BuildSentenceVideo.stories';

@@ -1,3 +1,4 @@
+import * as Canvas from './canvas/canvas';
 import * as ChooseArticle from './ChooseArticle';
 import * as DifferFromSymbol from './DifferFromSymbol';
 import * as FindLetter from './FindLetter';
@@ -11,6 +12,7 @@ import * as MissingText from './MissingText';
 import * as PlaySounds from './PlaySounds';
 import * as VideoQuestion from './VideoQuestion';
 export {
+  Canvas,
   FindLetter,
   InfoScreen,
   InfoScreenWithSounds,
