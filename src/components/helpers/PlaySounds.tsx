@@ -139,7 +139,8 @@ export const PlaySounds: React.SFC<PlaySoundsProps> = props => {
       sounds={sounds}
       /* tslint:disable-next-line:no-shadowed-variable */
       render={(sounds: Audio.Sound[], soundsLoaded: boolean) =>
-        soundsLoaded && <PlaySoundsInner {...props} sounds={sounds} />}
+        soundsLoaded && <PlaySoundsInner {...props} sounds={sounds} />
+      }
     />
   );
 };
