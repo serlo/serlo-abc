@@ -1,4 +1,4 @@
-abstract class AbstractExercise<Props, State> {
+abstract class AbstractExercise<Props, State, Feedback> {
   /**
    * States iff the exercise is solved initially (e.g. because the exercise
    * represents a instruction screen)
@@ -22,9 +22,15 @@ abstract class AbstractExercise<Props, State> {
   public abstract getInitialState(): State;
 
   /**
+   * @param state the state of the exercise
+   * @returns a representation of the feedback for the state
+   */
+  public abstract getFeedback(state: State): Feedback;
+
+  /**
    * Checks if a given state represents a correct solution
    * @param state the state of the exercise
-   * @returns true iff the current state represents a correct solution
+   * @returns true iff the state represents a correct solution
    */
   public abstract isCorrect(state: State): boolean;
 

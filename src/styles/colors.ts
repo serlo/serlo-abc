@@ -9,7 +9,7 @@ export const PRIMARY = '#00b4d5';
 export const PRIMARY_WEAK = '#73dbff';
 export const PRIMARY_STRONG = '#17bcde';
 
-export const RED = '#cf614d';
+export const RED = '#cf614d'; // rgba(255, 105, 39, 0.80);
 export const GREEN = '#b5ce4d';
 
 export const TRANSPARENT = 'transparent';
