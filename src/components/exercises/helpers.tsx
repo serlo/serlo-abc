@@ -91,7 +91,8 @@ export const createStoriesFromFixtures = <Props, State>(
             onWrong: () => {
               play(wrongSound);
             }
-          })}
+          })
+        }
       />
     ));
   }, createElementsFromFixtures(args));
