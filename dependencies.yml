@@ -3,13 +3,11 @@ collectors:
 - type: js-npm
   path: /
   actors:
-  # pull requests for updates to our major version
-  - type: js-npm
-    versions: "L.Y.Y"
-    # react version depends on Expo SDK and therefore fixed by chocie
-    dependencies_not_matching: "^(react|react-dom)$"
-  # create issues for new major versions
+  # create issues for any new versions except react and react native
   - type: repo-issue
-    versions: "Y.0.0 || 0.Y.0"
-    # react version depends on Expo SDK and therefore fixed by chocie
-    dependencies_not_matching: "^(react|react-dom)$"
+    versions: "Y.Y.Y"
+    dependencies_not_matching: "^(@types/)?(react|react-dom|react-native)$"
+  # report patch versions for react native
+  - type: repo-issue
+    versions: "L.L.Y"
+    dependencies: "^(@types/)?react-native$"

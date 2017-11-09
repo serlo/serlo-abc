@@ -137,7 +137,8 @@ export class AppRoutes extends Component {
                     resetProgress={this.resetProgress}
                     course={this.state.course}
                     goToSection={id =>
-                      history.push(`/node/${id}`, { level: 2 })}
+                      history.push(`/node/${id}`, { level: 2 })
+                    }
                   />
                 ];
               }}
