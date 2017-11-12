@@ -16,8 +16,13 @@ script:
 - yarn test
 
 deploy:
-  provider: script
-  script: scripts/deploy.sh $EXP_USERNAME $EXP_PASSWORD
+- provider: script
+  script: yarn deploy:development
+  skip_cleanup: true
+  on:
+    branch: development
+- provider: script
+  script: yarn deploy:master
   skip_cleanup: true
   on:
     branch: master

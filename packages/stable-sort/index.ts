@@ -1,6 +1,6 @@
-import { addIndex, ascend, map, prop, sortWith } from 'ramda';
+import * as R from 'ramda';
 
-const mapIndexed = addIndex(map);
+const mapIndexed = R.addIndex(R.map);
 
 export interface Indexed<T> {
   index: number;
@@ -12,16 +12,16 @@ export const stableSortWith = <T>(
   array: T[]
 ): T[] => {
   const indexedArray = mapIndexed((value, index) => ({ index, value }), array);
-  const indexedCmps = map(
+  const indexedCmps = R.map(
     cmp => (a: Indexed<T>, b: Indexed<T>) =>
-      cmp(prop('value', a), prop('value', b)),
+      cmp(R.prop<'value', T>('value', a), R.prop<'value', T>('value', b)),
     cmps
   );
 
-  const sortedArray = sortWith<Indexed<T>>(
-    [...indexedCmps, ascend(prop('index'))],
+  const sortedArray = R.sortWith<Indexed<T>>(
+    [...indexedCmps, R.ascend(R.prop('index'))],
     indexedArray
   );
 
-  return map(prop('value'), sortedArray);
+  return R.map(R.prop('value'), sortedArray);
 };
