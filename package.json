@@ -9,6 +9,10 @@
     "build:android": "exp build:android",
     "build:ios": "exp build:ios",
     "build:status": "exp build:status",
+    "deploy:development":
+      "npm-run-all --serial exp:config:development exp:login:travis exp:publish",
+    "deploy:master":
+      "npm-run-all --serial exp:config:master exp:login:travis exp:publish",
     "generate": "npm-run-all generate:*",
     "generate:ids": "node scripts/generate-ids",
     "generate:sounds": "ts-node scripts/generate-sounds",
@@ -17,8 +21,11 @@
     "generate:words": "ts-node scripts/generate-words",
     "postgenerate": "yarn format",
     "tsc": "tsc",
-    "exp:config": "node scripts/generate-app-config",
+    "exp:config:development": "ts-node scripts/generate-app-config-development",
+    "exp:config:master": "ts-node scripts/generate-app-config-master",
     "exp:login": "exp login",
+    "exp:login:travis":
+      "yarn exp:login --non-interactive --username $EXP_USERNAME --password $EXP_PASSWORD",
     "exp:publish": "exp publish",
     "start": "react-native-scripts start",
     "android": "react-native-scripts android",
