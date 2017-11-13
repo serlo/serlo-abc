@@ -3,18 +3,27 @@ import { View } from 'react-native';
 import RoundTextButton from '../../common/RoundTextButton';
 
 class DifferFromSymbol extends Component {
-  changeAnswer = answer => () => {
-    this.props.setState(answer);
-  };
+  createChoiceButton = answer => {
+    const buttonStyle = { margin: 5 };
+    const { symbols, showFeedback, feedback, state } = this.props;
+    const wrong = showFeedback && feedback.highlightedChoice === answer;
 
-  buttonIsHighlighted = answer => {
-    const { state } = this.props;
-    return answer === state;
+    const buttonIsHighlighted = answer === state;
+    return (
+      <RoundTextButton
+        style={buttonStyle}
+        highlighted={buttonIsHighlighted}
+        wrong={wrong}
+        text={symbols[answer]}
+        size={80}
+        onPress={() => {
+          this.props.setState(answer);
+        }}
+      />
+    );
   };
 
   render() {
-    const buttonStyle = { margin: 5 };
-    const { symbols } = this.props;
     return (
       <View
         style={{
@@ -32,27 +41,9 @@ class DifferFromSymbol extends Component {
             marginTop: 50
           }}
         >
-          <RoundTextButton
-            style={buttonStyle}
-            highlighted={this.buttonIsHighlighted(0)}
-            text={symbols[0]}
-            size={80}
-            onPress={this.changeAnswer(0)}
-          />
-          <RoundTextButton
-            style={buttonStyle}
-            highlighted={this.buttonIsHighlighted(1)}
-            text={symbols[1]}
-            size={80}
-            onPress={this.changeAnswer(1)}
-          />
-          <RoundTextButton
-            style={buttonStyle}
-            highlighted={this.buttonIsHighlighted(2)}
-            text={symbols[2]}
-            size={80}
-            onPress={this.changeAnswer(2)}
-          />
+          {this.createChoiceButton(0)}
+          {this.createChoiceButton(1)}
+          {this.createChoiceButton(2)}
         </View>
         <View
           style={{
@@ -63,20 +54,8 @@ class DifferFromSymbol extends Component {
             width: 300
           }}
         >
-          <RoundTextButton
-            style={buttonStyle}
-            highlighted={this.buttonIsHighlighted(3)}
-            text={symbols[3]}
-            size={80}
-            onPress={this.changeAnswer(3)}
-          />
-          <RoundTextButton
-            style={buttonStyle}
-            highlighted={this.buttonIsHighlighted(4)}
-            text={symbols[4]}
-            size={80}
-            onPress={this.changeAnswer(4)}
-          />
+          {this.createChoiceButton(3)}
+          {this.createChoiceButton(4)}
         </View>
       </View>
     );
