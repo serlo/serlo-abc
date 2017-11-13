@@ -1,11 +1,16 @@
 import AbstractExercise from '../AbstractExercise';
 
 export type IState = void;
+export type IFeedback = void;
 
-class InfoScreen<Props> extends AbstractExercise<Props, IState> {
+class InfoScreen<Props> extends AbstractExercise<Props, IState, IFeedback> {
   public initiallyCorrect = true;
 
   public getInitialState() {
+    return;
+  }
+
+  public getFeedback() {
     return;
   }
 
