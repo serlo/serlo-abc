@@ -24,11 +24,14 @@ class HearWord extends Component {
   };
 
   createWordButton = (word, index) => {
+    const { showFeedback, feedback } = this.props;
+    const wrong = showFeedback && feedback.highlightedChoice === index;
     return (
       <RoundTextButton
         onPress={() => {
           this.props.setState({ selectedIndex: index });
         }}
+        wrong={wrong}
         highlighted={index === this.props.state.selectedIndex}
         text={word.toString()}
         style={this.styles.textButton}
