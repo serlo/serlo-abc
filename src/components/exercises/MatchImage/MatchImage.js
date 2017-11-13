@@ -24,16 +24,22 @@ const styles = {
 };
 
 class MatchImage extends Component {
-  createImageButton = index => (
-    <TouchableOpacity onPress={() => this.props.setState(index)}>
-      <RoundImageWithBorder
-        white
-        highlighted={this.props.state === index}
-        image={this.props.words[index].getImage()}
-        size={100}
-      />
-    </TouchableOpacity>
-  );
+  createImageButton = index => {
+    const { showFeedback, feedback } = this.props;
+    const wrong = showFeedback && feedback.highlightedChoice === index;
+
+    return (
+      <TouchableOpacity onPress={() => this.props.setState(index)}>
+        <RoundImageWithBorder
+          white
+          wrong={wrong}
+          highlighted={this.props.state === index}
+          image={this.props.words[index].getImage()}
+          size={100}
+        />
+      </TouchableOpacity>
+    );
+  };
 
   render() {
     const { sound } = this.props;
