@@ -4,7 +4,8 @@ import { Animated } from 'react-native';
 import {
   BLACK_TRANSPARENT,
   WHITE_TRANSPARENT,
-  WHITE_LESS_TRANSPARENT
+  WHITE_LESS_TRANSPARENT,
+  RED
 } from '../../styles/colors';
 
 class RoundImageWithBorder extends Component {
@@ -32,7 +33,7 @@ class RoundImageWithBorder extends Component {
   }
 
   render() {
-    const { highlighted, image, white, style } = this.props;
+    const { highlighted, image, white, style, wrong } = this.props;
     const { size } = this.state;
 
     return (
@@ -44,7 +45,7 @@ class RoundImageWithBorder extends Component {
             margin: this.props.size / 10
           },
           highlighted && {
-            backgroundColor: WHITE_LESS_TRANSPARENT
+            backgroundColor: wrong ? RED : WHITE_LESS_TRANSPARENT
           },
           style
         ]}
