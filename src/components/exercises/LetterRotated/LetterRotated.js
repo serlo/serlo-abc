@@ -11,11 +11,10 @@ class LetterRotated extends Component {
 
   createLetterButton = index => {
     const { letters, showFeedback, feedback } = this.props;
-    const wrong =
-      showFeedback &&
-      (feedback.wrongChoices[index] || feedback.missingCorrectChoices[index]);
+    const wrong = showFeedback && feedback.wrongChoices[index];
     const correct = showFeedback && feedback.correctChoices[index];
-    //  const missingCorrect = showFeedback && feedback.missingCorrectChoices[index];
+    const missingCorrect =
+      showFeedback && feedback.missingCorrectChoices[index];
     return (
       <RoundTextButton
         onPress={() => {
@@ -26,6 +25,7 @@ class LetterRotated extends Component {
         }}
         wrong={wrong}
         correct={correct}
+        missingCorrect={missingCorrect}
         highlighted={this.props.state[index]}
         text={letters[index]}
         size={60}

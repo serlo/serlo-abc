@@ -57,7 +57,8 @@ class RoundText extends Component {
       style,
       textStyle,
       wrong,
-      correct
+      correct,
+      missingCorrect
     } = this.props;
     const { size, fontSize } = this.state;
     return (
@@ -69,10 +70,10 @@ class RoundText extends Component {
             borderColor: highlighted && !wrong ? PRIMARY_WEAK : WHITE
           },
           style,
-          highlighted
-            ? { backgroundColor: wrong ? RED : correct ? GREEN : WHITE }
-            : {},
-          !highlighted && wrong ? { borderColor: GREEN, borderWidth: 10 } : {}
+          highlighted && { backgroundColor: correct ? GREEN : WHITE },
+          wrong && { backgroundColor: RED },
+          !highlighted &&
+            missingCorrect && { borderColor: GREEN, borderWidth: 10 }
         ]}
       >
         <Animated.View
