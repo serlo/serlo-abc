@@ -7,7 +7,8 @@ import {
   WHITE_TRANSPARENT,
   PRIMARY_WEAK,
   TRANSPARENT,
-  RED
+  RED,
+  GREEN
 } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 
@@ -55,7 +56,8 @@ class RoundText extends Component {
       text,
       style,
       textStyle,
-      wrong
+      wrong,
+      correct
     } = this.props;
     const { size, fontSize } = this.state;
     return (
@@ -67,7 +69,10 @@ class RoundText extends Component {
             borderColor: highlighted && !wrong ? PRIMARY_WEAK : WHITE
           },
           style,
-          highlighted ? { backgroundColor: wrong ? RED : WHITE } : {}
+          highlighted
+            ? { backgroundColor: wrong ? RED : correct ? GREEN : WHITE }
+            : {},
+          !highlighted && wrong ? { borderColor: GREEN, borderWidth: 10 } : {}
         ]}
       >
         <Animated.View
@@ -84,7 +89,7 @@ class RoundText extends Component {
               DEFAULT,
               highlighted && { color: PRIMARY_WEAK },
               { backgroundColor: TRANSPARENT, marginTop: 5 },
-              wrong && { color: WHITE },
+              (wrong || correct) && { color: WHITE },
               textStyle,
               { fontSize }
             ]}
