@@ -3,6 +3,7 @@ import { View } from 'react-native';
 
 import WordImageWithSounds from '../../common/WordImageWithSounds';
 import RoundTextButton from '../../common/RoundTextButton';
+import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 
 class HasPhoneme extends Component {
   createChoiceButton = containsPhoneme => {
@@ -34,31 +35,33 @@ class HasPhoneme extends Component {
 
   render() {
     return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: 'center',
-          justifyContent: 'space-around'
-        }}
-      >
-        <WordImageWithSounds
-          playInitially={!this.props.state.soundsPlayed}
-          word={this.props.word}
-          onPlayEnd={() => {
-            this.props.setState({ soundsPlayed: true });
-          }}
-        />
+      <PortraitScreenOrientation>
         <View
           style={{
-            flexDirection: 'row',
+            flex: 1,
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'space-around'
           }}
         >
-          {this.createChoiceButton(true)}
-          {this.createChoiceButton(false)}
+          <WordImageWithSounds
+            playInitially={!this.props.state.soundsPlayed}
+            word={this.props.word}
+            onPlayEnd={() => {
+              this.props.setState({ soundsPlayed: true });
+            }}
+          />
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            {this.createChoiceButton(true)}
+            {this.createChoiceButton(false)}
+          </View>
         </View>
-      </View>
+      </PortraitScreenOrientation>
     );
   }
 }

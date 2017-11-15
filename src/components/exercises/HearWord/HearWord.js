@@ -47,7 +47,7 @@ class HearWord extends Component {
         <View style={this.styles.mainView}>
           <View style={[this.styles.subView, { height: '35%' }]}>
             <WordImageWithSounds
-              playInitially
+              playInitially={!this.props.state.soundsPlayed}
               word={this.props.words[this.props.correctIndex]}
               onPlayEnd={() => {
                 this.props.setState({ soundsPlayed: true });

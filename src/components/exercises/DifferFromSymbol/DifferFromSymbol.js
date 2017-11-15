@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
+
 import RoundTextButton from '../../common/RoundTextButton';
+import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 
 class DifferFromSymbol extends Component {
   createChoiceButton = answer => {
@@ -25,39 +27,41 @@ class DifferFromSymbol extends Component {
 
   render() {
     return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: 'center'
-        }}
-      >
+      <PortraitScreenOrientation>
         <View
           style={{
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            width: 300,
-            marginTop: 50
+            flex: 1,
+            alignItems: 'center'
           }}
         >
-          {this.createChoiceButton(0)}
-          {this.createChoiceButton(1)}
-          {this.createChoiceButton(2)}
+          <View
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              width: 300,
+              marginTop: 50
+            }}
+          >
+            {this.createChoiceButton(0)}
+            {this.createChoiceButton(1)}
+            {this.createChoiceButton(2)}
+          </View>
+          <View
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              width: 300
+            }}
+          >
+            {this.createChoiceButton(3)}
+            {this.createChoiceButton(4)}
+          </View>
         </View>
-        <View
-          style={{
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            width: 300
-          }}
-        >
-          {this.createChoiceButton(3)}
-          {this.createChoiceButton(4)}
-        </View>
-      </View>
+      </PortraitScreenOrientation>
     );
   }
 }
