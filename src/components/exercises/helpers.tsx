@@ -13,8 +13,8 @@ import Container from '../screens/Exercise';
 
 const mapIndexed = addIndex(map);
 
-const wrapExercise = <Props, State>(
-  Exercise: new (props: Props) => AbstractExercise<Props, State>,
+const wrapExercise = <Props, State, Feedback>(
+  Exercise: new (props: Props) => AbstractExercise<Props, State, Feedback>,
   Component: React.ComponentType<{
     showFeedback: boolean;
     state: State;
@@ -41,8 +41,8 @@ const getPropsFromFixtures = <Props, State>(
   fixtures: Fixtures<Props, State>
 ): Props[] => uniq(map(({ props }) => props, fixtures));
 
-interface IArgs<Props, State> {
-  Exercise: new (props: Props) => AbstractExercise<Props, State>;
+interface IArgs<Props, State, Feedback> {
+  Exercise: new (props: Props) => AbstractExercise<Props, State, Feedback>;
   Component: React.ComponentType<{
     showFeedback: boolean;
     state: State;
@@ -51,11 +51,11 @@ interface IArgs<Props, State> {
   fixtures: Fixtures<Props, State>;
 }
 
-export const createElementsFromFixtures = <Props, State>({
+export const createElementsFromFixtures = <Props, State, Feedback>({
   Exercise,
   Component,
   fixtures
-}: IArgs<Props, State>): Array<{
+}: IArgs<Props, State, Feedback>): Array<{
   name: string;
   /* tslint:disable-next-line:no-any TODO: */
   createElement: (props: any) => React.ReactElement<any>;
@@ -72,10 +72,10 @@ export const createElementsFromFixtures = <Props, State>({
   }, fixtures)
 ];
 
-export const createStoriesFromFixtures = <Props, State>(
+export const createStoriesFromFixtures = <Props, State, Feedback>(
   /* tslint:disable-next-line:no-any TODO: */
   story: any,
-  args: IArgs<Props, State>
+  args: IArgs<Props, State, Feedback>
 ): void => {
   forEach(({ name, createElement }) => {
     story.add(name, () => (
@@ -102,8 +102,8 @@ const doNothing = () => {
   // do nothing
 };
 
-export const createTestsFromFixtures = <Props, State>(
-  args: IArgs<Props, State>
+export const createTestsFromFixtures = <Props, State, Feedback>(
+  args: IArgs<Props, State, Feedback>
 ): void => {
   describe('renders without crashing', () => {
     forEach(({ name, createElement }) => {
