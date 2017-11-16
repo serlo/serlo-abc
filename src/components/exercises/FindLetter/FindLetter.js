@@ -35,6 +35,8 @@ const styles = {
 };
 
 class FindLetter extends Component {
+  letters = map(() => undefined, this.props.word.toString());
+
   play = () => playAll(this.props.sounds);
 
   toggleLetter = key => () => {
@@ -54,6 +56,7 @@ class FindLetter extends Component {
 
     return (
       <TouchableOpacity
+        ref={ref => (this.letters[i] = ref)}
         key={i}
         onPress={this.toggleLetter(i)}
         style={[
@@ -73,6 +76,20 @@ class FindLetter extends Component {
       </TouchableOpacity>
     );
   };
+
+  getMeasuresAsync() {
+    return Promise.all(
+      map(
+        letter =>
+          new Promise(resolve => {
+            letter.measureInWindow((x, y, width, height) => {
+              resolve([x + width / 2, y + height / 2]);
+            });
+          }),
+        this.letters
+      )
+    );
+  }
 
   render() {
     const letters = mapIndexed(

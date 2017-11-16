@@ -61,6 +61,9 @@ class Exercise<Props, State, Feedback> extends React.Component<
   IProps<Props, State, Feedback>,
   IState<State, Feedback>
 > {
+  public exercise: any;
+  public submitButton: any;
+
   constructor(props: IProps<Props, State, Feedback>) {
     super(props);
 
@@ -81,8 +84,14 @@ class Exercise<Props, State, Feedback> extends React.Component<
 
     if (typeof submitted !== 'undefined') {
       this.setState({ state: submitted }, () => {
-        this.submit();
+        this.handleSubmit();
       });
+    }
+  }
+
+  public getMeasuresAsync() {
+    if (this.exercise) {
+      return this.exercise.getMeasuresAsync();
     }
   }
 
@@ -96,7 +105,7 @@ class Exercise<Props, State, Feedback> extends React.Component<
         exercise.enableSubmitBySwipe &&
         (() => {
           if (!exercise.isSubmitDisabled(state)) {
-            this.submit();
+            this.handleSubmit();
           }
         }),
       config: exercise.enableSubmitBySwipe && {
@@ -108,6 +117,7 @@ class Exercise<Props, State, Feedback> extends React.Component<
     return (
       <Container {...containerProps}>
         <Component
+          ref={ref => (this.exercise = ref)}
           {...exercise.props}
           showFeedback={showFeedback}
           feedback={feedback}
@@ -124,7 +134,8 @@ class Exercise<Props, State, Feedback> extends React.Component<
         </View>
         <View style={[styles.hoveringButton, styles.top, styles.right]}>
           <RoundIconButton
-            onPress={this.submit}
+            ref={ref => (this.submitButton = ref)}
+            onPress={this.handleSubmit}
             IconComponent={Entypo}
             name="chevron-right"
             size={25}
@@ -135,7 +146,7 @@ class Exercise<Props, State, Feedback> extends React.Component<
     );
   }
 
-  private submit = (): void => {
+  private handleSubmit = (): void => {
     const { exercise, onCorrect, onWrong } = this.props;
     const { state } = this.state;
 
