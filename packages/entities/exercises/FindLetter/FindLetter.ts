@@ -1,21 +1,60 @@
-import { map } from 'ramda';
+import * as R from 'ramda';
 
 import Word from '../../../../src/word';
 import AbstractExercise from '../AbstractExercise';
 
-export interface IProps {
+export interface FindLetterProps {
   word: Word;
   letter: string;
 }
 
-export type IState = boolean[];
+export type FindLetterState = boolean[];
 
-class FindLetter extends AbstractExercise<IProps, IState> {
+export interface FindLetterFeedback {
+  wrongChoices?: boolean[];
+  correctChoice?: boolean[];
+  missingCorrectChoices?: boolean[];
+}
+
+const mapIndexed = R.addIndex(R.map);
+
+class FindLetter extends AbstractExercise<
+  FindLetterProps,
+  FindLetterState,
+  FindLetterFeedback
+> {
   public getInitialState() {
-    return map(() => false, this.props.word.toString().split('')) as IState;
+    return R.map(
+      () => false,
+      this.props.word.toString().split('')
+    ) as FindLetterState;
   }
 
-  public isCorrect(state: IState) {
+  public getFeedback(selected: FindLetterState) {
+    if (this.isSubmitDisabled(selected) || this.isCorrect(selected)) {
+      return {};
+    }
+
+    const { letter, word } = this.props;
+    const wordString = word.toString().toUpperCase();
+
+    return {
+      wrongChoices: mapIndexed(
+        (selection, i) => selection && wordString[i] !== letter,
+        selected
+      ),
+      correctChoices: mapIndexed(
+        (selection, i) => selection && wordString[i] === letter,
+        selected
+      ),
+      missingCorrectChoices: mapIndexed(
+        (selection, i) => !selection && wordString[i] !== letter,
+        selected
+      )
+    };
+  }
+
+  public isCorrect(state: FindLetterState) {
     const { letter, word } = this.props;
     const wordString = word.toString().toUpperCase();
 

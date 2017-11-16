@@ -5,12 +5,11 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import {
   BLACK_TRANSPARENT,
   PRIMARY_STRONG,
-  MASCULINE_STRONG,
-  MASCULINE_WEAK,
-  FEMININE_STRONG,
-  FEMININE_WEAK,
-  NEUTER_STRONG,
-  NEUTER_WEAK
+  MASCULINE,
+  FEMININE,
+  NEUTER,
+  GREEN,
+  RED
 } from '../../../styles/colors';
 import { DEFAULT } from '../../../styles/text';
 import WordImageWithSounds from '../../common/WordImageWithSounds';
@@ -18,21 +17,10 @@ import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 
 const mapIndexed = addIndex(map);
 
-const articles = ['der', 'die', 'das'];
-
 const a = {
-  [articles[0]]: {
-    weak: MASCULINE_WEAK,
-    strong: MASCULINE_STRONG
-  },
-  [articles[1]]: {
-    weak: FEMININE_WEAK,
-    strong: FEMININE_STRONG
-  },
-  [articles[2]]: {
-    weak: NEUTER_WEAK,
-    strong: NEUTER_STRONG
-  }
+  der: MASCULINE,
+  die: FEMININE,
+  das: NEUTER
 };
 
 const styles = {
@@ -42,6 +30,10 @@ const styles = {
   article: {
     marginHorizontal: 10,
     padding: 10
+  },
+  selectedArticle: {
+    marginHorizontal: 15,
+    padding: 15
   },
   shared: {
     padding: 5,
@@ -83,19 +75,25 @@ class ChooseArticle extends Component {
           style={[
             styles.shared,
             styles.article,
-            {
-              backgroundColor:
-                this.props.state === article
-                  ? a[article].strong
-                  : a[article].weak
-            }
+            { backgroundColor: a[article] },
+            this.props.state === article && styles.selectedArticle,
+            this.props.showFeedback &&
+              this.props.feedback.correct === article && {
+                borderColor: GREEN,
+                borderWidth: 10
+              },
+            this.props.showFeedback &&
+              this.props.feedback.wrong === article && {
+                borderColor: RED,
+                borderWidth: 10
+              }
           ]}
           onPress={this.selectArticle(article)}
         >
           <Text style={DEFAULT}>{article}</Text>
         </TouchableOpacity>
       ),
-      articles
+      ['der', 'die', 'das']
     );
 
     return (
@@ -110,7 +108,11 @@ class ChooseArticle extends Component {
           <WordImageWithSounds word={this.props.word} longSound />
           <View style={{ flexDirection: 'row' }}>{letters}</View>
           <View
-            style={{ flexDirection: 'row', justifyContent: 'space-between' }}
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center'
+            }}
           >
             {articleButtons}
           </View>

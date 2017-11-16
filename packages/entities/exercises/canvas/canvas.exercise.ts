@@ -1,22 +1,24 @@
 import AbstractExercise from '../AbstractExercise';
 
-export type IState = boolean;
+export type CanvasState = boolean;
 
-class Canvas<Props> extends AbstractExercise<Props, IState> {
+class Canvas<Props> extends AbstractExercise<Props, CanvasState, void> {
   public enableSubmitBySwipe = false;
 
   public getInitialState() {
     return false;
   }
 
-  public isCorrect(state: IState) {
+  public getFeedback(state: CanvasState) {
+    return;
+  }
+
+  public isCorrect(state: CanvasState) {
     return true;
   }
 
-  public isSubmitDisabled(state: IState) {
-    // TODO:
-    // return !state;
-    return false;
+  public isSubmitDisabled(state: CanvasState) {
+    return !state;
   }
 }
 

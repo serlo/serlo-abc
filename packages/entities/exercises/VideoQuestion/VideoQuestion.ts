@@ -12,9 +12,22 @@ export interface IProps {
 
 export type IState = Optional<number>;
 
-class VideoQuestion extends AbstractExercise<IProps, IState> {
+export interface IFeedback {
+  highlightedChoice?: number;
+}
+
+class VideoQuestion extends AbstractExercise<IProps, IState, IFeedback> {
   public getInitialState() {
     return undefined;
+  }
+
+  public getFeedback(selectedIndex: IState) {
+    if (this.isCorrect(selectedIndex)) {
+      return {};
+    }
+    return {
+      highlightedChoice: selectedIndex
+    };
   }
 
   public isCorrect(selectedIndex: IState) {

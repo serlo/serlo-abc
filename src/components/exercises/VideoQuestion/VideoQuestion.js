@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { addIndex, map } from 'ramda';
 
-import { GREEN } from '../../../styles/colors';
+import { PRIMARY_WEAK, WHITE } from '../../../styles/colors';
 import { DEFAULT } from '../../../styles/text';
 import RoundTextButton from '../../common/RoundTextButton';
 import Video from '../../common/Video';
@@ -12,21 +12,36 @@ const mapIndexed = addIndex(map);
 
 const styles = {
   answer: {
-    margin: 5
+    margin: 5,
+    padding: 5
   },
   vidContainer: {
     flex: 3,
     alignItems: 'center',
     justifyContent: 'center'
-  },
-  highlighted: {
-    backgroundColor: GREEN
   }
 };
 
 class VideoQuestion extends Component {
   changeAnswer = key => () => {
     this.props.setState(key);
+  };
+
+  createChoiceButton = (item, key) => {
+    const { showFeedback, feedback } = this.props;
+    const wrong = showFeedback && feedback.highlightedChoice === key;
+    const highlighted = this.props.state === key;
+
+    return (
+      <RoundTextButton
+        text={item}
+        wrong={wrong}
+        style={[styles.answer, highlighted && { backgroundColor: WHITE }]}
+        textStyle={highlighted && { color: wrong ? WHITE : PRIMARY_WEAK }}
+        key={key}
+        onPress={this.changeAnswer(key)}
+      />
+    );
   };
 
   render() {
@@ -47,20 +62,7 @@ class VideoQuestion extends Component {
               {this.props.question}
             </Text>
             <View>
-              {mapIndexed(
-                (item, key) => (
-                  <RoundTextButton
-                    text={item}
-                    style={[
-                      styles.answer,
-                      this.props.state === key ? styles.highlighted : null
-                    ]}
-                    key={key}
-                    onPress={this.changeAnswer(key)}
-                  />
-                ),
-                this.props.answers
-              )}
+              {mapIndexed(this.createChoiceButton, this.props.answers)}
             </View>
           </View>
         </View>
