@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { addIndex, map } from 'ramda';
 
-import { GREEN, PRIMARY, PRIMARY_WEAK, WHITE } from '../../../styles/colors';
+import { PRIMARY_WEAK, WHITE } from '../../../styles/colors';
 import { DEFAULT } from '../../../styles/text';
 import RoundTextButton from '../../common/RoundTextButton';
 import Video from '../../common/Video';
