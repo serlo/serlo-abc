@@ -1,11 +1,11 @@
 import { map } from 'ramda';
 
 import { Fixtures } from '../helpers';
-import { IState } from './canvas.exercise';
+import { CanvasState } from './canvas.exercise';
 
 export default <Props>(
   fixtures: Array<{ name: string; props: Props }>
-): Fixtures<Props, IState> =>
+): Fixtures<Props, CanvasState> =>
   map(
     fixture => ({
       isCorrect: true,
