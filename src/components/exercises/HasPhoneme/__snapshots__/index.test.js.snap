@@ -100,7 +100,9 @@ exports[` 1`] = `
                   false,
                 ],
               ],
-              Object {},
+              false,
+              false,
+              undefined,
             ]
           }
         >
@@ -195,7 +197,9 @@ exports[` 1`] = `
                   },
                 ],
               ],
-              Object {},
+              false,
+              false,
+              undefined,
             ]
           }
         >
@@ -503,6 +507,8 @@ exports[` 2`] = `
               Object {
                 "backgroundColor": "#ffffff",
               },
+              false,
+              false,
             ]
           }
         >
@@ -597,7 +603,9 @@ exports[` 2`] = `
                   },
                 ],
               ],
-              Object {},
+              false,
+              false,
+              undefined,
             ]
           }
         >
@@ -902,7 +910,9 @@ exports[` 3`] = `
                   false,
                 ],
               ],
-              Object {},
+              false,
+              false,
+              undefined,
             ]
           }
         >
@@ -968,8 +978,8 @@ exports[` 3`] = `
           style={
             Array [
               Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.2)",
-                "borderColor": "#73dbff",
+                "backgroundColor": "#cf614d",
+                "borderColor": "#ffffff",
                 "borderRadius": 9999,
               },
               Array [
@@ -1000,6 +1010,10 @@ exports[` 3`] = `
               Object {
                 "backgroundColor": "#ffffff",
               },
+              Object {
+                "backgroundColor": "#cf614d",
+              },
+              false,
             ]
           }
         >
@@ -1024,7 +1038,7 @@ exports[` 3`] = `
               style={
                 Object {
                   "backgroundColor": "transparent",
-                  "color": "#73dbff",
+                  "color": "#ffffff",
                   "fontFamily": "norddruck",
                   "fontSize": 35,
                   "marginTop": 5,
@@ -1038,7 +1052,7 @@ exports[` 3`] = `
               collapsable={undefined}
               style={
                 Object {
-                  "backgroundColor": "#73dbff",
+                  "backgroundColor": "#ffffff",
                   "borderRadius": 1,
                   "height": 3.5,
                   "opacity": 0.8,

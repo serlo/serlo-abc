@@ -299,6 +299,7 @@ exports[` 1`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
         }
@@ -322,7 +323,7 @@ exports[` 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#6666fe",
+            "backgroundColor": "#0000fe",
             "borderRadius": 20,
             "elevation": 10,
             "margin": 2,
@@ -376,7 +377,7 @@ exports[` 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#fe6666",
+            "backgroundColor": "#fe0000",
             "borderRadius": 20,
             "elevation": 10,
             "margin": 2,
@@ -430,7 +431,7 @@ exports[` 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#67af66",
+            "backgroundColor": "#01af00",
             "borderRadius": 20,
             "elevation": 10,
             "margin": 2,
@@ -872,6 +873,7 @@ exports[` 2`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
         }
@@ -895,7 +897,7 @@ exports[` 2`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#6666fe",
+            "backgroundColor": "#0000fe",
             "borderRadius": 20,
             "elevation": 10,
             "margin": 2,
@@ -949,7 +951,7 @@ exports[` 2`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#fe6666",
+            "backgroundColor": "#fe0000",
             "borderRadius": 20,
             "elevation": 10,
             "margin": 2,
@@ -1003,7 +1005,7 @@ exports[` 2`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#67af66",
+            "backgroundColor": "#01af00",
             "borderRadius": 20,
             "elevation": 10,
             "margin": 2,
@@ -1487,6 +1489,7 @@ exports[` 3`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
         }
@@ -1510,7 +1513,7 @@ exports[` 3`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#6666fe",
+            "backgroundColor": "#0000fe",
             "borderRadius": 20,
             "elevation": 10,
             "margin": 2,
@@ -1568,9 +1571,9 @@ exports[` 3`] = `
             "borderRadius": 20,
             "elevation": 10,
             "margin": 2,
-            "marginHorizontal": 10,
+            "marginHorizontal": 15,
             "opacity": 1,
-            "padding": 10,
+            "padding": 15,
             "shadowColor": "rgba(0, 0, 0, 0.1)",
             "shadowOffset": Object {
               "height": 4,
@@ -1618,7 +1621,7 @@ exports[` 3`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#67af66",
+            "backgroundColor": "#01af00",
             "borderRadius": 20,
             "elevation": 10,
             "margin": 2,
@@ -2060,6 +2063,7 @@ exports[` 4`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
         }
@@ -2083,8 +2087,10 @@ exports[` 4`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#6666fe",
+            "backgroundColor": "#0000fe",
+            "borderColor": "#b5ce4d",
             "borderRadius": 20,
+            "borderWidth": 10,
             "elevation": 10,
             "margin": 2,
             "marginHorizontal": 10,
@@ -2138,12 +2144,14 @@ exports[` 4`] = `
         style={
           Object {
             "backgroundColor": "#fe0000",
+            "borderColor": "#cf614d",
             "borderRadius": 20,
+            "borderWidth": 10,
             "elevation": 10,
             "margin": 2,
-            "marginHorizontal": 10,
+            "marginHorizontal": 15,
             "opacity": 1,
-            "padding": 10,
+            "padding": 15,
             "shadowColor": "rgba(0, 0, 0, 0.1)",
             "shadowOffset": Object {
               "height": 4,
@@ -2191,7 +2199,7 @@ exports[` 4`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#67af66",
+            "backgroundColor": "#01af00",
             "borderRadius": 20,
             "elevation": 10,
             "margin": 2,

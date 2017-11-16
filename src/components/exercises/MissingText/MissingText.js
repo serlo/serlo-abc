@@ -28,6 +28,8 @@ const MissingText = ({ word, video, text, missing, options, ...props }) => {
         <View key={key}>
           <TextPicker
             options={options}
+            showFeedback={props.showFeedback}
+            feedback={props.feedback}
             onChange={answer => {
               props.setState(answer);
             }}

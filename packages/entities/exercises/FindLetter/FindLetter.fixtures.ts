@@ -1,14 +1,14 @@
 // TODO: don't depend on React Native app
 import Word from '../../../../src/word';
 import { Fixtures } from '../helpers';
-import { IProps, IState } from './FindLetter';
+import { FindLetterProps, FindLetterState } from './FindLetter';
 
-const props: IProps = {
+const props: FindLetterProps = {
   word: new Word('ananas'),
   letter: 'A'
 };
 
-const fixtures: Fixtures<IProps, IState> = [
+const fixtures: Fixtures<FindLetterProps, FindLetterState> = [
   {
     name: 'all correct letters',
     props,

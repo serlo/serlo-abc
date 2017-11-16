@@ -1,9 +1,9 @@
 // TODO: don't depend on React Native app
 import Word from '../../../../src/word';
 import { Fixtures } from '../helpers';
-import { IProps, IState } from './ChooseArticle';
+import { ChooseArticleProps, ChooseArticleState } from './ChooseArticle';
 
-const fixtures: Fixtures<IProps, IState> = [
+const fixtures: Fixtures<ChooseArticleProps, ChooseArticleState> = [
   {
     name: 'correct article ananas',
     props: {
