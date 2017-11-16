@@ -6,7 +6,9 @@ import { playAll } from '../../../helpers/audio';
 import {
   BLACK_TRANSPARENT,
   PRIMARY_WEAK,
-  PRIMARY_STRONG
+  PRIMARY_STRONG,
+  GREEN,
+  RED
 } from '../../../styles/colors';
 import { DEFAULT } from '../../../styles/text';
 import WordImageWithSounds from '../../common/WordImageWithSounds';
@@ -20,6 +22,7 @@ const styles = {
     padding: 5,
     margin: 2,
     borderRadius: 20,
+    borderWidth: 2,
     elevation: 10,
     shadowColor: BLACK_TRANSPARENT,
     shadowOpacity: 1,
@@ -28,9 +31,6 @@ const styles = {
       height: 4,
       width: 4
     }
-  },
-  highlighted: {
-    backgroundColor: PRIMARY_WEAK
   }
 };
 
@@ -45,20 +45,38 @@ class FindLetter extends Component {
     });
   };
 
+  createLetterButton = (letter, i) => {
+    const { showFeedback, feedback } = this.props;
+    const highlighted = this.props.state[i];
+    const wrong = showFeedback && feedback.wrongChoices[i];
+    const correct = showFeedback && feedback.correctChoices[i];
+    const missingCorrect = showFeedback && feedback.missingCorrectChoices[i];
+
+    return (
+      <TouchableOpacity
+        key={i}
+        onPress={this.toggleLetter(i)}
+        style={[
+          styles.letter,
+          highlighted && {
+            backgroundColor: correct ? GREEN : PRIMARY_WEAK
+          },
+          wrong && {
+            backgroundColor: RED
+          },
+          {
+            borderColor: !highlighted && missingCorrect ? GREEN : 'transparent'
+          }
+        ]}
+      >
+        <Text style={DEFAULT}>{letter}</Text>
+      </TouchableOpacity>
+    );
+  };
+
   render() {
     const letters = mapIndexed(
-      (char, key) => (
-        <TouchableOpacity
-          key={key}
-          onPress={this.toggleLetter(key)}
-          style={[
-            styles.letter,
-            this.props.state[key] ? styles.highlighted : null
-          ]}
-        >
-          <Text style={DEFAULT}>{char}</Text>
-        </TouchableOpacity>
-      ),
+      this.createLetterButton,
       this.props.word.toString()
     );
 
