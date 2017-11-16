@@ -1,3 +1,5 @@
+import { indexOf } from 'ramda';
+
 // TODO: don't depend on React Native app
 import { Optional } from '../../../../src/types';
 import { IVideoAsset } from '../../../../src/types/assets';
@@ -5,7 +7,7 @@ import { IVideoAsset } from '../../../../src/types/assets';
 import Word from '../../../../src/word';
 import AbstractExercise from '../AbstractExercise';
 
-export interface IProps {
+export interface MissingTextProps {
   word?: Word;
   video?: IVideoAsset;
   text: string[];
@@ -13,14 +15,34 @@ export interface IProps {
   options: string[];
 }
 
-export type IState = Optional<number>;
+export type MissingTextState = Optional<number>;
 
-class MissingText extends AbstractExercise<IProps, IState> {
+export interface MissingTextFeedback {
+  wrong?: number;
+  correct?: number;
+}
+
+class MissingText extends AbstractExercise<
+  MissingTextProps,
+  MissingTextState,
+  MissingTextFeedback
+> {
   public getInitialState() {
     return undefined;
   }
 
-  public isCorrect(state: IState) {
+  public getFeedback(state: MissingTextState) {
+    if (this.isSubmitDisabled(state) || this.isCorrect(state)) {
+      return {};
+    }
+
+    return {
+      wrong: state,
+      correct: indexOf(this.props.text[this.props.missing], this.props.options)
+    };
+  }
+
+  public isCorrect(state: MissingTextState) {
     if (typeof state !== 'undefined') {
       const { options, text, missing } = this.props;
       return text[missing] === options[state];

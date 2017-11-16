@@ -2,7 +2,12 @@ import { addIndex, map, max, reduce, repeat } from 'ramda';
 import React, { Component } from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 
-import { BLACK_TRANSPARENT, PRIMARY_WEAK } from '../../styles/colors';
+import {
+  BLACK_TRANSPARENT,
+  PRIMARY_WEAK,
+  GREEN,
+  RED
+} from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
 
 const mapIndexed = addIndex(map);
@@ -61,21 +66,40 @@ class TextPicker extends Component {
           justifyContent: 'flex-end'
         }}
       >
-        {this.state.optionsVisible
-          ? mapIndexed(
-              (option, key) => (
+        {this.state.optionsVisible || this.props.showFeedback
+          ? mapIndexed((option, key) => {
+              if (this.props.selectedValue === option) {
+                return null;
+              }
+
+              return (
                 <TouchableOpacity onPress={this.selectOption(key)} key={key}>
-                  <View style={this.styles.button}>
+                  <View
+                    style={[
+                      this.styles.button,
+                      this.props.showFeedback &&
+                        this.props.feedback.correct === key && {
+                          backgroundColor: GREEN
+                        }
+                    ]}
+                  >
                     <Text style={this.styles.text}>{option}</Text>
                   </View>
                 </TouchableOpacity>
-              ),
-              this.props.options
-            )
+              );
+            }, this.props.options)
           : null}
 
         <TouchableOpacity onPress={this.togglePickerOptions}>
-          <View style={this.styles.button}>
+          <View
+            style={[
+              this.styles.button,
+              this.props.showFeedback &&
+                typeof this.props.feedback.wrong !== 'undefined' && {
+                  backgroundColor: RED
+                }
+            ]}
+          >
             <Text style={this.styles.text}>
               {this.props.selectedValue || defaultText}
             </Text>

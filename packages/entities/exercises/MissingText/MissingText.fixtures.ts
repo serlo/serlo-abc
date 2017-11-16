@@ -1,9 +1,9 @@
 // TODO: don't depend on React Native app
 import Word from '../../../../src/word';
 import { Fixtures } from '../helpers';
-import { IProps, IState } from './MissingText';
+import { MissingTextProps, MissingTextState } from './MissingText';
 
-const props: IProps[] = [
+const props: MissingTextProps[] = [
   {
     word: new Word('apfel'),
     text: ['A', 'p', 'f', 'e', 'l'],
@@ -24,7 +24,7 @@ const props: IProps[] = [
   }
 ];
 
-const fixtures: Fixtures<IProps, IState> = [
+const fixtures: Fixtures<MissingTextProps, MissingTextState> = [
   {
     name: 'Missing Letter: correct selected',
     props: props[0],
