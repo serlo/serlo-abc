@@ -14,9 +14,6 @@ export const GREEN = '#b5ce4d';
 
 export const TRANSPARENT = 'transparent';
 
-export const MASCULINE_STRONG = '#0000fe';
-export const MASCULINE_WEAK = '#6666fe';
-export const FEMININE_STRONG = '#fe0000';
-export const FEMININE_WEAK = '#fe6666';
-export const NEUTER_STRONG = '#01af00';
-export const NEUTER_WEAK = '#67af66';
+export const MASCULINE = '#0000fe';
+export const FEMININE = '#fe0000';
+export const NEUTER = '#01af00';
