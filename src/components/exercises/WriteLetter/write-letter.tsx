@@ -11,8 +11,8 @@ export interface WriteLetterProps {
   setState: (state: IState) => void;
 }
 
-export const WriteLetter = ({ letter }: WriteLetterProps) => (
+export const WriteLetter = ({ letter, setState }: WriteLetterProps) => (
   <PortraitScreenOrientation>
-    <TextCanvas text={letter} />
+    <TextCanvas text={letter} onPanResponderEnd={() => setState(true)} />
   </PortraitScreenOrientation>
 );

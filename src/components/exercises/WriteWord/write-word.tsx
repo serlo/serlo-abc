@@ -11,8 +11,8 @@ export interface WriteWordProps {
   setState: (state: IState) => void;
 }
 
-export const WriteWord = ({ word }: WriteWordProps) => (
+export const WriteWord = ({ word, setState }: WriteWordProps) => (
   <LandscapeScreenOrientation>
-    <TextCanvas text={word} />
+    <TextCanvas text={word} onPanResponderEnd={() => setState(true)} />
   </LandscapeScreenOrientation>
 );

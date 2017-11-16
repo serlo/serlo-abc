@@ -15,6 +15,7 @@ export type RawPath = RawPoint[];
 
 interface Props {
   strokeWidth: number;
+  onPanResponderEnd?: () => void;
 }
 
 interface State {
@@ -59,6 +60,11 @@ export class Canvas extends React.Component<Props, State> {
             paths: [[point]]
           };
         });
+      },
+      onPanResponderEnd: () => {
+        if (typeof this.props.onPanResponderEnd === 'function') {
+          this.props.onPanResponderEnd();
+        }
       }
     });
   }
@@ -134,7 +140,13 @@ export class Canvas extends React.Component<Props, State> {
   }
 }
 
-export const TextCanvas = ({ text }: { text: string }) => (
+export const TextCanvas = ({
+  text,
+  onPanResponderEnd
+}: {
+  text: string;
+  onPanResponderEnd?: () => void;
+}) => (
   <WithDimensions
     render={({ height }) => (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -147,7 +159,10 @@ export const TextCanvas = ({ text }: { text: string }) => (
         >
           {text}
         </Text>
-        <Canvas strokeWidth={height / 20} />
+        <Canvas
+          strokeWidth={height / 20}
+          onPanResponderEnd={onPanResponderEnd}
+        />
       </View>
     )}
   />
