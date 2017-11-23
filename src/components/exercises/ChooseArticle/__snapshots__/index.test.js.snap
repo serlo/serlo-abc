@@ -71,7 +71,6 @@ exports[` 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -113,7 +112,6 @@ exports[` 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -155,7 +153,6 @@ exports[` 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -197,7 +194,6 @@ exports[` 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -239,7 +235,6 @@ exports[` 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -281,7 +276,6 @@ exports[` 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -345,7 +339,6 @@ exports[` 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -399,7 +392,6 @@ exports[` 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -453,7 +445,6 @@ exports[` 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -535,7 +526,6 @@ exports[` 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
         />
       </View>
@@ -607,7 +597,6 @@ exports[` 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
         />
       </View>
@@ -687,7 +676,6 @@ exports[` 2`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -729,7 +717,6 @@ exports[` 2`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -771,7 +758,6 @@ exports[` 2`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -813,7 +799,6 @@ exports[` 2`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -855,7 +840,6 @@ exports[` 2`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -919,7 +903,6 @@ exports[` 2`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -973,7 +956,6 @@ exports[` 2`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1027,7 +1009,6 @@ exports[` 2`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1109,7 +1090,6 @@ exports[` 2`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
         />
       </View>
@@ -1181,7 +1161,6 @@ exports[` 2`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
         />
       </View>
@@ -1261,7 +1240,6 @@ exports[` 3`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1303,7 +1281,6 @@ exports[` 3`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1345,7 +1322,6 @@ exports[` 3`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1387,7 +1363,6 @@ exports[` 3`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1429,7 +1404,6 @@ exports[` 3`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1471,7 +1445,6 @@ exports[` 3`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1535,7 +1508,6 @@ exports[` 3`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1589,7 +1561,6 @@ exports[` 3`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1643,7 +1614,6 @@ exports[` 3`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1725,7 +1695,6 @@ exports[` 3`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
         />
       </View>
@@ -1797,7 +1766,6 @@ exports[` 3`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
         />
       </View>
@@ -1877,7 +1845,6 @@ exports[` 4`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1919,7 +1886,6 @@ exports[` 4`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -1961,7 +1927,6 @@ exports[` 4`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -2003,7 +1968,6 @@ exports[` 4`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -2045,7 +2009,6 @@ exports[` 4`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -2111,7 +2074,6 @@ exports[` 4`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -2167,7 +2129,6 @@ exports[` 4`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -2221,7 +2182,6 @@ exports[` 4`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -2303,7 +2263,6 @@ exports[` 4`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
         />
       </View>
@@ -2375,7 +2334,6 @@ exports[` 4`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
         />
       </View>
