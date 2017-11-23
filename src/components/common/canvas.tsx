@@ -13,17 +13,19 @@ import { RoundIconButton } from './buttons';
 export type RawPoint = [number, number];
 export type RawPath = RawPoint[];
 
-interface Props {
+interface CanvasProps {
   strokeWidth: number;
   onPanResponderEnd?: () => void;
+  paddingTop?: number;
+  paddingBottom?: number;
 }
 
-interface State {
+interface CanvasState {
   paths: RawPath[];
 }
 
-export class Canvas extends React.Component<Props, State> {
-  public state: State = {
+class Canvas extends React.Component<CanvasProps, CanvasState> {
+  public state: CanvasState = {
     paths: []
   };
 
@@ -43,7 +45,7 @@ export class Canvas extends React.Component<Props, State> {
         }));
       },
       onPanResponderMove: (evt, gestureState) => {
-        this.setState(({ paths }: State) => {
+        this.setState(({ paths }: CanvasState) => {
           const lastPath = R.last(paths);
           const point = [
             gestureState.moveX + this.dx,
@@ -72,53 +74,56 @@ export class Canvas extends React.Component<Props, State> {
   public render() {
     return (
       <View
-        onLayout={event => {
-          this.dx = -event.nativeEvent.layout.x;
-          this.dy = -event.nativeEvent.layout.y;
-        }}
-        {...this.panResponder.panHandlers}
         style={{
           flex: 1,
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
-          top: Constants.statusBarHeight
+          justifyContent: 'space-around',
+          paddingTop: this.props.paddingTop,
+          paddingBottom: this.props.paddingBottom
         }}
       >
-        <Svg style={{ flex: 1 }}>
-          {R.addIndex(R.map)(
-            (path, index) => (
-              <Svg.G key={`path_${index}`}>
-                <Svg.Circle
-                  cx={path[0][0]}
-                  cy={path[0][1]}
-                  r={this.props.strokeWidth / 2}
-                  fill={PRIMARY_WEAK}
-                />
-                <Svg.Polyline
-                  points={this.generateTextPoints(path)}
-                  fill="none"
-                  stroke={PRIMARY_WEAK}
-                  strokeLinejoin="round"
-                  strokeWidth={this.props.strokeWidth}
-                />
-                <Svg.Circle
-                  cx={path[path.length - 1][0]}
-                  cy={path[path.length - 1][1]}
-                  r={this.props.strokeWidth / 2}
-                  fill={PRIMARY_WEAK}
-                />
-              </Svg.G>
-            ),
-            this.state.paths
-          )}
-        </Svg>
+        <View
+          onLayout={event => {
+            this.dx = -event.nativeEvent.layout.x;
+            this.dy = -event.nativeEvent.layout.y;
+          }}
+          {...this.panResponder.panHandlers}
+          style={{
+            flex: 1
+          }}
+        >
+          <Svg style={{ flex: 1 }}>
+            {R.addIndex(R.map)(
+              (path, index) => (
+                <Svg.G key={`path_${index}`}>
+                  <Svg.Circle
+                    cx={path[0][0]}
+                    cy={path[0][1]}
+                    r={this.props.strokeWidth / 2}
+                    fill={PRIMARY_WEAK}
+                  />
+                  <Svg.Polyline
+                    points={this.generateTextPoints(path)}
+                    fill="none"
+                    stroke={PRIMARY_WEAK}
+                    strokeLinejoin="round"
+                    strokeWidth={this.props.strokeWidth}
+                  />
+                  <Svg.Circle
+                    cx={path[path.length - 1][0]}
+                    cy={path[path.length - 1][1]}
+                    r={this.props.strokeWidth / 2}
+                    fill={PRIMARY_WEAK}
+                  />
+                </Svg.G>
+              ),
+              this.state.paths
+            )}
+          </Svg>
+        </View>
         <View
           style={{
-            width: '100%',
-            alignItems: 'center',
-            position: 'absolute',
-            bottom: 15 + Constants.statusBarHeight
+            marginVertical: 15,
+            alignItems: 'center'
           }}
         >
           <RoundIconButton
@@ -159,10 +164,19 @@ export const TextCanvas = ({
         >
           {text}
         </Text>
-        <Canvas
-          strokeWidth={height / 20}
-          onPanResponderEnd={onPanResponderEnd}
-        />
+        <View
+          style={{
+            position: 'absolute',
+            height: '100%',
+            width: '100%'
+          }}
+        >
+          <Canvas
+            strokeWidth={height / 20}
+            onPanResponderEnd={onPanResponderEnd}
+            paddingTop={Constants.statusBarHeight + 80}
+          />
+        </View>
       </View>
     )}
   />
