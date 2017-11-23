@@ -3,7 +3,7 @@
     "name": "Serlo ABC",
     "slug": "serlo-abc",
     "privacy": "unlisted",
-    "sdkVersion": "22.0.0",
+    "sdkVersion": "23.0.0",
     "version": "0.0.0-development",
     "icon": "./appIcon.png",
     "packagerOpts": {
@@ -11,7 +11,8 @@
       "transformer": "node_modules/react-native-typescript-transformer/index.js"
     },
     "ios": {
-      "bundleIdentifier": "org.serlo.abc"
+      "bundleIdentifier": "org.serlo.abc",
+      "loadJSInBackgroundExperimental": true
     },
     "android": {
       "package": "org.serlo.abc"
