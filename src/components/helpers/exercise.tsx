@@ -8,7 +8,7 @@ import { StyleSheet, View } from 'react-native';
 // @ts-ignore: TODO: add declaration file
 import GestureRecognizer from 'react-native-swipe-gestures';
 
-import AbstractExercise from '../../../packages/entities/exercises/AbstractExercise';
+import { AbstractExercise } from '../../../packages/entities';
 // @ts-ignore: TODO: migrate to TypeScript
 import { play } from '../../helpers/audio';
 import { GREEN, PRIMARY } from '../../styles/colors';
@@ -57,11 +57,8 @@ const styles = StyleSheet.create({
   }
 });
 
-class Exercise<Props, State, Feedback> extends React.Component<
-  IProps<Props, State, Feedback>,
-  IState<State, Feedback>
-> {
-  constructor(props: IProps<Props, State, Feedback>) {
+export class Exercise extends React.Component {
+  constructor(props: any) {
     super(props);
 
     const { exercise } = props;
@@ -90,7 +87,7 @@ class Exercise<Props, State, Feedback> extends React.Component<
     const { exercise, Component } = this.props;
     const { feedback, isCorrect, state, showFeedback } = this.state;
 
-    const Container = exercise.enableSubmitBySwipe ? GestureRecognizer : View;
+    const Container = this.props.enableSubmitBySwipe ? GestureRecognizer : View;
     const containerProps = {
       onSwipeLeft:
         exercise.enableSubmitBySwipe &&
@@ -136,20 +133,21 @@ class Exercise<Props, State, Feedback> extends React.Component<
   }
 
   private submit = (): void => {
-    const { exercise, onCorrect, onWrong } = this.props;
-    const { state } = this.state;
+    this.props.onSubmit(this.state.state);
+    // const { exercise, onCorrect, onWrong } = this.props;
+    // const { state } = this.state;
 
-    const isCorrect = exercise.isCorrect(state);
-    const feedback = exercise.getFeedback(state);
+    // const isCorrect = exercise.isCorrect(state);
+    // const feedback = exercise.getFeedback(state);
 
-    isCorrect ? onCorrect() : onWrong();
+    // isCorrect ? onCorrect() : onWrong();
 
-    this.setState({
-      isCorrect,
-      feedback,
-      showFeedback: !isCorrect,
-      submitted: true
-    });
+    // this.setState({
+    //   isCorrect,
+    //   feedback,
+    //   showFeedback: !isCorrect,
+    //   submitted: true
+    // });
   };
 
   private updateState = (
@@ -168,5 +166,3 @@ class Exercise<Props, State, Feedback> extends React.Component<
     }));
   };
 }
-
-export default Exercise;

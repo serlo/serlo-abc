@@ -1,14 +1,14 @@
 import * as React from 'react';
 
-import { IState } from '../../../../packages/entities/exercises/InfoScreenWithSounds/InfoScreenWithSounds';
+import { InfoScreenWithSoundsState } from '../../../../packages/entities/exercises/info-screen-with-sounds.exercise';
 import { TextCanvas } from '../../common/canvas';
 import { PortraitScreenOrientation } from '../../helpers/screen-orientation';
 
 export interface WriteLetterProps {
   letter: string;
   showFeedback: boolean;
-  state: IState;
-  setState: (state: IState) => void;
+  state: InfoScreenWithSoundsState;
+  setState: (state: InfoScreenWithSoundsState) => void;
 }
 
 export const WriteLetter = ({ letter, setState }: WriteLetterProps) => (
