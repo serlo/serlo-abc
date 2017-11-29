@@ -1,8 +1,10 @@
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 import { IntroduceLetter } from './introduce-letter';
+import { PresentLetter } from './present-letter';
 
 export enum ExerciseGroupTypes {
-  IntroduceLetter = 'IntroduceLetter'
+  IntroduceLetter = 'IntroduceLetter',
+  PresentLetter = 'PresentLetter'
 }
 
 export const ExerciseGroups: {
@@ -16,7 +18,8 @@ export const ExerciseGroups: {
     ): AbstractExerciseGroup;
   };
 } = {
-  [ExerciseGroupTypes.IntroduceLetter]: IntroduceLetter
+  [ExerciseGroupTypes.IntroduceLetter]: IntroduceLetter,
+  [ExerciseGroupTypes.PresentLetter]: PresentLetter
 };
 
 export { AbstractExerciseGroup };

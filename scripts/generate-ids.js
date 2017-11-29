@@ -4,7 +4,7 @@ const path = require('path');
 const R = require('ramda');
 const { v4 } = require('uuid');
 
-const assetsPath = path.join(__dirname, '..', 'src', 'assets');
+const assetsPath = path.join(__dirname, '..', 'packages', 'assets');
 
 const courses = require(path.join(assetsPath, 'courses.json'));
 
