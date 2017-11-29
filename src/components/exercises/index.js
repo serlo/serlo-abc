@@ -1,9 +1,9 @@
 // import * as ExplanationText from './ExplanationText';
 // import * as FindLetter from './FindLetter';
 import IntroduceLetter from './IntroduceLetter/IntroduceLetter';
-// import * as ShowLetter from './ShowLetter';
+import ShowLetter from './ShowLetter/ShowLetter';
 // import * as ShowLetterRepeat from './ShowLetterRepeat';
-// import * as ShowWord from './ShowWord';
+import ShowWord from './ShowWord/ShowWord';
 // import * as ShowWordRepeat from './ShowWordRepeat';
 // import * as TutorialVideo from './TutorialVideo';
 // import * as PraiseVideo from './PraiseVideo';
@@ -31,5 +31,7 @@ import IntroduceLetter from './IntroduceLetter/IntroduceLetter';
 // };
 
 export const ExerciseComponents = {
-  IntroduceLetter
+  IntroduceLetter,
+  ShowLetter,
+  ShowWord
 };

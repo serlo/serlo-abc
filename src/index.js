@@ -155,8 +155,6 @@ export class AppRoutes extends Component {
                 const { id } = match.params;
                 const { level } = location.state;
 
-                console.warn(id);
-
                 if (!this.state.course) {
                   return null;
                 }

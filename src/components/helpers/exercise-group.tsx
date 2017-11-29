@@ -39,6 +39,7 @@ export class ExerciseGroup extends React.Component {
       <Exercise
         exercise={exercise}
         Component={Component}
+        goToNav={this.props.goToNav}
         onSubmit={this.submit}
       />
     );

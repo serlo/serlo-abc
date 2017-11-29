@@ -8,7 +8,7 @@ export const sample = <T>(
   count: number,
   replace = false
 ): T[] => {
-  if (count <= 0) {
+  if (count <= 0 || collection.length <= 0) {
     return [];
   }
 

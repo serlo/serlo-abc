@@ -19,14 +19,755 @@
               "sonne",
               "affe",
               "nase",
-              "sofa",
-              "affe"
+              "sofa"
             ],
             "children": [
               {
                 "id": "6860685f-19fc-4798-b0dc-6a3e41adc97a",
                 "type": "IntroduceLetter",
                 "letter": "a"
+              },
+              {
+                "id": "75df664c-61b4-466c-9ab9-f6f7df30d371",
+                "type": "PresentLetter",
+                "letter": "a"
+              }
+            ]
+          },
+          {
+            "id": "eab092c8-3353-41e3-a820-143dd6bb7c49",
+            "title": "N",
+            "words": ["nudeln", "nadel", "banane", "kanne", "kino", "opa"],
+            "children": [
+              {
+                "id": "68dbbe2b-6ccb-435b-80d8-41eff56c4d6f",
+                "type": "IntroduceLetter",
+                "letter": "n"
+              },
+              {
+                "id": "8d1cf10e-0b6e-440f-ac0b-173c67ca5f8f",
+                "type": "PresentLetter",
+                "letter": "n"
+              }
+            ]
+          },
+          {
+            "id": "7aace906-5311-4138-bd44-74f2b5fc2ef3",
+            "title": "E",
+            "words": ["ente", "elefant", "tee", "kaffee", "saft"],
+            "children": [
+              {
+                "id": "5a0e7677-8c2b-4e58-a25e-f51c629f55d2",
+                "type": "IntroduceLetter",
+                "letter": "e"
+              },
+              {
+                "id": "57b55017-7899-43f1-a447-6b30a932b206",
+                "type": "PresentLetter",
+                "letter": "e"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ec10fd75-bf8c-47e3-89ae-f90fb6215fcf",
+        "title": "STO",
+        "children": [
+          {
+            "id": "56d082f9-12f3-4f3e-ac23-c7cc2b360584",
+            "title": "S",
+            "words": [
+              "sessel",
+              "see",
+              "tasse",
+              "kissen",
+              "essen",
+              "pass",
+              "wasser"
+            ],
+            "children": [
+              {
+                "id": "be16b24c-8801-45d3-9c20-32e04db8f918",
+                "type": "IntroduceLetter",
+                "letter": "s"
+              },
+              {
+                "id": "35d70fe7-04da-443e-a50c-b72e39e93385",
+                "type": "PresentLetter",
+                "letter": "s"
+              }
+            ]
+          },
+          {
+            "id": "0c9f776b-d889-4c74-8cc1-54a530bb6880",
+            "title": "T",
+            "words": [
+              "tomate",
+              "bett",
+              "kette",
+              "salat",
+              "tonne",
+              "karotte",
+              "topf"
+            ],
+            "children": [
+              {
+                "id": "673e1a74-5cd5-4cb6-874e-3b1204a01d99",
+                "type": "IntroduceLetter",
+                "letter": "t"
+              },
+              {
+                "id": "d899379a-060d-4466-86f7-0a19e8a136cc",
+                "type": "PresentLetter",
+                "letter": "t"
+              }
+            ]
+          },
+          {
+            "id": "6d2350b5-cfef-4c49-a3cb-53413f728434",
+            "title": "O",
+            "words": ["hose", "obst", "ofen", "tor", "fotos"],
+            "children": [
+              {
+                "id": "75b12df1-cdf5-425e-a37a-da0313fca779",
+                "type": "IntroduceLetter",
+                "letter": "o"
+              },
+              {
+                "id": "d9431f3b-c868-4836-8409-2da1213360cc",
+                "type": "PresentLetter",
+                "letter": "o"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "9bb86b50-0722-4ce4-a06e-5675659d9d83",
+        "title": "RHI",
+        "children": [
+          {
+            "id": "58c2ae28-12f0-4909-8462-885c7829602a",
+            "title": "R",
+            "words": ["rot", "rose", "brot", "arm", "ohr", "bart"],
+            "children": [
+              {
+                "id": "9bddd6c0-0e31-47f1-ba2e-71bef90c389d",
+                "type": "IntroduceLetter",
+                "letter": "r"
+              },
+              {
+                "id": "9c0ad276-877d-4ca2-ae88-84486b982b7c",
+                "type": "PresentLetter",
+                "letter": "r"
+              }
+            ]
+          },
+          {
+            "id": "483784f2-75f5-469b-ab28-a3b28e26de47",
+            "title": "H",
+            "words": ["haar", "uhr", "sohn", "bahn", "kuh", "hahn", "henne"],
+            "children": [
+              {
+                "id": "4b3d38df-9f95-46ad-b5eb-d47290a6a062",
+                "type": "IntroduceLetter",
+                "letter": "h"
+              },
+              {
+                "id": "5e7db40b-0db1-48a6-ae70-d5dd824be79e",
+                "type": "PresentLetter",
+                "letter": "h"
+              }
+            ]
+          },
+          {
+            "id": "27c499d8-fab3-4d17-bf12-af6329c08cb3",
+            "title": "I",
+            "words": ["kind", "igel", "insel", "kita", "bier", "tier", "kiwi"],
+            "children": [
+              {
+                "id": "d4d98f7e-e48c-4cc3-9145-a8953d7afd6e",
+                "type": "IntroduceLetter",
+                "letter": "i"
+              },
+              {
+                "id": "27079bf5-9bae-4358-bbaa-0f459efb407d",
+                "type": "PresentLetter",
+                "letter": "i"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c3e1a59b-75c0-4dee-a82a-552712065211",
+        "title": "BLM",
+        "children": [
+          {
+            "id": "a16f7d26-f3bc-4b9a-a087-8f1da2c22f6e",
+            "title": "B",
+            "words": ["ball", "birne", "besen", "nebel", "bohne", "gabel"],
+            "children": [
+              {
+                "id": "fc19f938-8207-4776-a55d-741fe5d9cfb6",
+                "type": "IntroduceLetter",
+                "letter": "b"
+              },
+              {
+                "id": "04dd7085-9062-4033-b3ff-cc81e06dd78f",
+                "type": "PresentLetter",
+                "letter": "b"
+              }
+            ]
+          },
+          {
+            "id": "9f1f0eab-7991-4730-b76c-5de986c94d25",
+            "title": "L",
+            "words": [
+              "blatt",
+              "lampe",
+              "malen",
+              "lamm",
+              "laden",
+              "teller",
+              "lila"
+            ],
+            "children": [
+              {
+                "id": "50d3a248-85e1-45d9-b18f-c98cc26103fe",
+                "type": "IntroduceLetter",
+                "letter": "l"
+              },
+              {
+                "id": "456f9228-8031-4d83-92ff-ab9b52e88aea",
+                "type": "PresentLetter",
+                "letter": "l"
+              }
+            ]
+          },
+          {
+            "id": "6e80107e-6f6d-4ca5-b85a-92c93d91b3dc",
+            "title": "M",
+            "words": ["mond", "mama", "name", "limo", "turm", "salami", "hemd"],
+            "children": [
+              {
+                "id": "ead17a3b-a0d2-468f-b6e1-882e8310267d",
+                "type": "IntroduceLetter",
+                "letter": "m"
+              },
+              {
+                "id": "44c1c939-11f3-4090-ac59-0796fb97c6dd",
+                "type": "PresentLetter",
+                "letter": "m"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b58452ff-c5de-46bf-a61d-afaa6ab01263",
+        "title": "DFK",
+        "children": [
+          {
+            "id": "6545a23f-9642-4aa2-83a3-2d199f6c2f3d",
+            "title": "D",
+            "words": ["bad", "rad", "bild", "sand", "dose", "dusche"],
+            "children": [
+              {
+                "id": "1266ff10-52e0-4fd2-b44f-030c7c627281",
+                "type": "IntroduceLetter",
+                "letter": "d"
+              },
+              {
+                "id": "1669daa7-cae2-49d4-954d-abd5373387ad",
+                "type": "PresentLetter",
+                "letter": "d"
+              }
+            ]
+          },
+          {
+            "id": "247a4d3f-81d9-40e7-ad34-80ec7d15fce5",
+            "title": "F",
+            "words": [
+              "lift",
+              "heft",
+              "familie",
+              "fernseher",
+              "fahren",
+              "fleisch",
+              "fisch"
+            ],
+            "children": [
+              {
+                "id": "b0199a5c-2a71-4677-a700-9abb39ee2cda",
+                "type": "IntroduceLetter",
+                "letter": "f"
+              },
+              {
+                "id": "7943a2f2-1933-4a14-8127-e67023aae38b",
+                "type": "PresentLetter",
+                "letter": "f"
+              }
+            ]
+          },
+          {
+            "id": "135c39dc-ed5d-49af-bfa2-0603972b9951",
+            "title": "K",
+            "words": [
+              "keks",
+              "kiosk",
+              "klinik",
+              "bank",
+              "krokodil",
+              "decke",
+              "socke",
+              "kabel"
+            ],
+            "children": [
+              {
+                "id": "bebbf6fe-eead-457c-8a31-90c30367bfe9",
+                "type": "IntroduceLetter",
+                "letter": "k"
+              },
+              {
+                "id": "9efba93c-9b22-4e1f-a963-6a53333730d6",
+                "type": "PresentLetter",
+                "letter": "k"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "d0a48181-bb77-4ad7-b631-2d0b92e4b396",
+        "title": "SCHUG",
+        "children": [
+          {
+            "id": "fefda960-2066-4e69-b7a9-d0f8edd827f1",
+            "title": "SCH",
+            "words": [
+              "schal",
+              "schaf",
+              "schere",
+              "schreiben",
+              "tisch",
+              "schule",
+              "tasche",
+              "flasche"
+            ],
+            "children": [
+              {
+                "id": "debdfe22-41bc-48d3-b36d-3e2cfe426afd",
+                "type": "IntroduceLetter",
+                "letter": "sch"
+              },
+              {
+                "id": "99c0afe0-2435-468b-9653-3debafdfd1b4",
+                "type": "PresentLetter",
+                "letter": "sch"
+              }
+            ]
+          },
+          {
+            "id": "fc7c5a9f-bbcd-4071-9e9e-314fa6478c21",
+            "title": "U",
+            "words": ["nuss", "hut", "kuss", "bus", "fluss", "schuh", "blut"],
+            "children": [
+              {
+                "id": "0148f10b-c43b-4056-87ed-3a69b46eb1b6",
+                "type": "IntroduceLetter",
+                "letter": "u"
+              },
+              {
+                "id": "9a689785-8994-48d9-84d5-efeacd340f2a",
+                "type": "PresentLetter",
+                "letter": "u"
+              }
+            ]
+          },
+          {
+            "id": "e69ff2f2-f6e6-4ae7-876a-c3ceb07121e5",
+            "title": "G",
+            "words": [
+              "regen",
+              "regal",
+              "nagel",
+              "wagen",
+              "zug",
+              "weg",
+              "garten",
+              "gruen"
+            ],
+            "children": [
+              {
+                "id": "970f542f-110e-4452-864c-e1fa51865752",
+                "type": "IntroduceLetter",
+                "letter": "g"
+              },
+              {
+                "id": "cf8ba324-a6ad-4ca5-b244-8b6ae838fbe7",
+                "type": "PresentLetter",
+                "letter": "g"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "af126121-876d-452b-9e2e-51c7da5c34b8",
+        "title": "WPEI",
+        "children": [
+          {
+            "id": "4f05a120-2f00-4d92-a31d-52637cf02b59",
+            "title": "W",
+            "words": [
+              "ausweis",
+              "krawatte",
+              "wasser",
+              "lastwagen",
+              "wandern",
+              "wanderweg"
+            ],
+            "children": [
+              {
+                "id": "8d9b4582-36c1-4b5f-875f-c980e32f4232",
+                "type": "IntroduceLetter",
+                "letter": "w"
+              },
+              {
+                "id": "24a4320a-8554-43cf-9e2f-be97af1c87b9",
+                "type": "PresentLetter",
+                "letter": "w"
+              }
+            ]
+          },
+          {
+            "id": "4edd8c52-b1e4-48c2-b73d-d6d61937e281",
+            "title": "P",
+            "words": [
+              "puppe",
+              "papier",
+              "suppe",
+              "lippe",
+              "ampel",
+              "treppe",
+              "rezept"
+            ],
+            "children": [
+              {
+                "id": "26c1ec3a-a2cc-4c82-bc82-07db47e27919",
+                "type": "IntroduceLetter",
+                "letter": "p"
+              },
+              {
+                "id": "7a678b2e-5c07-40ac-b1da-59583ca856f0",
+                "type": "PresentLetter",
+                "letter": "p"
+              }
+            ]
+          },
+          {
+            "id": "b0c34c3b-b8dd-4801-8243-2e13de43e826",
+            "title": "EI",
+            "words": [
+              "ei",
+              "eis",
+              "wein",
+              "klein",
+              "weisz",
+              "bein",
+              "kleid",
+              "schwein",
+              "kneipe",
+              "reis"
+            ],
+            "children": [
+              {
+                "id": "324a841f-c067-4fb8-8152-eb0b65d52ac6",
+                "type": "IntroduceLetter",
+                "letter": "ei"
+              },
+              {
+                "id": "877e790f-1d2d-4d56-b68c-6a917cfb0206",
+                "type": "PresentLetter",
+                "letter": "ei"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "60e009ad-b25c-44d5-9bbe-f6d272936c46",
+        "title": "ZCHAU",
+        "children": [
+          {
+            "id": "051959e1-fb40-4282-8e6e-378a67bf8b94",
+            "title": "Z",
+            "words": [
+              "kerze",
+              "holz",
+              "katze",
+              "arzt",
+              "pizza",
+              "herz",
+              "salz",
+              "pilz",
+              "zwiebel"
+            ],
+            "children": [
+              {
+                "id": "aecb0b83-963f-4eed-842e-e4ecdab87700",
+                "type": "IntroduceLetter",
+                "letter": "z"
+              },
+              {
+                "id": "f2c6ab98-0e56-482d-8d56-66282f966acd",
+                "type": "PresentLetter",
+                "letter": "z"
+              }
+            ]
+          },
+          {
+            "id": "c971f64e-0949-4b60-a335-54b888a1f745",
+            "title": "CH",
+            "words": [
+              "lachen",
+              "dach",
+              "kochen",
+              "buch",
+              "kuchen",
+              "bach",
+              "gesicht",
+              "hochhaus",
+              "kirche"
+            ],
+            "children": [
+              {
+                "id": "b2cb9fbe-34e6-400b-a98f-55185a372e99",
+                "type": "IntroduceLetter",
+                "letter": "ch"
+              },
+              {
+                "id": "7f71e98a-54d3-4ff1-8c2e-acd520b63722",
+                "type": "PresentLetter",
+                "letter": "ch"
+              }
+            ]
+          },
+          {
+            "id": "5b6fa1ec-d5c5-4532-a92d-5d28e784cf72",
+            "title": "AU",
+            "words": [
+              "aufzug",
+              "bauch",
+              "zaun",
+              "baum",
+              "blau",
+              "braun",
+              "haus",
+              "maus",
+              "mauer"
+            ],
+            "children": [
+              {
+                "id": "47edcf77-fd6e-40cd-93b6-cabdb2d8f5ec",
+                "type": "IntroduceLetter",
+                "letter": "au"
+              },
+              {
+                "id": "85990804-0435-4d33-99bb-b89a0397a6bf",
+                "type": "PresentLetter",
+                "letter": "au"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "158ffd00-d98f-4d5b-bb25-72523f7acbc3",
+        "title": "JNGÜ",
+        "children": [
+          {
+            "id": "2b823259-7f21-4110-9f05-c5b8c5db935f",
+            "title": "J",
+            "words": ["jahr", "ja", "jung"],
+            "children": [
+              {
+                "id": "3bf078cb-3688-47c2-a027-2f7d39567716",
+                "type": "IntroduceLetter",
+                "letter": "j"
+              },
+              {
+                "id": "082f3d26-b39e-4846-94f4-d04c59ac11d0",
+                "type": "PresentLetter",
+                "letter": "j"
+              }
+            ]
+          },
+          {
+            "id": "fbed5f13-ccaa-4364-b128-adc16cb5e63a",
+            "title": "NG",
+            "words": [
+              "finger",
+              "zange",
+              "klingel",
+              "singen",
+              "schlange",
+              "zeitung"
+            ],
+            "children": [
+              {
+                "id": "0830381b-0b15-4bbf-a94a-4a8314000561",
+                "type": "IntroduceLetter",
+                "letter": "ng"
+              },
+              {
+                "id": "3b079c15-6a02-477e-8f83-fe006d464a18",
+                "type": "PresentLetter",
+                "letter": "ng"
+              }
+            ]
+          },
+          {
+            "id": "f0a039fc-b8b0-4ab4-8826-262f0776cb58",
+            "title": "Ü",
+            "words": [
+              "muetze",
+              "kueche",
+              "tuer",
+              "muell",
+              "tuete",
+              "wuerfel",
+              "muesli",
+              "huegel",
+              "guertel",
+              "muenze"
+            ],
+            "children": [
+              {
+                "id": "63050456-5379-432f-b51b-16ad4cb053fd",
+                "type": "IntroduceLetter",
+                "letter": "ü"
+              },
+              {
+                "id": "fa9ce727-43c8-4b22-ab99-b98af2c58717",
+                "type": "PresentLetter",
+                "letter": "ü"
+              }
+            ]
+          },
+          {
+            "id": "2dd17b30-14ae-4597-a5b5-ab7b1b0e4a40",
+            "title": "ÄU/EUXÖ",
+            "children": [
+              {
+                "id": "475838d1-337d-4961-9119-92aeeeafd6ba",
+                "title": "EU",
+                "words": ["feuer", "flugzeug", "ankreuzen", "werkzeug"],
+                "children": [
+                  {
+                    "id": "b6599aad-4295-4355-8063-2111a34e6aed",
+                    "type": "IntroduceLetter",
+                    "letter": "eu"
+                  },
+                  {
+                    "id": "c7cd2d6f-4d39-43a5-aa92-953a0714ac88",
+                    "type": "PresentLetter",
+                    "letter": "eu"
+                  }
+                ]
+              },
+              {
+                "id": "04de7cc1-e50f-404e-9191-55c916df7008",
+                "title": "X",
+                "words": ["taxi", "text", "arztpraxis"],
+                "children": [
+                  {
+                    "id": "9a450224-643a-4c63-84ff-1c9efe9b5117",
+                    "type": "IntroduceLetter",
+                    "letter": "x"
+                  },
+                  {
+                    "id": "b34a5c49-b3a1-4b95-9518-279921220931",
+                    "type": "PresentLetter",
+                    "letter": "x"
+                  }
+                ]
+              },
+              {
+                "id": "34ca94a6-408e-4b0e-8637-3abd9df274ca",
+                "title": "Ö",
+                "words": ["föhn", "löffel", "knödel"],
+                "children": [
+                  {
+                    "id": "50c262aa-1bdf-456d-8ddb-3325cc97f5b5",
+                    "type": "IntroduceLetter",
+                    "letter": "ö"
+                  },
+                  {
+                    "id": "989f23f8-0ed8-445c-9120-ca877730c797",
+                    "type": "PresentLetter",
+                    "letter": "ö"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2ecdd0b1-a8dd-4e2a-bc1d-95c853428fbb",
+            "title": "YCQU",
+            "children": [
+              {
+                "id": "d1748aa8-d736-4da2-88ac-3d66e4f2a394",
+                "title": "Y",
+                "words": ["syrien", "asyl", "baby", "handy"],
+                "children": [
+                  {
+                    "id": "6a6c8531-4377-4c53-bdcf-38d6e0d0f015",
+                    "type": "IntroduceLetter",
+                    "letter": "y"
+                  },
+                  {
+                    "id": "2ee9b375-647a-402e-b33d-4b5214d73d2f",
+                    "type": "PresentLetter",
+                    "letter": "y"
+                  }
+                ]
+              },
+              {
+                "id": "70e73847-091e-4d47-a55f-a56162161b6c",
+                "title": "C",
+                "words": ["cafe", "disco", "computer", "club"],
+                "children": [
+                  {
+                    "id": "8fe1152b-00a0-45f7-b04b-71c585cbbc20",
+                    "type": "IntroduceLetter",
+                    "letter": "c"
+                  },
+                  {
+                    "id": "8770bf48-3570-48fe-b3b1-5099ba6e164f",
+                    "type": "PresentLetter",
+                    "letter": "c"
+                  }
+                ]
+              },
+              {
+                "id": "fc8e04cf-919a-4603-834c-4603ff1ccf3a",
+                "title": "QU",
+                "words": ["aquarium", "qualle"],
+                "children": [
+                  {
+                    "id": "00a31e17-6ba6-4be7-8979-f2e8ff4b7346",
+                    "type": "IntroduceLetter",
+                    "letter": "qu"
+                  },
+                  {
+                    "id": "62241b14-7f58-46c9-999f-6f34f7ced111",
+                    "type": "PresentLetter",
+                    "letter": "qu"
+                  }
+                ]
               }
             ]
           }
