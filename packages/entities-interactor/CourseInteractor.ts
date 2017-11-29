@@ -97,6 +97,18 @@ class CourseInteractor extends AbstractCourseInteractor {
     return entity && (entity.getInfo() as Optional<ICourseStructure>);
   }
 
+  public getNewVocabulary(id: string) {
+    const entity = this.course.findEntity(id);
+
+    return entity && entity.getNewVocabulary();
+  }
+
+  public getVocabulary(id: string) {
+    const entity = this.course.findEntity(id);
+
+    return entity && entity.getVocabulary();
+  }
+
   public getProgress(id: string) {
     return this.progress[id] || { progress: Progress.Unseen };
   }

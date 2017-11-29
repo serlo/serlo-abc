@@ -1,0 +1,37 @@
+{
+  "09438926-b170-4005-a6e8-5dd8fba83cde": {
+    "id": "09438926-b170-4005-a6e8-5dd8fba83cde",
+    "title": "Default course",
+    "children": [
+      {
+        "id": "671a2489-9a72-42de-8d45-d95d76a46d77",
+        "title": "ANE",
+        "children": [
+          {
+            "id": "b3e14abb-ce08-41c4-bc3f-3c1a86998f51",
+            "title": "A",
+            "words": [
+              "ananas",
+              "apfel",
+              "dose",
+              "esel",
+              "oma",
+              "sonne",
+              "affe",
+              "nase",
+              "sofa",
+              "affe"
+            ],
+            "children": [
+              {
+                "id": "6860685f-19fc-4798-b0dc-6a3e41adc97a",
+                "type": "IntroduceLetter",
+                "letter": "a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

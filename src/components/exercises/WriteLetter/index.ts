@@ -1,8 +1,5 @@
-import { Canvas } from '../../../../packages/entities/exercises';
+import { Canvas } from '../../../../packages/entities/exercises/canvas.exercise';
 import { WriteLetter } from './write-letter';
 
-export const Exercise = Canvas.Exercise;
-export const fixtures = Canvas.createFixtures([
-  { name: 'A', props: { letter: 'A' } }
-]);
+export const Exercise = Canvas;
 export const Component = WriteLetter;

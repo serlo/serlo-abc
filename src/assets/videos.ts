@@ -1,6 +1,6 @@
-import { IVideoAsset } from '../types/assets';
+import { AssetTypes } from '../../packages/entities/asset-resolver';
 
-const videos: { [id: string]: () => IVideoAsset } = {
+const videos: { [id: string]: () => AssetTypes.VideoAsset } = {
   explanation_show_letter: () =>
     require('./videos/explanation_show_letter.mp4'),
   explanation_show_word: () => require('./videos/explanation_show_word.mp4'),

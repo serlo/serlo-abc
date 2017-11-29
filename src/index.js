@@ -1,23 +1,26 @@
-import { find, identity, map, mergeAll } from 'ramda';
+import { find, identity, map } from 'ramda';
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
 
+import { EntityFactory } from '../packages/entities';
 import Interactor from '../packages/entities-interactor';
-import courses from './assets/courses.json';
-import getExercise from './components/exercises';
+import courses from '../packages/assets/courses.json';
+import getExercise, { ExerciseComponents } from './components/exercises';
 import Course from './components/screens/Course';
 import Exercise from './components/screens/Exercise';
 import Splash from './components/screens/Splash';
 import { LoadSounds } from './components/helpers/Audio';
+import { ExerciseGroup } from './components/helpers/exercise-group';
 import loadFonts from './components/helpers/fonts';
 import { play, getSound } from './helpers/audio';
 import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
 import { PRIMARY } from './styles/colors';
-import Word from './word';
+import { AssetResolver } from './asset-resolver';
 
 import loadVideo from './assets/videos';
+import { IntroduceLetter } from '../packages/entities/exercise-groups/introduce-letter';
 
 export const getVideo = id => {
   const load = loadVideo[id];
@@ -31,6 +34,9 @@ export class AppRoutes extends Component {
     const storage = new Storage(courses);
     const progressStorage = new ProgressStorage();
     this.interactor = new Interactor(storage, progressStorage);
+
+    const resolver = new AssetResolver();
+    this.entityFactory = new EntityFactory(resolver);
 
     this.state = { course: null };
   }
@@ -149,6 +155,8 @@ export class AppRoutes extends Component {
                 const { id } = match.params;
                 const { level } = location.state;
 
+                console.warn(id);
+
                 if (!this.state.course) {
                   return null;
                 }
@@ -174,34 +182,25 @@ export class AppRoutes extends Component {
                   return this.goDown(next.id, level);
                 }
 
-                // Leaf
-                const exerciseType = getExercise(type);
+                const newWords = this.interactor.getNewVocabulary(id);
+                const words = this.interactor.getVocabulary(id);
 
-                if (!exerciseType) {
+                // Leaf
+                const group = this.entityFactory.createExerciseGroup(
+                  type,
+                  newWords,
+                  words,
+                  props
+                );
+
+                if (!group) {
                   console.warn('no view found for type', type);
                   return null;
                 }
 
-                const exercise = new exerciseType.Exercise(
-                  mergeAll([
-                    props,
-                    props.video && { video: getVideo(props.video) },
-                    props.sound && { sound: getSound(props.sound) },
-                    props.sounds && { sounds: map(getSound, props.sounds) },
-                    props.word && { word: new Word(props.word) },
-                    props.words && {
-                      words: map(word => new Word(word), props.words)
-                    }
-                  ])
-                );
-
-                let firstAttempt = true;
-
-                const handleCorrect = () => {
+                const done = () => {
                   play(correctSound).then(() => {
-                    if (firstAttempt) {
-                      this.markAsCorrect(id);
-                    }
+                    this.markAsCorrect(id);
 
                     history.push(`/node/${entity.parent}`, {
                       level: level - 1
@@ -209,23 +208,14 @@ export class AppRoutes extends Component {
                   });
                 };
 
-                const handleWrong = () => {
-                  if (firstAttempt) {
-                    this.markAsIncorrect(id);
-                  }
-
-                  firstAttempt = false;
-
-                  play(wrongSound);
-                };
-
                 return (
-                  <Exercise
-                    exercise={exercise}
-                    Component={exerciseType.Component}
+                  <ExerciseGroup
+                    createExerciseComponent={type => ExerciseComponents[type]}
+                    group={group}
                     goToNav={() => history.push('/course')}
-                    onCorrect={handleCorrect}
-                    onWrong={handleWrong}
+                    onCorrect={() => play(correctSound)}
+                    onWrong={() => play(wrongSound)}
+                    onDone={done}
                   />
                 );
               }}
