@@ -133,21 +133,20 @@ export class Exercise extends React.Component {
   }
 
   private submit = (): void => {
-    this.props.onSubmit(this.state.state);
-    // const { exercise, onCorrect, onWrong } = this.props;
-    // const { state } = this.state;
+    const { exercise } = this.props;
+    const { state } = this.state;
 
-    // const isCorrect = exercise.isCorrect(state);
-    // const feedback = exercise.getFeedback(state);
+    const isCorrect = exercise.isCorrect(state);
+    const feedback = exercise.getFeedback(state);
 
-    // isCorrect ? onCorrect() : onWrong();
+    this.setState({
+      feedback,
+      isCorrect,
+      showFeedback: !isCorrect,
+      submitted: true
+    });
 
-    // this.setState({
-    //   isCorrect,
-    //   feedback,
-    //   showFeedback: !isCorrect,
-    //   submitted: true
-    // });
+    this.props.onSubmit(state);
   };
 
   private updateState = (

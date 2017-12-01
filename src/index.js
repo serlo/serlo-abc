@@ -197,12 +197,10 @@ export class AppRoutes extends Component {
                 }
 
                 const done = () => {
-                  play(correctSound).then(() => {
-                    this.markAsCorrect(id);
+                  this.markAsCorrect(id);
 
-                    history.push(`/node/${entity.parent}`, {
-                      level: level - 1
-                    });
+                  history.push(`/node/${entity.parent}`, {
+                    level: level - 1
                   });
                 };
 

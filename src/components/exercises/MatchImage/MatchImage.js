@@ -27,12 +27,14 @@ const styles = {
 class MatchImage extends Component {
   createImageButton = index => {
     const { showFeedback, feedback } = this.props;
-    const wrong = showFeedback && feedback.highlightedChoice === index;
+    const wrong = showFeedback && feedback.wrongChoice === index;
+    const correct = showFeedback && feedback.correctChoice === index;
 
     return (
       <TouchableOpacity onPress={() => this.props.setState(index)}>
         <RoundImageWithBorder
           white
+          correct={correct}
           wrong={wrong}
           highlighted={this.props.state === index}
           image={this.props.words[index].getImage()}

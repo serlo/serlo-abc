@@ -1,14 +1,13 @@
-// import * as ExplanationText from './ExplanationText';
-// import * as FindLetter from './FindLetter';
+import ExplanationText from './ExplanationText/ExplanationText';
+import FindLetter from './FindLetter/FindLetter';
 import IntroduceLetter from './IntroduceLetter/IntroduceLetter';
 import ShowLetter from './ShowLetter/ShowLetter';
-// import * as ShowLetterRepeat from './ShowLetterRepeat';
 import ShowWord from './ShowWord/ShowWord';
 // import * as ShowWordRepeat from './ShowWordRepeat';
-// import * as TutorialVideo from './TutorialVideo';
-// import * as PraiseVideo from './PraiseVideo';
-// import * as MatchImage from './MatchImage';
-// import * as WriteLetter from './WriteLetter';
+import TutorialVideo from './TutorialVideo/TutorialVideo';
+import PraiseVideo from './PraiseVideo/PraiseVideo';
+import MatchImage from './MatchImage/MatchImage';
+import { WriteLetter } from './WriteLetter/write-letter';
 // import * as WriteWord from './WriteWord';
 
 // const exercises = {
@@ -31,7 +30,13 @@ import ShowWord from './ShowWord/ShowWord';
 // };
 
 export const ExerciseComponents = {
+  ExplanationText,
+  FindLetter,
   IntroduceLetter,
+  MatchImage,
+  PraiseVideo,
   ShowLetter,
-  ShowWord
+  ShowWord,
+  TutorialVideo,
+  WriteLetter
 };

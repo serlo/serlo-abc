@@ -5,7 +5,8 @@ import {
   BLACK_TRANSPARENT,
   WHITE_TRANSPARENT,
   WHITE_LESS_TRANSPARENT,
-  RED
+  RED,
+  GREEN
 } from '../../styles/colors';
 
 class RoundImageWithBorder extends Component {
@@ -33,19 +34,22 @@ class RoundImageWithBorder extends Component {
   }
 
   render() {
-    const { highlighted, image, white, style, wrong } = this.props;
+    const { correct, highlighted, image, white, style, wrong } = this.props;
     const { size } = this.state;
 
     return (
       <Animated.View
         style={[
           {
-            backgroundColor: white ? WHITE_TRANSPARENT : BLACK_TRANSPARENT,
+            backgroundColor: wrong
+              ? RED
+              : correct
+                ? GREEN
+                : highlighted
+                  ? WHITE_LESS_TRANSPARENT
+                  : white ? WHITE_TRANSPARENT : BLACK_TRANSPARENT,
             borderRadius: 9999999,
             margin: this.props.size / 10
-          },
-          highlighted && {
-            backgroundColor: wrong ? RED : WHITE_LESS_TRANSPARENT
           },
           style
         ]}

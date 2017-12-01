@@ -47,10 +47,14 @@ class FindLetter extends Component {
 
   createLetterButton = (letter, i) => {
     const { showFeedback, feedback } = this.props;
+
     const highlighted = this.props.state[i];
-    const wrong = showFeedback && feedback.wrongChoices[i];
-    const correct = showFeedback && feedback.correctChoices[i];
-    const missingCorrect = showFeedback && feedback.missingCorrectChoices[i];
+    const incorrectlySelected = showFeedback && feedback.incorrectlySelected[i];
+    const correctlySelected = showFeedback && feedback.correctlySelected[i];
+    const incorrectlyNotSelected =
+      showFeedback && feedback.incorrectlyNotSelected[i];
+    const correctlyNotSelected =
+      showFeedback && feedback.correctlyNotSelected[i];
 
     return (
       <TouchableOpacity
@@ -58,14 +62,15 @@ class FindLetter extends Component {
         onPress={this.toggleLetter(i)}
         style={[
           styles.letter,
-          highlighted && {
-            backgroundColor: correct ? GREEN : PRIMARY_WEAK
-          },
-          wrong && {
-            backgroundColor: RED
-          },
           {
-            borderColor: !highlighted && missingCorrect ? GREEN : 'transparent'
+            backgroundColor: incorrectlySelected
+              ? RED
+              : correctlySelected
+                ? GREEN
+                : highlighted ? PRIMARY_WEAK : PRIMARY_STRONG,
+            borderColor: incorrectlyNotSelected
+              ? RED
+              : correctlyNotSelected ? GREEN : 'transparent'
           }
         ]}
       >
