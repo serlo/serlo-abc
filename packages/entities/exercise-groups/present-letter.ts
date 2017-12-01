@@ -1,6 +1,3 @@
-import { contains, filter } from 'ramda';
-
-import { sample } from '../../sample';
 import { ExerciseTypes } from '../exercises';
 import { capitalizeFirstLetter, sampleForletter } from '../word/helpers';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';

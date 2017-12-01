@@ -17,23 +17,24 @@ import { RoundIconButton } from '../common/buttons';
 // @ts-ignore: TODO: migrate to TypeScript
 import { LoadSounds } from '../helpers/Audio';
 
-interface IProps<Props, State, Feedback> {
-  entityFactory: AbstractExercise<Props, State, Feedback>;
-  Component: React.ComponentType<{
-    showFeedback: boolean;
-    feedback: Feedback;
-    state: State;
-    setState: (state: State) => void;
-  }>;
-  submitted?: State;
+interface ExerciseProps {
+  /* tslint:disable-next-line:no-any */
+  exercise: AbstractExercise<any, any, any>;
+  enableSubmitBySwipe: boolean;
+  Component: React.ComponentType;
+  // submitted?: boolean;
   goToNav: () => void;
-  onCorrect: () => void;
-  onWrong: () => void;
+  /* tslint:disable-next-line:no-any */
+  onSubmit: (state: any) => void;
+  // onCorrect: () => void;
+  // onWrong: () => void;
 }
 
-interface IState<State, Feedback> {
-  state: State;
-  feedback: Feedback;
+interface ExerciseState {
+  /* tslint:disable-next-line:no-any */
+  state: any;
+  /* tslint:disable-next-line:no-any */
+  feedback: any;
   isCorrect: boolean;
   showFeedback: boolean;
   submitted: boolean;
@@ -57,8 +58,8 @@ const styles = StyleSheet.create({
   }
 });
 
-export class Exercise extends React.Component {
-  constructor(props: any) {
+export class Exercise extends React.Component<ExerciseProps, ExerciseState> {
+  constructor(props: ExerciseProps) {
     super(props);
 
     const { exercise } = props;
@@ -71,16 +72,6 @@ export class Exercise extends React.Component {
       showFeedback: false,
       submitted: false
     };
-  }
-
-  public componentDidMount() {
-    const { submitted } = this.props;
-
-    if (typeof submitted !== 'undefined') {
-      this.setState({ state: submitted }, () => {
-        this.submit();
-      });
-    }
   }
 
   public render() {
@@ -150,11 +141,14 @@ export class Exercise extends React.Component {
   };
 
   private updateState = (
-    newState: State | ((oldState: State) => State)
+    /* tslint:disable-next-line:no-any */
+    newState: any | ((oldState: any) => any)
   ): void => {
-    const isObject = (val: State) => typeof val === 'object' && !is(Array, val);
+    /* tslint:disable-next-line:no-any */
+    const isObject = (val: any) => typeof val === 'object' && !is(Array, val);
 
-    const apply = (oldState: State): ((newState: State) => State) =>
+    /* tslint:disable-next-line:no-any */
+    const apply = (oldState: any): ((newState: any) => any) =>
       isObject(oldState) ? merge(oldState) : identity;
 
     this.setState(({ state }) => ({

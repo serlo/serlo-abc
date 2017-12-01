@@ -6,9 +6,8 @@ import { NativeRouter, Redirect, Route } from 'react-router-native';
 import { EntityFactory } from '../packages/entities';
 import Interactor from '../packages/entities-interactor';
 import courses from '../packages/assets/courses.json';
-import getExercise, { ExerciseComponents } from './components/exercises';
+import { ExerciseComponents } from './components/exercises';
 import Course from './components/screens/Course';
-import Exercise from './components/screens/Exercise';
 import Splash from './components/screens/Splash';
 import { LoadSounds } from './components/helpers/Audio';
 import { ExerciseGroup } from './components/helpers/exercise-group';
@@ -18,14 +17,6 @@ import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
 import { PRIMARY } from './styles/colors';
 import { AssetResolver } from './asset-resolver';
-
-import loadVideo from './assets/videos';
-import { IntroduceLetter } from '../packages/entities/exercise-groups/introduce-letter';
-
-export const getVideo = id => {
-  const load = loadVideo[id];
-  return load && load();
-};
 
 export class AppRoutes extends Component {
   constructor(props) {
