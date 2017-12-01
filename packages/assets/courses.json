@@ -222,6 +222,11 @@
                 "letter": "s"
               },
               {
+                "id": "5b2b1330-fd4a-42d8-8be8-07c3380eb2af",
+                "type": "DifferFromSymbol",
+                "letter": "s"
+              },
+              {
                 "id": "a2163a2e-bfe8-4597-a1a9-0801ee358de3",
                 "type": "ShowWords",
                 "letter": "s"
@@ -285,6 +290,11 @@
                 "letter": "t"
               },
               {
+                "id": "8021780a-7b3e-4ef9-b8f4-293ddf8f4223",
+                "type": "DifferFromSymbol",
+                "letter": "t"
+              },
+              {
                 "id": "0c8caed8-3a92-4357-8390-b36fa5fc5334",
                 "type": "ShowWords",
                 "letter": "t"
@@ -337,6 +347,11 @@
               {
                 "id": "bcb927ef-e078-4a78-82b9-f99552181b59",
                 "type": "WriteLetter",
+                "letter": "o"
+              },
+              {
+                "id": "ec19b1bd-f3cc-4cb9-8150-0aede39c6659",
+                "type": "DifferFromSymbol",
                 "letter": "o"
               },
               {
@@ -401,6 +416,11 @@
                 "letter": "r"
               },
               {
+                "id": "9e4d92e2-74fa-4c71-af69-5ecd98188bd3",
+                "type": "DifferFromSymbol",
+                "letter": "r"
+              },
+              {
                 "id": "c03f42a6-c04e-46ee-b776-550509e410a5",
                 "type": "ShowWords",
                 "letter": "r"
@@ -456,6 +476,11 @@
                 "letter": "i"
               },
               {
+                "id": "7fbca14f-1a0a-4bf5-9322-8b68c61bf925",
+                "type": "DifferFromSymbol",
+                "letter": "i"
+              },
+              {
                 "id": "88b27c95-7f68-4bef-9b82-5de348581ccc",
                 "type": "ShowWords",
                 "letter": "i"
@@ -508,6 +533,11 @@
               {
                 "id": "d7b45951-a5c9-443a-b815-227df703ca74",
                 "type": "WriteLetter",
+                "letter": "h"
+              },
+              {
+                "id": "bc9fce5e-ebb5-4f86-a3fb-2b091fb27d42",
+                "type": "DifferFromSymbol",
                 "letter": "h"
               },
               {
@@ -569,6 +599,11 @@
               {
                 "id": "9a3858e4-5f37-4f0e-8734-a84137beb2d5",
                 "type": "WriteLetter",
+                "letter": "b"
+              },
+              {
+                "id": "e8f764c1-f0a7-4011-a0e1-325a5ba866e2",
+                "type": "DifferFromSymbol",
                 "letter": "b"
               },
               {
@@ -635,6 +670,11 @@
                 "letter": "l"
               },
               {
+                "id": "595a11b8-c0bb-435c-bc68-5925e8babece",
+                "type": "DifferFromSymbol",
+                "letter": "l"
+              },
+              {
                 "id": "a628f7ac-4430-4cd6-9b01-0700602e3995",
                 "type": "ShowWords",
                 "letter": "l"
@@ -687,6 +727,11 @@
               {
                 "id": "bd526e7d-77c7-432d-8a13-e7112a7f7a6f",
                 "type": "WriteLetter",
+                "letter": "m"
+              },
+              {
+                "id": "9e12fcb6-af1e-4e75-abcb-5d20d78f2464",
+                "type": "DifferFromSymbol",
                 "letter": "m"
               },
               {
@@ -748,6 +793,11 @@
               {
                 "id": "151ad390-3f0b-4a2f-bc72-75cdcc7264ef",
                 "type": "WriteLetter",
+                "letter": "d"
+              },
+              {
+                "id": "55a656e4-f80f-4501-b20e-2ce92cfe8c48",
+                "type": "DifferFromSymbol",
                 "letter": "d"
               },
               {
@@ -814,6 +864,11 @@
                 "letter": "f"
               },
               {
+                "id": "908b0d61-18be-4743-b663-be720d6fc3bb",
+                "type": "DifferFromSymbol",
+                "letter": "f"
+              },
+              {
                 "id": "df929e9d-8767-427d-9074-a2e2dbbc81fd",
                 "type": "ShowWords",
                 "letter": "f"
@@ -875,6 +930,11 @@
               {
                 "id": "bfd903dd-a2e2-4c11-bdff-70af71f1f436",
                 "type": "WriteLetter",
+                "letter": "k"
+              },
+              {
+                "id": "07f1a6c5-ee50-4815-918b-a25386a61dd0",
+                "type": "DifferFromSymbol",
                 "letter": "k"
               },
               {
@@ -948,6 +1008,11 @@
                 "letter": "sch"
               },
               {
+                "id": "9d41fe7b-de30-4822-82f4-81a8a68b51eb",
+                "type": "DifferFromSymbol",
+                "letter": "sch"
+              },
+              {
                 "id": "9a33df3c-eada-4b0f-b2e9-d65695537884",
                 "type": "ShowWords",
                 "letter": "sch"
@@ -1000,6 +1065,11 @@
               {
                 "id": "dba714b2-6b7f-4aad-9dec-3a110bc593b2",
                 "type": "WriteLetter",
+                "letter": "u"
+              },
+              {
+                "id": "252bf9fc-57ab-4607-b24a-595903eb67ad",
+                "type": "DifferFromSymbol",
                 "letter": "u"
               },
               {
@@ -1064,6 +1134,11 @@
               {
                 "id": "64fa7401-a2af-47ad-9ad5-b49911bca8fa",
                 "type": "WriteLetter",
+                "letter": "g"
+              },
+              {
+                "id": "6543ed45-0dcf-4ea2-bfff-17c054e07b74",
+                "type": "DifferFromSymbol",
                 "letter": "g"
               },
               {
@@ -1135,6 +1210,11 @@
                 "letter": "w"
               },
               {
+                "id": "618613c4-0570-4adc-b886-21d34ff8fe81",
+                "type": "DifferFromSymbol",
+                "letter": "w"
+              },
+              {
                 "id": "c3e91134-db31-493d-97c8-090c36af7210",
                 "type": "ShowWords",
                 "letter": "w"
@@ -1195,6 +1275,11 @@
               {
                 "id": "0d710d00-4010-470a-882f-694874b74e00",
                 "type": "WriteLetter",
+                "letter": "p"
+              },
+              {
+                "id": "1c467342-ab1b-4add-838a-07dcc944cdfb",
+                "type": "DifferFromSymbol",
                 "letter": "p"
               },
               {
@@ -1261,6 +1346,11 @@
               {
                 "id": "462656e7-8436-43b5-b658-b1e900b7ecf2",
                 "type": "WriteLetter",
+                "letter": "ei"
+              },
+              {
+                "id": "e7e698d3-b380-4bf2-955d-eb371d588e7e",
+                "type": "DifferFromSymbol",
                 "letter": "ei"
               },
               {
@@ -1335,6 +1425,11 @@
                 "letter": "z"
               },
               {
+                "id": "88e78b22-5983-4396-bb04-9f701114b2df",
+                "type": "DifferFromSymbol",
+                "letter": "z"
+              },
+              {
                 "id": "a6cc3b85-5f07-4a08-a4b0-7b2305537a44",
                 "type": "ShowWords",
                 "letter": "z"
@@ -1397,6 +1492,11 @@
               {
                 "id": "2f3f51a1-6fd9-4662-9e4b-3109e0b7c2fd",
                 "type": "WriteLetter",
+                "letter": "ch"
+              },
+              {
+                "id": "f3e64baf-d37b-4f7d-866f-99de8c2cbc48",
+                "type": "DifferFromSymbol",
                 "letter": "ch"
               },
               {
@@ -1465,6 +1565,11 @@
                 "letter": "au"
               },
               {
+                "id": "aaa941a4-0e05-464c-84bb-1e10132b6288",
+                "type": "DifferFromSymbol",
+                "letter": "au"
+              },
+              {
                 "id": "c132067b-88e1-43db-b3ff-e1dfcafe689a",
                 "type": "ShowWords",
                 "letter": "au"
@@ -1523,6 +1628,11 @@
               {
                 "id": "2d7c6ca6-e191-4e80-9247-b5f25fb1d7e0",
                 "type": "WriteLetter",
+                "letter": "j"
+              },
+              {
+                "id": "5009fc97-d9f3-44ed-955e-7044d2e67b3c",
+                "type": "DifferFromSymbol",
                 "letter": "j"
               },
               {
@@ -1585,6 +1695,11 @@
               {
                 "id": "87b90457-f1e9-4090-8e38-5d0907652339",
                 "type": "WriteLetter",
+                "letter": "ng"
+              },
+              {
+                "id": "cff576e2-8e93-4ba4-ad2f-0b97f81b61ac",
+                "type": "DifferFromSymbol",
                 "letter": "ng"
               },
               {
@@ -1654,6 +1769,11 @@
                 "letter": "ü"
               },
               {
+                "id": "5aa429f6-9382-4a83-864a-8b3afb898a91",
+                "type": "DifferFromSymbol",
+                "letter": "ü"
+              },
+              {
                 "id": "e54b2732-4da0-420d-9952-4ad3e0a51c03",
                 "type": "ShowWords",
                 "letter": "ü"
@@ -1715,6 +1835,11 @@
                 "letter": "eu"
               },
               {
+                "id": "f208eb81-d4e9-4da4-833f-02271152c391",
+                "type": "DifferFromSymbol",
+                "letter": "eu"
+              },
+              {
                 "id": "f56c0e66-193c-4759-8dec-728530b72c82",
                 "type": "ShowWords",
                 "letter": "eu"
@@ -1770,6 +1895,11 @@
                 "letter": "x"
               },
               {
+                "id": "9ded9531-9217-4ef1-b8fe-d6c66a10c34a",
+                "type": "DifferFromSymbol",
+                "letter": "x"
+              },
+              {
                 "id": "77f47cef-cda2-496f-aafc-b7059c266447",
                 "type": "ShowWords",
                 "letter": "x"
@@ -1822,6 +1952,11 @@
               {
                 "id": "d0c3e50f-621d-4efe-a094-a15c24b8aa46",
                 "type": "WriteLetter",
+                "letter": "ö"
+              },
+              {
+                "id": "d2f0e64d-c7e0-427e-a2a0-daa00bfe7321",
+                "type": "DifferFromSymbol",
                 "letter": "ö"
               },
               {
@@ -1886,6 +2021,11 @@
                 "letter": "y"
               },
               {
+                "id": "139b6faf-12ce-4700-8aa9-dcfb246b3e90",
+                "type": "DifferFromSymbol",
+                "letter": "y"
+              },
+              {
                 "id": "3ab15ed8-2e49-4967-a874-e57cfe924b6f",
                 "type": "ShowWords",
                 "letter": "y"
@@ -1941,6 +2081,11 @@
                 "letter": "c"
               },
               {
+                "id": "db53cd89-f05b-467d-a9dd-3f6ee1834160",
+                "type": "DifferFromSymbol",
+                "letter": "c"
+              },
+              {
                 "id": "a3d51856-24f3-4fc1-9b3a-44ba2bae5783",
                 "type": "ShowWords",
                 "letter": "c"
@@ -1993,6 +2138,11 @@
               {
                 "id": "f66b8593-ab4f-4a22-8953-a865c47e9b9e",
                 "type": "WriteLetter",
+                "letter": "qu"
+              },
+              {
+                "id": "921cc079-d47c-43e9-b321-a2b77c6345be",
+                "type": "DifferFromSymbol",
                 "letter": "qu"
               },
               {
