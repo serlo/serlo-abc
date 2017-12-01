@@ -34,9 +34,9 @@ readdir(outputPath)
   .then(() => readdir(soundsPath))
   .then(files => {
     // Loaders for React Native app
-    let str = `import { ISoundAsset } from '../../types/assets';
+    let str = `import { AssetTypes } from '../../../packages/entities';
 
-    const sounds: { [id: string]: () => ISoundAsset } = {`;
+    const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {`;
 
     R.forEach(file => {
       str += `
