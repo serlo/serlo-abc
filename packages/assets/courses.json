@@ -202,14 +202,52 @@
             ],
             "children": [
               {
-                "id": "be16b24c-8801-45d3-9c20-32e04db8f918",
+                "id": "bbf343e3-8398-4157-9678-084771b4c749",
                 "type": "IntroduceLetter",
                 "letter": "s"
               },
               {
-                "id": "35d70fe7-04da-443e-a50c-b72e39e93385",
+                "id": "01aef9d9-7c4b-444b-b4b7-02ebdddc2368",
                 "type": "PresentLetter",
                 "letter": "s"
+              },
+              {
+                "id": "adf59e22-38e8-483a-99a2-8e4695c10697",
+                "type": "RepeatLetter",
+                "letter": "s"
+              },
+              {
+                "id": "88ab4cd9-b710-47c9-928f-76803169f37a",
+                "type": "WriteLetter",
+                "letter": "s"
+              },
+              {
+                "id": "a2163a2e-bfe8-4597-a1a9-0801ee358de3",
+                "type": "ShowWords",
+                "letter": "s"
+              },
+              {
+                "id": "2c82d4b1-59a6-4f6c-9604-48b6a8fb2b18",
+                "type": "RepeatWords",
+                "letter": "s"
+              },
+              {
+                "id": "5efaed13-6294-4c04-84d8-60045101ba77",
+                "type": "FindLetter",
+                "letter": "s"
+              },
+              {
+                "id": "57d26cd6-df2a-4b44-a7e4-c0ba2b41b167",
+                "type": "WriteLetter",
+                "letter": "s"
+              },
+              {
+                "id": "c3923929-92d9-4845-b34b-fa5a7c4794ca",
+                "type": "MatchImage"
+              },
+              {
+                "id": "ec26cd01-1272-4aa0-bf3f-623167899ced",
+                "type": "PraiseVideo"
               }
             ]
           },
@@ -227,14 +265,52 @@
             ],
             "children": [
               {
-                "id": "673e1a74-5cd5-4cb6-874e-3b1204a01d99",
+                "id": "4cddb179-cf72-4d1d-bf72-28d77a57d7a4",
                 "type": "IntroduceLetter",
                 "letter": "t"
               },
               {
-                "id": "d899379a-060d-4466-86f7-0a19e8a136cc",
+                "id": "daeea5dc-b17a-49a1-a672-199268a31fd8",
                 "type": "PresentLetter",
                 "letter": "t"
+              },
+              {
+                "id": "6db4e4cd-2f04-424c-9d72-b48ca1d7d6ec",
+                "type": "RepeatLetter",
+                "letter": "t"
+              },
+              {
+                "id": "2f8be0e5-2cb3-4f1e-b638-624e1e0fe504",
+                "type": "WriteLetter",
+                "letter": "t"
+              },
+              {
+                "id": "0c8caed8-3a92-4357-8390-b36fa5fc5334",
+                "type": "ShowWords",
+                "letter": "t"
+              },
+              {
+                "id": "6b5467c0-c3c1-42a4-b0dc-bb2bc190911e",
+                "type": "RepeatWords",
+                "letter": "t"
+              },
+              {
+                "id": "6b4d74a8-4b93-4eed-8630-10ad38c95a94",
+                "type": "FindLetter",
+                "letter": "t"
+              },
+              {
+                "id": "bbfe218c-ae42-4e9c-982d-15e9887bfbcd",
+                "type": "WriteLetter",
+                "letter": "t"
+              },
+              {
+                "id": "39676784-2a08-46ae-b3b8-9bc5097e88da",
+                "type": "MatchImage"
+              },
+              {
+                "id": "ca6222e9-cfdb-453f-a403-d796859db4ec",
+                "type": "PraiseVideo"
               }
             ]
           },
@@ -244,14 +320,52 @@
             "words": ["hose", "obst", "ofen", "tor", "fotos"],
             "children": [
               {
-                "id": "75b12df1-cdf5-425e-a37a-da0313fca779",
+                "id": "44562ee4-397a-4da0-b62f-0de22d63cc97",
                 "type": "IntroduceLetter",
                 "letter": "o"
               },
               {
-                "id": "d9431f3b-c868-4836-8409-2da1213360cc",
+                "id": "25b1ddcd-00cc-4675-b902-535a6ba3a752",
                 "type": "PresentLetter",
                 "letter": "o"
+              },
+              {
+                "id": "31a0202b-eadd-46ee-9e8c-8e7700d83067",
+                "type": "RepeatLetter",
+                "letter": "o"
+              },
+              {
+                "id": "bcb927ef-e078-4a78-82b9-f99552181b59",
+                "type": "WriteLetter",
+                "letter": "o"
+              },
+              {
+                "id": "faae207d-ad32-4356-be93-85a53ac46614",
+                "type": "ShowWords",
+                "letter": "o"
+              },
+              {
+                "id": "044be87d-4bba-40ea-a017-2d4f665e1fcf",
+                "type": "RepeatWords",
+                "letter": "o"
+              },
+              {
+                "id": "010bcb9e-aa99-4ea9-ba4a-ed42190ebe0e",
+                "type": "FindLetter",
+                "letter": "o"
+              },
+              {
+                "id": "e3801ff8-44b3-4777-807f-6802e26ff9b2",
+                "type": "WriteLetter",
+                "letter": "o"
+              },
+              {
+                "id": "2b8c0871-8112-4128-be22-5975b5ef573c",
+                "type": "MatchImage"
+              },
+              {
+                "id": "859ca796-0a6c-406b-80bf-a9ba06384d7f",
+                "type": "PraiseVideo"
               }
             ]
           }
