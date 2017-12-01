@@ -3,13 +3,13 @@
 import * as path from 'path';
 import * as R from 'ramda';
 
+import { Article, SerializedWord } from '../packages/entities';
 import { writeFile } from '../packages/node-promises';
-import { Article, IWord } from '../src/word';
 // Legacy words_data from https://github.com/serlo-org/abc-legacy/blob/gh-pages/try/js/word_data.js
 // @ts-ignore
 import * as rawWords from './words-data';
 
-interface IRawWord {
+interface RawWord {
   id: string;
   word: string;
   def?: Article;
@@ -17,14 +17,14 @@ interface IRawWord {
   plural?: string;
 }
 
-const assetsPath = path.join(__dirname, '..', 'src', 'assets');
+const assetsPath = path.join(__dirname, '..', 'packages', 'assets');
 
-const words: { [id: string]: IWord } = {};
+const words: { [id: string]: SerializedWord } = {};
 
 const goodKeys = ['word', 'def', 'singular', 'plural', 'img'];
-const goodArticles = ['der', 'die', 'das'];
+const goodArticles: Article[] = ['der', 'die', 'das'];
 
-const getWord = (rawWord: IRawWord, index: number) => {
+const getWord = (rawWord: RawWord, index: number) => {
   const { word } = rawWord;
 
   if (!word) {
@@ -35,7 +35,7 @@ const getWord = (rawWord: IRawWord, index: number) => {
   return word;
 };
 
-const getId = (rawWord: IRawWord, index: number) => {
+const getId = (rawWord: RawWord, index: number) => {
   const word = getWord(rawWord, index);
 
   if (!word) {
@@ -59,7 +59,7 @@ const getId = (rawWord: IRawWord, index: number) => {
   return id;
 };
 
-const getArticle = (rawWord: IRawWord, index: number) => {
+const getArticle = (rawWord: RawWord, index: number) => {
   const { def } = rawWord;
 
   if (!def) {
@@ -78,7 +78,7 @@ const getArticle = (rawWord: IRawWord, index: number) => {
   return def;
 };
 
-const getSingular = (rawWord: IRawWord, index: number) => {
+const getSingular = (rawWord: RawWord, index: number) => {
   const { singular } = rawWord;
 
   if (!singular || R.isEmpty(singular)) {
@@ -89,7 +89,7 @@ const getSingular = (rawWord: IRawWord, index: number) => {
   return singular;
 };
 
-const getPlural = (rawWord: IRawWord, index: number) => {
+const getPlural = (rawWord: RawWord, index: number) => {
   const { plural } = rawWord;
 
   if (!plural || R.isEmpty(plural)) {
@@ -100,7 +100,7 @@ const getPlural = (rawWord: IRawWord, index: number) => {
   return plural;
 };
 
-rawWords.forEach((rawWord: IRawWord, index: number) => {
+rawWords.forEach((rawWord: RawWord, index: number) => {
   const keys = R.keys(rawWord);
   const badKeys = R.difference(keys, goodKeys);
 

@@ -23,12 +23,13 @@ export enum ExerciseGroupTypes {
 
 export const ExerciseGroups: {
   [type: string]: {
-    /* tslint:disable-next-line:no-any */ // TODO: specify createExercise type
     new (
+      /* tslint:disable-next-line:no-any */ // TODO: specify createExercise type
       createExercise: any,
       newVocab: string[],
       vocab: string[],
-      props: any
+      /* tslint:disable-next-line:no-any */
+      props: any // TODO: check props type of createExercise
     ): AbstractExerciseGroup;
   };
 } = {

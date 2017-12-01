@@ -9,7 +9,6 @@ import RoundTextButton from '../common/RoundTextButton';
 import { Progress } from '../../../packages/entities-interactor/ISerializedProgress';
 import { GREEN } from '../../styles/colors';
 import { PortraitScreenOrientation } from '../helpers/screen-orientation';
-import { WithDimensions } from '../helpers/dimensions';
 
 const styles = StyleSheet.create({
   hoveringButton: {

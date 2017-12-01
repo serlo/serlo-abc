@@ -1,33 +1,12 @@
-import ExplanationText from './ExplanationText/ExplanationText';
-import FindLetter from './FindLetter/FindLetter';
-import IntroduceLetter from './IntroduceLetter/IntroduceLetter';
-import ShowLetter from './ShowLetter/ShowLetter';
-import ShowWord from './ShowWord/ShowWord';
-// import * as ShowWordRepeat from './ShowWordRepeat';
-import TutorialVideo from './TutorialVideo/TutorialVideo';
-import PraiseVideo from './PraiseVideo/PraiseVideo';
-import MatchImage from './MatchImage/MatchImage';
-import { WriteLetter } from './WriteLetter/write-letter';
-// import * as WriteWord from './WriteWord';
-
-// const exercises = {
-//   ExplanationText,
-//   FindLetter,
-//   IntroduceLetter,
-//   MatchImage,
-//   PraiseVideo,
-//   ShowLetter,
-//   ShowLetterRepeat,
-//   ShowWord,
-//   ShowWordRepeat,
-//   TutorialVideo,
-//   WriteLetter,
-//   WriteWord
-// };
-
-// export default type => {
-//   return exercises[type];
-// };
+import { ExplanationText } from './explanation-text.component';
+import { FindLetter } from './find-letter.component';
+import { IntroduceLetter } from './introduce-letter.component';
+import { ShowLetter } from './show-letter.component';
+import { ShowWord } from './show-word.component';
+import { TutorialVideo } from './tutorial-video.component';
+import { PraiseVideo } from './praise-video.component';
+import { MatchImage } from './match-image.component';
+import { WriteLetter } from './write-letter.component';
 
 export const ExerciseComponents = {
   ExplanationText,

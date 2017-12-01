@@ -1,7 +1,6 @@
 import { map } from 'ramda';
 import { sample } from '../../sample';
 import { ExerciseTypes } from '../exercises';
-import { capitalizeFirstLetter } from '../word/helpers';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
 export class RepeatWords extends AbstractExerciseGroup {

@@ -38,7 +38,7 @@ describe('exercise-groups', () => {
     }
 
     beforeEach(() => {
-      group = new TrivialExerciseGroup(factory.createExercise, [], []);
+      group = new TrivialExerciseGroup(factory.createExercise, [], [], {});
     });
 
     it('generates its exercises if no progress is passed', () => {

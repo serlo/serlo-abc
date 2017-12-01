@@ -13,7 +13,7 @@ import {
   ExerciseTypes,
   SerializedProps
 } from './exercises';
-import { SerializedWord, Word } from './word';
+import { AbstractWord, Article, SerializedWord, Word } from './word';
 
 export class EntityFactory {
   private words: {
@@ -50,6 +50,7 @@ export class EntityFactory {
     type: ExerciseGroupTypes,
     newVocabulary: string[],
     vocabulary: string[],
+    /* tslint:disable-next-line:no-any */
     props: { [key: string]: any }
   ): E {
     return new ExerciseGroups[type](
@@ -65,5 +66,8 @@ export {
   AbstractAssetResolver,
   AssetTypes,
   AbstractExercise,
-  AbstractExerciseGroup
+  AbstractExerciseGroup,
+  AbstractWord,
+  Article,
+  SerializedWord
 };
