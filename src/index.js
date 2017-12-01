@@ -135,10 +135,9 @@ export class AppRoutes extends Component {
                 );
                 const next = find(identity, nexts);
 
-                return [
+                return (
                   <Course
                     next={next && next.id}
-                    key="course"
                     getProgress={this.getProgress}
                     resetProgress={this.resetProgress}
                     course={this.state.course}
@@ -146,7 +145,7 @@ export class AppRoutes extends Component {
                       history.push(`/node/${id}`, { level: 2 })
                     }
                   />
-                ];
+                );
               }}
             />
             <Route
