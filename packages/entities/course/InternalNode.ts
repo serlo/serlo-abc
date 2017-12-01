@@ -1,4 +1,4 @@
-import { find, map } from 'ramda';
+import { find, flatten, map, takeWhile } from 'ramda';
 
 import { Optional } from '../../../src/types';
 import AbstractNode from './AbstractNode';
@@ -38,6 +38,25 @@ class InternalNode extends AbstractNode {
 
   public getChildren(): AbstractNode[] {
     return this.children;
+  }
+
+  public getNewVocabulary() {
+    return this.words;
+  }
+
+  public getVocabulary() {
+    const parent = this.getParent();
+
+    if (!parent) {
+      return this.words;
+    }
+
+    const siblings: AbstractNode[] = [
+      ...takeWhile(node => node.getId() !== this.getId(), parent.getChildren()),
+      this as AbstractNode
+    ];
+
+    return flatten<string>(map(node => node.getNewVocabulary(), siblings));
   }
 
   public getStructure() {

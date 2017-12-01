@@ -3,21 +3,27 @@ language: node_js
 node_js:
 - "8"
 
-cache:
-  yarn: true
-  directories:
-  - node_modules
+cache: yarn
 
 notifications:
   email: false
+
+before_install:
+- curl -o- -L https://yarnpkg.com/install.sh | bash
+- export PATH="$HOME/.yarn/bin:$PATH"
 
 script:
 - yarn lint
 - yarn test
 
 deploy:
-  provider: script
-  script: scripts/deploy.sh $EXP_USERNAME $EXP_PASSWORD
+- provider: script
+  script: yarn deploy:development
+  skip_cleanup: true
+  on:
+    branch: development
+- provider: script
+  script: yarn deploy:master
   skip_cleanup: true
   on:
     branch: master

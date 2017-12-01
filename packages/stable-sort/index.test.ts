@@ -2,15 +2,20 @@ import * as R from 'ramda';
 
 import { stableSortWith } from '.';
 
-const clara = {
+interface Person {
+  name: string;
+  age: number;
+}
+
+const clara: Person = {
   name: 'clara',
   age: 40
 };
-const bob = {
+const bob: Person = {
   name: 'bob',
   age: 30
 };
-const alice = {
+const alice: Person = {
   name: 'alice',
   age: 40
 };
@@ -22,7 +27,7 @@ it('returns the array if no comparator is given', () => {
 });
 
 it('stable sorts the array if one comparator is given', () => {
-  const cmp = R.ascend(R.prop('age'));
+  const cmp = R.ascend<Person>(R.prop('age'));
 
   expect(stableSortWith([cmp], people)).toEqual([bob, clara, alice]);
 });
