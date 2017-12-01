@@ -2,8 +2,8 @@
   "expo": {
     "name": "Serlo ABC",
     "slug": "serlo-abc",
-    "privacy": "unlisted",
-    "sdkVersion": "22.0.0",
+    "privacy": "public",
+    "sdkVersion": "23.0.0",
     "version": "0.0.0-development",
     "icon": "./appIcon.png",
     "packagerOpts": {
@@ -11,10 +11,21 @@
       "transformer": "node_modules/react-native-typescript-transformer/index.js"
     },
     "ios": {
-      "bundleIdentifier": "org.serlo.abc"
+      "bundleIdentifier": "org.serlo.abc",
+      "loadJSInBackgroundExperimental": true
     },
     "android": {
-      "package": "org.serlo.abc"
+      "package": "org.serlo.abc",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "READ_INTERNAL_STORAGE",
+        "READ_PHONE_STATE",
+        "RECORD_AUDIO",
+        "WRITE_EXTERNAL_STORAGE",
+        "com.android.launcher.permission.INSTALL_SHORTCUT",
+        "com.htc.launcher.permission.READ_SETTINGS",
+        "om.htc.launcher.permission.UPDATE_SHORTCUT"
+      ]
     }
   }
 }

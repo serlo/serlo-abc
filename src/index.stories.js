@@ -3,7 +3,7 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-native';
 
 import Interactor from '../packages/entities-interactor';
-import courses from './assets/courses.json';
+import courses from '../packages/assets/courses.json';
 import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
 import App, { AppRoutes } from '.';

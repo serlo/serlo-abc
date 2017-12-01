@@ -1,28 +1,28 @@
-import { find, identity, map, mergeAll } from 'ramda';
+import { find, identity, map, values } from 'ramda';
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { NetInfo, View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
 
+import { EntityFactory } from '../packages/entities';
 import Interactor from '../packages/entities-interactor';
-import courses from './assets/courses.json';
-import getExercise from './components/exercises';
+import courses from '../packages/assets/courses.json';
+import { ExerciseComponents } from './components/exercises';
 import Course from './components/screens/Course';
-import Exercise from './components/screens/Exercise';
 import Splash from './components/screens/Splash';
 import { LoadSounds } from './components/helpers/Audio';
-import loadFonts from './components/helpers/fonts';
+import { ExerciseGroup } from './components/helpers/exercise-group';
 import { play, getSound } from './helpers/audio';
 import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
 import { PRIMARY } from './styles/colors';
-import Word from './word';
+import { AssetResolver } from './asset-resolver';
+import { CacheAssets } from './components/helpers/cache-assets';
 
+import loadImage from './assets/images';
+import loadSound from './assets/sounds';
 import loadVideo from './assets/videos';
-
-export const getVideo = id => {
-  const load = loadVideo[id];
-  return load && load();
-};
+import loadWordImage from './assets/words/images';
+import loadWordSound from './assets/words/sounds';
 
 export class AppRoutes extends Component {
   constructor(props) {
@@ -32,7 +32,13 @@ export class AppRoutes extends Component {
     const progressStorage = new ProgressStorage();
     this.interactor = new Interactor(storage, progressStorage);
 
-    this.state = { course: null };
+    const resolver = new AssetResolver();
+    this.entityFactory = new EntityFactory(resolver);
+
+    this.state = {
+      course: null,
+      shouldCache: false
+    };
   }
 
   getNextChild = id => {
@@ -90,6 +96,14 @@ export class AppRoutes extends Component {
   };
 
   componentDidMount() {
+    NetInfo.getConnectionInfo(connectionInfo => {
+      this.setState({ shouldCache: connectionInfo.type === 'wifi' });
+    });
+
+    NetInfo.addEventListener('connectionChange', connectionInfo => {
+      this.setState({ shouldCache: connectionInfo.type === 'wifi' });
+    });
+
     this.interactor
       .loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde')
       .then(() => {
@@ -109,6 +123,18 @@ export class AppRoutes extends Component {
               backgroundColor: PRIMARY
             }}
           >
+            {this.state.shouldCache && (
+              <CacheAssets
+                assets={map(load => load(), [
+                  ...values(loadImage),
+                  ...values(loadSound),
+                  ...values(loadVideo),
+                  ...values(loadWordImage),
+                  ...values(loadWordSound)
+                ])}
+                render={done => null}
+              />
+            )}
             <Route
               exact
               path="/"
@@ -129,10 +155,9 @@ export class AppRoutes extends Component {
                 );
                 const next = find(identity, nexts);
 
-                return [
+                return (
                   <Course
                     next={next && next.id}
-                    key="course"
                     getProgress={this.getProgress}
                     resetProgress={this.resetProgress}
                     course={this.state.course}
@@ -140,7 +165,7 @@ export class AppRoutes extends Component {
                       history.push(`/node/${id}`, { level: 2 })
                     }
                   />
-                ];
+                );
               }}
             />
             <Route
@@ -174,58 +199,38 @@ export class AppRoutes extends Component {
                   return this.goDown(next.id, level);
                 }
 
-                // Leaf
-                const exerciseType = getExercise(type);
+                const newWords = this.interactor.getNewVocabulary(id);
+                const words = this.interactor.getVocabulary(id);
 
-                if (!exerciseType) {
+                // Leaf
+                const group = this.entityFactory.createExerciseGroup(
+                  type,
+                  newWords,
+                  words,
+                  props
+                );
+
+                if (!group) {
                   console.warn('no view found for type', type);
                   return null;
                 }
 
-                const exercise = new exerciseType.Exercise(
-                  mergeAll([
-                    props,
-                    props.video && { video: getVideo(props.video) },
-                    props.sound && { sound: getSound(props.sound) },
-                    props.sounds && { sounds: map(getSound, props.sounds) },
-                    props.word && { word: new Word(props.word) },
-                    props.words && {
-                      words: map(word => new Word(word), props.words)
-                    }
-                  ])
-                );
+                const done = () => {
+                  this.markAsCorrect(id);
 
-                let firstAttempt = true;
-
-                const handleCorrect = () => {
-                  play(correctSound).then(() => {
-                    if (firstAttempt) {
-                      this.markAsCorrect(id);
-                    }
-
-                    history.push(`/node/${entity.parent}`, {
-                      level: level - 1
-                    });
+                  history.push(`/node/${entity.parent}`, {
+                    level: level - 1
                   });
                 };
 
-                const handleWrong = () => {
-                  if (firstAttempt) {
-                    this.markAsIncorrect(id);
-                  }
-
-                  firstAttempt = false;
-
-                  play(wrongSound);
-                };
-
                 return (
-                  <Exercise
-                    exercise={exercise}
-                    Component={exerciseType.Component}
+                  <ExerciseGroup
+                    createExerciseComponent={type => ExerciseComponents[type]}
+                    group={group}
                     goToNav={() => history.push('/course')}
-                    onCorrect={handleCorrect}
-                    onWrong={handleWrong}
+                    onCorrect={() => play(correctSound)}
+                    onWrong={() => play(wrongSound)}
+                    onDone={done}
                   />
                 );
               }}
@@ -237,14 +242,8 @@ export class AppRoutes extends Component {
   }
 }
 
-const App = () => (
+export default () => (
   <NativeRouter>
     <AppRoutes />
   </NativeRouter>
 );
-
-export default loadFonts({
-  norddruck: require('./assets/fonts/norddruck.ttf'),
-  norddruck_arrows: require('./assets/fonts/norddruck_arrows.ttf'),
-  serlo: require('./assets/fonts/serlo.ttf')
-})(App);
