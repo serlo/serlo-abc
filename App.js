@@ -1,9 +1,14 @@
 import { AppLoading } from 'expo';
 import * as React from 'react';
+import Sentry from 'sentry-expo';
 
 import { CacheAssets } from './src/components/helpers/cache-assets';
 import loadImage from './src/assets/images';
 import loadSound from './src/assets/sounds';
+
+Sentry.config(
+  'https://eada474aeba348a9aaad570be730e8e0:bb2a0776afe64f409a9edb752ca2d92d@sentry.io/253336'
+).install();
 
 const fonts = {
   norddruck: require('./src/assets/fonts/norddruck.ttf'),
