@@ -5,13 +5,15 @@ import { IIdentifiableObject } from './types';
 // An AbstractNode has a required id and optional additional props
 abstract class AbstractNode {
   protected words: string[] = [];
+  protected letter: Maybe<string>;
   private id: string;
   private props: {};
   private parent?: InternalNode;
 
-  constructor({ id, words, ...props }: IIdentifiableObject) {
+  constructor({ id, words, letter, ...props }: IIdentifiableObject) {
     this.id = id;
     this.words = words || [];
+    this.letter = letter;
     this.props = props;
   }
 
@@ -40,6 +42,16 @@ abstract class AbstractNode {
    * @returns New and old vocabulary
    */
   public abstract getVocabulary(): string[];
+
+  /**
+   * @returns New letter
+   */
+  public abstract getNewLetter(): Maybe<string>;
+
+  /**
+   * @returns New and old letters
+   */
+  public abstract getLetters(): string[];
 
   public getStructure(): IIdentifiableObject {
     const parent = this.getParent();

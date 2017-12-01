@@ -201,12 +201,16 @@ export class AppRoutes extends Component {
 
                 const newWords = this.interactor.getNewVocabulary(id);
                 const words = this.interactor.getVocabulary(id);
+                const letter = this.interactor.getNewLetter(id);
+                const letters = this.interactor.getLetters(id);
 
                 // Leaf
                 const group = this.entityFactory.createExerciseGroup(
                   type,
                   newWords,
                   words,
+                  letter,
+                  letters,
                   props
                 );
 

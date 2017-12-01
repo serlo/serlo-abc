@@ -5,7 +5,7 @@ import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
 export class FindLetter extends AbstractExerciseGroup {
   protected generateExercises() {
-    const letter: string = this.props.letter.toLowerCase();
+    const letter: string = this.newLetter.toLowerCase();
     const words = sample(this.newVocabulary, this.newVocabulary.length);
     const version = sample(['a', 'b'], 1);
 

@@ -50,6 +50,8 @@ export class EntityFactory {
     type: ExerciseGroupTypes,
     newVocabulary: string[],
     vocabulary: string[],
+    newLetter: string,
+    letters: string[],
     /* tslint:disable-next-line:no-any */
     props: { [key: string]: any }
   ): E {
@@ -57,6 +59,8 @@ export class EntityFactory {
       this.createExercise.bind(this),
       newVocabulary,
       vocabulary,
+      newLetter,
+      letters,
       props
     ) as E;
   }

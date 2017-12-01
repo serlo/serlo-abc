@@ -3,12 +3,13 @@ import { sample } from '../../sample';
 import { ExerciseTypes } from '../exercises';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 import { Symbol } from '../exercises/differ-from-symbol.exercise';
+import { capitalizeFirstLetter } from '../word/helpers';
 
 export class DifferFromSymbol extends AbstractExerciseGroup {
   protected generateExercises() {
     const letterSymbols: Symbol[] = [
-      { name: this.props.letter.toLowerCase(), isIcon: false },
-      { name: this.props.letter.toUpperCase(), isIcon: false }
+      { name: this.newLetter.toLowerCase(), isIcon: false },
+      { name: capitalizeFirstLetter(this.newLetter), isIcon: false }
     ];
     const allTextSymbols: Symbol[] = map(
       symbol => ({ name: symbol, isIcon: false }),

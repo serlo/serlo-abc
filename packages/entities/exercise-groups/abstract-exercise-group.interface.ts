@@ -13,6 +13,8 @@ export abstract class AbstractExerciseGroup {
     protected createExercise: EntityFactory['createExercise'],
     protected newVocabulary: string[],
     protected vocabulary: string[],
+    protected newLetter: string,
+    protected letters: string[],
     /* tslint:disable-next-line:no-any */
     protected props: { [key: string]: any }
   ) {
