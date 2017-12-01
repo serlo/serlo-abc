@@ -1,6 +1,6 @@
-import { find, identity, map } from 'ramda';
+import { find, identity, map, values } from 'ramda';
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { NetInfo, View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
 
 import { EntityFactory } from '../packages/entities';
@@ -11,12 +11,18 @@ import Course from './components/screens/Course';
 import Splash from './components/screens/Splash';
 import { LoadSounds } from './components/helpers/Audio';
 import { ExerciseGroup } from './components/helpers/exercise-group';
-import loadFonts from './components/helpers/fonts';
 import { play, getSound } from './helpers/audio';
 import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
 import { PRIMARY } from './styles/colors';
 import { AssetResolver } from './asset-resolver';
+import { CacheAssets } from './components/helpers/cache-assets';
+
+import loadImage from './assets/images';
+import loadSound from './assets/sounds';
+import loadVideo from './assets/videos';
+import loadWordImage from './assets/words/images';
+import loadWordSound from './assets/words/sounds';
 
 export class AppRoutes extends Component {
   constructor(props) {
@@ -29,7 +35,10 @@ export class AppRoutes extends Component {
     const resolver = new AssetResolver();
     this.entityFactory = new EntityFactory(resolver);
 
-    this.state = { course: null };
+    this.state = {
+      course: null,
+      shouldCache: false
+    };
   }
 
   getNextChild = id => {
@@ -87,6 +96,14 @@ export class AppRoutes extends Component {
   };
 
   componentDidMount() {
+    NetInfo.getConnectionInfo(connectionInfo => {
+      this.setState({ shouldCache: connectionInfo.type === 'wifi' });
+    });
+
+    NetInfo.addEventListener('connectionChange', connectionInfo => {
+      this.setState({ shouldCache: connectionInfo.type === 'wifi' });
+    });
+
     this.interactor
       .loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde')
       .then(() => {
@@ -106,6 +123,18 @@ export class AppRoutes extends Component {
               backgroundColor: PRIMARY
             }}
           >
+            {this.state.shouldCache && (
+              <CacheAssets
+                assets={map(load => load(), [
+                  ...values(loadImage),
+                  ...values(loadSound),
+                  ...values(loadVideo),
+                  ...values(loadWordImage),
+                  ...values(loadWordSound)
+                ])}
+                render={done => null}
+              />
+            )}
             <Route
               exact
               path="/"
@@ -213,14 +242,8 @@ export class AppRoutes extends Component {
   }
 }
 
-const App = () => (
+export default () => (
   <NativeRouter>
     <AppRoutes />
   </NativeRouter>
 );
-
-export default loadFonts({
-  norddruck: require('./assets/fonts/norddruck.ttf'),
-  norddruck_arrows: require('./assets/fonts/norddruck_arrows.ttf'),
-  serlo: require('./assets/fonts/serlo.ttf')
-})(App);

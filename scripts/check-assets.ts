@@ -1,3 +1,4 @@
+/* tslint:disable:no-var-requires no-console */
 import * as R from 'ramda';
 import createCourse from '../packages/entities-interactor/CourseFactory';
 import { AbstractNode, InternalNode, Leaf } from '../packages/entities/course';
