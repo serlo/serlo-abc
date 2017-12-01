@@ -4,7 +4,7 @@ import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
 export class PresentLetter extends AbstractExerciseGroup {
   protected generateExercises() {
-    const letter: string = this.props.letter.toLowerCase();
+    const letter: string = this.newLetter.toLowerCase();
     const [word] = sampleForletter(letter)(this.newVocabulary, 1);
 
     return [

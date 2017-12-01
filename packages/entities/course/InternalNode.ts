@@ -1,8 +1,9 @@
-import { find, flatten, map, takeWhile } from 'ramda';
+import { find, filter, flatten, map, takeWhile } from 'ramda';
 
 import { Optional } from '../../../src/types';
 import AbstractNode from './AbstractNode';
 import { IIdentifiableObject } from './types';
+import { Maybe } from '../../maybe/maybe';
 
 // An InternalNode has children
 class InternalNode extends AbstractNode {
@@ -57,6 +58,26 @@ class InternalNode extends AbstractNode {
     ];
 
     return flatten<string>(map(node => node.getNewVocabulary(), siblings));
+  }
+
+  public getNewLetter(): Maybe<string> {
+    return this.letter;
+  }
+
+  public getLetters(): string[] {
+    const parent = this.getParent();
+
+    if (!parent) {
+      return this.letter ? [this.letter] : [];
+    }
+
+    const siblings: AbstractNode[] = [
+      ...takeWhile(node => node.getId() !== this.getId(), parent.getChildren()),
+      this as AbstractNode
+    ];
+
+    //@ts-ignore TODO:FIXME
+    return filter(node => !!node, map(node => node.getNewLetter(), siblings));
   }
 
   public getStructure() {

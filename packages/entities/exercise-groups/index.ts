@@ -30,6 +30,8 @@ export const ExerciseGroups: {
       createExercise: any,
       newVocab: string[],
       vocab: string[],
+      newLetter: string,
+      letters: string[],
       /* tslint:disable-next-line:no-any */
       props: any // TODO: check props type of createExercise
     ): AbstractExerciseGroup;

@@ -9,6 +9,7 @@ import ISerializedProgress, {
   IIndividualProgress,
   Progress
 } from './ISerializedProgress';
+import { Maybe } from '../maybe/maybe';
 
 class CourseInteractor extends AbstractCourseInteractor {
   private courseId: string;
@@ -107,6 +108,17 @@ class CourseInteractor extends AbstractCourseInteractor {
     const entity = this.course.findEntity(id);
 
     return entity && entity.getVocabulary();
+  }
+  public getNewLetter(id: string): Maybe<string> {
+    const entity = this.course.findEntity(id);
+
+    return entity && entity.getNewLetter();
+  }
+
+  public getLetters(id: string): string[] {
+    const entity = this.course.findEntity(id);
+
+    return entity ? entity.getLetters() : [];
   }
 
   public getProgress(id: string) {
