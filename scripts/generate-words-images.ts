@@ -42,9 +42,9 @@ readdir(outputPath)
   .then(() => readdir(imagesPath))
   .then(files => {
     // Loaders for React Native app
-    let str = `import { IImageAsset } from '../../types/assets';
+    let str = `import { AssetTypes } from '../../../packages/entities';
 
-const images: { [id: string]: () => IImageAsset } = {`;
+    const images: { [id: string]: () => AssetTypes.ImageAsset } = {`;
 
     R.forEach(file => {
       str += `
