@@ -78,14 +78,52 @@
             "words": ["nudeln", "nadel", "banane", "kanne", "kino", "opa"],
             "children": [
               {
-                "id": "68dbbe2b-6ccb-435b-80d8-41eff56c4d6f",
+                "id": "ed93cfdd-ec2f-4b87-929b-165b66ac080f",
                 "type": "IntroduceLetter",
                 "letter": "n"
               },
               {
-                "id": "8d1cf10e-0b6e-440f-ac0b-173c67ca5f8f",
+                "id": "d92f4614-c200-4e61-afd4-5de2b2c2ffa1",
                 "type": "PresentLetter",
                 "letter": "n"
+              },
+              {
+                "id": "35ab940a-ad87-4e5b-b962-d4a53f9e6c4b",
+                "type": "RepeatLetter",
+                "letter": "n"
+              },
+              {
+                "id": "c95cf3cd-493d-45fa-9246-b1bbd303d157",
+                "type": "WriteLetter",
+                "letter": "n"
+              },
+              {
+                "id": "b56505d2-59aa-496b-8ad9-0102119706f3",
+                "type": "ShowWords",
+                "letter": "n"
+              },
+              {
+                "id": "9c0e619e-0ea6-4f13-ad24-0e50872ec917",
+                "type": "RepeatWords",
+                "letter": "n"
+              },
+              {
+                "id": "4108f548-4390-4af5-a152-c8cd10463940",
+                "type": "FindLetter",
+                "letter": "n"
+              },
+              {
+                "id": "ce219759-d9e0-4245-a409-aef91cc4379e",
+                "type": "WriteLetter",
+                "letter": "n"
+              },
+              {
+                "id": "31e09608-12c8-4dee-8710-def6126264f2",
+                "type": "MatchImage"
+              },
+              {
+                "id": "a89a9936-ec77-4126-985a-873d4fd7757c",
+                "type": "PraiseVideo"
               }
             ]
           },
@@ -95,14 +133,52 @@
             "words": ["ente", "elefant", "tee", "kaffee", "saft"],
             "children": [
               {
-                "id": "5a0e7677-8c2b-4e58-a25e-f51c629f55d2",
+                "id": "06390921-4acf-49d7-b639-afed58a573cf",
                 "type": "IntroduceLetter",
                 "letter": "e"
               },
               {
-                "id": "57b55017-7899-43f1-a447-6b30a932b206",
+                "id": "cb977eab-1e67-46d1-945e-91be48eb30ba",
                 "type": "PresentLetter",
                 "letter": "e"
+              },
+              {
+                "id": "c8a799e0-427e-4667-a606-42fa2ceadab4",
+                "type": "RepeatLetter",
+                "letter": "e"
+              },
+              {
+                "id": "1713128b-42b5-4171-ab64-3a66b0f925fb",
+                "type": "WriteLetter",
+                "letter": "e"
+              },
+              {
+                "id": "421937aa-2e08-4a9e-9405-cb3bc13bfdf5",
+                "type": "ShowWords",
+                "letter": "e"
+              },
+              {
+                "id": "7a2720eb-f246-4a48-a0ac-6b4bde69059b",
+                "type": "RepeatWords",
+                "letter": "e"
+              },
+              {
+                "id": "077cc75b-2d99-4fc0-b7f2-e9ecc36b1d19",
+                "type": "FindLetter",
+                "letter": "e"
+              },
+              {
+                "id": "355f7ebb-8412-44a0-940d-8362c9d9dab3",
+                "type": "WriteLetter",
+                "letter": "e"
+              },
+              {
+                "id": "cda7ce44-597c-49b3-aa3d-0b130377277e",
+                "type": "MatchImage"
+              },
+              {
+                "id": "b65c1c59-8b6a-4acd-8345-0e5041dd3b2b",
+                "type": "PraiseVideo"
               }
             ]
           }

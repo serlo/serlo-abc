@@ -84,19 +84,19 @@ export class Exercise extends React.Component {
   }
 
   public render() {
-    const { exercise, Component } = this.props;
+    const { enableSubmitBySwipe, exercise, Component } = this.props;
     const { feedback, isCorrect, state, showFeedback } = this.state;
 
-    const Container = this.props.enableSubmitBySwipe ? GestureRecognizer : View;
+    const Container = enableSubmitBySwipe ? GestureRecognizer : View;
     const containerProps = {
       onSwipeLeft:
-        exercise.enableSubmitBySwipe &&
+        enableSubmitBySwipe &&
         (() => {
           if (!exercise.isSubmitDisabled(state)) {
             this.submit();
           }
         }),
-      config: exercise.enableSubmitBySwipe && {
+      config: enableSubmitBySwipe && {
         directionalOffsetThreshold: 160
       },
       style: { flex: 1, backgroundColor: isCorrect ? GREEN : PRIMARY }

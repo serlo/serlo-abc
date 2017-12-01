@@ -19,13 +19,13 @@ export class RepeatLetter extends AbstractExerciseGroup {
         type: 'TutorialVideo',
         video: 'explanation_show_letter'
       }),
-      this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
+      this.createExercise(ExerciseTypes.PlaySounds, {
         type: 'ShowLetter',
         letter: capitalizeFirstLetter(letter),
         sound: letter,
         repeat: true
       }),
-      this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
+      this.createExercise(ExerciseTypes.PlaySounds, {
         type: 'ShowLetter',
         letter,
         sound: letter,

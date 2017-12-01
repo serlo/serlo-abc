@@ -28,9 +28,10 @@ export class ExerciseGroup extends React.Component {
   submit = state => {
     const { group } = this.props;
     const isCorrect = group.submit(state);
+    const initiallyCorrect = this.state.exercise.initiallyCorrect;
 
     if (isCorrect) {
-      if (!this.state.exercise.initiallyCorrect) {
+      if (!initiallyCorrect) {
         this.props.onCorrect();
       }
     } else {
@@ -43,7 +44,7 @@ export class ExerciseGroup extends React.Component {
       } else {
         this.setState(this.getStateFromGroup());
       }
-    }, isCorrect ? 0 : 1000);
+    }, initiallyCorrect ? 0 : 1000);
   };
 
   render() {
@@ -62,6 +63,10 @@ export class ExerciseGroup extends React.Component {
         Component={Component}
         goToNav={this.props.goToNav}
         onSubmit={this.submit}
+        enableSubmitBySwipe={
+          exercise.props.type !== 'WriteLetter' &&
+          exercise.props.type !== 'WriteWord'
+        }
       />
     );
   }
