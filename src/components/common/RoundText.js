@@ -1,6 +1,7 @@
 import { path } from 'ramda';
 import React, { Component } from 'react';
 import { Animated, View } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 
 import {
   WHITE,
@@ -11,6 +12,8 @@ import {
   GREEN
 } from '../../styles/colors';
 import { DEFAULT } from '../../styles/text';
+
+const AnimatedIcon = Animated.createAnimatedComponent(MaterialIcons);
 
 class RoundText extends Component {
   constructor(props) {
@@ -54,6 +57,7 @@ class RoundText extends Component {
       highlighted,
       crossedOut,
       text,
+      isIcon,
       style,
       textStyle,
       wrong,
@@ -85,18 +89,32 @@ class RoundText extends Component {
             width: size
           }}
         >
-          <Animated.Text
-            style={[
-              DEFAULT,
-              highlighted && { color: PRIMARY_WEAK },
-              { backgroundColor: TRANSPARENT, marginTop: 5 },
-              (wrong || correct) && { color: WHITE },
-              textStyle,
-              { fontSize }
-            ]}
-          >
-            {text}
-          </Animated.Text>
+          {isIcon ? (
+            <AnimatedIcon
+              style={[
+                DEFAULT,
+                highlighted && { color: PRIMARY_WEAK },
+                { backgroundColor: TRANSPARENT, marginTop: 5 },
+                (wrong || correct) && { color: WHITE },
+                textStyle,
+                { fontSize }
+              ]}
+              name={text}
+            />
+          ) : (
+            <Animated.Text
+              style={[
+                DEFAULT,
+                highlighted && { color: PRIMARY_WEAK },
+                { backgroundColor: TRANSPARENT, marginTop: 5 },
+                (wrong || correct) && { color: WHITE },
+                textStyle,
+                { fontSize }
+              ]}
+            >
+              {text}
+            </Animated.Text>
+          )}
           {crossedOut && (
             <Animated.View
               style={{

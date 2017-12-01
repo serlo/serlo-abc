@@ -1,3 +1,4 @@
+import { DifferFromSymbol } from './differ-from-symbol.component';
 import { ExplanationText } from './explanation-text.component';
 import { FindLetter } from './find-letter.component';
 import { IntroduceLetter } from './introduce-letter.component';
@@ -9,6 +10,7 @@ import { MatchImage } from './match-image.component';
 import { WriteLetter } from './write-letter.component';
 
 export const ExerciseComponents = {
+  DifferFromSymbol,
   ExplanationText,
   FindLetter,
   IntroduceLetter,

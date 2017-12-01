@@ -1,4 +1,5 @@
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
+import { DifferFromSymbol } from './differ-from-symbol';
 import { FindLetter } from './find-letter';
 import { IntroduceLetter } from './introduce-letter';
 import { MatchImage } from './match-image';
@@ -10,6 +11,7 @@ import { ShowWords } from './show-words';
 import { WriteLetter } from './write-letter';
 
 export enum ExerciseGroupTypes {
+  DifferFromSymbol = 'DifferFromSymbol',
   FindLetter = 'FindLetter',
   MatchImage = 'MatchImage',
   IntroduceLetter = 'IntroduceLetter',
@@ -33,6 +35,7 @@ export const ExerciseGroups: {
     ): AbstractExerciseGroup;
   };
 } = {
+  [ExerciseGroupTypes.DifferFromSymbol]: DifferFromSymbol,
   [ExerciseGroupTypes.FindLetter]: FindLetter,
   [ExerciseGroupTypes.MatchImage]: MatchImage,
   [ExerciseGroupTypes.IntroduceLetter]: IntroduceLetter,

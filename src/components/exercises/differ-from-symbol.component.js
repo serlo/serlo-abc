@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { Dimensions, View } from 'react-native';
 
 import RoundTextButton from '../common/RoundTextButton';
 import { PortraitScreenOrientation } from '../helpers/screen-orientation';
@@ -8,7 +8,8 @@ export class DifferFromSymbol extends Component {
   createChoiceButton = answer => {
     const buttonStyle = { margin: 5 };
     const { symbols, showFeedback, feedback, state } = this.props;
-    const wrong = showFeedback && feedback.highlightedChoice === answer;
+    const wrong = showFeedback && feedback.wrongChoice === answer;
+    const missingCorrect = showFeedback && feedback.correctChoice === answer;
 
     const buttonIsHighlighted = answer === state;
     return (
@@ -16,8 +17,10 @@ export class DifferFromSymbol extends Component {
         style={buttonStyle}
         highlighted={buttonIsHighlighted}
         wrong={wrong}
-        text={symbols[answer]}
-        size={80}
+        missingCorrect={missingCorrect}
+        text={symbols[answer].name}
+        isIcon={symbols[answer].isIcon}
+        size={75}
         onPress={() => {
           this.props.setState(answer);
         }}
@@ -26,12 +29,16 @@ export class DifferFromSymbol extends Component {
   };
 
   render() {
+    const { width } = Dimensions.get('window');
+    const scale = width / 360;
+
     return (
       <PortraitScreenOrientation>
         <View
           style={{
             flex: 1,
-            alignItems: 'center'
+            alignItems: 'center',
+            justifyContent: 'center'
           }}
         >
           <View
@@ -40,7 +47,7 @@ export class DifferFromSymbol extends Component {
               justifyContent: 'center',
               flexDirection: 'row',
               flexWrap: 'wrap',
-              width: 300,
+              width: 300 * scale,
               marginTop: 50
             }}
           >
@@ -54,7 +61,7 @@ export class DifferFromSymbol extends Component {
               justifyContent: 'center',
               flexDirection: 'row',
               flexWrap: 'wrap',
-              width: 300
+              width: 300 * scale
             }}
           >
             {this.createChoiceButton(3)}
