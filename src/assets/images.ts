@@ -1,6 +1,6 @@
-import { IImageAsset } from '../types/assets';
+import { AssetTypes } from '../../packages/entities';
 
-const images: { [id: string]: () => IImageAsset } = {
+const images: { [id: string]: () => AssetTypes.ImageAsset } = {
   play: () => require('./images/play.png'),
   repeat: () => require('./images/repeat.png'),
   serlo: () => require('./images/serlo.png'),

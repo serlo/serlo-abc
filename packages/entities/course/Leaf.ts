@@ -10,6 +10,26 @@ class Leaf extends AbstractNode {
     this.type = type;
   }
 
+  public getNewVocabulary() {
+    const parent = this.getParent();
+
+    if (!parent) {
+      return [];
+    }
+
+    return parent.getNewVocabulary();
+  }
+
+  public getVocabulary() {
+    const parent = this.getParent();
+
+    if (!parent) {
+      return [];
+    }
+
+    return parent.getVocabulary();
+  }
+
   public getType(): string {
     return this.type;
   }

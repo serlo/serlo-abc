@@ -1,18 +1,21 @@
-import { Optional } from '../../../src/types';
+import { Maybe } from '../../maybe';
+import InternalNode from './InternalNode';
 import { IIdentifiableObject } from './types';
 
 // An AbstractNode has a required id and optional additional props
 abstract class AbstractNode {
+  protected words: string[] = [];
   private id: string;
   private props: {};
-  private parent?: AbstractNode;
+  private parent?: InternalNode;
 
-  constructor({ id, ...props }: IIdentifiableObject) {
+  constructor({ id, words, ...props }: IIdentifiableObject) {
     this.id = id;
+    this.words = words || [];
     this.props = props;
   }
 
-  public setParent(parent: AbstractNode) {
+  public setParent(parent: InternalNode) {
     this.parent = parent;
   }
 
@@ -27,6 +30,16 @@ abstract class AbstractNode {
   public getParent() {
     return this.parent;
   }
+
+  /**
+   * @returns New vocabulary
+   */
+  public abstract getNewVocabulary(): string[];
+
+  /**
+   * @returns New and old vocabulary
+   */
+  public abstract getVocabulary(): string[];
 
   public getStructure(): IIdentifiableObject {
     const parent = this.getParent();
@@ -48,7 +61,7 @@ abstract class AbstractNode {
     return this.getStructure();
   }
 
-  public findEntity(id: string): Optional<AbstractNode> {
+  public findEntity(id: string): Maybe<AbstractNode> {
     if (id === this.getId()) {
       return this;
     }

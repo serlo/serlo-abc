@@ -18,7 +18,6 @@
     "generate:sounds": "ts-node scripts/generate-sounds",
     "generate:words-images": "ts-node scripts/generate-words-images",
     "generate:words-sounds": "ts-node scripts/generate-words-sounds",
-    "generate:words": "ts-node scripts/generate-words",
     "postgenerate": "yarn format",
     "tsc": "tsc",
     "exp:config": "ts-node scripts/generate-app-config",

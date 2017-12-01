@@ -2,7 +2,6 @@ import { getStorybookUI, configure } from '@storybook/react-native';
 import { NativeModules } from 'react-native';
 import url from 'url';
 
-import loadFonts from '../src/components/helpers/fonts';
 import './addons';
 
 configure(() => {
@@ -11,10 +10,4 @@ configure(() => {
 
 const { hostname } = url.parse(NativeModules.SourceCode.scriptURL);
 
-const StorybookUI = getStorybookUI({ port: 7007, host: hostname });
-
-export default loadFonts({
-  norddruck: require('../src/assets/fonts/norddruck.ttf'),
-  norddruck_arrows: require('../src/assets/fonts/norddruck_arrows.ttf'),
-  serlo: require('../src/assets/fonts/serlo.ttf')
-})(StorybookUI);
+export default getStorybookUI({ port: 7007, host: hostname });
