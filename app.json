@@ -15,7 +15,17 @@
       "loadJSInBackgroundExperimental": true
     },
     "android": {
-      "package": "org.serlo.abc"
+      "package": "org.serlo.abc",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "READ_INTERNAL_STORAGE",
+        "READ_PHONE_STATE",
+        "RECORD_AUDIO",
+        "WRITE_EXTERNAL_STORAGE",
+        "com.android.launcher.permission.INSTALL_SHORTCUT",
+        "com.htc.launcher.permission.READ_SETTINGS",
+        "om.htc.launcher.permission.UPDATE_SHORTCUT"
+      ]
     }
   }
 }
