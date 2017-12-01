@@ -2,13 +2,14 @@ import { Entypo, Ionicons } from '@expo/vector-icons';
 import { Constants } from 'expo';
 import { map } from 'ramda';
 import React, { Component } from 'react';
-import { Button, StyleSheet, View, Dimensions } from 'react-native';
+import { Button, StyleSheet, View, Dimensions, ScrollView } from 'react-native';
 
 import { RoundIconButton } from '../common/buttons';
 import RoundTextButton from '../common/RoundTextButton';
 import { Progress } from '../../../packages/entities-interactor/ISerializedProgress';
 import { GREEN } from '../../styles/colors';
 import { PortraitScreenOrientation } from '../helpers/screen-orientation';
+import { WithDimensions } from '../helpers/dimensions';
 
 const styles = StyleSheet.create({
   hoveringButton: {
@@ -46,9 +47,9 @@ class Course extends Component {
 
     return (
       <PortraitScreenOrientation>
-        <View
-          style={{
-            flex: 1,
+        <ScrollView
+          contentContainerStyle={{
+            paddingTop: 100,
             alignItems: 'center',
             justifyContent: 'center'
           }}
@@ -110,12 +111,14 @@ class Course extends Component {
             ),
             course.children
           )}
-          <Button
-            onPress={() => {
-              resetProgress();
-            }}
-            title="Reset progress"
-          />
+          {__DEV__ && (
+            <Button
+              onPress={() => {
+                resetProgress();
+              }}
+              title="Reset progress"
+            />
+          )}
           {next && (
             <View style={[styles.hoveringButton, styles.top, styles.right]}>
               <RoundIconButton
@@ -126,7 +129,7 @@ class Course extends Component {
               />
             </View>
           )}
-        </View>
+        </ScrollView>
       </PortraitScreenOrientation>
     );
   }
