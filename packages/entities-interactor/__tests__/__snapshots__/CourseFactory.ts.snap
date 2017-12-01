@@ -10,6 +10,7 @@ InternalNode {
           "parent": [Circular],
           "props": Object {},
           "type": "foo",
+          "words": Array [],
         },
       ],
       "icon": undefined,
@@ -17,6 +18,7 @@ InternalNode {
       "parent": [Circular],
       "props": Object {},
       "title": undefined,
+      "words": Array [],
     },
     InternalNode {
       "children": Array [
@@ -27,6 +29,7 @@ InternalNode {
             "foo": "bar",
           },
           "type": "foo",
+          "words": Array [],
         },
       ],
       "icon": undefined,
@@ -34,12 +37,14 @@ InternalNode {
       "parent": [Circular],
       "props": Object {},
       "title": undefined,
+      "words": Array [],
     },
   ],
   "icon": undefined,
   "id": "09438926-b170-4005-a6e8-5dd8fba83cde",
   "props": Object {},
   "title": "Foo bar",
+  "words": Array [],
 }
 `;
 
