@@ -163,7 +163,7 @@ const sounds: { [id: string]: () => ISoundAsset } = {
   knoedel_short: () => require('./sounds/knoedel_short.mp3'),
   kochen_short: () => require('./sounds/kochen_short.mp3'),
   krawatte_short: () => require('./sounds/krawatte_short.mp3'),
-  krokodile_short: () => require('./sounds/krokodile_short.mp3'),
+  krokodil_short: () => require('./sounds/krokodil_short.mp3'),
   kuchen_short: () => require('./sounds/kuchen_short.mp3'),
   kueche_short: () => require('./sounds/kueche_short.mp3'),
   kuh_long: () => require('./sounds/kuh_long.mp3'),

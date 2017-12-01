@@ -813,9 +813,9 @@
     "singular": "Fl'uss",
     "plural": "Fl'üs|se"
   },
-  "schuhe": {
-    "id": "schuhe",
-    "word": "Schuhe",
+  "schuh": {
+    "id": "schuh",
+    "word": "Schuh",
     "article": "der",
     "singular": "Sch-uh",
     "plural": "Sch-u|he"
