@@ -1,5 +1,17 @@
 <html>
 <body>
-  <h1>placeholder</h1>
+  <script>
+    var userAgent = navigator.userAgent.toLocaleLowerCase();
+
+    var detectAndroid = function () {
+      return userAgent.search('android') > -1;
+    }
+
+    if (detectAndroid()) {
+      window.location = 'https://play.google.com/store/apps/details?id=org.serlo.abc&utm_source=abc-app.serlo.org';
+    } else {
+      window.location = 'https://expo.io/@serlo-org/serlo-abc';
+    }
+  </script>
 </body>
 </html>
