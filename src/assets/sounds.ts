@@ -112,14 +112,14 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
     require('./sounds/exercises_markieren_sie_alle_r_a.mp3'),
   exercises_markieren_sie_alle_r_b: () =>
     require('./sounds/exercises_markieren_sie_alle_r_b.mp3'),
+  exercises_markieren_sie_alle_s_a: () =>
+    require('./sounds/exercises_markieren_sie_alle_s_a.mp3'),
+  exercises_markieren_sie_alle_s_b: () =>
+    require('./sounds/exercises_markieren_sie_alle_s_b.mp3'),
   exercises_markieren_sie_alle_s_voiced_a: () =>
     require('./sounds/exercises_markieren_sie_alle_s_voiced_a.mp3'),
   exercises_markieren_sie_alle_s_voiced_b: () =>
     require('./sounds/exercises_markieren_sie_alle_s_voiced_b.mp3'),
-  exercises_markieren_sie_alle_s_voiceless_a: () =>
-    require('./sounds/exercises_markieren_sie_alle_s_voiceless_a.mp3'),
-  exercises_markieren_sie_alle_s_voiceless_b: () =>
-    require('./sounds/exercises_markieren_sie_alle_s_voiceless_b.mp3'),
   exercises_markieren_sie_alle_t_a: () =>
     require('./sounds/exercises_markieren_sie_alle_t_a.mp3'),
   exercises_markieren_sie_alle_t_b: () =>

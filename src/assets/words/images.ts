@@ -1,6 +1,6 @@
-import { IImageAsset } from '../../types/assets';
+import { AssetTypes } from '../../../packages/entities';
 
-const images: { [id: string]: () => IImageAsset } = {
+const images: { [id: string]: () => AssetTypes.ImageAsset } = {
   abend: () => require('./images/abend.jpg'),
   acht: () => require('./images/acht.jpg'),
   affe: () => require('./images/affe.jpg'),
