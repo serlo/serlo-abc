@@ -31,6 +31,44 @@
                 "id": "75df664c-61b4-466c-9ab9-f6f7df30d371",
                 "type": "PresentLetter",
                 "letter": "a"
+              },
+              {
+                "id": "46af5bc0-7d32-4b9a-8525-d19fc8d144ad",
+                "type": "RepeatLetter",
+                "letter": "a"
+              },
+              {
+                "id": "36781cd4-8b65-4219-815b-e9a8c1a46423",
+                "type": "WriteLetter",
+                "letter": "a"
+              },
+              {
+                "id": "638aaa9d-6da2-4046-86bf-6c9ee63666a2",
+                "type": "ShowWords",
+                "letter": "a"
+              },
+              {
+                "id": "d15d0d81-f41c-4267-aacf-f35c97da3e4c",
+                "type": "RepeatWords",
+                "letter": "a"
+              },
+              {
+                "id": "08d1c24f-eda3-488f-9474-404a6ae9338b",
+                "type": "FindLetter",
+                "letter": "a"
+              },
+              {
+                "id": "1b2b7b27-6db6-4e11-9605-0933bb9b8280",
+                "type": "WriteLetter",
+                "letter": "a"
+              },
+              {
+                "id": "038fdd26-4b53-4aa8-80d8-92f2ad0f0dd6",
+                "type": "MatchImage"
+              },
+              {
+                "id": "94f92cdf-5eb9-4b4b-aba6-09228646e419",
+                "type": "PraiseVideo"
               }
             ]
           },

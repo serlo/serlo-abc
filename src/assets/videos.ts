@@ -4,6 +4,8 @@ const videos: { [id: string]: () => AssetTypes.VideoAsset } = {
   explanation_show_letter: () =>
     require('./videos/explanation_show_letter.mp4'),
   explanation_show_word: () => require('./videos/explanation_show_word.mp4'),
+  explanation_write_letter: () =>
+    require('./videos/explanation_write_letter.mp4'),
   praise1: () => require('./videos/praise1.mp4'),
   praise2: () => require('./videos/praise2.mp4'),
   praise3: () => require('./videos/praise3.mp4'),

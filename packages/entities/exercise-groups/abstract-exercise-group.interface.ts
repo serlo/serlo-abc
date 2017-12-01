@@ -26,11 +26,11 @@ export abstract class AbstractExerciseGroup {
     return head(this.exercises);
   }
 
-  public submit(state: any): void {
+  public submit(state: any): boolean {
     const exercise = this.getCurrentExercise();
 
     if (!exercise) {
-      return;
+      return true;
     }
 
     const isCorrect = exercise.isCorrect(state);
@@ -49,6 +49,8 @@ export abstract class AbstractExerciseGroup {
         this.moveToNextExercise();
       }
     }
+
+    return isCorrect;
   }
 
   protected abstract generateExercises(): Array<

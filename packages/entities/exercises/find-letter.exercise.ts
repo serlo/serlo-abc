@@ -112,10 +112,11 @@ export class FindLetter extends AbstractExercise<
 
   public isCorrect(state: FindLetterState): boolean {
     const { letter, word } = this.props;
+    const letterString = letter.toUpperCase();
     const wordString = word.toString().toUpperCase();
 
     for (let i = 0; i < wordString.length; i++) {
-      if (state[i] !== (wordString[i] === letter)) {
+      if (state[i] !== (wordString[i] === letterString)) {
         return false;
       }
     }
