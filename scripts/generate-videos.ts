@@ -17,13 +17,7 @@ readdir(videosPath).then(files => {
     const videos: { [id: string]: () => AssetTypes.VideoAsset } = {`;
 
   R.forEach(file => {
-    str += `
-  ${getFilename(file)}_hd: () => require('./videos/${getFilename(
-      file
-    )}.hd${getExtname(file)}'),
-  ${getFilename(file)}_sd: () => require('./videos/${getFilename(
-      file
-    )}.sd${getExtname(file)}'),`;
+    str += `${getFilename(file)}: () => require('./videos/${file}'),`;
   }, files);
 
   str += `

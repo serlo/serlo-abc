@@ -9,8 +9,6 @@ notifications:
   email: false
 
 before_install:
-- curl -o videos.tar.gz https://storage.googleapis.com/tf-serlo-assets-package-registry/serlo-abc-videos%400.0.0/videos.tar.gz
-- tar -xzvf videos.tar.gz -C $TRAVIS_BUILD_DIR/src/assets
 - curl -o- -L https://yarnpkg.com/install.sh | bash
 - export PATH="$HOME/.yarn/bin:$PATH"
 
