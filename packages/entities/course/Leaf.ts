@@ -1,5 +1,5 @@
-import AbstractNode from './AbstractNode';
 import { Maybe } from '../../maybe';
+import AbstractNode from './AbstractNode';
 
 // A Leaf has an (exercise) type
 class Leaf extends AbstractNode {
