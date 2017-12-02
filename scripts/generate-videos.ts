@@ -18,10 +18,10 @@ readdir(videosPath).then(files => {
 
   R.forEach(file => {
     str += `
-  ${getFilename(file)}_hd: () => require('./sounds/${getFilename(
+  ${getFilename(file)}_hd: () => require('./videos/${getFilename(
       file
     )}.hd${getExtname(file)}'),
-  ${getFilename(file)}_sd: () => require('./sounds/${getFilename(
+  ${getFilename(file)}_sd: () => require('./videos/${getFilename(
       file
     )}.sd${getExtname(file)}'),`;
   }, files);
