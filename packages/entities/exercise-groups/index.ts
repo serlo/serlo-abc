@@ -1,6 +1,7 @@
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 import { DifferFromSymbol } from './differ-from-symbol';
 import { FindLetter } from './find-letter';
+import { HasPhoneme } from './has-phoneme';
 import { IntroduceLetter } from './introduce-letter';
 import { LetterRotated } from './letter-rotated';
 import { MatchImage } from './match-image';
@@ -14,9 +15,10 @@ import { WriteLetter } from './write-letter';
 export enum ExerciseGroupTypes {
   DifferFromSymbol = 'DifferFromSymbol',
   FindLetter = 'FindLetter',
-  MatchImage = 'MatchImage',
+  HasPhoneme = 'HasPhoneme',
   IntroduceLetter = 'IntroduceLetter',
   LetterRotated = 'LetterRotated',
+  MatchImage = 'MatchImage',
   PraiseVideo = 'PraiseVideo',
   PresentLetter = 'PresentLetter',
   RepeatLetter = 'RepeatLetter',
@@ -43,6 +45,7 @@ export const ExerciseGroups: {
   [ExerciseGroupTypes.FindLetter]: FindLetter,
   [ExerciseGroupTypes.MatchImage]: MatchImage,
   [ExerciseGroupTypes.IntroduceLetter]: IntroduceLetter,
+  [ExerciseGroupTypes.HasPhoneme]: HasPhoneme,
   [ExerciseGroupTypes.LetterRotated]: LetterRotated,
   [ExerciseGroupTypes.PraiseVideo]: PraiseVideo,
   [ExerciseGroupTypes.PresentLetter]: PresentLetter,

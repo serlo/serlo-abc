@@ -2,6 +2,7 @@ import { DifferFromSymbol } from './differ-from-symbol.component';
 import { ExplanationText } from './explanation-text.component';
 import { FindLetter } from './find-letter.component';
 import { IntroduceLetter } from './introduce-letter.component';
+import { HasPhoneme } from './has-phoneme.component';
 import { LetterRotated } from './letter-rotated.component';
 import { ShowLetter } from './show-letter.component';
 import { ShowWord } from './show-word.component';
@@ -15,6 +16,7 @@ export const ExerciseComponents = {
   ExplanationText,
   FindLetter,
   IntroduceLetter,
+  HasPhoneme,
   LetterRotated,
   MatchImage,
   PraiseVideo,

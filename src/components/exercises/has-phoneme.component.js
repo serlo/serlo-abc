@@ -9,8 +9,9 @@ export class HasPhoneme extends Component {
   createChoiceButton = containsPhoneme => {
     const { showFeedback, feedback } = this.props;
 
-    const wrong =
-      showFeedback && feedback.highlightedChoice === containsPhoneme;
+    const wrong = showFeedback && feedback.wrongChoice === containsPhoneme;
+    const missingCorrect =
+      showFeedback && feedback.correctChoice === containsPhoneme;
 
     return (
       <RoundTextButton
@@ -19,6 +20,7 @@ export class HasPhoneme extends Component {
         }}
         highlighted={containsPhoneme === this.props.state.containsPhoneme}
         wrong={wrong}
+        missingCorrect={missingCorrect}
         text={this.props.phoneme.toUpperCase() + this.props.phoneme}
         size={60}
         style={[
