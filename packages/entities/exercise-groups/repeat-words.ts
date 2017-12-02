@@ -5,7 +5,11 @@ import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
 export class RepeatWords extends AbstractExerciseGroup {
   protected generateExercises() {
-    const letter: string = this.props.letter.toLowerCase();
+    if (!this.newLetter) {
+      return [];
+    }
+
+    const letter = this.newLetter.toLowerCase();
     const words = sample(this.newVocabulary, this.newVocabulary.length);
     const version = sample(['a', 'b'], 1);
 

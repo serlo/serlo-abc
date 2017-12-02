@@ -1,3 +1,4 @@
+import { Maybe } from '../../maybe';
 import AbstractNode from './AbstractNode';
 
 // A Leaf has an (exercise) type
@@ -28,6 +29,24 @@ class Leaf extends AbstractNode {
     }
 
     return parent.getVocabulary();
+  }
+
+  public getNewLetter(): Maybe<string> {
+    const parent = this.getParent();
+    if (!parent) {
+      return undefined;
+    }
+
+    return parent.getNewLetter();
+  }
+
+  public getLetters(): string[] {
+    const parent = this.getParent();
+    if (!parent) {
+      return [];
+    }
+
+    return parent.getLetters();
   }
 
   public getType(): string {
