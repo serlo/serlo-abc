@@ -54,7 +54,8 @@
     "react-native":
       "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",
     "react-native-swipe-gestures": "^1.0.2",
-    "react-router-native": "^4.2.0"
+    "react-router-native": "^4.2.0",
+    "sentry-expo": "^1.7.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.16",
