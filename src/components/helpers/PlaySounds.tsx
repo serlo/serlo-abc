@@ -110,9 +110,12 @@ class PlaySoundsInner extends React.Component<
             })
           )
           .then(() => recording.createNewLoadedSound())
-          .then(({ sound }: { sound: Audio.Sound }) => play(sound))
-          .then(() => {
-            onPlayEnd();
+          .then(({ sound }: { sound: Audio.Sound }) => {
+            play(sound)
+              .then(() => sound.unloadAsync())
+              .then(() => {
+                onPlayEnd();
+              });
           })
           /* tslint:disable-next-line:no-any */
           .catch((err: any) => {
