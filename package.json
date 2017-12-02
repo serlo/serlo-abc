@@ -16,6 +16,7 @@
     "generate": "npm-run-all generate:*",
     "generate:ids": "node scripts/generate-ids",
     "generate:sounds": "ts-node scripts/generate-sounds",
+    "generate:videos": "ts-node scripts/generate-videos",
     "generate:words-images": "ts-node scripts/generate-words-images",
     "generate:words-sounds": "ts-node scripts/generate-words-sounds",
     "postgenerate": "yarn format",
