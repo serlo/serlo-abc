@@ -88,23 +88,24 @@ export class FindLetter extends AbstractExercise<
     }
 
     const { letter, word } = this.props;
+    const letterString = letter.toUpperCase();
     const wordString = word.toString().toUpperCase();
 
     return {
       correctlySelected: mapIndexed(
-        (isSelected, i) => isSelected && wordString[i] === letter,
+        (isSelected, i) => isSelected && wordString[i] === letterString,
         selected
       ),
       incorrectlySelected: mapIndexed(
-        (isSelected, i) => isSelected && wordString[i] !== letter,
+        (isSelected, i) => isSelected && wordString[i] !== letterString,
         selected
       ),
       correctlyNotSelected: mapIndexed(
-        (isSelected, i) => !isSelected && wordString[i] !== letter,
+        (isSelected, i) => !isSelected && wordString[i] !== letterString,
         selected
       ),
       incorrectlyNotSelected: mapIndexed(
-        (isSelected, i) => !isSelected && wordString[i] === letter,
+        (isSelected, i) => !isSelected && wordString[i] === letterString,
         selected
       )
     };
