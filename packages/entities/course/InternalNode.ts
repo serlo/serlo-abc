@@ -1,9 +1,9 @@
-import { find, filter, flatten, map, takeWhile } from 'ramda';
+import { filter, find, flatten, map, takeWhile } from 'ramda';
 
 import { Optional } from '../../../src/types';
+import { Maybe } from '../../maybe';
 import AbstractNode from './AbstractNode';
 import { IIdentifiableObject } from './types';
-import { Maybe } from '../../maybe/maybe';
 
 // An InternalNode has children
 class InternalNode extends AbstractNode {
@@ -76,7 +76,7 @@ class InternalNode extends AbstractNode {
       this as AbstractNode
     ];
 
-    //@ts-ignore TODO:FIXME
+    // @ts-ignore TODO:FIXME
     return filter(node => !!node, map(node => node.getNewLetter(), siblings));
   }
 

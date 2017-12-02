@@ -4,6 +4,10 @@ import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
 export class IntroduceLetter extends AbstractExerciseGroup {
   protected generateExercises() {
+    if (!this.newLetter) {
+      return [];
+    }
+
     const letter: string = this.newLetter.toLowerCase();
     const words = sampleForletter(letter)(this.newVocabulary, 3);
 

@@ -5,8 +5,11 @@ import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
 export class WriteLetter extends AbstractExerciseGroup {
   protected generateExercises() {
-    const letter: string = this.newLetter.toLowerCase();
+    if (!this.newLetter) {
+      return [];
+    }
 
+    const letter = this.newLetter.toLowerCase();
     const version = sample(['a', 'b'], 1);
 
     return [

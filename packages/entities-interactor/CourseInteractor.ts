@@ -1,6 +1,7 @@
 import { ascend, dropWhile, filter } from 'ramda';
 import { Optional } from '../../src/types';
 import { AbstractNode, InternalNode } from '../entities/course';
+import { Maybe } from '../maybe';
 import { stableSortWith } from '../stable-sort';
 import AbstractCourseInteractor from './AbstractCourseInteractor';
 import createCourse from './CourseFactory';
@@ -9,7 +10,6 @@ import ISerializedProgress, {
   IIndividualProgress,
   Progress
 } from './ISerializedProgress';
-import { Maybe } from '../maybe/maybe';
 
 class CourseInteractor extends AbstractCourseInteractor {
   private courseId: string;

@@ -5,13 +5,13 @@ import {
   ExercisePropsFixture
 } from './abstract-exercise.interface';
 
-export type Symbol = {
+export interface Figure {
   name: string;
   isIcon: boolean;
-};
+}
 
 export interface DifferFromSymbolProps {
-  symbols: symbol[];
+  symbols: Figure[];
   correctIndex: number;
 }
 
