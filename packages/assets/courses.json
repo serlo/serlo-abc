@@ -526,6 +526,11 @@
                 "type": "RepeatLetter"
               },
               {
+                "id": "8f17561c-9b5b-488e-9682-a9eff8b306a5",
+                "type": "LetterRotated",
+                "difficulty": 0
+              },
+              {
                 "id": "9a3858e4-5f37-4f0e-8734-a84137beb2d5",
                 "type": "WriteLetter"
               },
@@ -586,6 +591,11 @@
                 "type": "RepeatLetter"
               },
               {
+                "id": "3d062526-6c91-4e2e-a8c4-484d5925a2a1",
+                "type": "LetterRotated",
+                "difficulty": 0
+              },
+              {
                 "id": "1fcd1b45-75c2-46b9-98fe-def4bf775238",
                 "type": "WriteLetter"
               },
@@ -636,6 +646,11 @@
               {
                 "id": "0275fc60-19b7-431f-b700-55db6ef0082d",
                 "type": "RepeatLetter"
+              },
+              {
+                "id": "1c4754f0-6eb3-434e-890f-2df2e2ae9425",
+                "type": "LetterRotated",
+                "difficulty": 0
               },
               {
                 "id": "bd526e7d-77c7-432d-8a13-e7112a7f7a6f",
