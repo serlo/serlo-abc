@@ -1,4 +1,4 @@
-import { map } from 'ramda';
+import { map, mergeAll } from 'ramda';
 
 import { Maybe } from '../maybe';
 import { AbstractAssetResolver, AssetTypes } from './asset-resolver';
@@ -33,15 +33,15 @@ export class EntityFactory {
   ): E {
     const { sound, sounds, video, videos, word, words } = props;
 
-    const resolvedProps: E['props'] = {
-      ...props,
-      sound: sound && this.resolver.getSound(sound),
-      sounds: sounds && map(this.resolver.getSound.bind(this), sounds),
-      video: video && this.resolver.getVideo(video),
-      videos: videos && map(this.resolver.getVideo.bind(this), videos),
-      word: word && this.createWord(word),
-      words: words && map(this.createWord.bind(this), words)
-    };
+    const resolvedProps: E['props'] = mergeAll([
+      props,
+      sound && { sound: this.resolver.getSound(sound) },
+      sounds && { sounds: map(this.resolver.getSound.bind(this), sounds) },
+      video && { video: this.resolver.getVideo(video) },
+      videos && { videos: map(this.resolver.getVideo.bind(this), videos) },
+      word && { word: this.createWord(word) },
+      words && { words: map(this.createWord.bind(this), words) }
+    ]);
 
     return new Exercises[type](resolvedProps) as E;
   }

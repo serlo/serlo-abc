@@ -41,7 +41,7 @@ abstract class AbstractNode {
   /**
    * @returns New and old vocabulary
    */
-  public abstract getVocabulary(): string[];
+  public abstract getVocabulary(id: string): string[];
 
   /**
    * @returns New letter
@@ -51,7 +51,7 @@ abstract class AbstractNode {
   /**
    * @returns New and old letters
    */
-  public abstract getLetters(): string[];
+  public abstract getLetters(id: string): string[];
 
   public getStructure(): IIdentifiableObject {
     const parent = this.getParent();
