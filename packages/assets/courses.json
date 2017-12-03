@@ -170,6 +170,11 @@
                 "id": "2ed70152-3d2d-437d-b1f0-11f2ee7b7958",
                 "type": "StoryVideo",
                 "video": "serlo1"
+              },
+              {
+                "id": "68e34e85-46dc-4756-800e-03ad41fc9f9f",
+                "type": "WriteWords",
+                "texts": ["Anna", "Nena"]
               }
             ]
           }
@@ -360,6 +365,11 @@
                 "id": "a8380fe3-f865-4a4e-ac58-12bd7cdd1055",
                 "type": "StoryVideo",
                 "video": "serlo2"
+              },
+              {
+                "id": "8710917d-9f66-4c84-8949-c5d387f15a96",
+                "type": "WriteWords",
+                "texts": ["Anna", "Nena", "Anton", "Soto"]
               }
             ]
           }
@@ -782,6 +792,11 @@
                 "id": "5b74ee71-bc5e-4f4b-b67c-5b54a9972827",
                 "type": "StoryVideo",
                 "video": "serlo4"
+              },
+              {
+                "id": "a96de7d5-4d93-4b56-9611-b07c25a8adfb",
+                "type": "WriteWords",
+                "texts": ["Anna", "Nena", "Anton", "Soto", "Obst", "ist"]
               },
               {
                 "id": "b760c33c-da02-4a4a-971c-a813e0865411",
@@ -1547,6 +1562,23 @@
                 "id": "7c2f430b-8c8e-4511-b81a-070eb3ced8c1",
                 "type": "StoryVideo",
                 "video": "serlo11"
+              },
+              {
+                "id": "d1f09464-4c1a-491f-80b2-dffc18cda792",
+                "type": "WriteWords",
+                "texts": [
+                  "gern",
+                  "nicht",
+                  "das Kino",
+                  "das Café",
+                  "das Rad",
+                  "der Ball",
+                  "das Museum",
+                  "der Park",
+                  "die Schule",
+                  "das Schach",
+                  "das Klavier"
+                ]
               }
             ]
           }
@@ -1807,9 +1839,36 @@
                 "video": "serlo12"
               },
               {
+                "id": "d84ede5c-07fd-411b-b38f-1b8110906cc7",
+                "type": "WriteWords",
+                "texts": [
+                  "ich",
+                  "du",
+                  "er",
+                  "sie",
+                  "wir",
+                  "ihr",
+                  "Abend",
+                  "Morgen",
+                  "Mittag"
+                ]
+              },
+              {
                 "id": "a873cba8-4e1a-4e7e-90ba-24fbd79636cb",
                 "type": "StoryVideo",
                 "video": "serlo13"
+              },
+              {
+                "id": "7d115b84-2aae-4cea-a12f-d1f933be4087",
+                "type": "WriteWords",
+                "texts": [
+                  "ich koche",
+                  "du kochst",
+                  "ich mache",
+                  "du machst",
+                  "mit",
+                  "ohne"
+                ]
               }
             ]
           }
@@ -2056,6 +2115,30 @@
                 "id": "81c55286-36b3-4e27-9f4f-472c9c38fe9b",
                 "type": "StoryVideo",
                 "video": "serlo14"
+              },
+              {
+                "id": "c86dd1d5-143d-43d0-9504-f36f13df393b",
+                "type": "WriteWords",
+                "texts": [
+                  "ein",
+                  "eine",
+                  "einen",
+                  "kein",
+                  "keine",
+                  "keinen",
+                  "mein",
+                  "meine",
+                  "meinen",
+                  "dein",
+                  "deine",
+                  "deinen",
+                  "sein",
+                  "seine",
+                  "seinen",
+                  "ihr",
+                  "ihre",
+                  "ihren"
+                ]
               }
             ]
           }
@@ -2286,9 +2369,32 @@
                 "video": "serlo16"
               },
               {
+                "id": "e650aa14-beda-471f-a449-51ad9cce590b",
+                "type": "WriteWords",
+                "texts": ["leer", "müssen", "brauchen"]
+              },
+              {
                 "id": "24fb3dd4-7a34-4dac-a610-f1471e874366",
                 "type": "StoryVideo",
                 "video": "serlo17"
+              },
+              {
+                "id": "48173190-542b-43bf-a683-60b4fb867795",
+                "type": "WriteWords",
+                "texts": [
+                  "die Tomate",
+                  "möchte",
+                  "möchten",
+                  "möchtet",
+                  "möchtest",
+                  "der Pilz",
+                  "die Paprika",
+                  "die Olive",
+                  "bitte",
+                  "danke",
+                  "die Birne",
+                  "der Apfel"
+                ]
               }
             ]
           }

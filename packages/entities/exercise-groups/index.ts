@@ -16,6 +16,7 @@ import { RepeatWords } from './repeat-words';
 import { ShowWords } from './show-words';
 import { StoryVideo } from './story-video';
 import { WriteLetter } from './write-letter';
+import { WriteWords } from './write-words';
 
 export enum ExerciseGroupTypes {
   ConnectSyllables = 'ConnectSyllables',
@@ -32,7 +33,8 @@ export enum ExerciseGroupTypes {
   RepeatWords = 'RepeatWords',
   ShowWords = 'ShowWords',
   StoryVideo = 'StoryVideo',
-  WriteLetter = 'WriteLetter'
+  WriteLetter = 'WriteLetter',
+  WriteWords = 'WriteWords'
 }
 
 export const ExerciseGroups: {
@@ -64,7 +66,8 @@ export const ExerciseGroups: {
   [ExerciseGroupTypes.RepeatWords]: RepeatWords,
   [ExerciseGroupTypes.ShowWords]: ShowWords,
   [ExerciseGroupTypes.StoryVideo]: StoryVideo,
-  [ExerciseGroupTypes.WriteLetter]: WriteLetter
+  [ExerciseGroupTypes.WriteLetter]: WriteLetter,
+  [ExerciseGroupTypes.WriteWords]: WriteWords
 };
 
 export { AbstractExerciseGroup };
