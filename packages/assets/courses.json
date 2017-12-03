@@ -577,7 +577,7 @@
               },
               {
                 "id": "14ff682a-aaf9-4c53-bc30-09711f3e6042",
-                "type": "MissingSyllable"
+                "type": "ConnectSyllables"
               },
               {
                 "id": "ac9d92fd-292d-442d-99d4-1874e59458fa",
@@ -649,6 +649,15 @@
                 "type": "HasPhoneme"
               },
               {
+                "id": "0c6327f4-d806-4571-8d87-1f95090c164a",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "9d3bf9d6-61d4-4651-afbe-d2057d3819ad",
+                "type": "ConnectSyllables"
+              },
+              {
                 "id": "e7770ce8-d182-4104-98b4-2fb92041b7e4",
                 "type": "MatchImage"
               },
@@ -708,6 +717,15 @@
               {
                 "id": "9f526740-ea31-49f7-b1b7-8c7ce9c89863",
                 "type": "HasPhoneme"
+              },
+              {
+                "id": "c0520725-be09-4190-b717-70fc4d31947e",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "3243f7b9-758d-4fb2-ae0a-e3353f7c12a3",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "eed77955-56c5-4eb4-bfcf-6da5734abf4e",
@@ -775,6 +793,15 @@
               {
                 "id": "65dc6147-110d-45f6-a44e-b20503cec896",
                 "type": "HasPhoneme"
+              },
+              {
+                "id": "ec787559-5689-457f-a2d6-339f6374006c",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "619821b8-81b2-4e0d-a6c6-9e5df2ec43be",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "c3f686fb-67df-43b9-a609-8567dda41554",
@@ -846,6 +873,15 @@
                 "type": "HasPhoneme"
               },
               {
+                "id": "f9a27c86-7109-4fd3-b87b-bd58765660f8",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "dba066f1-f549-4f06-983c-19b7329d87d9",
+                "type": "ConnectSyllables"
+              },
+              {
                 "id": "694a4817-19e4-4ec2-94b2-1bd60ce76675",
                 "type": "MatchImage"
               },
@@ -914,6 +950,15 @@
               {
                 "id": "11ad1f60-87ab-46fd-b686-8d43eb529730",
                 "type": "HasPhoneme"
+              },
+              {
+                "id": "2b2793be-ce74-4b91-b139-bb84b17616fe",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "e2349df4-d971-4848-95ee-f8026bac8134",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "52254d8e-e658-47c6-97de-517884373f68",
@@ -992,6 +1037,15 @@
                 "type": "HasPhoneme"
               },
               {
+                "id": "2407179a-29b4-4fb8-8f54-cf14998044cb",
+                "type": "MissingLetter",
+                "difficulty": 0.2
+              },
+              {
+                "id": "807892d9-abbe-40e0-9647-69159fc3d3da",
+                "type": "ConnectSyllables"
+              },
+              {
                 "id": "16625f80-70a4-4e0d-9212-16bb072fe637",
                 "type": "MatchImage"
               },
@@ -1051,6 +1105,15 @@
               {
                 "id": "8cfe1a8a-e593-4b80-802d-60619afe624d",
                 "type": "HasPhoneme"
+              },
+              {
+                "id": "92fc29d4-acae-44d6-a07c-5b66ddf734e1",
+                "type": "MissingLetter",
+                "difficulty": 0.2
+              },
+              {
+                "id": "6ac8420c-007a-409c-adb2-2a7fa9ce3ecf",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "e091c501-ebf5-454b-885a-099b168911e9",
@@ -1121,6 +1184,15 @@
               {
                 "id": "e20dd341-af15-4e3d-8f41-a17016955a96",
                 "type": "HasPhoneme"
+              },
+              {
+                "id": "4adbe8cd-65ad-4880-81a0-e1e9bc1db924",
+                "type": "MissingLetter",
+                "difficulty": 0.2
+              },
+              {
+                "id": "b82f8972-78ac-454d-a3ce-571f6aa9af11",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "ddbb778b-e729-433d-abc7-05d28a6c8bb9",
@@ -1197,6 +1269,15 @@
                 "type": "HasPhoneme"
               },
               {
+                "id": "bd208ff9-1963-4ebf-8fea-9ecedfc3a424",
+                "type": "MissingLetter",
+                "difficulty": 0.3
+              },
+              {
+                "id": "e7f6316c-af3a-46ed-aaf1-5ea355e7ddf9",
+                "type": "ConnectSyllables"
+              },
+              {
                 "id": "1c2469d4-3345-42f1-aa79-dff9db8bd498",
                 "type": "MatchImage"
               },
@@ -1264,6 +1345,15 @@
               {
                 "id": "5baacc9b-98f2-489c-84c7-1b3c03cd6d8c",
                 "type": "HasPhoneme"
+              },
+              {
+                "id": "5633ce4c-8714-4ad5-b219-25e0eeb52945",
+                "type": "MissingLetter",
+                "difficulty": 0.3
+              },
+              {
+                "id": "765fb086-84f2-41d2-8ba8-fde3b3991495",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "fe861bb8-6825-4a7c-8345-c8d8e9844425",
@@ -1336,6 +1426,15 @@
               {
                 "id": "3228d9bc-b22d-4087-ba6d-cd37bdede303",
                 "type": "HasPhoneme"
+              },
+              {
+                "id": "3d2244e8-a9bc-44df-a4cf-f41511928774",
+                "type": "MissingLetter",
+                "difficulty": 0.3
+              },
+              {
+                "id": "b7a19c16-7fd7-4799-a32d-1de50de5689e",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "da20d9a4-6c56-4801-aebe-7fcf2d896878",
@@ -1415,6 +1514,15 @@
                 "type": "HasPhoneme"
               },
               {
+                "id": "628ff801-186f-4b8c-9949-91688feaa34c",
+                "type": "MissingLetter",
+                "difficulty": 0.3
+              },
+              {
+                "id": "2ad1ff45-624e-4899-af4f-331338ab387e",
+                "type": "ConnectSyllables"
+              },
+              {
                 "id": "8510ba06-adab-4e6b-8314-87890816b567",
                 "type": "MatchImage"
               },
@@ -1484,6 +1592,15 @@
               {
                 "id": "f2afc300-49d6-45e4-888c-5130e3a771f4",
                 "type": "HasPhoneme"
+              },
+              {
+                "id": "d110bfbc-3d3d-4c64-9ac2-2413116506ab",
+                "type": "MissingLetter",
+                "difficulty": 0.3
+              },
+              {
+                "id": "ef777ad4-13f8-471b-b302-8e7a7f151098",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "63ffe84a-45ca-466f-a661-bef88c1ad910",
@@ -1557,6 +1674,15 @@
                 "type": "HasPhoneme"
               },
               {
+                "id": "29ec1177-f371-48f1-afbb-45767c09a66c",
+                "type": "MissingLetter",
+                "difficulty": 0.3
+              },
+              {
+                "id": "9360467f-b7e5-4447-9c2c-a40129453415",
+                "type": "ConnectSyllables"
+              },
+              {
                 "id": "95419d59-3f60-41e8-8601-c49478fc9812",
                 "type": "MatchImage"
               },
@@ -1622,6 +1748,15 @@
               {
                 "id": "3520a30c-b2a1-47fe-8c56-c5bd5e0c8305",
                 "type": "HasPhoneme"
+              },
+              {
+                "id": "11c53945-2ca2-44e3-89a7-4aa5464a88fb",
+                "type": "MissingLetter",
+                "difficulty": 0.4
+              },
+              {
+                "id": "aeed36c0-f3f4-4802-84b6-2659b360220d",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "373f3264-8124-432e-b9e8-fe2c369f5409",
@@ -1690,6 +1825,15 @@
               {
                 "id": "4a0adf2a-2808-4454-9b87-b488af712bb0",
                 "type": "HasPhoneme"
+              },
+              {
+                "id": "26c488f5-619a-4180-a859-f5c64b64a102",
+                "type": "MissingLetter",
+                "difficulty": 0.4
+              },
+              {
+                "id": "86e820b7-f32f-4e50-a17f-cd1f65736510",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "bc226979-f4a8-4b47-b29b-92295c8c05f0",
@@ -1764,6 +1908,15 @@
                 "type": "HasPhoneme"
               },
               {
+                "id": "b392cec2-3544-4a47-a732-0f0a3ab9cfd3",
+                "type": "MissingLetter",
+                "difficulty": 0.4
+              },
+              {
+                "id": "dc80b162-11fc-4204-a904-02c5e04c137e",
+                "type": "ConnectSyllables"
+              },
+              {
                 "id": "4b6b00ad-49f0-40c0-bc42-ab5fb2eaa43f",
                 "type": "MatchImage"
               },
@@ -1831,6 +1984,15 @@
                 "type": "HasPhoneme"
               },
               {
+                "id": "2b5c3b35-e576-4af6-9a10-2a4476c27ea2",
+                "type": "MissingLetter",
+                "difficulty": 0.6
+              },
+              {
+                "id": "292bf443-c1cd-46e9-88a9-22e167a04b65",
+                "type": "ConnectSyllables"
+              },
+              {
                 "id": "a35cf01a-341f-450e-b745-5cc6be19ce98",
                 "type": "MatchImage"
               },
@@ -1892,6 +2054,15 @@
                 "type": "HasPhoneme"
               },
               {
+                "id": "db16836d-e4eb-47cb-8410-578a8c5a0078",
+                "type": "MissingLetter",
+                "difficulty": 0.6
+              },
+              {
+                "id": "68b2bbe0-8b56-40a0-8010-4d35732adc82",
+                "type": "ConnectSyllables"
+              },
+              {
                 "id": "82d66e81-f94e-4193-a4bb-e5487109c9ec",
                 "type": "MatchImage"
               },
@@ -1951,6 +2122,15 @@
               {
                 "id": "81be6540-5af9-4c02-8d1b-03cd6b25f784",
                 "type": "HasPhoneme"
+              },
+              {
+                "id": "9d4dd3bc-6379-438b-b450-30136953fea6",
+                "type": "MissingLetter",
+                "difficulty": 0.6
+              },
+              {
+                "id": "64f42587-c76f-48a0-b719-a5985c88c3df",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "431af803-3ad4-4a37-a375-115c854044a4",
@@ -2020,6 +2200,15 @@
                 "type": "HasPhoneme"
               },
               {
+                "id": "fb908763-9251-4be0-962e-4b4f617fff5a",
+                "type": "MissingLetter",
+                "difficulty": 0.8
+              },
+              {
+                "id": "58569e9b-c23c-4682-a8b1-38c3be0d3931",
+                "type": "ConnectSyllables"
+              },
+              {
                 "id": "cf0ba3f9-d563-476b-9805-9ac2955ecee0",
                 "type": "MatchImage"
               },
@@ -2081,6 +2270,15 @@
                 "type": "HasPhoneme"
               },
               {
+                "id": "396cec86-5352-4318-a806-8387aaf1fb3f",
+                "type": "MissingLetter",
+                "difficulty": 0.8
+              },
+              {
+                "id": "c11fbd21-b5e0-41a1-8919-9db9bf8be621",
+                "type": "ConnectSyllables"
+              },
+              {
                 "id": "a84cbbbc-11ef-4757-ada1-3792bbfa96cb",
                 "type": "MatchImage"
               },
@@ -2140,6 +2338,15 @@
               {
                 "id": "017cceee-f004-429c-b86c-23c2a9f3ba82",
                 "type": "HasPhoneme"
+              },
+              {
+                "id": "b96e2090-7e0d-412b-b5b3-f366538adf1c",
+                "type": "MissingLetter",
+                "difficulty": 0.8
+              },
+              {
+                "id": "23288555-40bf-44d1-bec9-e931d3ad020e",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "766ace58-3c51-4d04-9625-d73ad97877eb",

@@ -56,6 +56,7 @@ export class EntityFactory {
     props: { [key: string]: any }
   ): E {
     return new ExerciseGroups[type](
+      this.createWord.bind(this),
       this.createExercise.bind(this),
       newVocabulary,
       vocabulary,

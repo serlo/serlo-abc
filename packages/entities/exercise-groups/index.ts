@@ -1,3 +1,5 @@
+import { Maybe } from '../../maybe';
+import { Word } from '../word';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 import { ConnectSyllables } from './connect-syllables';
 import { DifferFromSymbol } from './differ-from-symbol';
@@ -7,7 +9,6 @@ import { IntroduceLetter } from './introduce-letter';
 import { LetterRotated } from './letter-rotated';
 import { MatchImage } from './match-image';
 import { MissingLetter } from './missing-letter';
-import { MissingWord } from './missing-word';
 import { PraiseVideo } from './praise-video';
 import { PresentLetter } from './present-letter';
 import { RepeatLetter } from './repeat-letter';
@@ -24,7 +25,6 @@ export enum ExerciseGroupTypes {
   LetterRotated = 'LetterRotated',
   MatchImage = 'MatchImage',
   MissingLetter = 'MissingLetter',
-  MissingWord = 'MissingWord',
   PraiseVideo = 'PraiseVideo',
   PresentLetter = 'PresentLetter',
   RepeatLetter = 'RepeatLetter',
@@ -36,7 +36,8 @@ export enum ExerciseGroupTypes {
 export const ExerciseGroups: {
   [type: string]: {
     new (
-      /* tslint:disable-next-line:no-any */ // TODO: specify createExercise type
+      createWord: (id: string) => Maybe<Word>, // TODO: specify createExercise type
+      /* tslint:disable-next-line:no-any */
       createExercise: any,
       newVocab: string[],
       vocab: string[],
@@ -55,7 +56,6 @@ export const ExerciseGroups: {
   [ExerciseGroupTypes.LetterRotated]: LetterRotated,
   [ExerciseGroupTypes.MatchImage]: MatchImage,
   [ExerciseGroupTypes.MissingLetter]: MissingLetter,
-  [ExerciseGroupTypes.MissingWord]: MissingWord,
   [ExerciseGroupTypes.PraiseVideo]: PraiseVideo,
   [ExerciseGroupTypes.PresentLetter]: PresentLetter,
   [ExerciseGroupTypes.RepeatLetter]: RepeatLetter,
