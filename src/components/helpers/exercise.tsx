@@ -101,6 +101,7 @@ export class Exercise extends React.Component<ExerciseProps, ExerciseState> {
           feedback={feedback}
           state={state}
           setState={this.updateState}
+          submit={this.submit}
         />
         <View style={[styles.hoveringButton, styles.top, styles.left]}>
           <RoundIconButton

@@ -19,7 +19,7 @@ export class RepeatWords extends AbstractExerciseGroup {
         text: 'Wiederholen Sie das Wort.',
         sound: `exercises_wiederholen_sie_das_wort_${version}`
       }),
-      this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
+      this.createExercise(ExerciseTypes.InfoScreen, {
         type: 'TutorialVideo',
         video: 'explanation_show_word'
       }),

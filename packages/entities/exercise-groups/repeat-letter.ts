@@ -19,7 +19,7 @@ export class RepeatLetter extends AbstractExerciseGroup {
         text: 'Wiederholen Sie den Buchstaben.',
         sound: `exercises_wiederholen_sie_den_buchstaben_${version}`
       }),
-      this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
+      this.createExercise(ExerciseTypes.InfoScreen, {
         type: 'TutorialVideo',
         video: 'explanation_show_letter'
       }),
