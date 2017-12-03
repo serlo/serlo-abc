@@ -98,16 +98,14 @@ class CourseInteractor extends AbstractCourseInteractor {
     return entity && (entity.getInfo() as Optional<ICourseStructure>);
   }
 
-  public getNewVocabulary(id: string) {
+  public getNewVocabulary(id: string): Maybe<string[]> {
     const entity = this.course.findEntity(id);
 
     return entity && entity.getNewVocabulary();
   }
 
-  public getVocabulary(id: string) {
-    const entity = this.course.findEntity(id);
-
-    return entity && entity.getVocabulary();
+  public getVocabulary(id: string): string[] {
+    return this.course.getVocabulary(id);
   }
   public getNewLetter(id: string): Maybe<string> {
     const entity = this.course.findEntity(id);
@@ -116,9 +114,7 @@ class CourseInteractor extends AbstractCourseInteractor {
   }
 
   public getLetters(id: string): string[] {
-    const entity = this.course.findEntity(id);
-
-    return entity ? entity.getLetters() : [];
+    return this.course.getLetters(id);
   }
 
   public getProgress(id: string) {

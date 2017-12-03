@@ -1,5 +1,5 @@
 import { identity, map, times } from 'ramda';
-import { sample } from '../../sample';
+import { getRandomInt, sample } from '../../sample';
 import { ExerciseTypes } from '../exercises';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
@@ -12,10 +12,11 @@ export class LetterRotated extends AbstractExerciseGroup {
       times(identity, numberOfLetters),
       numberOfRotated
     );
-    const angles: string[] = map(
-      () => -180 + Math.random() * 360 + 'deg',
-      rotated
-    );
+    const angles: string[] = map(() => {
+      const sign = [-1, 1][getRandomInt(0, 1)];
+      const angle = getRandomInt(3, 15) * 10 * sign;
+      return `${angle}deg`;
+    }, rotated);
 
     const version = sample(['a', 'b'], 1);
     const text: string =
@@ -37,7 +38,8 @@ export class LetterRotated extends AbstractExerciseGroup {
         type: 'LetterRotated',
         letters,
         rotated,
-        angles
+        angles,
+        difficulty: this.props.difficulty
       })
     ];
   }

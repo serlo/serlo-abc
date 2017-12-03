@@ -11,7 +11,7 @@ class Leaf extends AbstractNode {
     this.type = type;
   }
 
-  public getNewVocabulary() {
+  public getNewVocabulary(): string[] {
     const parent = this.getParent();
 
     if (!parent) {
@@ -21,14 +21,8 @@ class Leaf extends AbstractNode {
     return parent.getNewVocabulary();
   }
 
-  public getVocabulary() {
-    const parent = this.getParent();
-
-    if (!parent) {
-      return [];
-    }
-
-    return parent.getVocabulary();
+  public getVocabulary(id: string): string[] {
+    return [];
   }
 
   public getNewLetter(): Maybe<string> {
@@ -41,12 +35,7 @@ class Leaf extends AbstractNode {
   }
 
   public getLetters(): string[] {
-    const parent = this.getParent();
-    if (!parent) {
-      return [];
-    }
-
-    return parent.getLetters();
+    return [];
   }
 
   public getType(): string {

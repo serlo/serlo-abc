@@ -1,4 +1,4 @@
-import { filter, find, flatten, map, takeWhile } from 'ramda';
+import { concat, find, flatten, map } from 'ramda';
 
 import { Optional } from '../../../src/types';
 import { Maybe } from '../../maybe';
@@ -41,43 +41,37 @@ class InternalNode extends AbstractNode {
     return this.children;
   }
 
-  public getNewVocabulary() {
+  public getNewVocabulary(): string[] {
     return this.words;
   }
 
-  public getVocabulary() {
-    const parent = this.getParent();
-
-    if (!parent) {
-      return this.words;
+  public getVocabulary(id: string): string[] {
+    if (this.getId() === id) {
+      return this.getNewVocabulary();
     }
 
-    const siblings: AbstractNode[] = [
-      ...takeWhile(node => node.getId() !== this.getId(), parent.getChildren()),
-      this as AbstractNode
-    ];
-
-    return flatten<string>(map(node => node.getNewVocabulary(), siblings));
+    return concat(
+      flatten<string>(map(node => node.getVocabulary(id), this.getChildren())),
+      this.getNewVocabulary()
+    );
   }
 
   public getNewLetter(): Maybe<string> {
     return this.letter;
   }
 
-  public getLetters(): string[] {
-    const parent = this.getParent();
-
-    if (!parent) {
-      return this.letter ? [this.letter] : [];
+  public getLetters(id: string): string[] {
+    const newLetterArr: string[] = this.getNewLetter()
+      ? ([this.getNewLetter()] as string[])
+      : [];
+    if (this.getId() === id) {
+      return newLetterArr;
     }
 
-    const siblings: AbstractNode[] = [
-      ...takeWhile(node => node.getId() !== this.getId(), parent.getChildren()),
-      this as AbstractNode
-    ];
-
-    // @ts-ignore TODO:FIXME
-    return filter(node => !!node, map(node => node.getNewLetter(), siblings));
+    return concat(
+      flatten<string>(map(node => node.getLetters(id), this.getChildren())),
+      newLetterArr
+    );
   }
 
   public getStructure() {
