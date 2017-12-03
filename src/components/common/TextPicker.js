@@ -78,6 +78,7 @@ class TextPicker extends Component {
                     style={[
                       this.styles.button,
                       this.props.showFeedback &&
+                        this.props.feedback &&
                         this.props.feedback.correct === key && {
                           backgroundColor: GREEN
                         }
@@ -95,6 +96,7 @@ class TextPicker extends Component {
             style={[
               this.styles.button,
               this.props.showFeedback &&
+                this.props.feedback &&
                 typeof this.props.feedback.wrong !== 'undefined' && {
                   backgroundColor: RED
                 }

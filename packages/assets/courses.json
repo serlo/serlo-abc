@@ -388,6 +388,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "f5e78ccb-9920-4961-9983-3ffce74baa19",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "5e0cfc61-089f-4563-aec4-f53a28ec8ccc",
                 "type": "MatchImage"
               },
@@ -440,6 +444,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "d39ad435-49eb-48f4-b03f-68ecedc03a68",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "9c2f6345-2b85-4b89-b27b-babf0066eb82",
                 "type": "MatchImage"
               },
@@ -490,6 +498,10 @@
               {
                 "id": "972628ee-e231-4359-a079-16d21aa094e6",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "3c8aab06-5e08-4da7-bd0a-77e60582b53a",
+                "type": "HasPhoneme"
               },
               {
                 "id": "1ce6c87e-f2ab-4605-8772-1afdec9b9d69",
@@ -553,6 +565,19 @@
               {
                 "id": "7d1fafbe-8e87-4a5b-9a79-b08df8ce3c7f",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "a616aead-bbfe-4d89-874f-e8763720a837",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "4a7530c0-8e28-4ac4-b8a0-0c735363a932",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "14ff682a-aaf9-4c53-bc30-09711f3e6042",
+                "type": "MissingSyllable"
               },
               {
                 "id": "ac9d92fd-292d-442d-99d4-1874e59458fa",
@@ -620,6 +645,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "3ffe2002-a15b-400b-9672-a8c253a0d1a5",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "e7770ce8-d182-4104-98b4-2fb92041b7e4",
                 "type": "MatchImage"
               },
@@ -675,6 +704,10 @@
               {
                 "id": "d00b8611-79d4-492f-b6c4-92966f18d9c8",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "9f526740-ea31-49f7-b1b7-8c7ce9c89863",
+                "type": "HasPhoneme"
               },
               {
                 "id": "eed77955-56c5-4eb4-bfcf-6da5734abf4e",
@@ -738,6 +771,10 @@
               {
                 "id": "e2edb59a-7654-4b00-bb5f-aef4da77f0bf",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "65dc6147-110d-45f6-a44e-b20503cec896",
+                "type": "HasPhoneme"
               },
               {
                 "id": "c3f686fb-67df-43b9-a609-8567dda41554",
@@ -805,6 +842,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "8f26cfc6-dc75-414f-aac7-50a92deb69af",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "694a4817-19e4-4ec2-94b2-1bd60ce76675",
                 "type": "MatchImage"
               },
@@ -869,6 +910,10 @@
               {
                 "id": "77868d15-9ed3-404a-bff7-53e826638316",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "11ad1f60-87ab-46fd-b686-8d43eb529730",
+                "type": "HasPhoneme"
               },
               {
                 "id": "52254d8e-e658-47c6-97de-517884373f68",
@@ -943,6 +988,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "04ff8333-8458-4cd4-b2ce-66efb737fb26",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "16625f80-70a4-4e0d-9212-16bb072fe637",
                 "type": "MatchImage"
               },
@@ -998,6 +1047,10 @@
               {
                 "id": "5046601c-f6bc-4615-9c67-8c9a161d0dc2",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "8cfe1a8a-e593-4b80-802d-60619afe624d",
+                "type": "HasPhoneme"
               },
               {
                 "id": "e091c501-ebf5-454b-885a-099b168911e9",
@@ -1064,6 +1117,10 @@
               {
                 "id": "82386bd9-6276-4d1e-96a9-b3bc40141ae2",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "e20dd341-af15-4e3d-8f41-a17016955a96",
+                "type": "HasPhoneme"
               },
               {
                 "id": "ddbb778b-e729-433d-abc7-05d28a6c8bb9",
@@ -1136,6 +1193,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "7a6a32e2-5805-462b-a4cd-a2a29698c6ed",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "1c2469d4-3345-42f1-aa79-dff9db8bd498",
                 "type": "MatchImage"
               },
@@ -1199,6 +1260,10 @@
               {
                 "id": "4317c886-dfd7-4cc0-99e4-38fc90b3407c",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "5baacc9b-98f2-489c-84c7-1b3c03cd6d8c",
+                "type": "HasPhoneme"
               },
               {
                 "id": "fe861bb8-6825-4a7c-8345-c8d8e9844425",
@@ -1267,6 +1332,10 @@
               {
                 "id": "37a0c2e6-3a6a-46dd-b054-d9a3e7fd45a9",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "3228d9bc-b22d-4087-ba6d-cd37bdede303",
+                "type": "HasPhoneme"
               },
               {
                 "id": "da20d9a4-6c56-4801-aebe-7fcf2d896878",
@@ -1342,6 +1411,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "ffdfb708-f355-44c4-b522-388c6f41fdc9",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "8510ba06-adab-4e6b-8314-87890816b567",
                 "type": "MatchImage"
               },
@@ -1407,6 +1480,10 @@
               {
                 "id": "46e3ed3a-f147-448c-97de-61809764f568",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "f2afc300-49d6-45e4-888c-5130e3a771f4",
+                "type": "HasPhoneme"
               },
               {
                 "id": "63ffe84a-45ca-466f-a661-bef88c1ad910",
@@ -1476,6 +1553,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "fe2efe0e-21e1-4b42-b958-501a07fb561b",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "95419d59-3f60-41e8-8601-c49478fc9812",
                 "type": "MatchImage"
               },
@@ -1537,6 +1618,10 @@
               {
                 "id": "5e2a2eae-884c-4170-b8cb-f00c8233ff9a",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "3520a30c-b2a1-47fe-8c56-c5bd5e0c8305",
+                "type": "HasPhoneme"
               },
               {
                 "id": "373f3264-8124-432e-b9e8-fe2c369f5409",
@@ -1601,6 +1686,10 @@
               {
                 "id": "de87a719-0165-41f5-8433-98dfd3de50f9",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "4a0adf2a-2808-4454-9b87-b488af712bb0",
+                "type": "HasPhoneme"
               },
               {
                 "id": "bc226979-f4a8-4b47-b29b-92295c8c05f0",
@@ -1671,6 +1760,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "6be3e079-587f-4d7e-aad6-58ede624db00",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "4b6b00ad-49f0-40c0-bc42-ab5fb2eaa43f",
                 "type": "MatchImage"
               },
@@ -1734,6 +1827,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "7e0c9a5a-4df6-4813-b365-2d90ffefb9ba",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "a35cf01a-341f-450e-b745-5cc6be19ce98",
                 "type": "MatchImage"
               },
@@ -1791,6 +1888,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "af340fc5-cb28-4943-8774-639a0d7d8edb",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "82d66e81-f94e-4193-a4bb-e5487109c9ec",
                 "type": "MatchImage"
               },
@@ -1846,6 +1947,10 @@
               {
                 "id": "26077898-3652-46f8-b494-e22b4a706a5f",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "81be6540-5af9-4c02-8d1b-03cd6b25f784",
+                "type": "HasPhoneme"
               },
               {
                 "id": "431af803-3ad4-4a37-a375-115c854044a4",
@@ -1911,6 +2016,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "01b24545-1388-4f01-99c4-0977eb1f6fa7",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "cf0ba3f9-d563-476b-9805-9ac2955ecee0",
                 "type": "MatchImage"
               },
@@ -1968,6 +2077,10 @@
                 "type": "WriteLetter"
               },
               {
+                "id": "8098fd01-72f4-4216-b8ed-686fc740cf67",
+                "type": "HasPhoneme"
+              },
+              {
                 "id": "a84cbbbc-11ef-4757-ada1-3792bbfa96cb",
                 "type": "MatchImage"
               },
@@ -2023,6 +2136,10 @@
               {
                 "id": "374a25c1-d63a-4f06-91d2-61ac263e3f24",
                 "type": "WriteLetter"
+              },
+              {
+                "id": "017cceee-f004-429c-b86c-23c2a9f3ba82",
+                "type": "HasPhoneme"
               },
               {
                 "id": "766ace58-3c51-4d04-9625-d73ad97877eb",

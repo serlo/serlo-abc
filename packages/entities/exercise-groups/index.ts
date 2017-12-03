@@ -1,9 +1,13 @@
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
+import { ConnectSyllables } from './connect-syllables';
 import { DifferFromSymbol } from './differ-from-symbol';
 import { FindLetter } from './find-letter';
+import { HasPhoneme } from './has-phoneme';
 import { IntroduceLetter } from './introduce-letter';
 import { LetterRotated } from './letter-rotated';
 import { MatchImage } from './match-image';
+import { MissingLetter } from './missing-letter';
+import { MissingWord } from './missing-word';
 import { PraiseVideo } from './praise-video';
 import { PresentLetter } from './present-letter';
 import { RepeatLetter } from './repeat-letter';
@@ -12,11 +16,15 @@ import { ShowWords } from './show-words';
 import { WriteLetter } from './write-letter';
 
 export enum ExerciseGroupTypes {
+  ConnectSyllables = 'ConnectSyllables',
   DifferFromSymbol = 'DifferFromSymbol',
   FindLetter = 'FindLetter',
-  MatchImage = 'MatchImage',
+  HasPhoneme = 'HasPhoneme',
   IntroduceLetter = 'IntroduceLetter',
   LetterRotated = 'LetterRotated',
+  MatchImage = 'MatchImage',
+  MissingLetter = 'MissingLetter',
+  MissingWord = 'MissingWord',
   PraiseVideo = 'PraiseVideo',
   PresentLetter = 'PresentLetter',
   RepeatLetter = 'RepeatLetter',
@@ -39,11 +47,15 @@ export const ExerciseGroups: {
     ): AbstractExerciseGroup;
   };
 } = {
+  [ExerciseGroupTypes.ConnectSyllables]: ConnectSyllables,
   [ExerciseGroupTypes.DifferFromSymbol]: DifferFromSymbol,
   [ExerciseGroupTypes.FindLetter]: FindLetter,
-  [ExerciseGroupTypes.MatchImage]: MatchImage,
   [ExerciseGroupTypes.IntroduceLetter]: IntroduceLetter,
+  [ExerciseGroupTypes.HasPhoneme]: HasPhoneme,
   [ExerciseGroupTypes.LetterRotated]: LetterRotated,
+  [ExerciseGroupTypes.MatchImage]: MatchImage,
+  [ExerciseGroupTypes.MissingLetter]: MissingLetter,
+  [ExerciseGroupTypes.MissingWord]: MissingWord,
   [ExerciseGroupTypes.PraiseVideo]: PraiseVideo,
   [ExerciseGroupTypes.PresentLetter]: PresentLetter,
   [ExerciseGroupTypes.RepeatLetter]: RepeatLetter,
