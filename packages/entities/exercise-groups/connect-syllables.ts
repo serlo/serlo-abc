@@ -1,6 +1,14 @@
-import { filter, identity, indexOf, map, times, without } from 'ramda';
+import {
+  filter,
+  identity,
+  intersection,
+  join,
+  map,
+  times,
+  without
+} from 'ramda';
 import { sample } from '../../sample';
-import { ExerciseTypes } from '../exercises';
+import { AbstractExercise, ExerciseTypes } from '../exercises';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
 export class ConnectSyllables extends AbstractExerciseGroup {
@@ -16,62 +24,54 @@ export class ConnectSyllables extends AbstractExerciseGroup {
     );
 
     const version = sample(['a', 'b'], 1);
-    const explanationText: string =
-      this.props.difficulty < 0.2
-        ? 'Ergänzen Sie den fehlenden Buchstaben.'
-        : 'Ergänzen Sie die fehlenden Buchstaben.';
-
-    const sound: string =
-      this.props.difficulty < 0.2
-        ? `exercise_ergaenzen_sie_den_fehlenden_buchstaben_${version}`
-        : `exercise_ergaenzen_sie_die_fehlenden_buchstaben_${version}`;
 
     return [
       this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
         type: 'ExplanationText',
-        text: explanationText,
-        sound
+        text: 'Verbinden Sie die Silben.',
+        sound: `exercises_verbinden_sie_die_silben_${version}`
       }),
-      ...map(word => {
-        const text = word.split('');
+      ...(filter(
+        exercise => !!exercise,
+        map(word => {
+          const wordObj = this.createWord(word);
+          if (!wordObj) {
+            return undefined;
+          }
+          const syllablesString = wordObj.getRawSingular();
+          if (!syllablesString || syllablesString.indexOf('|') === -1) {
+            return undefined;
+          }
+          const text = syllablesString.replace(/['-]/g, '').split('|');
 
-        const numberOfOptions: number = 3;
-        const numberMissing: number =
-          this.props.difficulty < 0.2
-            ? 1
-            : this.props.difficulty < 0.4
-              ? 2
-              : this.props.difficulty < 0.6
-                ? 3
-                : this.props.difficulty < 0.8 ? 4 : text.length;
-        const knownLettersInWord = filter(
-          i => indexOf(text[i], this.letters) !== -1,
-          times(identity, text.length)
-        );
-        const missing = sample(knownLettersInWord, numberMissing);
-        const options = map(
-          missingLetterIndex =>
-            sample(
-              [
-                ...sample(
-                  without([text[missingLetterIndex]], this.letters),
-                  numberOfOptions - 1
-                ),
-                text[missingLetterIndex]
-              ],
-              numberOfOptions
-            ),
-          missing
-        );
-        return this.createExercise(ExerciseTypes.MissingText, {
-          type: 'MissingText',
-          video: this.props.video,
-          word: this.props.word,
-          text,
-          missing,
-          options
-        });
-      }, words)
+          const missing = sample(times(identity, text.length), 1);
+          const knownVocals = intersection(
+            ['a', 'e', 'i', 'o', 'u'],
+            this.letters
+          );
+
+          const options = map(
+            missingLetterIndex =>
+              map(
+                replacement =>
+                  text[missingLetterIndex].replace(
+                    new RegExp(`[${join('', knownVocals)}]`, 'g'),
+                    replacement
+                  ),
+                knownVocals
+              ),
+            missing
+          );
+          return this.createExercise(ExerciseTypes.MissingText, {
+            type: 'MissingText',
+            word,
+            text,
+            missing,
+            options
+          });
+        }, words)
+        /* tslint:disable-next-line:no-any */
+      ) as Array<AbstractExercise<any, any, any>>)
     ];
   }
 }

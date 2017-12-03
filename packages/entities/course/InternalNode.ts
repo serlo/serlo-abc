@@ -1,4 +1,4 @@
-import { concat, find, flatten, map } from 'ramda';
+import { concat, find, flatten, map, take, takeWhile } from 'ramda';
 
 import { Optional } from '../../../src/types';
 import { Maybe } from '../../maybe';
@@ -50,8 +50,14 @@ class InternalNode extends AbstractNode {
       return this.getNewVocabulary();
     }
 
+    const nodesUntilId = takeWhile(
+      found => !found,
+      map(child => child.findEntity(id), this.getChildren())
+    );
+    const previousChildren = take(nodesUntilId.length + 1, this.getChildren());
+
     return concat(
-      flatten<string>(map(node => node.getVocabulary(id), this.getChildren())),
+      flatten<string>(map(node => node.getVocabulary(id), previousChildren)),
       this.getNewVocabulary()
     );
   }
@@ -68,8 +74,14 @@ class InternalNode extends AbstractNode {
       return newLetterArr;
     }
 
+    const nodesUntilId = takeWhile(
+      found => !found,
+      map(child => child.findEntity(id), this.getChildren())
+    );
+    const previousChildren = take(nodesUntilId.length + 1, this.getChildren());
+
     return concat(
-      flatten<string>(map(node => node.getLetters(id), this.getChildren())),
+      flatten<string>(map(node => node.getLetters(id), previousChildren)),
       newLetterArr
     );
   }

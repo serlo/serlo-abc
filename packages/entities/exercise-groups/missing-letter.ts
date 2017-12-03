@@ -2,6 +2,7 @@ import { filter, identity, indexOf, map, times, without } from 'ramda';
 import { sample } from '../../sample';
 import { ExerciseTypes } from '../exercises';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
+import { capitalizeFirstLetter } from '../word/helpers';
 
 export class MissingLetter extends AbstractExerciseGroup {
   protected generateExercises() {
@@ -33,8 +34,8 @@ export class MissingLetter extends AbstractExerciseGroup {
         sound
       }),
       ...map(word => {
-        const wordLetters = word.split('');
-
+        const wordObj = this.createWord(word);
+        const wordLetters = (wordObj ? wordObj.toString() : word).split('');
         const numberOfOptions: number = 3;
         const numberMissing: number =
           this.props.difficulty < 0.2
@@ -45,24 +46,29 @@ export class MissingLetter extends AbstractExerciseGroup {
                 ? 3
                 : this.props.difficulty < 0.8 ? 4 : wordLetters.length;
         const knownLettersInWord = filter(
-          i => indexOf(wordLetters[i], this.letters) !== -1,
+          i => indexOf(wordLetters[i].toLowerCase(), this.letters) !== -1,
           times(identity, wordLetters.length)
         );
         const missing = sample(knownLettersInWord, numberMissing);
-        const options = map(
-          missingLetterIndex =>
-            sample(
-              [
-                ...sample(
-                  without([wordLetters[missingLetterIndex]], this.letters),
-                  numberOfOptions - 1
+        const options = map(missingLetterIndex => {
+          const opt = sample(
+            [
+              ...sample(
+                without(
+                  [wordLetters[missingLetterIndex].toLowerCase()],
+                  this.letters
                 ),
-                wordLetters[missingLetterIndex]
-              ],
-              numberOfOptions
-            ),
-          missing
-        );
+                numberOfOptions - 1
+              ),
+              wordLetters[missingLetterIndex]
+            ],
+            numberOfOptions
+          );
+          return wordLetters[missingLetterIndex] ===
+            wordLetters[missingLetterIndex].toLowerCase()
+            ? map(s => s.toLowerCase(), opt)
+            : map(capitalizeFirstLetter, opt);
+        }, missing);
         return this.createExercise(ExerciseTypes.MissingText, {
           type: 'MissingText',
           word,
