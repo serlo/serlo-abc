@@ -27,7 +27,7 @@ export default class VideoComponent extends Component {
     return (
       <View style={styles.container}>
         <Video
-          resizeMode={Video.RESIZE_MODE_COVER}
+          resizeMode={Video.RESIZE_MODE_CONTAIN}
           source={this.props.video}
           style={[
             {

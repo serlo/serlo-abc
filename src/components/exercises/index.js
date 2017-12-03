@@ -3,6 +3,7 @@ import { ExplanationText } from './explanation-text.component';
 import { FindLetter } from './find-letter.component';
 import { HasPhoneme } from './has-phoneme.component';
 import { IntroduceLetter } from './introduce-letter.component';
+import { LandscapeVideo } from './landscape-video.component';
 import { LetterRotated } from './letter-rotated.component';
 import { MissingText } from './missing-text.component';
 import { MatchImage } from './match-image.component';
@@ -18,6 +19,7 @@ export const ExerciseComponents = {
   FindLetter,
   HasPhoneme,
   IntroduceLetter,
+  LandscapeVideo,
   LetterRotated,
   MatchImage,
   MissingText,
