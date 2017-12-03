@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/react-native';
+import * as R from 'ramda';
 import React from 'react';
 import { MemoryRouter } from 'react-router-native';
 
@@ -17,19 +18,25 @@ const interactor = new Interactor(storage, progressStorage);
 const course = storiesOf('Course', module);
 
 const addStory = (entity, level) => {
-  course.add(`${level} ${entity.title || entity.id}`, () => (
-    <MemoryRouter
-      initialEntries={[
-        {
-          pathname: level === 0 ? '/course' : `/node/${entity.id}`,
-          state: { level }
-        }
-      ]}
-      initialIndex={0}
-    >
-      <AppRoutes />
-    </MemoryRouter>
-  ));
+  const shortId = entity.id.substr(0, 7);
+
+  course.add(
+    `${R.times(i => '›', level).join('')} ${entity.title ||
+      shortId} ${entity.type || ''}`,
+    () => (
+      <MemoryRouter
+        initialEntries={[
+          {
+            pathname: level === 0 ? '/course' : `/node/${entity.id}`,
+            state: { level }
+          }
+        ]}
+        initialIndex={0}
+      >
+        <AppRoutes />
+      </MemoryRouter>
+    )
+  );
 
   if (entity.children) {
     entity.children.forEach(child => addStory(child, level + 1));
