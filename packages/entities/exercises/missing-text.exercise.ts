@@ -18,13 +18,15 @@ export interface MissingTextProps {
   options: string[][];
 }
 
-export type MissingTextState = Maybe<number>[];
+export type MissingTextState = Array<Maybe<number>>;
 
 export type MissingTextFeedback = Maybe<
-  Maybe<{
-    wrongChoice: number;
-    correctChoice: number;
-  }>[]
+  Array<
+    Maybe<{
+      wrongChoice: number;
+      correctChoice: number;
+    }>
+  >
 >;
 
 export class MissingText extends AbstractExercise<
@@ -155,7 +157,7 @@ export class MissingText extends AbstractExercise<
     return reduce(and, true, mapIndexed(this.isCorrectChoice, state));
   }
 
-  isCorrectChoice = (selected: Maybe<number>, i: number): boolean => {
+  public isCorrectChoice = (selected: Maybe<number>, i: number): boolean => {
     if (typeof selected !== 'undefined') {
       const { options, text, missing } = this.props;
       return text[missing[i]] === options[i][selected];

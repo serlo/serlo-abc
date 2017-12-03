@@ -1,4 +1,4 @@
-import { map, filter, identity, indexOf, times, without } from 'ramda';
+import { filter, identity, indexOf, map, times, without } from 'ramda';
 import { sample } from '../../sample';
 import { ExerciseTypes } from '../exercises';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';

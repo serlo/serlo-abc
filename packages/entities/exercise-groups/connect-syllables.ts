@@ -1,4 +1,4 @@
-import { map, filter, identity, indexOf, times, without } from 'ramda';
+import { filter, identity, indexOf, map, times, without } from 'ramda';
 import { sample } from '../../sample';
 import { ExerciseTypes } from '../exercises';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
@@ -16,7 +16,7 @@ export class ConnectSyllables extends AbstractExerciseGroup {
     );
 
     const version = sample(['a', 'b'], 1);
-    const text: string =
+    const explanationText: string =
       this.props.difficulty < 0.2
         ? 'Ergänzen Sie den fehlenden Buchstaben.'
         : 'Ergänzen Sie die fehlenden Buchstaben.';
@@ -29,7 +29,7 @@ export class ConnectSyllables extends AbstractExerciseGroup {
     return [
       this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
         type: 'ExplanationText',
-        text,
+        text: explanationText,
         sound
       }),
       ...map(word => {

@@ -1,4 +1,5 @@
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
+import { ConnectSyllables } from './connect-syllables';
 import { DifferFromSymbol } from './differ-from-symbol';
 import { FindLetter } from './find-letter';
 import { HasPhoneme } from './has-phoneme';
@@ -6,14 +7,13 @@ import { IntroduceLetter } from './introduce-letter';
 import { LetterRotated } from './letter-rotated';
 import { MatchImage } from './match-image';
 import { MissingLetter } from './missing-letter';
+import { MissingWord } from './missing-word';
 import { PraiseVideo } from './praise-video';
 import { PresentLetter } from './present-letter';
 import { RepeatLetter } from './repeat-letter';
 import { RepeatWords } from './repeat-words';
 import { ShowWords } from './show-words';
 import { WriteLetter } from './write-letter';
-import { ConnectSyllables } from './connect-syllables';
-import { MissingWord } from './missing-word';
 
 export enum ExerciseGroupTypes {
   ConnectSyllables = 'ConnectSyllables',
