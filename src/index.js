@@ -20,7 +20,6 @@ import { CacheAssets } from './components/helpers/cache-assets';
 
 import loadImage from './assets/images';
 import loadSound from './assets/sounds';
-import loadVideo from './assets/videos';
 import loadWordImage from './assets/words/images';
 import loadWordSound from './assets/words/sounds';
 
@@ -128,7 +127,6 @@ export class AppRoutes extends Component {
                 assets={map(load => load(), [
                   ...values(loadImage),
                   ...values(loadSound),
-                  ...values(loadVideo),
                   ...values(loadWordImage),
                   ...values(loadWordSound)
                 ])}
