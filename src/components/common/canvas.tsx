@@ -158,7 +158,7 @@ export const TextCanvas = ({
         <Text
           style={{
             color: BLACK_TRANSPARENT,
-            fontSize: height / 2,
+            fontSize: height / 3,
             fontFamily: 'norddruck_arrows'
           }}
         >
@@ -172,7 +172,7 @@ export const TextCanvas = ({
           }}
         >
           <Canvas
-            strokeWidth={height / 20}
+            strokeWidth={height / 40}
             onPanResponderEnd={onPanResponderEnd}
             paddingTop={Constants.statusBarHeight + 80}
           />

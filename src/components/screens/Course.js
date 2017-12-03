@@ -2,7 +2,7 @@ import { Entypo, Ionicons } from '@expo/vector-icons';
 import { Constants } from 'expo';
 import { map } from 'ramda';
 import React, { Component } from 'react';
-import { Button, StyleSheet, View, Dimensions, ScrollView } from 'react-native';
+import { Button, StyleSheet, View, ScrollView } from 'react-native';
 
 import { RoundIconButton } from '../common/buttons';
 import RoundTextButton from '../common/RoundTextButton';

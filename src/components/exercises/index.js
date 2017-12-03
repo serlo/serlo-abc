@@ -12,6 +12,7 @@ import { ShowLetter } from './show-letter.component';
 import { ShowWord } from './show-word.component';
 import { TutorialVideo } from './tutorial-video.component';
 import { WriteLetter } from './write-letter.component';
+import { WriteWord } from './write-word.component';
 
 export const ExerciseComponents = {
   DifferFromSymbol,
@@ -27,5 +28,6 @@ export const ExerciseComponents = {
   ShowLetter,
   ShowWord,
   TutorialVideo,
-  WriteLetter
+  WriteLetter,
+  WriteWord
 };
