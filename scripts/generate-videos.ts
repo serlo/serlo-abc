@@ -14,16 +14,26 @@ readdir(videosPath).then(files => {
   // Loaders for React Native app
   let str = `import { AssetTypes } from '../../packages/entities';
 
-    const videos: { [id: string]: () => AssetTypes.VideoAsset } = {`;
+    const videos = {`;
 
   R.forEach(file => {
-    str += `${getFilename(file)}: () => require('./videos/${file}'),`;
+    str += `${getFilename(file)}: {
+      sd: { uri: 'https://assets.serlo.org/serlo-abc/${getFilename(
+        file
+      )}.sd.mp4' },
+      hd: { uri: 'https://assets.serlo.org/serlo-abc/${getFilename(
+        file
+      )}.hd.mp4' }
+    },`;
   }, files);
 
   str += `
 };
 
-export default videos;`;
+
+// @ts-ignore
+export default videos as { [id: string]: { sd: AssetTypes.VideoAsset, hd: AssetTypes.VideoAsset } };
+`;
 
   return writeFile(path.join(assetsPath, 'videos.ts'), str);
 });
