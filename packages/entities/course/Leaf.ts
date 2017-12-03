@@ -11,7 +11,7 @@ class Leaf extends AbstractNode {
     this.type = type;
   }
 
-  public getNewVocabulary(): Maybe<string[]> {
+  public getNewVocabulary(): string[] {
     const parent = this.getParent();
 
     if (!parent) {
