@@ -1,4 +1,4 @@
-import { addIndex, map } from 'ramda';
+import { addIndex, indexOf, map } from 'ramda';
 import React from 'react';
 import { View, Text } from 'react-native';
 
@@ -30,17 +30,23 @@ export const MissingText = ({
   ...props
 }) => {
   const textParts = mapIndexed((part, key) => {
-    if (key === missing) {
+    const i = indexOf(key, missing);
+    if (i !== -1) {
       return (
         <View key={key}>
           <TextPicker
-            options={options}
+            options={options[i]}
             showFeedback={props.showFeedback}
-            feedback={props.feedback}
+            feedback={props.feedback && props.feedback[i]}
             onChange={answer => {
-              props.setState(answer);
+              props.setState(
+                mapIndexed(
+                  (current, index) => (index === i ? answer : current),
+                  props.state
+                )
+              );
             }}
-            selectedValue={options[props.state]}
+            selectedValue={options[i][props.state[i]]}
           />
         </View>
       );

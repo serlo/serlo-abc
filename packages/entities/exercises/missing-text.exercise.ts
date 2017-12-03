@@ -1,4 +1,4 @@
-import { indexOf } from 'ramda';
+import { addIndex, and, indexOf, map, reduce } from 'ramda';
 
 import { Maybe } from '../../maybe';
 import { AssetTypes } from '../asset-resolver';
@@ -9,20 +9,23 @@ import {
   ExercisePropsFixture
 } from './abstract-exercise.interface';
 
+const mapIndexed = addIndex(map);
 export interface MissingTextProps {
   word?: AbstractWord;
   video?: AssetTypes.VideoAsset;
   text: string[];
-  missing: number;
-  options: string[];
+  missing: number[];
+  options: string[][];
 }
 
-export type MissingTextState = Maybe<number>;
+export type MissingTextState = Maybe<number>[];
 
-export type MissingTextFeedback = Maybe<{
-  wrongChoice: number;
-  correctChoice: number;
-}>;
+export type MissingTextFeedback = Maybe<
+  Maybe<{
+    wrongChoice: number;
+    correctChoice: number;
+  }>[]
+>;
 
 export class MissingText extends AbstractExercise<
   MissingTextProps,
@@ -35,8 +38,8 @@ export class MissingText extends AbstractExercise<
       props: {
         word: 'apfel',
         text: ['A', 'p', 'f', 'e', 'l'],
-        missing: 3,
-        options: ['a', 'n', 'e']
+        missing: [3],
+        options: [['a', 'n', 'e']]
       }
     },
     {
@@ -44,8 +47,8 @@ export class MissingText extends AbstractExercise<
       props: {
         word: 'kiwi',
         text: ['Das', 'ist', 'keine', 'Ananas'],
-        missing: 2,
-        options: ['keine', 'eine']
+        missing: [2],
+        options: [['keine', 'eine']]
       }
     },
     {
@@ -53,8 +56,8 @@ export class MissingText extends AbstractExercise<
       props: {
         video: 'placeholder.mp4',
         text: ['Ich', 'bin', 'Anna'],
-        missing: 2,
-        options: ['Nena', 'Anna']
+        missing: [2],
+        options: [['Nena', 'Anna']]
       }
     }
   ];
@@ -65,86 +68,101 @@ export class MissingText extends AbstractExercise<
     {
       name: 'Missing Letter: correct selected',
       props: MissingText.propsFixtures[0].props,
-      state: 2,
+      state: [2],
       feedback: undefined,
       isCorrect: true
     },
     {
       name: 'Missing Letter: wrong selected',
       props: MissingText.propsFixtures[0].props,
-      state: 1,
-      feedback: {
-        correctChoice: 2,
-        wrongChoice: 1
-      },
+      state: [1],
+      feedback: [
+        {
+          correctChoice: 2,
+          wrongChoice: 1
+        }
+      ],
       isCorrect: false
     },
     {
       name: 'Missing Word with Image: correct selected',
       props: MissingText.propsFixtures[1].props,
-      state: 0,
+      state: [0],
       feedback: undefined,
       isCorrect: true
     },
     {
       name: 'Missing Word with Image: wrong selected',
       props: MissingText.propsFixtures[1].props,
-      state: 1,
-      feedback: {
-        correctChoice: 0,
-        wrongChoice: 1
-      },
+      state: [1],
+      feedback: [
+        {
+          correctChoice: 0,
+          wrongChoice: 1
+        }
+      ],
       isCorrect: false
     },
     {
       name: 'Missing Word with Video: correct selected',
       props: MissingText.propsFixtures[2].props,
-      state: 1,
+      state: [1],
       feedback: undefined,
       isCorrect: true
     },
     {
       name: 'Missing Word with Video: wrong selected',
       props: MissingText.propsFixtures[2].props,
-      state: 0,
-      feedback: {
-        correctChoice: 1,
-        wrongChoice: 0
-      },
+      state: [0],
+      feedback: [
+        {
+          correctChoice: 1,
+          wrongChoice: 0
+        }
+      ],
       isCorrect: false
     }
   ];
 
   public getInitialState(): MissingTextState {
-    return undefined;
+    return map(selected => undefined, this.props.missing);
   }
 
   public getFeedback(state: MissingTextState): MissingTextFeedback {
-    if (
-      typeof state === 'undefined' ||
-      this.isSubmitDisabled(state) ||
-      this.isCorrect(state)
-    ) {
+    if (this.isSubmitDisabled(state) || this.isCorrect(state)) {
       return undefined;
     }
 
-    return {
-      wrongChoice: state,
-      correctChoice: indexOf(
-        this.props.text[this.props.missing],
-        this.props.options
-      )
-    };
+    return mapIndexed((selected, i) => {
+      if (
+        typeof selected === 'undefined' ||
+        this.isCorrectChoice(selected, i)
+      ) {
+        return undefined;
+      }
+
+      return {
+        wrongChoice: selected,
+        correctChoice: indexOf(
+          this.props.text[this.props.missing[i]],
+          this.props.options[i]
+        )
+      };
+    }, state);
   }
 
   public isCorrect(state: MissingTextState): boolean {
-    if (typeof state !== 'undefined') {
+    return reduce(and, true, mapIndexed(this.isCorrectChoice, state));
+  }
+
+  isCorrectChoice = (selected: Maybe<number>, i: number): boolean => {
+    if (typeof selected !== 'undefined') {
       const { options, text, missing } = this.props;
-      return text[missing] === options[state];
+      return text[missing[i]] === options[i][selected];
     }
 
     return false;
-  }
+  };
 
   public isSubmitDisabled(state: MissingTextState): boolean {
     return typeof state === 'undefined';

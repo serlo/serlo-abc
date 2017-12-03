@@ -571,6 +571,15 @@
                 "type": "HasPhoneme"
               },
               {
+                "id": "4a7530c0-8e28-4ac4-b8a0-0c735363a932",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "14ff682a-aaf9-4c53-bc30-09711f3e6042",
+                "type": "MissingSyllable"
+              },
+              {
                 "id": "ac9d92fd-292d-442d-99d4-1874e59458fa",
                 "type": "MatchImage"
               },
