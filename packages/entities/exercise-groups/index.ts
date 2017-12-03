@@ -1,3 +1,5 @@
+import { Maybe } from '../../maybe';
+import { Word } from '../word';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 import { ConnectSyllables } from './connect-syllables';
 import { DifferFromSymbol } from './differ-from-symbol';
@@ -13,8 +15,6 @@ import { RepeatLetter } from './repeat-letter';
 import { RepeatWords } from './repeat-words';
 import { ShowWords } from './show-words';
 import { WriteLetter } from './write-letter';
-import { Maybe } from '../../maybe';
-import { Word } from '../word';
 
 export enum ExerciseGroupTypes {
   ConnectSyllables = 'ConnectSyllables',

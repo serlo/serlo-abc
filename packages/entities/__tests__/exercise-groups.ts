@@ -39,6 +39,7 @@ describe('exercise-groups', () => {
 
     beforeEach(() => {
       group = new TrivialExerciseGroup(
+        factory.createWord,
         factory.createExercise,
         [],
         [],
