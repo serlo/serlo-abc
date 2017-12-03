@@ -14,6 +14,7 @@ import { PresentLetter } from './present-letter';
 import { RepeatLetter } from './repeat-letter';
 import { RepeatWords } from './repeat-words';
 import { ShowWords } from './show-words';
+import { StoryVideo } from './story-video';
 import { WriteLetter } from './write-letter';
 
 export enum ExerciseGroupTypes {
@@ -30,6 +31,7 @@ export enum ExerciseGroupTypes {
   RepeatLetter = 'RepeatLetter',
   RepeatWords = 'RepeatWords',
   ShowWords = 'ShowWords',
+  StoryVideo = 'StoryVideo',
   WriteLetter = 'WriteLetter'
 }
 
@@ -61,6 +63,7 @@ export const ExerciseGroups: {
   [ExerciseGroupTypes.RepeatLetter]: RepeatLetter,
   [ExerciseGroupTypes.RepeatWords]: RepeatWords,
   [ExerciseGroupTypes.ShowWords]: ShowWords,
+  [ExerciseGroupTypes.StoryVideo]: StoryVideo,
   [ExerciseGroupTypes.WriteLetter]: WriteLetter
 };
 
