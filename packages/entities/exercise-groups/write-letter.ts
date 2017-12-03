@@ -18,7 +18,7 @@ export class WriteLetter extends AbstractExerciseGroup {
         text: 'Schreiben Sie den Buchstaben.',
         sound: `exercises_schreiben_sie_den_buchstaben_${version}`
       }),
-      this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
+      this.createExercise(ExerciseTypes.InfoScreen, {
         type: 'TutorialVideo',
         video: 'explanation_write_letter'
       }),
