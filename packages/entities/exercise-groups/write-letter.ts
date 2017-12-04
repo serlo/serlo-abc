@@ -22,18 +22,22 @@ export class WriteLetter extends AbstractExerciseGroup {
         type: 'TutorialVideo',
         video: 'explanation_write_letter'
       }),
-      this.createExercise(ExerciseTypes.Canvas, {
-        type: 'WriteLetter',
-        letter: capitalizeFirstLetter(letter)
-      }),
-      this.createExercise(ExerciseTypes.Canvas, {
-        type: 'WriteLetter',
-        letter: capitalizeFirstLetter(letter)
-      }),
-      this.createExercise(ExerciseTypes.Canvas, {
-        type: 'WriteLetter',
-        letter: capitalizeFirstLetter(letter)
-      }),
+      ...(letter === 'ß'
+        ? []
+        : [
+            this.createExercise(ExerciseTypes.Canvas, {
+              type: 'WriteLetter',
+              letter: capitalizeFirstLetter(letter)
+            }),
+            this.createExercise(ExerciseTypes.Canvas, {
+              type: 'WriteLetter',
+              letter: capitalizeFirstLetter(letter)
+            }),
+            this.createExercise(ExerciseTypes.Canvas, {
+              type: 'WriteLetter',
+              letter: capitalizeFirstLetter(letter)
+            })
+          ]),
       this.createExercise(ExerciseTypes.Canvas, {
         type: 'WriteLetter',
         letter

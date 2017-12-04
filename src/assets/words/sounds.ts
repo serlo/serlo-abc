@@ -1,6 +1,6 @@
-import { ISoundAsset } from '../../types/assets';
+import { AssetTypes } from '../../../packages/entities';
 
-const sounds: { [id: string]: () => ISoundAsset } = {
+const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   abend_long: () => require('./sounds/abend_long.mp3'),
   abend_short: () => require('./sounds/abend_short.mp3'),
   acht_short: () => require('./sounds/acht_short.mp3'),

@@ -3,6 +3,7 @@ import {
   ExerciseFixture,
   ExercisePropsFixture
 } from './abstract-exercise.interface';
+import { BuildSentenceVideo } from './build-sentence-video.exercise';
 import { Canvas } from './canvas.exercise';
 import { ChooseArticle } from './choose-article.exercise';
 import { DifferFromSymbol } from './differ-from-symbol.exercise';
@@ -19,6 +20,7 @@ import { SerializedProps } from './serialized-props.interface';
 import { VideoQuestion } from './video-question.exercise';
 
 export enum ExerciseTypes {
+  BuildSentenceVideo = 'BuildSentenceVideo',
   Canvas = 'Canvas',
   ChooseArticle = 'ChooseArticle',
   DifferFromSymbol = 'DifferFromSymbol',
@@ -43,6 +45,7 @@ export const Exercises: {
     new (p: any): AbstractExercise<any, any, any>;
   };
 } = {
+  [ExerciseTypes.BuildSentenceVideo]: BuildSentenceVideo,
   [ExerciseTypes.Canvas]: Canvas,
   [ExerciseTypes.ChooseArticle]: ChooseArticle,
   [ExerciseTypes.DifferFromSymbol]: DifferFromSymbol,

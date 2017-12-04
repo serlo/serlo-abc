@@ -13,7 +13,7 @@ const praiseVideos = [
   },
   {
     video: 'praise3',
-    text: 'Bravo! Du hast es geschafft!'
+    text: 'Bravo! Du hastss geschafft! Ciao!'
   },
   {
     video: 'praise4',

@@ -2,7 +2,11 @@ import { AssetTypes } from '../../packages/entities';
 
 const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   a: () => require('./sounds/a.mp3'),
+  a1: () => require('./sounds/a1.mp3'),
+  a3: () => require('./sounds/a3.mp3'),
+  a4: () => require('./sounds/a4.mp3'),
   ae: () => require('./sounds/ae.mp3'),
+  au: () => require('./sounds/au.mp3'),
   b: () => require('./sounds/b.mp3'),
   ba: () => require('./sounds/ba.mp3'),
   bae: () => require('./sounds/bae.mp3'),
@@ -18,6 +22,8 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   ca: () => require('./sounds/ca.mp3'),
   cae: () => require('./sounds/cae.mp3'),
   ce: () => require('./sounds/ce.mp3'),
+  ch: () => require('./sounds/ch.mp3'),
+  ch2: () => require('./sounds/ch2.mp3'),
   ci: () => require('./sounds/ci.mp3'),
   click: () => require('./sounds/click.mp3'),
   co: () => require('./sounds/co.mp3'),
@@ -40,38 +46,65 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   due: () => require('./sounds/due.mp3'),
   dy: () => require('./sounds/dy.mp3'),
   e: () => require('./sounds/e.mp3'),
+  e2: () => require('./sounds/e2.mp3'),
+  e3: () => require('./sounds/e3.mp3'),
+  e4: () => require('./sounds/e4.mp3'),
+  ei: () => require('./sounds/ei.mp3'),
   ein: () => require('./sounds/ein.mp3'),
   eine: () => require('./sounds/eine.mp3'),
+  eu: () => require('./sounds/eu.mp3'),
+  exercises_bilden_sie_saetze: () =>
+    require('./sounds/exercises_bilden_sie_saetze.mp3'),
   exercises_drehen_sie_den_buchstaben_a: () =>
     require('./sounds/exercises_drehen_sie_den_buchstaben_a.mp3'),
   exercises_drehen_sie_den_buchstaben_b: () =>
     require('./sounds/exercises_drehen_sie_den_buchstaben_b.mp3'),
+  exercises_ergaenzen_sie_das_fehlende_wort: () =>
+    require('./sounds/exercises_ergaenzen_sie_das_fehlende_wort.mp3'),
+  exercises_ergaenzen_sie_den_fehlenden_buchstaben: () =>
+    require('./sounds/exercises_ergaenzen_sie_den_fehlenden_buchstaben.mp3'),
   exercises_ergaenzen_sie_den_fehlenden_buchstaben_a: () =>
     require('./sounds/exercises_ergaenzen_sie_den_fehlenden_buchstaben_a.mp3'),
   exercises_ergaenzen_sie_den_fehlenden_buchstaben_b: () =>
     require('./sounds/exercises_ergaenzen_sie_den_fehlenden_buchstaben_b.mp3'),
+  exercises_ergaenzen_sie_die_fehlenden_buchstaben: () =>
+    require('./sounds/exercises_ergaenzen_sie_die_fehlenden_buchstaben.mp3'),
   exercises_ergaenzen_sie_die_fehlenden_buchstaben_a: () =>
     require('./sounds/exercises_ergaenzen_sie_die_fehlenden_buchstaben_a.mp3'),
   exercises_ergaenzen_sie_die_fehlenden_buchstaben_b: () =>
     require('./sounds/exercises_ergaenzen_sie_die_fehlenden_buchstaben_b.mp3'),
+  exercises_finden_sie_den_buchstaben: () =>
+    require('./sounds/exercises_finden_sie_den_buchstaben.mp3'),
   exercises_finden_sie_den_buchstaben_a: () =>
     require('./sounds/exercises_finden_sie_den_buchstaben_a.mp3'),
   exercises_finden_sie_den_buchstaben_b: () =>
     require('./sounds/exercises_finden_sie_den_buchstaben_b.mp3'),
+  exercises_finden_sie_die_buchstaben: () =>
+    require('./sounds/exercises_finden_sie_die_buchstaben.mp3'),
+  exercises_finden_sie_die_woerter: () =>
+    require('./sounds/exercises_finden_sie_die_woerter.mp3'),
   exercises_finden_sie_die_woerter_a: () =>
     require('./sounds/exercises_finden_sie_die_woerter_a.mp3'),
   exercises_finden_sie_die_woerter_b: () =>
     require('./sounds/exercises_finden_sie_die_woerter_b.mp3'),
   exercises_finden_sie_woerter_b: () =>
     require('./sounds/exercises_finden_sie_woerter_b.mp3'),
+  exercises_hoeren_sie_den_laut: () =>
+    require('./sounds/exercises_hoeren_sie_den_laut.mp3'),
   exercises_hoeren_sie_den_laut_a: () =>
     require('./sounds/exercises_hoeren_sie_den_laut_a.mp3'),
   exercises_hoeren_sie_den_laut_b: () =>
     require('./sounds/exercises_hoeren_sie_den_laut_b.mp3'),
+  exercises_hoeren_sie_die_silbe: () =>
+    require('./sounds/exercises_hoeren_sie_die_silbe.mp3'),
+  exercises_hoeren_sie_die_woerter: () =>
+    require('./sounds/exercises_hoeren_sie_die_woerter.mp3'),
   exercises_hoeren_sie_die_woerter_a: () =>
     require('./sounds/exercises_hoeren_sie_die_woerter_a.mp3'),
   exercises_hoeren_sie_die_woerter_b: () =>
     require('./sounds/exercises_hoeren_sie_die_woerter_b.mp3'),
+  exercises_markieren_sie_alle: () =>
+    require('./sounds/exercises_markieren_sie_alle.mp3'),
   exercises_markieren_sie_alle_a_a: () =>
     require('./sounds/exercises_markieren_sie_alle_a_a.mp3'),
   exercises_markieren_sie_alle_a_b: () =>
@@ -124,10 +157,14 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
     require('./sounds/exercises_markieren_sie_alle_t_a.mp3'),
   exercises_markieren_sie_alle_t_b: () =>
     require('./sounds/exercises_markieren_sie_alle_t_b.mp3'),
+  exercises_markieren_sie_das_richtige_bild: () =>
+    require('./sounds/exercises_markieren_sie_das_richtige_bild.mp3'),
   exercises_markieren_sie_das_richtige_bild_a: () =>
     require('./sounds/exercises_markieren_sie_das_richtige_bild_a.mp3'),
   exercises_markieren_sie_das_richtige_bild_b: () =>
     require('./sounds/exercises_markieren_sie_das_richtige_bild_b.mp3'),
+  exercises_markieren_sie_die_silbe: () =>
+    require('./sounds/exercises_markieren_sie_die_silbe.mp3'),
   exercises_ordnen_sie_die_buchstaben_a: () =>
     require('./sounds/exercises_ordnen_sie_die_buchstaben_a.mp3'),
   exercises_ordnen_sie_die_buchstaben_b: () =>
@@ -136,6 +173,8 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
     require('./sounds/exercises_schreiben_sie_das_wort_a.mp3'),
   exercises_schreiben_sie_das_wort_b: () =>
     require('./sounds/exercises_schreiben_sie_das_wort_b.mp3'),
+  exercises_schreiben_sie_den_buchstaben: () =>
+    require('./sounds/exercises_schreiben_sie_den_buchstaben.mp3'),
   exercises_schreiben_sie_den_buchstaben_a: () =>
     require('./sounds/exercises_schreiben_sie_den_buchstaben_a.mp3'),
   exercises_schreiben_sie_den_buchstaben_b: () =>
@@ -144,6 +183,8 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
     require('./sounds/exercises_schreiben_sie_die_silbe_a.mp3'),
   exercises_schreiben_sie_die_silbe_b: () =>
     require('./sounds/exercises_schreiben_sie_die_silbe_b.mp3'),
+  exercises_schreiben_sie_die_woerter: () =>
+    require('./sounds/exercises_schreiben_sie_die_woerter.mp3'),
   exercises_verbinden_sie_die_silben_a: () =>
     require('./sounds/exercises_verbinden_sie_die_silben_a.mp3'),
   exercises_verbinden_sie_die_silben_b: () =>
@@ -232,6 +273,7 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   hue: () => require('./sounds/hue.mp3'),
   hy: () => require('./sounds/hy.mp3'),
   i: () => require('./sounds/i.mp3'),
+  i2: () => require('./sounds/i2.mp3'),
   ich_bin_anna: () => require('./sounds/ich_bin_anna.mp3'),
   ich_bin_nena: () => require('./sounds/ich_bin_nena.mp3'),
   j: () => require('./sounds/j.mp3'),
@@ -278,6 +320,7 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   na: () => require('./sounds/na.mp3'),
   nae: () => require('./sounds/nae.mp3'),
   ne: () => require('./sounds/ne.mp3'),
+  ng: () => require('./sounds/ng.mp3'),
   ni: () => require('./sounds/ni.mp3'),
   no: () => require('./sounds/no.mp3'),
   noe: () => require('./sounds/noe.mp3'),
@@ -285,7 +328,10 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   nue: () => require('./sounds/nue.mp3'),
   ny: () => require('./sounds/ny.mp3'),
   o: () => require('./sounds/o.mp3'),
+  o1: () => require('./sounds/o1.mp3'),
   oe: () => require('./sounds/oe.mp3'),
+  oe1: () => require('./sounds/oe1.mp3'),
+  oe2: () => require('./sounds/oe2.mp3'),
   p: () => require('./sounds/p.mp3'),
   pa: () => require('./sounds/pa.mp3'),
   pae: () => require('./sounds/pae.mp3'),
@@ -307,6 +353,7 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   quue: () => require('./sounds/quue.mp3'),
   quy: () => require('./sounds/quy.mp3'),
   r: () => require('./sounds/r.mp3'),
+  r2: () => require('./sounds/r2.mp3'),
   ra: () => require('./sounds/ra.mp3'),
   rae: () => require('./sounds/rae.mp3'),
   re: () => require('./sounds/re.mp3'),
@@ -318,10 +365,12 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   rue: () => require('./sounds/rue.mp3'),
   ry: () => require('./sounds/ry.mp3'),
   s: () => require('./sounds/s.mp3'),
+  s2: () => require('./sounds/s2.mp3'),
   s_voiced: () => require('./sounds/s_voiced.mp3'),
   s_voiceless: () => require('./sounds/s_voiceless.mp3'),
   sa: () => require('./sounds/sa.mp3'),
   sae: () => require('./sounds/sae.mp3'),
+  sch: () => require('./sounds/sch.mp3'),
   se: () => require('./sounds/se.mp3'),
   si: () => require('./sounds/si.mp3'),
   so: () => require('./sounds/so.mp3'),
@@ -340,6 +389,7 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   szue: () => require('./sounds/szue.mp3'),
   szy: () => require('./sounds/szy.mp3'),
   t: () => require('./sounds/t.mp3'),
+  t1: () => require('./sounds/t1.mp3'),
   ta: () => require('./sounds/ta.mp3'),
   tae: () => require('./sounds/tae.mp3'),
   te: () => require('./sounds/te.mp3'),
@@ -351,7 +401,9 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   tue: () => require('./sounds/tue.mp3'),
   ty: () => require('./sounds/ty.mp3'),
   u: () => require('./sounds/u.mp3'),
+  u2: () => require('./sounds/u2.mp3'),
   ue: () => require('./sounds/ue.mp3'),
+  ue2: () => require('./sounds/ue2.mp3'),
   v: () => require('./sounds/v.mp3'),
   va: () => require('./sounds/va.mp3'),
   vae: () => require('./sounds/vae.mp3'),

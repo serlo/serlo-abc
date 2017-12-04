@@ -165,6 +165,14 @@
             "id": "7efb75e5-af32-4109-bf5b-20f2e2889621",
             "title": "Sprachhandlungslektion ANE",
             "icon": "ios-chatbubbles",
+            "words": [
+              "morgen",
+              "guten_morgen",
+              "tag",
+              "guten_tag",
+              "abend",
+              "guten_abend"
+            ],
             "children": [
               {
                 "id": "2ed70152-3d2d-437d-b1f0-11f2ee7b7958",
@@ -172,9 +180,37 @@
                 "video": "serlo1"
               },
               {
-                "id": "68e34e85-46dc-4756-800e-03ad41fc9f9f",
+                "id": "dca52e10-917a-48b0-8d47-bfa4cd0483fc",
                 "type": "WriteWords",
                 "texts": ["Anna", "Nena"]
+              },
+              {
+                "id": "06a3d514-c437-4383-9c76-cb406322fd83",
+                "type": "ShowWords"
+              },
+              {
+                "id": "8ad06ccc-9275-49b6-aef2-231a74de98c3",
+                "type": "MatchImage"
+              },
+              {
+                "id": "018d9952-d75a-4744-bd31-573a6303b1ec",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "a8ba1750-5469-468f-956c-e3fdbd8902c2",
+            "title": "Wiederholungslektion ANE",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "1662823a-acb0-4dcb-95dd-eed49cb6639b",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["a", "n", "e"]
+              },
+              {
+                "id": "d75e736b-d6c3-4e21-8f13-b0f37d6435fc",
+                "type": "PraiseVideo"
               }
             ]
           }
@@ -247,15 +283,7 @@
           {
             "id": "0c9f776b-d889-4c74-8cc1-54a530bb6880",
             "title": "T",
-            "words": [
-              "tomate",
-              "bett",
-              "kette",
-              "salat",
-              "tonne",
-              "karotte",
-              "topf"
-            ],
+            "words": ["tomate", "bett", "kette", "salat", "tonne", "karotte"],
             "letter": "t",
             "children": [
               {
@@ -307,7 +335,7 @@
           {
             "id": "6d2350b5-cfef-4c49-a3cb-53413f728434",
             "title": "O",
-            "words": ["hose", "obst", "ofen", "tor", "fotos"],
+            "words": ["topf", "hose", "obst", "ofen", "tor", "fotos"],
             "letter": "o",
             "children": [
               {
@@ -370,6 +398,27 @@
                 "id": "8710917d-9f66-4c84-8949-c5d387f15a96",
                 "type": "WriteWords",
                 "texts": ["Anna", "Nena", "Anton", "Soto"]
+              }
+            ]
+          },
+          {
+            "id": "11308015-6cc7-4356-a2e7-ab1eade2a0c7",
+            "title": "Wiederholungslektion STO",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "413ae29b-98b7-4ffa-a82a-4bdbb8da5cb1",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["s", "t", "o"]
+              },
+              {
+                "id": "8f65b642-ee9a-4360-abbd-10257acf1bda",
+                "type": "HasPhonemeRevision",
+                "letters": ["s", "t", "o"]
+              },
+              {
+                "id": "f89768c6-bec2-4ac5-bd27-512966b7cf74",
+                "type": "PraiseVideo"
               }
             ]
           }
@@ -556,6 +605,27 @@
                 "id": "08a87237-a7a7-44a7-9b3a-e6ed6427932d",
                 "type": "StoryVideo",
                 "video": "serlo3"
+              }
+            ]
+          },
+          {
+            "id": "91e6427a-d6bc-4d83-bb89-b3ec32bc9cfa",
+            "title": "Wiederholungslektion RIH",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "3745eb3e-2f65-4b33-a9b2-4dfdb837f7d3",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["r", "i", "h"]
+              },
+              {
+                "id": "ef153364-7328-4358-a5b0-fa93b6be11f0",
+                "type": "HasPhonemeRevision",
+                "letters": ["r", "i", "h"]
+              },
+              {
+                "id": "24aef963-2e0c-4edd-bb9a-ef75e413db32",
+                "type": "PraiseVideo"
               }
             ]
           }
@@ -804,6 +874,37 @@
                 "video": "serlo5"
               }
             ]
+          },
+          {
+            "id": "51c2c460-dffa-435f-8f26-fd0832a4f8d3",
+            "title": "Wiederholungslektion BLM",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "1354f6ec-fee3-485c-b182-1d42cb1a2939",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["b", "l", "m"]
+              },
+              {
+                "id": "78132d78-63ed-4d91-b93d-601c692a9141",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "b6b549af-5c22-42b4-8d38-22b6360c43fa",
+                "type": "HasPhonemeRevision",
+                "letters": ["b", "l", "m"]
+              },
+              {
+                "id": "abffe3be-04fd-4e92-9acb-c1409301ca9f",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "c913d852-27ac-4ae1-b940-69e6e122fa3f",
+                "type": "PraiseVideo"
+              }
+            ]
           }
         ]
       },
@@ -1047,6 +1148,37 @@
                 "id": "afa414e5-172c-4ef5-b00a-d7c7339fd754",
                 "type": "StoryVideo",
                 "video": "serlo6"
+              }
+            ]
+          },
+          {
+            "id": "e7c62e0b-9caa-4827-9a90-11df2ad7e8ca",
+            "title": "Wiederholungslektion DFK",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "b0b8471c-c34a-4c82-93f2-b1ade55f8b27",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["d", "f", "k"]
+              },
+              {
+                "id": "92a49733-1944-4baf-987e-ad0f56588bd0",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "7cf432bd-e10e-4a02-bf1d-0d5289abdb42",
+                "type": "HasPhonemeRevision",
+                "letters": ["d", "f", "k"]
+              },
+              {
+                "id": "7bccf421-3f13-4ec0-b7a2-5b6babca7b80",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "463b22c1-7695-4651-8e4b-3ca2e95a5847",
+                "type": "PraiseVideo"
               }
             ]
           }
@@ -1298,6 +1430,37 @@
                 "id": "1fad5ea3-c057-419b-bb40-fab8504a38b3",
                 "type": "StoryVideo",
                 "video": "serlo8"
+              }
+            ]
+          },
+          {
+            "id": "f63d3a98-9440-4d18-a611-ad3c55042427",
+            "title": "Wiederholungslektion SCHUG",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "f39d73a3-7c84-41dc-8222-2cbfde891647",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["sch", "u", "g"]
+              },
+              {
+                "id": "758b6210-b223-4599-be4d-ee730b785586",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "181e6713-59e5-4e60-8ee4-fc440f6b7de1",
+                "type": "HasPhonemeRevision",
+                "letters": ["sch", "u", "g"]
+              },
+              {
+                "id": "6cda4423-0e16-4c4e-b7f3-16b09b2467c8",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "27d23667-690a-4077-bea9-1e736739f2b0",
+                "type": "PraiseVideo"
               }
             ]
           }
@@ -1579,6 +1742,37 @@
                   "das Schach",
                   "das Klavier"
                 ]
+              }
+            ]
+          },
+          {
+            "id": "ed9412a2-24d7-4303-9e12-58fc51250c5d",
+            "title": "Wiederholungslektion WPEI",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "3de1fd52-d052-4545-998c-19a42ac07df4",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["w", "p", "ei"]
+              },
+              {
+                "id": "a2bab925-ac8a-4f09-9859-5cf17e790009",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "853534d3-16d4-4e0b-a605-ece6ff74a1e3",
+                "type": "HasPhonemeRevision",
+                "letters": ["w", "p", "ei"]
+              },
+              {
+                "id": "3f2051e1-c623-4053-aa95-fd53635aa467",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "51bf96f4-b67d-475a-a22a-e19186b97a22",
+                "type": "PraiseVideo"
               }
             ]
           }
@@ -1871,6 +2065,37 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "0797b2d7-9463-4455-a920-bc27daf7d1cd",
+            "title": "Wiederholungslektion ZCHAU",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "8176b9b0-e3b4-4c5e-a3a3-f69fcda0e1dd",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["z", "ch", "au"]
+              },
+              {
+                "id": "341adf9b-bb14-40c5-9cd9-2c35b413c459",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "108353be-a693-4fd5-9572-9fa7b350ed52",
+                "type": "HasPhonemeRevision",
+                "letters": ["z", "ch", "au"]
+              },
+              {
+                "id": "af9d1b92-500b-460f-818e-16a6ac9c7413",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "e2a2a5ba-b9d6-44f7-8fa9-a323b5744028",
+                "type": "PraiseVideo"
+              }
+            ]
           }
         ]
       },
@@ -2141,6 +2366,305 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "d4ffc40e-eb10-47e9-8122-0227d336e7db",
+            "title": "Wiederholungslektion JNGÜ",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "69f68d7d-73d2-48b0-9b18-8e195a02f55f",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["j", "ng", "ü"]
+              },
+              {
+                "id": "f77d5412-cd70-49ff-943a-a5af749ee3a0",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "b017fd45-d755-42a0-bbc7-0eaaafd32216",
+                "type": "HasPhonemeRevision",
+                "letters": ["j", "ng", "ü"]
+              },
+              {
+                "id": "986277d4-4ac5-4afe-af33-fa3aeaaa37d7",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "0cf76661-d247-41fd-a349-dfdcafb2c764",
+                "type": "PraiseVideo"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4e044d31-efa0-49ab-be62-796ca379e409",
+        "title": "ßÄV",
+        "children": [
+          {
+            "id": "690aebde-6a52-46ff-9f34-3d97639df29d",
+            "title": "ß",
+            "words": ["fusz", "strasze", "grosz", "heiszen"],
+            "letter": "ß",
+            "children": [
+              {
+                "id": "4ef914d1-fb49-42fa-a5bf-af936224f976",
+                "type": "IntroduceLetter"
+              },
+              {
+                "id": "32516816-7ddc-4326-a775-929b304dae92",
+                "type": "PresentLetter"
+              },
+              {
+                "id": "545293dd-bab4-4ce8-b406-e5b0d551ca36",
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "9fc34656-9cdf-4373-9a8a-72723cbca70c",
+                "type": "LetterRotated",
+                "difficulty": 0.5
+              },
+              {
+                "id": "48591097-e0f8-4320-b642-3bea43c31e19",
+                "type": "WriteLetter"
+              },
+              {
+                "id": "05915dea-c0cd-4974-bafd-8a74f2af6137",
+                "type": "DifferFromSymbol"
+              },
+              {
+                "id": "f301e802-666f-4981-bc0c-700196d80dea",
+                "type": "ShowWords"
+              },
+              {
+                "id": "aba38b18-4f5f-42ed-a20c-b6e671e5df66",
+                "type": "RepeatWords"
+              },
+              {
+                "id": "ae0da812-53b7-404b-887e-9f70cb99c12c",
+                "type": "FindLetter"
+              },
+              {
+                "id": "f7a952dd-d9ad-41c6-86c5-1830cddce21c",
+                "type": "WriteLetter"
+              },
+              {
+                "id": "48d7b97a-6c63-4a0a-9ae3-55fc2b7cb7a3",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "c30cad53-a009-4874-971c-e25b23db0afc",
+                "type": "MissingLetter",
+                "difficulty": 0.4
+              },
+              {
+                "id": "6435a632-ff07-49ac-bb26-92bb52cffbaa",
+                "type": "ConnectSyllables"
+              },
+              {
+                "id": "79fac458-d7a0-458e-a35f-9bf50d72cd81",
+                "type": "MatchImage"
+              },
+              {
+                "id": "924f4f47-4394-423e-9640-90e545b40ec2",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "68add94f-a89b-44ad-aa11-677c6e3270f1",
+            "title": "Ä",
+            "words": [
+              "kaese",
+              "kaefig",
+              "kaefer",
+              "baer",
+              "raetsel",
+              "waesche",
+              "baecker",
+              "baeckerei"
+            ],
+            "letter": "ä",
+            "children": [
+              {
+                "id": "c7acac00-66d8-4d0a-a2ee-d60e885808c8",
+                "type": "IntroduceLetter"
+              },
+              {
+                "id": "7eab0fcc-c1fb-49f1-9d6e-7ee0b104f1e9",
+                "type": "PresentLetter"
+              },
+              {
+                "id": "dfed5ae2-d94d-4a9f-9322-3e4acffa45a3",
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "5baaf002-a14e-4e77-a302-b8c20c74b87a",
+                "type": "LetterRotated",
+                "difficulty": 0.5
+              },
+              {
+                "id": "696d3b70-27dd-4896-bc37-b0c803204904",
+                "type": "WriteLetter"
+              },
+              {
+                "id": "d17ee7a9-8a52-4c28-8fd1-a76bd9e1873b",
+                "type": "DifferFromSymbol"
+              },
+              {
+                "id": "57f343a7-08f8-48ef-8cee-19b82c9513a7",
+                "type": "ShowWords"
+              },
+              {
+                "id": "3cb47168-cad0-405b-b4a4-604a0d661c21",
+                "type": "RepeatWords"
+              },
+              {
+                "id": "b2736a3b-ecc6-45bb-bf17-eaa6f341bd75",
+                "type": "FindLetter"
+              },
+              {
+                "id": "941c71d9-bc3f-462b-b981-60efabc445b7",
+                "type": "WriteLetter"
+              },
+              {
+                "id": "8b7508b9-0ec8-468b-b32f-4cec6795a911",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "beef72ad-c8d8-4031-a63d-758c229b0e79",
+                "type": "MissingLetter",
+                "difficulty": 0.4
+              },
+              {
+                "id": "d20b9dbf-814e-425e-80f7-5b830b33040c",
+                "type": "ConnectSyllables"
+              },
+              {
+                "id": "c90899a6-4945-4b05-a01f-a557f2add308",
+                "type": "MatchImage"
+              },
+              {
+                "id": "13156d66-45e5-44b4-a7ef-35b65df646a0",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "ff325d4b-fc29-4dd7-b630-e951ed48cff3",
+            "title": "V",
+            "words": ["olive", "klavier", "silvester", "karneval"],
+            "letter": "v",
+            "children": [
+              {
+                "id": "7f8e176f-90fe-433c-ae59-821236b31dcf",
+                "type": "IntroduceLetter"
+              },
+              {
+                "id": "0dfcbf49-e638-44da-a3df-596b5d020a80",
+                "type": "PresentLetter"
+              },
+              {
+                "id": "e6135806-5a56-4a64-90f0-19b623905ef1",
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "52536bad-5eec-4ed3-bd45-1f308fae201c",
+                "type": "LetterRotated",
+                "difficulty": 0.5
+              },
+              {
+                "id": "049a2fb0-b1d8-4947-8983-f8e2d5a52041",
+                "type": "WriteLetter"
+              },
+              {
+                "id": "a1d15102-cad8-4f55-9261-961e6be4a6eb",
+                "type": "DifferFromSymbol"
+              },
+              {
+                "id": "3ead7ec6-3b4c-47de-a1f9-6fb78e14614d",
+                "type": "ShowWords"
+              },
+              {
+                "id": "346d9755-2ab9-4f43-bcf2-7faaf91a2d48",
+                "type": "RepeatWords"
+              },
+              {
+                "id": "230057ca-3af8-4f77-ac27-d9420719123d",
+                "type": "FindLetter"
+              },
+              {
+                "id": "c81f42bd-a3bd-43b3-9cd5-e0ac1a3fcca7",
+                "type": "WriteLetter"
+              },
+              {
+                "id": "35f1cc8d-c6a0-4f74-a97b-3876869b4882",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "ded57050-6731-46ef-a0d1-32960d2ee509",
+                "type": "MissingLetter",
+                "difficulty": 0.4
+              },
+              {
+                "id": "bac5aa12-705d-4eab-92e5-76a033bd25af",
+                "type": "ConnectSyllables"
+              },
+              {
+                "id": "ed1c0adc-ae99-4970-8ae8-974e2fd40e23",
+                "type": "MatchImage"
+              },
+              {
+                "id": "a55ea5b8-59db-4f5a-a43a-a36a173d7796",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "d9f9433c-3a08-4999-8ce6-6e6960114664",
+            "title": "Sprachhandlungslektion ßÄV",
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "362b2abb-0fe1-4b36-b4da-6eb19bfbc753",
+                "type": "StoryVideo",
+                "video": "serlo15"
+              }
+            ]
+          },
+          {
+            "id": "9b8868f7-ddd6-41fc-9e27-179422df88d5",
+            "title": "Wiederholungslektion ßÄV",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "4fbb08c2-905b-4f4f-8a95-cc2ebb1f000b",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["ß", "ä", "v"]
+              },
+              {
+                "id": "51b8f738-f959-429f-a04a-680e273dfe1d",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "13a7120e-0a61-4c63-a37b-042a9bab2220",
+                "type": "HasPhonemeRevision",
+                "letters": ["ß", "ä", "v"]
+              },
+              {
+                "id": "a2a9e6e8-5862-499a-89dd-b3b8f5f5ee0c",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "50b29f42-8182-4b45-a2dd-911e2e987a56",
+                "type": "PraiseVideo"
+              }
+            ]
           }
         ]
       },
@@ -2397,6 +2921,37 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "eec44749-afed-4442-9531-1977bf05e06e",
+            "title": "Wiederholungslektion ÄUXÖ",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "1f290e90-2759-43ec-b908-ae1a710e56e4",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["äu", "x", "ö"]
+              },
+              {
+                "id": "2ed3b671-65ea-4159-8481-6dae563a4a20",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "716b6f90-ee5f-48e8-b05a-6895d30ae9dd",
+                "type": "HasPhonemeRevision",
+                "letters": ["äu", "x", "ö"]
+              },
+              {
+                "id": "bd8938b0-7bd3-46b1-a736-a1eb58c0bf6e",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "fba833a2-bf61-42d3-9c23-3ab9010223c8",
+                "type": "PraiseVideo"
+              }
+            ]
           }
         ]
       },
@@ -2633,6 +3188,37 @@
                 "id": "84c8151a-627f-4249-97c5-68653b6a0cd2",
                 "type": "StoryVideo",
                 "video": "serlo20"
+              }
+            ]
+          },
+          {
+            "id": "759e1876-a969-43fc-859f-1d7133463338",
+            "title": "Wiederholungslektion YCQU",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "3af97782-b1ff-4a4d-9634-fd2a1214d281",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["y", "c", "qu"]
+              },
+              {
+                "id": "59c69a33-9a7e-462f-80db-249d6e5427b3",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "a7d04172-4071-4dff-886e-3a5a26f19067",
+                "type": "HasPhonemeRevision",
+                "letters": ["y", "c", "qu"]
+              },
+              {
+                "id": "61a51cb0-5457-43fb-b6e8-0ddb1fe8bab2",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "a0032a26-57ec-49f2-a65c-36dd7309edae",
+                "type": "PraiseVideo"
               }
             ]
           }

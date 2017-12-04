@@ -813,10 +813,10 @@
     "singular": "Fl'uss",
     "plural": "Fl'üs|se"
   },
-  "schuh": {
-    "id": "schuh",
-    "word": "Schuh",
-    "article": "der",
+  "schuhe": {
+    "id": "schuhe",
+    "word": "Schuhe",
+    "article": "die",
     "singular": "Sch-uh",
     "plural": "Sch-u|he"
   },

@@ -12,6 +12,7 @@ import { ISoundAsset } from '../../types/assets';
 import { LoadSounds } from './Audio';
 
 interface PlaySoundsProps {
+  delay?: number;
   sounds: ISoundAsset[];
   record?: boolean;
   playInitially?: boolean;
@@ -24,6 +25,7 @@ interface PlaySoundsProps {
 }
 
 interface PlaySoundsInnerProps extends PlaySoundsProps {
+  delay?: number;
   sounds: Audio.Sound[];
 }
 
@@ -58,7 +60,7 @@ class PlaySoundsInner extends React.Component<
       Permissions.askAsync(Permissions.AUDIO_RECORDING).then(() => {
         const recording = new Audio.Recording();
 
-        playAll(this.props.sounds)
+        playAll(this.props.sounds, this.props.delay)
           .then(() =>
             Audio.setAudioModeAsync({
               allowsRecordingIOS: true,
@@ -121,10 +123,13 @@ class PlaySoundsInner extends React.Component<
           .catch((err: any) => {
             /* tslint:disable-next-line:no-console */
             console.warn(err);
+            onPlayEnd();
           });
       });
     } else {
-      playAll(this.props.sounds).then(() => onPlayEnd());
+      playAll(this.props.sounds, this.props.delay)
+        .then(() => onPlayEnd())
+        .catch(() => onPlayEnd());
     }
   };
 }

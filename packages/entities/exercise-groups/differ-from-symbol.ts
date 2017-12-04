@@ -11,7 +11,9 @@ export class DifferFromSymbol extends AbstractExerciseGroup {
     const letterSymbols: Figure[] = this.newLetter
       ? [
           { name: this.newLetter.toLowerCase(), isIcon: false },
-          { name: capitalizeFirstLetter(this.newLetter), isIcon: false }
+          ...(this.newLetter === 'ß'
+            ? []
+            : [{ name: capitalizeFirstLetter(this.newLetter), isIcon: false }])
         ]
       : [];
     const allTextSymbols: Figure[] = map(
