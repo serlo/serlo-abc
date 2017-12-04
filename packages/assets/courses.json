@@ -1432,6 +1432,37 @@
                 "video": "serlo8"
               }
             ]
+          },
+          {
+            "id": "f63d3a98-9440-4d18-a611-ad3c55042427",
+            "title": "Wiederholungslektion SCHUG",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "f39d73a3-7c84-41dc-8222-2cbfde891647",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["sch", "u", "g"]
+              },
+              {
+                "id": "758b6210-b223-4599-be4d-ee730b785586",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "181e6713-59e5-4e60-8ee4-fc440f6b7de1",
+                "type": "HasPhonemeRevision",
+                "letters": ["sch", "u", "g"]
+              },
+              {
+                "id": "6cda4423-0e16-4c4e-b7f3-16b09b2467c8",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "27d23667-690a-4077-bea9-1e736739f2b0",
+                "type": "PraiseVideo"
+              }
+            ]
           }
         ]
       },
