@@ -5,8 +5,11 @@ import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
 export class WriteLetter extends AbstractExerciseGroup {
   protected generateExercises() {
-    const letter: string = this.props.letter.toLowerCase();
+    if (!this.newLetter) {
+      return [];
+    }
 
+    const letter = this.newLetter.toLowerCase();
     const version = sample(['a', 'b'], 1);
 
     return [
@@ -15,22 +18,26 @@ export class WriteLetter extends AbstractExerciseGroup {
         text: 'Schreiben Sie den Buchstaben.',
         sound: `exercises_schreiben_sie_den_buchstaben_${version}`
       }),
-      this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
+      this.createExercise(ExerciseTypes.InfoScreen, {
         type: 'TutorialVideo',
         video: 'explanation_write_letter'
       }),
-      this.createExercise(ExerciseTypes.Canvas, {
-        type: 'WriteLetter',
-        letter: capitalizeFirstLetter(letter)
-      }),
-      this.createExercise(ExerciseTypes.Canvas, {
-        type: 'WriteLetter',
-        letter: capitalizeFirstLetter(letter)
-      }),
-      this.createExercise(ExerciseTypes.Canvas, {
-        type: 'WriteLetter',
-        letter: capitalizeFirstLetter(letter)
-      }),
+      ...(letter === 'ß'
+        ? []
+        : [
+            this.createExercise(ExerciseTypes.Canvas, {
+              type: 'WriteLetter',
+              letter: capitalizeFirstLetter(letter)
+            }),
+            this.createExercise(ExerciseTypes.Canvas, {
+              type: 'WriteLetter',
+              letter: capitalizeFirstLetter(letter)
+            }),
+            this.createExercise(ExerciseTypes.Canvas, {
+              type: 'WriteLetter',
+              letter: capitalizeFirstLetter(letter)
+            })
+          ]),
       this.createExercise(ExerciseTypes.Canvas, {
         type: 'WriteLetter',
         letter

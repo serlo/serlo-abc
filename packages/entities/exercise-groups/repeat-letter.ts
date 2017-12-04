@@ -5,7 +5,11 @@ import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
 export class RepeatLetter extends AbstractExerciseGroup {
   protected generateExercises() {
-    const letter: string = this.props.letter.toLowerCase();
+    if (!this.newLetter) {
+      return [];
+    }
+
+    const letter = this.newLetter.toLowerCase();
 
     const version = sample(['a', 'b'], 1);
 
@@ -15,16 +19,20 @@ export class RepeatLetter extends AbstractExerciseGroup {
         text: 'Wiederholen Sie den Buchstaben.',
         sound: `exercises_wiederholen_sie_den_buchstaben_${version}`
       }),
-      this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
+      this.createExercise(ExerciseTypes.InfoScreen, {
         type: 'TutorialVideo',
         video: 'explanation_show_letter'
       }),
-      this.createExercise(ExerciseTypes.PlaySounds, {
-        type: 'ShowLetter',
-        letter: capitalizeFirstLetter(letter),
-        sound: letter,
-        repeat: true
-      }),
+      ...(letter === 'ß'
+        ? []
+        : [
+            this.createExercise(ExerciseTypes.PlaySounds, {
+              type: 'ShowLetter',
+              letter: capitalizeFirstLetter(letter),
+              sound: letter,
+              repeat: true
+            })
+          ]),
       this.createExercise(ExerciseTypes.PlaySounds, {
         type: 'ShowLetter',
         letter,

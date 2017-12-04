@@ -5,8 +5,13 @@ import {
   ExercisePropsFixture
 } from './abstract-exercise.interface';
 
+export interface Figure {
+  name: string;
+  isIcon: boolean;
+}
+
 export interface DifferFromSymbolProps {
-  symbols: string[];
+  symbols: Figure[];
   correctIndex: number;
 }
 
@@ -26,7 +31,8 @@ export class DifferFromSymbol extends AbstractExercise<
     {
       name: '',
       props: {
-        symbols: ['X', 'X', 'X', 'X', 'M'],
+        symbols: ['3', '+', ',', 'event-seat', 'M'],
+        isIcon: [false, false, false, true, false],
         correctIndex: 4
       }
     }
@@ -62,7 +68,7 @@ export class DifferFromSymbol extends AbstractExercise<
     selectedIndex: DifferFromSymbolState
   ): DifferFromSymbolFeedback {
     if (
-      !selectedIndex ||
+      typeof selectedIndex === 'undefined' ||
       this.isSubmitDisabled(selectedIndex) ||
       this.isCorrect(selectedIndex)
     ) {

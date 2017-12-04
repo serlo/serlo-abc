@@ -4,14 +4,14 @@ import { TextCanvas } from '../common/canvas';
 import { LandscapeScreenOrientation } from '../helpers/screen-orientation';
 
 export interface WriteWordProps {
-  word: string;
+  text: string;
   showFeedback: boolean;
   state: boolean;
   setState: (state: boolean) => void;
 }
 
-export const WriteWord = ({ word, setState }: WriteWordProps) => (
+export const WriteWord = ({ text, setState }: WriteWordProps) => (
   <LandscapeScreenOrientation>
-    <TextCanvas text={word} onPanResponderEnd={() => setState(true)} />
+    <TextCanvas text={text} onPanResponderEnd={() => setState(true)} />
   </LandscapeScreenOrientation>
 );

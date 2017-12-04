@@ -1,6 +1,7 @@
 import { ascend, dropWhile, filter } from 'ramda';
 import { Optional } from '../../src/types';
 import { AbstractNode, InternalNode } from '../entities/course';
+import { Maybe } from '../maybe';
 import { stableSortWith } from '../stable-sort';
 import AbstractCourseInteractor from './AbstractCourseInteractor';
 import createCourse from './CourseFactory';
@@ -97,16 +98,23 @@ class CourseInteractor extends AbstractCourseInteractor {
     return entity && (entity.getInfo() as Optional<ICourseStructure>);
   }
 
-  public getNewVocabulary(id: string) {
+  public getNewVocabulary(id: string): Maybe<string[]> {
     const entity = this.course.findEntity(id);
 
     return entity && entity.getNewVocabulary();
   }
 
-  public getVocabulary(id: string) {
+  public getVocabulary(id: string): string[] {
+    return this.course.getVocabulary(id);
+  }
+  public getNewLetter(id: string): Maybe<string> {
     const entity = this.course.findEntity(id);
 
-    return entity && entity.getVocabulary();
+    return entity && entity.getNewLetter();
+  }
+
+  public getLetters(id: string): string[] {
+    return this.course.getLetters(id);
   }
 
   public getProgress(id: string) {

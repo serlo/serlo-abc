@@ -21,46 +21,39 @@
               "nase",
               "sofa"
             ],
+            "letter": "a",
             "children": [
               {
                 "id": "6860685f-19fc-4798-b0dc-6a3e41adc97a",
-                "type": "IntroduceLetter",
-                "letter": "a"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "75df664c-61b4-466c-9ab9-f6f7df30d371",
-                "type": "PresentLetter",
-                "letter": "a"
+                "type": "PresentLetter"
               },
               {
                 "id": "46af5bc0-7d32-4b9a-8525-d19fc8d144ad",
-                "type": "RepeatLetter",
-                "letter": "a"
+                "type": "RepeatLetter"
               },
               {
                 "id": "36781cd4-8b65-4219-815b-e9a8c1a46423",
-                "type": "WriteLetter",
-                "letter": "a"
+                "type": "WriteLetter"
               },
               {
                 "id": "638aaa9d-6da2-4046-86bf-6c9ee63666a2",
-                "type": "ShowWords",
-                "letter": "a"
+                "type": "ShowWords"
               },
               {
                 "id": "d15d0d81-f41c-4267-aacf-f35c97da3e4c",
-                "type": "RepeatWords",
-                "letter": "a"
+                "type": "RepeatWords"
               },
               {
                 "id": "08d1c24f-eda3-488f-9474-404a6ae9338b",
-                "type": "FindLetter",
-                "letter": "a"
+                "type": "FindLetter"
               },
               {
                 "id": "1b2b7b27-6db6-4e11-9605-0933bb9b8280",
-                "type": "WriteLetter",
-                "letter": "a"
+                "type": "WriteLetter"
               },
               {
                 "id": "038fdd26-4b53-4aa8-80d8-92f2ad0f0dd6",
@@ -76,46 +69,39 @@
             "id": "eab092c8-3353-41e3-a820-143dd6bb7c49",
             "title": "N",
             "words": ["nudeln", "nadel", "banane", "kanne", "kino", "opa"],
+            "letter": "n",
             "children": [
               {
                 "id": "ed93cfdd-ec2f-4b87-929b-165b66ac080f",
-                "type": "IntroduceLetter",
-                "letter": "n"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "d92f4614-c200-4e61-afd4-5de2b2c2ffa1",
-                "type": "PresentLetter",
-                "letter": "n"
+                "type": "PresentLetter"
               },
               {
                 "id": "35ab940a-ad87-4e5b-b962-d4a53f9e6c4b",
-                "type": "RepeatLetter",
-                "letter": "n"
+                "type": "RepeatLetter"
               },
               {
                 "id": "c95cf3cd-493d-45fa-9246-b1bbd303d157",
-                "type": "WriteLetter",
-                "letter": "n"
+                "type": "WriteLetter"
               },
               {
                 "id": "b56505d2-59aa-496b-8ad9-0102119706f3",
-                "type": "ShowWords",
-                "letter": "n"
+                "type": "ShowWords"
               },
               {
                 "id": "9c0e619e-0ea6-4f13-ad24-0e50872ec917",
-                "type": "RepeatWords",
-                "letter": "n"
+                "type": "RepeatWords"
               },
               {
                 "id": "4108f548-4390-4af5-a152-c8cd10463940",
-                "type": "FindLetter",
-                "letter": "n"
+                "type": "FindLetter"
               },
               {
                 "id": "ce219759-d9e0-4245-a409-aef91cc4379e",
-                "type": "WriteLetter",
-                "letter": "n"
+                "type": "WriteLetter"
               },
               {
                 "id": "31e09608-12c8-4dee-8710-def6126264f2",
@@ -131,46 +117,39 @@
             "id": "7aace906-5311-4138-bd44-74f2b5fc2ef3",
             "title": "E",
             "words": ["ente", "elefant", "tee", "kaffee", "saft"],
+            "letter": "e",
             "children": [
               {
                 "id": "06390921-4acf-49d7-b639-afed58a573cf",
-                "type": "IntroduceLetter",
-                "letter": "e"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "cb977eab-1e67-46d1-945e-91be48eb30ba",
-                "type": "PresentLetter",
-                "letter": "e"
+                "type": "PresentLetter"
               },
               {
                 "id": "c8a799e0-427e-4667-a606-42fa2ceadab4",
-                "type": "RepeatLetter",
-                "letter": "e"
+                "type": "RepeatLetter"
               },
               {
                 "id": "1713128b-42b5-4171-ab64-3a66b0f925fb",
-                "type": "WriteLetter",
-                "letter": "e"
+                "type": "WriteLetter"
               },
               {
                 "id": "421937aa-2e08-4a9e-9405-cb3bc13bfdf5",
-                "type": "ShowWords",
-                "letter": "e"
+                "type": "ShowWords"
               },
               {
                 "id": "7a2720eb-f246-4a48-a0ac-6b4bde69059b",
-                "type": "RepeatWords",
-                "letter": "e"
+                "type": "RepeatWords"
               },
               {
                 "id": "077cc75b-2d99-4fc0-b7f2-e9ecc36b1d19",
-                "type": "FindLetter",
-                "letter": "e"
+                "type": "FindLetter"
               },
               {
                 "id": "355f7ebb-8412-44a0-940d-8362c9d9dab3",
-                "type": "WriteLetter",
-                "letter": "e"
+                "type": "WriteLetter"
               },
               {
                 "id": "cda7ce44-597c-49b3-aa3d-0b130377277e",
@@ -178,6 +157,59 @@
               },
               {
                 "id": "b65c1c59-8b6a-4acd-8345-0e5041dd3b2b",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "7efb75e5-af32-4109-bf5b-20f2e2889621",
+            "title": "Sprachhandlungslektion ANE",
+            "icon": "ios-chatbubbles",
+            "words": [
+              "morgen",
+              "guten_morgen",
+              "tag",
+              "guten_tag",
+              "abend",
+              "guten_abend"
+            ],
+            "children": [
+              {
+                "id": "2ed70152-3d2d-437d-b1f0-11f2ee7b7958",
+                "type": "StoryVideo",
+                "video": "serlo1"
+              },
+              {
+                "id": "dca52e10-917a-48b0-8d47-bfa4cd0483fc",
+                "type": "WriteWords",
+                "texts": ["Anna", "Nena"]
+              },
+              {
+                "id": "06a3d514-c437-4383-9c76-cb406322fd83",
+                "type": "ShowWords"
+              },
+              {
+                "id": "8ad06ccc-9275-49b6-aef2-231a74de98c3",
+                "type": "MatchImage"
+              },
+              {
+                "id": "018d9952-d75a-4744-bd31-573a6303b1ec",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "a8ba1750-5469-468f-956c-e3fdbd8902c2",
+            "title": "Wiederholungslektion ANE",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "1662823a-acb0-4dcb-95dd-eed49cb6639b",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["a", "n", "e"]
+              },
+              {
+                "id": "d75e736b-d6c3-4e21-8f13-b0f37d6435fc",
                 "type": "PraiseVideo"
               }
             ]
@@ -200,46 +232,43 @@
               "pass",
               "wasser"
             ],
+            "letter": "s",
             "children": [
               {
                 "id": "bbf343e3-8398-4157-9678-084771b4c749",
-                "type": "IntroduceLetter",
-                "letter": "s"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "01aef9d9-7c4b-444b-b4b7-02ebdddc2368",
-                "type": "PresentLetter",
-                "letter": "s"
+                "type": "PresentLetter"
               },
               {
                 "id": "adf59e22-38e8-483a-99a2-8e4695c10697",
-                "type": "RepeatLetter",
-                "letter": "s"
+                "type": "RepeatLetter"
               },
               {
                 "id": "88ab4cd9-b710-47c9-928f-76803169f37a",
-                "type": "WriteLetter",
-                "letter": "s"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "5b2b1330-fd4a-42d8-8be8-07c3380eb2af",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "a2163a2e-bfe8-4597-a1a9-0801ee358de3",
-                "type": "ShowWords",
-                "letter": "s"
+                "type": "ShowWords"
               },
               {
                 "id": "2c82d4b1-59a6-4f6c-9604-48b6a8fb2b18",
-                "type": "RepeatWords",
-                "letter": "s"
+                "type": "RepeatWords"
               },
               {
                 "id": "5efaed13-6294-4c04-84d8-60045101ba77",
-                "type": "FindLetter",
-                "letter": "s"
+                "type": "FindLetter"
               },
               {
                 "id": "57d26cd6-df2a-4b44-a7e4-c0ba2b41b167",
-                "type": "WriteLetter",
-                "letter": "s"
+                "type": "WriteLetter"
               },
               {
                 "id": "c3923929-92d9-4845-b34b-fa5a7c4794ca",
@@ -254,55 +283,44 @@
           {
             "id": "0c9f776b-d889-4c74-8cc1-54a530bb6880",
             "title": "T",
-            "words": [
-              "tomate",
-              "bett",
-              "kette",
-              "salat",
-              "tonne",
-              "karotte",
-              "topf"
-            ],
+            "words": ["tomate", "bett", "kette", "salat", "tonne", "karotte"],
+            "letter": "t",
             "children": [
               {
                 "id": "4cddb179-cf72-4d1d-bf72-28d77a57d7a4",
-                "type": "IntroduceLetter",
-                "letter": "t"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "daeea5dc-b17a-49a1-a672-199268a31fd8",
-                "type": "PresentLetter",
-                "letter": "t"
+                "type": "PresentLetter"
               },
               {
                 "id": "6db4e4cd-2f04-424c-9d72-b48ca1d7d6ec",
-                "type": "RepeatLetter",
-                "letter": "t"
+                "type": "RepeatLetter"
               },
               {
                 "id": "2f8be0e5-2cb3-4f1e-b638-624e1e0fe504",
-                "type": "WriteLetter",
-                "letter": "t"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "8021780a-7b3e-4ef9-b8f4-293ddf8f4223",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "0c8caed8-3a92-4357-8390-b36fa5fc5334",
-                "type": "ShowWords",
-                "letter": "t"
+                "type": "ShowWords"
               },
               {
                 "id": "6b5467c0-c3c1-42a4-b0dc-bb2bc190911e",
-                "type": "RepeatWords",
-                "letter": "t"
+                "type": "RepeatWords"
               },
               {
                 "id": "6b4d74a8-4b93-4eed-8630-10ad38c95a94",
-                "type": "FindLetter",
-                "letter": "t"
+                "type": "FindLetter"
               },
               {
                 "id": "bbfe218c-ae42-4e9c-982d-15e9887bfbcd",
-                "type": "WriteLetter",
-                "letter": "t"
+                "type": "WriteLetter"
               },
               {
                 "id": "39676784-2a08-46ae-b3b8-9bc5097e88da",
@@ -317,47 +335,44 @@
           {
             "id": "6d2350b5-cfef-4c49-a3cb-53413f728434",
             "title": "O",
-            "words": ["hose", "obst", "ofen", "tor", "fotos"],
+            "words": ["topf", "hose", "obst", "ofen", "tor", "fotos"],
+            "letter": "o",
             "children": [
               {
                 "id": "44562ee4-397a-4da0-b62f-0de22d63cc97",
-                "type": "IntroduceLetter",
-                "letter": "o"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "25b1ddcd-00cc-4675-b902-535a6ba3a752",
-                "type": "PresentLetter",
-                "letter": "o"
+                "type": "PresentLetter"
               },
               {
                 "id": "31a0202b-eadd-46ee-9e8c-8e7700d83067",
-                "type": "RepeatLetter",
-                "letter": "o"
+                "type": "RepeatLetter"
               },
               {
                 "id": "bcb927ef-e078-4a78-82b9-f99552181b59",
-                "type": "WriteLetter",
-                "letter": "o"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "ec19b1bd-f3cc-4cb9-8150-0aede39c6659",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "faae207d-ad32-4356-be93-85a53ac46614",
-                "type": "ShowWords",
-                "letter": "o"
+                "type": "ShowWords"
               },
               {
                 "id": "044be87d-4bba-40ea-a017-2d4f665e1fcf",
-                "type": "RepeatWords",
-                "letter": "o"
+                "type": "RepeatWords"
               },
               {
                 "id": "010bcb9e-aa99-4ea9-ba4a-ed42190ebe0e",
-                "type": "FindLetter",
-                "letter": "o"
+                "type": "FindLetter"
               },
               {
                 "id": "e3801ff8-44b3-4777-807f-6802e26ff9b2",
-                "type": "WriteLetter",
-                "letter": "o"
+                "type": "WriteLetter"
               },
               {
                 "id": "2b8c0871-8112-4128-be22-5975b5ef573c",
@@ -365,6 +380,44 @@
               },
               {
                 "id": "859ca796-0a6c-406b-80bf-a9ba06384d7f",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "ae3fac8b-d194-4170-aac2-4db7ff50a7d7",
+            "title": "Sprachhandlungslektion STO",
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "a8380fe3-f865-4a4e-ac58-12bd7cdd1055",
+                "type": "StoryVideo",
+                "video": "serlo2"
+              },
+              {
+                "id": "8710917d-9f66-4c84-8949-c5d387f15a96",
+                "type": "WriteWords",
+                "texts": ["Anna", "Nena", "Anton", "Soto"]
+              }
+            ]
+          },
+          {
+            "id": "11308015-6cc7-4356-a2e7-ab1eade2a0c7",
+            "title": "Wiederholungslektion STO",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "413ae29b-98b7-4ffa-a82a-4bdbb8da5cb1",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["s", "t", "o"]
+              },
+              {
+                "id": "8f65b642-ee9a-4360-abbd-10257acf1bda",
+                "type": "HasPhonemeRevision",
+                "letters": ["s", "t", "o"]
+              },
+              {
+                "id": "f89768c6-bec2-4ac5-bd27-512966b7cf74",
                 "type": "PraiseVideo"
               }
             ]
@@ -379,46 +432,47 @@
             "id": "58c2ae28-12f0-4909-8462-885c7829602a",
             "title": "R",
             "words": ["rot", "rose", "brot", "arm", "ohr", "bart"],
+            "letter": "r",
             "children": [
               {
                 "id": "c9a3a019-5b7f-4fbf-bb1c-318fc8e1a23e",
-                "type": "IntroduceLetter",
-                "letter": "r"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "21cebeb3-3f16-4d4b-a0e0-f4a9666133c2",
-                "type": "PresentLetter",
-                "letter": "r"
+                "type": "PresentLetter"
               },
               {
                 "id": "cf4b9535-30f8-42b7-8d1c-e9a39c2ce50c",
-                "type": "RepeatLetter",
-                "letter": "r"
+                "type": "RepeatLetter"
               },
               {
                 "id": "5decb0bc-0396-4a3b-a611-8bbcf31d9b78",
-                "type": "WriteLetter",
-                "letter": "r"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "9e4d92e2-74fa-4c71-af69-5ecd98188bd3",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "c03f42a6-c04e-46ee-b776-550509e410a5",
-                "type": "ShowWords",
-                "letter": "r"
+                "type": "ShowWords"
               },
               {
                 "id": "27c891cd-b055-49f3-8aae-3594509a593f",
-                "type": "RepeatWords",
-                "letter": "r"
+                "type": "RepeatWords"
               },
               {
                 "id": "fb0689f8-c44d-45f3-8500-aa372327428b",
-                "type": "FindLetter",
-                "letter": "r"
+                "type": "FindLetter"
               },
               {
                 "id": "fe290bf5-e413-4597-b848-db1c8cc53aaf",
-                "type": "WriteLetter",
-                "letter": "r"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "f5e78ccb-9920-4961-9983-3ffce74baa19",
+                "type": "HasPhoneme"
               },
               {
                 "id": "5e0cfc61-089f-4563-aec4-f53a28ec8ccc",
@@ -434,46 +488,47 @@
             "id": "27c499d8-fab3-4d17-bf12-af6329c08cb3",
             "title": "I",
             "words": ["kind", "igel", "insel", "kita", "bier", "tier", "kiwi"],
+            "letter": "i",
             "children": [
               {
                 "id": "8a21328a-6f91-43ba-aec0-7c6b7ee64ae2",
-                "type": "IntroduceLetter",
-                "letter": "i"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "91ed98bb-7f51-4c4c-9010-388974123e0a",
-                "type": "PresentLetter",
-                "letter": "i"
+                "type": "PresentLetter"
               },
               {
                 "id": "308c6993-d279-46e8-9bb1-03d5ed625401",
-                "type": "RepeatLetter",
-                "letter": "i"
+                "type": "RepeatLetter"
               },
               {
                 "id": "ca3e5c65-8275-4405-8ac1-5c4acd071c67",
-                "type": "WriteLetter",
-                "letter": "i"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "7fbca14f-1a0a-4bf5-9322-8b68c61bf925",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "88b27c95-7f68-4bef-9b82-5de348581ccc",
-                "type": "ShowWords",
-                "letter": "i"
+                "type": "ShowWords"
               },
               {
                 "id": "50afd25f-7f17-43b4-ac8a-a9f28bdf3138",
-                "type": "RepeatWords",
-                "letter": "i"
+                "type": "RepeatWords"
               },
               {
                 "id": "a131145b-d5d6-4f82-b183-a7cd6b702e12",
-                "type": "FindLetter",
-                "letter": "i"
+                "type": "FindLetter"
               },
               {
                 "id": "7f64e0a0-3759-4763-bbeb-11bd6b2e6132",
-                "type": "WriteLetter",
-                "letter": "i"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "d39ad435-49eb-48f4-b03f-68ecedc03a68",
+                "type": "HasPhoneme"
               },
               {
                 "id": "9c2f6345-2b85-4b89-b27b-babf0066eb82",
@@ -489,46 +544,47 @@
             "id": "483784f2-75f5-469b-ab28-a3b28e26de47",
             "title": "H",
             "words": ["haar", "uhr", "sohn", "bahn", "kuh", "hahn", "henne"],
+            "letter": "h",
             "children": [
               {
                 "id": "99673667-d24b-4229-85b3-f365832be864",
-                "type": "IntroduceLetter",
-                "letter": "h"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "6c7c17d6-1fc1-4128-9718-83470a091de7",
-                "type": "PresentLetter",
-                "letter": "h"
+                "type": "PresentLetter"
               },
               {
                 "id": "e0d57e52-76f0-4909-9812-654cc3d39555",
-                "type": "RepeatLetter",
-                "letter": "h"
+                "type": "RepeatLetter"
               },
               {
                 "id": "d7b45951-a5c9-443a-b815-227df703ca74",
-                "type": "WriteLetter",
-                "letter": "h"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "bc9fce5e-ebb5-4f86-a3fb-2b091fb27d42",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "54cf97b2-3c44-46e2-a40a-6dced208b83b",
-                "type": "ShowWords",
-                "letter": "h"
+                "type": "ShowWords"
               },
               {
                 "id": "6f345ef1-31de-48ec-acfc-c64c7305e1f3",
-                "type": "RepeatWords",
-                "letter": "h"
+                "type": "RepeatWords"
               },
               {
                 "id": "3206f432-9400-4307-8b53-dd38e2a186e4",
-                "type": "FindLetter",
-                "letter": "h"
+                "type": "FindLetter"
               },
               {
                 "id": "972628ee-e231-4359-a079-16d21aa094e6",
-                "type": "WriteLetter",
-                "letter": "h"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "3c8aab06-5e08-4da7-bd0a-77e60582b53a",
+                "type": "HasPhoneme"
               },
               {
                 "id": "1ce6c87e-f2ab-4605-8772-1afdec9b9d69",
@@ -536,6 +592,39 @@
               },
               {
                 "id": "d24c8141-5bc6-4a2b-931c-d1ddaa81732d",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "f1731092-9832-46cb-9c0a-475341dc35ab",
+            "title": "Sprachhandlungslektion RIH",
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "08a87237-a7a7-44a7-9b3a-e6ed6427932d",
+                "type": "StoryVideo",
+                "video": "serlo3"
+              }
+            ]
+          },
+          {
+            "id": "91e6427a-d6bc-4d83-bb89-b3ec32bc9cfa",
+            "title": "Wiederholungslektion RIH",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "3745eb3e-2f65-4b33-a9b2-4dfdb837f7d3",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["r", "i", "h"]
+              },
+              {
+                "id": "ef153364-7328-4358-a5b0-fa93b6be11f0",
+                "type": "HasPhonemeRevision",
+                "letters": ["r", "i", "h"]
+              },
+              {
+                "id": "24aef963-2e0c-4edd-bb9a-ef75e413db32",
                 "type": "PraiseVideo"
               }
             ]
@@ -550,46 +639,61 @@
             "id": "a16f7d26-f3bc-4b9a-a087-8f1da2c22f6e",
             "title": "B",
             "words": ["ball", "birne", "besen", "nebel", "bohne", "gabel"],
+            "letter": "b",
             "children": [
               {
                 "id": "593637a3-a936-4422-8ce3-c3f7c0f48ea3",
-                "type": "IntroduceLetter",
-                "letter": "b"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "6b66b271-a9e7-4fe5-9a16-5e089907be25",
-                "type": "PresentLetter",
-                "letter": "b"
+                "type": "PresentLetter"
               },
               {
                 "id": "425f31ec-3948-4b14-8ec5-1c04566536d1",
-                "type": "RepeatLetter",
-                "letter": "b"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "8f17561c-9b5b-488e-9682-a9eff8b306a5",
+                "type": "LetterRotated",
+                "difficulty": 0
               },
               {
                 "id": "9a3858e4-5f37-4f0e-8734-a84137beb2d5",
-                "type": "WriteLetter",
-                "letter": "b"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "e8f764c1-f0a7-4011-a0e1-325a5ba866e2",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "5f5b2ca3-9d98-47c6-98c9-973d5bc439dd",
-                "type": "ShowWords",
-                "letter": "b"
+                "type": "ShowWords"
               },
               {
                 "id": "6e5331cb-9533-42a9-be09-806ce0367392",
-                "type": "RepeatWords",
-                "letter": "b"
+                "type": "RepeatWords"
               },
               {
                 "id": "45d1be99-8533-4cc4-9b1e-112ecc47e3b7",
-                "type": "FindLetter",
-                "letter": "b"
+                "type": "FindLetter"
               },
               {
                 "id": "7d1fafbe-8e87-4a5b-9a79-b08df8ce3c7f",
-                "type": "WriteLetter",
-                "letter": "b"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "a616aead-bbfe-4d89-874f-e8763720a837",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "4a7530c0-8e28-4ac4-b8a0-0c735363a932",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "14ff682a-aaf9-4c53-bc30-09711f3e6042",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "ac9d92fd-292d-442d-99d4-1874e59458fa",
@@ -613,46 +717,61 @@
               "teller",
               "lila"
             ],
+            "letter": "l",
             "children": [
               {
                 "id": "3222144d-bc1c-42e8-9dad-a6727cf5e24e",
-                "type": "IntroduceLetter",
-                "letter": "l"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "a7361b68-3afe-4f8d-93e4-0c08a80ccb3b",
-                "type": "PresentLetter",
-                "letter": "l"
+                "type": "PresentLetter"
               },
               {
                 "id": "9f46de5d-00de-4949-9136-14c80363126b",
-                "type": "RepeatLetter",
-                "letter": "l"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "3d062526-6c91-4e2e-a8c4-484d5925a2a1",
+                "type": "LetterRotated",
+                "difficulty": 0
               },
               {
                 "id": "1fcd1b45-75c2-46b9-98fe-def4bf775238",
-                "type": "WriteLetter",
-                "letter": "l"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "595a11b8-c0bb-435c-bc68-5925e8babece",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "a628f7ac-4430-4cd6-9b01-0700602e3995",
-                "type": "ShowWords",
-                "letter": "l"
+                "type": "ShowWords"
               },
               {
                 "id": "fa407b83-933a-4b2e-be70-39c6f589de63",
-                "type": "RepeatWords",
-                "letter": "l"
+                "type": "RepeatWords"
               },
               {
                 "id": "4e996192-2d46-45fb-bdf3-4353d7aab115",
-                "type": "FindLetter",
-                "letter": "l"
+                "type": "FindLetter"
               },
               {
                 "id": "8b6b36c9-0ef7-4522-8876-b18848f3c6e2",
-                "type": "WriteLetter",
-                "letter": "l"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "3ffe2002-a15b-400b-9672-a8c253a0d1a5",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "0c6327f4-d806-4571-8d87-1f95090c164a",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "9d3bf9d6-61d4-4651-afbe-d2057d3819ad",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "e7770ce8-d182-4104-98b4-2fb92041b7e4",
@@ -668,46 +787,61 @@
             "id": "6e80107e-6f6d-4ca5-b85a-92c93d91b3dc",
             "title": "M",
             "words": ["mond", "mama", "name", "limo", "turm", "salami", "hemd"],
+            "letter": "m",
             "children": [
               {
                 "id": "58818c92-9cb9-406d-8321-961fb0ffcbea",
-                "type": "IntroduceLetter",
-                "letter": "m"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "4a528360-d0a3-4ec9-9af9-3abae28aeece",
-                "type": "PresentLetter",
-                "letter": "m"
+                "type": "PresentLetter"
               },
               {
                 "id": "0275fc60-19b7-431f-b700-55db6ef0082d",
-                "type": "RepeatLetter",
-                "letter": "m"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "1c4754f0-6eb3-434e-890f-2df2e2ae9425",
+                "type": "LetterRotated",
+                "difficulty": 0
               },
               {
                 "id": "bd526e7d-77c7-432d-8a13-e7112a7f7a6f",
-                "type": "WriteLetter",
-                "letter": "m"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "9e12fcb6-af1e-4e75-abcb-5d20d78f2464",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "3655f2f3-3012-49c1-9a46-98003f88e144",
-                "type": "ShowWords",
-                "letter": "m"
+                "type": "ShowWords"
               },
               {
                 "id": "27b04db5-9b3f-4a24-8d9d-197ab96ecd98",
-                "type": "RepeatWords",
-                "letter": "m"
+                "type": "RepeatWords"
               },
               {
                 "id": "e296b4aa-e92e-459f-a637-56e638a5f15e",
-                "type": "FindLetter",
-                "letter": "m"
+                "type": "FindLetter"
               },
               {
                 "id": "d00b8611-79d4-492f-b6c4-92966f18d9c8",
-                "type": "WriteLetter",
-                "letter": "m"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "9f526740-ea31-49f7-b1b7-8c7ce9c89863",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "c0520725-be09-4190-b717-70fc4d31947e",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "3243f7b9-758d-4fb2-ae0a-e3353f7c12a3",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "eed77955-56c5-4eb4-bfcf-6da5734abf4e",
@@ -715,6 +849,59 @@
               },
               {
                 "id": "e73117fe-6a7c-4239-98c4-c74f7b84bd4f",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "2b7b6bb6-1049-433f-b919-da7e7df5199c",
+            "title": "Sprachhandlungslektion BLM",
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "5b74ee71-bc5e-4f4b-b67c-5b54a9972827",
+                "type": "StoryVideo",
+                "video": "serlo4"
+              },
+              {
+                "id": "a96de7d5-4d93-4b56-9611-b07c25a8adfb",
+                "type": "WriteWords",
+                "texts": ["Anna", "Nena", "Anton", "Soto", "Obst", "ist"]
+              },
+              {
+                "id": "b760c33c-da02-4a4a-971c-a813e0865411",
+                "type": "StoryVideo",
+                "video": "serlo5"
+              }
+            ]
+          },
+          {
+            "id": "51c2c460-dffa-435f-8f26-fd0832a4f8d3",
+            "title": "Wiederholungslektion BLM",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "1354f6ec-fee3-485c-b182-1d42cb1a2939",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["b", "l", "m"]
+              },
+              {
+                "id": "78132d78-63ed-4d91-b93d-601c692a9141",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "b6b549af-5c22-42b4-8d38-22b6360c43fa",
+                "type": "HasPhonemeRevision",
+                "letters": ["b", "l", "m"]
+              },
+              {
+                "id": "abffe3be-04fd-4e92-9acb-c1409301ca9f",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "c913d852-27ac-4ae1-b940-69e6e122fa3f",
                 "type": "PraiseVideo"
               }
             ]
@@ -729,46 +916,61 @@
             "id": "6545a23f-9642-4aa2-83a3-2d199f6c2f3d",
             "title": "D",
             "words": ["bad", "rad", "bild", "sand", "dose", "dusche"],
+            "letter": "d",
             "children": [
               {
                 "id": "36f393ef-c705-41dd-aef7-e4898d5c2a3d",
-                "type": "IntroduceLetter",
-                "letter": "d"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "9dfe2443-68b3-41e9-aeba-f3ddd9786513",
-                "type": "PresentLetter",
-                "letter": "d"
+                "type": "PresentLetter"
               },
               {
                 "id": "89e3f602-530d-4a5b-be7d-aa611352e855",
-                "type": "RepeatLetter",
-                "letter": "d"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "b69d4e2f-a076-41b6-bf38-986a017911b8",
+                "type": "LetterRotated",
+                "difficulty": 0.1
               },
               {
                 "id": "151ad390-3f0b-4a2f-bc72-75cdcc7264ef",
-                "type": "WriteLetter",
-                "letter": "d"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "55a656e4-f80f-4501-b20e-2ce92cfe8c48",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "ef5d730a-aadc-41ca-9877-2da62841baa4",
-                "type": "ShowWords",
-                "letter": "d"
+                "type": "ShowWords"
               },
               {
                 "id": "b825572d-87f1-4e09-a300-9e5a65aa3f27",
-                "type": "RepeatWords",
-                "letter": "d"
+                "type": "RepeatWords"
               },
               {
                 "id": "7f868cab-872e-474f-9259-bb3716db793b",
-                "type": "FindLetter",
-                "letter": "d"
+                "type": "FindLetter"
               },
               {
                 "id": "e2edb59a-7654-4b00-bb5f-aef4da77f0bf",
-                "type": "WriteLetter",
-                "letter": "d"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "65dc6147-110d-45f6-a44e-b20503cec896",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "ec787559-5689-457f-a2d6-339f6374006c",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "619821b8-81b2-4e0d-a6c6-9e5df2ec43be",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "c3f686fb-67df-43b9-a609-8567dda41554",
@@ -792,46 +994,61 @@
               "fleisch",
               "fisch"
             ],
+            "letter": "f",
             "children": [
               {
                 "id": "7f3bbaa5-9368-4bc2-b12c-48a6edf9450c",
-                "type": "IntroduceLetter",
-                "letter": "f"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "877ed89a-4422-420b-8a87-e87763d1a2cc",
-                "type": "PresentLetter",
-                "letter": "f"
+                "type": "PresentLetter"
               },
               {
                 "id": "28a9a825-b5c6-4893-bee2-89db007d9aec",
-                "type": "RepeatLetter",
-                "letter": "f"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "20b0af9d-5356-4236-9676-5ae28587ad4e",
+                "type": "LetterRotated",
+                "difficulty": 0.1
               },
               {
                 "id": "ae27622f-1c53-48f6-b8df-8d6c1becca9d",
-                "type": "WriteLetter",
-                "letter": "f"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "908b0d61-18be-4743-b663-be720d6fc3bb",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "df929e9d-8767-427d-9074-a2e2dbbc81fd",
-                "type": "ShowWords",
-                "letter": "f"
+                "type": "ShowWords"
               },
               {
                 "id": "a2db3b67-8156-480b-a952-9bfd6786e1b6",
-                "type": "RepeatWords",
-                "letter": "f"
+                "type": "RepeatWords"
               },
               {
                 "id": "0498e323-c08b-4eb2-bd0c-79ac8d26fcba",
-                "type": "FindLetter",
-                "letter": "f"
+                "type": "FindLetter"
               },
               {
                 "id": "ca96555a-6bf8-4da4-a82e-b081ac36116c",
-                "type": "WriteLetter",
-                "letter": "f"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "8f26cfc6-dc75-414f-aac7-50a92deb69af",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "f9a27c86-7109-4fd3-b87b-bd58765660f8",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "dba066f1-f549-4f06-983c-19b7329d87d9",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "694a4817-19e4-4ec2-94b2-1bd60ce76675",
@@ -856,46 +1073,61 @@
               "socke",
               "kabel"
             ],
+            "letter": "k",
             "children": [
               {
                 "id": "490401b7-d949-46ab-9ce9-1d132dcad7a9",
-                "type": "IntroduceLetter",
-                "letter": "k"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "6c839a0d-9347-475c-849d-ff279eecec2b",
-                "type": "PresentLetter",
-                "letter": "k"
+                "type": "PresentLetter"
               },
               {
                 "id": "c59e797c-872e-4655-9523-ad6b226c68a0",
-                "type": "RepeatLetter",
-                "letter": "k"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "80189c08-0d22-425c-9cb0-2c42c949d539",
+                "type": "LetterRotated",
+                "difficulty": 0.1
               },
               {
                 "id": "bfd903dd-a2e2-4c11-bdff-70af71f1f436",
-                "type": "WriteLetter",
-                "letter": "k"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "07f1a6c5-ee50-4815-918b-a25386a61dd0",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "0eb96a84-9a6e-4788-9c81-4357af1ac70a",
-                "type": "ShowWords",
-                "letter": "k"
+                "type": "ShowWords"
               },
               {
                 "id": "af0f2284-1d70-47f3-aa6f-a46612ac2031",
-                "type": "RepeatWords",
-                "letter": "k"
+                "type": "RepeatWords"
               },
               {
                 "id": "e76b4795-adee-460d-8b8f-57ed9d14cdc4",
-                "type": "FindLetter",
-                "letter": "k"
+                "type": "FindLetter"
               },
               {
                 "id": "77868d15-9ed3-404a-bff7-53e826638316",
-                "type": "WriteLetter",
-                "letter": "k"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "11ad1f60-87ab-46fd-b686-8d43eb529730",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "2b2793be-ce74-4b91-b139-bb84b17616fe",
+                "type": "MissingLetter",
+                "difficulty": 0.1
+              },
+              {
+                "id": "e2349df4-d971-4848-95ee-f8026bac8134",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "52254d8e-e658-47c6-97de-517884373f68",
@@ -903,6 +1135,49 @@
               },
               {
                 "id": "88d3b14a-e400-4425-a73a-08e404a501c1",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "b6fecb54-82d8-4786-b265-80e306d7f542",
+            "title": "Sprachhandlungslektion DFK",
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "afa414e5-172c-4ef5-b00a-d7c7339fd754",
+                "type": "StoryVideo",
+                "video": "serlo6"
+              }
+            ]
+          },
+          {
+            "id": "e7c62e0b-9caa-4827-9a90-11df2ad7e8ca",
+            "title": "Wiederholungslektion DFK",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "b0b8471c-c34a-4c82-93f2-b1ade55f8b27",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["d", "f", "k"]
+              },
+              {
+                "id": "92a49733-1944-4baf-987e-ad0f56588bd0",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "7cf432bd-e10e-4a02-bf1d-0d5289abdb42",
+                "type": "HasPhonemeRevision",
+                "letters": ["d", "f", "k"]
+              },
+              {
+                "id": "7bccf421-3f13-4ec0-b7a2-5b6babca7b80",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "463b22c1-7695-4651-8e4b-3ca2e95a5847",
                 "type": "PraiseVideo"
               }
             ]
@@ -926,46 +1201,61 @@
               "tasche",
               "flasche"
             ],
+            "letter": "sch",
             "children": [
               {
                 "id": "7206c896-c365-4047-addf-e66fc23b358e",
-                "type": "IntroduceLetter",
-                "letter": "sch"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "eac32363-70f1-4301-9d7a-1f69908fec16",
-                "type": "PresentLetter",
-                "letter": "sch"
+                "type": "PresentLetter"
               },
               {
                 "id": "7f932345-31b5-4506-ba2c-31f3326a6f2b",
-                "type": "RepeatLetter",
-                "letter": "sch"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "48e596c7-3ef5-4386-90c1-e46bc6d4ab01",
+                "type": "LetterRotated",
+                "difficulty": 0.2
               },
               {
                 "id": "339643d5-37cc-4611-b8e8-3ec73d0d7035",
-                "type": "WriteLetter",
-                "letter": "sch"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "9d41fe7b-de30-4822-82f4-81a8a68b51eb",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "9a33df3c-eada-4b0f-b2e9-d65695537884",
-                "type": "ShowWords",
-                "letter": "sch"
+                "type": "ShowWords"
               },
               {
                 "id": "ff7996ab-2967-4f87-aaa1-f548432f75b3",
-                "type": "RepeatWords",
-                "letter": "sch"
+                "type": "RepeatWords"
               },
               {
                 "id": "8d62e1af-cca3-40c8-b9cc-44b32fa5dd6b",
-                "type": "FindLetter",
-                "letter": "sch"
+                "type": "FindLetter"
               },
               {
                 "id": "6f624c82-9165-4b36-a111-de7701f4285c",
-                "type": "WriteLetter",
-                "letter": "sch"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "04ff8333-8458-4cd4-b2ce-66efb737fb26",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "2407179a-29b4-4fb8-8f54-cf14998044cb",
+                "type": "MissingLetter",
+                "difficulty": 0.2
+              },
+              {
+                "id": "807892d9-abbe-40e0-9647-69159fc3d3da",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "16625f80-70a4-4e0d-9212-16bb072fe637",
@@ -981,46 +1271,61 @@
             "id": "fc7c5a9f-bbcd-4071-9e9e-314fa6478c21",
             "title": "U",
             "words": ["nuss", "hut", "kuss", "bus", "fluss", "schuh", "blut"],
+            "letter": "u",
             "children": [
               {
                 "id": "aab77d36-b101-4903-a1a1-28b3958b2e66",
-                "type": "IntroduceLetter",
-                "letter": "u"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "55541864-e1d0-4250-a082-17e3dda993a5",
-                "type": "PresentLetter",
-                "letter": "u"
+                "type": "PresentLetter"
               },
               {
                 "id": "92599bf8-ef9b-45fa-a7fb-e7f7254523c0",
-                "type": "RepeatLetter",
-                "letter": "u"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "661a7bf4-8476-42df-a5e0-ce170402a0bb",
+                "type": "LetterRotated",
+                "difficulty": 0.2
               },
               {
                 "id": "dba714b2-6b7f-4aad-9dec-3a110bc593b2",
-                "type": "WriteLetter",
-                "letter": "u"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "252bf9fc-57ab-4607-b24a-595903eb67ad",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "000fe2ae-6e7f-4a60-939a-b6be446667d1",
-                "type": "ShowWords",
-                "letter": "u"
+                "type": "ShowWords"
               },
               {
                 "id": "c3df6a09-19b8-4ad2-aaf4-41365efb71f5",
-                "type": "RepeatWords",
-                "letter": "u"
+                "type": "RepeatWords"
               },
               {
                 "id": "618749ae-99a9-4b2a-990e-a8caf71de0e6",
-                "type": "FindLetter",
-                "letter": "u"
+                "type": "FindLetter"
               },
               {
                 "id": "5046601c-f6bc-4615-9c67-8c9a161d0dc2",
-                "type": "WriteLetter",
-                "letter": "u"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "8cfe1a8a-e593-4b80-802d-60619afe624d",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "92fc29d4-acae-44d6-a07c-5b66ddf734e1",
+                "type": "MissingLetter",
+                "difficulty": 0.2
+              },
+              {
+                "id": "6ac8420c-007a-409c-adb2-2a7fa9ce3ecf",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "e091c501-ebf5-454b-885a-099b168911e9",
@@ -1045,46 +1350,61 @@
               "garten",
               "gruen"
             ],
+            "letter": "g",
             "children": [
               {
                 "id": "c05809c6-9137-47d2-80b9-d857b6c1353e",
-                "type": "IntroduceLetter",
-                "letter": "g"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "2c761b0c-a180-4c17-ad96-80499df439da",
-                "type": "PresentLetter",
-                "letter": "g"
+                "type": "PresentLetter"
               },
               {
                 "id": "ca815cc3-41c4-4d16-9242-db8804940d33",
-                "type": "RepeatLetter",
-                "letter": "g"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "5e360b2b-ed17-4cc7-b772-5a8a11b428dc",
+                "type": "LetterRotated",
+                "difficulty": 0.2
               },
               {
                 "id": "64fa7401-a2af-47ad-9ad5-b49911bca8fa",
-                "type": "WriteLetter",
-                "letter": "g"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "6543ed45-0dcf-4ea2-bfff-17c054e07b74",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "ae00cb81-8c7d-4dc4-93df-78665cd701c6",
-                "type": "ShowWords",
-                "letter": "g"
+                "type": "ShowWords"
               },
               {
                 "id": "bd90dfbf-b643-494f-b488-81cda26b1ea4",
-                "type": "RepeatWords",
-                "letter": "g"
+                "type": "RepeatWords"
               },
               {
                 "id": "c8cc99dd-8a2e-465b-9cbf-efad42e7df27",
-                "type": "FindLetter",
-                "letter": "g"
+                "type": "FindLetter"
               },
               {
                 "id": "82386bd9-6276-4d1e-96a9-b3bc40141ae2",
-                "type": "WriteLetter",
-                "letter": "g"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "e20dd341-af15-4e3d-8f41-a17016955a96",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "4adbe8cd-65ad-4880-81a0-e1e9bc1db924",
+                "type": "MissingLetter",
+                "difficulty": 0.2
+              },
+              {
+                "id": "b82f8972-78ac-454d-a3ce-571f6aa9af11",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "ddbb778b-e729-433d-abc7-05d28a6c8bb9",
@@ -1092,6 +1412,54 @@
               },
               {
                 "id": "c9f6e921-b6d7-431c-959e-23d9b48354b6",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "da47f68c-dc82-42c4-b339-02cd1ea0638c",
+            "title": "Sprachhandlungslektion SCHUG",
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "b0d6611c-b1bc-4d7a-80c0-e1243550192d",
+                "type": "StoryVideo",
+                "video": "serlo7"
+              },
+              {
+                "id": "1fad5ea3-c057-419b-bb40-fab8504a38b3",
+                "type": "StoryVideo",
+                "video": "serlo8"
+              }
+            ]
+          },
+          {
+            "id": "f63d3a98-9440-4d18-a611-ad3c55042427",
+            "title": "Wiederholungslektion SCHUG",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "f39d73a3-7c84-41dc-8222-2cbfde891647",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["sch", "u", "g"]
+              },
+              {
+                "id": "758b6210-b223-4599-be4d-ee730b785586",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "181e6713-59e5-4e60-8ee4-fc440f6b7de1",
+                "type": "HasPhonemeRevision",
+                "letters": ["sch", "u", "g"]
+              },
+              {
+                "id": "6cda4423-0e16-4c4e-b7f3-16b09b2467c8",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "27d23667-690a-4077-bea9-1e736739f2b0",
                 "type": "PraiseVideo"
               }
             ]
@@ -1113,46 +1481,61 @@
               "wandern",
               "wanderweg"
             ],
+            "letter": "w",
             "children": [
               {
                 "id": "7999d1df-2086-423a-8c7c-301ac0596c07",
-                "type": "IntroduceLetter",
-                "letter": "w"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "77591d95-ee59-4f3e-9eb1-2054c88381e2",
-                "type": "PresentLetter",
-                "letter": "w"
+                "type": "PresentLetter"
               },
               {
                 "id": "ad8f9852-d891-44f1-a3a2-82b7cd777e41",
-                "type": "RepeatLetter",
-                "letter": "w"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "aed68a3d-a04f-466d-9b13-d4c109094129",
+                "type": "LetterRotated",
+                "difficulty": 0.3
               },
               {
                 "id": "b09e1404-a50c-44a8-aa1b-4b7985f19054",
-                "type": "WriteLetter",
-                "letter": "w"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "618613c4-0570-4adc-b886-21d34ff8fe81",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "c3e91134-db31-493d-97c8-090c36af7210",
-                "type": "ShowWords",
-                "letter": "w"
+                "type": "ShowWords"
               },
               {
                 "id": "29f68d28-2cf1-44b3-a6b1-11026fb7a34d",
-                "type": "RepeatWords",
-                "letter": "w"
+                "type": "RepeatWords"
               },
               {
                 "id": "49b52693-e98d-424c-b34f-92eab0627e6c",
-                "type": "FindLetter",
-                "letter": "w"
+                "type": "FindLetter"
               },
               {
                 "id": "4a9b94b6-acfb-4dc7-a771-4232fa52ea15",
-                "type": "WriteLetter",
-                "letter": "w"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "7a6a32e2-5805-462b-a4cd-a2a29698c6ed",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "bd208ff9-1963-4ebf-8fea-9ecedfc3a424",
+                "type": "MissingLetter",
+                "difficulty": 0.3
+              },
+              {
+                "id": "e7f6316c-af3a-46ed-aaf1-5ea355e7ddf9",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "1c2469d4-3345-42f1-aa79-dff9db8bd498",
@@ -1176,46 +1559,61 @@
               "treppe",
               "rezept"
             ],
+            "letter": "p",
             "children": [
               {
                 "id": "631945f0-0795-4f89-82c2-225c70117e94",
-                "type": "IntroduceLetter",
-                "letter": "p"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "d383b301-12bd-4b67-9f66-5744058c82c2",
-                "type": "PresentLetter",
-                "letter": "p"
+                "type": "PresentLetter"
               },
               {
                 "id": "f7e0a725-957d-4fb0-82ec-49be548c666c",
-                "type": "RepeatLetter",
-                "letter": "p"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "136989f4-4370-44ec-a0b8-616af394c568",
+                "type": "LetterRotated",
+                "difficulty": 0.3
               },
               {
                 "id": "0d710d00-4010-470a-882f-694874b74e00",
-                "type": "WriteLetter",
-                "letter": "p"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "1c467342-ab1b-4add-838a-07dcc944cdfb",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "c97a0664-beca-4e33-9378-d412fa0b6050",
-                "type": "ShowWords",
-                "letter": "p"
+                "type": "ShowWords"
               },
               {
                 "id": "44388b30-27cf-42d2-97c2-9f04b9dbf336",
-                "type": "RepeatWords",
-                "letter": "p"
+                "type": "RepeatWords"
               },
               {
                 "id": "c83446bf-c384-4fbe-bbfb-d4870e9d5c0c",
-                "type": "FindLetter",
-                "letter": "p"
+                "type": "FindLetter"
               },
               {
                 "id": "4317c886-dfd7-4cc0-99e4-38fc90b3407c",
-                "type": "WriteLetter",
-                "letter": "p"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "5baacc9b-98f2-489c-84c7-1b3c03cd6d8c",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "5633ce4c-8714-4ad5-b219-25e0eeb52945",
+                "type": "MissingLetter",
+                "difficulty": 0.3
+              },
+              {
+                "id": "765fb086-84f2-41d2-8ba8-fde3b3991495",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "fe861bb8-6825-4a7c-8345-c8d8e9844425",
@@ -1242,46 +1640,61 @@
               "kneipe",
               "reis"
             ],
+            "letter": "ei",
             "children": [
               {
                 "id": "f3d009a8-d510-446c-af32-5e18c48255e9",
-                "type": "IntroduceLetter",
-                "letter": "ei"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "dbff1138-2b28-43ca-bc6d-17f7a7d04342",
-                "type": "PresentLetter",
-                "letter": "ei"
+                "type": "PresentLetter"
               },
               {
                 "id": "e640d8af-e37e-4de3-98ba-873d9d0052f9",
-                "type": "RepeatLetter",
-                "letter": "ei"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "b78b7dcd-534f-44be-b781-9d31c4df85fa",
+                "type": "LetterRotated",
+                "difficulty": 0.3
               },
               {
                 "id": "462656e7-8436-43b5-b658-b1e900b7ecf2",
-                "type": "WriteLetter",
-                "letter": "ei"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "e7e698d3-b380-4bf2-955d-eb371d588e7e",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "02ad986e-87ff-439b-9603-4a703b345484",
-                "type": "ShowWords",
-                "letter": "ei"
+                "type": "ShowWords"
               },
               {
                 "id": "4250bc6e-8656-4f9b-962e-ee4018ee0128",
-                "type": "RepeatWords",
-                "letter": "ei"
+                "type": "RepeatWords"
               },
               {
                 "id": "31cfee98-4e46-4e06-b4a4-fc1af02b8e2c",
-                "type": "FindLetter",
-                "letter": "ei"
+                "type": "FindLetter"
               },
               {
                 "id": "37a0c2e6-3a6a-46dd-b054-d9a3e7fd45a9",
-                "type": "WriteLetter",
-                "letter": "ei"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "3228d9bc-b22d-4087-ba6d-cd37bdede303",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "3d2244e8-a9bc-44df-a4cf-f41511928774",
+                "type": "MissingLetter",
+                "difficulty": 0.3
+              },
+              {
+                "id": "b7a19c16-7fd7-4799-a32d-1de50de5689e",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "da20d9a4-6c56-4801-aebe-7fcf2d896878",
@@ -1289,6 +1702,76 @@
               },
               {
                 "id": "f88f9a4b-db8a-41db-bb9f-857f1a9076f3",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "0a7c713d-6cba-40de-9643-1e9e619daff0",
+            "title": "Sprachhandlungslektion WPEI",
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "eb682d32-bbc0-4901-bc4d-7c04fab3c793",
+                "type": "StoryVideo",
+                "video": "serlo9"
+              },
+              {
+                "id": "9dfcd79e-3235-4459-ac3e-e1e12f4526b8",
+                "type": "StoryVideo",
+                "video": "serlo10"
+              },
+              {
+                "id": "7c2f430b-8c8e-4511-b81a-070eb3ced8c1",
+                "type": "StoryVideo",
+                "video": "serlo11"
+              },
+              {
+                "id": "d1f09464-4c1a-491f-80b2-dffc18cda792",
+                "type": "WriteWords",
+                "texts": [
+                  "gern",
+                  "nicht",
+                  "das Kino",
+                  "das Café",
+                  "das Rad",
+                  "der Ball",
+                  "das Museum",
+                  "der Park",
+                  "die Schule",
+                  "das Schach",
+                  "das Klavier"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ed9412a2-24d7-4303-9e12-58fc51250c5d",
+            "title": "Wiederholungslektion WPEI",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "3de1fd52-d052-4545-998c-19a42ac07df4",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["w", "p", "ei"]
+              },
+              {
+                "id": "a2bab925-ac8a-4f09-9859-5cf17e790009",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "853534d3-16d4-4e0b-a605-ece6ff74a1e3",
+                "type": "HasPhonemeRevision",
+                "letters": ["w", "p", "ei"]
+              },
+              {
+                "id": "3f2051e1-c623-4053-aa95-fd53635aa467",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "51bf96f4-b67d-475a-a22a-e19186b97a22",
                 "type": "PraiseVideo"
               }
             ]
@@ -1313,46 +1796,61 @@
               "pilz",
               "zwiebel"
             ],
+            "letter": "z",
             "children": [
               {
                 "id": "669ae316-6637-4af9-9cfa-fbce1a7de8f0",
-                "type": "IntroduceLetter",
-                "letter": "z"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "fd557174-49a8-4ee3-8980-fb1d227312f2",
-                "type": "PresentLetter",
-                "letter": "z"
+                "type": "PresentLetter"
               },
               {
                 "id": "57a6e1dc-1abe-4b5d-b62f-c7d0191f1868",
-                "type": "RepeatLetter",
-                "letter": "z"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "cd2fab91-5a25-405e-b571-197f57bd9538",
+                "type": "LetterRotated",
+                "difficulty": 0.4
               },
               {
                 "id": "9dadffed-8724-4fdc-a32d-91aaf6293145",
-                "type": "WriteLetter",
-                "letter": "z"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "88e78b22-5983-4396-bb04-9f701114b2df",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "a6cc3b85-5f07-4a08-a4b0-7b2305537a44",
-                "type": "ShowWords",
-                "letter": "z"
+                "type": "ShowWords"
               },
               {
                 "id": "f01787b9-c62f-4fec-a47a-2f923b41e102",
-                "type": "RepeatWords",
-                "letter": "z"
+                "type": "RepeatWords"
               },
               {
                 "id": "2952cb00-e96d-4602-a91f-9c8720549913",
-                "type": "FindLetter",
-                "letter": "z"
+                "type": "FindLetter"
               },
               {
                 "id": "a886d6c7-af9a-43aa-8c41-f83ed32f3162",
-                "type": "WriteLetter",
-                "letter": "z"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "ffdfb708-f355-44c4-b522-388c6f41fdc9",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "628ff801-186f-4b8c-9949-91688feaa34c",
+                "type": "MissingLetter",
+                "difficulty": 0.3
+              },
+              {
+                "id": "2ad1ff45-624e-4899-af4f-331338ab387e",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "8510ba06-adab-4e6b-8314-87890816b567",
@@ -1378,46 +1876,61 @@
               "hochhaus",
               "kirche"
             ],
+            "letter": "ch",
             "children": [
               {
                 "id": "00c81ecf-6bb5-470b-a57f-3433ff00c461",
-                "type": "IntroduceLetter",
-                "letter": "ch"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "5198a3ea-dd65-4394-91e5-971bed14472d",
-                "type": "PresentLetter",
-                "letter": "ch"
+                "type": "PresentLetter"
               },
               {
                 "id": "7e9cb6ec-833c-433a-ae4c-11221db65bf3",
-                "type": "RepeatLetter",
-                "letter": "ch"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "9d4d87a7-e35d-4a6b-bf78-1f78e1f60890",
+                "type": "LetterRotated",
+                "difficulty": 0.4
               },
               {
                 "id": "2f3f51a1-6fd9-4662-9e4b-3109e0b7c2fd",
-                "type": "WriteLetter",
-                "letter": "ch"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "f3e64baf-d37b-4f7d-866f-99de8c2cbc48",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "7d6d88f5-e4a3-49da-b6f0-8ed531b4b37b",
-                "type": "ShowWords",
-                "letter": "ch"
+                "type": "ShowWords"
               },
               {
                 "id": "004fa332-77d5-4d0a-98bf-07a48167c46e",
-                "type": "RepeatWords",
-                "letter": "ch"
+                "type": "RepeatWords"
               },
               {
                 "id": "aae3e9ba-c135-40e8-ad85-26fcb85ac6e9",
-                "type": "FindLetter",
-                "letter": "ch"
+                "type": "FindLetter"
               },
               {
                 "id": "46e3ed3a-f147-448c-97de-61809764f568",
-                "type": "WriteLetter",
-                "letter": "ch"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "f2afc300-49d6-45e4-888c-5130e3a771f4",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "d110bfbc-3d3d-4c64-9ac2-2413116506ab",
+                "type": "MissingLetter",
+                "difficulty": 0.3
+              },
+              {
+                "id": "ef777ad4-13f8-471b-b302-8e7a7f151098",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "63ffe84a-45ca-466f-a661-bef88c1ad910",
@@ -1443,46 +1956,61 @@
               "maus",
               "mauer"
             ],
+            "letter": "au",
             "children": [
               {
                 "id": "875506e9-baa3-418f-9d99-d3bdb59d0841",
-                "type": "IntroduceLetter",
-                "letter": "au"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "773e17dc-d9a9-4df1-83c7-0ff001d50449",
-                "type": "PresentLetter",
-                "letter": "au"
+                "type": "PresentLetter"
               },
               {
                 "id": "8d907c7d-8f5d-410c-aba2-3177666c7792",
-                "type": "RepeatLetter",
-                "letter": "au"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "efd1a728-271b-4dd2-8c17-3d488d3b7527",
+                "type": "LetterRotated",
+                "difficulty": 0.4
               },
               {
                 "id": "1174e426-af41-44b1-9926-73e9a085e3d4",
-                "type": "WriteLetter",
-                "letter": "au"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "aaa941a4-0e05-464c-84bb-1e10132b6288",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "c132067b-88e1-43db-b3ff-e1dfcafe689a",
-                "type": "ShowWords",
-                "letter": "au"
+                "type": "ShowWords"
               },
               {
                 "id": "fd921539-10d7-4005-860a-677d2dc5cccb",
-                "type": "RepeatWords",
-                "letter": "au"
+                "type": "RepeatWords"
               },
               {
                 "id": "61bff069-9252-496e-b160-4b3331525b0e",
-                "type": "FindLetter",
-                "letter": "au"
+                "type": "FindLetter"
               },
               {
                 "id": "b97d7a8d-b972-4b09-a172-eb432b45ecc2",
-                "type": "WriteLetter",
-                "letter": "au"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "fe2efe0e-21e1-4b42-b958-501a07fb561b",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "29ec1177-f371-48f1-afbb-45767c09a66c",
+                "type": "MissingLetter",
+                "difficulty": 0.3
+              },
+              {
+                "id": "9360467f-b7e5-4447-9c2c-a40129453415",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "95419d59-3f60-41e8-8601-c49478fc9812",
@@ -1490,6 +2018,81 @@
               },
               {
                 "id": "2e0ee475-3d8f-4449-ba51-df289f03178d",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "b3ccbd2a-8c85-40e9-aeeb-09dbd3d63dba",
+            "title": "Sprachhandlungslektion ZCHAU",
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "2b31fa49-ff70-4e2b-a192-d8994678df53",
+                "type": "StoryVideo",
+                "video": "serlo12"
+              },
+              {
+                "id": "d84ede5c-07fd-411b-b38f-1b8110906cc7",
+                "type": "WriteWords",
+                "texts": [
+                  "ich",
+                  "du",
+                  "er",
+                  "sie",
+                  "wir",
+                  "ihr",
+                  "Abend",
+                  "Morgen",
+                  "Mittag"
+                ]
+              },
+              {
+                "id": "a873cba8-4e1a-4e7e-90ba-24fbd79636cb",
+                "type": "StoryVideo",
+                "video": "serlo13"
+              },
+              {
+                "id": "7d115b84-2aae-4cea-a12f-d1f933be4087",
+                "type": "WriteWords",
+                "texts": [
+                  "ich koche",
+                  "du kochst",
+                  "ich mache",
+                  "du machst",
+                  "mit",
+                  "ohne"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "0797b2d7-9463-4455-a920-bc27daf7d1cd",
+            "title": "Wiederholungslektion ZCHAU",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "8176b9b0-e3b4-4c5e-a3a3-f69fcda0e1dd",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["z", "ch", "au"]
+              },
+              {
+                "id": "341adf9b-bb14-40c5-9cd9-2c35b413c459",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "108353be-a693-4fd5-9572-9fa7b350ed52",
+                "type": "HasPhonemeRevision",
+                "letters": ["z", "ch", "au"]
+              },
+              {
+                "id": "af9d1b92-500b-460f-818e-16a6ac9c7413",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "e2a2a5ba-b9d6-44f7-8fa9-a323b5744028",
                 "type": "PraiseVideo"
               }
             ]
@@ -1504,46 +2107,61 @@
             "id": "2b823259-7f21-4110-9f05-c5b8c5db935f",
             "title": "J",
             "words": ["jahr", "ja", "jung"],
+            "letter": "j",
             "children": [
               {
                 "id": "84da53ea-7b69-453f-bbc6-f10a957b2eaf",
-                "type": "IntroduceLetter",
-                "letter": "j"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "55b6e707-132b-4990-98b4-7924f79c43f5",
-                "type": "PresentLetter",
-                "letter": "j"
+                "type": "PresentLetter"
               },
               {
                 "id": "101db725-4678-4ec0-b293-069480e62a1e",
-                "type": "RepeatLetter",
-                "letter": "j"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "0ba819ff-2b25-4715-8e2e-0f7d93a13a9b",
+                "type": "LetterRotated",
+                "difficulty": 0.5
               },
               {
                 "id": "2d7c6ca6-e191-4e80-9247-b5f25fb1d7e0",
-                "type": "WriteLetter",
-                "letter": "j"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "5009fc97-d9f3-44ed-955e-7044d2e67b3c",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "78ab70ee-b00b-40b1-83fc-00c5397fceda",
-                "type": "ShowWords",
-                "letter": "j"
+                "type": "ShowWords"
               },
               {
                 "id": "a9d4afbf-fe26-4493-b4e1-7d23393e5f66",
-                "type": "RepeatWords",
-                "letter": "j"
+                "type": "RepeatWords"
               },
               {
                 "id": "99565ac4-0db1-45b8-8b80-563ea7b540a0",
-                "type": "FindLetter",
-                "letter": "j"
+                "type": "FindLetter"
               },
               {
                 "id": "5e2a2eae-884c-4170-b8cb-f00c8233ff9a",
-                "type": "WriteLetter",
-                "letter": "j"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "3520a30c-b2a1-47fe-8c56-c5bd5e0c8305",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "11c53945-2ca2-44e3-89a7-4aa5464a88fb",
+                "type": "MissingLetter",
+                "difficulty": 0.4
+              },
+              {
+                "id": "aeed36c0-f3f4-4802-84b6-2659b360220d",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "373f3264-8124-432e-b9e8-fe2c369f5409",
@@ -1566,46 +2184,61 @@
               "schlange",
               "zeitung"
             ],
+            "letter": "ng",
             "children": [
               {
                 "id": "6ab309f0-8271-4523-9e69-90a7024c008d",
-                "type": "IntroduceLetter",
-                "letter": "ng"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "1063b025-ce9a-4e27-a79d-ee2a8aeda7ca",
-                "type": "PresentLetter",
-                "letter": "ng"
+                "type": "PresentLetter"
               },
               {
                 "id": "c2b0744a-b1e1-40e4-8ea5-66c911054201",
-                "type": "RepeatLetter",
-                "letter": "ng"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "fe870cff-f63b-461b-b000-b2049dd3dda3",
+                "type": "LetterRotated",
+                "difficulty": 0.5
               },
               {
                 "id": "87b90457-f1e9-4090-8e38-5d0907652339",
-                "type": "WriteLetter",
-                "letter": "ng"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "cff576e2-8e93-4ba4-ad2f-0b97f81b61ac",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "82f2da4b-f854-4e74-b9c9-662c74738abf",
-                "type": "ShowWords",
-                "letter": "ng"
+                "type": "ShowWords"
               },
               {
                 "id": "5846ddad-9629-4103-83c9-88a48d26f8cf",
-                "type": "RepeatWords",
-                "letter": "ng"
+                "type": "RepeatWords"
               },
               {
                 "id": "3bc38a16-8944-44b2-b3b4-a8195b15b77f",
-                "type": "FindLetter",
-                "letter": "ng"
+                "type": "FindLetter"
               },
               {
                 "id": "de87a719-0165-41f5-8433-98dfd3de50f9",
-                "type": "WriteLetter",
-                "letter": "ng"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "4a0adf2a-2808-4454-9b87-b488af712bb0",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "26c488f5-619a-4180-a859-f5c64b64a102",
+                "type": "MissingLetter",
+                "difficulty": 0.4
+              },
+              {
+                "id": "86e820b7-f32f-4e50-a17f-cd1f65736510",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "bc226979-f4a8-4b47-b29b-92295c8c05f0",
@@ -1632,46 +2265,61 @@
               "guertel",
               "muenze"
             ],
+            "letter": "ü",
             "children": [
               {
                 "id": "a21727f6-ce2a-45d5-8cfd-a4f2fe292232",
-                "type": "IntroduceLetter",
-                "letter": "ü"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "ae5dca93-5f71-4111-81ae-341b351c0cd2",
-                "type": "PresentLetter",
-                "letter": "ü"
+                "type": "PresentLetter"
               },
               {
                 "id": "9a79c36f-f466-47b4-8a1b-fcb3d88304c1",
-                "type": "RepeatLetter",
-                "letter": "ü"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "336d40cc-e5b0-4375-9171-2c3f9e75dbf9",
+                "type": "LetterRotated",
+                "difficulty": 0.5
               },
               {
                 "id": "a00461a6-cd13-4ddd-b514-406fdcece9e6",
-                "type": "WriteLetter",
-                "letter": "ü"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "5aa429f6-9382-4a83-864a-8b3afb898a91",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "e54b2732-4da0-420d-9952-4ad3e0a51c03",
-                "type": "ShowWords",
-                "letter": "ü"
+                "type": "ShowWords"
               },
               {
                 "id": "cae0bfa9-c1f6-423e-9f52-7df43b6d8adb",
-                "type": "RepeatWords",
-                "letter": "ü"
+                "type": "RepeatWords"
               },
               {
                 "id": "8a126aa4-079d-4d74-a79a-c0282bcdf9a6",
-                "type": "FindLetter",
-                "letter": "ü"
+                "type": "FindLetter"
               },
               {
                 "id": "93277c4e-80be-4b7f-a48d-bde6560a18c9",
-                "type": "WriteLetter",
-                "letter": "ü"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "6be3e079-587f-4d7e-aad6-58ede624db00",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "b392cec2-3544-4a47-a732-0f0a3ab9cfd3",
+                "type": "MissingLetter",
+                "difficulty": 0.4
+              },
+              {
+                "id": "dc80b162-11fc-4204-a904-02c5e04c137e",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "4b6b00ad-49f0-40c0-bc42-ab5fb2eaa43f",
@@ -1679,6 +2327,341 @@
               },
               {
                 "id": "5ad1beff-33c4-4d98-97ff-4b05876d7f51",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "1d25ccf3-89c1-42b2-9229-4a0c2308cabf",
+            "title": "Sprachhandlungslektion JNGÜ",
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "81c55286-36b3-4e27-9f4f-472c9c38fe9b",
+                "type": "StoryVideo",
+                "video": "serlo14"
+              },
+              {
+                "id": "c86dd1d5-143d-43d0-9504-f36f13df393b",
+                "type": "WriteWords",
+                "texts": [
+                  "ein",
+                  "eine",
+                  "einen",
+                  "kein",
+                  "keine",
+                  "keinen",
+                  "mein",
+                  "meine",
+                  "meinen",
+                  "dein",
+                  "deine",
+                  "deinen",
+                  "sein",
+                  "seine",
+                  "seinen",
+                  "ihr",
+                  "ihre",
+                  "ihren"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "d4ffc40e-eb10-47e9-8122-0227d336e7db",
+            "title": "Wiederholungslektion JNGÜ",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "69f68d7d-73d2-48b0-9b18-8e195a02f55f",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["j", "ng", "ü"]
+              },
+              {
+                "id": "f77d5412-cd70-49ff-943a-a5af749ee3a0",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "b017fd45-d755-42a0-bbc7-0eaaafd32216",
+                "type": "HasPhonemeRevision",
+                "letters": ["j", "ng", "ü"]
+              },
+              {
+                "id": "986277d4-4ac5-4afe-af33-fa3aeaaa37d7",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "0cf76661-d247-41fd-a349-dfdcafb2c764",
+                "type": "PraiseVideo"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4e044d31-efa0-49ab-be62-796ca379e409",
+        "title": "ßÄV",
+        "children": [
+          {
+            "id": "690aebde-6a52-46ff-9f34-3d97639df29d",
+            "title": "ß",
+            "words": ["fusz", "strasze", "grosz", "heiszen"],
+            "letter": "ß",
+            "children": [
+              {
+                "id": "4ef914d1-fb49-42fa-a5bf-af936224f976",
+                "type": "IntroduceLetter"
+              },
+              {
+                "id": "32516816-7ddc-4326-a775-929b304dae92",
+                "type": "PresentLetter"
+              },
+              {
+                "id": "545293dd-bab4-4ce8-b406-e5b0d551ca36",
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "9fc34656-9cdf-4373-9a8a-72723cbca70c",
+                "type": "LetterRotated",
+                "difficulty": 0.5
+              },
+              {
+                "id": "48591097-e0f8-4320-b642-3bea43c31e19",
+                "type": "WriteLetter"
+              },
+              {
+                "id": "05915dea-c0cd-4974-bafd-8a74f2af6137",
+                "type": "DifferFromSymbol"
+              },
+              {
+                "id": "f301e802-666f-4981-bc0c-700196d80dea",
+                "type": "ShowWords"
+              },
+              {
+                "id": "aba38b18-4f5f-42ed-a20c-b6e671e5df66",
+                "type": "RepeatWords"
+              },
+              {
+                "id": "ae0da812-53b7-404b-887e-9f70cb99c12c",
+                "type": "FindLetter"
+              },
+              {
+                "id": "f7a952dd-d9ad-41c6-86c5-1830cddce21c",
+                "type": "WriteLetter"
+              },
+              {
+                "id": "48d7b97a-6c63-4a0a-9ae3-55fc2b7cb7a3",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "c30cad53-a009-4874-971c-e25b23db0afc",
+                "type": "MissingLetter",
+                "difficulty": 0.4
+              },
+              {
+                "id": "6435a632-ff07-49ac-bb26-92bb52cffbaa",
+                "type": "ConnectSyllables"
+              },
+              {
+                "id": "79fac458-d7a0-458e-a35f-9bf50d72cd81",
+                "type": "MatchImage"
+              },
+              {
+                "id": "924f4f47-4394-423e-9640-90e545b40ec2",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "68add94f-a89b-44ad-aa11-677c6e3270f1",
+            "title": "Ä",
+            "words": [
+              "kaese",
+              "kaefig",
+              "kaefer",
+              "baer",
+              "raetsel",
+              "waesche",
+              "baecker",
+              "baeckerei"
+            ],
+            "letter": "ä",
+            "children": [
+              {
+                "id": "c7acac00-66d8-4d0a-a2ee-d60e885808c8",
+                "type": "IntroduceLetter"
+              },
+              {
+                "id": "7eab0fcc-c1fb-49f1-9d6e-7ee0b104f1e9",
+                "type": "PresentLetter"
+              },
+              {
+                "id": "dfed5ae2-d94d-4a9f-9322-3e4acffa45a3",
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "5baaf002-a14e-4e77-a302-b8c20c74b87a",
+                "type": "LetterRotated",
+                "difficulty": 0.5
+              },
+              {
+                "id": "696d3b70-27dd-4896-bc37-b0c803204904",
+                "type": "WriteLetter"
+              },
+              {
+                "id": "d17ee7a9-8a52-4c28-8fd1-a76bd9e1873b",
+                "type": "DifferFromSymbol"
+              },
+              {
+                "id": "57f343a7-08f8-48ef-8cee-19b82c9513a7",
+                "type": "ShowWords"
+              },
+              {
+                "id": "3cb47168-cad0-405b-b4a4-604a0d661c21",
+                "type": "RepeatWords"
+              },
+              {
+                "id": "b2736a3b-ecc6-45bb-bf17-eaa6f341bd75",
+                "type": "FindLetter"
+              },
+              {
+                "id": "941c71d9-bc3f-462b-b981-60efabc445b7",
+                "type": "WriteLetter"
+              },
+              {
+                "id": "8b7508b9-0ec8-468b-b32f-4cec6795a911",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "beef72ad-c8d8-4031-a63d-758c229b0e79",
+                "type": "MissingLetter",
+                "difficulty": 0.4
+              },
+              {
+                "id": "d20b9dbf-814e-425e-80f7-5b830b33040c",
+                "type": "ConnectSyllables"
+              },
+              {
+                "id": "c90899a6-4945-4b05-a01f-a557f2add308",
+                "type": "MatchImage"
+              },
+              {
+                "id": "13156d66-45e5-44b4-a7ef-35b65df646a0",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "ff325d4b-fc29-4dd7-b630-e951ed48cff3",
+            "title": "V",
+            "words": ["olive", "klavier", "silvester", "karneval"],
+            "letter": "v",
+            "children": [
+              {
+                "id": "7f8e176f-90fe-433c-ae59-821236b31dcf",
+                "type": "IntroduceLetter"
+              },
+              {
+                "id": "0dfcbf49-e638-44da-a3df-596b5d020a80",
+                "type": "PresentLetter"
+              },
+              {
+                "id": "e6135806-5a56-4a64-90f0-19b623905ef1",
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "52536bad-5eec-4ed3-bd45-1f308fae201c",
+                "type": "LetterRotated",
+                "difficulty": 0.5
+              },
+              {
+                "id": "049a2fb0-b1d8-4947-8983-f8e2d5a52041",
+                "type": "WriteLetter"
+              },
+              {
+                "id": "a1d15102-cad8-4f55-9261-961e6be4a6eb",
+                "type": "DifferFromSymbol"
+              },
+              {
+                "id": "3ead7ec6-3b4c-47de-a1f9-6fb78e14614d",
+                "type": "ShowWords"
+              },
+              {
+                "id": "346d9755-2ab9-4f43-bcf2-7faaf91a2d48",
+                "type": "RepeatWords"
+              },
+              {
+                "id": "230057ca-3af8-4f77-ac27-d9420719123d",
+                "type": "FindLetter"
+              },
+              {
+                "id": "c81f42bd-a3bd-43b3-9cd5-e0ac1a3fcca7",
+                "type": "WriteLetter"
+              },
+              {
+                "id": "35f1cc8d-c6a0-4f74-a97b-3876869b4882",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "ded57050-6731-46ef-a0d1-32960d2ee509",
+                "type": "MissingLetter",
+                "difficulty": 0.4
+              },
+              {
+                "id": "bac5aa12-705d-4eab-92e5-76a033bd25af",
+                "type": "ConnectSyllables"
+              },
+              {
+                "id": "ed1c0adc-ae99-4970-8ae8-974e2fd40e23",
+                "type": "MatchImage"
+              },
+              {
+                "id": "a55ea5b8-59db-4f5a-a43a-a36a173d7796",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "d9f9433c-3a08-4999-8ce6-6e6960114664",
+            "title": "Sprachhandlungslektion ßÄV",
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "362b2abb-0fe1-4b36-b4da-6eb19bfbc753",
+                "type": "StoryVideo",
+                "video": "serlo15"
+              }
+            ]
+          },
+          {
+            "id": "9b8868f7-ddd6-41fc-9e27-179422df88d5",
+            "title": "Wiederholungslektion ßÄV",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "4fbb08c2-905b-4f4f-8a95-cc2ebb1f000b",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["ß", "ä", "v"]
+              },
+              {
+                "id": "51b8f738-f959-429f-a04a-680e273dfe1d",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "13a7120e-0a61-4c63-a37b-042a9bab2220",
+                "type": "HasPhonemeRevision",
+                "letters": ["ß", "ä", "v"]
+              },
+              {
+                "id": "a2a9e6e8-5862-499a-89dd-b3b8f5f5ee0c",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "50b29f42-8182-4b45-a2dd-911e2e987a56",
                 "type": "PraiseVideo"
               }
             ]
@@ -1693,46 +2676,61 @@
             "id": "475838d1-337d-4961-9119-92aeeeafd6ba",
             "title": "EU",
             "words": ["feuer", "flugzeug", "ankreuzen", "werkzeug"],
+            "letter": "eu",
             "children": [
               {
                 "id": "ee417a5c-7510-4fe0-a889-f67b6b080c04",
-                "type": "IntroduceLetter",
-                "letter": "eu"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "f29457c9-598a-4b6b-a45c-d2c1bdac7de4",
-                "type": "PresentLetter",
-                "letter": "eu"
+                "type": "PresentLetter"
               },
               {
                 "id": "3ec383ee-cffd-4459-a7cc-2679c2fc029a",
-                "type": "RepeatLetter",
-                "letter": "eu"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "1d193ff1-466d-4b0d-95bd-eb3596dfa4cb",
+                "type": "LetterRotated",
+                "difficulty": 0.6
               },
               {
                 "id": "d643f7e1-ea8e-41f6-a0bb-075e0d961666",
-                "type": "WriteLetter",
-                "letter": "eu"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "f208eb81-d4e9-4da4-833f-02271152c391",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "f56c0e66-193c-4759-8dec-728530b72c82",
-                "type": "ShowWords",
-                "letter": "eu"
+                "type": "ShowWords"
               },
               {
                 "id": "69743d7c-9452-4b50-9bba-59110bcef122",
-                "type": "RepeatWords",
-                "letter": "eu"
+                "type": "RepeatWords"
               },
               {
                 "id": "51330c59-92c7-4b40-b073-d143e11d7f93",
-                "type": "FindLetter",
-                "letter": "eu"
+                "type": "FindLetter"
               },
               {
                 "id": "cf8d814a-c1d0-4401-8504-727aae9909e3",
-                "type": "WriteLetter",
-                "letter": "eu"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "7e0c9a5a-4df6-4813-b365-2d90ffefb9ba",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "2b5c3b35-e576-4af6-9a10-2a4476c27ea2",
+                "type": "MissingLetter",
+                "difficulty": 0.6
+              },
+              {
+                "id": "292bf443-c1cd-46e9-88a9-22e167a04b65",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "a35cf01a-341f-450e-b745-5cc6be19ce98",
@@ -1748,46 +2746,61 @@
             "id": "04de7cc1-e50f-404e-9191-55c916df7008",
             "title": "X",
             "words": ["taxi", "text", "arztpraxis"],
+            "letter": "x",
             "children": [
               {
                 "id": "4f814047-4fea-47e8-9360-5b8374a896a7",
-                "type": "IntroduceLetter",
-                "letter": "x"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "ca1dc498-9e9f-4076-8cff-25db39cfc181",
-                "type": "PresentLetter",
-                "letter": "x"
+                "type": "PresentLetter"
               },
               {
                 "id": "c9d569c0-4fcf-4a2a-ad93-b7efe486b482",
-                "type": "RepeatLetter",
-                "letter": "x"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "61b45804-7dbf-4221-aaf1-2820e719cf75",
+                "type": "LetterRotated",
+                "difficulty": 0.6
               },
               {
                 "id": "605d08cf-b984-4b54-8d46-4eab00aaadde",
-                "type": "WriteLetter",
-                "letter": "x"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "9ded9531-9217-4ef1-b8fe-d6c66a10c34a",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "77f47cef-cda2-496f-aafc-b7059c266447",
-                "type": "ShowWords",
-                "letter": "x"
+                "type": "ShowWords"
               },
               {
                 "id": "cb1df43a-3e3b-495d-83c1-db978c7ea90a",
-                "type": "RepeatWords",
-                "letter": "x"
+                "type": "RepeatWords"
               },
               {
                 "id": "5ca8cbfc-5fef-479e-8d8b-27cef7cac172",
-                "type": "FindLetter",
-                "letter": "x"
+                "type": "FindLetter"
               },
               {
                 "id": "25b45260-fbcc-40e4-a43b-a7cac9980dee",
-                "type": "WriteLetter",
-                "letter": "x"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "af340fc5-cb28-4943-8774-639a0d7d8edb",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "db16836d-e4eb-47cb-8410-578a8c5a0078",
+                "type": "MissingLetter",
+                "difficulty": 0.6
+              },
+              {
+                "id": "68b2bbe0-8b56-40a0-8010-4d35732adc82",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "82d66e81-f94e-4193-a4bb-e5487109c9ec",
@@ -1803,46 +2816,61 @@
             "id": "34ca94a6-408e-4b0e-8637-3abd9df274ca",
             "title": "Ö",
             "words": ["föhn", "löffel", "knödel"],
+            "letter": "ö",
             "children": [
               {
                 "id": "fa4d914f-bdea-4663-b3cb-4bc1a4f7fabb",
-                "type": "IntroduceLetter",
-                "letter": "ö"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "3f543e5f-b875-499f-b12c-d5b70fb89a55",
-                "type": "PresentLetter",
-                "letter": "ö"
+                "type": "PresentLetter"
               },
               {
                 "id": "996cb1e1-0a46-4fd1-8fc7-1e665fb64931",
-                "type": "RepeatLetter",
-                "letter": "ö"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "9f05d4e2-1586-419a-b189-74ffe3b0a687",
+                "type": "LetterRotated",
+                "difficulty": 0.6
               },
               {
                 "id": "d0c3e50f-621d-4efe-a094-a15c24b8aa46",
-                "type": "WriteLetter",
-                "letter": "ö"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "d2f0e64d-c7e0-427e-a2a0-daa00bfe7321",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "6941a6f2-356e-475b-9653-e57f626582f5",
-                "type": "ShowWords",
-                "letter": "ö"
+                "type": "ShowWords"
               },
               {
                 "id": "f95b86e0-7977-4ae4-93fe-3ee84e19c921",
-                "type": "RepeatWords",
-                "letter": "ö"
+                "type": "RepeatWords"
               },
               {
                 "id": "facf648d-82c1-4587-aff2-ed9291f90b13",
-                "type": "FindLetter",
-                "letter": "ö"
+                "type": "FindLetter"
               },
               {
                 "id": "26077898-3652-46f8-b494-e22b4a706a5f",
-                "type": "WriteLetter",
-                "letter": "ö"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "81be6540-5af9-4c02-8d1b-03cd6b25f784",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "9d4dd3bc-6379-438b-b450-30136953fea6",
+                "type": "MissingLetter",
+                "difficulty": 0.6
+              },
+              {
+                "id": "64f42587-c76f-48a0-b719-a5985c88c3df",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "431af803-3ad4-4a37-a375-115c854044a4",
@@ -1850,6 +2878,77 @@
               },
               {
                 "id": "76a98cd7-6414-4ea5-9d1d-7d8485f481c9",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "b9ed69d4-53cd-49c1-b7e1-6afe5a9aba69",
+            "title": "Sprachhandlungslektion ÄU/EUXÖ",
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "5a63efe7-6663-4fbc-b5c5-ff901503db0c",
+                "type": "StoryVideo",
+                "video": "serlo16"
+              },
+              {
+                "id": "e650aa14-beda-471f-a449-51ad9cce590b",
+                "type": "WriteWords",
+                "texts": ["leer", "müssen", "brauchen"]
+              },
+              {
+                "id": "24fb3dd4-7a34-4dac-a610-f1471e874366",
+                "type": "StoryVideo",
+                "video": "serlo17"
+              },
+              {
+                "id": "48173190-542b-43bf-a683-60b4fb867795",
+                "type": "WriteWords",
+                "texts": [
+                  "die Tomate",
+                  "möchte",
+                  "möchten",
+                  "möchtet",
+                  "möchtest",
+                  "der Pilz",
+                  "die Paprika",
+                  "die Olive",
+                  "bitte",
+                  "danke",
+                  "die Birne",
+                  "der Apfel"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "eec44749-afed-4442-9531-1977bf05e06e",
+            "title": "Wiederholungslektion ÄUXÖ",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "1f290e90-2759-43ec-b908-ae1a710e56e4",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["äu", "x", "ö"]
+              },
+              {
+                "id": "2ed3b671-65ea-4159-8481-6dae563a4a20",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "716b6f90-ee5f-48e8-b05a-6895d30ae9dd",
+                "type": "HasPhonemeRevision",
+                "letters": ["äu", "x", "ö"]
+              },
+              {
+                "id": "bd8938b0-7bd3-46b1-a736-a1eb58c0bf6e",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "fba833a2-bf61-42d3-9c23-3ab9010223c8",
                 "type": "PraiseVideo"
               }
             ]
@@ -1864,46 +2963,61 @@
             "id": "d1748aa8-d736-4da2-88ac-3d66e4f2a394",
             "title": "Y",
             "words": ["syrien", "asyl", "baby", "handy"],
+            "letter": "y",
             "children": [
               {
                 "id": "6151167b-e27d-4f63-a232-dbee23dd7a1a",
-                "type": "IntroduceLetter",
-                "letter": "y"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "723eded5-b19f-42ea-83a5-b7f6eeae0b49",
-                "type": "PresentLetter",
-                "letter": "y"
+                "type": "PresentLetter"
               },
               {
                 "id": "df4f93ba-2a24-482a-8dd2-748f2be43d44",
-                "type": "RepeatLetter",
-                "letter": "y"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "3f645b83-cbbe-4d4d-9363-978de8967a3e",
+                "type": "LetterRotated",
+                "difficulty": 0.7
               },
               {
                 "id": "fc42eadc-8388-48bf-aff3-a9d7f41bf74f",
-                "type": "WriteLetter",
-                "letter": "y"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "139b6faf-12ce-4700-8aa9-dcfb246b3e90",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "3ab15ed8-2e49-4967-a874-e57cfe924b6f",
-                "type": "ShowWords",
-                "letter": "y"
+                "type": "ShowWords"
               },
               {
                 "id": "2762cbc8-56d0-4665-846a-3f8e7fc22fa2",
-                "type": "RepeatWords",
-                "letter": "y"
+                "type": "RepeatWords"
               },
               {
                 "id": "f5f9be43-b852-4ea8-bb1e-c4a8f0d98caf",
-                "type": "FindLetter",
-                "letter": "y"
+                "type": "FindLetter"
               },
               {
                 "id": "521089a2-6206-4432-a392-7639fb62c620",
-                "type": "WriteLetter",
-                "letter": "y"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "01b24545-1388-4f01-99c4-0977eb1f6fa7",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "fb908763-9251-4be0-962e-4b4f617fff5a",
+                "type": "MissingLetter",
+                "difficulty": 0.8
+              },
+              {
+                "id": "58569e9b-c23c-4682-a8b1-38c3be0d3931",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "cf0ba3f9-d563-476b-9805-9ac2955ecee0",
@@ -1919,46 +3033,61 @@
             "id": "70e73847-091e-4d47-a55f-a56162161b6c",
             "title": "C",
             "words": ["cafe", "disco", "computer", "club"],
+            "letter": "c",
             "children": [
               {
                 "id": "2f088b5c-b790-4c05-aa06-4d6c4fe588bb",
-                "type": "IntroduceLetter",
-                "letter": "c"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "cb4134aa-d4d8-4102-8539-5d38d434cce5",
-                "type": "PresentLetter",
-                "letter": "c"
+                "type": "PresentLetter"
               },
               {
                 "id": "709c4664-089a-4015-a95b-a3ba20a77fae",
-                "type": "RepeatLetter",
-                "letter": "c"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "057254a6-9785-45d0-a980-e3e402cc0d4a",
+                "type": "LetterRotated",
+                "difficulty": 0.7
               },
               {
                 "id": "e9c942be-200b-49a6-95fb-f04d2b39d23c",
-                "type": "WriteLetter",
-                "letter": "c"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "db53cd89-f05b-467d-a9dd-3f6ee1834160",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "a3d51856-24f3-4fc1-9b3a-44ba2bae5783",
-                "type": "ShowWords",
-                "letter": "c"
+                "type": "ShowWords"
               },
               {
                 "id": "f7feedf8-1cf4-4aca-8749-847c9e8f9494",
-                "type": "RepeatWords",
-                "letter": "c"
+                "type": "RepeatWords"
               },
               {
                 "id": "b6834f3f-9a64-4e4e-8ea2-e8c89fb9e5fa",
-                "type": "FindLetter",
-                "letter": "c"
+                "type": "FindLetter"
               },
               {
                 "id": "ccf9deb0-5aa6-468e-b9cd-8b298bf8fdbd",
-                "type": "WriteLetter",
-                "letter": "c"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "8098fd01-72f4-4216-b8ed-686fc740cf67",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "396cec86-5352-4318-a806-8387aaf1fb3f",
+                "type": "MissingLetter",
+                "difficulty": 0.8
+              },
+              {
+                "id": "c11fbd21-b5e0-41a1-8919-9db9bf8be621",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "a84cbbbc-11ef-4757-ada1-3792bbfa96cb",
@@ -1974,46 +3103,61 @@
             "id": "fc8e04cf-919a-4603-834c-4603ff1ccf3a",
             "title": "QU",
             "words": ["aquarium", "qualle"],
+            "letter": "qu",
             "children": [
               {
                 "id": "624f59b6-79ce-4d86-b9c4-be817490d422",
-                "type": "IntroduceLetter",
-                "letter": "qu"
+                "type": "IntroduceLetter"
               },
               {
                 "id": "6093c301-21b3-41a2-8d89-4269d1984774",
-                "type": "PresentLetter",
-                "letter": "qu"
+                "type": "PresentLetter"
               },
               {
                 "id": "bf98b894-80b7-4db2-9594-78073522773c",
-                "type": "RepeatLetter",
-                "letter": "qu"
+                "type": "RepeatLetter"
+              },
+              {
+                "id": "9583593f-f592-49c0-812f-7e6f47f9d923",
+                "type": "LetterRotated",
+                "difficulty": 0.7
               },
               {
                 "id": "f66b8593-ab4f-4a22-8953-a865c47e9b9e",
-                "type": "WriteLetter",
-                "letter": "qu"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "921cc079-d47c-43e9-b321-a2b77c6345be",
+                "type": "DifferFromSymbol"
               },
               {
                 "id": "7d11d41b-8d0f-40b5-954b-245b43398289",
-                "type": "ShowWords",
-                "letter": "qu"
+                "type": "ShowWords"
               },
               {
                 "id": "e4228fc4-0690-43af-8b48-5916270cd5a8",
-                "type": "RepeatWords",
-                "letter": "qu"
+                "type": "RepeatWords"
               },
               {
                 "id": "2ee4f938-3353-4d87-891a-45be90822659",
-                "type": "FindLetter",
-                "letter": "qu"
+                "type": "FindLetter"
               },
               {
                 "id": "374a25c1-d63a-4f06-91d2-61ac263e3f24",
-                "type": "WriteLetter",
-                "letter": "qu"
+                "type": "WriteLetter"
+              },
+              {
+                "id": "017cceee-f004-429c-b86c-23c2a9f3ba82",
+                "type": "HasPhoneme"
+              },
+              {
+                "id": "b96e2090-7e0d-412b-b5b3-f366538adf1c",
+                "type": "MissingLetter",
+                "difficulty": 0.8
+              },
+              {
+                "id": "23288555-40bf-44d1-bec9-e931d3ad020e",
+                "type": "ConnectSyllables"
               },
               {
                 "id": "766ace58-3c51-4d04-9625-d73ad97877eb",
@@ -2021,6 +3165,59 @@
               },
               {
                 "id": "c2bc31b9-233b-4934-be1c-a1cf7a334f7d",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "8092da17-c071-4ab0-a1c5-235c81a1307c",
+            "title": "Sprachhandlungslektion YCQU",
+            "icon": "ios-chatbubbles",
+            "children": [
+              {
+                "id": "6faa0a99-e0ec-4c64-82a3-df235b32329f",
+                "type": "StoryVideo",
+                "video": "serlo18"
+              },
+              {
+                "id": "a2c38419-a027-4167-8b71-a4f31ce4edf9",
+                "type": "StoryVideo",
+                "video": "serlo19"
+              },
+              {
+                "id": "84c8151a-627f-4249-97c5-68653b6a0cd2",
+                "type": "StoryVideo",
+                "video": "serlo20"
+              }
+            ]
+          },
+          {
+            "id": "759e1876-a969-43fc-859f-1d7133463338",
+            "title": "Wiederholungslektion YCQU",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "3af97782-b1ff-4a4d-9634-fd2a1214d281",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["y", "c", "qu"]
+              },
+              {
+                "id": "59c69a33-9a7e-462f-80db-249d6e5427b3",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "a7d04172-4071-4dff-886e-3a5a26f19067",
+                "type": "HasPhonemeRevision",
+                "letters": ["y", "c", "qu"]
+              },
+              {
+                "id": "61a51cb0-5457-43fb-b6e8-0ddb1fe8bab2",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "a0032a26-57ec-49f2-a65c-36dd7309edae",
                 "type": "PraiseVideo"
               }
             ]

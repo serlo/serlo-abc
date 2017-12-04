@@ -90,8 +90,9 @@ export class HasPhoneme extends AbstractExercise<
 
   private containsPhoneme(): boolean {
     const { phoneme, word } = this.props;
-    const wordString = word.toString().toUpperCase();
+    const phonemeString: string = phoneme.toUpperCase();
+    const wordString: string = word.toString().toUpperCase();
 
-    return wordString.indexOf(phoneme) !== -1;
+    return wordString.indexOf(phonemeString) !== -1;
   }
 }

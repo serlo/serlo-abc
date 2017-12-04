@@ -11,11 +11,11 @@ const styles = {
   }
 };
 
-export const TutorialVideo = ({ setState, video }) => {
+export const TutorialVideo = ({ setState, submit, video }) => {
   return (
     <PortraitScreenOrientation>
       <View style={styles.container}>
-        <Video video={video} onPlayEnd={() => setState(true)} />
+        <Video video={video} onPlayEnd={() => submit()} />
       </View>
     </PortraitScreenOrientation>
   );

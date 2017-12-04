@@ -20,7 +20,6 @@ import { CacheAssets } from './components/helpers/cache-assets';
 
 import loadImage from './assets/images';
 import loadSound from './assets/sounds';
-import loadVideo from './assets/videos';
 import loadWordImage from './assets/words/images';
 import loadWordSound from './assets/words/sounds';
 
@@ -128,7 +127,6 @@ export class AppRoutes extends Component {
                 assets={map(load => load(), [
                   ...values(loadImage),
                   ...values(loadSound),
-                  ...values(loadVideo),
                   ...values(loadWordImage),
                   ...values(loadWordSound)
                 ])}
@@ -201,12 +199,16 @@ export class AppRoutes extends Component {
 
                 const newWords = this.interactor.getNewVocabulary(id);
                 const words = this.interactor.getVocabulary(id);
+                const letter = this.interactor.getNewLetter(id);
+                const letters = this.interactor.getLetters(id);
 
                 // Leaf
                 const group = this.entityFactory.createExerciseGroup(
                   type,
                   newWords,
                   words,
+                  letter,
+                  letters,
                   props
                 );
 

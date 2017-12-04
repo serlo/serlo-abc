@@ -5,8 +5,12 @@ import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
 export class RepeatWords extends AbstractExerciseGroup {
   protected generateExercises() {
-    const letter: string = this.props.letter.toLowerCase();
-    const words = sample(this.newVocabulary, this.newVocabulary.length);
+    if (!this.newLetter) {
+      return [];
+    }
+
+    const letter = this.newLetter.toLowerCase();
+    const words = this.newVocabulary;
     const version = sample(['a', 'b'], 1);
 
     return [
@@ -15,7 +19,7 @@ export class RepeatWords extends AbstractExerciseGroup {
         text: 'Wiederholen Sie das Wort.',
         sound: `exercises_wiederholen_sie_das_wort_${version}`
       }),
-      this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
+      this.createExercise(ExerciseTypes.InfoScreen, {
         type: 'TutorialVideo',
         video: 'explanation_show_word'
       }),

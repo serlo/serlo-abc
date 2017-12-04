@@ -2,11 +2,11 @@ import { Ionicons } from '@expo/vector-icons';
 import React, { Component } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 
-import { play } from '../../helpers/audio';
 import { RoundIconButton } from '../common/buttons';
 import RoundImageWithBorder from '../common/RoundImageWithBorder';
-import { LoadSound } from '../helpers/Audio';
 import { PortraitScreenOrientation } from '../helpers/screen-orientation';
+import { FONT_FAMILY } from '../../styles/text';
+import { PlaySounds } from '../helpers/PlaySounds';
 
 const styles = {
   container: {
@@ -24,7 +24,7 @@ const styles = {
   }
 };
 
-class MatchImageInner extends Component {
+export class MatchImage extends Component {
   createImageButton = index => {
     const { showFeedback, feedback } = this.props;
     const wrong = showFeedback && feedback.wrongChoice === index;
@@ -45,7 +45,8 @@ class MatchImageInner extends Component {
   };
 
   render() {
-    const { sound } = this.props;
+    const { correctIndex, words } = this.props;
+    const word = words[correctIndex];
 
     return (
       <PortraitScreenOrientation>
@@ -61,14 +62,22 @@ class MatchImageInner extends Component {
             </View>
           </View>
           <View style={[styles.row, { alignItems: 'flex-end' }]}>
-            <Text style={styles.bigLetter}>{this.props.text}</Text>
-            <RoundIconButton
-              IconComponent={Ionicons}
-              name="md-volume-up"
-              size={20}
-              onPress={() => play(sound)}
-              style={{
-                marginLeft: 10
+            <Text style={[styles.bigLetter, FONT_FAMILY]}>
+              {word.toString()}
+            </Text>
+            <PlaySounds
+              playInitially
+              sounds={[word.getSound()]}
+              render={(buttonProps, isRecording) => {
+                return (
+                  <RoundIconButton
+                    IconComponent={Ionicons}
+                    name="md-volume-up"
+                    size={20}
+                    style={{ marginLeft: 10 }}
+                    {...buttonProps}
+                  />
+                );
               }}
             />
           </View>
@@ -77,19 +86,3 @@ class MatchImageInner extends Component {
     );
   }
 }
-
-export const MatchImage = props => {
-  const { words, correctIndex } = props;
-  return (
-    <LoadSound
-      sound={words[correctIndex].getSound()}
-      render={sound => (
-        <MatchImageInner
-          text={words[correctIndex].toString()}
-          sound={sound}
-          {...props}
-        />
-      )}
-    />
-  );
-};
