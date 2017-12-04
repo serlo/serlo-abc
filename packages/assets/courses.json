@@ -1150,6 +1150,37 @@
                 "video": "serlo6"
               }
             ]
+          },
+          {
+            "id": "e7c62e0b-9caa-4827-9a90-11df2ad7e8ca",
+            "title": "Wiederholungslektion DFK",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "b0b8471c-c34a-4c82-93f2-b1ade55f8b27",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["d", "f", "k"]
+              },
+              {
+                "id": "92a49733-1944-4baf-987e-ad0f56588bd0",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "7cf432bd-e10e-4a02-bf1d-0d5289abdb42",
+                "type": "HasPhonemeRevision",
+                "letters": ["d", "f", "k"]
+              },
+              {
+                "id": "7bccf421-3f13-4ec0-b7a2-5b6babca7b80",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "463b22c1-7695-4651-8e4b-3ca2e95a5847",
+                "type": "PraiseVideo"
+              }
+            ]
           }
         ]
       },
