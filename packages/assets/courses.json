@@ -874,6 +874,37 @@
                 "video": "serlo5"
               }
             ]
+          },
+          {
+            "id": "51c2c460-dffa-435f-8f26-fd0832a4f8d3",
+            "title": "Wiederholungslektion BLM",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "1354f6ec-fee3-485c-b182-1d42cb1a2939",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["b", "l", "m"]
+              },
+              {
+                "id": "78132d78-63ed-4d91-b93d-601c692a9141",
+                "type": "LetterRotated",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "b6b549af-5c22-42b4-8d38-22b6360c43fa",
+                "type": "HasPhonemeRevision",
+                "letters": ["b", "l", "m"]
+              },
+              {
+                "id": "abffe3be-04fd-4e92-9acb-c1409301ca9f",
+                "type": "MissingLetter",
+                "difficulty": "0.1"
+              },
+              {
+                "id": "c913d852-27ac-4ae1-b940-69e6e122fa3f",
+                "type": "PraiseVideo"
+              }
+            ]
           }
         ]
       },
