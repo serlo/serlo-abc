@@ -607,6 +607,27 @@
                 "video": "serlo3"
               }
             ]
+          },
+          {
+            "id": "91e6427a-d6bc-4d83-bb89-b3ec32bc9cfa",
+            "title": "Wiederholungslektion RIH",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "3745eb3e-2f65-4b33-a9b2-4dfdb837f7d3",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["r", "i", "h"]
+              },
+              {
+                "id": "ef153364-7328-4358-a5b0-fa93b6be11f0",
+                "type": "HasPhonemeRevision",
+                "letters": ["r", "i", "h"]
+              },
+              {
+                "id": "24aef963-2e0c-4edd-bb9a-ef75e413db32",
+                "type": "PraiseVideo"
+              }
+            ]
           }
         ]
       },
