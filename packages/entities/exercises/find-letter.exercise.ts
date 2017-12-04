@@ -36,6 +36,13 @@ export class FindLetter extends AbstractExercise<
         word: 'ananas',
         letter: 'A'
       }
+    },
+    {
+      name: `Find letter ß in 'Fuß'`,
+      props: {
+        word: 'fusz',
+        letter: 'ß'
+      }
     }
   ];
 
@@ -72,6 +79,13 @@ export class FindLetter extends AbstractExercise<
         incorrectlySelected: [false, false, false, false, false, false]
       },
       isCorrect: false
+    },
+    {
+      name: 'all correct letters',
+      props: FindLetter.propsFixtures[1].props,
+      state: [false, false, true],
+      feedback: undefined,
+      isCorrect: true
     }
   ];
 
@@ -113,8 +127,8 @@ export class FindLetter extends AbstractExercise<
 
   public isCorrect(state: FindLetterState): boolean {
     const { letter, word } = this.props;
-    const letterString = letter.toUpperCase();
-    const wordString = word.toString().toUpperCase();
+    const letterString = letter.toLowerCase();
+    const wordString = word.toString().toLowerCase();
 
     for (let i = 0; i < wordString.length; i++) {
       if (state[i] !== (wordString[i] === letterString)) {

@@ -77,6 +77,7 @@ const images: { [id: string]: () => AssetTypes.ImageAsset } = {
   gabel: () => require('./images/gabel.jpg'),
   garten: () => require('./images/garten.jpg'),
   gesicht: () => require('./images/gesicht.jpg'),
+  grosz: () => require('./images/grosz.jpg'),
   gruen: () => require('./images/gruen.jpg'),
   guertel: () => require('./images/guertel.jpg'),
   guten_abend: () => require('./images/guten_abend.jpg'),

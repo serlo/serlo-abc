@@ -36,9 +36,13 @@ export class EntityFactory {
     const resolvedProps: E['props'] = mergeAll([
       props,
       sound && { sound: this.resolver.getSound(sound) },
-      sounds && { sounds: map(this.resolver.getSound.bind(this), sounds) },
+      sounds && {
+        sounds: map(this.resolver.getSound.bind(this.resolver), sounds)
+      },
       video && { video: this.resolver.getVideo(video) },
-      videos && { videos: map(this.resolver.getVideo.bind(this), videos) },
+      videos && {
+        videos: map(this.resolver.getVideo.bind(this.resolver), videos)
+      },
       word && { word: this.createWord(word) },
       words && { words: map(this.createWord.bind(this), words) }
     ]);

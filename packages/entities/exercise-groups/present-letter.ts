@@ -12,11 +12,15 @@ export class PresentLetter extends AbstractExerciseGroup {
     const [word] = sampleForletter(letter)(this.newVocabulary, 1);
 
     return [
-      this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
-        type: 'ShowLetter',
-        letter: capitalizeFirstLetter(letter),
-        sound: letter
-      }),
+      ...(letter === 'ß'
+        ? []
+        : [
+            this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
+              type: 'ShowLetter',
+              letter: capitalizeFirstLetter(letter),
+              sound: letter
+            })
+          ]),
       this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
         type: 'ShowLetter',
         letter,

@@ -12,7 +12,9 @@ export class DifferFromSymbolRevision extends AbstractExerciseGroup {
       map<string, Figure[]>(
         letter => [
           { name: letter.toLowerCase(), isIcon: false },
-          { name: capitalizeFirstLetter(letter), isIcon: false }
+          ...(letter === 'ß'
+            ? []
+            : [{ name: capitalizeFirstLetter(letter), isIcon: false }])
         ],
         this.props.letters as string[]
       )

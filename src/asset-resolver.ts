@@ -22,21 +22,33 @@ export class AssetResolver extends AbstractAssetResolver {
     });
   }
 
-  public getImage(id: string) {
+  public getImage(rawId: string) {
+    const id = this.cleanId(rawId);
     const load = loadImage[id] || loadWordImage[id];
 
     return load && load();
   }
 
-  public getSound(id: string) {
+  public getSound(rawId: string) {
+    const id = this.cleanId(rawId);
     const load = loadSound[id] || loadWordSound[id];
 
     return load && load();
   }
 
   public getVideo(id: string) {
-    const load = loadVideo[id];
+    const load = loadVideo[this.cleanId(id)];
 
     return load && (this.wifi ? load.hd : load.sd);
+  }
+
+  private cleanId(id: string): string {
+    return id
+      .replace(/\s/g, '_')
+      .replace(/ß/g, 'sz')
+      .replace(/ä/g, 'ae')
+      .replace(/ü/g, 'ue')
+      .replace(/ö/g, 'oe')
+      .replace(/é/g, 'e');
   }
 }

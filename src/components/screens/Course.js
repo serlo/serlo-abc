@@ -48,7 +48,7 @@ class Course extends Component {
     return (
       <WithDimensions
         render={({ width }) => {
-          const scale = width / 360;
+          const scale = width / 400;
 
           return (
             <PortraitScreenOrientation>

@@ -16,12 +16,12 @@ const styles = {
   text: DEFAULT
 };
 
-export const ExplanationText = ({ text, sound, setState }) => (
+export const ExplanationText = ({ text, sound, sounds, setState }) => (
   <PortraitScreenOrientation>
     <PlaySounds
       playInitially
       onPlayEnd={() => setState(true)}
-      sounds={[sound]}
+      sounds={sounds || [sound]}
       render={buttonProps => (
         <View style={styles.container}>
           <Text style={styles.text}>{text}</Text>

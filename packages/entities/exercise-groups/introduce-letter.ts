@@ -14,7 +14,7 @@ export class IntroduceLetter extends AbstractExerciseGroup {
     return [
       this.createExercise(ExerciseTypes.InfoScreen, {
         type: 'IntroduceLetter',
-        letter: `${capitalizeFirstLetter(letter)}${
+        letter: `${letter === 'ß' ? '' : capitalizeFirstLetter(letter)}${
           letter.length > 1 ? ' ' : ''
         }${letter}`,
         words

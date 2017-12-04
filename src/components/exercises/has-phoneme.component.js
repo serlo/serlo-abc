@@ -7,7 +7,7 @@ import { PortraitScreenOrientation } from '../helpers/screen-orientation';
 
 export class HasPhoneme extends Component {
   createChoiceButton = containsPhoneme => {
-    const { showFeedback, feedback } = this.props;
+    const { showFeedback, feedback, phoneme } = this.props;
 
     const wrong = showFeedback && feedback.wrongChoice === containsPhoneme;
     const missingCorrect =
@@ -21,7 +21,9 @@ export class HasPhoneme extends Component {
         highlighted={containsPhoneme === this.props.state.containsPhoneme}
         wrong={wrong}
         missingCorrect={missingCorrect}
-        text={this.props.phoneme.toUpperCase() + this.props.phoneme}
+        text={`${
+          phoneme === 'ß' || phoneme.length > 1 ? '' : phoneme.toUpperCase()
+        }${phoneme}`}
         size={60}
         style={[
           {

@@ -1,5 +1,4 @@
 import { map } from 'ramda';
-import { sample } from '../../sample';
 import { ExerciseTypes } from '../exercises';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
@@ -11,13 +10,14 @@ export class FindLetter extends AbstractExerciseGroup {
 
     const letter = this.newLetter.toLowerCase();
     const words = this.newVocabulary;
-    const version = sample(['a', 'b'], 1);
 
     return [
       this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
         type: 'ExplanationText',
-        text: `Markieren Sie alle ${letter.toUpperCase()} und ${letter}.`,
-        sound: `exercises_markieren_sie_alle_${letter}_${version}`
+        text: `Markieren Sie alle${
+          letter === 'ß' ? '' : ` ${letter.toUpperCase()} und`
+        } ${letter}.`,
+        sounds: [`exercises_markieren_sie_alle`, letter]
       }),
       ...map(
         word =>
