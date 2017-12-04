@@ -283,15 +283,7 @@
           {
             "id": "0c9f776b-d889-4c74-8cc1-54a530bb6880",
             "title": "T",
-            "words": [
-              "tomate",
-              "bett",
-              "kette",
-              "salat",
-              "tonne",
-              "karotte",
-              "topf"
-            ],
+            "words": ["tomate", "bett", "kette", "salat", "tonne", "karotte"],
             "letter": "t",
             "children": [
               {
@@ -343,7 +335,7 @@
           {
             "id": "6d2350b5-cfef-4c49-a3cb-53413f728434",
             "title": "O",
-            "words": ["hose", "obst", "ofen", "tor", "fotos"],
+            "words": ["topf", "hose", "obst", "ofen", "tor", "fotos"],
             "letter": "o",
             "children": [
               {
@@ -406,6 +398,27 @@
                 "id": "8710917d-9f66-4c84-8949-c5d387f15a96",
                 "type": "WriteWords",
                 "texts": ["Anna", "Nena", "Anton", "Soto"]
+              }
+            ]
+          },
+          {
+            "id": "11308015-6cc7-4356-a2e7-ab1eade2a0c7",
+            "title": "Wiederholungslektion STO",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "413ae29b-98b7-4ffa-a82a-4bdbb8da5cb1",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["s", "t", "o"]
+              },
+              {
+                "id": "8f65b642-ee9a-4360-abbd-10257acf1bda",
+                "type": "HasPhonemeRevision",
+                "letters": ["s", "t", "o"]
+              },
+              {
+                "id": "f89768c6-bec2-4ac5-bd27-512966b7cf74",
+                "type": "PraiseVideo"
               }
             ]
           }

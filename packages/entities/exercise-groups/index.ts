@@ -7,6 +7,7 @@ import { DifferFromSymbol } from './differ-from-symbol';
 import { DifferFromSymbolRevision } from './differ-from-symbol-revision';
 import { FindLetter } from './find-letter';
 import { HasPhoneme } from './has-phoneme';
+import { HasPhonemeRevision } from './has-phoneme-revision';
 import { IntroduceLetter } from './introduce-letter';
 import { LetterRotated } from './letter-rotated';
 import { MatchImage } from './match-image';
@@ -27,6 +28,7 @@ export enum ExerciseGroupTypes {
   DifferFromSymbolRevision = 'DifferFromSymbolRevision',
   FindLetter = 'FindLetter',
   HasPhoneme = 'HasPhoneme',
+  HasPhonemeRevision = 'HasPhonemeRevision',
   IntroduceLetter = 'IntroduceLetter',
   LetterRotated = 'LetterRotated',
   MatchImage = 'MatchImage',
@@ -63,6 +65,7 @@ export const ExerciseGroups: {
   [ExerciseGroupTypes.FindLetter]: FindLetter,
   [ExerciseGroupTypes.IntroduceLetter]: IntroduceLetter,
   [ExerciseGroupTypes.HasPhoneme]: HasPhoneme,
+  [ExerciseGroupTypes.HasPhonemeRevision]: HasPhonemeRevision,
   [ExerciseGroupTypes.LetterRotated]: LetterRotated,
   [ExerciseGroupTypes.MatchImage]: MatchImage,
   [ExerciseGroupTypes.MissingLetter]: MissingLetter,

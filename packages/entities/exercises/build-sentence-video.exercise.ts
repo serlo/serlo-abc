@@ -6,6 +6,7 @@ import {
 } from './abstract-exercise.interface';
 
 export interface BuildSentenceVideoProps {
+  /* tslint:disable-next-line:no-any */
   sentence: any;
 }
 
