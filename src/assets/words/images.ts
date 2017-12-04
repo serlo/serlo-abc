@@ -199,7 +199,7 @@ const images: { [id: string]: () => AssetTypes.ImageAsset } = {
   schere: () => require('./images/schere.jpg'),
   schlange: () => require('./images/schlange.jpg'),
   schreiben: () => require('./images/schreiben.jpg'),
-  schuh: () => require('./images/schuh.jpg'),
+  schuhe: () => require('./images/schuhe.jpg'),
   schule: () => require('./images/schule.jpg'),
   schwein: () => require('./images/schwein.jpg'),
   sechs: () => require('./images/sechs.jpg'),

@@ -34,7 +34,7 @@ export class FindLetter extends AbstractExercise<
       name: `Find letter A in 'Ananas'`,
       props: {
         word: 'ananas',
-        letter: 'A'
+        letter: 'a'
       }
     },
     {
@@ -43,6 +43,20 @@ export class FindLetter extends AbstractExercise<
         word: 'fusz',
         letter: 'ß'
       }
+    },
+    {
+      name: `Find letter Sch in 'Schal'`,
+      props: {
+        word: 'schal',
+        letter: 'sch'
+      }
+    },
+    {
+      name: `Find letter S in 'Sessel'`,
+      props: {
+        word: 'sessel',
+        letter: 's'
+      }
     }
   ];
 
@@ -50,7 +64,7 @@ export class FindLetter extends AbstractExercise<
     ExerciseFixture<FindLetterState, FindLetterFeedback>
   > = [
     {
-      name: 'all correct letters',
+      name: 'all correct letters (A)',
       props: FindLetter.propsFixtures[0].props,
       state: [true, false, true, false, true, false],
       feedback: undefined,
@@ -81,9 +95,35 @@ export class FindLetter extends AbstractExercise<
       isCorrect: false
     },
     {
-      name: 'all correct letters',
+      name: 'all correct letters (ß)',
       props: FindLetter.propsFixtures[1].props,
       state: [false, false, true],
+      feedback: undefined,
+      isCorrect: true
+    },
+    {
+      name: 'all correct letters (sch)',
+      props: FindLetter.propsFixtures[2].props,
+      state: [true, true, true, false, false],
+      feedback: undefined,
+      isCorrect: true
+    },
+    {
+      name: 'missing last letter (sch)',
+      props: FindLetter.propsFixtures[2].props,
+      state: [true, true, false, false, false],
+      feedback: {
+        correctlyNotSelected: [false, false, false, true, true],
+        correctlySelected: [true, true, false, false, false],
+        incorrectlyNotSelected: [false, false, true, false, false],
+        incorrectlySelected: [false, false, false, false, false]
+      },
+      isCorrect: false
+    },
+    {
+      name: 'all correct letters (s)',
+      props: FindLetter.propsFixtures[3].props,
+      state: [true, false, true, true, false, false],
       feedback: undefined,
       isCorrect: true
     }
@@ -101,41 +141,59 @@ export class FindLetter extends AbstractExercise<
       return undefined;
     }
 
-    const { letter, word } = this.props;
-    const letterString = letter.toUpperCase();
-    const wordString = word.toString().toUpperCase();
+    const correctState = this.getCorrectState();
 
     return {
       correctlySelected: mapIndexed(
-        (isSelected, i) => isSelected && wordString[i] === letterString,
+        (isSelected, i) => isSelected && correctState[i],
         selected
       ),
       incorrectlySelected: mapIndexed(
-        (isSelected, i) => isSelected && wordString[i] !== letterString,
+        (isSelected, i) => isSelected && !correctState[i],
         selected
       ),
       correctlyNotSelected: mapIndexed(
-        (isSelected, i) => !isSelected && wordString[i] !== letterString,
+        (isSelected, i) => !isSelected && !correctState[i],
         selected
       ),
       incorrectlyNotSelected: mapIndexed(
-        (isSelected, i) => !isSelected && wordString[i] === letterString,
+        (isSelected, i) => !isSelected && correctState[i],
         selected
       )
     };
   }
 
   public isCorrect(state: FindLetterState): boolean {
+    return R.equals(state, this.getCorrectState());
+  }
+
+  private getCorrectState(): FindLetterState {
     const { letter, word } = this.props;
-    const letterString = letter.toLowerCase();
     const wordString = word.toString().toLowerCase();
 
-    for (let i = 0; i < wordString.length; i++) {
-      if (state[i] !== (wordString[i] === letterString)) {
-        return false;
-      }
+    const startIndices = this.findAllIndices(letter, wordString);
+
+    const indices = R.flatten<number>(
+      R.map(
+        index => R.times(offset => index + offset, letter.length),
+        startIndices
+      )
+    );
+
+    return R.reduce(
+      (acc, index) => R.update(index, true, acc),
+      R.times(R.always(false), wordString.length),
+      indices
+    );
+  }
+
+  private findAllIndices(substr: string, str: string, start = 0): number[] {
+    const index = str.indexOf(substr, start);
+
+    if (index < 0) {
+      return [];
     }
 
-    return true;
+    return [index, ...this.findAllIndices(substr, str, index + substr.length)];
   }
 }

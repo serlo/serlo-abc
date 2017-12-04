@@ -1,5 +1,6 @@
 import { map } from 'ramda';
 import { ExerciseTypes } from '../exercises';
+import { capitalizeFirstLetter } from '../word/helpers';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
 export class FindLetter extends AbstractExerciseGroup {
@@ -15,7 +16,7 @@ export class FindLetter extends AbstractExerciseGroup {
       this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
         type: 'ExplanationText',
         text: `Markieren Sie alle${
-          letter === 'ß' ? '' : ` ${letter.toUpperCase()} und`
+          letter === 'ß' ? '' : ` ${capitalizeFirstLetter(letter)} und`
         } ${letter}.`,
         sounds: [`exercises_markieren_sie_alle`, letter]
       }),

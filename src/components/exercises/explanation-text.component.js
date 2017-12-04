@@ -19,6 +19,7 @@ const styles = {
 export const ExplanationText = ({ text, sound, sounds, setState }) => (
   <PortraitScreenOrientation>
     <PlaySounds
+      delay={0}
       playInitially
       onPlayEnd={() => setState(true)}
       sounds={sounds || [sound]}
