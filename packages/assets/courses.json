@@ -165,6 +165,14 @@
             "id": "7efb75e5-af32-4109-bf5b-20f2e2889621",
             "title": "Sprachhandlungslektion ANE",
             "icon": "ios-chatbubbles",
+            "words": [
+              "morgen",
+              "guten_morgen",
+              "tag",
+              "guten_tag",
+              "abend",
+              "guten_abend"
+            ],
             "children": [
               {
                 "id": "2ed70152-3d2d-437d-b1f0-11f2ee7b7958",
@@ -172,9 +180,37 @@
                 "video": "serlo1"
               },
               {
-                "id": "68e34e85-46dc-4756-800e-03ad41fc9f9f",
+                "id": "dca52e10-917a-48b0-8d47-bfa4cd0483fc",
                 "type": "WriteWords",
                 "texts": ["Anna", "Nena"]
+              },
+              {
+                "id": "06a3d514-c437-4383-9c76-cb406322fd83",
+                "type": "ShowWords"
+              },
+              {
+                "id": "8ad06ccc-9275-49b6-aef2-231a74de98c3",
+                "type": "MatchImage"
+              },
+              {
+                "id": "018d9952-d75a-4744-bd31-573a6303b1ec",
+                "type": "PraiseVideo"
+              }
+            ]
+          },
+          {
+            "id": "a8ba1750-5469-468f-956c-e3fdbd8902c2",
+            "title": "Wiederholungslektion ANE",
+            "icon": "ios-refresh",
+            "children": [
+              {
+                "id": "1662823a-acb0-4dcb-95dd-eed49cb6639b",
+                "type": "DifferFromSymbolRevision",
+                "letters": ["a", "n", "e"]
+              },
+              {
+                "id": "d75e736b-d6c3-4e21-8f13-b0f37d6435fc",
+                "type": "PraiseVideo"
               }
             ]
           }

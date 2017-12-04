@@ -19,12 +19,29 @@ export const BuildSentenceVideo = props => {
           backgroundColor: PRIMARY
         }}
       >
-        <Video video={props.video} aspectRatio={3 / 4} />
-        <BuildSentence
-          sentence={props.sentence}
-          paddingTop={height / 3}
-          changeAnswer={() => {}}
-        />
+        <View
+          style={{
+            height: height / 3,
+            width: '100%'
+          }}
+        >
+          <Video video={props.video} />
+        </View>
+        <View
+          style={{
+            position: 'absolute',
+            top: height / 3,
+            height: height * 2 / 3,
+            width: '100%'
+          }}
+        >
+          <BuildSentence
+            sentence={props.sentence}
+            changeAnswer={state => {
+              console.warn(state);
+            }}
+          />
+        </View>
       </View>
     </PortraitScreenOrientation>
   );

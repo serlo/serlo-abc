@@ -10,7 +10,7 @@ export class FindLetter extends AbstractExerciseGroup {
     }
 
     const letter = this.newLetter.toLowerCase();
-    const words = sample(this.newVocabulary, this.newVocabulary.length);
+    const words = this.newVocabulary;
     const version = sample(['a', 'b'], 1);
 
     return [

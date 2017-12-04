@@ -2,12 +2,14 @@ import { Entypo, Ionicons } from '@expo/vector-icons';
 import { Constants } from 'expo';
 import { map } from 'ramda';
 import React, { Component } from 'react';
-import { Button, StyleSheet, View, ScrollView } from 'react-native';
+import { Button, StyleSheet, View, ScrollView, Text } from 'react-native';
 
+import { version } from '../../../package.json';
 import { RoundIconButton } from '../common/buttons';
 import RoundTextButton from '../common/RoundTextButton';
 import { Progress } from '../../../packages/entities-interactor/ISerializedProgress';
-import { GREEN } from '../../styles/colors';
+import { GREEN, WHITE } from '../../styles/colors';
+import { FONT_FAMILY } from '../../styles/text';
 import { WithDimensions } from '../helpers/dimensions';
 import { PortraitScreenOrientation } from '../helpers/screen-orientation';
 
@@ -119,6 +121,9 @@ class Course extends Component {
                   ),
                   course.children
                 )}
+                <Text style={[{ color: WHITE }, FONT_FAMILY]}>
+                  Versionsnummer: {version}
+                </Text>
                 {__DEV__ && (
                   <Button
                     onPress={() => {

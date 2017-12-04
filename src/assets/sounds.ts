@@ -42,36 +42,58 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   e: () => require('./sounds/e.mp3'),
   ein: () => require('./sounds/ein.mp3'),
   eine: () => require('./sounds/eine.mp3'),
+  exercises_bilden_sie_saetze: () =>
+    require('./sounds/exercises_bilden_sie_saetze.mp3'),
   exercises_drehen_sie_den_buchstaben_a: () =>
     require('./sounds/exercises_drehen_sie_den_buchstaben_a.mp3'),
   exercises_drehen_sie_den_buchstaben_b: () =>
     require('./sounds/exercises_drehen_sie_den_buchstaben_b.mp3'),
+  exercises_ergaenzen_sie_das_fehlende_wort: () =>
+    require('./sounds/exercises_ergaenzen_sie_das_fehlende_wort.mp3'),
+  exercises_ergaenzen_sie_den_fehlenden_buchstaben: () =>
+    require('./sounds/exercises_ergaenzen_sie_den_fehlenden_buchstaben.mp3'),
   exercises_ergaenzen_sie_den_fehlenden_buchstaben_a: () =>
     require('./sounds/exercises_ergaenzen_sie_den_fehlenden_buchstaben_a.mp3'),
   exercises_ergaenzen_sie_den_fehlenden_buchstaben_b: () =>
     require('./sounds/exercises_ergaenzen_sie_den_fehlenden_buchstaben_b.mp3'),
+  exercises_ergaenzen_sie_die_fehlenden_buchstaben: () =>
+    require('./sounds/exercises_ergaenzen_sie_die_fehlenden_buchstaben.mp3'),
   exercises_ergaenzen_sie_die_fehlenden_buchstaben_a: () =>
     require('./sounds/exercises_ergaenzen_sie_die_fehlenden_buchstaben_a.mp3'),
   exercises_ergaenzen_sie_die_fehlenden_buchstaben_b: () =>
     require('./sounds/exercises_ergaenzen_sie_die_fehlenden_buchstaben_b.mp3'),
+  exercises_finden_sie_den_buchstaben: () =>
+    require('./sounds/exercises_finden_sie_den_buchstaben.mp3'),
   exercises_finden_sie_den_buchstaben_a: () =>
     require('./sounds/exercises_finden_sie_den_buchstaben_a.mp3'),
   exercises_finden_sie_den_buchstaben_b: () =>
     require('./sounds/exercises_finden_sie_den_buchstaben_b.mp3'),
+  exercises_finden_sie_die_buchstaben: () =>
+    require('./sounds/exercises_finden_sie_die_buchstaben.mp3'),
+  exercises_finden_sie_die_woerter: () =>
+    require('./sounds/exercises_finden_sie_die_woerter.mp3'),
   exercises_finden_sie_die_woerter_a: () =>
     require('./sounds/exercises_finden_sie_die_woerter_a.mp3'),
   exercises_finden_sie_die_woerter_b: () =>
     require('./sounds/exercises_finden_sie_die_woerter_b.mp3'),
   exercises_finden_sie_woerter_b: () =>
     require('./sounds/exercises_finden_sie_woerter_b.mp3'),
+  exercises_hoeren_sie_den_laut: () =>
+    require('./sounds/exercises_hoeren_sie_den_laut.mp3'),
   exercises_hoeren_sie_den_laut_a: () =>
     require('./sounds/exercises_hoeren_sie_den_laut_a.mp3'),
   exercises_hoeren_sie_den_laut_b: () =>
     require('./sounds/exercises_hoeren_sie_den_laut_b.mp3'),
+  exercises_hoeren_sie_die_silbe: () =>
+    require('./sounds/exercises_hoeren_sie_die_silbe.mp3'),
+  exercises_hoeren_sie_die_woerter: () =>
+    require('./sounds/exercises_hoeren_sie_die_woerter.mp3'),
   exercises_hoeren_sie_die_woerter_a: () =>
     require('./sounds/exercises_hoeren_sie_die_woerter_a.mp3'),
   exercises_hoeren_sie_die_woerter_b: () =>
     require('./sounds/exercises_hoeren_sie_die_woerter_b.mp3'),
+  exercises_markieren_sie_alle: () =>
+    require('./sounds/exercises_markieren_sie_alle.mp3'),
   exercises_markieren_sie_alle_a_a: () =>
     require('./sounds/exercises_markieren_sie_alle_a_a.mp3'),
   exercises_markieren_sie_alle_a_b: () =>
@@ -124,10 +146,14 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
     require('./sounds/exercises_markieren_sie_alle_t_a.mp3'),
   exercises_markieren_sie_alle_t_b: () =>
     require('./sounds/exercises_markieren_sie_alle_t_b.mp3'),
+  exercises_markieren_sie_das_richtige_bild: () =>
+    require('./sounds/exercises_markieren_sie_das_richtige_bild.mp3'),
   exercises_markieren_sie_das_richtige_bild_a: () =>
     require('./sounds/exercises_markieren_sie_das_richtige_bild_a.mp3'),
   exercises_markieren_sie_das_richtige_bild_b: () =>
     require('./sounds/exercises_markieren_sie_das_richtige_bild_b.mp3'),
+  exercises_markieren_sie_die_silbe: () =>
+    require('./sounds/exercises_markieren_sie_die_silbe.mp3'),
   exercises_ordnen_sie_die_buchstaben_a: () =>
     require('./sounds/exercises_ordnen_sie_die_buchstaben_a.mp3'),
   exercises_ordnen_sie_die_buchstaben_b: () =>
@@ -136,6 +162,8 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
     require('./sounds/exercises_schreiben_sie_das_wort_a.mp3'),
   exercises_schreiben_sie_das_wort_b: () =>
     require('./sounds/exercises_schreiben_sie_das_wort_b.mp3'),
+  exercises_schreiben_sie_den_buchstaben: () =>
+    require('./sounds/exercises_schreiben_sie_den_buchstaben.mp3'),
   exercises_schreiben_sie_den_buchstaben_a: () =>
     require('./sounds/exercises_schreiben_sie_den_buchstaben_a.mp3'),
   exercises_schreiben_sie_den_buchstaben_b: () =>
@@ -144,6 +172,8 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
     require('./sounds/exercises_schreiben_sie_die_silbe_a.mp3'),
   exercises_schreiben_sie_die_silbe_b: () =>
     require('./sounds/exercises_schreiben_sie_die_silbe_b.mp3'),
+  exercises_schreiben_sie_die_woerter: () =>
+    require('./sounds/exercises_schreiben_sie_die_woerter.mp3'),
   exercises_verbinden_sie_die_silben_a: () =>
     require('./sounds/exercises_verbinden_sie_die_silben_a.mp3'),
   exercises_verbinden_sie_die_silben_b: () =>

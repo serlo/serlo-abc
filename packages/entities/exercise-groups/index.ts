@@ -1,8 +1,10 @@
 import { Maybe } from '../../maybe';
 import { Word } from '../word';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
+import { BuildSentences } from './build-sentences';
 import { ConnectSyllables } from './connect-syllables';
 import { DifferFromSymbol } from './differ-from-symbol';
+import { DifferFromSymbolRevision } from './differ-from-symbol-revision';
 import { FindLetter } from './find-letter';
 import { HasPhoneme } from './has-phoneme';
 import { IntroduceLetter } from './introduce-letter';
@@ -19,8 +21,10 @@ import { WriteLetter } from './write-letter';
 import { WriteWords } from './write-words';
 
 export enum ExerciseGroupTypes {
+  BuildSentences = 'BuildSentences',
   ConnectSyllables = 'ConnectSyllables',
   DifferFromSymbol = 'DifferFromSymbol',
+  DifferFromSymbolRevision = 'DifferFromSymbolRevision',
   FindLetter = 'FindLetter',
   HasPhoneme = 'HasPhoneme',
   IntroduceLetter = 'IntroduceLetter',
@@ -52,8 +56,10 @@ export const ExerciseGroups: {
     ): AbstractExerciseGroup;
   };
 } = {
+  [ExerciseGroupTypes.BuildSentences]: BuildSentences,
   [ExerciseGroupTypes.ConnectSyllables]: ConnectSyllables,
   [ExerciseGroupTypes.DifferFromSymbol]: DifferFromSymbol,
+  [ExerciseGroupTypes.DifferFromSymbolRevision]: DifferFromSymbolRevision,
   [ExerciseGroupTypes.FindLetter]: FindLetter,
   [ExerciseGroupTypes.IntroduceLetter]: IntroduceLetter,
   [ExerciseGroupTypes.HasPhoneme]: HasPhoneme,

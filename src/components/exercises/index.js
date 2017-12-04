@@ -1,3 +1,4 @@
+import { BuildSentenceVideo } from './build-sentence-video.component';
 import { DifferFromSymbol } from './differ-from-symbol.component';
 import { ExplanationText } from './explanation-text.component';
 import { FindLetter } from './find-letter.component';
@@ -15,6 +16,7 @@ import { WriteLetter } from './write-letter.component';
 import { WriteWord } from './write-word.component';
 
 export const ExerciseComponents = {
+  BuildSentenceVideo,
   DifferFromSymbol,
   ExplanationText,
   FindLetter,
