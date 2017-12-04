@@ -25,7 +25,8 @@
         "com.android.launcher.permission.INSTALL_SHORTCUT",
         "com.htc.launcher.permission.READ_SETTINGS",
         "om.htc.launcher.permission.UPDATE_SHORTCUT"
-      ]
+      ],
+      "versionCode": 2
     }
   }
 }
