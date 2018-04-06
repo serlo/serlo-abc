@@ -25,7 +25,7 @@ export class RepeatWords extends AbstractExerciseGroup {
       }),
       ...map(
         word =>
-          this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
+          this.createExercise(ExerciseTypes.PlaySounds, {
             type: 'ShowWord',
             word,
             letter,

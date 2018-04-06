@@ -38,13 +38,21 @@ export class MissingLetter extends AbstractExerciseGroup {
         const wordLetters = (wordObj ? wordObj.toString() : word).split('');
         const numberOfOptions: number = 3;
         const numberMissing: number =
-          this.props.difficulty < 0.2
+          word.length === 2
             ? 1
-            : this.props.difficulty < 0.4
-              ? 2
-              : this.props.difficulty < 0.6
-                ? 3
-                : this.props.difficulty < 0.8 ? 4 : wordLetters.length;
+            : this.props.difficulty < 0.2
+              ? 1
+              : this.props.difficulty < 0.4
+                ? 2
+                : word.length === 3 && this.props.difficulty < 0.6
+                  ? 2
+                  : this.props.difficulty < 0.6
+                    ? 3
+                    : word.length === 4 && this.props.difficulty < 0.8
+                      ? 3
+                      : this.props.difficulty < 0.8
+                        ? 4
+                        : wordLetters.length - 1;
         const knownLettersInWord = filter(
           i => indexOf(wordLetters[i].toLowerCase(), this.letters) !== -1,
           times(identity, wordLetters.length)
