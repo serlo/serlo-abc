@@ -27,6 +27,17 @@ export class MissingLetter extends AbstractExerciseGroup {
         ? `exercises_ergaenzen_sie_den_fehlenden_buchstaben_${version}`
         : `exercises_ergaenzen_sie_die_fehlenden_buchstaben_${version}`;
 
+    {
+      /*const wordObj creates String
+      const wordLetters array of splitted substrings of the wordObj
+      const numberOfOptions
+      const missingByDifficulty number of missing letters defined by the difficulty
+      const numberMissing number of missing letters which is always smaller than the world length
+      const knownLettersInWord list containing
+      const missing
+      const options
+      */
+    }
     return [
       this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
         type: 'ExplanationText',
@@ -37,22 +48,18 @@ export class MissingLetter extends AbstractExerciseGroup {
         const wordObj = this.createWord(word);
         const wordLetters = (wordObj ? wordObj.toString() : word).split('');
         const numberOfOptions: number = 3;
-        const numberMissing: number =
-          word.length === 2
+        const missingByDifficulty: number =
+          this.props.difficulty < 0.2
             ? 1
-            : this.props.difficulty < 0.2
-              ? 1
-              : this.props.difficulty < 0.4
-                ? 2
-                : word.length === 3 && this.props.difficulty < 0.6
-                  ? 2
-                  : this.props.difficulty < 0.6
-                    ? 3
-                    : word.length === 4 && this.props.difficulty < 0.8
-                      ? 3
-                      : this.props.difficulty < 0.8
-                        ? 4
-                        : wordLetters.length - 1;
+            : this.props.difficulty < 0.4
+              ? 2
+              : this.props.difficulty < 0.6
+                ? 3
+                : this.props.difficulty < 0.8 ? 4 : wordLetters.length - 1;
+        const numberMissing = Math.min(
+          wordLetters.length - 1,
+          missingByDifficulty
+        );
         const knownLettersInWord = filter(
           i => indexOf(wordLetters[i].toLowerCase(), this.letters) !== -1,
           times(identity, wordLetters.length)
