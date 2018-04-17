@@ -31,8 +31,7 @@ export class MissingLetter extends AbstractExerciseGroup {
       /*const wordObj creates String
       const wordLetters array of splitted substrings of the wordObj
       const numberOfOptions
-      const missingByDifficulty number of missing letters defined by the difficulty
-      const numberMissing number of missing letters which is always smaller than the world length
+      const numberMissing number of missing letters
       const knownLettersInWord list containing
       const missing
       const options
@@ -48,18 +47,14 @@ export class MissingLetter extends AbstractExerciseGroup {
         const wordObj = this.createWord(word);
         const wordLetters = (wordObj ? wordObj.toString() : word).split('');
         const numberOfOptions: number = 3;
-        const missingByDifficulty: number =
+        const numberMissing: number =
           this.props.difficulty < 0.2
             ? 1
             : this.props.difficulty < 0.4
               ? 2
               : this.props.difficulty < 0.6
                 ? 3
-                : this.props.difficulty < 0.8 ? 4 : wordLetters.length - 1;
-        const numberMissing = Math.min(
-          wordLetters.length - 1,
-          missingByDifficulty
-        );
+                : this.props.difficulty < 0.8 ? 4 : wordLetters.length;
         const knownLettersInWord = filter(
           i => indexOf(wordLetters[i].toLowerCase(), this.letters) !== -1,
           times(identity, wordLetters.length)
