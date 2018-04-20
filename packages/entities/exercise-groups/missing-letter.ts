@@ -27,6 +27,16 @@ export class MissingLetter extends AbstractExerciseGroup {
         ? `exercises_ergaenzen_sie_den_fehlenden_buchstaben_${version}`
         : `exercises_ergaenzen_sie_die_fehlenden_buchstaben_${version}`;
 
+    {
+      /*const wordObj creates String
+      const wordLetters array of splitted substrings of the wordObj
+      const numberOfOptions
+      const numberMissing number of missing letters
+      const knownLettersInWord list containing
+      const missing
+      const options
+      */
+    }
     return [
       this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
         type: 'ExplanationText',

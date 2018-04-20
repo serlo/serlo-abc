@@ -77,7 +77,7 @@ export const MissingText = ({
     <PortraitScreenOrientation>
       <View style={styles.container}>
         {renderAssets()}
-        <View style={{ flexDirection: 'row' }}>{textParts}</View>
+        <View style={{ flexDirection: 'row', minHeight: 50 }}>{textParts}</View>
       </View>
     </PortraitScreenOrientation>
   );
