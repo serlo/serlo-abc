@@ -1,4 +1,4 @@
-import { addIndex, and, indexOf, map, reduce } from 'ramda';
+import * as R from 'ramda';
 
 import { Maybe } from '../../maybe';
 import { AssetTypes } from '../asset-resolver';
@@ -9,7 +9,6 @@ import {
   ExercisePropsFixture
 } from './abstract-exercise.interface';
 
-const mapIndexed = addIndex(map);
 export interface MissingTextProps {
   word?: AbstractWord;
   video?: AssetTypes.VideoAsset;
@@ -20,14 +19,12 @@ export interface MissingTextProps {
 
 export type MissingTextState = Array<Maybe<number>>;
 
-export type MissingTextFeedback = Maybe<
-  Array<
-    Maybe<{
-      wrongChoice: number;
-      correctChoice: number;
-    }>
-  >
->;
+export type MissingTextFeedbackElement = Maybe<{
+  wrongChoice: number;
+  correctChoice: number;
+}>;
+
+export type MissingTextFeedback = Maybe<MissingTextFeedbackElement[]>;
 
 export class MissingText extends AbstractExercise<
   MissingTextProps,
@@ -127,7 +124,7 @@ export class MissingText extends AbstractExercise<
   ];
 
   public getInitialState(): MissingTextState {
-    return map(selected => undefined, this.props.missing);
+    return R.map(selected => undefined, this.props.missing);
   }
 
   public getFeedback(state: MissingTextState): MissingTextFeedback {
@@ -135,26 +132,33 @@ export class MissingText extends AbstractExercise<
       return undefined;
     }
 
-    return mapIndexed((selected, i) => {
-      if (
-        typeof selected === 'undefined' ||
-        this.isCorrectChoice(selected, i)
-      ) {
-        return undefined;
-      }
+    return R.addIndex<Maybe<number>, MissingTextFeedbackElement>(R.map)(
+      (selected, i) => {
+        if (
+          typeof selected === 'undefined' ||
+          this.isCorrectChoice(selected, i)
+        ) {
+          return undefined;
+        }
 
-      return {
-        wrongChoice: selected,
-        correctChoice: indexOf(
-          this.props.text[this.props.missing[i]],
-          this.props.options[i]
-        )
-      };
-    }, state);
+        return {
+          wrongChoice: selected,
+          correctChoice: R.indexOf(
+            this.props.text[this.props.missing[i]],
+            this.props.options[i]
+          )
+        };
+      },
+      state
+    );
   }
 
   public isCorrect(state: MissingTextState): boolean {
-    return reduce(and, true, mapIndexed(this.isCorrectChoice, state));
+    return R.reduce<boolean, boolean>(
+      R.and,
+      true,
+      R.addIndex<Maybe<number>, boolean>(R.map)(this.isCorrectChoice, state)
+    );
   }
 
   public isCorrectChoice = (selected: Maybe<number>, i: number): boolean => {

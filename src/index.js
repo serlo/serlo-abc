@@ -4,7 +4,7 @@ import { NetInfo, View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
 
 import { EntityFactory } from '../packages/entities';
-import Interactor from '../packages/entities-interactor';
+import { CourseInteractorLoader } from '../packages/entities-interactor';
 import courses from '../packages/assets/courses.json';
 import { ExerciseComponents } from './components/exercises';
 import Course from './components/screens/Course';
@@ -29,7 +29,10 @@ export class AppRoutes extends Component {
 
     const storage = new Storage(courses);
     const progressStorage = new ProgressStorage();
-    this.interactor = new Interactor(storage, progressStorage);
+    this.interactorLoader = new CourseInteractorLoader(
+      storage,
+      progressStorage
+    );
 
     const resolver = new AssetResolver();
     this.entityFactory = new EntityFactory(resolver);
@@ -103,9 +106,10 @@ export class AppRoutes extends Component {
       this.setState({ shouldCache: connectionInfo.type === 'wifi' });
     });
 
-    this.interactor
+    this.interactorLoader
       .loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde')
-      .then(() => {
+      .then(interactor => {
+        this.interactor = interactor;
         const course = this.interactor.getStructure();
         this.setState({ course });
       });

@@ -897,9 +897,9 @@
   version "0.25.24"
   resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.25.24.tgz#2f64ce2100271163247f93fa7b4b052db40ce155"
 
-"@types/react-native@^0.50.7":
-  version "0.50.7"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.50.7.tgz#4c18bb14aa08f11934f539d2b8dcb2f1a6b88bd8"
+"@types/react-native@^0.55.8":
+  version "0.55.8"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.55.8.tgz#31a6b42852088742e7464876742081a2c1ef3fe7"
   dependencies:
     "@types/react" "*"
 

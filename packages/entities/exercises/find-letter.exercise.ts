@@ -22,8 +22,6 @@ export type FindLetterFeedback = Maybe<{
   incorrectlyNotSelected: boolean[];
 }>;
 
-const mapIndexed = R.addIndex(R.map);
-
 export class FindLetter extends AbstractExercise<
   FindLetterProps,
   FindLetterState,
@@ -142,21 +140,22 @@ export class FindLetter extends AbstractExercise<
     }
 
     const correctState = this.getCorrectState();
+    const mapIndexedBoolean = R.addIndex<boolean, boolean>(R.map);
 
     return {
-      correctlySelected: mapIndexed(
+      correctlySelected: mapIndexedBoolean(
         (isSelected, i) => isSelected && correctState[i],
         selected
       ),
-      incorrectlySelected: mapIndexed(
+      incorrectlySelected: mapIndexedBoolean(
         (isSelected, i) => isSelected && !correctState[i],
         selected
       ),
-      correctlyNotSelected: mapIndexed(
+      correctlyNotSelected: mapIndexedBoolean(
         (isSelected, i) => !isSelected && !correctState[i],
         selected
       ),
-      incorrectlyNotSelected: mapIndexed(
+      incorrectlyNotSelected: mapIndexedBoolean(
         (isSelected, i) => !isSelected && correctState[i],
         selected
       )

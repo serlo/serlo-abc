@@ -2,8 +2,6 @@ import { getStorybookUI, configure } from '@storybook/react-native';
 import { NativeModules } from 'react-native';
 import url from 'url';
 
-import './addons';
-
 configure(() => {
   require('./stories');
 }, module);

@@ -4,28 +4,24 @@ import { AbstractNode, InternalNode } from '../entities/course';
 import { Maybe } from '../maybe';
 import { stableSortWith } from '../stable-sort';
 import AbstractCourseInteractor from './AbstractCourseInteractor';
-import createCourse from './CourseFactory';
 import { ICourseStructure } from './ICourseStructure';
+import IProgressStorage from './IProgressStorage';
 import ISerializedProgress, {
   IIndividualProgress,
   Progress
 } from './ISerializedProgress';
 
 class CourseInteractor extends AbstractCourseInteractor {
-  private courseId: string;
-  private course: AbstractNode;
   private progress: ISerializedProgress;
 
-  public loadCourse(id: string) {
-    this.courseId = id;
-    return Promise.all([
-      this.storage.getCourse(id).then(course => {
-        this.course = createCourse(course);
-      }),
-      this.progressStorage.getProgress(id).then(progress => {
-        this.progress = progress;
-      })
-    ]);
+  constructor(
+    private courseId: string,
+    course: AbstractNode,
+    progressStorage: IProgressStorage,
+    initialProgress: ISerializedProgress
+  ) {
+    super(course, progressStorage, initialProgress);
+    this.progress = initialProgress;
   }
 
   public getStructure(level = Infinity) {

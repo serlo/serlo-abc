@@ -1,4 +1,5 @@
 import CourseInteractor from './CourseInteractor';
+import CourseInteractorLoader from './CourseInteractorLoader';
 import ICourseStorage from './ICourseStorage';
 import IProgressStorage from './IProgressStorage';
 import { ISerializedCourse } from './ISerializedCourse';
@@ -9,7 +10,7 @@ export {
   IProgressStorage,
   ISerializedCourse,
   ISerializedProgress,
-  Progress
+  Progress,
+  CourseInteractor,
+  CourseInteractorLoader
 };
-
-export default CourseInteractor;
