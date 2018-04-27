@@ -83,8 +83,7 @@ it('loadCourse fails if the course does not exist', () => {
 
 describe('getStructure', () => {
   beforeEach(() =>
-    interactor.loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde')
-  );
+    interactor.loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde'));
 
   it('returns the whole tree by default', () => {
     expect(interactor.getStructure()).toMatchSnapshot();

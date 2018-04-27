@@ -3,7 +3,7 @@
     "name": "Serlo ABC",
     "slug": "serlo-abc",
     "privacy": "public",
-    "sdkVersion": "23.0.0",
+    "sdkVersion": "27.0.0",
     "version": "0.0.0-development",
     "icon": "./appIcon.png",
     "packagerOpts": {
