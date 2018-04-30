@@ -10,9 +10,8 @@
       "sourceExts": ["ts", "tsx"],
       "transformer": "node_modules/react-native-typescript-transformer/index.js"
     },
-    "ios": {
-      "bundleIdentifier": "org.serlo.abc",
-      "loadJSInBackgroundExperimental": true
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "android": {
       "package": "org.serlo.abc",
@@ -27,6 +26,13 @@
         "om.htc.launcher.permission.UPDATE_SHORTCUT"
       ],
       "versionCode": 2
-    }
+    },
+    "assetBundlePatterns": [
+      "assets/images/*",
+      "assets/sounds/*",
+      "assets/words/images/*",
+      "assets/words/sounds/*",
+      "assets/videos/*"
+    ]
   }
 }

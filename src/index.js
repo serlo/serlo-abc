@@ -1,6 +1,6 @@
-import { find, identity, map, values } from 'ramda';
+import { find, identity, map } from 'ramda';
 import React, { Component } from 'react';
-import { NetInfo, View } from 'react-native';
+import { View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
 
 import { EntityFactory } from '../packages/entities';
@@ -16,12 +16,6 @@ import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
 import { PRIMARY } from './styles/colors';
 import { AssetResolver } from './asset-resolver';
-import { CacheAssets } from './components/helpers/cache-assets';
-
-import loadImage from './assets/images';
-import loadSound from './assets/sounds';
-import loadWordImage from './assets/words/images';
-import loadWordSound from './assets/words/sounds';
 
 export class AppRoutes extends Component {
   constructor(props) {
@@ -38,8 +32,7 @@ export class AppRoutes extends Component {
     this.entityFactory = new EntityFactory(resolver);
 
     this.state = {
-      course: null,
-      shouldCache: false
+      course: null
     };
   }
 
@@ -98,14 +91,6 @@ export class AppRoutes extends Component {
   };
 
   componentDidMount() {
-    NetInfo.getConnectionInfo(connectionInfo => {
-      this.setState({ shouldCache: connectionInfo.type === 'wifi' });
-    });
-
-    NetInfo.addEventListener('connectionChange', connectionInfo => {
-      this.setState({ shouldCache: connectionInfo.type === 'wifi' });
-    });
-
     this.interactorLoader
       .loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde')
       .then(interactor => {
@@ -126,17 +111,6 @@ export class AppRoutes extends Component {
               backgroundColor: PRIMARY
             }}
           >
-            {this.state.shouldCache && (
-              <CacheAssets
-                assets={map(load => load(), [
-                  ...values(loadImage),
-                  ...values(loadSound),
-                  ...values(loadWordImage),
-                  ...values(loadWordSound)
-                ])}
-                render={done => null}
-              />
-            )}
             <Route
               exact
               path="/"

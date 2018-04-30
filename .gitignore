@@ -11,4 +11,5 @@ node_modules/
 # Expo
 .expo/
 
+# Original videos (not included because of repository size limits)
 packages/assets/videos

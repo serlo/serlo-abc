@@ -18,9 +18,7 @@ readdir(videosPath).then(files => {
 
   R.forEach(file => {
     str += `${getFilename(file)}: {
-      sd: { uri: 'https://assets.serlo.org/serlo-abc/${getFilename(
-        file
-      )}.sd.mp4' },
+      sd: require('./videos/${getFilename(file)}.sd.mp4'),
       hd: { uri: 'https://assets.serlo.org/serlo-abc/${getFilename(
         file
       )}.hd.mp4' }
