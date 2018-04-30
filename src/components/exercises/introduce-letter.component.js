@@ -8,7 +8,7 @@ import { PortraitScreenOrientation } from '../helpers/screen-orientation';
 
 const ScaleFourImages = ({ displaySize, letter, words }) => {
   const scale = displaySize / 360;
-  const baseSize = 130 * scale;
+
   return (
     <View
       style={{
@@ -35,38 +35,24 @@ const ScaleFourImages = ({ displaySize, letter, words }) => {
         }}
       >
         <RoundImageWithBorder
-          image={words[0].getImage()}
+          image={words[0] && words[0].getImage()}
           size={130 * scale}
           white
           style={{ margin: 0 }}
         />
         <RoundImageWithBorder
-          image={words[1].getImage()}
+          image={words[1] && words[1].getImage()}
           size={110 * scale}
           white
           style={{ margin: 0 }}
         />
       </View>
-      {words.length === 3 ? (
-        <RoundImageWithBorder
-          style={{ marginTop: -25 * scale, marginLeft: 50 * scale }}
-          image={words[2].getImage()}
-          size={130 * scale}
-          white
-        />
-      ) : (
-        <RoundText
-          style={{
-            marginTop: -25 * scale - scale,
-            marginLeft: 50 * scale - scale - baseSize / 10
-          }}
-          text={''}
-          textStyle={{
-            fontSize: 50 * scale
-          }}
-          size={130 * scale + baseSize / 10}
-        />
-      )}
+      <RoundImageWithBorder
+        style={{ marginTop: -25 * scale, marginLeft: 50 * scale }}
+        image={words[2] && words[2].getImage()}
+        size={130 * scale}
+        white
+      />
     </View>
   );
 };
