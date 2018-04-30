@@ -1270,7 +1270,7 @@
           {
             "id": "fc7c5a9f-bbcd-4071-9e9e-314fa6478c21",
             "title": "U",
-            "words": ["nuss", "hut", "kuss", "bus", "fluss", "schuh", "blut"],
+            "words": ["nuss", "hut", "kuss", "bus", "fluss", "schuhe", "blut"],
             "letter": "u",
             "children": [
               {
@@ -2480,7 +2480,6 @@
             "words": [
               "kaese",
               "kaefig",
-              "kaefer",
               "baer",
               "raetsel",
               "waesche",
@@ -2815,7 +2814,7 @@
           {
             "id": "34ca94a6-408e-4b0e-8637-3abd9df274ca",
             "title": "Ö",
-            "words": ["föhn", "löffel", "knödel"],
+            "words": ["foehn", "loeffel", "knoedel"],
             "letter": "ö",
             "children": [
               {
