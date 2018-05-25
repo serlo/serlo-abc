@@ -193,6 +193,14 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
     require('./sounds/exercises_was_hoeren_sie_a.mp3'),
   exercises_was_hoeren_sie_b: () =>
     require('./sounds/exercises_was_hoeren_sie_b.mp3'),
+  exercises_welcher_buchstabe_ist_falsch_a: () =>
+    require('./sounds/exercises_welcher_buchstabe_ist_falsch_a.mp3'),
+  exercises_welcher_buchstabe_ist_falsch_b: () =>
+    require('./sounds/exercises_welcher_buchstabe_ist_falsch_b.mp3'),
+  exercises_welcher_buchstabe_ist_gedreht_a: () =>
+    require('./sounds/exercises_welcher_buchstabe_ist_gedreht_a.mp3'),
+  exercises_welcher_buchstabe_ist_gedreht_b: () =>
+    require('./sounds/exercises_welcher_buchstabe_ist_gedreht_b.mp3'),
   exercises_welche_buchstaben_sind_falsch_a: () =>
     require('./sounds/exercises_welche_buchstaben_sind_falsch_a.mp3'),
   exercises_welche_buchstaben_sind_falsch_b: () =>
@@ -205,14 +213,6 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
     require('./sounds/exercises_welche_silbe_hoeren_sie_a.mp3'),
   exercises_welche_silbe_hoeren_sie_b: () =>
     require('./sounds/exercises_welche_silbe_hoeren_sie_b.mp3'),
-  exercises_welcher_buchstabe_ist_falsch_a: () =>
-    require('./sounds/exercises_welcher_buchstabe_ist_falsch_a.mp3'),
-  exercises_welcher_buchstabe_ist_falsch_b: () =>
-    require('./sounds/exercises_welcher_buchstabe_ist_falsch_b.mp3'),
-  exercises_welcher_buchstabe_ist_gedreht_a: () =>
-    require('./sounds/exercises_welcher_buchstabe_ist_gedreht_a.mp3'),
-  exercises_welcher_buchstabe_ist_gedreht_b: () =>
-    require('./sounds/exercises_welcher_buchstabe_ist_gedreht_b.mp3'),
   exercises_wiederholen_sie_das_wort_a: () =>
     require('./sounds/exercises_wiederholen_sie_das_wort_a.mp3'),
   exercises_wiederholen_sie_das_wort_b: () =>
@@ -342,7 +342,7 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   pu: () => require('./sounds/pu.mp3'),
   pue: () => require('./sounds/pue.mp3'),
   py: () => require('./sounds/py.mp3'),
-  q: () => require('./sounds/q.mp3'),
+  qu: () => require('./sounds/qu.mp3'),
   qua: () => require('./sounds/qua.mp3'),
   quae: () => require('./sounds/quae.mp3'),
   que: () => require('./sounds/que.mp3'),
@@ -366,8 +366,6 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   ry: () => require('./sounds/ry.mp3'),
   s: () => require('./sounds/s.mp3'),
   s2: () => require('./sounds/s2.mp3'),
-  s_voiced: () => require('./sounds/s_voiced.mp3'),
-  s_voiceless: () => require('./sounds/s_voiceless.mp3'),
   sa: () => require('./sounds/sa.mp3'),
   sae: () => require('./sounds/sae.mp3'),
   sch: () => require('./sounds/sch.mp3'),
@@ -388,6 +386,8 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   szu: () => require('./sounds/szu.mp3'),
   szue: () => require('./sounds/szue.mp3'),
   szy: () => require('./sounds/szy.mp3'),
+  s_voiced: () => require('./sounds/s_voiced.mp3'),
+  s_voiceless: () => require('./sounds/s_voiceless.mp3'),
   t: () => require('./sounds/t.mp3'),
   t1: () => require('./sounds/t1.mp3'),
   ta: () => require('./sounds/ta.mp3'),
