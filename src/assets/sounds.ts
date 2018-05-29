@@ -342,7 +342,7 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   pu: () => require('./sounds/pu.mp3'),
   pue: () => require('./sounds/pue.mp3'),
   py: () => require('./sounds/py.mp3'),
-  q: () => require('./sounds/q.mp3'),
+  qu: () => require('./sounds/qu.mp3'),
   qua: () => require('./sounds/qua.mp3'),
   quae: () => require('./sounds/quae.mp3'),
   que: () => require('./sounds/que.mp3'),
