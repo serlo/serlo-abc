@@ -1,5 +1,7 @@
 import {
+  contains,
   filter,
+  find,
   identity,
   intersection,
   join,
@@ -10,6 +12,8 @@ import {
 import { sample } from '../../sample';
 import { AbstractExercise, ExerciseTypes } from '../exercises';
 import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
+import { capitalizeFirstLetter } from '../word/helpers';
+import Sentry from 'sentry-expo';
 
 export class ConnectSyllables extends AbstractExerciseGroup {
   protected generateExercises() {
@@ -38,40 +42,93 @@ export class ConnectSyllables extends AbstractExerciseGroup {
           if (!wordObj) {
             return undefined;
           }
-          const syllablesString = wordObj.getRawSingular();
-          if (!syllablesString || syllablesString.indexOf('|') === -1) {
+          const syllablesRawString = wordObj.getRawSingular();
+          if (!syllablesRawString || syllablesRawString.indexOf('|') === -1) {
             return undefined;
           }
-          const text = syllablesString.replace(/['-]/g, '').split('|');
+          const syllables = syllablesRawString.replace(/['-]/g, '').split('|');
 
-          const missing = sample(times(identity, text.length), 1);
-          const knownVocals = intersection(
-            ['a', 'e', 'i', 'o', 'u'],
-            this.letters
+          const missingSyllableIndices = sample(
+            times(identity, syllables.length),
+            1
           );
+          try {
+            const options = map(missingSyllableIndex => {
+              const syllableOptions = this.createOptionsForSyllable(
+                syllables[missingSyllableIndex]
+              );
+              if (!syllableOptions) {
+                throw new Error(
+                  `ConnectSyllables: Options empty at word ${syllablesRawString}, syllable ${missingSyllableIndex}`
+                );
+              }
+              return syllableOptions;
+            }, missingSyllableIndices);
 
-          const options = map(
-            missingLetterIndex =>
-              map(
-                replacement =>
-                  text[missingLetterIndex].replace(
-                    new RegExp(`[${join('', knownVocals)}]`, 'g'),
-                    replacement
-                  ),
-                knownVocals
-              ),
-            missing
-          );
-          return this.createExercise(ExerciseTypes.MissingText, {
-            type: 'MissingText',
-            word,
-            text,
-            missing,
-            options
-          });
+            return this.createExercise(ExerciseTypes.MissingText, {
+              type: 'MissingText',
+              word,
+              text: syllables,
+              missing: missingSyllableIndices,
+              options
+            });
+          } catch (err) {
+            Sentry.captureException(err);
+            return undefined;
+          }
         }, words)
         /* tslint:disable-next-line:no-any */
       ) as Array<AbstractExercise<any, any, any>>)
     ];
+  }
+
+  private createOptionsForSyllable(syllable: string) {
+    //find correct replacements (doubled vowels, diphtongs or knownVowels)
+    const replacementSet = this.createCorrectReplacementSet(syllable);
+    if (!replacementSet) {
+      return undefined;
+    }
+
+    //create a syllable option for each element in the replacement set
+    const result = map(
+      replacement =>
+        syllable.replace(
+          new RegExp(`(${join('|', replacementSet)})`, 'g'),
+          replacement
+        ),
+      replacementSet
+    );
+
+    return contains(syllable, result) ? result : [...result, syllable];
+  }
+
+  private createCorrectReplacementSet(syllable: string) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    const knownVowels = intersection(vowels, this.letters);
+    const longVowels = map(vowel => vowel + vowel, vowels);
+    const knownLongVowels = map(vowel => vowel + vowel, knownVowels);
+    const diphtongs = ['ie', 'ei', 'au', 'eu', 'äu'];
+    const umlauts = ['ä', 'ö', 'ü'];
+
+    //start with the sets containing strings of length two!
+    const possibleReplacementSetsLowercase = [
+      knownLongVowels,
+      diphtongs,
+      longVowels,
+      umlauts,
+      knownVowels,
+      vowels
+    ];
+    const possibleReplacementSetsCapitalized = map(
+      set => map(capitalizeFirstLetter, set),
+      possibleReplacementSetsLowercase
+    );
+    return find(
+      set => set.length > 0 && new RegExp(join('|', set), 'g').test(syllable),
+      [
+        ...possibleReplacementSetsCapitalized,
+        ...possibleReplacementSetsLowercase
+      ]
+    );
   }
 }
