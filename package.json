@@ -1,6 +1,6 @@
 {
   "name": "serlo-abc",
-  "version": "1.0.1",
+  "version": "0.0.0-development",
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "repository": "serlo-org/serlo-abc",
   "scripts": {
