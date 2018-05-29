@@ -109,6 +109,7 @@
         "<rootDir>/__mocks__/fileMock.js"
     },
     "preset": "jest-expo-ts",
-    "setupFiles": ["<rootDir>/.enzyme.js"]
+    "setupFiles": ["<rootDir>/.enzyme.js"],
+    "transformIgnorePatterns": []
   }
 }
