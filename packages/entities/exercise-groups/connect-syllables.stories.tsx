@@ -2,16 +2,18 @@
 import { storiesOf } from '@storybook/react-native';
 import * as React from 'react';
 import { View } from 'react-native';
-import { NativeRouter, Redirect, Route } from 'react-router-native';
 
-import { EntityFactory } from '../';
+import { ExerciseGroupTypes } from '.';
+import { EntityFactory } from '..';
+import { AssetResolver } from '../../../src/asset-resolver';
+// @ts-ignore
 import { ExerciseComponents } from '../../../src/components/exercises';
+// @ts-ignore
 import { LoadSounds } from '../../../src/components/helpers/Audio';
 import { ExerciseGroup } from '../../../src/components/helpers/exercise-group';
-import { play, getSound } from '../../../src/helpers/audio';
+// @ts-ignore
+import { getSound, play } from '../../../src/helpers/audio';
 import { PRIMARY } from '../../../src/styles/colors';
-import { AssetResolver } from '../../../src/asset-resolver';
-import { ExerciseGroupTypes } from './index';
 
 const resolver = new AssetResolver();
 const entityFactory = new EntityFactory(resolver);
@@ -56,7 +58,8 @@ const createSyllableExercise: (
   return (
     <LoadSounds
       sounds={[getSound('correct'), getSound('wrong')]}
-      render={([correctSound, wrongSound]) => (
+      // tslint:disable-next-line:no-any
+      render={([correctSound, wrongSound]: any[]) => (
         <View
           style={{
             flex: 1,
@@ -66,10 +69,14 @@ const createSyllableExercise: (
           <ExerciseGroup
             createExerciseComponent={type => ExerciseComponents[type]}
             group={group}
-            goToNav={() => {}}
+            goToNav={() => {
+              /* empty */
+            }}
             onCorrect={() => play(correctSound)}
             onWrong={() => play(wrongSound)}
-            onDone={() => {}}
+            onDone={() => {
+              /* empty */
+            }}
           />
         </View>
       )}
