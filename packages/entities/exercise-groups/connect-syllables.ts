@@ -9,11 +9,13 @@ import {
   times,
   without
 } from 'ramda';
+// @ts-ignore
+import Sentry from 'sentry-expo';
+
 import { sample } from '../../sample';
 import { AbstractExercise, ExerciseTypes } from '../exercises';
-import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 import { capitalizeFirstLetter } from '../word/helpers';
-import Sentry from 'sentry-expo';
+import { AbstractExerciseGroup } from './abstract-exercise-group.interface';
 
 export class ConnectSyllables extends AbstractExerciseGroup {
   protected generateExercises() {
@@ -83,13 +85,13 @@ export class ConnectSyllables extends AbstractExerciseGroup {
   }
 
   private createOptionsForSyllable(syllable: string) {
-    //find correct replacements (doubled vowels, diphtongs or knownVowels)
+    // find correct replacements (doubled vowels, diphtongs or knownVowels)
     const replacementSet = this.createCorrectReplacementSet(syllable);
     if (!replacementSet) {
       return undefined;
     }
 
-    //create a syllable option for each element in the replacement set
+    // create a syllable option for each element in the replacement set
     const result = map(
       replacement =>
         syllable.replace(
@@ -110,7 +112,7 @@ export class ConnectSyllables extends AbstractExerciseGroup {
     const diphtongs = ['ie', 'ei', 'au', 'eu', 'äu'];
     const umlauts = ['ä', 'ö', 'ü'];
 
-    //start with the sets containing strings of length two!
+    // start with the sets containing strings of length two!
     const possibleReplacementSetsLowercase = [
       knownLongVowels,
       diphtongs,
