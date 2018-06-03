@@ -21,7 +21,7 @@ export abstract class AbstractExerciseGroup {
     protected props: { [key: string]: any }
   ) {
     this.exercises = this.generateExercises();
-    this.resetProgress();
+    this.numberOfAttempts = 0;
   }
 
   /* tslint:disable-next-line:no-any */

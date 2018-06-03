@@ -54,6 +54,7 @@ const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
   brot_short: () => require('./sounds/brot_short.mp3'),
   buch_short: () => require('./sounds/buch_short.mp3'),
   bus_short: () => require('./sounds/bus_short.mp3'),
+  cafe_short: () => require('./sounds/cafe_short.mp3'),
   club_short: () => require('./sounds/club_short.mp3'),
   computer_short: () => require('./sounds/computer_short.mp3'),
   dach_short: () => require('./sounds/dach_short.mp3'),

@@ -3,7 +3,7 @@ import * as R from 'ramda';
 import React from 'react';
 import { MemoryRouter } from 'react-router-native';
 
-import Interactor from '../packages/entities-interactor';
+import { CourseInteractorLoader } from '../packages/entities-interactor';
 import courses from '../packages/assets/courses.json';
 import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
@@ -13,7 +13,7 @@ storiesOf('App', module).add('default', () => <App />);
 
 const storage = new Storage(courses);
 const progressStorage = new ProgressStorage();
-const interactor = new Interactor(storage, progressStorage);
+const interactorLoader = new CourseInteractorLoader(storage, progressStorage);
 
 const course = storiesOf('Course', module);
 
@@ -43,8 +43,10 @@ const addStory = (entity, level) => {
   }
 };
 
-interactor.loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde').then(() => {
-  const course = interactor.getStructure();
+interactorLoader
+  .loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde')
+  .then(interactor => {
+    const course = interactor.getStructure();
 
-  addStory(course, 0);
-});
+    addStory(course, 0);
+  });

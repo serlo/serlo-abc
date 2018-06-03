@@ -6,6 +6,7 @@ import * as R from 'ramda';
 import * as React from 'react';
 import { PanResponder, PanResponderInstance, Text, View } from 'react-native';
 
+import { Maybe } from '../../../packages/maybe';
 import { BLACK_TRANSPARENT, PRIMARY_WEAK } from '../../styles/colors';
 import { WithDimensions } from '../helpers/dimensions';
 import { RoundIconButton } from './buttons';
@@ -29,7 +30,7 @@ class Canvas extends React.Component<CanvasProps, CanvasState> {
     paths: []
   };
 
-  private panResponder: PanResponderInstance;
+  private panResponder: Maybe<PanResponderInstance>;
   private dx: number = 0;
   private dy: number = 0;
 
@@ -86,13 +87,13 @@ class Canvas extends React.Component<CanvasProps, CanvasState> {
             this.dx = -event.nativeEvent.layout.x;
             this.dy = -event.nativeEvent.layout.y;
           }}
-          {...this.panResponder.panHandlers}
+          {...(this.panResponder ? this.panResponder.panHandlers : {})}
           style={{
             flex: 1
           }}
         >
           <Svg style={{ flex: 1 }}>
-            {R.addIndex(R.map)(
+            {R.addIndex<RawPath>(R.map)(
               (path, index) => (
                 <Svg.G key={`path_${index}`}>
                   <Svg.Circle

@@ -1,5 +1,6 @@
 /* tslint:disable:max-classes-per-file */
 import Interactor from '../CourseInteractor';
+import InteractorLoader from '../CourseInteractorLoader';
 import ICourseStorage from '../ICourseStorage';
 import IProgressStorage from '../IProgressStorage';
 import { ISerializedCourse } from '../ISerializedCourse';
@@ -61,20 +62,21 @@ class MockProgressStorage implements IProgressStorage {
   }
 }
 
+let interactorLoader: InteractorLoader;
 let interactor: Interactor;
 
 beforeEach(() => {
   const storage = new MockCourseStorage();
   const progress = new MockProgressStorage();
 
-  interactor = new Interactor(storage, progress);
+  interactorLoader = new InteractorLoader(storage, progress);
 });
 
 it('loadCourse loads the course from storage if it exists', () =>
-  interactor.loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde'));
+  interactorLoader.loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde'));
 
 it('loadCourse fails if the course does not exist', () => {
-  return interactor
+  return interactorLoader
     .loadCourse('c990eacb-12af-4085-8b50-25d95d114984')
     .catch(err => {
       expect(err).toBeInstanceOf(Error);
@@ -83,8 +85,11 @@ it('loadCourse fails if the course does not exist', () => {
 
 describe('getStructure', () => {
   beforeEach(() =>
-    interactor.loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde')
-  );
+    interactorLoader
+      .loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde')
+      .then(i => {
+        interactor = i;
+      }));
 
   it('returns the whole tree by default', () => {
     expect(interactor.getStructure()).toMatchSnapshot();

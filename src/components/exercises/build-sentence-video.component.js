@@ -31,7 +31,7 @@ export const BuildSentenceVideo = props => {
           style={{
             position: 'absolute',
             top: height / 3,
-            height: height * 2 / 3,
+            height: (height * 2) / 3,
             width: '100%'
           }}
         >

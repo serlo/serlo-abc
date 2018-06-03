@@ -8,9 +8,8 @@ import { readdir, unlink, writeFile } from '../packages/node-promises';
 const gm = subClass({ imageMagick: true });
 
 // Base width of images
-const baseWidth = 200;
-const suffixes = ['@1x', '@2x', '@3x'];
-const sizes = R.times(i => baseWidth * (i + 1), 3);
+const suffixes = [''];
+const sizes = [800];
 
 const imagesPath = path.join(
   __dirname,

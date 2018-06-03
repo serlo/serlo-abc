@@ -1,6 +1,22 @@
 import { AssetTypes } from '../../packages/entities';
 
 const videos = {
+  a1: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/a1.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/a1.hd.mp4' }
+  },
+  a2: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/a2.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/a2.hd.mp4' }
+  },
+  a3: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/a3.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/a3.hd.mp4' }
+  },
+  a4: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/a4.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/a4.hd.mp4' }
+  },
   anna1: {
     sd: { uri: 'https://assets.serlo.org/serlo-abc/anna1.sd.mp4' },
     hd: { uri: 'https://assets.serlo.org/serlo-abc/anna1.hd.mp4' }
@@ -505,6 +521,50 @@ const videos = {
     sd: { uri: 'https://assets.serlo.org/serlo-abc/anton9.sd.mp4' },
     hd: { uri: 'https://assets.serlo.org/serlo-abc/anton9.hd.mp4' }
   },
+  au: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/au.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/au.hd.mp4' }
+  },
+  b: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/b.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/b.hd.mp4' }
+  },
+  ch1: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/ch1.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/ch1.hd.mp4' }
+  },
+  ch2: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/ch2.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/ch2.hd.mp4' }
+  },
+  d: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/d.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/d.hd.mp4' }
+  },
+  e1: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/e1.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/e1.hd.mp4' }
+  },
+  e2: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/e2.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/e2.hd.mp4' }
+  },
+  e3: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/e3.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/e3.hd.mp4' }
+  },
+  e4: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/e4.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/e4.hd.mp4' }
+  },
+  ei: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/ei.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/ei.hd.mp4' }
+  },
+  eu: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/eu.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/eu.hd.mp4' }
+  },
   explanation_show_letter: {
     sd: {
       uri: 'https://assets.serlo.org/serlo-abc/explanation_show_letter.sd.mp4'
@@ -528,6 +588,46 @@ const videos = {
     hd: {
       uri: 'https://assets.serlo.org/serlo-abc/explanation_write_letter.hd.mp4'
     }
+  },
+  f: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/f.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/f.hd.mp4' }
+  },
+  g: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/g.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/g.hd.mp4' }
+  },
+  h: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/h.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/h.hd.mp4' }
+  },
+  i1: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/i1.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/i1.hd.mp4' }
+  },
+  i2: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/i2.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/i2.hd.mp4' }
+  },
+  j: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/j.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/j.hd.mp4' }
+  },
+  k: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/k.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/k.hd.mp4' }
+  },
+  l: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/l.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/l.hd.mp4' }
+  },
+  m: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/m.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/m.hd.mp4' }
+  },
+  n: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/n.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/n.hd.mp4' }
   },
   nena1: {
     sd: { uri: 'https://assets.serlo.org/serlo-abc/nena1.sd.mp4' },
@@ -832,6 +932,10 @@ const videos = {
   nena9: {
     sd: { uri: 'https://assets.serlo.org/serlo-abc/nena9.sd.mp4' },
     hd: { uri: 'https://assets.serlo.org/serlo-abc/nena9.hd.mp4' }
+  },
+  ng: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/ng.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/ng.hd.mp4' }
   },
   praise1: {
     sd: { uri: 'https://assets.serlo.org/serlo-abc/praise1.sd.mp4' },

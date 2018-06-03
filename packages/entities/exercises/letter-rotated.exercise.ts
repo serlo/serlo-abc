@@ -1,4 +1,4 @@
-import { addIndex, all, contains, map } from 'ramda';
+import * as R from 'ramda';
 
 import { Maybe } from '../../maybe';
 import {
@@ -6,8 +6,6 @@ import {
   ExerciseFixture,
   ExercisePropsFixture
 } from './abstract-exercise.interface';
-
-const mapIndexed = addIndex(map);
 
 export interface LetterRotatedProps {
   letters: string[];
@@ -135,7 +133,7 @@ export class LetterRotated extends AbstractExercise<
   ];
 
   public getInitialState(): LetterRotatedState {
-    return map(() => false, this.props.letters) as LetterRotatedState;
+    return R.map(() => false, this.props.letters) as LetterRotatedState;
   }
 
   public getFeedback(selected: LetterRotatedState): LetterRotatedFeedback {
@@ -143,21 +141,23 @@ export class LetterRotated extends AbstractExercise<
       return undefined;
     }
 
+    const mapIndexedBoolean = R.addIndex<boolean, boolean>(R.map);
+
     return {
-      correctlySelected: mapIndexed(
-        (isSelected, i) => isSelected && contains(i, this.props.rotated),
+      correctlySelected: mapIndexedBoolean(
+        (isSelected, i) => isSelected && R.contains(i, this.props.rotated),
         selected
       ),
-      incorrectlySelected: mapIndexed(
-        (isSelected, i) => isSelected && !contains(i, this.props.rotated),
+      incorrectlySelected: mapIndexedBoolean(
+        (isSelected, i) => isSelected && !R.contains(i, this.props.rotated),
         selected
       ),
-      correctlyNotSelected: mapIndexed(
-        (isSelected, i) => !isSelected && !contains(i, this.props.rotated),
+      correctlyNotSelected: mapIndexedBoolean(
+        (isSelected, i) => !isSelected && !R.contains(i, this.props.rotated),
         selected
       ),
-      incorrectlyNotSelected: mapIndexed(
-        (isSelected, i) => !isSelected && contains(i, this.props.rotated),
+      incorrectlyNotSelected: mapIndexedBoolean(
+        (isSelected, i) => !isSelected && R.contains(i, this.props.rotated),
         selected
       )
     };
@@ -167,7 +167,7 @@ export class LetterRotated extends AbstractExercise<
     const { letters, rotated } = this.props;
 
     for (let i = 0; i < letters.length; i++) {
-      if (selected[i] !== contains(i, rotated)) {
+      if (selected[i] !== R.contains(i, rotated)) {
         return false;
       }
     }
@@ -175,6 +175,6 @@ export class LetterRotated extends AbstractExercise<
   }
 
   public isSubmitDisabled(selected: LetterRotatedState): boolean {
-    return all(sel => !sel, selected);
+    return R.all(sel => !sel, selected);
   }
 }

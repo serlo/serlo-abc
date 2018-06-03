@@ -3,7 +3,7 @@ import * as R from 'ramda';
 import { sample } from '../../sample/index';
 
 export const capitalizeFirstLetter = (word: string): string => {
-  return R.addIndex(R.map)(
+  return R.addIndex<string, string>(R.map)(
     (char, index) => (index === 0 ? char.toUpperCase() : char),
     word.split('')
   ).join('');

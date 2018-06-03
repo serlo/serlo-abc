@@ -17,25 +17,25 @@ Below you'll find information about performing common tasks.
 
 ## Table of Contents
 
-* [Requirements](#requirements)
-* [Updating Create React Native App and React Native](#updating-create-react-native-app-and-react-native)
-* [Available Scripts](#available-scripts)
-  * [yarn install](#yarn-install)
-  * [yarn start](#yarn-start)
-  * [yarn test](#yarn-test)
-  * [yarn test -- --watch](#yarn-test------watch)
-  * [yarn ios](#yarn-ios)
-  * [yarn android](#yarn-android)
-  * [yarn format](#yarn-format)
-  * [yarn lint](#yarn-lint)
-* [Writing and Running Tests](#writing-and-running-tests)
-* [Tips and Tricks](#tips-and-tricks)
+- [Requirements](#requirements)
+- [Updating Create React Native App and React Native](#updating-create-react-native-app-and-react-native)
+- [Available Scripts](#available-scripts)
+  - [yarn install](#yarn-install)
+  - [yarn start](#yarn-start)
+  - [yarn test](#yarn-test)
+  - [yarn test -- --watch](#yarn-test------watch)
+  - [yarn ios](#yarn-ios)
+  - [yarn android](#yarn-android)
+  - [yarn format](#yarn-format)
+  - [yarn lint](#yarn-lint)
+- [Writing and Running Tests](#writing-and-running-tests)
+- [Tips and Tricks](#tips-and-tricks)
 
 ## Requirements
 
-* [Node.js v6](https://nodejs.org) (preferably using
+- [Node.js v6](https://nodejs.org) (preferably using
   [nvm](https://github.com/creationix/nvm))
-* [Yarn](https://yarnpkg.com/)
+- [Yarn](https://yarnpkg.com/)
 
 ## Updating Create React Native App and React Native
 
@@ -110,7 +110,7 @@ is also a wonderful resource, as is the
 
 ## Tips and Tricks
 
-* If you have a local network the prevents your phone from accessing the address
+- If you have a local network the prevents your phone from accessing the address
   that is printed when running the packager, you can often work around this
   issue by "tethering" your computer to your phone's internet connection. Some
   phones call this feature "mobile hotspot." While it's very convenient, if you

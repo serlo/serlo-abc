@@ -1,6 +1,6 @@
 {
   "name": "serlo-abc",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "repository": "serlo-org/serlo-abc",
   "scripts": {
@@ -9,10 +9,8 @@
     "build:android": "exp build:android",
     "build:ios": "exp build:ios",
     "build:status": "exp build:status",
-    "deploy:development":
-      "npm-run-all --serial exp:config exp:login:travis exp:publish:development",
-    "deploy:master":
-      "npm-run-all --serial exp:config exp:login:travis exp:publish:master",
+    "deploy:development": "npm-run-all --serial exp:config:development exp:login:travis exp:publish",
+    "deploy:master": "npm-run-all --serial exp:config:master exp:login:travis exp:publish",
     "generate": "npm-run-all generate:*",
     "generate:ids": "node scripts/generate-ids",
     "generate:sounds": "ts-node scripts/generate-sounds",
@@ -21,12 +19,11 @@
     "generate:words-sounds": "ts-node scripts/generate-words-sounds",
     "postgenerate": "yarn format",
     "tsc": "tsc",
-    "exp:config": "ts-node scripts/generate-app-config",
+    "exp:config:development": "ts-node scripts/generate-app-config development",
+    "exp:config:master": "ts-node scripts/generate-app-config master",
     "exp:login": "exp login",
-    "exp:login:travis":
-      "yarn exp:login --non-interactive --username $EXP_USERNAME --password $EXP_PASSWORD",
-    "exp:publish:master": "exp publish",
-    "exp:publish:development": "exp publish --release-channel development",
+    "exp:login:travis": "yarn exp:login --non-interactive --username $EXP_USERNAME --password $EXP_PASSWORD",
+    "exp:publish": "exp publish --config app.travis.json",
     "start": "react-native-scripts start",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
@@ -34,13 +31,12 @@
     "storybook": "storybook start -p 7007",
     "test": "jest",
     "test:watch": "jest --watch",
-    "format":
-      "prettier --write \"{{packages,scripts,src,storybook}/**/*,*}.{ts,tsx,js,jsx,json,md}\"",
+    "format": "prettier --write \"{{packages,scripts,src,storybook}/**/*,*}.{ts,tsx,js,jsx,json,md}\"",
     "lint:js": "eslint \"{{packages,scripts,src,storybook}/**/*,*}.{js,jsx}\"",
     "lint:ts": "tslint \"{{packages,scripts,src,storybook}/**/*,*}.{ts,tsx}\"",
-    "lint":
-      "npm-run-all --print-name --continue-on-error --sequential lint:* tsc",
-    "precommit": "lint-staged"
+    "lint": "npm-run-all --print-name --continue-on-error --sequential lint:* tsc",
+    "precommit": "lint-staged",
+    "ncu": "ncu -x react"
   },
   "config": {
     "commitizen": {
@@ -48,49 +44,52 @@
     }
   },
   "dependencies": {
-    "chroma-js": "^1.3.4",
-    "expo": "^23.0.5",
+    "chroma-js": "^1.3.7",
+    "expo": "^27.0.2",
+    "fluent-ffmpeg": "^2.1.2",
     "ramda": "^0.25.0",
-    "react": "16.0.0",
-    "react-native":
-      "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",
+    "react": "16.3.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-27.0.2.tar.gz",
     "react-native-swipe-gestures": "^1.0.2",
     "react-router-native": "^4.2.0",
-    "sentry-expo": "^1.7.0"
+    "sentry-expo": "^1.9.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.2.16",
-    "@storybook/react-native": "^3.2.16",
-    "@types/chroma-js": "^1.3.3",
-    "@types/gm": "^1.17.33",
-    "@types/jest": "^21.1.8",
-    "@types/ramda": "^0.25.6",
-    "@types/react-native": "^0.50.7",
-    "@types/react-test-renderer": "^16.0.0",
-    "@types/storybook__addon-actions": "^3.0.1",
-    "commitizen": "^2.9.6",
+    "@storybook/addon-actions": "^3.4.6",
+    "@storybook/react-native": "^3.4.6",
+    "@types/chroma-js": "^1.3.5",
+    "@types/fluent-ffmpeg": "^2.1.6",
+    "@types/gm": "^1.18.0",
+    "@types/jest": "^23.0.0",
+    "@types/ramda": "^0.25.32",
+    "@types/react-native": "^0.55.16",
+    "@types/react-test-renderer": "^16.0.1",
+    "@types/storybook__addon-actions": "^3.0.3",
+    "commitizen": "^2.10.1",
     "cz-conventional-changelog": "^2.1.0",
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.0",
-    "eslint": "^4.11.0",
-    "eslint-config-universe": "^1.0.6",
-    "exp": "^46.0.6",
-    "gm": "^1.23.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-universe": "^1.0.7",
+    "exp": "^54.0.1",
+    "gm": "^1.23.1",
     "husky": "^0.14.3",
-    "jest": "^21.2.1",
-    "jest-expo-ts": "^22.0.1",
-    "lint-staged": "^6.0.0",
-    "npm-run-all": "^4.1.2",
-    "prettier": "^1.8.2",
-    "react-devtools": "^3.0.0",
-    "react-dom": "16.0.0",
-    "react-native-scripts": "^1.8.1",
-    "react-native-typescript-transformer": "^1.1.4",
-    "react-test-renderer": "^16.2.0",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.8.0",
-    "tslint-config-prettier": "^1.6.0",
-    "typescript": "^2.6.2"
+    "jest": "^23.1.0",
+    "jest-expo": "^27.0.1",
+    "lint-staged": "^7.1.3",
+    "npm-check-updates": "^2.14.2",
+    "npm-run-all": "^4.1.3",
+    "prettier": "^1.13.4",
+    "react-devtools": "^3.2.3",
+    "react-dom": "16.3.1",
+    "react-native-scripts": "^1.14.0",
+    "react-native-typescript-transformer": "^1.2.9",
+    "react-test-renderer": "^16.4.0",
+    "ts-jest": "^22.4.6",
+    "ts-node": "^6.1.0",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "typescript": "^2.9.1"
   },
   "private": true,
   "lint-staged": {
@@ -98,13 +97,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-        "<rootDir>/__mocks__/fileMock.js"
-    },
-    "preset": "jest-expo-ts",
-    "setupFiles": ["<rootDir>/.enzyme.js"]
   }
 }

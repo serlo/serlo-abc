@@ -47,7 +47,9 @@ class RoundImageWithBorder extends Component {
                 ? GREEN
                 : highlighted
                   ? WHITE_LESS_TRANSPARENT
-                  : white ? WHITE_TRANSPARENT : BLACK_TRANSPARENT,
+                  : white
+                    ? WHITE_TRANSPARENT
+                    : BLACK_TRANSPARENT,
             borderRadius: 9999999,
             margin: this.props.size / 10
           },

@@ -1,7 +1,5 @@
 import * as R from 'ramda';
 
-const mapIndexed = R.addIndex(R.map);
-
 export interface Indexed<T> {
   index: number;
   value: T;
@@ -11,10 +9,16 @@ export const stableSortWith = <T>(
   cmps: Array<(a: T, b: T) => number>,
   array: T[]
 ): T[] => {
-  const indexedArray = mapIndexed((value, index) => ({ index, value }), array);
+  const indexedArray = R.addIndex<T, Indexed<T>>(R.map)(
+    (value, index) => ({ index, value }),
+    array
+  );
   const indexedCmps = R.map(
     cmp => (a: Indexed<T>, b: Indexed<T>) =>
-      cmp(R.prop<'value', T>('value', a), R.prop<'value', T>('value', b)),
+      cmp(
+        R.prop<'value', Indexed<T>>('value', a),
+        R.prop<'value', Indexed<T>>('value', b)
+      ),
     cmps
   );
 

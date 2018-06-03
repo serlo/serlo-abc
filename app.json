@@ -3,16 +3,17 @@
     "name": "Serlo ABC",
     "slug": "serlo-abc",
     "privacy": "public",
-    "sdkVersion": "23.0.0",
-    "version": "0.0.0-development",
+    "sdkVersion": "27.0.0",
+    "version": "1.1.0",
     "icon": "./appIcon.png",
     "packagerOpts": {
       "sourceExts": ["ts", "tsx"],
-      "transformer": "node_modules/react-native-typescript-transformer/index.js"
+      "transformer":
+        "node_modules/react-native-typescript-transformer/index.js",
+      "nonPersistent": true
     },
-    "ios": {
-      "bundleIdentifier": "org.serlo.abc",
-      "loadJSInBackgroundExperimental": true
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "android": {
       "package": "org.serlo.abc",
@@ -27,6 +28,12 @@
         "om.htc.launcher.permission.UPDATE_SHORTCUT"
       ],
       "versionCode": 2
-    }
+    },
+    "assetBundlePatterns": [
+      "src/assets/images/*",
+      "src/assets/sounds/*",
+      "src/assets/words/images/*",
+      "src/assets/words/sounds/*"
+    ]
   }
 }

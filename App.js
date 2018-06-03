@@ -3,8 +3,6 @@ import * as React from 'react';
 import Sentry from 'sentry-expo';
 
 import { CacheAssets } from './src/components/helpers/cache-assets';
-import loadImage from './src/assets/images';
-import loadSound from './src/assets/sounds';
 
 Sentry.config(
   'https://eada474aeba348a9aaad570be730e8e0:bb2a0776afe64f409a9edb752ca2d92d@sentry.io/253336'
@@ -25,12 +23,6 @@ export default class App extends React.Component {
     return (
       <CacheAssets
         fonts={fonts}
-        assets={[
-          loadImage['serlo'](),
-          loadSound['guten_morgen'](),
-          loadSound['guten_tag'](),
-          loadSound['guten_abend']()
-        ]}
         render={done => {
           if (done) {
             return <Entry />;
