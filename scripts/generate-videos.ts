@@ -32,7 +32,9 @@ readdir(videosPath)
       }
 
       str += `${getFilename(file)}: {
-      sd: require('./videos/${getFilename(file)}.mp4'),
+      sd: { uri: 'https://assets.serlo.org/serlo-abc/${getFilename(
+        file
+      )}.sd.mp4' },
       hd: { uri: 'https://assets.serlo.org/serlo-abc/${getFilename(
         file
       )}.hd.mp4' }
@@ -83,7 +85,7 @@ export default videos as { [id: string]: { sd: AssetTypes.VideoAsset, hd: AssetT
     };
 
     return Promise.all([
-      writeFile(path.join(assetsPath, 'videos.ts'), str),
-      processFiles(files)
+      writeFile(path.join(assetsPath, 'videos.ts'), str)
+      // processFiles(files)
     ]);
   });
