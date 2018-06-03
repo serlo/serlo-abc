@@ -1,4 +1,4 @@
-import { sample } from '../../sample/index';
+import { sample } from '../../sample';
 import {
   AbstractExercise,
   ExerciseFixture,
@@ -21,7 +21,7 @@ export class BuildSentenceVideo extends AbstractExercise<
 > {
   public static propsFixtures: ExercisePropsFixture[] = [
     {
-      name: `Ich bin eine Ananas.`,
+      name: 'Ich bin eine Ananas.',
       props: {
         sentence: 'Ich bin eine Ananas.'
       }
@@ -50,13 +50,12 @@ export class BuildSentenceVideo extends AbstractExercise<
   private sentence: string;
 
   constructor(props: BuildSentenceVideoProps) {
-    super({
-      ...props,
-      sentence: sample(
-        props.sentence.split(' '),
-        props.sentence.split(' ').length
-      )
-    });
+    const sentence = sample(
+      props.sentence.split(' '),
+      props.sentence.split(' ').length
+    );
+
+    super({ sentence });
 
     this.sentence = props.sentence;
   }
