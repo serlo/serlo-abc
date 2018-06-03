@@ -6,8 +6,11 @@ import { mergeDeepRight } from 'ramda';
 const config = require('../app.json');
 const { version } = require('../package.json');
 
-const baseConfig = mergeDeepRight(config, {
+const travisConfig = mergeDeepRight(config, {
   expo: {
+    name: `${config.expo.name}${
+      process.argv[2] === 'development' ? ' Nightly' : ''
+    }`,
     version,
     packagerOpts: {
       nonPersistent: true
@@ -15,9 +18,7 @@ const baseConfig = mergeDeepRight(config, {
   }
 });
 
-const travisConfig = baseConfig;
-
 fs.writeFileSync(
-  path.join(__dirname, '..', 'app.json'),
+  path.join(__dirname, '..', 'app.travis.json'),
   JSON.stringify(travisConfig, undefined, 2)
 );
