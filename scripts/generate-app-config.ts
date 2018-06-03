@@ -6,11 +6,12 @@ import { mergeDeepRight } from 'ramda';
 const config = require('../app.json');
 const { version } = require('../package.json');
 
+const isDev = process.argv[2] === 'development';
+
 const travisConfig = mergeDeepRight(config, {
   expo: {
-    name: `${config.expo.name}${
-      process.argv[2] === 'development' ? ' Nightly' : ''
-    }`,
+    name: `${config.expo.name}${isDev ? ' Nightly' : ''}`,
+    slug: `${config.expo.slug}${isDev ? '-development' : ''}`,
     version,
     packagerOpts: {
       nonPersistent: true
