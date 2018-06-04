@@ -27,7 +27,7 @@
         "com.htc.launcher.permission.READ_SETTINGS",
         "om.htc.launcher.permission.UPDATE_SHORTCUT"
       ],
-      "versionCode": 2
+      "versionCode": 3
     },
     "assetBundlePatterns": [
       "src/assets/images/*",
