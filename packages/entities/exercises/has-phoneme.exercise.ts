@@ -1,6 +1,7 @@
+import { forEach } from 'ramda';
+
 import { Maybe } from '../../maybe';
 import { Word } from '../word';
-import { forEach } from 'ramda';
 import {
   AbstractExercise,
   ExerciseFixture,
@@ -95,13 +96,13 @@ export class HasPhoneme extends AbstractExercise<
     const wordString: string = word.toString().toUpperCase();
     const syllablesRawString: Maybe<string> = word.getRawSingular();
 
-    //check for phoneme in syllableString
+    // check for phoneme in syllableString
     if (syllablesRawString) {
       let syllablesStringFiltered = syllablesRawString
         .replace(/['-]/g, '')
         .toUpperCase();
 
-      //remove longer phonemes containing phonemeString from syllableRawString
+      // remove longer phonemes containing phonemeString from syllableRawString
       const multiLetterPhonemes: string[] = [
         'SCH',
         'CH',
@@ -122,13 +123,13 @@ export class HasPhoneme extends AbstractExercise<
         }
       }, multiLetterPhonemes);
 
-      //combine syllables (for phonemes like ng wich span multiple syllables)
+      // combine syllables (for phonemes like ng wich span multiple syllables)
       syllablesStringFiltered = syllablesStringFiltered.replace('|', '');
 
       return syllablesStringFiltered.indexOf(phonemeString) !== -1;
     }
 
-    //fallback
+    // fallback
     return wordString.indexOf(phonemeString) !== -1;
   }
 }
