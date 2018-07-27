@@ -1037,6 +1037,14 @@ const videos = {
     sd: { uri: 'https://assets.serlo.org/serlo-abc/serlo20.sd.mp4' },
     hd: { uri: 'https://assets.serlo.org/serlo-abc/serlo20.hd.mp4' }
   },
+  serlo21: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/serlo21.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/serlo21.hd.mp4' }
+  },
+  serlo22: {
+    sd: { uri: 'https://assets.serlo.org/serlo-abc/serlo22.sd.mp4' },
+    hd: { uri: 'https://assets.serlo.org/serlo-abc/serlo22.hd.mp4' }
+  },
   serlo3: {
     sd: { uri: 'https://assets.serlo.org/serlo-abc/serlo3.sd.mp4' },
     hd: { uri: 'https://assets.serlo.org/serlo-abc/serlo3.hd.mp4' }
