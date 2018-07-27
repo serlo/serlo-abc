@@ -2342,6 +2342,11 @@
                 "video": "serlo14"
               },
               {
+                "id": "852a0beec-47c9-4597-bf30-97a333d4292a'",
+                "type": "StoryVideo",
+                "video": "serlo21"
+              },
+              {
                 "id": "c86dd1d5-143d-43d0-9504-f36f13df393b",
                 "type": "WriteWords",
                 "texts": [
@@ -2630,7 +2635,7 @@
               {
                 "id": "362b2abb-0fe1-4b36-b4da-6eb19bfbc753",
                 "type": "StoryVideo",
-                "video": "serlo15"
+                "video": "serlo22"
               }
             ]
           },
@@ -2889,7 +2894,7 @@
               {
                 "id": "5a63efe7-6663-4fbc-b5c5-ff901503db0c",
                 "type": "StoryVideo",
-                "video": "serlo16"
+                "video": "serlo15"
               },
               {
                 "id": "e650aa14-beda-471f-a449-51ad9cce590b",
