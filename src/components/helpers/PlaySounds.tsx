@@ -55,6 +55,7 @@ class PlaySoundsInner extends React.Component<
   private playSoundsAndRecord = () => {
     /* tslint:disable-next-line:no-empty */
     const onPlayEnd = this.props.onPlayEnd || (() => {});
+    const { sounds, delay } = this.props;
 
     if (this.props.record) {
       Permissions.askAsync(Permissions.AUDIO_RECORDING).then(() => {
@@ -115,6 +116,7 @@ class PlaySoundsInner extends React.Component<
           .then(({ sound }: { sound: Audio.Sound }) => {
             play(sound)
               .then(() => sound.unloadAsync())
+              .then(() => playAll(sounds, delay))
               .then(() => {
                 onPlayEnd();
               });
