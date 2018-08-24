@@ -17,7 +17,7 @@ module.exports = {
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
   transform: {
     '^.+\\.jsx?$': '<rootDir>/node_modules/babel-jest',
-    '^.+\\.tsx?$': '<rootDir>/node_modules/ts-jest/preprocessor.js'
+    '^.+\\.tsx?$': 'ts-jest'
   },
   transformIgnorePatterns: [
     'node_modules/(?!((jest-)?react-native|react-clone-referenced-element|expo(nent)?|@expo(nent)?/.*|react-navigation|sentry-expo))'
