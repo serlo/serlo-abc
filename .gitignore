@@ -13,3 +13,6 @@ node_modules/
 
 # Original videos (not included because of repository size limits)
 packages/assets/videos
+
+# IDE
+.idea
