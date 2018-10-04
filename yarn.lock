@@ -5619,6 +5619,11 @@ expo-analytics-segment@~1.0.0:
   dependencies:
     expo-core "~1.1.0"
 
+expo-analytics@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/expo-analytics/-/expo-analytics-1.0.7.tgz#d78b4b9090ba359b2ec233fce35512b90ef392db"
+  integrity sha1-14tLkJC6NZsuwjP841USuQ7zkts=
+
 expo-asset@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/expo-asset/-/expo-asset-1.1.0.tgz#f5b182fe553076ae6a0ab504f195f13287d65081"
