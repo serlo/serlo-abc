@@ -9,8 +9,16 @@ export class WriteLetter extends AbstractExerciseGroup {
       return [];
     }
 
-    const letter = this.newLetter.toLowerCase();
+    const lowerCaseLetter = this.newLetter.toLowerCase();
+    const capitalLetter = capitalizeFirstLetter(lowerCaseLetter);
+    const letters = [
+      capitalLetter,
+      lowerCaseLetter,
+      capitalLetter.repeat(2),
+      lowerCaseLetter.repeat(2)
+    ];
     const version = sample(['a', 'b'], 1);
+    const self = this;
 
     return [
       this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
@@ -22,7 +30,13 @@ export class WriteLetter extends AbstractExerciseGroup {
         type: 'TutorialVideo',
         video: 'explanation_write_letter'
       }),
-      ...(letter === 'ß'
+      ...letters.map(letter =>
+        self.createExercise(ExerciseTypes.Canvas, {
+          type: 'WriteLetter',
+          letter
+        })
+      )
+      /*...(letter === 'ß'
         ? []
         : [
             this.createExercise(ExerciseTypes.Canvas, {
@@ -49,7 +63,7 @@ export class WriteLetter extends AbstractExerciseGroup {
       this.createExercise(ExerciseTypes.Canvas, {
         type: 'WriteLetter',
         letter
-      })
+      })*/
     ];
   }
 }
