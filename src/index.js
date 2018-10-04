@@ -2,6 +2,7 @@ import { find, identity, map } from 'ramda';
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
+import { Analytics, PageHit } from 'expo-analytics';
 
 import { EntityFactory } from '../packages/entities';
 import { CourseInteractorLoader } from '../packages/entities-interactor';
@@ -30,6 +31,7 @@ export class AppRoutes extends Component {
 
     const resolver = new AssetResolver();
     this.entityFactory = new EntityFactory(resolver);
+    this.analytics = new Analytics('UA-126536605-1');
 
     this.state = {
       course: null
@@ -98,6 +100,10 @@ export class AppRoutes extends Component {
         const course = this.interactor.getStructure();
         this.setState({ course });
       });
+    this.analytics
+      .hit(new PageHit('Main'))
+      .then(() => console.log('success'))
+      .catch(e => console.error(e.message));
   }
 
   render() {
