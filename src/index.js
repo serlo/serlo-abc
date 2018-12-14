@@ -2,7 +2,9 @@ import { find, identity, map } from 'ramda';
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
-import { Analytics, PageHit } from 'expo-analytics';
+import { PageHit } from 'expo-analytics';
+import Analytics from './helpers/analytics';
+import Sentry from './helpers/sentry';
 
 import { EntityFactory } from '../packages/entities';
 import { CourseInteractorLoader } from '../packages/entities-interactor';
@@ -17,6 +19,7 @@ import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
 import { PRIMARY } from './styles/colors';
 import { AssetResolver } from './asset-resolver';
+import { DataPolicyComponent } from './components/screens/DataPolicy'
 
 export class AppRoutes extends Component {
   constructor(props) {
@@ -31,7 +34,6 @@ export class AppRoutes extends Component {
 
     const resolver = new AssetResolver();
     this.entityFactory = new EntityFactory(resolver);
-    this.analytics = new Analytics('UA-126536605-1');
 
     this.state = {
       course: null
@@ -100,10 +102,9 @@ export class AppRoutes extends Component {
         const course = this.interactor.getStructure();
         this.setState({ course });
       });
-    this.analytics
-      .hit(new PageHit('Main'))
-      .then(() => console.log('success'))
-      .catch(e => console.error(e.message));
+    Analytics.init(this.props.policyAccepted)
+    Analytics.hit(new PageHit('Main'))
+    Sentry.init()
   }
 
   render() {
@@ -229,7 +230,9 @@ export class AppRoutes extends Component {
 }
 
 export default () => (
-  <NativeRouter>
-    <AppRoutes />
-  </NativeRouter>
+  <DataPolicyComponent render={(policyAccepted) => (
+    <NativeRouter>
+      <AppRoutes policyAccepted={policyAccepted} />
+    </NativeRouter>
+  )} />
 );
