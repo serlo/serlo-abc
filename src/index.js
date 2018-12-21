@@ -19,7 +19,7 @@ import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
 import { PRIMARY } from './styles/colors';
 import { AssetResolver } from './asset-resolver';
-import { DataPolicyComponent } from './components/screens/DataPolicy'
+import { DataPolicyComponent } from './components/screens/DataPolicy';
 
 export class AppRoutes extends Component {
   constructor(props) {
@@ -102,9 +102,11 @@ export class AppRoutes extends Component {
         const course = this.interactor.getStructure();
         this.setState({ course });
       });
-    Analytics.init(this.props.policyAccepted)
-    Analytics.hit(new PageHit('Main'))
-    Sentry.init()
+    if (this.props.policyAccepted) {
+      Analytics.init(this.props.policyAccepted);
+      Analytics.hit(new PageHit('Main'));
+      Sentry.init();
+    }
   }
 
   render() {
@@ -230,9 +232,11 @@ export class AppRoutes extends Component {
 }
 
 export default () => (
-  <DataPolicyComponent render={(policyAccepted) => (
-    <NativeRouter>
-      <AppRoutes policyAccepted={policyAccepted} />
-    </NativeRouter>
-  )} />
+  <DataPolicyComponent
+    render={policyAccepted => (
+      <NativeRouter>
+        <AppRoutes policyAccepted={policyAccepted} />
+      </NativeRouter>
+    )}
+  />
 );

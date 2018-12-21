@@ -12,12 +12,8 @@ export interface IDataPolicyConsent {
 }
 
 export interface IDataPolicyConsentStorage {
-  getConsent(): Promise<IDataPolicyConsent>;
+  getConsent(): Promise<IDataPolicyConsent | undefined>;
   setConsent(consent: IDataPolicyConsent): Promise<void>;
-}
-
-export interface IAcceptedProp {
-  accepted: boolean;
 }
 
 class DataPolicyConsentStorage implements IDataPolicyConsentStorage {
@@ -29,10 +25,7 @@ class DataPolicyConsentStorage implements IDataPolicyConsentStorage {
     return AsyncStorage.getItem(DataPolicyConsentStorage.getKey()).then(
       data => {
         if (!data) {
-          return {
-            version: new Date(0).toISOString().slice(0, 10),
-            consent: ConsentStatus.Unknown
-          };
+          return undefined;
         }
 
         return JSON.parse(data) as IDataPolicyConsent;
