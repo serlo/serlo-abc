@@ -1,10 +1,10 @@
 /* tslint:disable:max-classes-per-file */
 import Interactor from '../CourseInteractor';
 import InteractorLoader from '../CourseInteractorLoader';
-import ICourseStorage from '../ICourseStorage';
-import IProgressStorage from '../IProgressStorage';
+import { ICourseStorage } from '../ICourseStorage';
+import { IProgressStorage } from '../IProgressStorage';
 import { ISerializedCourse } from '../ISerializedCourse';
-import ISerializedProgress from '../ISerializedProgress';
+import { ISerializedProgress } from '../ISerializedProgress';
 
 const courses: { [propName: string]: ISerializedCourse } = {
   '09438926-b170-4005-a6e8-5dd8fba83cde': {

@@ -1,7 +1,13 @@
 // @ts-ignore
 import { AppLoading, Constants, WebBrowser } from 'expo';
 import * as React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import {
+  StyleProp,
+  Text,
+  TextStyle,
+  TouchableOpacity,
+  View
+} from 'react-native';
 import {
   DataPolicyManager,
   IDataPolicyManager
@@ -27,11 +33,15 @@ export class DataPolicyComponent extends React.Component<{
   };
 
   public styles = {
-    text: {
+    textContainer: {
       height: '70%',
       top: Constants.statusBarHeight + 15,
       left: 15,
       right: 15
+    },
+    policyText: {
+      ...SMALL,
+      marginTop: 10
     },
     button: {
       margin: 5,
@@ -82,11 +92,14 @@ export class DataPolicyComponent extends React.Component<{
             backgroundColor: PRIMARY
           }}
         >
-          <View style={this.styles.text}>
-            <Text style={SMALL}>
-              {previous && previous.version !== policy.version
-                ? 'Wir haben die Datenschutzerklärung aktualisiert. '
-                : ''}
+          <View style={this.styles.textContainer}>
+            {previous &&
+              previous.version !== policy.version && (
+                <Text style={this.styles.policyText}>
+                  Wir haben die Datenschutzerklärung aktualisiert.
+                </Text>
+              )}
+            <Text style={this.styles.policyText}>
               Wir erheben Nutzungs- und Fehlerdaten um die App zu verbessern.
               Durch Tippen auf OK erklärst du dich mit unserer
               Datenschutzerklärung einverstanden.
@@ -97,9 +110,11 @@ export class DataPolicyComponent extends React.Component<{
                   'https://abc-app.serlo.org/privacy.html'
                 )
               }
-              style={{ marginTop: 10 }}
             >
-              <Text style={SMALL}> > Datenschutzerklärung anzeigen</Text>
+              <Text style={this.styles.policyText}>
+                {' '}
+                > Datenschutzerklärung anzeigen
+              </Text>
             </TouchableOpacity>
           </View>
           <RoundTextButton
@@ -109,21 +124,6 @@ export class DataPolicyComponent extends React.Component<{
             text={'OK'}
             size={50}
             style={this.styles.button}
-          />
-          <RoundTextButton
-            onPress={this.handleClick(ConsentStatus.Declined)}
-            text={'Nein'}
-            textStyle={{
-              fontSize: 20
-            }}
-            style={[
-              this.styles.button,
-              {
-                backgroundColor: PRIMARY,
-                borderWidth: 10,
-                borderColor: RED
-              }
-            ]}
           />
         </View>
       );

@@ -1,4 +1,4 @@
-import * as chroma from 'chroma-js';
+import chroma from 'chroma-js';
 import * as React from 'react';
 import {
   TouchableOpacity,

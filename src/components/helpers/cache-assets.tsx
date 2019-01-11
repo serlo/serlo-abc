@@ -35,7 +35,7 @@ export class CacheAssets extends React.Component<
     const fonts = this.cacheFonts(this.props.fonts);
     const assets = this.cacheAssets(this.props.assets);
 
-    Promise.all([...fonts, ...assets]).then(() => {
+    Promise.all([fonts, ...assets]).then(() => {
       this.setState({ done: true });
     });
   }
@@ -44,7 +44,7 @@ export class CacheAssets extends React.Component<
     return this.props.render(this.state.done);
   }
 
-  private cacheFonts(fonts: {} = {}): Array<Promise<void>> {
+  private cacheFonts(fonts: {} = {}): Promise<void> {
     return Font.loadAsync(fonts);
   }
 

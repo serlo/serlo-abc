@@ -9,7 +9,9 @@
     "noUnusedLocals": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es2015"
+    "target": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
   "exclude": ["node_modules"]
 }

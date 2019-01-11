@@ -1,6 +1,6 @@
 import AbstractCourseInteractor from './AbstractCourseInteractor';
-import ICourseStorage from './ICourseStorage';
-import IProgressStorage from './IProgressStorage';
+import { ICourseStorage } from './ICourseStorage';
+import { IProgressStorage } from './IProgressStorage';
 
 abstract class AbstractCourseInteractorLoader {
   constructor(
