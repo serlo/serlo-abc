@@ -3,8 +3,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { Constants, Svg as ExpoSvg } from 'expo';
 import * as R from 'ramda';
 import * as React from 'react';
-import { Circle, G, Polyline } from 'react-native-svg';
 import { PanResponder, PanResponderInstance, Text, View } from 'react-native';
+import { Circle, G, Polyline } from 'react-native-svg';
 
 import { Maybe } from '../../../packages/maybe';
 import { BLACK_TRANSPARENT, PRIMARY_WEAK } from '../../styles/colors';
