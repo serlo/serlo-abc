@@ -23,7 +23,7 @@ storiesOf('helpers/PlaySounds', module)
             key="button"
             {...buttonProps}
             IconComponent={Ionicons}
-            name="md-volume-up"
+            name="md-volume-high"
             size={30}
           />,
           <Text key="text">{isRecording ? 'Recording' : 'Not recording'}</Text>
@@ -48,7 +48,7 @@ storiesOf('helpers/PlaySounds', module)
             key="button"
             {...buttonProps}
             IconComponent={Ionicons}
-            name="md-volume-up"
+            name="md-volume-high"
             size={30}
           />,
           <Text key="text">{isRecording ? 'Recording' : 'Not recording'}</Text>
@@ -67,7 +67,7 @@ storiesOf('helpers/PlaySounds', module)
           <RoundIconButton
             {...buttonProps}
             IconComponent={Ionicons}
-            name="md-volume-up"
+            name="md-volume-high"
             size={30}
           />
         )}

@@ -72,7 +72,7 @@ export class MatchImage extends Component {
                 return (
                   <RoundIconButton
                     IconComponent={Ionicons}
-                    name="md-volume-up"
+                    name="md-volume-high"
                     size={20}
                     style={{ marginLeft: 10 }}
                     {...buttonProps}

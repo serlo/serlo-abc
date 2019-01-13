@@ -43,7 +43,7 @@ export const ShowLetter = ({ letter, sound, repeat, setState }) => (
             <Text style={styles.bigLetter}>{letter}</Text>
             <RoundIconButton
               IconComponent={Ionicons}
-              name="md-volume-up"
+              name="md-volume-high"
               size={40}
               {...buttonProps}
             />
