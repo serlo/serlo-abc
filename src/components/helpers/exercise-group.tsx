@@ -90,12 +90,15 @@ export class ExerciseGroup extends React.Component<
       this.props.onWrong();
     }
 
-    setTimeout(() => {
-      if (group.getRemainingExercises().length === 0) {
-        this.props.onDone();
-      } else {
-        this.setState(this.getStateFromGroup());
-      }
-    }, initiallyCorrect ? 0 : 1000);
+    setTimeout(
+      () => {
+        if (group.getRemainingExercises().length === 0) {
+          this.props.onDone();
+        } else {
+          this.setState(this.getStateFromGroup());
+        }
+      },
+      initiallyCorrect ? 0 : 1000
+    );
   };
 }

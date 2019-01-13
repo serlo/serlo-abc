@@ -66,15 +66,15 @@ export class FindLetter extends Component {
             backgroundColor: incorrectlySelected
               ? RED
               : correctlySelected
-                ? GREEN
-                : highlighted
-                  ? PRIMARY_WEAK
-                  : PRIMARY_STRONG,
+              ? GREEN
+              : highlighted
+              ? PRIMARY_WEAK
+              : PRIMARY_STRONG,
             borderColor: incorrectlyNotSelected
               ? RED
               : correctlyNotSelected
-                ? GREEN
-                : 'transparent'
+              ? GREEN
+              : 'transparent'
           }
         ]}
       >

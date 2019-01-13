@@ -93,12 +93,11 @@ export class DataPolicyComponent extends React.Component<{
           }}
         >
           <View style={this.styles.textContainer}>
-            {previous &&
-              previous.version !== policy.version && (
-                <Text style={this.styles.policyText}>
-                  Wir haben die Datenschutzerklärung aktualisiert.
-                </Text>
-              )}
+            {previous && previous.version !== policy.version && (
+              <Text style={this.styles.policyText}>
+                Wir haben die Datenschutzerklärung aktualisiert.
+              </Text>
+            )}
             <Text style={this.styles.policyText}>
               Wir erheben Nutzungs- und Fehlerdaten um die App zu verbessern.
               Durch Tippen auf OK erklärst du dich mit unserer

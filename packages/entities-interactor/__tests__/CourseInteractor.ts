@@ -89,7 +89,8 @@ describe('getStructure', () => {
       .loadCourse('09438926-b170-4005-a6e8-5dd8fba83cde')
       .then(i => {
         interactor = i;
-      }));
+      })
+  );
 
   it('returns the whole tree by default', () => {
     expect(interactor.getStructure()).toMatchSnapshot();
