@@ -1,6 +1,6 @@
-import { AssetTypes } from '../../packages/entities';
+import { Audio } from 'expo';
 
-const sounds: { [id: string]: () => AssetTypes.SoundAsset } = {
+const sounds: { [id: string]: () => Audio.Sound } = {
   a: () => require('./sounds/a.mp3'),
   a1: () => require('./sounds/a1.mp3'),
   a3: () => require('./sounds/a3.mp3'),
