@@ -4,11 +4,6 @@ export interface ImageAsset {
   _assetImage: any;
 }
 
-export interface SoundAsset {
-  // tslint:disable-next-line:no-any
-  _assetSound: any;
-}
-
 export interface VideoAsset {
   // tslint:disable-next-line:no-any
   _assetVideo: any;

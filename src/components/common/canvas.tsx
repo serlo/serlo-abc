@@ -1,15 +1,21 @@
-// @ts-ignore: TODO: add declaration file
+// @ts-ignore
 import { MaterialIcons } from '@expo/vector-icons';
-// @ts-ignore TODO: add declaration file
-import { Constants, Svg } from 'expo';
+import { Constants, Svg as ExpoSvg } from 'expo';
 import * as R from 'ramda';
 import * as React from 'react';
+import { Circle, G, Polyline } from 'react-native-svg';
 import { PanResponder, PanResponderInstance, Text, View } from 'react-native';
 
 import { Maybe } from '../../../packages/maybe';
 import { BLACK_TRANSPARENT, PRIMARY_WEAK } from '../../styles/colors';
 import { WithDimensions } from '../helpers/dimensions';
 import { RoundIconButton } from './buttons';
+
+const Svg = ExpoSvg as typeof ExpoSvg & {
+  Circle: typeof Circle;
+  G: typeof G;
+  Polyline: typeof Polyline;
+};
 
 export type RawPoint = [number, number];
 export type RawPath = RawPoint[];
@@ -55,12 +61,12 @@ class Canvas extends React.Component<CanvasProps, CanvasState> {
 
           if (lastPath) {
             return {
-              paths: [...R.init(paths), [...lastPath, point]]
+              paths: [...R.init(paths), [...lastPath, point] as RawPath]
             };
           }
 
           return {
-            paths: [[point]]
+            paths: [[point] as RawPath]
           };
         });
       },

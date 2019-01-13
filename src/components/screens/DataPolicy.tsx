@@ -1,18 +1,11 @@
-// @ts-ignore
 import { AppLoading, Constants, WebBrowser } from 'expo';
 import * as React from 'react';
-import {
-  StyleProp,
-  Text,
-  TextStyle,
-  TouchableOpacity,
-  View
-} from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import {
   DataPolicyManager,
   IDataPolicyManager
 } from '../../helpers/DataPolicyManager';
-import { PRIMARY, RED } from '../../styles/colors';
+import { PRIMARY } from '../../styles/colors';
 import { SMALL } from '../../styles/text';
 // @ts-ignore
 import RoundTextButton from '../common/RoundTextButton';
@@ -23,13 +16,14 @@ import {
 } from '../../storage/DataPolicyConsentStorage';
 import { ReactRenderReturn } from '../../types';
 
-export class DataPolicyComponent extends React.Component<{
-  render: (policyAccepted: boolean) => ReactRenderReturn;
-}> {
-  public state: {
-    manager: IDataPolicyManager;
-    policy?: IDataPolicyConsent;
-    previous?: IDataPolicyConsent;
+export class DataPolicyComponent extends React.Component<
+  {
+    render: (policyAccepted: boolean) => ReactRenderReturn;
+  },
+  DataPolicyComponentState
+> {
+  public state: DataPolicyComponentState = {
+    manager: new DataPolicyManager()
   };
 
   public styles = {
@@ -49,11 +43,7 @@ export class DataPolicyComponent extends React.Component<{
     }
   };
 
-  constructor() {
-    super();
-    this.state = {
-      manager: new DataPolicyManager()
-    };
+  public componentDidMount(): void {
     this.state.manager.getCurrentPolicy().then(policy => {
       this.setState({ policy });
     });
@@ -82,6 +72,7 @@ export class DataPolicyComponent extends React.Component<{
   public render() {
     const { policy, previous } = this.state;
     if (!policy) {
+      // @ts-ignore
       return <AppLoading />;
     }
     if (policy && policy.consent === ConsentStatus.Unknown) {
@@ -129,4 +120,10 @@ export class DataPolicyComponent extends React.Component<{
     }
     return this.props.render(policy.consent === ConsentStatus.Accepted);
   }
+}
+
+interface DataPolicyComponentState {
+  manager: IDataPolicyManager;
+  policy?: IDataPolicyConsent;
+  previous?: IDataPolicyConsent;
 }

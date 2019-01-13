@@ -1,5 +1,6 @@
 // @ts-ignore: TODO: add declaration file
 import { Ionicons } from '@expo/vector-icons';
+// @ts-ignore
 import { action } from '@storybook/addon-actions';
 // @ts-ignore TODO: add declaration file
 import { storiesOf } from '@storybook/react-native';
