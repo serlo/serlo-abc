@@ -1,6 +1,6 @@
-import { AppLoading } from 'expo';
 // @ts-ignore TODO: add declaration file
 import { storiesOf } from '@storybook/react-native';
+import { AppLoading } from 'expo';
 import * as React from 'react';
 import { View } from 'react-native';
 

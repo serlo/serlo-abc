@@ -44,19 +44,17 @@ export enum ExerciseGroupTypes {
 }
 
 export const ExerciseGroups: {
-  [type: string]: {
-    new (
-      createWord: (id: string) => Maybe<Word>, // TODO: specify createExercise type
-      /* tslint:disable-next-line:no-any */
-      createExercise: any,
-      newVocab: string[],
-      vocab: string[],
-      newLetter: string,
-      letters: string[],
-      /* tslint:disable-next-line:no-any */
-      props: any // TODO: check props type of createExercise
-    ): AbstractExerciseGroup;
-  };
+  [type: string]: new (
+    createWord: (id: string) => Maybe<Word>, // TODO: specify createExercise type
+    /* tslint:disable-next-line:no-any */
+    createExercise: any,
+    newVocab: string[],
+    vocab: string[],
+    newLetter: string,
+    letters: string[],
+    /* tslint:disable-next-line:no-any */
+    props: any // TODO: check props type of createExercise
+  ) => AbstractExerciseGroup;
 } = {
   [ExerciseGroupTypes.BuildSentences]: BuildSentences,
   [ExerciseGroupTypes.ConnectSyllables]: ConnectSyllables,
