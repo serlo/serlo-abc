@@ -20,7 +20,7 @@ import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
 import { PRIMARY } from './styles/colors';
 import { AssetResolver } from './asset-resolver';
-import { DataPolicyComponent } from './components/screens/DataPolicy';
+import { DataPolicy } from './components/screens/DataPolicy';
 
 export class AppRoutes extends Component {
   constructor(props) {
@@ -241,7 +241,7 @@ export class AppRoutes extends Component {
 }
 
 export default () => (
-  <DataPolicyComponent
+  <DataPolicy
     render={policyAccepted => (
       <NativeRouter>
         <AppRoutes policyAccepted={policyAccepted} />

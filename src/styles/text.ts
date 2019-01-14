@@ -15,6 +15,6 @@ export const DEFAULT: TextStyle = {
 export const SMALL: TextStyle = {
   ...FONT_FAMILY,
   color: WHITE,
-  fontSize: 22,
+  fontSize: 25,
   textAlign: 'left'
 };

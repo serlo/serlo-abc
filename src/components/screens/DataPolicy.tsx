@@ -1,6 +1,12 @@
 import { AppLoading, Constants, WebBrowser } from 'expo';
 import * as React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import {
+  Text,
+  TextStyle,
+  TouchableOpacity,
+  View,
+  ViewStyle
+} from 'react-native';
 import {
   DataPolicyManager,
   IDataPolicyManager
@@ -15,27 +21,34 @@ import {
   IDataPolicyConsent
 } from '../../storage/DataPolicyConsentStorage';
 import { ReactRenderReturn } from '../../types';
+import { Language, LanguageSelection } from '../helpers/LanugageSelection';
 
-export class DataPolicyComponent extends React.Component<
+export class DataPolicy extends React.Component<
   {
     render: (policyAccepted: boolean) => ReactRenderReturn;
   },
-  DataPolicyComponentState
+  DataPolicyState
 > {
-  public state: DataPolicyComponentState = {
-    manager: new DataPolicyManager()
+  public state: DataPolicyState = {
+    manager: new DataPolicyManager(),
+    language: Language.german
   };
 
-  public styles = {
+  public styles: {
+    textContainer: ViewStyle;
+    policyText: TextStyle;
+    button: ViewStyle;
+  } = {
     textContainer: {
       height: '70%',
-      top: Constants.statusBarHeight + 15,
-      left: 15,
-      right: 15
+      top: Constants.statusBarHeight,
+      margin: 15,
+      flex: 1
     },
     policyText: {
       ...SMALL,
-      marginTop: 10
+      marginTop: 10,
+      flexWrap: 'wrap'
     },
     button: {
       margin: 5,
@@ -70,7 +83,22 @@ export class DataPolicyComponent extends React.Component<
   }
 
   public render() {
-    const { policy, previous } = this.state;
+    const { policy, previous, language } = this.state;
+    const texts =
+      language === Language.german
+        ? {
+            updated: 'Wir haben die Datenschutzerklärung aktualisiert.',
+            notification:
+              'Wir erheben Nutzungs- und Fehlerdaten um die App zu verbessern. Durch Tippen auf OK erklärst du dich mit unserer Datenschutzerklärung einverstanden.',
+            link: 'Datenschutzerklärung anzeigen'
+          }
+        : {
+            updated: "We've updated our privacy policy.",
+            notification:
+              'In order to improve the app we collect usage data and crash reports. Click OK to accept our privacy policy and proceed to app.',
+            link: 'Show privacy policy'
+          };
+
     if (!policy) {
       // @ts-ignore
       return <AppLoading />;
@@ -85,28 +113,29 @@ export class DataPolicyComponent extends React.Component<
         >
           <View style={this.styles.textContainer}>
             {previous && previous.version !== policy.version && (
-              <Text style={this.styles.policyText}>
-                Wir haben die Datenschutzerklärung aktualisiert.
-              </Text>
+              <Text style={this.styles.policyText}>{texts.updated}</Text>
             )}
-            <Text style={this.styles.policyText}>
-              Wir erheben Nutzungs- und Fehlerdaten um die App zu verbessern.
-              Durch Tippen auf OK erklärst du dich mit unserer
-              Datenschutzerklärung einverstanden.
-            </Text>
+            <Text style={this.styles.policyText}>{texts.notification}</Text>
             <TouchableOpacity
               onPress={() =>
                 WebBrowser.openBrowserAsync(
-                  'https://abc-app.serlo.org/privacy.html'
+                  language === Language.german
+                    ? 'https://abc-app.serlo.org/privacy-de.html'
+                    : 'https://abc-app.serlo.org/privacy-en.html'
                 )
               }
             >
-              <Text style={this.styles.policyText}>
-                {' '}
-                > Datenschutzerklärung anzeigen
-              </Text>
+              <Text style={this.styles.policyText}>{' > ' + texts.link}</Text>
             </TouchableOpacity>
           </View>
+          <LanguageSelection
+            selected={language}
+            onChange={(newLanguage: Language) =>
+              this.setState({
+                language: newLanguage
+              })
+            }
+          />
           <RoundTextButton
             onPress={this.handleClick(ConsentStatus.Accepted)}
             correct={true}
@@ -122,8 +151,9 @@ export class DataPolicyComponent extends React.Component<
   }
 }
 
-interface DataPolicyComponentState {
+interface DataPolicyState {
   manager: IDataPolicyManager;
+  language: Language;
   policy?: IDataPolicyConsent;
   previous?: IDataPolicyConsent;
 }

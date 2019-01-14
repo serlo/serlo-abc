@@ -9,7 +9,7 @@ import courses from '../packages/assets/courses.json';
 import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
 import App, { AppRoutes } from '.';
-import { DataPolicyComponent } from './components/screens/DataPolicy';
+import { DataPolicy } from './components/screens/DataPolicy';
 import {
   ConsentStatus,
   default as DataPolicyConsentStorage
@@ -71,7 +71,7 @@ storiesOf('PolicyManager', module)
   });
 
 const DataPolicyStorybookComponent = () => (
-  <DataPolicyComponent
+  <DataPolicy
     render={accepted => (
       <View
         style={{
