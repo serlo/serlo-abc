@@ -72,6 +72,7 @@ export default videos as { [id: string]: { sd: AssetTypes.VideoAsset, hd: AssetT
         })
         .then((size: string) => {
           return new Promise<void>(resolve => {
+            // @ts-ignore FIXME:
             ffmpeg(source)
               .size(size)
               .on('end', (stdout: string, stderr: string) => {

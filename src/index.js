@@ -1,7 +1,11 @@
+import { AppLoading } from 'expo';
 import { find, identity, map } from 'ramda';
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { NativeRouter, Redirect, Route } from 'react-router-native';
+import { PageHit } from 'expo-analytics';
+import Analytics from './helpers/analytics';
+import Sentry from './helpers/sentry';
 
 import { EntityFactory } from '../packages/entities';
 import { CourseInteractorLoader } from '../packages/entities-interactor';
@@ -16,6 +20,7 @@ import Storage from './storage/CourseStorage';
 import ProgressStorage from './storage/ProgressStorage';
 import { PRIMARY } from './styles/colors';
 import { AssetResolver } from './asset-resolver';
+import { DataPolicy } from './components/screens/DataPolicy';
 
 export class AppRoutes extends Component {
   constructor(props) {
@@ -98,132 +103,149 @@ export class AppRoutes extends Component {
         const course = this.interactor.getStructure();
         this.setState({ course });
       });
+    if (this.props.policyAccepted) {
+      Analytics.init(this.props.policyAccepted);
+      Analytics.hit(new PageHit('Main'));
+      Sentry.init();
+    }
   }
 
   render() {
     return (
       <LoadSounds
         sounds={[getSound('correct'), getSound('wrong')]}
-        render={([correctSound, wrongSound]) => (
-          <View
-            style={{
-              flex: 1,
-              backgroundColor: PRIMARY
-            }}
-          >
-            <Route
-              exact
-              path="/"
-              render={({ history }) => (
-                <Splash next={() => history.push('/course')} />
-              )}
-            />
-            <Route
-              path="/course"
-              render={({ history }) => {
-                if (!this.state.course) {
-                  return null;
-                }
-
-                const nexts = map(
-                  ({ id }) => this.getNextChild(id),
-                  this.state.course.children
-                );
-                const next = find(identity, nexts);
-
-                return (
-                  <Course
-                    next={next && next.id}
-                    getProgress={this.getProgress}
-                    resetProgress={this.resetProgress}
-                    course={this.state.course}
-                    goToSection={id =>
-                      history.push(`/node/${id}`, { level: 2 })
+        render={([correctSound, wrongSound], done) => {
+          if (done) {
+            return (
+              <View
+                style={{
+                  flex: 1,
+                  backgroundColor: PRIMARY
+                }}
+              >
+                <Route
+                  exact
+                  path="/"
+                  render={({ history }) => (
+                    <Splash next={() => history.push('/course')} />
+                  )}
+                />
+                <Route
+                  path="/course"
+                  render={({ history }) => {
+                    if (!this.state.course) {
+                      return null;
                     }
-                  />
-                );
-              }}
-            />
-            <Route
-              path="/node/:id"
-              render={({ location, match, history }) => {
-                const { id } = match.params;
-                const { level } = location.state;
 
-                if (!this.state.course) {
-                  return null;
-                }
+                    const nexts = map(
+                      ({ id }) => this.getNextChild(id),
+                      this.state.course.children
+                    );
+                    const next = find(identity, nexts);
 
-                const entity = this.findEntity(id);
+                    return (
+                      <Course
+                        next={next && next.id}
+                        getProgress={this.getProgress}
+                        resetProgress={this.resetProgress}
+                        course={this.state.course}
+                        goToSection={id =>
+                          history.push(`/node/${id}`, { level: 2 })
+                        }
+                      />
+                    );
+                  }}
+                />
+                <Route
+                  path="/node/:id"
+                  render={({ location, match, history }) => {
+                    const { id } = match.params;
+                    const { level } = location.state;
 
-                if (!entity) {
-                  console.warn('Entity with id', id, 'does not exist');
-                  return <Redirect to="/course" />;
-                }
+                    if (!this.state.course) {
+                      return null;
+                    }
 
-                const { type, props } = entity;
+                    const entity = this.findEntity(id);
 
-                if (!type) {
-                  // Internal node
-                  const next = this.getNextChild(id);
+                    if (!entity) {
+                      console.warn('Entity with id', id, 'does not exist');
+                      return <Redirect to="/course" />;
+                    }
 
-                  if (!next) {
-                    this.markAsCorrect(id);
-                    return this.goUp(entity.parent, level);
-                  }
+                    const { type, props } = entity;
 
-                  return this.goDown(next.id, level);
-                }
+                    if (!type) {
+                      // Internal node
+                      const next = this.getNextChild(id);
 
-                const newWords = this.interactor.getNewVocabulary(id);
-                const words = this.interactor.getVocabulary(id);
-                const letter = this.interactor.getNewLetter(id);
-                const letters = this.interactor.getLetters(id);
+                      if (!next) {
+                        this.markAsCorrect(id);
+                        return this.goUp(entity.parent, level);
+                      }
 
-                // Leaf
-                const group = this.entityFactory.createExerciseGroup(
-                  type,
-                  newWords,
-                  words,
-                  letter,
-                  letters,
-                  props
-                );
+                      return this.goDown(next.id, level);
+                    }
 
-                if (!group) {
-                  console.warn('no view found for type', type);
-                  return null;
-                }
+                    const newWords = this.interactor.getNewVocabulary(id);
+                    const words = this.interactor.getVocabulary(id);
+                    const letter = this.interactor.getNewLetter(id);
+                    const letters = this.interactor.getLetters(id);
 
-                const done = () => {
-                  this.markAsCorrect(id);
+                    // Leaf
+                    const group = this.entityFactory.createExerciseGroup(
+                      type,
+                      newWords,
+                      words,
+                      letter,
+                      letters,
+                      props
+                    );
 
-                  history.push(`/node/${entity.parent}`, {
-                    level: level - 1
-                  });
-                };
+                    if (!group) {
+                      console.warn('no view found for type', type);
+                      return null;
+                    }
 
-                return (
-                  <ExerciseGroup
-                    createExerciseComponent={type => ExerciseComponents[type]}
-                    group={group}
-                    goToNav={() => history.push('/course')}
-                    onCorrect={() => play(correctSound)}
-                    onWrong={() => play(wrongSound)}
-                    onDone={done}
-                  />
-                );
-              }}
-            />
-          </View>
-        )}
+                    const done = () => {
+                      this.markAsCorrect(id);
+
+                      history.push(`/node/${entity.parent}`, {
+                        level: level - 1
+                      });
+                    };
+
+                    return (
+                      <ExerciseGroup
+                        createExerciseComponent={type =>
+                          ExerciseComponents[type]
+                        }
+                        group={group}
+                        goToNav={() => history.push('/course')}
+                        onCorrect={() => play(correctSound)}
+                        onWrong={() => play(wrongSound)}
+                        onDone={done}
+                      />
+                    );
+                  }}
+                />
+              </View>
+            );
+          }
+
+          return <AppLoading />;
+        }}
       />
     );
   }
 }
 
 export default () => (
-  <NativeRouter>
-    <AppRoutes />
-  </NativeRouter>
+  <DataPolicy
+    render={policyAccepted => (
+      <NativeRouter>
+        <AppRoutes policyAccepted={policyAccepted} />
+      </NativeRouter>
+    )}
+  />
 );

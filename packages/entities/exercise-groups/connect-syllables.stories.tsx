@@ -1,5 +1,6 @@
 // @ts-ignore TODO: add declaration file
 import { storiesOf } from '@storybook/react-native';
+import { AppLoading } from 'expo';
 import * as React from 'react';
 import { View } from 'react-native';
 
@@ -59,27 +60,34 @@ const createSyllableExercise: (
     <LoadSounds
       sounds={[getSound('correct'), getSound('wrong')]}
       // tslint:disable-next-line:no-any
-      render={([correctSound, wrongSound]: any[]) => (
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: PRIMARY
-          }}
-        >
-          <ExerciseGroup
-            createExerciseComponent={type => ExerciseComponents[type]}
-            group={group}
-            goToNav={() => {
-              /* empty */
-            }}
-            onCorrect={() => play(correctSound)}
-            onWrong={() => play(wrongSound)}
-            onDone={() => {
-              /* empty */
-            }}
-          />
-        </View>
-      )}
+      render={([correctSound, wrongSound]: any[], done: boolean) => {
+        if (done) {
+          return (
+            <View
+              style={{
+                flex: 1,
+                backgroundColor: PRIMARY
+              }}
+            >
+              <ExerciseGroup
+                createExerciseComponent={type => ExerciseComponents[type]}
+                group={group}
+                goToNav={() => {
+                  /* empty */
+                }}
+                onCorrect={() => play(correctSound)}
+                onWrong={() => play(wrongSound)}
+                onDone={() => {
+                  /* empty */
+                }}
+              />
+            </View>
+          );
+        }
+
+        // @ts-ignore
+        return <AppLoading />;
+      }}
     />
   );
 };

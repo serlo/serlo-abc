@@ -1,5 +1,4 @@
-// @ts-ignore: add declaration file
-import { Audio, Permissions } from 'expo';
+import { AppLoading, Audio, Permissions } from 'expo';
 import * as React from 'react';
 import { TouchableOpacityProperties } from 'react-native';
 
@@ -7,13 +6,12 @@ import loadSound from '../../assets/sounds';
 // @ts-ignore: transform to TypeScript
 import { play, playAll } from '../../helpers/audio';
 import { ReactRenderReturn } from '../../types';
-import { ISoundAsset } from '../../types/assets';
 // @ts-ignore: transform to TypeScript
 import { LoadSounds } from './Audio';
 
 interface PlaySoundsProps {
   delay?: number;
-  sounds: ISoundAsset[];
+  sounds: Audio.Sound[];
   record?: boolean;
   playInitially?: boolean;
   recordingDuration?: number;
@@ -55,6 +53,7 @@ class PlaySoundsInner extends React.Component<
   private playSoundsAndRecord = () => {
     /* tslint:disable-next-line:no-empty */
     const onPlayEnd = this.props.onPlayEnd || (() => {});
+    const { sounds, delay } = this.props;
 
     if (this.props.record) {
       Permissions.askAsync(Permissions.AUDIO_RECORDING).then(() => {
@@ -67,6 +66,7 @@ class PlaySoundsInner extends React.Component<
               interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
               playsInSilentModeIOS: true,
               shouldDuckAndroid: true,
+              // @ts-ignore
               interruptionModeAndroid:
                 Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX
             })
@@ -107,6 +107,7 @@ class PlaySoundsInner extends React.Component<
               playsInSilentModeIOS: true,
               playsInSilentLockedModeIOS: true,
               shouldDuckAndroid: true,
+              // @ts-ignore
               interruptionModeAndroid:
                 Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX
             })
@@ -115,6 +116,7 @@ class PlaySoundsInner extends React.Component<
           .then(({ sound }: { sound: Audio.Sound }) => {
             play(sound)
               .then(() => sound.unloadAsync())
+              .then(() => playAll(sounds, delay))
               .then(() => {
                 onPlayEnd();
               });
@@ -136,7 +138,7 @@ class PlaySoundsInner extends React.Component<
 
 export const PlaySounds: React.SFC<PlaySoundsProps> = props => {
   const { record } = props;
-  const sounds: ISoundAsset[] = record
+  const sounds: Audio.Sound[] = record
     ? [...props.sounds, loadSound.repeat()]
     : props.sounds;
 
@@ -144,9 +146,14 @@ export const PlaySounds: React.SFC<PlaySoundsProps> = props => {
     <LoadSounds
       sounds={sounds}
       /* tslint:disable-next-line:no-shadowed-variable */
-      render={(sounds: Audio.Sound[], soundsLoaded: boolean) =>
-        soundsLoaded && <PlaySoundsInner {...props} sounds={sounds} />
-      }
+      render={(sounds: Audio.Sound[], done: boolean) => {
+        if (done) {
+          return <PlaySoundsInner {...props} sounds={sounds} />;
+        }
+
+        // @ts-ignore
+        return <AppLoading />;
+      }}
     />
   );
 };

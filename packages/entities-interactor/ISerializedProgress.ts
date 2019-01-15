@@ -10,8 +10,6 @@ export interface IIndividualProgress {
   [propName: string]: any;
 }
 
-interface ISerializedProgress {
+export interface ISerializedProgress {
   [id: string]: IIndividualProgress;
 }
-
-export default ISerializedProgress;

@@ -13,7 +13,7 @@ export class PortraitScreenOrientation extends React.Component<
 > {
   constructor(props: ScreenOrientationProps) {
     super(props);
-    ScreenOrientation.allow(ScreenOrientation.Orientation.PORTRAIT_UP);
+    ScreenOrientation.allowAsync(ScreenOrientation.Orientation.PORTRAIT_UP);
   }
 
   public render() {
@@ -26,7 +26,7 @@ export class LandscapeScreenOrientation extends React.Component<
 > {
   constructor(props: ScreenOrientationProps) {
     super(props);
-    ScreenOrientation.allow(ScreenOrientation.Orientation.LANDSCAPE);
+    ScreenOrientation.allowAsync(ScreenOrientation.Orientation.LANDSCAPE);
   }
 
   public render() {

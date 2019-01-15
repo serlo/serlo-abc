@@ -1,3 +1,4 @@
+import { AppLoading } from 'expo';
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
@@ -67,7 +68,13 @@ const SplashWrapper = props => {
   return (
     <LoadSound
       sound={sound}
-      render={sound => <Splash sound={sound} {...props} />}
+      render={(sound, done) => {
+        if (done) {
+          return <Splash sound={sound} {...props} />;
+        }
+
+        return <AppLoading />;
+      }}
     />
   );
 };
