@@ -7,6 +7,9 @@
     "platforms": ["ios", "android"],
     "version": "1.2.0",
     "icon": "./appIcon.png",
+    "packagerOpts": {
+      "nonPersistent": true
+    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
