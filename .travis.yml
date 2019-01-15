@@ -10,17 +10,17 @@ before_install:
 script:
   - yarn lint
   - yarn test
-deploy:
-  - provider: script
-    script: yarn deploy:development
-    skip_cleanup: true
-    on:
-      branch: development
-  - provider: script
-    script: yarn deploy:master
-    skip_cleanup: true
-    on:
-      branch: master
+# deploy:
+#   - provider: script
+#     script: yarn deploy:development
+#     skip_cleanup: true
+#     on:
+#       branch: development
+#   - provider: script
+#     script: yarn deploy:master
+#     skip_cleanup: true
+#     on:
+#       branch: master
 env:
   global:
     - EXP_USERNAME=serlo-org
