@@ -21,7 +21,7 @@ const RoundImageWithButton = ({
     <RoundImageWithBorder image={image} size={imageSize} />
     <RoundIconButton
       IconComponent={Ionicons}
-      name="md-volume-up"
+      name="md-volume-high"
       size={buttonSize}
       onPress={onPress}
       style={{

@@ -10,7 +10,7 @@ import {
   without
 } from 'ramda';
 // @ts-ignore
-import Sentry from 'sentry-expo';
+import Sentry from '../../../src/helpers/sentry';
 
 import { sample } from '../../sample';
 import { AbstractExercise, ExerciseTypes } from '../exercises';

@@ -51,12 +51,12 @@ export class MissingLetter extends AbstractExerciseGroup {
           this.props.difficulty < 0.2
             ? 1
             : this.props.difficulty < 0.4
-              ? 2
-              : this.props.difficulty < 0.6
-                ? 3
-                : this.props.difficulty < 0.8
-                  ? 4
-                  : wordLetters.length;
+            ? 2
+            : this.props.difficulty < 0.6
+            ? 3
+            : this.props.difficulty < 0.8
+            ? 4
+            : wordLetters.length;
         const knownLettersInWord = filter(
           i => indexOf(wordLetters[i].toLowerCase(), this.letters) !== -1,
           times(identity, wordLetters.length)

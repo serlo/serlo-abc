@@ -1,8 +1,8 @@
 import { Optional } from '../../src/types';
 import { AbstractNode } from '../entities/course';
 import { ICourseStructure } from './ICourseStructure';
-import IProgressStorage from './IProgressStorage';
-import ISerializedProgress from './ISerializedProgress';
+import { IProgressStorage } from './IProgressStorage';
+import { ISerializedProgress } from './ISerializedProgress';
 
 abstract class AbstractCourseInteractor {
   constructor(

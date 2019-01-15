@@ -28,7 +28,7 @@ export const ExplanationText = ({ text, sound, sounds, setState }) => (
           <Text style={styles.text}>{text}</Text>
           <RoundIconButton
             IconComponent={Ionicons}
-            name="md-volume-up"
+            name="md-volume-high"
             size={40}
             {...buttonProps}
           />

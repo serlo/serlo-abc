@@ -1,5 +1,6 @@
-import { Maybe } from '../../maybe';
+import { Audio } from 'expo';
 
+import { Maybe } from '../../maybe';
 import { AbstractAssetResolver, AssetTypes } from '../asset-resolver';
 import { Article } from './article.interface';
 import { SerializedWord } from './serialized-word.interface';
@@ -15,6 +16,6 @@ export abstract class AbstractWord {
   public abstract getSingular(): Maybe<string>;
   public abstract getPlural(): Maybe<string>;
   public abstract getImage(): Maybe<AssetTypes.ImageAsset>;
-  public abstract getSound(): Maybe<AssetTypes.SoundAsset>;
-  public abstract getLongSound(): Maybe<AssetTypes.SoundAsset>;
+  public abstract getSound(): Maybe<Audio.Sound>;
+  public abstract getLongSound(): Maybe<Audio.Sound>;
 }

@@ -1,3 +1,4 @@
+import { AppLoading } from 'expo';
 import React from 'react';
 import { addIndex, map } from 'ramda';
 import { View } from 'react-native';
@@ -56,37 +57,43 @@ export const SyllableTable = ({ letters, sound, ...props }) => (
   <PortraitScreenOrientation>
     <LoadSound
       sound={sound}
-      render={sound => (
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: PRIMARY,
-            alignItems: 'center'
-          }}
-        >
-          <View
-            style={{
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexDirection: 'column',
-              marginTop: 50
-            }}
-          >
-            {mapIndexed(
-              (letter, letterKey) => (
-                <SyllableRow
-                  key={letterKey}
-                  letter={letter}
-                  letterKey={letterKey}
-                  sound={sound}
-                  {...props}
-                />
-              ),
-              letters
-            )}
-          </View>
-        </View>
-      )}
+      render={(sound, done) => {
+        if (done) {
+          return (
+            <View
+              style={{
+                flex: 1,
+                backgroundColor: PRIMARY,
+                alignItems: 'center'
+              }}
+            >
+              <View
+                style={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'column',
+                  marginTop: 50
+                }}
+              >
+                {mapIndexed(
+                  (letter, letterKey) => (
+                    <SyllableRow
+                      key={letterKey}
+                      letter={letter}
+                      letterKey={letterKey}
+                      sound={sound}
+                      {...props}
+                    />
+                  ),
+                  letters
+                )}
+              </View>
+            </View>
+          );
+        }
+
+        return <AppLoading />;
+      }}
     />
   </PortraitScreenOrientation>
 );

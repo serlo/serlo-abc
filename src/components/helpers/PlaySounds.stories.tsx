@@ -1,5 +1,6 @@
 // @ts-ignore: TODO: add declaration file
 import { Ionicons } from '@expo/vector-icons';
+// @ts-ignore
 import { action } from '@storybook/addon-actions';
 // @ts-ignore TODO: add declaration file
 import { storiesOf } from '@storybook/react-native';
@@ -23,7 +24,7 @@ storiesOf('helpers/PlaySounds', module)
             key="button"
             {...buttonProps}
             IconComponent={Ionicons}
-            name="md-volume-up"
+            name="md-volume-high"
             size={30}
           />,
           <Text key="text">{isRecording ? 'Recording' : 'Not recording'}</Text>
@@ -48,7 +49,7 @@ storiesOf('helpers/PlaySounds', module)
             key="button"
             {...buttonProps}
             IconComponent={Ionicons}
-            name="md-volume-up"
+            name="md-volume-high"
             size={30}
           />,
           <Text key="text">{isRecording ? 'Recording' : 'Not recording'}</Text>
@@ -67,7 +68,7 @@ storiesOf('helpers/PlaySounds', module)
           <RoundIconButton
             {...buttonProps}
             IconComponent={Ionicons}
-            name="md-volume-up"
+            name="md-volume-high"
             size={30}
           />
         )}

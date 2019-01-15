@@ -1,3 +1,4 @@
+import { Audio } from 'expo';
 import { AbstractAssetResolver } from './abstract-asset-resolver';
 
 export class MockAssetResolver extends AbstractAssetResolver {
@@ -6,7 +7,7 @@ export class MockAssetResolver extends AbstractAssetResolver {
   }
 
   public getSound(id: string) {
-    return { _assetSound: id };
+    return new Audio.Sound();
   }
 
   public getVideo(id: string) {

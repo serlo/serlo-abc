@@ -1,13 +1,10 @@
 // Make distinct assets incompatible, see https://github.com/Microsoft/TypeScript/wiki/FAQ#how-do-i-prevent-two-types-from-being-structurally-compatible
-export interface ImageAsset {
+import { ImageSourcePropType } from 'react-native';
+
+export type ImageAsset = {
   // tslint:disable-next-line:no-any
   _assetImage: any;
-}
-
-export interface SoundAsset {
-  // tslint:disable-next-line:no-any
-  _assetSound: any;
-}
+} & ImageSourcePropType;
 
 export interface VideoAsset {
   // tslint:disable-next-line:no-any

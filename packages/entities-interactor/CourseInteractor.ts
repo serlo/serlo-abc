@@ -5,9 +5,10 @@ import { Maybe } from '../maybe';
 import { stableSortWith } from '../stable-sort';
 import AbstractCourseInteractor from './AbstractCourseInteractor';
 import { ICourseStructure } from './ICourseStructure';
-import IProgressStorage from './IProgressStorage';
-import ISerializedProgress, {
+import { IProgressStorage } from './IProgressStorage';
+import {
   IIndividualProgress,
+  ISerializedProgress,
   Progress
 } from './ISerializedProgress';
 
