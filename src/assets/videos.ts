@@ -565,6 +565,104 @@ const videos = {
     sd: { uri: 'https://assets.serlo.org/serlo-abc/eu.sd.mp4' },
     hd: { uri: 'https://assets.serlo.org/serlo-abc/eu.hd.mp4' }
   },
+  explanation_connect_syllables: {
+    sd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_connect_syllables.sd.mp4'
+    },
+    hd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_connect_syllables.hd.mp4'
+    }
+  },
+  explanation_differ_from_symbol: {
+    sd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_differ_from_symbol.sd.mp4'
+    },
+    hd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_differ_from_symbol.hd.mp4'
+    }
+  },
+  explanation_find_letter_wo_letter: {
+    sd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_find_letter_wo_letter.sd.mp4'
+    },
+    hd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_find_letter_wo_letter.hd.mp4'
+    }
+  },
+  explanation_find_letter_w_letter: {
+    sd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_find_letter_w_letter.sd.mp4'
+    },
+    hd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_find_letter_w_letter.hd.mp4'
+    }
+  },
+  explanation_has_phoneme_wo_phoneme: {
+    sd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_has_phoneme_wo_phoneme.sd.mp4'
+    },
+    hd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_has_phoneme_wo_phoneme.hd.mp4'
+    }
+  },
+  explanation_has_phoneme_w_phoneme: {
+    sd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_has_phoneme_w_phoneme.sd.mp4'
+    },
+    hd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_has_phoneme_w_phoneme.hd.mp4'
+    }
+  },
+  explanation_letter_rotated: {
+    sd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_letter_rotated.sd.mp4'
+    },
+    hd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_letter_rotated.hd.mp4'
+    }
+  },
+  explanation_match_image: {
+    sd: {
+      uri: 'https://assets.serlo.org/serlo-abc/explanation_match_image.sd.mp4'
+    },
+    hd: {
+      uri: 'https://assets.serlo.org/serlo-abc/explanation_match_image.hd.mp4'
+    }
+  },
+  explanation_missing_letter_esel: {
+    sd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_missing_letter_esel.sd.mp4'
+    },
+    hd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_missing_letter_esel.hd.mp4'
+    }
+  },
+  explanation_missing_letter_nase: {
+    sd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_missing_letter_nase.sd.mp4'
+    },
+    hd: {
+      uri:
+        'https://assets.serlo.org/serlo-abc/explanation_missing_letter_nase.hd.mp4'
+    }
+  },
   explanation_show_letter: {
     sd: {
       uri: 'https://assets.serlo.org/serlo-abc/explanation_show_letter.sd.mp4'

@@ -34,6 +34,10 @@ export class LetterRotated extends AbstractExerciseGroup {
         text,
         sound
       }),
+      this.createExercise(ExerciseTypes.InfoScreen, {
+        type: 'TutorialVideo',
+        video: 'explanation_letter_rotated'
+      }),
       this.createExercise(ExerciseTypes.LetterRotated, {
         type: 'LetterRotated',
         letters,

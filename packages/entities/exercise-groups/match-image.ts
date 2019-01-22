@@ -14,6 +14,10 @@ export class MatchImage extends AbstractExerciseGroup {
         text: 'Markieren Sie das richtige Bild.',
         sound: `exercises_markieren_sie_das_richtige_bild_${version}`
       }),
+      this.createExercise(ExerciseTypes.InfoScreen, {
+        type: 'TutorialVideo',
+        video: 'explanation_match_image'
+      }),
       ...map(word => {
         const otherWords = sample(without([word], this.vocabulary), 3);
         const wordsProp = sample([...otherWords, word], 4);

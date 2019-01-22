@@ -37,6 +37,10 @@ export class ConnectSyllables extends AbstractExerciseGroup {
         text: 'Verbinden Sie die Silben.',
         sound: `exercises_verbinden_sie_die_silben_${version}`
       }),
+      this.createExercise(ExerciseTypes.InfoScreen, {
+        type: 'TutorialVideo',
+        video: 'explanation_connect_syllables'
+      }),
       ...(filter(
         exercise => !!exercise,
         map(word => {

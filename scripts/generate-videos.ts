@@ -1,4 +1,4 @@
-import * as ffmpeg from 'fluent-ffmpeg';
+import ffmpeg from 'fluent-ffmpeg';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as R from 'ramda';
@@ -58,7 +58,11 @@ export default videos as { [id: string]: { sd: AssetTypes.VideoAsset, hd: AssetT
       const [file, ...rest] = files;
 
       const source = path.join(videosPath, file);
-      const target = path.join(assetsPath, 'videos', file);
+      const target = path.join(
+        assetsPath,
+        'videos',
+        `${getFilename(file)}.sd.mp4`
+      );
 
       if (fs.existsSync(target)) {
         return processFiles(rest);
