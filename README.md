@@ -2,7 +2,7 @@
 
 # Serlo ABC
 
-[![Travis Build Status](https://img.shields.io/travis/com/serlo/serlo-abc/development.svg?style=flat-square)](https://travis-ci.com/serlo/serlo-abc)
+[![Travis Build Status](https://img.shields.io/travis/com/serlo/serlo-abc.svg?style=flat-square)](https://travis-ci.com/serlo/serlo-abc)
 [![Expo Build (master)](https://img.shields.io/badge/Expo-master-blue.svg?style=flat-square)](https://expo.io/@serlo-org/serlo-abc)
 [![Expo Build (development)](https://img.shields.io/badge/Expo-development-orange.svg?style=flat-square)](https://expo.io/@serlo-org/serlo-abc?release-channel=development)
 
