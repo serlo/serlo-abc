@@ -43,6 +43,10 @@ export class MissingLetter extends AbstractExerciseGroup {
         text,
         sound
       }),
+      this.createExercise(ExerciseTypes.InfoScreen, {
+        type: 'TutorialVideo',
+        video: 'explanation_missing_letter_esel'
+      }),
       ...map(word => {
         const wordObj = this.createWord(word);
         const wordLetters = (wordObj ? wordObj.toString() : word).split('');

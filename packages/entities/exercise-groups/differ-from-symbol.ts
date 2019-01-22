@@ -44,6 +44,10 @@ export class DifferFromSymbol extends AbstractExerciseGroup {
         text: `Finden Sie den Buchstaben`,
         sound: `exercises_finden_sie_den_buchstaben_${version}`
       }),
+      this.createExercise(ExerciseTypes.InfoScreen, {
+        type: 'TutorialVideo',
+        video: 'explanation_differ_from_symbol'
+      }),
       ...map(letter => {
         const selectedSymbols: Figure[] = sample(
           concat(allTextSymbols, allIconSymbols),
