@@ -1,4 +1,5 @@
 import { AppLoading, Audio, Permissions } from 'expo';
+import { dropLast } from 'ramda';
 import * as React from 'react';
 import { TouchableOpacityProperties } from 'react-native';
 
@@ -68,7 +69,8 @@ class PlaySoundsInner extends React.Component<
               shouldDuckAndroid: true,
               // @ts-ignore
               interruptionModeAndroid:
-                Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX
+                Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
+              playThroughEarpieceAndroid: false
             })
           )
           .then(() =>
@@ -109,14 +111,15 @@ class PlaySoundsInner extends React.Component<
               shouldDuckAndroid: true,
               // @ts-ignore
               interruptionModeAndroid:
-                Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX
+                Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
+              playThroughEarpieceAndroid: false
             })
           )
-          .then(() => recording.createNewLoadedSound())
+          .then(() => recording.createNewLoadedSoundAsync())
           .then(({ sound }: { sound: Audio.Sound }) => {
             play(sound)
               .then(() => sound.unloadAsync())
-              .then(() => playAll(sounds, delay))
+              .then(() => playAll(dropLast(1, sounds), delay))
               .then(() => {
                 onPlayEnd();
               });
