@@ -57,6 +57,10 @@ export class AppRoutes extends Component {
     return this.interactor.resetProgress();
   };
 
+  resetChildrenProgress = id => {
+    return this.interactor.resetChildrenProgress(id);
+  };
+
   findEntity = id => {
     return this.interactor.findEntity(id);
   };
@@ -180,6 +184,10 @@ export class AppRoutes extends Component {
                       const next = this.getNextChild(id);
 
                       if (!next) {
+                        if (level <= 2) {
+                          // reset deep progress so repeating is possible
+                          this.resetChildrenProgress(id);
+                        }
                         this.markAsCorrect(id);
                         return this.goUp(entity.parent, level);
                       }
