@@ -130,11 +130,11 @@ class CourseInteractor extends AbstractCourseInteractor {
   public resetChildrenProgress(id: string) {
     const entity = this.course.findEntity(id);
 
-    if (entity && isInternalNode(entity) && entity.getChildren()) {
+    if (entity && isInternalNode(entity)) {
       forEach(child => {
         this.progress[child.getId()] = { progress: Progress.Unseen };
         this.resetChildrenProgress(child.getId());
-      }, (entity as InternalNode).getChildren());
+      }, entity.getChildren());
     }
   }
 

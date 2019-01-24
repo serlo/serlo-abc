@@ -1,5 +1,5 @@
 /* tslint:disable:max-classes-per-file */
-import { all, forEach } from 'ramda';
+import { forEach } from 'ramda';
 import Interactor from '../CourseInteractor';
 import InteractorLoader from '../CourseInteractorLoader';
 import { ICourseStorage } from '../ICourseStorage';
