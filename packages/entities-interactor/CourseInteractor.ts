@@ -136,7 +136,6 @@ class CourseInteractor extends AbstractCourseInteractor {
         this.resetChildrenProgress(child.getId());
       }, (entity as InternalNode).getChildren());
     }
-    this.progress[id] = { progress: Progress.Unseen };
   }
 
   public markAsCorrect(id: string) {
