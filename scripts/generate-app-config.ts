@@ -25,7 +25,7 @@ const travisConfig = mergeDeepRight(config, {
       nonPersistent: true
     },
     ios: {
-      buildNumber: version
+      buildNumber: version.split('-')[0]
     },
     android: {
       versionCode
