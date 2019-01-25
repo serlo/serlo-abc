@@ -5,15 +5,22 @@
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": ["ios", "android"],
-    "icon": "./appIcon.png",
+    "icon": "./appIcon-android.png",
     "packagerOpts": {
       "nonPersistent": true
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
+    "ios": {
+      "bundleIdentifier": "org.serlo.abc",
+      "icon": "./appIcon-ios.png",
+      "supportsTablet": true,
+      "buildNumber": "1.2.0"
+    },
     "android": {
       "package": "org.serlo.abc",
+      "icon": "./appIcon-android.png",
       "permissions": [
         "READ_EXTERNAL_STORAGE",
         "READ_INTERNAL_STORAGE",
