@@ -15,6 +15,9 @@ const travisConfig = mergeDeepRight(config, {
     version,
     packagerOpts: {
       nonPersistent: true
+    },
+    ios: {
+      buildNumber: version
     }
   }
 });

@@ -15,8 +15,7 @@
     "ios": {
       "bundleIdentifier": "org.serlo.abc",
       "icon": "./appIcon-ios.png",
-      "supportsTablet": true,
-      "buildNumber": "1.2.0"
+      "supportsTablet": true
     },
     "android": {
       "package": "org.serlo.abc",
