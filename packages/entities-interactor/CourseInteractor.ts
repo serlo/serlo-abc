@@ -1,6 +1,6 @@
-import { ascend, dropWhile, filter } from 'ramda';
+import { ascend, dropWhile, filter, forEach } from 'ramda';
 import { Optional } from '../../src/types';
-import { AbstractNode, InternalNode } from '../entities/course';
+import { AbstractNode, InternalNode, isInternalNode } from '../entities/course';
 import { Maybe } from '../maybe';
 import { stableSortWith } from '../stable-sort';
 import AbstractCourseInteractor from './AbstractCourseInteractor';
@@ -125,6 +125,17 @@ class CourseInteractor extends AbstractCourseInteractor {
 
   public resetProgress() {
     return this.progressStorage.resetProgress(this.courseId);
+  }
+
+  public resetChildrenProgress(id: string) {
+    const entity = this.course.findEntity(id);
+
+    if (entity && isInternalNode(entity)) {
+      forEach(child => {
+        this.progress[child.getId()] = { progress: Progress.Unseen };
+        this.resetChildrenProgress(child.getId());
+      }, entity.getChildren());
+    }
   }
 
   public markAsCorrect(id: string) {
