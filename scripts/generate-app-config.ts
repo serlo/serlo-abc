@@ -1,14 +1,18 @@
 /* tslint:disable:no-var-requires */
 import * as fs from 'fs';
 import * as path from 'path';
-import * as semver from 'semver';
 import { mergeDeepRight } from 'ramda';
+import * as semver from 'semver';
 
 const config = require('../app.json');
-const { version, versionCode, dependencies } = require('../package.json');
+const {
+  version,
+  versionCode,
+  dependencies: { expo }
+} = require('../package.json');
 
 const isDev = process.argv[2] === 'development';
-const expoVersion = dependencies['expo'].replace('^', '');
+const expoVersion = expo.replace('^', '');
 const sdkVersion = `${semver.major(expoVersion)}.0.0`;
 
 const travisConfig = mergeDeepRight(config, {
