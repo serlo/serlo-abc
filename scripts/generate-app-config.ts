@@ -4,7 +4,7 @@ import * as path from 'path';
 import { mergeDeepRight } from 'ramda';
 
 const config = require('../app.json');
-const { version } = require('../package.json');
+const { version, versionCode } = require('../package.json');
 
 const isDev = process.argv[2] === 'development';
 
@@ -18,6 +18,9 @@ const travisConfig = mergeDeepRight(config, {
     },
     ios: {
       buildNumber: version
+    },
+    android: {
+      versionCode
     }
   }
 });
