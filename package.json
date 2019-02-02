@@ -36,7 +36,8 @@
     "format": "prettier --write \"{{packages,scripts,src,storybook}/**/*,*}.{ts,tsx,js,jsx,json,md}\"",
     "lint:js": "eslint \"{{packages,scripts,src,storybook}/**/*,*}.{js,jsx}\"",
     "lint:ts": "tslint \"{{packages,scripts,src,storybook}/**/*,*}.{ts,tsx}\"",
-    "lint": "npm-run-all --print-name --continue-on-error --sequential lint:* tsc"
+    "lint": "npm-run-all --print-name --continue-on-error --sequential lint:* tsc",
+    "changelog": "ts-node scripts/changelog"
   },
   "dependencies": {
     "chroma-js": "^2.0.0",
@@ -52,6 +53,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@splish-me/changelog": "^0.1.0",
     "@storybook/addon-actions": "^4.0.0",
     "@storybook/react-native": "^4.0.0",
     "@types/chroma-js": "^1.0.0",
