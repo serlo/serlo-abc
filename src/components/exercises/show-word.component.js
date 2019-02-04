@@ -83,7 +83,7 @@ export const ShowWord = ({ word, letter, sound, setState, repeat }) => {
     <PortraitScreenOrientation>
       <WordImageWithSounds
         playInitially
-        longSound
+        longSound={!repeat}
         record={repeat}
         word={word}
         onPlayEnd={() => setState(true)}
