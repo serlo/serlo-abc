@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.3](https://github.com/serlo/serlo-abc/compare/1.2.2..1.2.3) - February 4, 2019
+
+### Changed
+
+- Don't play long sounds in repeat lesson
+
 ## [1.2.2](https://github.com/serlo/serlo-abc/compare/1.2.1..1.2.2) - February 2, 2019
 
 ### Changed

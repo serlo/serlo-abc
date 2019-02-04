@@ -11,17 +11,18 @@ const releases: Parameters<typeof generateChangelog>['0'] = [
   {
     tagName: '1.2.2',
     date: '2019-02-02',
-    changed: [
-      'New app icons'
-    ],
-    fixed: [
-      'Allow repeating of lessons'
-    ],
+    changed: ['New app icons'],
+    fixed: ['Allow repeating of lessons'],
     internal: [
       'Prepare iOS release',
       'Improve deployment process',
       'Generate changelog'
     ]
+  },
+  {
+    tagName: '1.2.3',
+    date: '2019-02-04',
+    changed: ["Don't play long sounds in repeat lesson"]
   }
 ];
 

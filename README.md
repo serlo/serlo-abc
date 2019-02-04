@@ -2,9 +2,9 @@
 
 # Serlo ABC
 
-[![Travis Build Status](https://img.shields.io/travis/com/serlo/serlo-abc.svg?style=flat-square)](https://travis-ci.com/serlo/serlo-abc)
-[![Expo Build (master)](https://img.shields.io/badge/Expo-master-blue.svg?style=flat-square)](https://expo.io/@serlo-org/serlo-abc)
-[![Expo Build (development)](https://img.shields.io/badge/Expo-development-orange.svg?style=flat-square)](https://expo.io/@serlo-org/serlo-abc?release-channel=development)
+[![Travis Build Status](https://img.shields.io/travis/com/serlo/serlo-abc.svg)](https://travis-ci.com/serlo/serlo-abc)
+[![Expo Build (master)](https://img.shields.io/badge/Expo-master-blue.svg)](https://expo.io/@serlo-org/serlo-abc)
+[![Expo Build (development)](https://img.shields.io/badge/Expo-development-orange.svg)](https://expo.io/@serlo-org/serlo-abc?release-channel=development)
 
 <a href="https://play.google.com/store/apps/details?id=org.serlo.abc&utm_source=github.com/serlo-org/serlo-abc">
   <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200" />
