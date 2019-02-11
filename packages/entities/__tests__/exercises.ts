@@ -10,11 +10,11 @@ import {
 } from '../exercises';
 
 const runTests = <S, F>(
-  assert: ((
+  assert: (
     fixture: ExerciseFixture<S, F>,
     /* tslint:disable-next-line:no-any */
     exercise: AbstractExercise<any, S, F>
-  ) => void)
+  ) => void
 ) => {
   const resolver = new MockAssetResolver();
   const factory = new EntityFactory(resolver);
