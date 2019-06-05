@@ -6,8 +6,8 @@
   "repository": "serlo/serlo-abc",
   "scripts": {
     "build": "expo start",
-    "build:android": "expo build:android",
-    "build:ios": "expo build:ios",
+    "build:android": "expo build:android --config app.ci.json",
+    "build:ios": "expo build:ios --config app.ci.json",
     "build:status": "expo build:status",
     "deploy:development": "npm-run-all --serial expo:config:development expo:publish",
     "deploy:master": "npm-run-all --serial expo:config:master expo:publish",
