@@ -1,7 +1,7 @@
 {
   "name": "@serlo/serlo-abc",
   "version": "1.2.4",
-  "versionCode": 5,
+  "versionCode": 6,
   "main": "node_modules/expo/AppEntry.js",
   "repository": "serlo/serlo-abc",
   "scripts": {
