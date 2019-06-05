@@ -15,7 +15,7 @@ const isDev = process.argv[2] === 'development';
 const expoVersion = expo.replace('^', '');
 const sdkVersion = `${semver.major(expoVersion)}.0.0`;
 
-const travisConfig = mergeDeepRight(config, {
+const ciConfig = mergeDeepRight(config, {
   expo: {
     name: `${config.expo.name}${isDev ? ' Nightly' : ''}`,
     slug: `${config.expo.slug}${isDev ? '-development' : ''}`,
@@ -34,6 +34,6 @@ const travisConfig = mergeDeepRight(config, {
 });
 
 fs.writeFileSync(
-  path.join(__dirname, '..', 'app.travis.json'),
-  JSON.stringify(travisConfig, undefined, 2)
+  path.join(__dirname, '..', 'app.ci.json'),
+  JSON.stringify(ciConfig, undefined, 2)
 );

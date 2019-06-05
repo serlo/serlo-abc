@@ -62,7 +62,8 @@ export class MissingLetter extends AbstractExerciseGroup {
             ? 4
             : wordLetters.length;
         const knownLettersInWord = filter(
-          i => indexOf(wordLetters[i].toLowerCase(), this.letters) !== -1,
+          (i: number) =>
+            indexOf(wordLetters[i].toLowerCase(), this.letters) !== -1,
           times(identity, wordLetters.length)
         );
         const missing = sample(knownLettersInWord, numberMissing);

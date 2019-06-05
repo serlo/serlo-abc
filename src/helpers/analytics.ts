@@ -3,7 +3,7 @@ import { Analytics as AnalyticsExpo, PageHit } from 'expo-analytics';
 import Sentry from './sentry';
 
 class Analytics {
-  private analytics: AnalyticsExpo;
+  private analytics: AnalyticsExpo | undefined = undefined;
 
   public init() {
     this.analytics = new AnalyticsExpo('UA-126536605-1');

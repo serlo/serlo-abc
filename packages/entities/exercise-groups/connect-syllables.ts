@@ -43,7 +43,7 @@ export class ConnectSyllables extends AbstractExerciseGroup {
       }),
       ...(filter(
         exercise => !!exercise,
-        map(word => {
+        map<string, AbstractExercise<any, any, any> | undefined>(word => {
           const wordObj = this.createWord(word);
           if (!wordObj) {
             return undefined;
