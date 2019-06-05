@@ -22,7 +22,7 @@ export class LetterRotated extends AbstractExerciseGroup {
     const text: string =
       numberOfRotated > 1
         ? 'Welche Buchstaben sind gedreht?'
-        : 'Welcher Buchstabe ist gedreht';
+        : 'Welcher Buchstabe ist gedreht?';
     const sound: string =
       numberOfRotated > 1
         ? `exercises_welche_buchstaben_sind_gedreht_${version}`

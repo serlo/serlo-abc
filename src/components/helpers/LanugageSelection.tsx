@@ -35,7 +35,10 @@ export class LanguageSelection extends React.Component<LanguageSelectionProps> {
       >
         {R.map(
           (language: Language) => (
-            <TouchableOpacity onPress={() => this.props.onChange(language)}>
+            <TouchableOpacity
+              key={language}
+              onPress={() => this.props.onChange(language)}
+            >
               <RoundImageWithBorder
                 image={getLanguageIcon(language)}
                 size={40}

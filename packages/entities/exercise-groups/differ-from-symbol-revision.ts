@@ -48,7 +48,7 @@ export class DifferFromSymbolRevision extends AbstractExerciseGroup {
     return [
       this.createExercise(ExerciseTypes.InfoScreenWithSounds, {
         type: 'ExplanationText',
-        text: `Finden Sie den Buchstaben`,
+        text: `Finden Sie den Buchstaben.`,
         sound: `exercises_finden_sie_den_buchstaben_${version}`
       }),
       this.createExercise(ExerciseTypes.InfoScreen, {

@@ -4,6 +4,7 @@
     "slug": "serlo-abc",
     "privacy": "public",
     "platforms": ["ios", "android"],
+    "sdkVersion": "32.0.0",
     "icon": "./appIcon-ios.png",
     "packagerOpts": {
       "nonPersistent": true
