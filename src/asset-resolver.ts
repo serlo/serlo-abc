@@ -43,6 +43,10 @@ export class AssetResolver extends AbstractAssetResolver {
   }
 
   private cleanId(id: string): string {
+    // Don't ask. Somehow, "d" and "r" can't be used as keys in production mode
+    if (id === 'd') return 'd_letter'
+    if (id === 'r') return 'r_letter'
+
     return id
       .replace(/\s/g, '_')
       .replace(/ß/g, 'sz')
