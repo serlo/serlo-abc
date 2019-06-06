@@ -20,7 +20,10 @@ class RoundText extends Component {
     super(props);
 
     this.state = {
-      size: new Animated.Value(props.size),
+      size:
+        typeof props.size !== undefined
+          ? new Animated.Value(props.size)
+          : undefined,
       fontSize: new Animated.Value(this.getBaseFontSize(props))
     };
   }
@@ -65,6 +68,7 @@ class RoundText extends Component {
       missingCorrect
     } = this.props;
     const { size, fontSize } = this.state;
+
     return (
       <View
         style={[
@@ -85,8 +89,7 @@ class RoundText extends Component {
             overflow: 'hidden',
             alignItems: 'center',
             justifyContent: 'center',
-            height: size,
-            width: size
+            ...(size !== undefined ? { height: size, width: size } : {})
           }}
         >
           {isIcon ? (
@@ -120,7 +123,7 @@ class RoundText extends Component {
               style={{
                 position: 'absolute',
                 height: 3.5,
-                width: size,
+                ...(size !== undefined ? { width: size } : {}),
                 borderRadius: 1,
                 backgroundColor: highlighted && !wrong ? PRIMARY_WEAK : WHITE,
                 transform: [{ rotate: '-45deg' }],

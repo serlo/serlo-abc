@@ -1,4 +1,4 @@
-import { Audio } from 'expo';
+import { Audio } from 'expo-av';
 
 const sounds: { [id: string]: () => Audio.Sound } = {
   abend_long: () => require('./sounds/abend_long.mp3'),

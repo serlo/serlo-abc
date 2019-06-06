@@ -43,6 +43,7 @@ export class ConnectSyllables extends AbstractExerciseGroup {
       }),
       ...(filter(
         exercise => !!exercise,
+        // tslint:disable-next-line:no-any
         map<string, AbstractExercise<any, any, any> | undefined>(word => {
           const wordObj = this.createWord(word);
           if (!wordObj) {

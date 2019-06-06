@@ -1,6 +1,7 @@
 /* tslint:disable:no-any */
-// @ts-ignore: TODO: declaration file
-import { Asset, Font } from 'expo';
+import { Asset } from 'expo-asset';
+import * as Font from 'expo-font';
+
 import { map } from 'ramda';
 import * as React from 'react';
 

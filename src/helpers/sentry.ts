@@ -1,4 +1,3 @@
-// @ts-ignore
 import SentryExpo from 'sentry-expo';
 
 class Sentry {

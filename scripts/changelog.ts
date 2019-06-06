@@ -23,6 +23,16 @@ const releases: Parameters<typeof generateChangelog>['0'] = [
     tagName: '1.2.3',
     date: '2019-02-04',
     changed: ["Don't play long sounds in repeat lesson"]
+  },
+  {
+    tagName: '1.2.4',
+    date: '2019-06-05',
+    fixed: ['Fix chapters using sound files for letters `D` and `R`']
+  },
+  {
+    tagName: '1.3.0',
+    date: '2019-06-06',
+    changed: ['Update to Expo SDK 33']
   }
 ];
 

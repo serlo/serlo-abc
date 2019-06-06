@@ -19,12 +19,10 @@ export class WithDimensions extends React.Component<
   public state: DimensionsState = Dimensions.get('window');
 
   public componentWillMount() {
-    // @ts-ignore
     Dimensions.addEventListener('change', this.handleDimensionsChange);
   }
 
   public componentWillUnmount() {
-    // @ts-ignore
     Dimensions.removeEventListener('change', this.handleDimensionsChange);
   }
 

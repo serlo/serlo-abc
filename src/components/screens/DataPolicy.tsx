@@ -1,4 +1,6 @@
-import { AppLoading, Constants, WebBrowser } from 'expo';
+import { AppLoading } from 'expo';
+import Constants from 'expo-constants';
+import * as WebBrowser from 'expo-web-browser';
 import * as React from 'react';
 import {
   Text,
@@ -7,6 +9,7 @@ import {
   View,
   ViewStyle
 } from 'react-native';
+
 import {
   DataPolicyManager,
   IDataPolicyManager
@@ -100,7 +103,6 @@ export class DataPolicy extends React.Component<
           };
 
     if (!policy) {
-      // @ts-ignore
       return <AppLoading />;
     }
     if (policy && policy.consent === ConsentStatus.Unknown) {

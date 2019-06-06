@@ -1,5 +1,5 @@
 // @ts-ignore TODO: add declaration file
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 import * as React from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
 

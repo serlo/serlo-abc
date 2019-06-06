@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/serlo/serlo-abc/compare/1.2.4..1.3.0) - June 6, 2019
+
+### Changed
+
+- Update to Expo SDK 33
+
+## [1.2.4](https://github.com/serlo/serlo-abc/compare/1.2.3..1.2.4) - June 5, 2019
+
+### Fixed
+
+- Fix chapters using sound files for letters `D` and `R`
+
 ## [1.2.3](https://github.com/serlo/serlo-abc/compare/1.2.2..1.2.3) - February 4, 2019
 
 ### Changed

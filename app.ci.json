@@ -4,7 +4,7 @@
     "slug": "serlo-abc",
     "privacy": "public",
     "platforms": ["ios", "android"],
-    "sdkVersion": "33.0.0",
+    "sdkVersion": "32.0.0",
     "icon": "./appIcon-ios.png",
     "packagerOpts": {
       "nonPersistent": true
@@ -15,7 +15,8 @@
     "ios": {
       "bundleIdentifier": "org.serlo.abc",
       "icon": "./appIcon-ios.png",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "buildNumber": "1.2.5"
     },
     "android": {
       "package": "org.serlo.abc",
@@ -29,13 +30,15 @@
         "com.android.launcher.permission.INSTALL_SHORTCUT",
         "com.htc.launcher.permission.READ_SETTINGS",
         "om.htc.launcher.permission.UPDATE_SHORTCUT"
-      ]
+      ],
+      "versionCode": 6
     },
     "assetBundlePatterns": [
       "src/assets/images/*",
       "src/assets/sounds/*",
       "src/assets/words/images/*",
       "src/assets/words/sounds/*"
-    ]
+    ],
+    "version": "1.2.5"
   }
 }

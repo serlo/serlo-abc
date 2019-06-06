@@ -1,5 +1,5 @@
 import { Entypo, Ionicons } from '@expo/vector-icons';
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 import { map } from 'ramda';
 import React, { Component } from 'react';
 import { Button, StyleSheet, View, ScrollView, Text } from 'react-native';

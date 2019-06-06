@@ -1,4 +1,3 @@
-// @ts-ignore: TODO: add declaration file
 import { Entypo } from '@expo/vector-icons';
 // @ts-ignore TODO: add declaration file
 import { storiesOf } from '@storybook/react-native';

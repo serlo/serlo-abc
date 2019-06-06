@@ -1,4 +1,4 @@
-import { Audio } from 'expo';
+import { Audio } from 'expo-av';
 import { forEach, filter, identity, map, zipWith } from 'ramda';
 import { Component } from 'react';
 

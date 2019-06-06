@@ -1,4 +1,4 @@
-import { Audio } from 'expo';
+import { Audio } from 'expo-av';
 
 import { Maybe } from '../../maybe';
 import { AbstractAssetResolver, AssetTypes } from '../asset-resolver';

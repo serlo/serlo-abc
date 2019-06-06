@@ -1,7 +1,8 @@
 import { propOr } from 'ramda';
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { Constants, Video } from 'expo';
+import { Video } from 'expo-av';
+import Constants from 'expo-constants';
 
 const styles = {
   container: {

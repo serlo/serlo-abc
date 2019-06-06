@@ -1,21 +1,14 @@
-// @ts-ignore
 import { MaterialIcons } from '@expo/vector-icons';
-import { Constants, Svg as ExpoSvg } from 'expo';
+import Constants from 'expo-constants';
 import * as R from 'ramda';
 import * as React from 'react';
 import { PanResponder, PanResponderInstance, Text, View } from 'react-native';
-import { Circle, G, Polyline } from 'react-native-svg';
+import { Circle, G, Polyline, Svg } from 'react-native-svg';
 
 import { Maybe } from '../../../packages/maybe';
 import { BLACK_TRANSPARENT, PRIMARY_WEAK } from '../../styles/colors';
 import { WithDimensions } from '../helpers/dimensions';
 import { RoundIconButton } from './buttons';
-
-const Svg = ExpoSvg as typeof ExpoSvg & {
-  Circle: typeof Circle;
-  G: typeof G;
-  Polyline: typeof Polyline;
-};
 
 export type RawPoint = [number, number];
 export type RawPath = RawPoint[];
@@ -101,27 +94,27 @@ class Canvas extends React.Component<CanvasProps, CanvasState> {
           <Svg style={{ flex: 1 }}>
             {R.addIndex<RawPath>(R.map)(
               (path, index) => (
-                <Svg.G key={`path_${index}`}>
-                  <Svg.Circle
+                <G key={`path_${index}`}>
+                  <Circle
                     cx={path[0][0]}
                     cy={path[0][1]}
                     r={this.props.strokeWidth / 2}
                     fill={PRIMARY_WEAK}
                   />
-                  <Svg.Polyline
+                  <Polyline
                     points={this.generateTextPoints(path)}
                     fill="none"
                     stroke={PRIMARY_WEAK}
                     strokeLinejoin="round"
                     strokeWidth={this.props.strokeWidth}
                   />
-                  <Svg.Circle
+                  <Circle
                     cx={path[path.length - 1][0]}
                     cy={path[path.length - 1][1]}
                     r={this.props.strokeWidth / 2}
                     fill={PRIMARY_WEAK}
                   />
-                </Svg.G>
+                </G>
               ),
               this.state.paths
             )}

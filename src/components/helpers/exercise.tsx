@@ -1,7 +1,5 @@
-// @ts-ignore: TODO: add declaration file
 import { Entypo } from '@expo/vector-icons';
-// @ts-ignore: TODO: add declaration file
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 import { identity, is, merge } from 'ramda';
 import * as React from 'react';
 import { StyleSheet, View } from 'react-native';

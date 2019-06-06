@@ -1,4 +1,6 @@
-import { AppLoading, Audio, Permissions } from 'expo';
+import { AppLoading } from 'expo';
+import { Audio } from 'expo-av';
+import * as Permissions from 'expo-permissions';
 import { dropLast } from 'ramda';
 import * as React from 'react';
 import { TouchableOpacityProperties } from 'react-native';
@@ -63,13 +65,13 @@ class PlaySoundsInner extends React.Component<
         playAll(this.props.sounds, this.props.delay)
           .then(() =>
             Audio.setAudioModeAsync({
+              staysActiveInBackground: true,
               allowsRecordingIOS: true,
               interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
               playsInSilentModeIOS: true,
-              shouldDuckAndroid: true,
-              // @ts-ignore
               interruptionModeAndroid:
                 Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
+              shouldDuckAndroid: true,
               playThroughEarpieceAndroid: false
             })
           )
@@ -104,12 +106,11 @@ class PlaySoundsInner extends React.Component<
           )
           .then(() =>
             Audio.setAudioModeAsync({
+              staysActiveInBackground: true,
               allowsRecordingIOS: false,
               interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
               playsInSilentModeIOS: true,
-              playsInSilentLockedModeIOS: true,
               shouldDuckAndroid: true,
-              // @ts-ignore
               interruptionModeAndroid:
                 Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
               playThroughEarpieceAndroid: false
@@ -154,7 +155,6 @@ export const PlaySounds: React.SFC<PlaySoundsProps> = props => {
           return <PlaySoundsInner {...props} sounds={sounds} />;
         }
 
-        // @ts-ignore
         return <AppLoading />;
       }}
     />

@@ -1,3 +1,4 @@
+import { Ionicons } from '@expo/vector-icons';
 import chroma from 'chroma-js';
 import * as React from 'react';
 import {
@@ -9,11 +10,7 @@ import {
 import { BLACK_TRANSPARENT, PRIMARY_WEAK, WHITE } from '../../styles/colors';
 
 interface RoundIconButtonProps extends TouchableOpacityProperties {
-  IconComponent: React.ComponentType<{
-    name: string;
-    size?: number;
-    color: string;
-  }>;
+  IconComponent: typeof Ionicons;
   name: string;
   size: number;
 }

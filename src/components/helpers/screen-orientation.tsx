@@ -1,5 +1,4 @@
 /* tslint:disable:max-classes-per-file */
-// @ts-ignore TODO: declaration file
 import { ScreenOrientation } from 'expo';
 import * as React from 'react';
 import { ReactRenderReturn } from '../../types';
@@ -13,7 +12,7 @@ export class PortraitScreenOrientation extends React.Component<
 > {
   constructor(props: ScreenOrientationProps) {
     super(props);
-    ScreenOrientation.allowAsync(ScreenOrientation.Orientation.PORTRAIT_UP);
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
   }
 
   public render() {
@@ -26,7 +25,7 @@ export class LandscapeScreenOrientation extends React.Component<
 > {
   constructor(props: ScreenOrientationProps) {
     super(props);
-    ScreenOrientation.allowAsync(ScreenOrientation.Orientation.LANDSCAPE);
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE);
   }
 
   public render() {

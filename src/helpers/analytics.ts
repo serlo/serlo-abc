@@ -1,4 +1,3 @@
-// @ts-ignore
 import { Analytics as AnalyticsExpo, PageHit } from 'expo-analytics';
 import Sentry from './sentry';
 

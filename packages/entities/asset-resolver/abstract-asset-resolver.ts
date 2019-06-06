@@ -1,6 +1,6 @@
-import { Audio } from 'expo';
-import { Maybe } from '../../maybe';
+import { Audio } from 'expo-av';
 
+import { Maybe } from '../../maybe';
 import * as AssetTypes from './asset-types';
 
 export abstract class AbstractAssetResolver {

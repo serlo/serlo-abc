@@ -1,4 +1,5 @@
-import { Audio } from 'expo';
+import { Audio } from 'expo-av';
+
 import { AbstractAssetResolver } from './abstract-asset-resolver';
 
 export class MockAssetResolver extends AbstractAssetResolver {
