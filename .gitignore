@@ -16,3 +16,6 @@ packages/assets/videos
 
 # IDE
 .idea
+
+app.ci.json
+
