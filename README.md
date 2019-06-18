@@ -6,11 +6,12 @@
 [![Expo Build (master)](https://img.shields.io/badge/Expo-master-blue.svg)](https://expo.io/@serlo-org/serlo-abc)
 [![Expo Build (development)](https://img.shields.io/badge/Expo-development-orange.svg)](https://expo.io/@serlo-org/serlo-abc?release-channel=development)
 
-<a href="https://play.google.com/store/apps/details?id=org.serlo.abc&utm_source=github.com/serlo-org/serlo-abc">
-  <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200" />
+<a href="https://apps.apple.com/us/app/serlo-abc/id1451625808?mt=8">
+  <img alt="Download on the App Store" src="https://assets.serlo.org/5d08f913b355d_4809808eeb8b826be8dcabf2f69f7780e3f67adb.png" width="200" />
 </a>
-
-_Google Play and the Google Play logo are trademarks of Google LLC._
+<a href="https://play.google.com/store/apps/details?id=org.serlo.abc&utm_source=github.com/serlo-org/serlo-abc">
+  <img alt="Get it on Google Play" src="https://assets.serlo.org/5d08f93b9b564_e0538b34a6fee6d0198605c6be3bb135fcd7ad40.png" width="200" />
+</a>
 
 This project was bootstrapped with
 [Create React Native App](https://github.com/react-community/create-react-native-app).
@@ -118,3 +119,8 @@ is also a wonderful resource, as is the
   phones call this feature "mobile hotspot." While it's very convenient, if you
   have a data plan where you pay for data transfer you should be careful when
   using this feature, especially when installing dependencies from NPM.
+
+## Legal
+
+_Apple, the Apple logo and App Store are trademarks of Apple Inc._  
+_Google Play and the Google Play logo are trademarks of Google LLC._
