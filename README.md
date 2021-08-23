@@ -2,7 +2,6 @@
 
 # Serlo ABC
 
-[![Build status](https://img.shields.io/circleci/project/github/serlo/serlo-abc.svg)](https://circleci.com/gh/serlo/serlo-abc)
 [![Expo Build (master)](https://img.shields.io/badge/Expo-master-blue.svg)](https://expo.io/@serlo-org/serlo-abc)
 [![Expo Build (development)](https://img.shields.io/badge/Expo-development-orange.svg)](https://expo.io/@serlo-org/serlo-abc?release-channel=development)
 
@@ -122,5 +121,5 @@ is also a wonderful resource, as is the
 
 ## Legal
 
-_Apple, the Apple logo and App Store are trademarks of Apple Inc._  
+_Apple, the Apple logo and App Store are trademarks of Apple Inc._
 _Google Play and the Google Play logo are trademarks of Google LLC._
