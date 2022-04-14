@@ -1,3 +1,9 @@
+# 🚧 Out of maintenace: Looking for new maintainers 🚧
+
+**Unfortunately we are unable to maintain this project further. Thus we are looking for a new maintainer. Please [contact us](https://de.serlo.org/kontakt) in case you are interested.**
+
+----
+
 <img src="https://assets.serlo.org/meta/logo.png" alt="Serlo logo" title="Serlo" align="right" height="60" />
 
 # Serlo ABC
